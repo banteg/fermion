@@ -1,2 +1,11 @@
 # copyrighted game data, regenerated working images
 artifacts/
+working/
+
+# Python tooling
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+dist/
+*.pyc
