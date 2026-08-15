@@ -10,6 +10,7 @@ from fermion.archive import ArchiveError, InstallerArchive
 from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
 from fermion.fat import FAT12, FATError
+from fermion.gm import GMError, GMFile
 from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
 
@@ -70,6 +71,15 @@ def build_parser() -> argparse.ArgumentParser:
     roundtrip.add_argument("--juice", type=_path, default=Path("juice"))
     roundtrip.add_argument("--output-dir", type=_path, default=Path("working/roundtrip"))
     roundtrip.set_defaults(handler=_mes_roundtrip)
+
+    gm = commands.add_parser("gm", help="inspect General Message MES bytecode")
+    gm_commands = gm.add_subparsers(dest="gm_command", required=True)
+    gm_audit = gm_commands.add_parser(
+        "audit", help="walk instructions and validate embedded code targets"
+    )
+    gm_audit.add_argument("source", type=_path)
+    gm_audit.add_argument("--verbose", action="store_true", help="list every relocation")
+    gm_audit.set_defaults(handler=_gm_audit)
 
     mz = commands.add_parser("mz", help="work with DOS MZ executables")
     mz_commands = mz.add_subparsers(dest="mz_command", required=True)
@@ -139,6 +149,45 @@ def _mz_extract_load_image(args: argparse.Namespace) -> None:
     print(f"entry-offset: 0x{image.entry_offset:x}")
 
 
+def _gm_audit(args: argparse.Namespace) -> None:
+    if args.source.is_dir():
+        sources = sorted(path for path in args.source.rglob("*") if path.suffix.upper() == ".MES")
+    else:
+        sources = [args.source]
+    if not sources:
+        raise GMError(f"no MES files found under {args.source}")
+
+    failures: list[str] = []
+    for source in sources:
+        try:
+            gm = GMFile.from_file(source)
+            audit = gm.audit()
+        except GMError as error:
+            print(f"{source}: error: {error}")
+            failures.append(str(source))
+            continue
+
+        local = sum(gm.code_start <= item.target < len(gm.data) for item in audit.relocations)
+        print(
+            f"{source}: instructions={len(audit.instructions)} "
+            f"relocations={len(audit.relocations)} local={local} issues={len(audit.issues)}"
+        )
+        if args.verbose:
+            for item in audit.relocations:
+                scope = "local" if gm.code_start <= item.target < len(gm.data) else "external"
+                print(
+                    f"  0x{item.field_offset:04x} -> 0x{item.target:04x} "
+                    f"{scope} {item.purpose}"
+                )
+        for issue in audit.issues:
+            print(f"  issue: {issue}")
+        if audit.issues:
+            failures.append(str(source))
+
+    if failures:
+        raise GMError(f"audit failed for {len(failures)} of {len(sources)} MES files")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -153,6 +202,7 @@ def main() -> None:
         D88Error,
         DiskVerificationError,
         FATError,
+        GMError,
         MESProbeError,
         MZError,
         OSError,

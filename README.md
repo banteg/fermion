@@ -42,3 +42,11 @@ decompilation, and reports whether any result is byte-identical:
 ```sh
 uv run fermion mes roundtrip working/installed/MAIN.MES --juice /path/to/juice
 ```
+
+Walk General Message bytecode and verify that embedded local addresses land on
+instruction boundaries. Pass either one MES file or a directory tree:
+
+```sh
+uv run fermion gm audit working/installed
+uv run fermion gm audit working/installed/MAIN.MES --verbose
+```

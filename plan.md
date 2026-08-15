@@ -1,198 +1,201 @@
-[![Fermion Mirai kara no Hōmonsha (フェルミオン 未来からの訪問者) // Silky's // PC-98 ...](https://tse3.mm.bing.net/th/id/OIP.oBfaKqGmMGE-YYnmmZ4JjAHaEo?r=0\&pid=Api)](https://x.com/PC98_bot/status/1279988617583214593?utm_source=chatgpt.com)
+# Fermion preservation and translation plan
+
+## Goal
+
+Produce a reproducible English translation workflow for the legally obtained
+PC-98 release of *Fermion: Mirai kara no Houmonsha*. Distribute only tooling,
+metadata, and binary differences; never commit original game data.
+
+## Confirmed state
+
+The original AI5 compatibility hypothesis was wrong. Fermion uses:
+
+> General Message system-1 Rev.95:06:30 for PC-98xx
+
+Its MES container resembles AI5, but its bytecode is incompatible with the AI5,
+AI1, and ADV parsers in lime-juice.
 
-Your **“Half-Life of hentai”** diagnosis is remarkably defensible.
+Completed work:
+
+- Preservation images can be materialized and hash-verified.
+- FAT12 disks and Silky's installer archives can be listed and extracted.
+- MES compatibility probes are reproducible through the `fermion` CLI.
+- EXEPACK-compressed `SIL.EXE` has been unpacked for analysis.
+- The DOS MZ load image and entry offset can be extracted reproducibly.
+- A relocation-aware Ghidra project recovers substantially more 16-bit code
+  than treating the executable as a raw binary.
+- The General Message dispatcher and translation-critical text command are
+  understood.
+- A native-derived structural walker consumes every extracted MES instruction
+  and validates address operands through the packaged `fermion gm audit`
+  command.
+- lime-juice has a GM engine with auto-detection, editable text, lossless raw
+  fallback, documentation, and a synthetic test.
+- Every currently extracted Fermion MES file auto-detects as GM and performs a
+  byte-exact no-op decompile/recompile round trip.
 
-*Fermion: Mirai kara no Hōmonsha*—roughly, **“Fermion: Visitor from the Future”**—is a short, one-route science-fiction adult adventure by Silky’s, released for PC-98 on December 22, 1995, across four floppy disks. It uses the classic command-selection format rather than free movement: at most a few context-sensitive commands appear at once, and one English-language playthrough estimates roughly five hours for the whole game. ([VNDBReview][1])
+The structural audit covers 96 on-disk MES copies representing 77 unique
+SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
+copies are included. All 17,044 in-file targets land on decoded instruction
+boundaries; the remaining 5,971 operands are external MLL call addresses.
 
-## What was actually happening
+Relevant commits:
 
-The protagonist is **Conny**—コニー, which an English translation might more naturally render as **Connie**—a genetically altered woman from around the year **2296**. She has feline traits and can voluntarily transform into an ordinary-looking cat. Humanity’s genome has deteriorated after centuries of pollution and mutation, leaving reproduction and physical health in serious decline. ([VNDBReview][1])
+- Fermion `56e4bf7`: preservation and MES probing tools.
+- Fermion `145ecd1`: MZ load-image extraction.
+- lime-juice `acad05d`: General Message text support, on branch
+  `feat/fermion-general-message`.
 
-Conny is sent approximately 300 years into the past aboard a time-travel craft called **Fermion**. Her ostensible assignment is to locate healthy twentieth-century human genetic material. She arrives in **1996**, lands near a girl named **Kanako**, and begins investigating Kanako, her family, friends, and school acquaintances. That explains why the first half can look like an unusually contrived sequence of yuri encounters: the erotic premise is literally framed as a genetic-sampling mission. ([VNDBReview][1])
+## Confirmed General Message format
 
-Then the game changes genre.
+### Container
 
-Dr. **Kanzaki Kaori**, Conny’s superior and adoptive or parental figure, comes to 1996 herself, abducts Kanako, and takes her back to the future. Conny follows, is confined inside the future installation, and gradually discovers that the supposedly species-saving mission concealed a much more personal objective. From there, *Fermion* becomes a small facility-escape adventure: transform into a cat, enter ventilation ducts, investigate rooms, find fuel, activate machinery, obtain a wheelchair, rescue Kanako, and escape. ([VNDBReview][1])
+- The first little-endian word is the absolute code start within the MES file.
+- Bytes from offset 2 to the code start are two-byte Shift-JIS dictionary entries.
+- Runtime `BP` is initialized from that first word, so local jump targets are MES
+  file offsets rather than offsets relative to the code section.
 
-So yes: **silent protagonist-adjacent scientist, mysterious research complex, institutional betrayal, vents, fuel-related machinery puzzles, imprisoned woman, escape sequence.** Gordon Freeman merely lacked the catgirl transformation mechanic.
+### Dispatcher
 
-## The larger ending revelation
+- Opcodes span `0x30` through `0x7f`.
+- `0x00` ends the current interpreter invocation.
+- The dispatch table contains 80 entries at executable load offset `0x1cbc`.
 
-**Major spoilers follow.**
+### Control-flow operands
 
-Kanzaki’s project is not motivated solely by humanity’s abstract genetic future. It is tied to **Akira**, someone extremely close to her who died—or was dying—from the future’s genetic deterioration. Conny’s mission is rooted in Kanzaki’s attempt to locate the hereditary pattern, temporal counterpart, or genetic connection that might restore Akira. Kanako matters because the women encountered in 1996 are connected to the people of 2296 through a deliberately melodramatic mixture of ancestry, recurrence, and implied reincarnation. The ending consequently reframes the game as a distorted family-rescue story rather than a straightforward “collect DNA to save humanity” plot. ([BCPark][2])
+- `0x31` and `0x32` contain a loop ID followed by one local target.
+- `0x33`, `0x34`, and `0x35` contain one local target.
+- `0x39`, `0x3f`, and `0x40` contain a local fallthrough target followed by a
+  call target; the call can address either the current MES or the loaded MLL.
+- Inline-data form `0x44` contains a local target that skips its embedded
+  string payload. Its reference-to-reference form does not use that word as a
+  branch target.
+- `0x3a` is a 13-way subdispatch. Subtype 1 builds callback records and subtype
+  9 executes the fifth word of a selected record. Fermion's callback words are
+  computed expressions/references rather than embedded address literals, so
+  they do not add another byte-level relocation in the current corpus.
+- `0x6b` and `0x71` are additional expression-selected subdispatches. Their
+  native handlers explain the last variable-length layouts in `MONO.MES` and
+  `NAME.MES`.
 
-There is one translation warning here: the surviving detailed Korean synopsis describes Akira using both **fiancée-like** and **younger-sister-like** language. That may reflect deliberately complicated relationships, Japanese kinship terminology, or simply an imperfect fan synopsis. I would not establish the exact relationship in an English script until checking the original dialogue carefully. The same applies to names such as **Marna/Māna** for マーナ.
+### Text opcode `0x4a`
 
-## You were not imagining the vent-maze cruelty
+- The opcode is followed by a mode byte, payload, and zero terminator.
+- Mode 1 uses dictionary references, raw two-byte Shift-JIS, and `0x04` newline.
+- Tokens `0x18..0x7f` address dictionary entries `0..103`.
+- Tokens `0xa0..0xdf` address dictionary entries `104..167`.
+- Mode 2 renders printable single-byte text and is already used by the game for
+  short strings such as `BS`.
 
-The surviving Japanese walkthrough includes **two separate hand-drawn vent maps**. Its sequence is approximately:
+### Scenario/module loading
 
-1. Locate Kanako.
-2. Discover that the machine lacks fuel.
-3. Retrieve and install the fuel.
-4. Wait or sleep to advance events.
-5. Check the doctor and Kanako.
-6. Speak with Marna.
-7. Acquire a wheelchair.
-8. Enter the second duct map.
-9. Reach Kanako and escape.
+- `0x6d` replaces the current MES scenario.
+- `0x6e` loads an MLL module.
+- `0x6f` calls a nested MES and restores the caller afterward.
+- Parameter token `0x11` introduces a zero-terminated literal string; the
+  parameter list ends with another zero.
+- `MAIN.MES` begins with `6e 11 "system.mll" 00 00`.
 
-That is much closer to an actual inventory-and-navigation adventure sequence than one expects after the first half of the game. ([Atwiki][3])
+## Current blocker: upstream address relocation
 
-One review even complains that Conny can apparently carry the fuel can while transformed into a cat. That only strengthens the *Half-Life* comparison: the protagonist’s inventory exists in a dimension inaccessible to ordinary physics. ([VNDBReview][1])
+The GM implementation deliberately preserves unknown code in `(raw ...)` nodes.
+That is sufficient for exact no-op round trips, but it is not yet safe for
+arbitrary translation. If edited text changes byte length, later instructions
+move while absolute branch/call targets inside raw code retain their old values.
 
-## An English patch looks unusually feasible
+Do not begin bulk translation until local code targets can be represented as
+labels and backpatched during compilation.
 
-Technically this would be a **disk-image translation patch**, not really a ROM hack, although everyone will understand “ROM hack.”
+## Active milestone: relocatable GM control flow
 
-The strongest reason for optimism is **lime-juice**, an existing open-source decompiler/compiler for the `MES` scenario bytecode used by several Elf, AliceSoft, Fairytale, and—crucially—**Silky’s** games. It converts compiled scenario files into editable RKT text and recompiles them afterward; its companion image tooling handles formats such as GP4, GPC, and GPA. It also has English-oriented text wrapping support. ([GitHub][4])
+### 1. Recover address-bearing instruction layouts — complete
 
-Its built-in presets already cover numerous Silky’s titles, including *Ai Shimai*, *Kawarazaki-ke no Ichizoku*, *Nonomura Byōin no Hitobito*, and the 1995 games *Jack* and *Mobius Roid*. Those latter two use the **AI5** engine family with a `D0` dictionary base. Since *Fermion* is also a late-1995 Silky’s release, there is a strong chance it uses a closely related MES/AI5 setup. That remains an inference: *Fermion* is not presently listed as its own lime-juice preset, and I have not inspected its files. ([GitHub][4])
+Start with native handlers for opcodes `0x31..0x40`, especially `0x40`, which is
+already known to read two little-endian 16-bit addresses before evaluating an
+expression. For each handler, record:
 
-That means the best case is not “reverse-engineer an unknown scenario VM from scratch.” It may be closer to:
+- fixed operands consumed directly from `BP`;
+- expression or parameter payloads consumed by shared decoders;
+- which words are local MES targets, MLL addresses, data offsets, or counts;
+- fall-through and stack behavior.
 
-```sh
-# First try automatic engine detection
-juice -d --auto-engine *.MES
+The layouts are validated across all 77 unique MES files. Every proposed local
+target is an instruction boundary and every out-of-file call target falls in
+the loaded MLL address range.
 
-# Plausible fallbacks for a late Silky's AI5 game
-juice -d -e AI5 -D D0 *.MES
-juice -d -e AI5 -D D0 -E *.MES
+### 2. Recover shared variable-length encodings — complete
 
-# Recompile translated RKT scripts with automatic line wrapping
-juice -c --auto-wrap *.rkt
-```
+The walker covers literals, references with nested index expressions, operators,
+random ranges, string parameters, reference parameters, composite assignments,
+and the `0x3a`, `0x6b`, and `0x71` subdispatches. Expression semantics can remain
+raw initially because their byte boundaries are now deterministic.
 
-The `-E` variant enables additional opcodes used by some later games. These should be tested separately, beginning with automatic detection—not applied blindly to all files. ([GitHub][4])
+### 3. Add labels and backpatching to lime-juice — next
 
-## A sensible translation workflow
+Incrementally replace raw control instructions with structured nodes. During
+decompilation:
 
-### 1. Work from an installed HDD image
+- identify local targets;
+- emit stable labels;
+- retain external addresses numerically.
 
-Preserve hashes of the four pristine floppy images, then install the game to a writable PC-98 hard-disk image. A surviving player report says the completed installation occupies only about **4.9 MB**, with the installer progressively unpacking the later disks, so the entire working tree should be easy to version and compare. ([BCPark][2])
+During compilation:
 
-An HDD installation will be much less irritating than repeatedly modifying four floppy images.
+- compute new node offsets;
+- resolve labels after text encoding;
+- backpatch local 16-bit targets;
+- error on unresolved or out-of-range targets.
 
-### 2. Identify the engine before translating anything
+Keep raw fallback for instruction families that do not affect code addresses.
+Port the Fermion walker narrowly: split code on proven instruction boundaries,
+structure only the fixed relocation fields above, and preserve every other
+instruction as raw bytes with its original offset attached for mapping.
 
-Inventory the installation and look especially for:
+### 4. Prove single-byte English rendering
 
-```text
-*.MES
-*.GPC
-*.GP4
-*.GPA
-*.DAT
-*.EXE
-```
+Before relocation is complete, create one same-byte-length mode-2 ASCII patch in
+a visible menu or late text record so no target moves. Run it in an emulator and
+record:
 
-Then:
+- glyph source and appearance;
+- horizontal advance (8 or 16 pixels);
+- clipping and wrapping behavior;
+- menu cursor/selection alignment;
+- whether punctuation bytes have special meanings.
 
-* Decompile one MES file.
-* Inspect whether the Japanese lines and control instructions look coherent.
-* Recompile it **without changing anything**.
-* Put it back into the HDD image and verify that the game still boots and reaches the relevant scene.
+If mode 2 is unsuitable for narrative text, trace its glyph lookup, cursor
+advance, and line-limit path from the `0x4a` handler before considering an
+executable patch.
 
-A successful no-op round trip would establish most of the technical feasibility immediately.
+### 5. Build the first changed-length vertical slice
 
-### 3. Make a ten-minute vertical slice
+Once relocation works, translate and test:
 
-Translate only:
+- one opening line;
+- one speaker-labelled exchange;
+- one command menu;
+- one multiline text box;
+- one mode-2 string.
 
-* the opening;
-* one dialogue exchange;
-* one command menu;
-* one character-name display;
-* one multiline text box;
-* save/load text, if easily reachable.
+The slice must survive decompile, edit, compile, media replacement, boot, and
+interactive execution before expanding translation scope.
 
-This exposes the real risks before hundreds or thousands of lines are translated:
+## Tooling conventions and gates
 
-* whether half-width ASCII renders correctly;
-* how many English characters fit;
-* whether punctuation is interpreted as control syntax;
-* whether text speed or pagination breaks;
-* whether player-visible commands are strings or baked-in graphics;
-* whether script recompilation changes offsets used elsewhere.
+- Python tooling uses `uv` and the packaged `fermion` entry point.
+- Keep generated, derived, and copyrighted artifacts under ignored `working/`.
+- Preserve pristine source hashes and work only on copies.
+- Synthetic tests contain no game data.
+- Require byte-exact no-op round trips for every supported original MES file.
+- Require explicit changed-length control-flow tests before claiming translation
+  safety.
+- Keep Fermion and lime-juice changes in conventional commits.
 
-Do not start the full script until this slice works.
+## Later work
 
-### 4. Build a small Python translation pipeline
-
-Given your Python and reverse-engineering background, I would keep RKT as the authoritative technical representation but generate a translator-friendly table such as:
-
-```text
-script_id
-instruction_offset
-speaker
-japanese
-english
-context
-status
-```
-
-The tooling should automatically reject:
-
-* altered control opcodes;
-* missing variables or placeholders;
-* duplicate or lost line IDs;
-* overlong command labels;
-* unbalanced quotes;
-* text that still contains unexpected Japanese characters.
-
-Screenshots keyed to script offsets would help enormously because *Fermion*’s short command-select lines may be ambiguous without scene context.
-
-### 5. Treat graphics separately
-
-Menus, title cards, signage, and possibly location labels may be embedded in proprietary image files rather than represented as script strings. `juice-img` may already support them if the game uses the expected Silky’s formats. Otherwise, these are still likely manageable indexed PC-98 graphics rather than a large modern asset pipeline. ([GitHub][4])
-
-The two vent maps appear to be navigational spaces rather than displayed automaps, so an English patch probably does not need to redraw those particular walkthrough maps.
-
-### 6. Reserve executable hacking for the end
-
-Best case: the engine already renders ASCII and lime-juice handles all scenario work.
-
-Less pleasant case: the executable assumes full-width Japanese glyphs or fixed two-byte text. Then the patch may need a small x86 modification for:
-
-* glyph width;
-* character advancement;
-* line-length calculation;
-* text-window wrapping;
-* command-menu dimensions.
-
-PC-98 translation projects sometimes reach this stage because the final executable is ordinary 16-bit x86 code and graphical formats were commonly proprietary. But the known Silky’s scenario tooling means there is a good chance only a narrow renderer patch would be needed, rather than a complete engine analysis. ([46 OkuMen][5])
-
-### 7. Release only binary differences
-
-The clean release format would be:
-
-* an `xdelta` patch for one precisely identified installed HDD image, or patches for the individual modified files;
-* SHA-1/SHA-256 hashes of the expected original;
-* a patcher script;
-* emulator and installation instructions;
-* translation notes covering character-name decisions;
-* no original game data.
-
-Exact-image xdelta distribution is already a normal approach for PC-98 fan translations. ([Dank Zine][6])
-
-## Overall verdict
-
-This is actually a **very good first substantial PC-98 translation candidate**:
-
-* approximately five hours and only one route;
-* memorable enough that a patch would have a real identity;
-* substantial story hidden behind an inaccessible language barrier;
-* genuine puzzles rather than pure text progression;
-* probable compatibility with an existing Silky’s script toolchain;
-* only a few megabytes of installed data;
-* enough absurdity to attract players who would never otherwise try an obscure 1995 adult adventure.
-
-The main uncertainty is no longer “Can its script possibly be extracted?” It is **whether Fermion uses the expected AI5/MES variant and whether its renderer accepts English cleanly**. A directory listing of the installed files—or an archive of the legally obtained installed game tree—would be enough to answer that and attempt the first decompile/recompile round trip.
-
-[1]: https://vndbreview.blogspot.com/2018/04/fermion-mirai-kara-no-houmonsha-silkys.html "Fermion ~Mirai kara no Houmonsha~ フェルミオン ～未来からの訪問者～ [Silky's] - VNDBReview"
-[2]: https://www.bcpark.net/bbs/303321 "[hdi|PC98x.] 페르미온 미래에서 온 방문자 완성판 FERMION フェルミオン 未来からの訪問者 (1995 SILKY'S) ::: bcpark.net"
-[3]: https://w.atwiki.jp/retropcgame/pages/538.html "フェルミオン ～未来からの訪問者～ - レトロPC美少女ゲーム攻略 @ wiki - atwiki（アットウィキ）"
-[4]: https://github.com/FuzionCD/lime-juice "GitHub - FuzionCD/lime-juice: 🍹 C++ port of Tomyun's \"Juice\" de/recompiler for PC-98 games using the ADV engine. Aims to be far more stable, readable, and maintainable on modern systems. · GitHub"
-[5]: https://46okumen.com/ "46okumen.com"
-[6]: https://agentannk.com/download/the-slayers-pc-98-english-patch/?utm_source=chatgpt.com "The Slayers PC-98 English Patch"
+- Safe replacement of translated files in a copied installed HDD image.
+- Extraction table with stable IDs, Japanese, English, context, and screenshots.
+- Placeholder/control-token validation and line-length checks.
+- Graphics inventory and translation through `juice-img` where applicable.
+- Reproducible binary-difference release with exact input hashes and emulator
+  instructions.
