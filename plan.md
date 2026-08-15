@@ -236,8 +236,18 @@ An ignored runtime probe replaces its 34-byte mode-1 payload with the equally
 sized mode-2 translation `"Don't look. I understand, but..."`. `FOP.MES`
 remains 5,683 bytes with 700 instructions, 154 address operands, all targets
 preserved, and zero audit issues. The combined menu-and-opening HDI differs from
-the pristine working image at 261 bytes. Runtime verification will establish
-ASCII quotes, apostrophe, comma, periods, and narrative-box alignment.
+the pristine working image at 261 bytes. NP2debug renders the English sentence
+on one clean line with working ASCII quotes, apostrophe, comma, and periods;
+narrative-box alignment and the continue indicator remain intact.
+
+The next ignored probe expands the following reply from 36 to 62 bytes and
+shrinks the response from 39 to 13, leaving `FOP.MES` at 5,683 bytes. It renders
+`"No... He's someone very dear to me. Please let me see him..."` followed by
+`"This way..."`. The 62-byte line deliberately crosses the observed one-line
+width to test automatic narrative wrapping. The rebuilt script still has 700
+instructions, 154 preserved address operands, and zero audit issues; its copied
+HDI differs from the pristine image at 341 bytes. Runtime wrapping and dialogue
+advance are the remaining gates for this probe.
 
 The slice must survive decompile, edit, compile, media replacement, boot, and
 interactive execution before expanding translation scope.
