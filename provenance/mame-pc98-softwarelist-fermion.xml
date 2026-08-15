@@ -1,0 +1,31 @@
+	<software name="fermion">
+		<description>Fermion - Mirai kara no Houmonsha</description>
+		<year>1995</year>
+		<publisher>シルキーズ (Silky's)</publisher>
+		<info name="alt_title" value="フェルミオン ～未来からの訪問者～" />
+		<info name="release" value="19951222" />
+		<part name="flop1" interface="floppy_5_25">
+			<feature name="part_id" value="Disk A"/>
+			<dataarea name="flop" size="1261568">
+				<rom name="fermion (disk a).hdm" size="1261568" crc="847badeb" sha1="b5af3375766b6a685c5f51bd7d1289f0d0fd38ad" offset="0" />
+			</dataarea>
+		</part>
+		<part name="flop2" interface="floppy_5_25">
+			<feature name="part_id" value="Disk B"/>
+			<dataarea name="flop" size="1261568">
+				<rom name="fermion (disk b).hdm" size="1261568" crc="13b70644" sha1="8a62c5191d1f093793e75e29d0595427bfa0caf8" offset="0" />
+			</dataarea>
+		</part>
+		<part name="flop3" interface="floppy_5_25">
+			<feature name="part_id" value="Disk C"/>
+			<dataarea name="flop" size="1261568">
+				<rom name="fermion (disk c).hdm" size="1261568" crc="c4cf042b" sha1="6d252df7645d9357a9d2d258fa983382583d9d2e" offset="0" />
+			</dataarea>
+		</part>
+		<part name="flop4" interface="floppy_5_25">
+			<feature name="part_id" value="Disk D"/>
+			<dataarea name="flop" size="1261568">
+				<rom name="fermion (disk d).hdm" size="1261568" crc="313e6603" sha1="b5e38ad283b79cff0605152f3de6f53e0baf8379" offset="0" />
+			</dataarea>
+		</part>
+	</software>

@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "identifier": "fermion",
+    "mediatype": "software",
+    "collection": [
+      "flux-dumps",
+      "softwarelibrary",
+      "emulation"
+    ],
+    "creator": [
+      "Silky's",
+      "シルキーズ"
+    ],
+    "description": "5.25\" floppy disk images (Greaseweazle F1) for NEC PC-9801",
+    "language": "jpn",
+    "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+    "subject": "PC-98",
+    "title": "Fermion: Mirai kara no Houmonsha （フェルミオン 未来からの訪問者）",
+    "uploader": "krugman@krugman.net",
+    "publicdate": "2023-03-29 10:11:19",
+    "addeddate": "2023-03-29 10:11:19",
+    "date": "1995-12-22",
+    "year": "1995",
+    "collection_added": [
+      "softwarelibrary",
+      "emulation"
+    ]
+  },
+  "files": [
+    {
+      "name": "Fermion - Mirai kara no Houmonsha (Silky's) (1995-12-22) [PC98] [5.25''] [SCP+MFI+HFE+D88].zip",
+      "size": "71285163",
+      "sha1": "889c545fe29370075c1ca1f49118b180b7fc83ff",
+      "crc32": "fd4b2992",
+      "md5": "a4957d228e6224aa8f058336371cfd75"
+    },
+    {
+      "name": "fermion_archive.torrent",
+      "size": "4279",
+      "sha1": "298b20e51d905f99ca074492153377eac464ad31",
+      "crc32": "d35281a8",
+      "md5": "17c59b2ad4edba68ec663cb77c98e49c"
+    },
+    {
+      "name": "fermion_files.xml",
+      "size": null,
+      "sha1": null,
+      "crc32": null,
+      "md5": "5dc2eb00cdcfc9e9a0e0a05fd2819ae9"
+    },
+    {
+      "name": "fermion_meta.sqlite",
+      "size": "45056",
+      "sha1": "1a664bfb602d312b2065ae12454f4802f6b47a5d",
+      "crc32": "c84a6878",
+      "md5": "6e4a38ddaaf29b8b191efa4bdd2534e9"
+    },
+    {
+      "name": "fermion_meta.xml",
+      "size": "901",
+      "sha1": "ff41fa72846e465be54a865f0443256256838333",
+      "crc32": "af5b6276",
+      "md5": "e6fa40f3e80d7df2e8c8efd9f840aa74"
+    }
+  ]
+}
