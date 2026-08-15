@@ -37,6 +37,9 @@ Completed work:
   across the 96 on-disk MES copies. The rebuilt files remain structurally valid,
   all 17,044 local targets still land on instruction boundaries, and all 5,971
   external MLL target values remain unchanged.
+- The packaged CLI can enumerate structurally decoded text records and replace
+  one unique, same-sized file blob in a copied binary image without modifying
+  the source media.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -165,11 +168,24 @@ real scripts.
 
 ## Active milestone: prove English rendering in the runtime
 
-### 4. Prove single-byte English rendering — next
+### 4. Prove single-byte English rendering — in progress
 
-Create one same-byte-length mode-2 ASCII patch in a visible menu or late text
-record. Keeping this first patch the same size isolates renderer behavior from
-the already-tested relocation path. Run it in an emulator and record:
+A same-byte-length mode-2 probe is ready in ignored working files. It changes the
+two ASCII spaces in `MAIN.MES`'s visible `Ｄ Ｏ Ｓ` main-menu label to `A`, at
+MES offsets `0x1644` and `0x164d`. The rebuilt MES is the same 7,310-byte size,
+passes the structural audit, and differs at only those two bytes. The copied HDI
+likewise differs only at absolute offsets `0x9d8e9` and `0x9d8f2`; the pristine
+working HDI retains SHA-256
+`533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`.
+
+The 2015 NP2debug launcher currently reaches ROM BASIC because the intended HDI
+is not mounted. Its Windows argument parser treats extra positional media as
+floppy disks, while `initgetfile()` appends `.ini` to an already suffixed custom
+configuration path and therefore looks for `Fermion.ini.ini`. Manual
+`Disks -> IDE #0 -> Open` followed by reset bypasses both launcher defects for
+this probe; repair the persistent launcher only after the live emulator exits.
+
+Boot the probe in NP2debug and record:
 
 - glyph source and appearance;
 - horizontal advance (8 or 16 pixels);
@@ -207,7 +223,7 @@ interactive execution before expanding translation scope.
 
 ## Later work
 
-- Safe replacement of translated files in a copied installed HDD image.
+- Filesystem-aware replacement of translated files when their sizes change.
 - Extraction table with stable IDs, Japanese, English, context, and screenshots.
 - Placeholder/control-token validation and line-length checks.
 - Graphics inventory and translation through `juice-img` where applicable.

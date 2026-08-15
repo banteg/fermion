@@ -50,3 +50,18 @@ instruction boundaries. Pass either one MES file or a directory tree:
 uv run fermion gm audit working/installed
 uv run fermion gm audit working/installed/MAIN.MES --verbose
 ```
+
+List decoded text instruction offsets, optionally selecting the single-byte
+mode used by built-in ASCII strings:
+
+```sh
+uv run fermion gm texts working/installed --mode 2
+```
+
+For a same-sized renderer probe, replace one unique compiled MES blob in a
+copied hard-disk image without touching the input image:
+
+```sh
+uv run fermion binary replace-exact \
+  working/base.hdi original.MES patched.MES working/test.hdi
+```

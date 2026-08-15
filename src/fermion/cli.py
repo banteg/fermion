@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 from typing import NoReturn
 
 from fermion.archive import ArchiveError, InstallerArchive
+from fermion.binary import BinaryPatchError, replace_exact
 from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
 from fermion.fat import FAT12, FATError
@@ -80,6 +82,23 @@ def build_parser() -> argparse.ArgumentParser:
     gm_audit.add_argument("source", type=_path)
     gm_audit.add_argument("--verbose", action="store_true", help="list every relocation")
     gm_audit.set_defaults(handler=_gm_audit)
+    gm_texts = gm_commands.add_parser(
+        "texts", help="list structurally decoded text records with file offsets"
+    )
+    gm_texts.add_argument("source", type=_path)
+    gm_texts.add_argument("--mode", type=int, choices=(1, 2))
+    gm_texts.set_defaults(handler=_gm_texts)
+
+    binary = commands.add_parser("binary", help="patch copied binary media conservatively")
+    binary_commands = binary.add_subparsers(dest="binary_command", required=True)
+    binary_replace = binary_commands.add_parser(
+        "replace-exact", help="replace one unique same-sized blob in a copied image"
+    )
+    binary_replace.add_argument("image", type=_path)
+    binary_replace.add_argument("original", type=_path)
+    binary_replace.add_argument("replacement", type=_path)
+    binary_replace.add_argument("output", type=_path)
+    binary_replace.set_defaults(handler=_binary_replace_exact)
 
     mz = commands.add_parser("mz", help="work with DOS MZ executables")
     mz_commands = mz.add_subparsers(dest="mz_command", required=True)
@@ -188,6 +207,36 @@ def _gm_audit(args: argparse.Namespace) -> None:
         raise GMError(f"audit failed for {len(failures)} of {len(sources)} MES files")
 
 
+def _gm_texts(args: argparse.Namespace) -> None:
+    if args.source.is_dir():
+        sources = sorted(path for path in args.source.rglob("*") if path.suffix.upper() == ".MES")
+    else:
+        sources = [args.source]
+    if not sources:
+        raise GMError(f"no MES files found under {args.source}")
+
+    for source in sources:
+        gm = GMFile.from_file(source)
+        for record in gm.text_records():
+            if args.mode is not None and record.mode != args.mode:
+                continue
+            if record.ascii_text is not None:
+                payload = f"text={json.dumps(record.ascii_text)}"
+            else:
+                payload = f"hex={record.payload.hex()}"
+            print(
+                f"{source}:0x{record.offset:04x} mode={record.mode} "
+                f"size={len(record.payload)} {payload}"
+            )
+
+
+def _binary_replace_exact(args: argparse.Namespace) -> None:
+    result = replace_exact(args.image, args.original, args.replacement, args.output)
+    print(result.output)
+    print(f"offset: 0x{result.offset:x}")
+    print(f"size: {result.size}")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -199,6 +248,7 @@ def main() -> None:
         args.handler(args)
     except (
         ArchiveError,
+        BinaryPatchError,
         D88Error,
         DiskVerificationError,
         FATError,

@@ -37,6 +37,16 @@ def test_walks_fixed_targets_and_text() -> None:
         (5, 0x7912),
     ]
     assert audit.issues == ()
+    assert [
+        (record.offset, record.end, record.mode, record.payload, record.ascii_text)
+        for record in GMFile.from_bytes(data).text_records()
+    ] == [(8, 12, 2, b"A", "A")]
+
+
+def test_mode_one_text_is_exposed_as_raw_tokens() -> None:
+    record = GMFile.from_bytes(gm_file(b"\x4a\x01\x18\x04\x00\x00")).text_records()[0]
+
+    assert (record.mode, record.payload, record.ascii_text) == (1, b"\x18\x04", None)
 
 
 def test_walks_opcode_44_inline_data_to_its_skip_target() -> None:

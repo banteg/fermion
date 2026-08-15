@@ -37,6 +37,20 @@ class GMInstruction:
 
 
 @dataclass(frozen=True)
+class GMText:
+    offset: int
+    end: int
+    mode: int
+    payload: bytes
+
+    @property
+    def ascii_text(self) -> str | None:
+        if self.mode != 2 or not all(0x20 <= byte <= 0x7E for byte in self.payload):
+            return None
+        return self.payload.decode("ascii")
+
+
+@dataclass(frozen=True)
 class GMAudit:
     instructions: tuple[GMInstruction, ...]
     relocations: tuple[GMRelocation, ...]
@@ -95,6 +109,18 @@ class GMFile:
                     f"0x{relocation.target:04x} is not an instruction boundary"
                 )
         return GMAudit(tuple(instructions), relocations, tuple(issues))
+
+    def text_records(self) -> tuple[GMText, ...]:
+        return tuple(
+            GMText(
+                offset=instruction.offset,
+                end=instruction.end,
+                mode=self.data[instruction.offset + 1],
+                payload=self.data[instruction.offset + 2 : instruction.end - 1],
+            )
+            for instruction in self.audit().instructions
+            if instruction.opcode == 0x4A
+        )
 
 
 def _error(pos: int, message: str) -> GMError:
