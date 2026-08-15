@@ -243,14 +243,46 @@ narrative-box alignment and the continue indicator remain intact.
 The next ignored probe expands the following reply from 36 to 62 bytes and
 shrinks the response from 39 to 13, leaving `FOP.MES` at 5,683 bytes. It renders
 `"No... He's someone very dear to me. Please let me see him..."` followed by
-`"This way..."`. The 62-byte line deliberately crosses the observed one-line
-width to test automatic narrative wrapping. The rebuilt script still has 700
-instructions, 154 preserved address operands, and zero audit issues; its copied
-HDI differs from the pristine image at 341 bytes. Runtime wrapping and dialogue
-advance are the remaining gates for this probe.
+`"This way..."`. The rebuilt script still has 700 instructions, 154 preserved
+address operands, and zero audit issues; its copied HDI differs from the pristine
+image at 341 bytes.
+
+NP2debug confirms automatic narrative wrapping and normal dialogue advance. The
+first 61 half-width characters fill one line; the closing quote, character 62,
+wraps alone onto the next line. The renderer therefore wraps at a 61-character
+half-width boundary and does not preserve English word boundaries. Advancing
+shows `"This way..."` normally, with the text box and continue indicator intact.
+Translation tooling must wrap English deliberately instead of relying on the
+renderer.
 
 The slice must survive decompile, edit, compile, media replacement, boot, and
 interactive execution before expanding translation scope.
+
+## Active enabling milestone: self-driving runtime tests
+
+### 7. Build a headless emulator harness — next
+
+Use the installed native NP2kai libretro core as the first automation target,
+rather than porting the legacy Win9x NP2debug GUI. The core exports the standard
+libretro load, reset, run, serialize, input, and video callbacks. Its current
+source polls `RETRO_DEVICE_KEYBOARD` every frame and supplies the rendered
+framebuffer directly to the frontend, which is enough to automate translation
+tests without GUI accessibility or OCR.
+
+Add a packaged `fermion` command that can:
+
+- load an ignored copied HDI with the existing NP2kai system directory;
+- run a deterministic number of frames and tap PC-98 keys;
+- capture the raw framebuffer to PNG and save/restore emulator state;
+- execute a small scripted route and compare checkpoints against reference
+  images or stable cropped hashes.
+
+The first gate is an unattended boot to the title screen, followed by a scripted
+route through `START NEW GAME` and framebuffer captures of the translated lines.
+Keep NP2debug for manual register, memory, breakpoint, and stepping work. If
+those debugger facilities later need automation, patch its Windows frame loop
+with a narrow local command channel and no-dialog screenshot path; a full native
+port of its Win9x-only debugger UI is not required for the translation pipeline.
 
 ## Tooling conventions and gates
 
