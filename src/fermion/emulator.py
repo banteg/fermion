@@ -463,8 +463,24 @@ def run_scheduled(
     capture_final: bool,
 ) -> Frame | None:
     """Run an exact number of frames while applying scheduled key transitions."""
+    capture_frames = {frame_count - 1} if capture_final else set()
+    return run_checkpoints(frontend, frame_count, taps, capture_frames).get(frame_count - 1)
+
+
+def run_checkpoints(
+    frontend: LibretroFrontend,
+    frame_count: int,
+    taps: list[KeyTap],
+    capture_frames: set[int],
+) -> dict[int, Frame]:
+    """Run scheduled input and retain requested framebuffers by frame index."""
     if frame_count < 1:
         raise EmulatorError("frame count must be at least one")
+    invalid_captures = sorted(frame for frame in capture_frames if not 0 <= frame < frame_count)
+    if invalid_captures:
+        raise EmulatorError(
+            f"checkpoint frame {invalid_captures[0]} is outside a {frame_count}-frame run"
+        )
     events: dict[int, list[tuple[int, bool]]] = {}
     for tap in taps:
         if tap.frame >= frame_count:
@@ -475,12 +491,14 @@ def run_scheduled(
         events.setdefault(tap.frame, []).append((tap.key, True))
         events.setdefault(tap.frame + tap.hold_frames, []).append((tap.key, False))
 
-    final: Frame | None = None
+    captured: dict[int, Frame] = {}
     for current in range(frame_count):
         for key, pressed in events.get(current, []):
             if pressed:
                 frontend.key_down(key)
             else:
                 frontend.key_up(key)
-        final = frontend.run_frame(capture=capture_final and current == frame_count - 1)
-    return final
+        frame = frontend.run_frame(capture=current in capture_frames)
+        if frame is not None:
+            captured[current] = frame
+    return captured

@@ -1,0 +1,104 @@
+version = 1
+game = "Fermion: Mirai kara no Houmonsha"
+
+[[files]]
+name = "MAIN.MES"
+sha256 = "8182bbd7d4983e8b054cc5ed81d7feadbc1c832d1223a948ed3fe2b94091e703"
+
+[[files]]
+name = "FOP.MES"
+sha256 = "90062762e0c553222d66adad5668a6c089e7e7104b9f5ed618e3586bdc5b004d"
+
+[[entries]]
+id = "main-menu-new-game"
+file = "MAIN.MES"
+offset = 0x1559
+source_mode = 1
+target_mode = 2
+source = "最初から始める"
+translation = "START NEW GAME"
+status = "runtime-verified"
+notes = """
+Primary title-menu action. The longer English label was the first live proof
+that lime-juice relocates General Message control targets correctly.
+"""
+
+[[entries]]
+id = "main-menu-load"
+file = "MAIN.MES"
+offset = 0x1570
+source_mode = 1
+target_mode = 2
+source = "続きから始める"
+translation = "LOAD"
+status = "runtime-verified"
+notes = """
+Loads a saved game. The concise label matches common English menu terminology
+and leaves comfortable horizontal space.
+"""
+
+[[entries]]
+id = "main-menu-change-name"
+file = "MAIN.MES"
+offset = 0x1588
+source_mode = 1
+target_mode = 2
+source = "名前変更"
+translation = "CHANGE NAME"
+status = "runtime-verified"
+notes = """
+Opens the protagonist-name editor. Verified in the live highlighted menu; the
+selection cursor and surrounding geometry remain intact.
+"""
+
+[[entries]]
+id = "opening-doctor-warning"
+file = "FOP.MES"
+offset = 0x016c
+source_mode = 1
+target_mode = 2
+source = "「見ない方がいいですよ。あなたのお気持ちはわかりますが・・・。」"
+translation = "\"Don't look. I understand, but...\""
+status = "runtime-proof"
+box_width = 61
+notes = """
+The speaker appears to be the doctor escorting the protagonist. A more literal
+opening is “It would be better not to look.” Revisit tone once speaker names and
+the surrounding scene are established. ASCII quotation marks, apostrophe,
+comma, and periods are all runtime-verified.
+"""
+
+[[entries]]
+id = "opening-request-to-see-him"
+file = "FOP.MES"
+offset = 0x0193
+source_mode = 1
+target_mode = 2
+source = "『いいえ・・・。私の・・・・・・大切な人です。見届けさせてください。』"
+translation = "\"No... He's someone very dear to me. Please let me see him...\""
+status = "runtime-proof"
+box_width = 61
+notes = """
+大切な人 may be “someone precious/important to me.” 見届けさせてください is
+closer to “please let me see this through” or “let me watch over him” than the
+current proof wording. The 62-byte runtime probe intentionally leaves the final
+quote on a second line and proves that the engine wraps by character, not word.
+The catalog preview word-wraps this sentence without changing the stored line.
+"""
+
+[[entries]]
+id = "opening-doctor-this-way"
+file = "FOP.MES"
+offset = 0x01bc
+source_mode = 1
+target_mode = 2
+source = "「・・・・・・・・・・・・・・・・・・わかりました。・・・こちらです・・・。」"
+translation = "\"This way...\""
+status = "runtime-proof"
+box_width = 61
+notes = """
+The source also says わかりました (“I understand/very well”). It was omitted
+from the first runtime probe to compensate for the preceding line's growth
+while keeping FOP.MES exactly the same size. Restore that nuance once FAT-aware
+file growth removes the temporary same-total-size constraint.
+"""

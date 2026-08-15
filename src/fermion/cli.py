@@ -17,12 +17,15 @@ from fermion.emulator import (
     load_core_options,
     parse_key_tap,
     parse_option,
+    run_checkpoints,
     run_scheduled,
 )
 from fermion.fat import FAT12, FATError
 from fermion.gm import GMError, GMFile
 from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
+from fermion.routes import RouteManifest
+from fermion.translation import TranslationCatalog, TranslationError
 
 
 def _path(value: str) -> Path:
@@ -158,6 +161,54 @@ def build_parser() -> argparse.ArgumentParser:
     emulator_run.add_argument("--state-in", type=_path, help="restore a libretro state before running")
     emulator_run.add_argument("--state-out", type=_path, help="save a libretro state after running")
     emulator_run.set_defaults(handler=_emulator_run)
+    emulator_route = emulator_commands.add_parser(
+        "route", help="execute a named route and verify several framebuffer checkpoints"
+    )
+    emulator_route.add_argument("manifest", type=_path)
+    emulator_route.add_argument("route")
+    emulator_route.add_argument("image", type=_path)
+    emulator_route.add_argument(
+        "--core",
+        type=_path,
+        default=Path("working/emulator/np2kai_libretro.dylib"),
+        help="native NP2kai libretro core",
+    )
+    emulator_route.add_argument(
+        "--system-dir",
+        type=_path,
+        default=Path("working/emulator/system"),
+        help="RetroArch system directory containing np2kai/",
+    )
+    emulator_route.add_argument(
+        "--options", type=_path, help="RetroArch per-game .opt file to load"
+    )
+    emulator_route.add_argument(
+        "--option",
+        action="append",
+        default=[],
+        metavar="KEY=VALUE",
+        help="override one NP2kai core option; may be repeated",
+    )
+    emulator_route.add_argument(
+        "--output-dir", type=_path, default=Path("working/emulator/checkpoints")
+    )
+    emulator_route.set_defaults(handler=_emulator_route)
+
+    translation = commands.add_parser(
+        "translation", help="work with the checked-in translation catalog"
+    )
+    translation_commands = translation.add_subparsers(
+        dest="translation_command", required=True
+    )
+    translation_check = translation_commands.add_parser(
+        "check", help="validate catalog structure, encodings, and source anchors"
+    )
+    translation_check.add_argument("catalog", type=_path)
+    translation_check.add_argument(
+        "--source-dir", type=_path, help="directory containing pristine source MES files"
+    )
+    translation_check.add_argument("--verbose", action="store_true")
+    translation_check.set_defaults(handler=_translation_check)
     return parser
 
 
@@ -323,6 +374,64 @@ def _emulator_run(args: argparse.Namespace) -> None:
             print(f"state: {args.state_out}")
 
 
+def _emulator_route(args: argparse.Namespace) -> None:
+    route = RouteManifest.from_file(args.manifest).route(args.route)
+    route.verify_content(args.image)
+    options = load_core_options(args.options) if args.options else {}
+    for encoded in args.option:
+        key, value = parse_option(encoded)
+        options[key] = value
+
+    capture_frames = {checkpoint.frame for checkpoint in route.checkpoints}
+    with LibretroFrontend(args.core, args.system_dir, args.image, options) as frontend:
+        print(f"core: {frontend.core_identity}")
+        print(f"route: {route.name} frames={route.frames}")
+        frames = run_checkpoints(frontend, route.frames, list(route.taps), capture_frames)
+
+    failures: list[str] = []
+    output_dir = args.output_dir / route.name
+    for checkpoint in route.checkpoints:
+        frame = frames.get(checkpoint.frame)
+        if frame is None:
+            raise EmulatorError(f"route did not capture checkpoint {checkpoint.name!r}")
+        output = output_dir / f"{checkpoint.name}.png"
+        frame.write_png(output)
+        result = "recorded"
+        if checkpoint.sha256 is not None:
+            result = "ok" if frame.sha256 == checkpoint.sha256 else "MISMATCH"
+            if result == "MISMATCH":
+                failures.append(checkpoint.name)
+        print(
+            f"checkpoint: {checkpoint.name} frame={checkpoint.frame} "
+            f"sha256={frame.sha256} {result} {output}"
+        )
+    if failures:
+        raise EmulatorError(
+            f"{len(failures)} route checkpoint(s) mismatched: {', '.join(failures)}"
+        )
+
+
+def _translation_check(args: argparse.Namespace) -> None:
+    catalog = TranslationCatalog.from_file(args.catalog)
+    if args.source_dir:
+        catalog.verify_sources(args.source_dir)
+    print(
+        f"{args.catalog}: files={len(catalog.files)} entries={len(catalog.entries)} "
+        f"sources={'verified' if args.source_dir else 'not-checked'}"
+    )
+    if args.verbose:
+        for entry in catalog.entries:
+            anchor = f"{entry.file}:0x{entry.offset:04x}"
+            print(f"{entry.id}: {anchor} {entry.status}")
+            print(f"  source: {entry.source}")
+            print(f"  translation: {entry.translation}")
+            if entry.box_width is not None:
+                for number, line in enumerate(entry.wrapped_translation, 1):
+                    print(f"  line {number}/{entry.box_width}: {line}")
+            for line in entry.notes.splitlines():
+                print(f"  note: {line}")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -343,6 +452,7 @@ def main() -> None:
         MESProbeError,
         MZError,
         OSError,
+        TranslationError,
         UnicodeError,
     ) as error:
         _fail(str(error))

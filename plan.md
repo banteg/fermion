@@ -43,6 +43,11 @@ Completed work:
 - Text extraction expands GM dictionary tokens, raw Shift-JIS, newlines, and the
   PC-98 box-drawing range. It decodes all 26,323 text records across the 96-file
   corpus and supports direct substring filtering.
+- A checked-in translation catalog retains stable pristine-source anchors,
+  original lines, current translations, wrapping constraints, progress status,
+  and translator notes. The CLI verifies its file hashes and exact text records.
+- Named headless routes can drive one translated HDI, capture several frames in
+  a single run, and reject content or framebuffer hash drift.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -255,6 +260,12 @@ shows `"This way..."` normally, with the text box and continue indicator intact.
 Translation tooling must wrap English deliberately instead of relying on the
 renderer.
 
+The six translated menu/dialogue records and their translator notes now live in
+`translations/fermion.toml`. Their anchors verify exactly against hash-pinned
+pristine `MAIN.MES` and `FOP.MES` files. This keeps editorial decisions and
+runtime discoveries reviewable while generated MES and HDI artifacts remain
+ignored.
+
 The slice must survive decompile, edit, compile, media replacement, boot, and
 interactive execution before expanding translation scope.
 
@@ -298,10 +309,15 @@ those debugger facilities later need automation, patch its Windows frame loop
 with a narrow local command channel and no-dialog screenshot path; a full native
 port of its Win9x-only debugger UI is not required for the translation pipeline.
 
-The next automation increment is a named route/checkpoint file that can capture
-several frames in one run and assert full-frame or cropped hashes. This should
-be added when the first repeatable translation batch needs regression coverage,
-instead of extending the frontend speculatively.
+The first named route is now checked in as `runtime/routes.toml`. It pins the
+translated HDI hash and the six key taps needed to reach the opening exchange,
+then captures three frames in one 4,500-frame run. `fermion emulator route`
+reproduces and verifies the translated-menu hash
+`a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045`,
+opening-warning hash
+`69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05`, and
+opening-request hash
+`16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e`.
 
 ## Tooling conventions and gates
 
@@ -316,9 +332,14 @@ instead of extending the frontend speculatively.
 
 ## Later work
 
+- Compile catalog entries into rebuilt GM sources/MES files instead of applying
+  each translation probe manually.
 - Filesystem-aware replacement of translated files when their sizes change.
-- Extraction table with stable IDs, Japanese, English, context, and screenshots.
-- Placeholder/control-token validation and line-length checks.
+- Expand the checked-in catalog through the rest of the opening, including
+  speaker identity, context, and editorial review notes.
+- Placeholder/control-token validation and enforced word-boundary wrapping.
+- Cropped framebuffer checkpoints where full-screen animation makes an exact
+  whole-frame hash unnecessarily fragile.
 - Graphics inventory and translation through `juice-img` where applicable.
 - Reproducible binary-difference release with exact input hashes and emulator
   instructions.

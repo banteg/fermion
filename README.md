@@ -68,6 +68,28 @@ uv run fermion binary replace-exact \
   working/base.hdi original.MES patched.MES working/test.hdi
 ```
 
+## Translation catalog
+
+The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
+the source of truth for translated text. Each entry keeps a stable ID, pristine
+MES filename and offset, original Japanese, current English, encoding modes,
+status, wrapping width, and free-form translator notes. Generated MES files,
+disk images, and screenshots remain under ignored `working/` paths.
+
+Validate the catalog on its own, or verify every original line against a
+hash-checked pristine extraction:
+
+```sh
+uv run fermion translation check translations/fermion.toml
+uv run fermion translation check translations/fermion.toml \
+  --source-dir working/archives/disk-a \
+  --verbose
+```
+
+The verbose view includes a word-wrapped preview for dialogue entries. See
+[`translations/README.md`](translations/README.md) for the entry conventions
+and incremental translation workflow.
+
 ## Headless runtime tests
 
 The packaged CLI can drive NP2kai directly through libretro. It does not launch
@@ -108,6 +130,19 @@ This route boots through the information screen, color-mode selector,
 disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
 to the long translated reply. The command reports a SHA-256 over packed RGB
 pixels for stable checkpoint comparisons.
+
+The same path is checked in as a named route with three exact framebuffer
+checkpoints. It also verifies the translated HDI's content hash before booting:
+
+```sh
+uv run fermion emulator route \
+  runtime/routes.toml \
+  opening-translation-proof \
+  working/emulator/fermion-exchange.hdi
+```
+
+Checkpoint PNGs are written under ignored
+`working/emulator/checkpoints/opening-translation-proof/`.
 
 Save states can turn the expensive boot route into a short checkpoint test:
 

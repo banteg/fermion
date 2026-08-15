@@ -1,0 +1,30 @@
+version = 1
+
+[[routes]]
+name = "opening-translation-proof"
+description = "Boot through the title menu and verify the first translated exchange."
+content_sha256 = "000cf754cddcf64f231c56187876e7e0a4b6794910bbe87f9547ce72435ecdfb"
+frames = 4500
+taps = [
+  "1000:return",
+  "1300:return",
+  "1750:return",
+  "2200:return",
+  "2900:return",
+  "4100:return",
+]
+
+[[routes.checkpoints]]
+name = "translated-menu"
+frame = 2699
+sha256 = "a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045"
+
+[[routes.checkpoints]]
+name = "opening-warning"
+frame = 3899
+sha256 = "69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05"
+
+[[routes.checkpoints]]
+name = "opening-request"
+frame = 4499
+sha256 = "16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e"

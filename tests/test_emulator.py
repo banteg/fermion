@@ -12,6 +12,7 @@ from fermion.emulator import (
     load_core_options,
     parse_key_tap,
     parse_option,
+    run_checkpoints,
     run_scheduled,
 )
 
@@ -87,3 +88,22 @@ def test_runs_scheduled_key_transitions_and_captures_final_frame() -> None:
         (frozenset({13}), False),
         (frozenset(), True),
     ]
+
+
+def test_captures_several_frames_in_one_run() -> None:
+    captured = Frame(1, 1, 2, RETRO_PIXEL_FORMAT_RGB565, b"\x00\x00")
+
+    class FakeFrontend:
+        def key_down(self, _key: int) -> None:
+            return None
+
+        def key_up(self, _key: int) -> None:
+            return None
+
+        def run_frame(self, *, capture: bool = False) -> Frame | None:
+            return captured if capture else None
+
+    assert run_checkpoints(FakeFrontend(), 5, [], {1, 3}) == {
+        1: captured,
+        3: captured,
+    }
