@@ -11,6 +11,7 @@ from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
 from fermion.fat import FAT12, FATError
 from fermion.mes import MESProbeError, probe_roundtrip
+from fermion.mz import MZError, MZImage
 
 
 def _path(value: str) -> Path:
@@ -69,6 +70,15 @@ def build_parser() -> argparse.ArgumentParser:
     roundtrip.add_argument("--juice", type=_path, default=Path("juice"))
     roundtrip.add_argument("--output-dir", type=_path, default=Path("working/roundtrip"))
     roundtrip.set_defaults(handler=_mes_roundtrip)
+
+    mz = commands.add_parser("mz", help="work with DOS MZ executables")
+    mz_commands = mz.add_subparsers(dest="mz_command", required=True)
+    load_image = mz_commands.add_parser(
+        "extract-load-image", help="strip the MZ header for raw disassembler loading"
+    )
+    load_image.add_argument("source", type=_path)
+    load_image.add_argument("destination", type=_path)
+    load_image.set_defaults(handler=_mz_extract_load_image)
     return parser
 
 
@@ -122,6 +132,13 @@ def _mes_roundtrip(args: argparse.Namespace) -> None:
         raise MESProbeError("no configuration produced an exact no-op round-trip")
 
 
+def _mz_extract_load_image(args: argparse.Namespace) -> None:
+    image = MZImage.from_file(args.source)
+    image.extract(args.destination)
+    print(args.destination)
+    print(f"entry-offset: 0x{image.entry_offset:x}")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -137,6 +154,7 @@ def main() -> None:
         DiskVerificationError,
         FATError,
         MESProbeError,
+        MZError,
         OSError,
         UnicodeError,
     ) as error:
