@@ -258,9 +258,9 @@ renderer.
 The slice must survive decompile, edit, compile, media replacement, boot, and
 interactive execution before expanding translation scope.
 
-## Active enabling milestone: self-driving runtime tests
+## Completed enabling milestone: self-driving runtime tests
 
-### 7. Build a headless emulator harness — next
+### 7. Build a headless emulator harness — complete
 
 Use the installed native NP2kai libretro core as the first automation target,
 rather than porting the legacy Win9x NP2debug GUI. The core exports the standard
@@ -269,20 +269,39 @@ source polls `RETRO_DEVICE_KEYBOARD` every frame and supplies the rendered
 framebuffer directly to the frontend, which is enough to automate translation
 tests without GUI accessibility or OCR.
 
-Add a packaged `fermion` command that can:
+The packaged `fermion emulator run` command now:
 
 - load an ignored copied HDI with the existing NP2kai system directory;
 - run a deterministic number of frames and tap PC-98 keys;
 - capture the raw framebuffer to PNG and save/restore emulator state;
-- execute a small scripted route and compare checkpoints against reference
-  images or stable cropped hashes.
+- report a stable SHA-256 over packed RGB pixels for checkpoint comparisons.
 
-The first gate is an unattended boot to the title screen, followed by a scripted
-route through `START NEW GAME` and framebuffer captures of the translated lines.
+The installed RetroArch core is x86-64 and cannot load into the arm64 `uv`
+Python process. A clean arm64 build from upstream NP2kai commit `c023417` works;
+the ignored core has SHA-256
+`83e4f13371fb919e4ec7ce4ea9b1f7e2643dfb5df0ef561c6444f7c20257d68a`.
+The harness uses an ignored copy of the NP2kai system directory so the core's
+configuration writes do not touch the RetroArch installation.
+
+An unattended 4,500-frame route now boots through the information screen,
+color-mode selector, disclaimer, title, and translated menu; selects
+`START NEW GAME`; displays `"Don't look. I understand, but..."`; and advances to
+the deliberately wrapped long reply. Its final 640x400 RGB565 checkpoint has
+packed-RGB SHA-256
+`16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e`.
+Save and restore also work: restoring the 1,200-frame information-screen state,
+tapping Return at frame 1, and running 200 frames reproduces the mode-selector
+hash `910a14549d5812f2bda9df0ba206c4e2907c03f2a7d21bd0632b79d09f695965`.
+
 Keep NP2debug for manual register, memory, breakpoint, and stepping work. If
 those debugger facilities later need automation, patch its Windows frame loop
 with a narrow local command channel and no-dialog screenshot path; a full native
 port of its Win9x-only debugger UI is not required for the translation pipeline.
+
+The next automation increment is a named route/checkpoint file that can capture
+several frames in one run and assert full-frame or cropped hashes. This should
+be added when the first repeatable translation batch needs regression coverage,
+instead of extending the frontend speculatively.
 
 ## Tooling conventions and gates
 

@@ -67,3 +67,58 @@ copied hard-disk image without touching the input image:
 uv run fermion binary replace-exact \
   working/base.hdi original.MES patched.MES working/test.hdi
 ```
+
+## Headless runtime tests
+
+The packaged CLI can drive NP2kai directly through libretro. It does not launch
+RetroArch, Wine, or a GUI: scheduled keyboard input goes into the emulator and
+the final framebuffer is written directly to PNG.
+
+The installed RetroArch core is x86-64, so build a native arm64 core from the
+current upstream source. All source, firmware copies, cores, states, and captures
+remain under ignored `working/` paths:
+
+```sh
+gh repo clone AZO234/NP2kai working/vendor/NP2kai
+git -C working/vendor/NP2kai checkout c023417
+make -C working/vendor/NP2kai/sdl -f Makefile.libretro \
+  platform=osx 'ARCHFLAGS=-arch arm64' 'CXX_VER=-std=c++14' \
+  NP2KAI_VERSION=0.86 NP2KAI_HASH=c023417 -j4
+cp working/vendor/NP2kai/sdl/np2kai_libretro.dylib working/emulator/
+mkdir -p working/emulator/system
+cp -R "$HOME/Documents/RetroArch/system/np2kai" working/emulator/system/
+```
+
+Run an exact number of frames, inject one or more key taps, and capture the final
+640x400 framebuffer. A tap uses `FRAME:KEY[:HOLD_FRAMES]`:
+
+```sh
+uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+  --frames 4500 \
+  --tap 1000:return \
+  --tap 1300:return \
+  --tap 1750:return \
+  --tap 2200:return \
+  --tap 2900:return \
+  --tap 4100:return \
+  --capture working/emulator/headless-exchange.png
+```
+
+This route boots through the information screen, color-mode selector,
+disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
+to the long translated reply. The command reports a SHA-256 over packed RGB
+pixels for stable checkpoint comparisons.
+
+Save states can turn the expensive boot route into a short checkpoint test:
+
+```sh
+uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+  --frames 1200 --state-out working/emulator/information.state
+uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+  --state-in working/emulator/information.state \
+  --frames 200 --tap 1:return \
+  --capture working/emulator/mode-selector.png
+```
+
+The built-in core options match the Fermion configuration. Use `--options` to
+load a RetroArch `.opt` file or repeat `--option KEY=VALUE` for overrides.

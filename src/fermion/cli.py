@@ -11,6 +11,14 @@ from fermion.archive import ArchiveError, InstallerArchive
 from fermion.binary import BinaryPatchError, replace_exact
 from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
+from fermion.emulator import (
+    EmulatorError,
+    LibretroFrontend,
+    load_core_options,
+    parse_key_tap,
+    parse_option,
+    run_scheduled,
+)
 from fermion.fat import FAT12, FATError
 from fermion.gm import GMError, GMFile
 from fermion.mes import MESProbeError, probe_roundtrip
@@ -109,6 +117,47 @@ def build_parser() -> argparse.ArgumentParser:
     load_image.add_argument("source", type=_path)
     load_image.add_argument("destination", type=_path)
     load_image.set_defaults(handler=_mz_extract_load_image)
+
+    emulator = commands.add_parser("emulator", help="run headless NP2kai translation tests")
+    emulator_commands = emulator.add_subparsers(dest="emulator_command", required=True)
+    emulator_run = emulator_commands.add_parser(
+        "run", help="boot an HDI for an exact frame count and optionally capture it"
+    )
+    emulator_run.add_argument("image", type=_path)
+    emulator_run.add_argument("--frames", type=int, default=1800)
+    emulator_run.add_argument(
+        "--tap",
+        action="append",
+        default=[],
+        metavar="FRAME:KEY[:HOLD]",
+        help="tap a libretro keyboard key at a frame; may be repeated",
+    )
+    emulator_run.add_argument(
+        "--core",
+        type=_path,
+        default=Path("working/emulator/np2kai_libretro.dylib"),
+        help="native NP2kai libretro core",
+    )
+    emulator_run.add_argument(
+        "--system-dir",
+        type=_path,
+        default=Path("working/emulator/system"),
+        help="RetroArch system directory containing np2kai/",
+    )
+    emulator_run.add_argument(
+        "--options", type=_path, help="RetroArch per-game .opt file to load"
+    )
+    emulator_run.add_argument(
+        "--option",
+        action="append",
+        default=[],
+        metavar="KEY=VALUE",
+        help="override one NP2kai core option; may be repeated",
+    )
+    emulator_run.add_argument("--capture", type=_path, help="write the final frame as PNG")
+    emulator_run.add_argument("--state-in", type=_path, help="restore a libretro state before running")
+    emulator_run.add_argument("--state-out", type=_path, help="save a libretro state after running")
+    emulator_run.set_defaults(handler=_emulator_run)
     return parser
 
 
@@ -242,6 +291,38 @@ def _binary_replace_exact(args: argparse.Namespace) -> None:
     print(f"size: {result.size}")
 
 
+def _emulator_run(args: argparse.Namespace) -> None:
+    options = load_core_options(args.options) if args.options else {}
+    for encoded in args.option:
+        key, value = parse_option(encoded)
+        options[key] = value
+    taps = [parse_key_tap(encoded) for encoded in args.tap]
+
+    with LibretroFrontend(args.core, args.system_dir, args.image, options) as frontend:
+        print(f"core: {frontend.core_identity}")
+        if args.state_in:
+            frontend.load_state(args.state_in)
+        frame = run_scheduled(
+            frontend,
+            args.frames,
+            taps,
+            capture_final=args.capture is not None,
+        )
+        print(f"frames: {args.frames}")
+        if args.capture:
+            if frame is None:
+                raise EmulatorError("no final framebuffer was captured")
+            frame.write_png(args.capture)
+            print(f"capture: {args.capture}")
+            print(
+                f"framebuffer: {frame.width}x{frame.height} pitch={frame.pitch} "
+                f"format={frame.pixel_format} sha256={frame.sha256}"
+            )
+        if args.state_out:
+            frontend.save_state(args.state_out)
+            print(f"state: {args.state_out}")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -256,6 +337,7 @@ def main() -> None:
         BinaryPatchError,
         D88Error,
         DiskVerificationError,
+        EmulatorError,
         FATError,
         GMError,
         MESProbeError,
