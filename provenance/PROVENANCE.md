@@ -53,12 +53,6 @@ All four disks match byte-for-byte:
 | C | `6d252df7645d9357a9d2d258fa983382583d9d2e` | `c4cf042b` |
 | D | `b5e38ad283b79cff0605152f3de6f53e0baf8379` | `313e6603` |
 
-## Rejected source
-
-`hs9227_v5903_PC98` (h-suki.com repack): a pre-installed 10.3 MB `.hdi`
-hard-disk image of unknown modification state, bundled with a Neko Project
-21/W build. Not usable as a pristine reference.
-
 ## Working images
 
 Working HDM images and any installed HDD image derived from these floppies
