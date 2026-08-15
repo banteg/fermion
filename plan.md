@@ -40,6 +40,9 @@ Completed work:
 - The packaged CLI can enumerate structurally decoded text records and replace
   one unique, same-sized file blob in a copied binary image without modifying
   the source media.
+- Text extraction expands GM dictionary tokens, raw Shift-JIS, newlines, and the
+  PC-98 box-drawing range. It decodes all 26,323 text records across the 96-file
+  corpus and supports direct substring filtering.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -192,9 +195,9 @@ full-width mode-1 cells around it. The mixed-mode highlighted row remains aligne
 and unclipped, and its cursor geometry is unchanged. Punctuation behavior and
 narrative text wrapping remain to be tested.
 
-## Active milestone: first changed-length vertical slice
+## Completed milestone: changed-length runtime relocation
 
-### 5. Build the first changed-length vertical slice — in progress
+### 5. Build a changed-length title-menu slice — complete
 
 First translate the three visible title-menu labels with deliberately different
 encoded lengths. Compensate with shorter translations in hidden labels so the
@@ -209,15 +212,32 @@ growth. The rebuilt file remains 7,310 bytes with 941 instructions, 286 address
 operands, and zero audit issues. Two of its 190 local targets move forward by six
 bytes, while all 96 external MLL targets remain unchanged. The copied HDI differs
 from the pristine working image at exactly the 226 bytes changed in `MAIN.MES`.
-Runtime boot and interaction are the remaining gate for this substep.
 
-After that relocation proof, translate and test:
+NP2debug renders all three English labels cleanly with the expected half-width
+advance and unchanged selection geometry. Activating `START NEW GAME` reaches the
+opening Japanese dialogue, proving the resized menu's relocated control flow is
+executable rather than merely structurally valid.
+
+## Active milestone: first narrative vertical slice
+
+### 6. Translate and test the opening sequence — in progress
+
+Locate the first displayed line in its scenario MES, then translate and test:
 
 - one opening line;
 - one speaker-labelled exchange;
 - one additional command menu;
 - one multiline text box;
 - one mode-2 string.
+
+The first line is `FOP.MES` offset `0x016c`:
+`「見ない方がいいですよ。あなたのお気持ちはわかりますが・・・。」`.
+An ignored runtime probe replaces its 34-byte mode-1 payload with the equally
+sized mode-2 translation `"Don't look. I understand, but..."`. `FOP.MES`
+remains 5,683 bytes with 700 instructions, 154 address operands, all targets
+preserved, and zero audit issues. The combined menu-and-opening HDI differs from
+the pristine working image at 261 bytes. Runtime verification will establish
+ASCII quotes, apostrophe, comma, periods, and narrative-box alignment.
 
 The slice must survive decompile, edit, compile, media replacement, boot, and
 interactive execution before expanding translation scope.

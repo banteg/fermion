@@ -87,6 +87,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     gm_texts.add_argument("source", type=_path)
     gm_texts.add_argument("--mode", type=int, choices=(1, 2))
+    gm_texts.add_argument("--contains", help="only show decoded text containing this string")
     gm_texts.set_defaults(handler=_gm_texts)
 
     binary = commands.add_parser("binary", help="patch copied binary media conservatively")
@@ -220,8 +221,12 @@ def _gm_texts(args: argparse.Namespace) -> None:
         for record in gm.text_records():
             if args.mode is not None and record.mode != args.mode:
                 continue
-            if record.ascii_text is not None:
-                payload = f"text={json.dumps(record.ascii_text)}"
+            if args.contains is not None and (
+                record.text is None or args.contains not in record.text
+            ):
+                continue
+            if record.text is not None:
+                payload = f"text={json.dumps(record.text, ensure_ascii=False)}"
             else:
                 payload = f"hex={record.payload.hex()}"
             print(

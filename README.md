@@ -51,11 +51,13 @@ uv run fermion gm audit working/installed
 uv run fermion gm audit working/installed/MAIN.MES --verbose
 ```
 
-List decoded text instruction offsets, optionally selecting the single-byte
-mode used by built-in ASCII strings:
+List decoded text instruction offsets. Mode 1 expands dictionary tokens and
+Shift-JIS; mode 2 exposes the single-byte ASCII strings used by the game. Results
+can be filtered without decompiling whole scripts:
 
 ```sh
 uv run fermion gm texts working/installed --mode 2
+uv run fermion gm texts working/installed --contains '見ない方'
 ```
 
 For a same-sized renderer probe, replace one unique compiled MES blob in a

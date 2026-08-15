@@ -42,12 +42,11 @@ class GMText:
     end: int
     mode: int
     payload: bytes
+    text: str | None
 
     @property
     def ascii_text(self) -> str | None:
-        if self.mode != 2 or not all(0x20 <= byte <= 0x7E for byte in self.payload):
-            return None
-        return self.payload.decode("ascii")
+        return self.text if self.mode == 2 else None
 
 
 @dataclass(frozen=True)
@@ -117,10 +116,86 @@ class GMFile:
                 end=instruction.end,
                 mode=self.data[instruction.offset + 1],
                 payload=self.data[instruction.offset + 2 : instruction.end - 1],
+                text=_decode_text(
+                    self.data[instruction.offset + 1],
+                    self.data[instruction.offset + 2 : instruction.end - 1],
+                    self.dictionary,
+                ),
             )
             for instruction in self.audit().instructions
             if instruction.opcode == 0x4A
         )
+
+
+def _decode_text(mode: int, payload: bytes, dictionary: tuple[bytes, ...]) -> str | None:
+    if mode == 2:
+        if not all(0x20 <= byte <= 0x7E for byte in payload):
+            return None
+        return payload.decode("ascii")
+
+    decoded: list[str] = []
+    pos = 0
+    while pos < len(payload):
+        byte = payload[pos]
+        if byte == 0x04:
+            decoded.append("\n")
+            pos += 1
+            continue
+
+        if 0x18 <= byte <= 0x7F:
+            index = byte - 0x18
+            pos += 1
+        elif 0xA0 <= byte <= 0xDF:
+            index = byte - 0x38
+            pos += 1
+        else:
+            if pos + 1 >= len(payload):
+                return None
+            pair = payload[pos : pos + 2]
+            pos += 2
+            char = _decode_sjis_pair(pair)
+            if char is None:
+                return None
+            decoded.append(char)
+            continue
+
+        if index >= len(dictionary):
+            return None
+        char = _decode_sjis_pair(dictionary[index])
+        if char is None:
+            return None
+        decoded.append(char)
+
+    return "".join(decoded)
+
+
+def _decode_sjis_pair(pair: bytes) -> str | None:
+    if len(pair) == 2:
+        lead, trail = pair
+        row_offset = int(trail > 0x9E)
+        if 0x81 <= lead <= 0x9F:
+            row = row_offset + lead * 2 - 257
+        elif 0xE0 <= lead <= 0xEF:
+            row = row_offset + lead * 2 - 385
+        else:
+            row = 0
+
+        if row % 2 == 1 and 0x40 <= trail <= 0x7E:
+            column = trail - 63
+        elif row % 2 == 1 and 0x80 <= trail <= 0x9E:
+            column = trail - 64
+        elif row and row % 2 == 0 and 0x9F <= trail <= 0xFC:
+            column = trail - 158
+        else:
+            column = 0
+
+        if row == 12 and 4 <= column <= 79:
+            return chr(0x2500 + column - 4)
+
+    try:
+        return pair.decode("cp932")
+    except UnicodeDecodeError:
+        return None
 
 
 def _error(pos: int, message: str) -> GMError:

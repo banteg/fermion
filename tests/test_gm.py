@@ -38,15 +38,30 @@ def test_walks_fixed_targets_and_text() -> None:
     ]
     assert audit.issues == ()
     assert [
-        (record.offset, record.end, record.mode, record.payload, record.ascii_text)
+        (record.offset, record.end, record.mode, record.payload, record.text)
         for record in GMFile.from_bytes(data).text_records()
     ] == [(8, 12, 2, b"A", "A")]
 
 
-def test_mode_one_text_is_exposed_as_raw_tokens() -> None:
-    record = GMFile.from_bytes(gm_file(b"\x4a\x01\x18\x04\x00\x00")).text_records()[0]
+def test_mode_one_text_decodes_dictionary_tokens_newlines_and_sjis() -> None:
+    record = GMFile.from_bytes(
+        gm_file(b"\x4a\x01\x18\x04\x82\xa2\x00\x00", dictionary=b"\x82\xa0")
+    ).text_records()[0]
 
-    assert (record.mode, record.payload, record.ascii_text) == (1, b"\x18\x04", None)
+    assert (record.mode, record.payload, record.text, record.ascii_text) == (
+        1,
+        b"\x18\x04\x82\xa2",
+        "あ\nい",
+        None,
+    )
+
+
+def test_mode_one_text_decodes_pc98_box_drawing_dictionary_entries() -> None:
+    record = GMFile.from_bytes(
+        gm_file(b"\x4a\x01\x18\x00\x00", dictionary=b"\x86\xa2")
+    ).text_records()[0]
+
+    assert record.text == "─"
 
 
 def test_walks_opcode_44_inline_data_to_its_skip_target() -> None:
