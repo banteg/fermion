@@ -166,9 +166,9 @@ target movement, external-target preservation, and rejection of a resized raw
 node. Independent corpus validation covers unchanged and aggressively resized
 real scripts.
 
-## Active milestone: prove English rendering in the runtime
+## Completed milestone: prove English rendering in the runtime
 
-### 4. Prove single-byte English rendering — in progress
+### 4. Prove single-byte English rendering — complete
 
 A same-byte-length mode-2 probe is ready in ignored working files. It changes the
 two ASCII spaces in `MAIN.MES`'s visible `Ｄ Ｏ Ｓ` main-menu label to `A`, at
@@ -182,28 +182,40 @@ The 2015 NP2debug launcher currently reaches ROM BASIC because the intended HDI
 is not mounted. Its Windows argument parser treats extra positional media as
 floppy disks, while `initgetfile()` appends `.ini` to an already suffixed custom
 configuration path and therefore looks for `Fermion.ini.ini`. Manual
-`Disks -> IDE #0 -> Open` followed by reset bypasses both launcher defects for
+`Disks -> SASI #0 -> Open` followed by reset bypasses both launcher defects for
 this probe; repair the persistent launcher only after the live emulator exits.
 
-Boot the probe in NP2debug and record:
+The probe boots in NP2debug when mounted manually as SASI #0. The final scrolling
+menu entry renders as `ＤAＯAＳ`, proving that mode 2 produces clean Latin glyphs
+inside the GM renderer. Each `A` advances by 8 logical pixels, half the 16-pixel
+full-width mode-1 cells around it. The mixed-mode highlighted row remains aligned
+and unclipped, and its cursor geometry is unchanged. Punctuation behavior and
+narrative text wrapping remain to be tested.
 
-- glyph source and appearance;
-- horizontal advance (8 or 16 pixels);
-- clipping and wrapping behavior;
-- menu cursor/selection alignment;
-- whether punctuation bytes have special meanings.
+## Active milestone: first changed-length vertical slice
 
-If mode 2 is unsuitable for narrative text, trace its glyph lookup, cursor
-advance, and line-limit path from the `0x4a` handler before considering an
-executable patch.
+### 5. Build the first changed-length vertical slice — in progress
 
-### 5. Build the first changed-length vertical slice
+First translate the three visible title-menu labels with deliberately different
+encoded lengths. Compensate with shorter translations in hidden labels so the
+overall `MAIN.MES` size stays 7,310 bytes. This isolates live relocation behavior
+from FAT filesystem growth: targets between the edited nodes must move even
+though the final file and HDI sizes remain unchanged.
 
-After the renderer proof, translate and test:
+That probe is ready in ignored working files. The visible labels are `START NEW
+GAME` (14 bytes replacing 8), `LOAD` (4 replacing 9), and `CHANGE NAME` (11
+replacing 4). Shorter `ART`, `CATALOG`, and `DOS` labels compensate for the net
+growth. The rebuilt file remains 7,310 bytes with 941 instructions, 286 address
+operands, and zero audit issues. Two of its 190 local targets move forward by six
+bytes, while all 96 external MLL targets remain unchanged. The copied HDI differs
+from the pristine working image at exactly the 226 bytes changed in `MAIN.MES`.
+Runtime boot and interaction are the remaining gate for this substep.
+
+After that relocation proof, translate and test:
 
 - one opening line;
 - one speaker-labelled exchange;
-- one command menu;
+- one additional command menu;
 - one multiline text box;
 - one mode-2 string.
 
