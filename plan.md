@@ -30,9 +30,13 @@ Completed work:
   and validates address operands through the packaged `fermion gm audit`
   command.
 - lime-juice has a GM engine with auto-detection, editable text, lossless raw
-  fallback, documentation, and a synthetic test.
+  fallback, local-target relocation, documentation, and synthetic tests.
 - Every currently extracted Fermion MES file auto-detects as GM and performs a
   byte-exact no-op decompile/recompile round trip.
+- A corpus-wide changed-length stress test grows all 26,293 mode-1 text records
+  across the 96 on-disk MES copies. The rebuilt files remain structurally valid,
+  all 17,044 local targets still land on instruction boundaries, and all 5,971
+  external MLL target values remain unchanged.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -43,8 +47,10 @@ Relevant commits:
 
 - Fermion `56e4bf7`: preservation and MES probing tools.
 - Fermion `145ecd1`: MZ load-image extraction.
+- Fermion `4c91a23`: native-derived General Message structural audit.
 - lime-juice `acad05d`: General Message text support, on branch
   `feat/fermion-general-message`.
+- lime-juice `86a0f68`: General Message source-span relocation and backpatching.
 
 ## Confirmed General Message format
 
@@ -96,17 +102,20 @@ Relevant commits:
   parameter list ends with another zero.
 - `MAIN.MES` begins with `6e 11 "system.mll" 00 00`.
 
-## Current blocker: upstream address relocation
+## Completed blocker: upstream address relocation
 
-The GM implementation deliberately preserves unknown code in `(raw ...)` nodes.
-That is sufficient for exact no-op round trips, but it is not yet safe for
-arbitrary translation. If edited text changes byte length, later instructions
-move while absolute branch/call targets inside raw code retain their old values.
+The GM implementation preserves semantically unknown code in `(raw ...)` nodes,
+but now structurally walks every instruction before emitting them. Decompiled
+source contains a `gm-layout` map with one original span per code node and every
+proven local 16-bit target field. The compiler maps those positions onto the new
+output and backpatches local targets after text encoding.
 
-Do not begin bulk translation until local code targets can be represented as
-labels and backpatched during compilation.
+This avoids prematurely inventing a semantic AST for all 80 opcodes. External
+MLL addresses are not included in the relocation table, and raw nodes must keep
+their original lengths. Generated layout metadata and node order must remain
+intact.
 
-## Active milestone: relocatable GM control flow
+## Completed milestone: relocatable GM control flow
 
 ### 1. Recover address-bearing instruction layouts — complete
 
@@ -130,32 +139,37 @@ random ranges, string parameters, reference parameters, composite assignments,
 and the `0x3a`, `0x6b`, and `0x71` subdispatches. Expression semantics can remain
 raw initially because their byte boundaries are now deterministic.
 
-### 3. Add labels and backpatching to lime-juice — next
+### 3. Add source mapping and backpatching to lime-juice — complete
 
-Incrementally replace raw control instructions with structured nodes. During
-decompilation:
+The least-resistance implementation retains raw instructions and emits stable
+source spans instead of exposing labels in the user-facing AST. During
+decompilation it:
 
-- identify local targets;
-- emit stable labels;
-- retain external addresses numerically.
+- decodes the complete instruction stream;
+- emits only proven `0x4a` instructions as `gm-text`;
+- records one source span for each `raw` or `gm-text` node;
+- records local targets only when they land on decoded instruction boundaries.
 
-During compilation:
+During compilation it:
 
-- compute new node offsets;
-- resolve labels after text encoding;
-- backpatch local 16-bit targets;
-- error on unresolved or out-of-range targets.
+- computes the new span of every node after dictionary and text encoding;
+- remaps each target field and destination through the source spans;
+- backpatches local 16-bit targets while preserving external addresses;
+- rejects length-changing raw edits, malformed maps, unresolved positions, and
+  outputs beyond the 16-bit address space.
 
-Keep raw fallback for instruction families that do not affect code addresses.
-Port the Fermion walker narrowly: split code on proven instruction boundaries,
-structure only the fixed relocation fields above, and preserve every other
-instruction as raw bytes with its original offset attached for mapping.
+The synthetic test covers exact round-trip, a changed-length mode-2 edit, local
+target movement, external-target preservation, and rejection of a resized raw
+node. Independent corpus validation covers unchanged and aggressively resized
+real scripts.
 
-### 4. Prove single-byte English rendering
+## Active milestone: prove English rendering in the runtime
 
-Before relocation is complete, create one same-byte-length mode-2 ASCII patch in
-a visible menu or late text record so no target moves. Run it in an emulator and
-record:
+### 4. Prove single-byte English rendering — next
+
+Create one same-byte-length mode-2 ASCII patch in a visible menu or late text
+record. Keeping this first patch the same size isolates renderer behavior from
+the already-tested relocation path. Run it in an emulator and record:
 
 - glyph source and appearance;
 - horizontal advance (8 or 16 pixels);
@@ -169,7 +183,7 @@ executable patch.
 
 ### 5. Build the first changed-length vertical slice
 
-Once relocation works, translate and test:
+After the renderer proof, translate and test:
 
 - one opening line;
 - one speaker-labelled exchange;
