@@ -872,14 +872,18 @@ Voice-calibration examples belong in anchored canonical catalog entries with sou
 Recommended order:
 
 1. FOP — **complete and QA-ready; focused coverage and end-to-end route are green**
-2. F0001–F0002 — **complete and QA-ready; 462 physical records / 454 canonical translations**
-3. F0003 — **translation and structural build complete; human playtest and native fixture pending**
-4. Non-adult narrative portions of F0004–F0016 — next translation batch
-5. F0027–F0042
-6. Route branches and scene replay labels
-7. Menus, name editor, term editor, and catalog last
+2. F0000 — **current priority; only six of 398 physical records are managed, so
+   close the departure-eve scene and every choice branch before advancing**
+3. F0001–F0002 — **complete and QA-ready; 462 physical records / 454 canonical translations**
+4. F0003 — **translation and structural build complete; human playtest and native fixture pending**
+5. F0004–F0016
+6. F0027–F0042
+7. Later route branches and scene replay labels
+8. Menus, name editor, term editor, and catalog last
 
-This gives the team a stable understanding of every character before translating optional intimacy.
+This keeps the canonical catalog contiguous from New Game across every
+reachable branch. Do not skip an earlier scenario merely because a later file
+is easier to draft or automate.
 
 ### Phase 5 — Review passes and in-engine QA
 

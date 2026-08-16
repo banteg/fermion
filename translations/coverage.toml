@@ -20,6 +20,15 @@ start = 0x0554
 end = 0x085b
 
 [[scopes]]
+id = "departure-eve-with-kanzaki"
+description = "Every decoded F0000 record from Connie's departure-eve scene with Dr. Kanzaki through the next-day handoff to F0001."
+
+[[scopes.ranges]]
+file = "DISKA/F0000.MES"
+start = 0x0554
+end = 0x3e88
+
+[[scopes]]
 id = "opening-prologue"
 description = "Every decoded FOP record from the bedside prologue through the 2296 premise screen."
 

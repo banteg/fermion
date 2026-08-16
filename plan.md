@@ -77,6 +77,13 @@ Completed work:
   canonical 34,200-frame route through the bedside scene, Marie's coercion of
   Kanzaki, the naturalized Project D terminal, the centered 2296 premise, and
   the first following scene.
+- A chronology audit corrected the next-story priority: `FOP.MES` transfers to
+  `F0000.MES`, and `F0000.MES` does not hand off to `F0001.MES` until after its
+  complete departure-eve scene. The dedicated
+  `departure-eve-with-kanzaki` ledger covers all 398 physical text records in
+  `F0000.MES`; only the six opening/menu records are currently managed, leaving
+  392 pending. No new post-`F0003` translation slice should begin until this
+  contiguous gap is closed.
 - The second major slice, all of `F0001.MES` and `F0002.MES`, is QA-ready. Its
   ledger closes 462 physical records as 454 canonical translations with eight
   context-safe duplicate collapses and zero pending records. A native-load
@@ -656,6 +663,10 @@ capture a native F0003 fixture for subsequent short automated routes.
 
 ## Later work
 
+- Complete `departure-eve-with-kanzaki` in pristine-offset order before adding
+  any `F0004.MES` or later story text. Keep alternate F0000 choices in the same
+  scope so the chronological prefix is complete across every reachable branch,
+  not merely one QA path.
 - Add validated import for the generated translator views. Schema 5 composite
   occurrences, immutable name/term segments, and strict token validation are
   complete; TOML remains the sole canonical source.
@@ -664,8 +675,9 @@ capture a native F0003 fixture for subsequent short automated routes.
   catalog rather than fixing only the generated image.
 - Playtest the complete F0003 slice, capture a trustworthy native scenario
   fixture, and pin representative composite, dialogue, and menu framebuffers.
-- Continue the main-story spine from `F0004.MES`, assigning contextual speakers
-  explicitly and retaining every editorial uncertainty in the checked-in notes.
+- After F0000 is complete and QA-ready, continue the main-story spine from
+  `F0004.MES`, assigning contextual speakers explicitly and retaining every
+  editorial uncertainty in the checked-in notes.
 - Continue adding sparse game-native fixtures beyond `F0002.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route
   and translator-facing checkpoint coverage.
