@@ -162,3 +162,12 @@ description = "Every decoded F0005 record from Connie and Kanako's post-bath tal
 file = "DISKB/F0005.MES"
 start = 0x0404
 end = 0x2ee0
+
+[[scopes]]
+id = "connie-meets-kanakos-mother"
+description = "Every decoded F0006 record from Kanako's mother returning home through Connie's introduction, transformation, family reflections, and the dinner invitation."
+
+[[scopes.ranges]]
+file = "DISKB/F0006.MES"
+start = 0x03b3
+end = 0x2fe2

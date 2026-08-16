@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 1,845 canonical records covering 2,166 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0005.MES`.
+The current catalog contains 2,076 canonical records covering 2,503 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0006.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -250,6 +250,16 @@ catalog entries, including 124 composite display messages; all anchors are
 translated and none are excluded or pending. The file is stored in `DISKB`,
 and the rebuilt image audits both changed archives. No trustworthy live F0005
 state exists yet, so this slice remains `qa-ready` pending a human playtest and
+native fixture capture.
+
+The seventh closed scope is `connie-meets-kanakos-mother`: all 337 physical
+text records in `F0006.MES`, from Kanako's mother returning home through
+Connie's introduction, transformation, family reflections, and the dinner
+invitation. They are managed as 231 catalog entries, including 96 composite
+display messages; all anchors are translated and none are excluded or pending.
+This slice activates the live `name:mother` token and reorders the fixed Takano
+surname around the editable given name for natural English. No trustworthy live
+F0006 state exists yet, so it remains `qa-ready` pending a human playtest and
 native fixture capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It

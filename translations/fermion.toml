@@ -46,6 +46,21 @@ source = "disk-b/F0005.MES"
 sha256 = "837e5867ba05e30e902a3ad7661c01ca621e9e66c44cc5459cdcde71c5426ebc"
 box_width = 61
 
+[[files]]
+file = "DISKB/F0006.MES"
+source = "disk-b/F0006.MES"
+sha256 = "3e4870753ddc141f716226ac6fe0a34bd3282cf2c9f7fc7f9bc30d328b153e23"
+box_width = 61
+
+[[tokens]]
+id = "name:mother"
+source = "由貴"
+translation = "Yuki"
+max_width = 4
+initializers = [
+  { file = "DISKA/MAIN.MES", offset = 0x18c0, slot = 0x03e8 },
+]
+
 [[tokens]]
 id = "name:older-sister"
 source = "瑠璃"
@@ -25043,4 +25058,3330 @@ source = "なにしろ時間がない。"
 translation = "There's no time to waste."
 speaker = "Connie"
 context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-03b3-clack"
+file = "DISKB/F0006.MES"
+offset = 0x03b3
+source_mode = 1
+target_mode = 2
+source = "がたっ。"
+translation = "Clack."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-03bc-my-ears-twitch"
+file = "DISKB/F0006.MES"
+offset = 0x03bc
+source_mode = 1
+target_mode = 2
+source = "ぴくっ。"
+translation = "My ears twitch."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-03c6-i-hear-the-front-door-open-name-looks-at"
+target_mode = 2
+source = "この家のドアを開けた音が聞こえた。⟦name:dear-person⟧が不思議そうな顔で聞いてくる。"
+translation = "I hear the front door open. ⟦name:dear-person⟧ looks at me, puzzled."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x03c6, source_mode = 1, source = "この家のドアを開けた音が聞こえた。" },
+  { kind = "token", token = "name:dear-person", start = 0x03dd, end = 0x03ec, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x03ec, source_mode = 1, source = "が不思議そうな顔で聞いてくる。" },
+]
+
+[[composites]]
+id = "f0006-0401-whats-wrong"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「どうしたの？」"
+translation = "[⟦name:dear-person⟧] \"What's wrong?\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0401, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0405, end = 0x0414, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0414, source_mode = 1, source = "】「どうしたの？」" },
+]
+
+[[entries]]
+id = "f0006-0422-before-i-can-answer-a-voice-comes-from-downstairs"
+file = "DISKB/F0006.MES"
+offset = 0x0422
+source_mode = 1
+target_mode = 2
+source = "あたしが返事をするより先に、下の方から声が聞こえた。"
+translation = "Before I can answer, a voice comes from downstairs."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0444-im-home"
+file = "DISKB/F0006.MES"
+offset = 0x0444
+source_mode = 1
+target_mode = 2
+source = "【女性の声】「ただいまー。」"
+translation = "[WOMAN'S VOICE] \"I'm home!\""
+speaker = "女性の声"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0457-oh-moms-home-what-do-we-do"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ、おかあさんだ！　・・・どうしよう・・・。」"
+translation = "[⟦name:dear-person⟧] \"Oh, Mom's home! ...What do we do?\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0457, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x045b, end = 0x046a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x046a, source_mode = 1, source = "】「あっ、おかあさんだ！　・・・どうしよう・・・。」" },
+]
+
+[[composites]]
+id = "f0006-0489-name-starts-to-panic"
+target_mode = 2
+source = "⟦name:dear-person⟧はオロオロしている。"
+translation = "⟦name:dear-person⟧ starts to panic."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0489, end = 0x0498, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0498, source_mode = 1, source = "はオロオロしている。" },
+]
+
+[[entries]]
+id = "f0006-04a7-calm-down-introduce-me-first-then-well-explain-everything"
+file = "DISKB/F0006.MES"
+offset = 0x04a7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「落ち着け。まずあたしを会わせてくれ。それから説明するんだ。」"
+translation = "[CONNIE] \"Calm down. Introduce me first. Then we'll explain everything.\""
+speaker = "コニー"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-04d2-okay"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Okay...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x04d2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x04d6, end = 0x04e5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x04e5, source_mode = 1, source = "】「うん・・・。」" },
+]
+
+[[composites]]
+id = "f0006-04f3-name-looks-anxious-so-am-i"
+target_mode = 2
+source = "⟦name:dear-person⟧は不安そうだ。・・・あたしも不安だ。"
+translation = "⟦name:dear-person⟧ looks anxious. ...So am I."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x04f3, end = 0x0502, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0502, source_mode = 1, source = "は不安そうだ。・・・あたしも不安だ。" },
+]
+
+[[entries]]
+id = "f0006-051b-we-go-downstairs"
+file = "DISKB/F0006.MES"
+offset = 0x051b
+source_mode = 1
+target_mode = 2
+source = "あたしたちは１階に降りた。"
+translation = "We go downstairs."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-05fe-a-woman-is-downstairs-she-must-be-names-mother"
+target_mode = 2
+source = "１階には女性がいた。⟦name:dear-person⟧の母親だろう。"
+translation = "A woman is downstairs. She must be ⟦name:dear-person⟧'s mother."
+speaker = "Connie"
+context = "Connie and Kanako hear Kanako's mother return, then go downstairs to introduce Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x05fe, source_mode = 1, source = "１階には女性がいた。" },
+  { kind = "token", token = "name:dear-person", start = 0x060d, end = 0x061c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x061c, source_mode = 1, source = "の母親だろう。" },
+]
+
+[[entries]]
+id = "f0006-0654-look"
+file = "DISKB/F0006.MES"
+offset = 0x0654
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0665-think"
+file = "DISKB/F0006.MES"
+offset = 0x0665
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0677-talk"
+file = "DISKB/F0006.MES"
+offset = 0x0677
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-06b3-shes-beautiful"
+file = "DISKB/F0006.MES"
+offset = 0x06b3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（綺麗な人・・・・・・・・・。）"
+translation = "[CONNIE] (She's beautiful...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-06cf-i-stare-completely-taken-with-her"
+file = "DISKB/F0006.MES"
+offset = 0x06cf
+source_mode = 1
+target_mode = 2
+source = "あたしはぼぉーっと見とれてしまった。"
+translation = "I stare at her in a daze."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-06e8-she-seems-gentle-and-easygoing-but-strong-underneath"
+file = "DISKB/F0006.MES"
+offset = 0x06e8
+source_mode = 1
+target_mode = 2
+source = "優しく、おっとりしていそうだけど、芯はしっかりしていると感じさせる人。"
+translation = "She seems gentle and easygoing, but strong underneath."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-071a-wh-what-do-i-do"
+file = "DISKB/F0006.MES"
+offset = 0x071a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ど、どうしよう、・・・。）"
+translation = "[CONNIE] (Wh-what do I do...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0732-stop-staring-think"
+file = "DISKB/F0006.MES"
+offset = 0x0732
+source_mode = 1
+target_mode = 2
+source = "見てないで、考えよう。"
+translation = "Stop staring. Think."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-074b-line"
+file = "DISKB/F0006.MES"
+offset = 0x074b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0761-i-feel-myself-blush"
+file = "DISKB/F0006.MES"
+offset = 0x0761
+source_mode = 1
+target_mode = 2
+source = "あたしはちょっと赤面する。"
+translation = "I feel myself blush."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0773-the-feel-of-names-body-when-she-went-limp"
+target_mode = 2
+source = "⟦name:mother⟧がぐったりとなったときに、抱き抱えた身体の感触・・・。"
+translation = "⟦name:mother⟧ went limp in my arms... I remember the feel of her body."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0773, end = 0x0782, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0782, source_mode = 1, source = "がぐったりとなったときに、抱き抱えた身体の感触・・・。" },
+]
+
+[[entries]]
+id = "f0006-07a2-soft-alluring"
+file = "DISKB/F0006.MES"
+offset = 0x07a2
+source_mode = 1
+target_mode = 2
+source = "柔らかく、魅力的だった。"
+translation = "Soft. So attractive."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-07b6-come-on-not-now"
+file = "DISKB/F0006.MES"
+offset = 0x07b6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（もぅ・・・・・・。こんな時に・・・。）"
+translation = "[CONNIE] (Come on... Not now...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-07d5-i-cant-be-thinking-about-that"
+file = "DISKB/F0006.MES"
+offset = 0x07d5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（不謹慎なこと、考えちゃいけない・・・。）"
+translation = "[CONNIE] (I shouldn't be having such indecent thoughts...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-07ff-i-think-about-name-in-the-kitchen"
+target_mode = 2
+source = "台所の⟦name:mother⟧のことを思う。"
+translation = "I think about ⟦name:mother⟧ in the kitchen."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x07ff, source_mode = 1, source = "台所の" },
+  { kind = "token", token = "name:mother", start = 0x0805, end = 0x0814, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0814, source_mode = 1, source = "のことを思う。" },
+]
+
+[[composites]]
+id = "f0006-0820-its-hard-to-ask-for-a-genetic-sample-with"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧がいる前だと・・・・・・遺伝子くださいって話にくいし・・・。）"
+translation = "[CONNIE] (It's hard to ask her for her genes with ⟦name:dear-person⟧ here...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0820, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0829, end = 0x0838, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0838, source_mode = 1, source = "がいる前だと・・・・・・遺伝子くださいって話にくいし・・・。）" },
+]
+
+[[entries]]
+id = "f0006-085d-and"
+file = "DISKB/F0006.MES"
+offset = 0x085d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それに・・・・・・。）"
+translation = "[CONNIE] (And...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0873-shed-think-i-was-strange-if-i-suddenly-hugged"
+file = "DISKB/F0006.MES"
+offset = 0x0873
+source_mode = 1
+target_mode = 2
+source = "いきなり抱き付いたら変に思われるよね、きっと・・・。"
+translation = "She'd think I was strange if I suddenly hugged her. Of course she would..."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0893-aah-what-do-i-do"
+file = "DISKB/F0006.MES"
+offset = 0x0893
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ～～～ん、どうしよう・・・。）"
+translation = "[CONNIE] (Aah, what do I do...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-08ae-nnngh"
+file = "DISKB/F0006.MES"
+offset = 0x08ae
+source_mode = 1
+target_mode = 2
+source = "【コニー】（う～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～っ。）"
+translation = "[CONNIE] (Nnngh...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-08dc-but"
+file = "DISKB/F0006.MES"
+offset = 0x08dc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（でも・・・・・・・・。）"
+translation = "[CONNIE] (But...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-08f3-i-fidget"
+file = "DISKB/F0006.MES"
+offset = 0x08f3
+source_mode = 1
+target_mode = 2
+source = "うずうず。"
+translation = "I fidget."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-08fd-and-shes-so-attractive"
+file = "DISKB/F0006.MES"
+offset = 0x08fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・魅力的な人だし・・・・・・。）"
+translation = "[CONNIE] (...And she's so attractive...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0920-im-helplessly-drawn-to-the-charm-of-an-older"
+file = "DISKB/F0006.MES"
+offset = 0x0920
+source_mode = 1
+target_mode = 2
+source = "あたしは大人の女性の魅力にふらふらと引き寄せられた。"
+translation = "I can't resist the pull of an older woman."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0969-somehow-she-looks-like-name"
+target_mode = 2
+source = "【コニー】（どことなく・・・、⟦name:dear-person⟧に似ている・・・・・・。）"
+translation = "[CONNIE] (Somehow... she looks like ⟦name:dear-person⟧.)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0969, source_mode = 1, source = "【コニー】（どことなく・・・、" },
+  { kind = "token", token = "name:dear-person", start = 0x097b, end = 0x098a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x098a, source_mode = 1, source = "に似ている・・・・・・。）" },
+]
+
+[[entries]]
+id = "f0006-099c-of-course-they-look-alike-theyre-mother-and-daughter"
+file = "DISKB/F0006.MES"
+offset = 0x099c
+source_mode = 1
+target_mode = 2
+source = "まあ親子だからそうだろうけど、あたしがどきっと感じたのはそれだけが原因じゃなさそうだ。"
+translation = "Of course they look alike. They're mother and daughter. But that can't be the only reason she makes my heart jump."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-09d7-why-am-i-so-nervous"
+file = "DISKB/F0006.MES"
+offset = 0x09d7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なぜか緊張してしまう・・・・・・・・・。）"
+translation = "[CONNIE] (Why am I so nervous...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+[[composites]]
+id = "f0006-09f8-is-it-because-names-mother-is-a-beautiful-older"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧のお母さんが、キレイな年上の女性だから・・・？）"
+translation = "[CONNIE] (Is it because ⟦name:dear-person⟧'s mother is a beautiful older woman...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x09f8, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0a01, end = 0x0a10, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a10, source_mode = 1, source = "のお母さんが、キレイな年上の女性だから・・・？）" },
+]
+
+[[entries]]
+id = "f0006-0a2f-or"
+file = "DISKB/F0006.MES"
+offset = 0x0a2f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それとも・・・。）"
+translation = "[CONNIE] (Or...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0a43-because-her-perfume-smells-like-dr-kanzakis"
+file = "DISKB/F0006.MES"
+offset = 0x0a43
+source_mode = 1
+target_mode = 2
+source = "【コニー】（香水が・・・・・・、神崎博士の匂いに似ているから、か・・・？）"
+translation = "[CONNIE] (Because her perfume... smells like Dr. Kanzaki's?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0a6d-mutants-are-sensitive-to-scent-our-sense-of-smell"
+file = "DISKB/F0006.MES"
+offset = 0x0a6d
+source_mode = 1
+target_mode = 2
+source = "あたしたちミュータントは、臭いに敏感だ。ヒトの何倍もの嗅覚能力を持っている。"
+translation = "Mutants are sensitive to scent. Our sense of smell is several times sharper than a human's."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0a9f-her-perfume-smells-a-lot-like-dr-kanzakis"
+file = "DISKB/F0006.MES"
+offset = 0x0a9f
+source_mode = 1
+target_mode = 2
+source = "この香水の匂いは、神崎博士のものとよく似ている。"
+translation = "Her perfume smells a lot like Dr. Kanzaki's."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0abc-is-this-the-kind-of-perfume-grown-women-wear"
+file = "DISKB/F0006.MES"
+offset = 0x0abc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（オトナの女性はこういう香水をつけるのかなぁ・・・。）"
+translation = "[CONNIE] (Is this the kind of perfume older women wear...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0ae1-even-in-my-time-only-grown-women-like-dr"
+file = "DISKB/F0006.MES"
+offset = 0x0ae1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしの時代でも、こういう香水をつけているのは神崎博士のようなオトナの女性だけだ。）"
+translation = "[CONNIE] (Even in my time, only older women like Dr. Kanzaki wear this kind of perfume.)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0b27-ive-thought-about-trying-a-cologne-suited-to-my"
+file = "DISKB/F0006.MES"
+offset = 0x0b27
+source_mode = 1
+target_mode = 2
+source = "あたしだって年齢に合ったコロンでもつけてみようかと思ったこともあった。"
+translation = "I've thought about trying a cologne suited to my age, too."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0b51-on-my-third-birthday-about-eighteen-in-human-terms"
+file = "DISKB/F0006.MES"
+offset = 0x0b51
+source_mode = 1
+target_mode = 2
+source = "あたしの３才の誕生日（ヒトの年齢だと１６才頃）に、神崎博士がコロンとルージュを贈ってくれた。"
+translation = "On my third birthday (about eighteen in human terms), Dr. Kanzaki gave me cologne and lipstick."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+notes = "The source says about sixteen in human terms. The player-facing number follows the disclosed English-release policy that every character depicted in sexual content is treated as 18 or older; the original remains visible in the source field and research brief."
+
+[[entries]]
+id = "f0006-0b90-i-keep-them-safe-theyre-my-treasures"
+file = "DISKB/F0006.MES"
+offset = 0x0b90
+source_mode = 1
+target_mode = 2
+source = "大切に持っている。あたしの宝物だ。"
+translation = "I keep them safe. They're my treasures."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0ba8-unfortunately-when-i-tried-wearing-the-cologne-my-nose"
+file = "DISKB/F0006.MES"
+offset = 0x0ba8
+source_mode = 1
+target_mode = 2
+source = "でも悲しいことに、コロンをつけたらあたしの嗅覚では強く感知してしまった。"
+translation = "Unfortunately, when I tried wearing the cologne, my nose picked it up far too strongly."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0bd4-even-two-or-three-drops-make-my-head-spin"
+file = "DISKB/F0006.MES"
+offset = 0x0bd4
+source_mode = 1
+target_mode = 2
+source = "２～３滴でもコロンの匂いにくらくらとなってしまう。"
+translation = "Even two or three drops make my head spin."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0bf4-id-have-to-dilute-it-heavily-to-wear-it"
+file = "DISKB/F0006.MES"
+offset = 0x0bf4
+source_mode = 1
+target_mode = 2
+source = "自分につけるにはすごく薄めないといけない。"
+translation = "I'd have to dilute it heavily to wear it myself."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0c0f-but-then-humans-cant-smell-it-at-all-which"
+file = "DISKB/F0006.MES"
+offset = 0x0c0f
+source_mode = 1
+target_mode = 2
+source = "そうするとヒトにはまったく匂わなくなってしまい、せっかくのコロンが役に立たない。"
+translation = "But then humans can't smell it at all, which makes the cologne pointless."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0c3e-no-now-i-cant-stop-thinking-about-dr-kanzaki"
+file = "DISKB/F0006.MES"
+offset = 0x0c3e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・だめだ、あたし、神崎博士を思いだしちゃう・・・。）"
+translation = "[CONNIE] (No... Now I can't stop thinking about Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0c65-suddenly-i-remember-just-how-far-through-time-ive"
+file = "DISKB/F0006.MES"
+offset = 0x0c65
+source_mode = 1
+target_mode = 2
+source = "ふと、遠い時代へ来てしまったんだと思い返す。"
+translation = "Suddenly I remember just how far through time I've come."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0c82-this-era-is-wonderful-but-i-miss-the-one"
+file = "DISKB/F0006.MES"
+offset = 0x0c82
+source_mode = 1
+target_mode = 2
+source = "こっちはいい時代だけど、神崎博士の待つ時代も懐かしい。"
+translation = "This era is wonderful, but I miss the one where Dr. Kanzaki is waiting for me."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0cbc-an-older-womans-lovely-scent-leaves-me-dazed"
+file = "DISKB/F0006.MES"
+offset = 0x0cbc
+source_mode = 1
+target_mode = 2
+source = "あたしはオトナの女性のいい匂いに、うっとりとなってしまう。"
+translation = "An older woman's lovely scent leaves me dazed."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0cde-oh-no-no-no-i-cant-let-myself-fall"
+file = "DISKB/F0006.MES"
+offset = 0x0cde
+source_mode = 1
+target_mode = 2
+source = "【コニー】（やば～～～、だめだめ、あたしが惹かれちゃだめ・・・。）"
+translation = "[CONNIE] (Oh no... No, no. I can't let myself fall for her...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0d0e-oh-no-i-blew-it"
+file = "DISKB/F0006.MES"
+offset = 0x0d0e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あやや～～～、まずった～～～～～～。）"
+translation = "[CONNIE] (Oh no, I blew it!)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0d2c-i-said-too-much"
+file = "DISKB/F0006.MES"
+offset = 0x0d2c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（余計なことを言っちゃったよう～～～～～～。）"
+translation = "[CONNIE] (I said too much!)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0d68-maybe-springing-it-on-her-like-that-was-a"
+file = "DISKB/F0006.MES"
+offset = 0x0d68
+source_mode = 1
+target_mode = 2
+source = "【コニー】（いきなりは・・・・・・、まずかったかなぁ・・・。）"
+translation = "[CONNIE] (Maybe springing it on her like that was a mistake...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0d95-first-i-need-to-calm-her-down"
+file = "DISKB/F0006.MES"
+offset = 0x0d95
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まず、落ち着かせなきゃ・・・。）"
+translation = "[CONNIE] (First I need to calm her down...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-0db9-line"
+file = "DISKB/F0006.MES"
+offset = 0x0db9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0dcc-i-can-still-feel-name-against-my-hands"
+target_mode = 2
+source = "あたしの手には、まだ⟦name:mother⟧の感触が残っている。"
+translation = "I can still feel ⟦name:mother⟧'s body against my hands."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0dcc, source_mode = 1, source = "あたしの手には、まだ" },
+  { kind = "token", token = "name:mother", start = 0x0dd9, end = 0x0de8, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0de8, source_mode = 1, source = "の感触が残っている。" },
+]
+
+[[entries]]
+id = "f0006-0df8-i-know-im-blushing-but-i-cant-cool-my"
+file = "DISKB/F0006.MES"
+offset = 0x0df8
+source_mode = 1
+target_mode = 2
+source = "あたしは赤面しているだろうとわかっているけど、頬の熱さを止めることはできなかった。"
+translation = "I know I'm blushing, but I can't cool my burning cheeks."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0e29-name-blushes-embarrassed-that-she-fainted"
+target_mode = 2
+source = "⟦name:mother⟧は、倒れたことを赤くなって恥ずかしがっている。"
+translation = "⟦name:mother⟧ blushes, embarrassed that she fainted."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0e29, end = 0x0e38, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0e38, source_mode = 1, source = "は、倒れたことを赤くなって恥ずかしがっている。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0f39, end = 0x0f48, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0f48, source_mode = 1, source = "は、倒れたことを赤くなって恥ずかしがっている。" },
+]
+
+[[composites]]
+id = "f0006-0e56-i-feel-terrible-for-startling-both-name-and-name"
+target_mode = 2
+source = "驚かせてしまったことで、あたしは⟦name:mother⟧と⟦name:dear-person⟧に申し訳ない気持ちでいっぱいだ。"
+translation = "I feel terrible for startling both ⟦name:mother⟧ and ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0e56, source_mode = 1, source = "驚かせてしまったことで、あたしは" },
+  { kind = "token", token = "name:mother", start = 0x0e69, end = 0x0e78, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0e78, source_mode = 1, source = "と" },
+  { kind = "token", token = "name:dear-person", start = 0x0e7c, end = 0x0e8b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e8b, source_mode = 1, source = "に申し訳ない気持ちでいっぱいだ。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0f66, source_mode = 1, source = "驚かせてしまったことで、あたしは" },
+  { kind = "token", token = "name:mother", start = 0x0f79, end = 0x0f88, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0f88, source_mode = 1, source = "と" },
+  { kind = "token", token = "name:dear-person", start = 0x0f8c, end = 0x0f9b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f9b, source_mode = 1, source = "に申し訳ない気持ちでいっぱいだ。" },
+]
+
+[[entries]]
+id = "f0006-0ea2-im-sorry-i-startled-you"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x0ea2 },
+  { file = "DISKB/F0006.MES", offset = 0x0fb2 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ごめんなさい、驚かせて・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"I'm sorry I startled you...\""
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-0ec6-name-smiles-its-all-right"
+target_mode = 2
+source = "⟦name:mother⟧は『いいのよ。』と微笑む。"
+translation = "⟦name:mother⟧ smiles. \"It's all right.\""
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0ec6, end = 0x0ed5, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0ed5, source_mode = 1, source = "は『いいのよ。』と微笑む。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0fd6, end = 0x0fe5, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0fe5, source_mode = 1, source = "は『いいのよ。』と微笑む。" },
+]
+
+[[composites]]
+id = "f0006-0ee9-no-i-could-fall-for-names-smile"
+target_mode = 2
+source = "【コニー】（だめ・・・。⟦name:mother⟧の微笑みに惹かれてしまいそう・・・。）"
+translation = "[CONNIE] (No... I could fall for ⟦name:mother⟧'s smile...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0ee9, source_mode = 1, source = "【コニー】（だめ・・・。" },
+  { kind = "token", token = "name:mother", start = 0x0ef8, end = 0x0f07, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0f07, source_mode = 1, source = "の微笑みに惹かれてしまいそう・・・。）" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x0ff9, source_mode = 1, source = "【コニー】（だめ・・・。" },
+  { kind = "token", token = "name:mother", start = 0x1008, end = 0x1017, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1017, source_mode = 1, source = "の微笑みに惹かれてしまいそう・・・。）" },
+]
+
+[[composites]]
+id = "f0006-1039-name-gently-folds-her-hand-around-mine"
+target_mode = 2
+source = "⟦name:mother⟧の手は、あたしの手をそっ・・・と包む。"
+translation = "⟦name:mother⟧ gently closes her hand around mine."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x1039, end = 0x1048, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1048, source_mode = 1, source = "の手は、あたしの手をそっ・・・と包む。" },
+]
+
+[[entries]]
+id = "f0006-1061-shes-only-touching-my-hand-but-it-feels-as"
+file = "DISKB/F0006.MES"
+offset = 0x1061
+source_mode = 1
+target_mode = 2
+source = "あたしには、手を触れているだけなのに、身体を包まれているかのように感じた。"
+translation = "She's only touching my hand, but it feels as if all of me is being held."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-108c-no-no-my-heads-going-fuzzy"
+file = "DISKB/F0006.MES"
+offset = 0x108c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だめだめ・・・。ぼーっとなっちゃう・・・。）"
+translation = "[CONNIE] (No, no... My head's going fuzzy...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-10c7-i-leave-my-hand-where-it-is-and-feel"
+target_mode = 2
+source = "あたしは手をそのままに、⟦name:mother⟧の肌を感じる。"
+translation = "I leave my hand where it is and feel ⟦name:mother⟧'s skin."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x10c7, source_mode = 1, source = "あたしは手をそのままに、" },
+  { kind = "token", token = "name:mother", start = 0x10d6, end = 0x10e5, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x10e5, source_mode = 1, source = "の肌を感じる。" },
+]
+
+[[entries]]
+id = "f0006-10f2-her-hand-is-a-little-smaller-than-mine"
+file = "DISKB/F0006.MES"
+offset = 0x10f2
+source_mode = 1
+target_mode = 2
+source = "あたしよりやや小さい手。"
+translation = "Her hand is a little smaller than mine."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1103-but-its-so-slender-and-beautiful"
+file = "DISKB/F0006.MES"
+offset = 0x1103
+source_mode = 1
+target_mode = 2
+source = "でも綺麗でほっそりしてる・・・。"
+translation = "But it's so slender and beautiful..."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-111b-her-fingers-are-just-like-dr-kanzakis"
+file = "DISKB/F0006.MES"
+offset = 0x111b
+source_mode = 1
+target_mode = 2
+source = "まるで神崎博士の指みたい・・・・・・。"
+translation = "Her fingers are just like Dr. Kanzaki's..."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1134-whenever-i-think-of-an-older-woman-i-end"
+file = "DISKB/F0006.MES"
+offset = 0x1134
+source_mode = 1
+target_mode = 2
+source = "【コニー】（どうしても年上、というと神崎博士を想像してしまう・・・。）"
+translation = "[CONNIE] (Whenever I think of an older woman, I end up picturing Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1167-id-be-happy-if-i-were-descended-from-name"
+target_mode = 2
+source = "【コニー】（あたしが・・・⟦name:mother⟧の子孫だったら・・・・・・、嬉しいんだけど・・・。）"
+translation = "[CONNIE] (I'd be happy if... I were descended from ⟦name:mother⟧...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1167, source_mode = 1, source = "【コニー】（あたしが・・・" },
+  { kind = "token", token = "name:mother", start = 0x1177, end = 0x1186, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1186, source_mode = 1, source = "の子孫だったら・・・・・・、嬉しいんだけど・・・。）" },
+]
+[[entries]]
+id = "f0006-11a6-half-my-blood-half-my-genes-comes-from-a"
+file = "DISKB/F0006.MES"
+offset = 0x11a6
+source_mode = 1
+target_mode = 2
+source = "あたしの血の半分、遺伝子の半分は、猫。"
+translation = "Half my blood and half my genes come from a cat."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-11c1-that-doesnt-mean-i-hate-having-cat-genes"
+file = "DISKB/F0006.MES"
+offset = 0x11c1
+source_mode = 1
+target_mode = 2
+source = "猫の遺伝子が入ってて嫌だと思ってる訳じゃない。"
+translation = "That doesn't mean I hate having cat genes."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-11de-they-give-me-more-strength-and-agility-than-an"
+file = "DISKB/F0006.MES"
+offset = 0x11de
+source_mode = 1
+target_mode = 2
+source = "並みのヒトより強い力、俊敏性があるので感謝しているくらいだ。"
+translation = "They give me more strength and agility than an ordinary human. If anything, I'm grateful."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-121e-if-i-were-descended-from-name-then-name-would"
+target_mode = 2
+source = "【コニー】（もしもあたしが⟦name:mother⟧の子孫だったら・・・、⟦name:dear-person⟧は遠いご先祖様ってことになるわね・・・。）"
+translation = "[CONNIE] (If I were descended from ⟦name:mother⟧, then ⟦name:dear-person⟧ would be one of my distant ancestors...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x121e, source_mode = 1, source = "【コニー】（もしもあたしが" },
+  { kind = "token", token = "name:mother", start = 0x122e, end = 0x123d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x123d, source_mode = 1, source = "の子孫だったら・・・、" },
+  { kind = "token", token = "name:dear-person", start = 0x124b, end = 0x125a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x125a, source_mode = 1, source = "は遠いご先祖様ってことになるわね・・・。）" },
+]
+
+[[composites]]
+id = "f0006-1277-id-be-thrilled-to-be-descended-from-someone-as"
+target_mode = 2
+source = "かわいい⟦name:dear-person⟧の子孫になれるなら、あたしは大歓迎だ。"
+translation = "I'd be thrilled to be descended from someone as cute as ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1277, source_mode = 1, source = "かわいい" },
+  { kind = "token", token = "name:dear-person", start = 0x127e, end = 0x128d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x128d, source_mode = 1, source = "の子孫になれるなら、あたしは大歓迎だ。" },
+]
+
+[[composites]]
+id = "f0006-12b0-lucky-name-her-mom-cooks-for-her-every-day"
+target_mode = 2
+source = "【コニー】（いいなー・・・。⟦name:dear-person⟧は毎日お母さんに料理を作って貰えるんだ・・・。）"
+translation = "[CONNIE] (Lucky ⟦name:dear-person⟧... Her mom cooks for her every day.)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x12b0, source_mode = 1, source = "【コニー】（いいなー・・・。" },
+  { kind = "token", token = "name:dear-person", start = 0x12c1, end = 0x12d0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x12d0, source_mode = 1, source = "は毎日お母さんに料理を作って貰えるんだ・・・。）" },
+]
+
+[[entries]]
+id = "f0006-12f2-and-she-gets-to-depend-on-her"
+file = "DISKB/F0006.MES"
+offset = 0x12f2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（甘えることもできる・・・・・・・・・。）"
+translation = "[CONNIE] (And she gets to depend on her...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1311-a-sharp-ache-hits-deep-in-my-chest"
+file = "DISKB/F0006.MES"
+offset = 0x1311
+source_mode = 1
+target_mode = 2
+source = "あたしは胸の奥がズキンと疼く。"
+translation = "A sharp ache hits deep in my chest."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1329-im-jealous-of-a-home-like-this"
+file = "DISKB/F0006.MES"
+offset = 0x1329
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うらやましい・・・。こういう雰囲気・・・。）"
+translation = "[CONNIE] (I'm jealous... of a home like this.)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-134a-i-have-dr-kanzaki-at-home-she-lets-me"
+file = "DISKB/F0006.MES"
+offset = 0x134a
+source_mode = 1
+target_mode = 2
+source = "あたしには神崎博士がいて、甘えても家の中なら許してくれる。"
+translation = "I have Dr. Kanzaki. At home, she lets me lean on her."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-136e-i-have"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x136e },
+  { file = "DISKB/F0006.MES", offset = 0x1445 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしには・・・。）"
+translation = "[CONNIE] (I have...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1383-dr-kanzaki-is-the-one-person-i-can-lean"
+file = "DISKB/F0006.MES"
+offset = 0x1383
+source_mode = 1
+target_mode = 2
+source = "あたしにとっては、神崎博士が甘えてもいい人だ。"
+translation = "Dr. Kanzaki is the one person I can lean on."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-139f-line"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x139f },
+  { file = "DISKB/F0006.MES", offset = 0x1475 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-13bb-my-thoughts-drift"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x13bb },
+  { file = "DISKB/F0006.MES", offset = 0x1491 },
+]
+source_mode = 1
+target_mode = 2
+source = "もわもわもわ。"
+translation = "My thoughts drift..."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-13c7-i-remember-the-warmth-of-dr-kanzakis-skin"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x13c7 },
+  { file = "DISKB/F0006.MES", offset = 0x149d },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士の肌の温もりを思い出してしまった。"
+translation = "I remember the warmth of Dr. Kanzaki's skin."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-13e7-am-i-homesick-already"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x13e7 },
+  { file = "DISKB/F0006.MES", offset = 0x14bd },
+]
+source_mode = 1
+target_mode = 2
+source = "もう・・・、ホームシックにかかったのかな・・・・・・。"
+translation = "Am I homesick already...?"
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-140b-family-huh"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x140b },
+  { file = "DISKB/F0006.MES", offset = 0x14e1 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・家族・・・・・・、か・・・。）"
+translation = "[CONNIE] (...Family... huh.)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-145a-dr-kanzaki-is-the-one-person-i-can-lean"
+file = "DISKB/F0006.MES"
+offset = 0x145a
+source_mode = 1
+target_mode = 2
+source = "あたしにとって、神崎博士が甘えてもいい人だ。"
+translation = "Dr. Kanzaki is the one person I can lean on."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-150b-what-should-i-do"
+file = "DISKB/F0006.MES"
+offset = 0x150b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（どうしようかな・・・。）"
+translation = "[CONNIE] (What should I do...?)"
+speaker = "コニー"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1522-part-of-me-hates-that-this-feels-like-taking"
+target_mode = 2
+source = "⟦name:dear-person⟧がいない間に、付け入る感じがしてちょっと嫌だと思うことも確か。"
+translation = "⟦name:dear-person⟧ is away, and part of me hates that this feels like taking advantage."
+speaker = "Connie"
+context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1522, end = 0x1531, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1531, source_mode = 1, source = "がいない間に、付け入る感じがしてちょっと嫌だと思うことも確か。" },
+]
+
+[[entries]]
+id = "f0006-1574-oh"
+file = "DISKB/F0006.MES"
+offset = 0x1574
+source_mode = 1
+target_mode = 2
+source = "【女性】「あら」"
+translation = "[WOMAN] \"Oh?\""
+speaker = "女性"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1581-i-look-at-names-mother-and-feel-my-face"
+target_mode = 2
+source = "⟦name:dear-person⟧の母親を見て、あたしはボッと顔が赤くなった。"
+translation = "⟦name:dear-person⟧'s mother makes my face flush the moment I look at her."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1581, end = 0x1590, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1590, source_mode = 1, source = "の母親を見て、あたしはボッと顔が赤くなった。" },
+]
+
+[[composites]]
+id = "f0006-15ac-mom-um-i-have-a-friend-here"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「おかあさーん、あの・・・・友達来てるの。」"
+translation = "[⟦name:dear-person⟧] \"Mom! Um... I have a friend here.\""
+speaker = "name-slot:dear-person"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x15ac, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x15b0, end = 0x15bf, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x15bf, source_mode = 1, source = "】「おかあさーん、あの・・・・友達来てるの。」" },
+]
+
+[[entries]]
+id = "f0006-15dd-my-face-is-burning-i-dont-know-why"
+file = "DISKB/F0006.MES"
+offset = 0x15dd
+source_mode = 1
+target_mode = 2
+source = "顔が火照るように熱い。なぜだかはわからない。"
+translation = "My face is burning. I don't know why."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-15fc-i-only-know-that-the-moment-i-see-names"
+target_mode = 2
+source = "ただ、⟦name:dear-person⟧のお母さんを見て急に心臓が早くなってしまった。"
+translation = "I only know that the moment I see ⟦name:dear-person⟧'s mother, my heart starts racing."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x15fc, source_mode = 1, source = "ただ、" },
+  { kind = "token", token = "name:dear-person", start = 0x1602, end = 0x1611, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1611, source_mode = 1, source = "のお母さんを見て急に心臓が早くなってしまった。" },
+]
+
+[[entries]]
+id = "f0006-1630-maybe-its-because-she-somehow-reminds-me-of-dr"
+file = "DISKB/F0006.MES"
+offset = 0x1630
+source_mode = 1
+target_mode = 2
+source = "あたしを育ててくれた神崎博士に、なんとなく雰囲気が似ているせいかもしれない。"
+translation = "Maybe it's because she somehow reminds me of Dr. Kanzaki, who raised me."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1675-for-once-im-choosing-my-words-carefully"
+file = "DISKB/F0006.MES"
+offset = 0x1675
+source_mode = 1
+target_mode = 2
+source = "あたしは柄にもなく言葉を選んでいた。"
+translation = "For once, I'm choosing my words carefully."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-168f-i-cant-believe-im-this-nervous"
+file = "DISKB/F0006.MES"
+offset = 0x168f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こんなに緊張するなんて・・・・・・。）"
+translation = "[CONNIE] (I can't believe I'm this nervous...)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-16ad-the-last-time-i-was-this-nervous-in-front"
+file = "DISKB/F0006.MES"
+offset = 0x16ad
+source_mode = 1
+target_mode = 2
+source = "あたしが女の人を目の前にして緊張するのは、神崎博士のとき以来だ。"
+translation = "The last time I was this nervous in front of a woman was with Dr. Kanzaki."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-16de-um-um-mom-this-is-my-friend-big-sis"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えと、えっと、こちら友達のコニーおねえちゃん。」"
+translation = "[⟦name:dear-person⟧] \"Um, um... Mom, this is my friend, Big Sis Connie.\""
+speaker = "name-slot:dear-person"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x16de, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x16e2, end = 0x16f1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x16f1, source_mode = 1, source = "】「えと、えっと、こちら友達のコニーおねえちゃん。」" },
+]
+
+[[composites]]
+id = "f0006-1712-names-mother-gives-a-small-graceful-bow"
+target_mode = 2
+source = "⟦name:dear-person⟧のお母さんは、優雅な物腰で軽く頭を下げる。"
+translation = "⟦name:dear-person⟧'s mother gives a small, graceful bow."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1712, end = 0x1721, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1721, source_mode = 1, source = "のお母さんは、優雅な物腰で軽く頭を下げる。" },
+]
+
+[[entries]]
+id = "f0006-1741-no-graceful-really-is-the-word-it-comes-naturally"
+file = "DISKB/F0006.MES"
+offset = 0x1741
+source_mode = 1
+target_mode = 2
+source = "ううん。自然に身についた動作で、優雅という動きも皮肉めいてなく、見とれてしまうたぐいの優雅さだ。"
+translation = "No, \"graceful\" really is the word. It comes naturally to her. I can't help staring."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-177e-hello-im-names-mother-name-is-your-friend-from"
+target_mode = 2
+source = "【女性】「こんにちは。⟦name:dear-person⟧の母です。・・・⟦name:dear-person⟧、こちら外国の方・・・？」"
+translation = "[WOMAN] \"Hello. I'm ⟦name:dear-person⟧'s mother... ⟦name:dear-person⟧, is your friend from overseas?\""
+speaker = "女性"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x177e, source_mode = 1, source = "【女性】「こんにちは。" },
+  { kind = "token", token = "name:dear-person", start = 0x178c, end = 0x179b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x179b, source_mode = 1, source = "の母です。・・・" },
+  { kind = "token", token = "name:dear-person", start = 0x17a6, end = 0x17b5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17b5, source_mode = 1, source = "、こちら外国の方・・・？」" },
+]
+
+[[composites]]
+id = "f0006-17c9-no-um-see"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ううん、えっとね・・・。」"
+translation = "[⟦name:dear-person⟧] \"No. Um, see...\""
+speaker = "name-slot:dear-person"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x17c9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x17cd, end = 0x17dc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17dc, source_mode = 1, source = "】「ううん、えっとね・・・。」" },
+]
+
+[[composites]]
+id = "f0006-17f0-i-open-my-mouth-to-help-name-out-but"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧をフォローしようと口を開いたが、柄にもなく、しどろもどろになってしまう。"
+translation = "I open my mouth to help ⟦name:dear-person⟧ out, but for once I can barely string a sentence together."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x17f0, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x17f7, end = 0x1806, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1806, source_mode = 1, source = "をフォローしようと口を開いたが、柄にもなく、しどろもどろになってしまう。" },
+]
+
+[[entries]]
+id = "f0006-1834-um-may-i-ask-your-name"
+file = "DISKB/F0006.MES"
+offset = 0x1834
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あの、・・・・・・・・・お名前・・・、聞いて・・・・・・・・・いいですか・・・？」"
+translation = "[CONNIE] \"Um... may I... ask your name?\""
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-186a-oh"
+file = "DISKB/F0006.MES"
+offset = 0x186a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あっ！）"
+translation = "[CONNIE] (Oh!)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1879-aah-im-such-an-idiot-why-did-i-ask"
+file = "DISKB/F0006.MES"
+offset = 0x1879
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うわーん、あたしのばかばかばか！　何てことを聞いてるの！？）"
+translation = "[CONNIE] (Aah, I'm such an idiot! What am I asking her?!)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-18a2-she-tilts-her-head-for-a-moment-then-smiles"
+file = "DISKB/F0006.MES"
+offset = 0x18a2
+source_mode = 1
+target_mode = 2
+source = "一瞬だけ首を傾げた後、ニコッと笑ってあたしの緊張をほぐしてくれる。"
+translation = "She tilts her head for a moment, then smiles and puts me at ease."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-18cf-of-course-im-name-takano"
+target_mode = 2
+source = "【女性】「いいわ、鷹野⟦name:mother⟧、と言います。」"
+translation = "[WOMAN] \"Of course. I'm ⟦name:mother⟧ Takano.\""
+speaker = "女性"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+notes = "English name order moves the editable given-name token before the fixed Takano surname; the schema-5 composite preserves the original runtime slot."
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x18cf, source_mode = 1, source = "【女性】「いいわ、鷹野" },
+  { kind = "token", token = "name:mother", start = 0x18df, end = 0x18ee, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x18ee, source_mode = 1, source = "、と言います。」" },
+]
+[[entries]]
+id = "f0006-18fb-haaah"
+file = "DISKB/F0006.MES"
+offset = 0x18fb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（はふぅ・・・っ・・・・・・・・・。）"
+translation = "[CONNIE] (Haaah...)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1919-her-grown-up-smile-makes-my-head-spin"
+file = "DISKB/F0006.MES"
+offset = 0x1919
+source_mode = 1
+target_mode = 2
+source = "大人の微笑み、で見つめられると、あたしはくらくらときた。"
+translation = "Her grown-up smile makes my head spin."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-194b-is-it-because-she-reminds-me-of-dr-kanzaki"
+file = "DISKB/F0006.MES"
+offset = 0x194b
+source_mode = 1
+target_mode = 2
+source = "神崎博士に雰囲気が似てるからだろうか。"
+translation = "Is it because she reminds me of Dr. Kanzaki?"
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1963-i-really-am-weak-for-older-women"
+file = "DISKB/F0006.MES"
+offset = 0x1963
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたし、オトナの女性に弱いなぁ・・・・・・・・・・・・。）"
+translation = "[CONNIE] (I really am weak for older women...)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-198c-here-goes-ill-tell-her-the-truth"
+file = "DISKB/F0006.MES"
+offset = 0x198c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（思い切って・・・・・・本当のことを言ってみよう・・・・・・。）"
+translation = "[CONNIE] (Here goes... I'll tell her the truth.)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-19b9-i-dont-know-if-youll-believe-me-but-i"
+file = "DISKB/F0006.MES"
+offset = 0x19b9
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あの・・・、信じて貰えるか判りませんけど、あたし、未来から来たんです。」"
+translation = "[CONNIE] \"I don't know if you'll believe me, but... I came from the future.\""
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-19eb-line"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・？」"
+translation = "[⟦name:mother⟧] \"...?\""
+speaker = "name-slot:mother"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x19eb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x19ef, end = 0x19fe, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x19fe, source_mode = 1, source = "】「・・・？」" },
+]
+
+[[composites]]
+id = "f0006-1a23-what"
+target_mode = 2
+source = "【⟦name:mother⟧】「えっ・・・・・・。」"
+translation = "[⟦name:mother⟧] \"What...?\""
+speaker = "name-slot:mother"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1a23, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1a27, end = 0x1a36, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1a36, source_mode = 1, source = "】「えっ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0006-1a47-whoa-names-shocked-face-looks-exactly-like-names"
+target_mode = 2
+source = "うわーっ。⟦name:mother⟧の驚いた顔、⟦name:dear-person⟧にそっくり・・・。"
+translation = "Whoa. ⟦name:mother⟧'s shocked face looks exactly like ⟦name:dear-person⟧'s..."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1a47, source_mode = 1, source = "うわーっ。" },
+  { kind = "token", token = "name:mother", start = 0x1a4f, end = 0x1a5e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1a5e, source_mode = 1, source = "の驚いた顔、" },
+  { kind = "token", token = "name:dear-person", start = 0x1a67, end = 0x1a76, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a76, source_mode = 1, source = "にそっくり・・・。" },
+]
+
+[[entries]]
+id = "f0006-1a84-thats-not-the-point"
+file = "DISKB/F0006.MES"
+offset = 0x1a84
+source_mode = 1
+target_mode = 2
+source = "【コニー】（じゃなくて！！　・・・。）"
+translation = "[CONNIE] (That's not the point!)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1aa5-did-i-mess-up-she-stares-at-me-puzzled"
+file = "DISKB/F0006.MES"
+offset = 0x1aa5
+source_mode = 1
+target_mode = 2
+source = "まずったか。不思議そうな顔で見ている。"
+translation = "Did I mess up? She stares at me, puzzled."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1abe-all-right"
+file = "DISKB/F0006.MES"
+offset = 0x1abe
+source_mode = 1
+target_mode = 2
+source = "【コニー】（えーい！）"
+translation = "[CONNIE] (All right!)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1ace-i-tell-her-about-future-humanity-and-its-genes"
+file = "DISKB/F0006.MES"
+offset = 0x1ace
+source_mode = 1
+target_mode = 2
+source = "あたしは、未来の人間と遺伝子のことを話した。"
+translation = "I tell her about future humanity and its genes."
+speaker = "Connie"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1aea-she-probably-wont-believe-me-unless-i-transform-okay"
+file = "DISKB/F0006.MES"
+offset = 0x1aea
+source_mode = 1
+target_mode = 2
+source = "【コニー】（変身しないとたぶん信じないだろう。・・・よしっ。）"
+translation = "[CONNIE] (She probably won't believe me unless I transform. Okay.)"
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1b10-then-um-could-you-watch-me-for-a-moment"
+file = "DISKB/F0006.MES"
+offset = 0x1b10
+source_mode = 1
+target_mode = 2
+source = "【コニー】「それじゃあ・・・・・、あの、見ていてくれますか・・・・・。」"
+translation = "[CONNIE] \"Then... um... could you watch me for a moment?\""
+speaker = "コニー"
+context = "Kanako introduces Connie to her mother, and a flustered Connie explains that she came from the future."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1b39-i-change-into-mini-form"
+file = "DISKB/F0006.MES"
+offset = 0x1b39
+source_mode = 1
+target_mode = 2
+source = "あたしはミニマムに変身した。"
+translation = "I change into Mini form."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1be8-line"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・・・・・！！！」"
+translation = "[⟦name:mother⟧] \"...!\""
+speaker = "name-slot:mother"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1be8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1bec, end = 0x1bfb, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1bfb, source_mode = 1, source = "】「・・・・・・・！！！」" },
+]
+
+[[entries]]
+id = "f0006-1c8c-i-realize-i-dont-want-this-woman-to-hate"
+file = "DISKB/F0006.MES"
+offset = 0x1c8c
+source_mode = 1
+target_mode = 2
+source = "この女性には嫌われたくない、そういう思いがあたしの心の中にあった。"
+translation = "I realize I don't want this woman to hate me."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1d33-line"
+file = "DISKB/F0006.MES"
+offset = 0x1d33
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-1de3-my-body-glows-with-a-sharp-whine-and-in"
+file = "DISKB/F0006.MES"
+offset = 0x1de3
+source_mode = 1
+target_mode = 2
+source = "きゅーんと体が光りだし、たちまち小さくなった。"
+translation = "My body glows with a sharp whine, and in an instant I shrink."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1e1f-oh-my-what-a-cute-little-kitty"
+target_mode = 2
+source = "【⟦name:mother⟧】「あらあら・・・かわいい猫ちゃん・・・。」"
+translation = "[⟦name:mother⟧] \"Oh my... what a cute little kitty.\""
+speaker = "name-slot:mother"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1e1f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1e23, end = 0x1e32, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1e32, source_mode = 1, source = "】「あらあら・・・かわいい猫ちゃん・・・。」" },
+]
+
+[[entries]]
+id = "f0006-1e4d-she-sways"
+file = "DISKB/F0006.MES"
+offset = 0x1e4d
+source_mode = 1
+target_mode = 2
+source = "ふらっ・・・。"
+translation = "She sways..."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1e59-at-the-sight-of-my-transformation-name-collapses"
+target_mode = 2
+source = "あたしの変身を見て、⟦name:mother⟧が倒れた。"
+translation = "At the sight of my transformation, ⟦name:mother⟧ collapses."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1e59, source_mode = 1, source = "あたしの変身を見て、" },
+  { kind = "token", token = "name:mother", start = 0x1e66, end = 0x1e75, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1e75, source_mode = 1, source = "が倒れた。" },
+]
+
+[[composites]]
+id = "f0006-1e80-eek"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「きゃー！」"
+translation = "[⟦name:dear-person⟧] \"Eek!\""
+speaker = "name-slot:dear-person"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1e80, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1e84, end = 0x1e93, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e93, source_mode = 1, source = "】「きゃー！」" },
+]
+
+[[composites]]
+id = "f0006-1e9f-name-cries-out-and-rushes-to-her-mother"
+target_mode = 2
+source = "⟦name:dear-person⟧が叫んで母に駆け寄った。"
+translation = "⟦name:dear-person⟧ cries out and rushes to her mother."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1e9f, end = 0x1eae, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1eae, source_mode = 1, source = "が叫んで母に駆け寄った。" },
+]
+
+[[composites]]
+id = "f0006-1ec1-mom"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「お母さん！！」"
+translation = "[⟦name:dear-person⟧] \"Mom!\""
+speaker = "name-slot:dear-person"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1ec1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1ec5, end = 0x1ed4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1ed4, source_mode = 1, source = "】「お母さん！！」" },
+]
+
+[[composites]]
+id = "f0006-1f03-big-sis-connie-mom"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃん！　お母さんが！！」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Connie! Mom!\""
+speaker = "name-slot:dear-person"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1f03, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1f07, end = 0x1f16, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f16, source_mode = 1, source = "】「コニーおねえちゃん！　お母さんが！！」" },
+]
+
+[[entries]]
+id = "f0006-1f30-i-change-back-to-human-form-and-rush-over"
+file = "DISKB/F0006.MES"
+offset = 0x1f30
+source_mode = 1
+target_mode = 2
+source = "あたしはヒト型に変身し、慌てて駆け寄った。"
+translation = "I change back to human form and rush over."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-1f4d-mom-wake-up"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「お母さん、しっかり！」"
+translation = "[⟦name:dear-person⟧] \"Mom, stay with me!\""
+speaker = "name-slot:dear-person"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1f4d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1f51, end = 0x1f60, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f60, source_mode = 1, source = "】「お母さん、しっかり！」" },
+]
+
+[[composites]]
+id = "f0006-1f72-mmm"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・うーん・・・・・。」"
+translation = "[⟦name:mother⟧] \"Mmm...\""
+speaker = "name-slot:mother"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x1f72, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1f76, end = 0x1f85, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1f85, source_mode = 1, source = "】「・・・うーん・・・・・。」" },
+]
+
+[[composites]]
+id = "f0006-1f99-we-lay-name-on-the-sofa-it-takes-half"
+target_mode = 2
+source = "⟦name:mother⟧をソファに寝かせ、落ち着かせたのは３０分してからだった。"
+translation = "⟦name:mother⟧ is settled onto the sofa, but it takes half an hour to calm her down."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x1f99, end = 0x1fa8, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1fa8, source_mode = 1, source = "をソファに寝かせ、落ち着かせたのは３０分してからだった。" },
+]
+
+[[entries]]
+id = "f0006-1fce-she-says-she-understood-the-explanation-but-her-body"
+file = "DISKB/F0006.MES"
+offset = 0x1fce
+source_mode = 1
+target_mode = 2
+source = "話は理解してくれたが、体が受け付けてくれなかったそうだ。"
+translation = "She says she understood the explanation, but her body couldn't handle it."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-20d3-im-sorry-it-just-startled-me"
+target_mode = 2
+source = "【⟦name:mother⟧】「ごめんなさい・・・。びっくりしちゃったから・・・。」"
+translation = "[⟦name:mother⟧] \"I'm sorry... It just startled me.\""
+speaker = "name-slot:mother"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x20d3, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x20d7, end = 0x20e6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x20e6, source_mode = 1, source = "】「ごめんなさい・・・。びっくりしちゃったから・・・。」" },
+]
+
+[[composites]]
+id = "f0006-2108-the-way-she-sticks-out-her-tongue-when-she"
+target_mode = 2
+source = "そう言ってぺろっと舌を出す所は、⟦name:dear-person⟧そっくり・・・。"
+translation = "The way she sticks out her tongue when she says it is exactly like ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2108, source_mode = 1, source = "そう言ってぺろっと舌を出す所は、" },
+  { kind = "token", token = "name:dear-person", start = 0x211d, end = 0x212c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x212c, source_mode = 1, source = "そっくり・・・。" },
+]
+
+[[composites]]
+id = "f0006-2139-its-name-who-takes-after-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧が⟦name:mother⟧に似ているんだ・・・。）"
+translation = "[CONNIE] (It's ⟦name:dear-person⟧ who takes after ⟦name:mother⟧...)"
+speaker = "コニー"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2139, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x2142, end = 0x2151, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2151, source_mode = 1, source = "が" },
+  { kind = "token", token = "name:mother", start = 0x2155, end = 0x2164, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2164, source_mode = 1, source = "に似ているんだ・・・。）" },
+]
+
+[[composites]]
+id = "f0006-2175-as-name-gets-older-shell-be-as-beautiful-as"
+target_mode = 2
+source = "⟦name:dear-person⟧も大きくなったら⟦name:mother⟧みたいに美人になる。"
+translation = "⟦name:dear-person⟧ will be as beautiful as ⟦name:mother⟧ when she gets older."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2175, end = 0x2184, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2184, source_mode = 1, source = "も大きくなったら" },
+  { kind = "token", token = "name:mother", start = 0x218f, end = 0x219e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x219e, source_mode = 1, source = "みたいに美人になる。" },
+]
+
+[[composites]]
+id = "f0006-21ae-what-i-told-name-in-the-bath-wasnt-a"
+target_mode = 2
+source = "お風呂で⟦name:dear-person⟧に話したことは嘘じゃないみたい。"
+translation = "What I told ⟦name:dear-person⟧ in the bath wasn't a lie after all."
+speaker = "Connie"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x21ae, source_mode = 1, source = "お風呂で" },
+  { kind = "token", token = "name:dear-person", start = 0x21b7, end = 0x21c6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x21c6, source_mode = 1, source = "に話したことは嘘じゃないみたい。" },
+]
+
+[[composites]]
+id = "f0006-21e5-amazing-you-know-all-about-the-future-and-you"
+target_mode = 2
+source = "【⟦name:mother⟧】「すごいわねー。未来のことがわかるのねぇ・・。猫にも変身しちゃうし。」"
+translation = "[⟦name:mother⟧] \"That's amazing. You know what the future is like... and you can turn into a cat.\""
+speaker = "name-slot:mother"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x21e5, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x21e9, end = 0x21f8, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x21f8, source_mode = 1, source = "】「すごいわねー。未来のことがわかるのねぇ・・。猫にも変身しちゃうし。」" },
+]
+
+[[entries]]
+id = "f0006-2222-i-its-not-that-amazing"
+file = "DISKB/F0006.MES"
+offset = 0x2222
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そ、そうでもないです・・・。」"
+translation = "[CONNIE] \"I-it's not that amazing...\""
+speaker = "コニー"
+context = "Connie demonstrates Mini form; Kanako's mother faints, recovers, and accepts the explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-223c-why-i-dont-understand-why-my-heart-races-whenever"
+target_mode = 2
+source = "なぜ？　あたしは⟦name:dear-person⟧の母親が側に居るとドキドキしてしまう、その訳が自分でもわからなかった。"
+translation = "Why? I don't understand why my heart races whenever I'm near ⟦name:dear-person⟧'s mother."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x223c, source_mode = 1, source = "なぜ？　あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2248, end = 0x2257, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2257, source_mode = 1, source = "の母親が側に居るとドキドキしてしまう、その訳が自分でもわからなかった。" },
+]
+[[entries]]
+id = "f0006-2281-ill-ask-her"
+file = "DISKB/F0006.MES"
+offset = 0x2281
+source_mode = 1
+target_mode = 2
+source = "聞いてみよう・・・・・・。"
+translation = "I'll ask her..."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2293-um-mrs-takano-are-you-wearing-perfume-or-something"
+file = "DISKB/F0006.MES"
+offset = 0x2293
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あの、・・・お母さん、香水か何かつけてらっしゃいます？」"
+translation = "[CONNIE] \"Um... Mrs. Takano, are you wearing perfume or something?\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-22bd-yes-just-a-little-why"
+target_mode = 2
+source = "【⟦name:mother⟧】「ええ。少しだけ。どうかしたの？」"
+translation = "[⟦name:mother⟧] \"Yes, just a little. Why?\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x22bd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x22c1, end = 0x22d0, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x22d0, source_mode = 1, source = "】「ええ。少しだけ。どうかしたの？」" },
+]
+
+[[entries]]
+id = "f0006-22e8-for-some-reason-my-heart-races-whenever-im-near"
+file = "DISKB/F0006.MES"
+offset = 0x22e8
+source_mode = 1
+target_mode = 2
+source = "【コニー】「なんだかお母さんの側に居ると、どきどきしてしまうんです。」"
+translation = "[CONNIE] \"For some reason, my heart races whenever I'm near you, Mrs. Takano.\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2312-i-wondered-if-it-might-be-your-perfume"
+file = "DISKB/F0006.MES"
+offset = 0x2312
+source_mode = 1
+target_mode = 2
+source = "【コニー】「香水のせいかなあ、なんて・・・。」"
+translation = "[CONNIE] \"I wondered if it might be your perfume...\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-232e-she-suddenly-takes-my-hand"
+file = "DISKB/F0006.MES"
+offset = 0x232e
+source_mode = 1
+target_mode = 2
+source = "ふいに手を握られた。"
+translation = "She suddenly takes my hand."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-233e-eek"
+file = "DISKB/F0006.MES"
+offset = 0x233e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（きゃぁぁ～～～～～～～～～。）"
+translation = "[CONNIE] (Eek!)"
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2358-at-the-feel-of-names-hand-my-heart-starts"
+target_mode = 2
+source = "⟦name:mother⟧の手の感触に、あたしの心臓は、早鐘のように鳴りだす。"
+translation = "⟦name:mother⟧'s touch makes my heart start hammering."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x2358, end = 0x2367, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2367, source_mode = 1, source = "の手の感触に、あたしの心臓は、早鐘のように鳴りだす。" },
+]
+
+[[composites]]
+id = "f0006-238a-somewhere"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・どこかで・・・・・・・・・。」"
+translation = "[⟦name:mother⟧] \"...Somewhere...\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x238a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x238e, end = 0x239d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x239d, source_mode = 1, source = "】「・・・どこかで・・・・・・・・・。」" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x249f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x24a3, end = 0x24b2, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x24b2, source_mode = 1, source = "】「・・・どこかで・・・・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0006-23b6-line"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x23b6 },
+  { file = "DISKB/F0006.MES", offset = 0x24cb },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-23cc-name-is-trying-to-remember-something"
+target_mode = 2
+source = "⟦name:mother⟧は何かを思いだそうとしている。"
+translation = "⟦name:mother⟧ is trying to remember something."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x23cc, end = 0x23db, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x23db, source_mode = 1, source = "は何かを思いだそうとしている。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x24e1, end = 0x24f0, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x24f0, source_mode = 1, source = "は何かを思いだそうとしている。" },
+]
+
+[[entries]]
+id = "f0006-23ef-even-the-way-she-frowns-in-thought-is-cute"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x23ef },
+  { file = "DISKB/F0006.MES", offset = 0x2504 },
+]
+source_mode = 1
+target_mode = 2
+source = "悩む仕草、表情もかわいい。"
+translation = "Even the way she frowns in thought is cute."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2405-ah"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x2405 },
+  { file = "DISKB/F0006.MES", offset = 0x251a },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（う！！！！！）"
+translation = "[CONNIE] (Ngh!)"
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2417-did-i-just-call-name-cute"
+target_mode = 2
+source = "あたし、今、⟦name:mother⟧の事をかわいいって・・・・・・。"
+translation = "Did I just... call ⟦name:mother⟧ cute...?"
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2417, source_mode = 1, source = "あたし、今、" },
+  { kind = "token", token = "name:mother", start = 0x2420, end = 0x242f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x242f, source_mode = 1, source = "の事をかわいいって・・・・・・。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x252c, source_mode = 1, source = "あたし、今、" },
+  { kind = "token", token = "name:mother", start = 0x2535, end = 0x2544, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2544, source_mode = 1, source = "の事をかわいいって・・・・・・。" },
+]
+
+[[entries]]
+id = "f0006-2444-shes-older-than-me-its-rude-to-think-that"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x2444 },
+  { file = "DISKB/F0006.MES", offset = 0x2559 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（年上なのよ・・・。そう考えるのは失礼だわ・・・・・・。）"
+translation = "[CONNIE] (She's older than me... It's rude to think that...)"
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-246d-i-try-to-calm-myself-down"
+anchors = [
+  { file = "DISKB/F0006.MES", offset = 0x246d },
+  { file = "DISKB/F0006.MES", offset = 0x2582 },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしは自分の心を落ち着かせようとした。"
+translation = "I try to calm myself down."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-25a4-you-connie-yes-i-knew-you-reminded-me-of"
+target_mode = 2
+source = "【⟦name:mother⟧】「あなた・・コニーさん・・・、そう、どこかで見たと思ったら・・・。」"
+translation = "[⟦name:mother⟧] \"You... Connie... Yes, I knew you reminded me of someone...\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x25a4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x25a8, end = 0x25b7, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x25b7, source_mode = 1, source = "】「あなた・・コニーさん・・・、そう、どこかで見たと思ったら・・・。」" },
+]
+
+[[entries]]
+id = "f0006-25df-she-studies-me-closely"
+file = "DISKB/F0006.MES"
+offset = 0x25df
+source_mode = 1
+target_mode = 2
+source = "まじまじと見つめられた。"
+translation = "She studies me closely."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-25f0-j-just-connie-is-fine"
+file = "DISKB/F0006.MES"
+offset = 0x25f0
+source_mode = 1
+target_mode = 2
+source = "【コニー】「コ、コニーでいいです・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"J-just Connie is fine...\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2613-eek"
+file = "DISKB/F0006.MES"
+offset = 0x2613
+source_mode = 1
+target_mode = 2
+source = "【コニー】（きゃーーーっ・・・。）"
+translation = "[CONNIE] (Eek...)"
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2629-it-feels-so-good-to-have-her-holding-my"
+file = "DISKB/F0006.MES"
+offset = 0x2629
+source_mode = 1
+target_mode = 2
+source = "あたしは握られた手が、すっごく気持ちいいからびっくりした。"
+translation = "It feels so good to have her holding my hand that it startles me."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-264d-her-feelings-are-warm-gentle-as-if-theyre-wrapping"
+file = "DISKB/F0006.MES"
+offset = 0x264d
+source_mode = 1
+target_mode = 2
+source = "暖かな心を感じる・・・。優しい、包み込むような心。"
+translation = "Her feelings are warm, gentle, as if they're wrapping around me."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-267f-name-keeps-speaking-looking-gently-into-my-eyes"
+target_mode = 2
+source = "⟦name:mother⟧はあたしの目を優しく見つめて話し続ける。"
+translation = "⟦name:mother⟧ keeps speaking, looking gently into my eyes."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x267f, end = 0x268e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x268e, source_mode = 1, source = "はあたしの目を優しく見つめて話し続ける。" },
+]
+
+[[composites]]
+id = "f0006-26a9-connie-you-remind-me-of-my-younger-sister"
+target_mode = 2
+source = "【⟦name:mother⟧】「コニー、・・・私の妹に似てるんだわ。」"
+translation = "[⟦name:mother⟧] \"Connie... you remind me of my younger sister.\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x26a9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x26ad, end = 0x26bc, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x26bc, source_mode = 1, source = "】「コニー、・・・私の妹に似てるんだわ。」" },
+]
+
+[[composites]]
+id = "f0006-26d7-not-in-every-way-but-your-manner-and-the"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・全部がという訳じゃないけど・・・、雰囲気とか、喋り方が、そう、似てるわ。」"
+translation = "[⟦name:mother⟧] \"Not in every way, but your manner and the way you speak... yes, you two are alike.\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x26d7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x26db, end = 0x26ea, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x26ea, source_mode = 1, source = "】「・・・全部がという訳じゃないけど・・・、雰囲気とか、喋り方が、そう、似てるわ。」" },
+]
+
+[[entries]]
+id = "f0006-271b-i-remind-you-of-your-younger-sister"
+file = "DISKB/F0006.MES"
+offset = 0x271b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「お母さんの妹に？　あたしが？」"
+translation = "[CONNIE] \"I remind you of your younger sister?\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2736-maybe-thats-why-you-feel-so-familiar-you-might"
+target_mode = 2
+source = "【⟦name:mother⟧】「だから親しみを覚えたのかしら・・・。あなた、未来で私たちの子孫かもしれないわね。」"
+translation = "[⟦name:mother⟧] \"Maybe that's why you feel so familiar... You might even be one of our descendants in the future.\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2736, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x273a, end = 0x2749, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2749, source_mode = 1, source = "】「だから親しみを覚えたのかしら・・・。あなた、未来で私たちの子孫かもしれないわね。」" },
+]
+
+[[entries]]
+id = "f0006-2779-id-be-happy-if-i-were"
+file = "DISKB/F0006.MES"
+offset = 0x2779
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そ、それだったら嬉しいんですけど・・・。」"
+translation = "[CONNIE] \"I'd be happy if I were...\""
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-279a-maybe-my-human-genes-came-down-from-name"
+target_mode = 2
+source = "【コニー】（あたしのヒトの遺伝子が、⟦name:mother⟧の遺伝子を受け継いでいるのかもしれない・・・。）"
+translation = "[CONNIE] (Maybe my human genes came down from ⟦name:mother⟧...)"
+speaker = "コニー"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x279a, source_mode = 1, source = "【コニー】（あたしのヒトの遺伝子が、" },
+  { kind = "token", token = "name:mother", start = 0x27af, end = 0x27be, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x27be, source_mode = 1, source = "の遺伝子を受け継いでいるのかもしれない・・・。）" },
+]
+
+[[entries]]
+id = "f0006-27dd-the-thought-of-having-a-connection-to-her-makes"
+file = "DISKB/F0006.MES"
+offset = 0x27dd
+source_mode = 1
+target_mode = 2
+source = "あたしはつながりを持ったようで、少し嬉しくなった。"
+translation = "The thought of having a connection to her makes me a little happy."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2816-yes-you-really-are-alike"
+target_mode = 2
+source = "【⟦name:mother⟧】「そうねぇ・・・、ほんと、似てる・・・。」"
+translation = "[⟦name:mother⟧] \"Yes... You really are alike...\""
+speaker = "name-slot:mother"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2816, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x281a, end = 0x2829, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2829, source_mode = 1, source = "】「そうねぇ・・・、ほんと、似てる・・・。」" },
+]
+
+[[composites]]
+id = "f0006-2846-name-says-it-as-she-studies-me"
+target_mode = 2
+source = "⟦name:mother⟧がそういって見つめる。"
+translation = "⟦name:mother⟧ says it as she studies me."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x2846, end = 0x2855, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2855, source_mode = 1, source = "がそういって見つめる。" },
+]
+
+[[composites]]
+id = "f0006-2865-i-feel-like-ive-become-names-younger-sister-the"
+target_mode = 2
+source = "あたしは⟦name:mother⟧の妹になった気がしてくすぐったかった。"
+translation = "I feel like I've become ⟦name:mother⟧'s younger sister. The thought makes me bashful."
+speaker = "Connie"
+context = "The perfume and skin contact feel familiar to both women, leading Kanako's mother to compare Connie with her younger sister."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2865, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:mother", start = 0x286c, end = 0x287b, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x287b, source_mode = 1, source = "の妹になった気がしてくすぐったかった。" },
+]
+
+[[composites]]
+id = "f0006-289d-name-cuts-into-our-long-conversation"
+target_mode = 2
+source = "話し込むあたしたちに⟦name:dear-person⟧が割って入った。"
+translation = "As we talk, ⟦name:dear-person⟧ cuts in."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x289d, source_mode = 1, source = "話し込むあたしたちに" },
+  { kind = "token", token = "name:dear-person", start = 0x28ab, end = 0x28ba, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x28ba, source_mode = 1, source = "が割って入った。" },
+]
+
+[[composites]]
+id = "f0006-28c8-hey-can-we-have-dinner-now"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ねー。お夕飯、しようよー。」"
+translation = "[⟦name:dear-person⟧] \"Hey, can we have dinner now?\""
+speaker = "name-slot:dear-person"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x28c8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x28cc, end = 0x28db, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x28db, source_mode = 1, source = "】「ねー。お夕飯、しようよー。」" },
+]
+
+[[composites]]
+id = "f0006-28f2-she-must-be-hungry-name-wedges-herself-into-the"
+target_mode = 2
+source = "おなかがすいたのか、⟦name:dear-person⟧がねーねーと話に割って入ってきた。"
+translation = "She must be hungry. ⟦name:dear-person⟧ keeps going, \"Hey, hey,\" as she cuts in."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x28f2, source_mode = 1, source = "おなかがすいたのか、" },
+  { kind = "token", token = "name:dear-person", start = 0x28ff, end = 0x290e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x290e, source_mode = 1, source = "がねーねーと話に割って入ってきた。" },
+]
+
+[[composites]]
+id = "f0006-2925-oh-sorry-we-can-talk-later-lets-make-dinner"
+target_mode = 2
+source = "【⟦name:mother⟧】「あらごめんねー。・・・お話は後ね。お夕飯作りましょ。」"
+translation = "[⟦name:mother⟧] \"Oh, sorry. We can talk later. Let's make dinner.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2925, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2929, end = 0x2938, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2938, source_mode = 1, source = "】「あらごめんねー。・・・お話は後ね。お夕飯作りましょ。」" },
+]
+
+[[composites]]
+id = "f0006-295e-youll-be-staying-with-us-for-a-while-wont"
+target_mode = 2
+source = "【⟦name:mother⟧】「それじゃコニー、しばらくうちにいるでしょ？」"
+translation = "[⟦name:mother⟧] \"You'll be staying with us for a while, won't you, Connie?\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x295e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2962, end = 0x2971, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2971, source_mode = 1, source = "】「それじゃコニー、しばらくうちにいるでしょ？」" },
+]
+
+[[composites]]
+id = "f0006-298e-with-name-smiling-at-me-like-that-how-can"
+target_mode = 2
+source = "⟦name:mother⟧の笑顔に、今のあたしが断れるわけはない。"
+translation = "⟦name:mother⟧ smiles at me, and I can't bring myself to say no."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x298e, end = 0x299d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x299d, source_mode = 1, source = "の笑顔に、今のあたしが断れるわけはない。" },
+]
+
+[[entries]]
+id = "f0006-29b7-if-if-i-wouldnt-be-imposing"
+file = "DISKB/F0006.MES"
+offset = 0x29b7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・お邪魔でなければ・・・。」"
+translation = "[CONNIE] \"If... if I won't be in the way...\""
+speaker = "コニー"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+[[composites]]
+id = "f0006-29d5-name-smiles-and-chuckles"
+target_mode = 2
+source = "⟦name:mother⟧はうふふと微笑む。"
+translation = "⟦name:mother⟧ smiles and chuckles."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x29d5, end = 0x29e4, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x29e4, source_mode = 1, source = "はうふふと微笑む。" },
+]
+
+[[composites]]
+id = "f0006-29f2-theres-no-need-to-be-shy-in-return-tell"
+target_mode = 2
+source = "【⟦name:mother⟧】「遠慮しなくていいのよ。そうね、その代わり、未来の話をいっぱい聞かせて。興味有るの。」"
+translation = "[⟦name:mother⟧] \"There's no need to be shy. In return, tell me lots about the future. I'm curious.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x29f2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x29f6, end = 0x2a05, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2a05, source_mode = 1, source = "】「遠慮しなくていいのよ。そうね、その代わり、未来の話をいっぱい聞かせて。興味有るの。」" },
+]
+
+[[composites]]
+id = "f0006-2a3b-so-you-can-use-it-in-a-story"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「お話のネタにするの？」"
+translation = "[⟦name:dear-person⟧] \"So you can use it in a story?\""
+speaker = "name-slot:dear-person"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2a3b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2a3f, end = 0x2a4e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a4e, source_mode = 1, source = "】「お話のネタにするの？」" },
+]
+
+[[composites]]
+id = "f0006-2a61-name-its-research-for-my-writing"
+target_mode = 2
+source = "【⟦name:mother⟧】「⟦name:dear-person⟧！　話の参考にするの。」"
+translation = "[⟦name:mother⟧] \"⟦name:dear-person⟧! It's research for my writing.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2a61, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2a65, end = 0x2a74, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2a74, source_mode = 1, source = "】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2a79, end = 0x2a88, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a88, source_mode = 1, source = "！　話の参考にするの。」" },
+]
+
+[[composites]]
+id = "f0006-2a9a-in-the-bath-name-told-me-her-mother-writes"
+target_mode = 2
+source = "母は小説を書いていると、お風呂場で⟦name:dear-person⟧は言った。"
+translation = "In the bath, ⟦name:dear-person⟧ told me her mother writes novels."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2a9a, source_mode = 1, source = "母は小説を書いていると、お風呂場で" },
+  { kind = "token", token = "name:dear-person", start = 0x2ab2, end = 0x2ac1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2ac1, source_mode = 1, source = "は言った。" },
+]
+
+[[entries]]
+id = "f0006-2acb-so-she-is-going-to-use-me-in-a"
+file = "DISKB/F0006.MES"
+offset = 0x2acb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（話のネタにするのかな？）"
+translation = "[CONNIE] (Is she going to use me for a story?)"
+speaker = "コニー"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2ae3-the-thought-of-appearing-in-one-of-names-novels"
+target_mode = 2
+source = "あたしが⟦name:mother⟧の書く小説に登場するかと思うと、これまたくすぐったい。"
+translation = "The thought of appearing in one of ⟦name:mother⟧'s novels makes me bashful all over again."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2ae3, source_mode = 1, source = "あたしが" },
+  { kind = "token", token = "name:mother", start = 0x2aea, end = 0x2af9, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2af9, source_mode = 1, source = "の書く小説に登場するかと思うと、これまたくすぐったい。" },
+]
+
+[[composites]]
+id = "f0006-2b1c-seeing-and-hearing-things-you-dont-know-is-how"
+target_mode = 2
+source = "【⟦name:mother⟧】「知らないことを見聞きするのは、勉強になるわ。」"
+translation = "[⟦name:mother⟧] \"Seeing and hearing things you don't know is how you learn.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2b1c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2b20, end = 0x2b2f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2b2f, source_mode = 1, source = "】「知らないことを見聞きするのは、勉強になるわ。」" },
+]
+
+[[composites]]
+id = "f0006-2b7e-name-heads-into-the-kitchen-visibly-excited"
+target_mode = 2
+source = "⟦name:mother⟧は、うきうきとしながら台所へ入って行った。"
+translation = "⟦name:mother⟧ heads into the kitchen, visibly excited."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x2b7e, end = 0x2b8d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2b8d, source_mode = 1, source = "は、うきうきとしながら台所へ入って行った。" },
+]
+
+[[entries]]
+id = "f0006-2ba9-line"
+file = "DISKB/F0006.MES"
+offset = 0x2ba9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2bc2-i-gently-stroke-my-left-hand-the-one-name"
+target_mode = 2
+source = "あたしは⟦name:mother⟧に握られた左手を、右手でそっと撫でた。"
+translation = "I gently stroke my left hand, the one ⟦name:mother⟧ held, with my right."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2bc2, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:mother", start = 0x2bc9, end = 0x2bd8, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2bd8, source_mode = 1, source = "に握られた左手を、右手でそっと撫でた。" },
+]
+
+[[entries]]
+id = "f0006-2bf4-my-cheeks-dont-seem-ready-to-cool-down-yet"
+file = "DISKB/F0006.MES"
+offset = 0x2bf4
+source_mode = 1
+target_mode = 2
+source = "頬が熱くなっているのは、まだ収まりそうになかった。"
+translation = "My cheeks don't seem ready to cool down yet."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2c7f-my-ears-pick-up-names-wheedling-voice-in-the"
+target_mode = 2
+source = "あたしの耳に、台所で甘える⟦name:dear-person⟧の声が聞こえてきた。"
+translation = "My ears pick up ⟦name:dear-person⟧'s wheedling voice in the kitchen."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2c7f, source_mode = 1, source = "あたしの耳に、台所で甘える" },
+  { kind = "token", token = "name:dear-person", start = 0x2c90, end = 0x2c9f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2c9f, source_mode = 1, source = "の声が聞こえてきた。" },
+]
+
+[[composites]]
+id = "f0006-2cae-hey-hey-whats-for-dinner-i-want-hamburger-steak"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ねーねー、今日のご飯はなーに？　私、はんばーぐがいいな～。」"
+translation = "[⟦name:dear-person⟧] \"Hey, hey, what's for dinner? I want hamburger steak!\""
+speaker = "name-slot:dear-person"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+notes = "Japanese ハンバーグ is the bunless hamburger-steak dish, not a hamburger sandwich."
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2cae, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2cb2, end = 0x2cc1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2cc1, source_mode = 1, source = "】「ねーねー、今日のご飯はなーに？　私、はんばーぐがいいな～。」" },
+]
+
+[[composites]]
+id = "f0006-2ce7-name-clings-playfully-to-name"
+target_mode = 2
+source = "⟦name:dear-person⟧が⟦name:mother⟧に甘えてじゃれついている。"
+translation = "⟦name:dear-person⟧ clings playfully to ⟦name:mother⟧."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2ce7, end = 0x2cf6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2cf6, source_mode = 1, source = "が" },
+  { kind = "token", token = "name:mother", start = 0x2cfa, end = 0x2d09, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2d09, source_mode = 1, source = "に甘えてじゃれついている。" },
+]
+
+[[composites]]
+id = "f0006-2d1b-now-now-no-wheedling-well-have-to-buy-the"
+target_mode = 2
+source = "【⟦name:mother⟧】「こらこら・・・甘えないの。・・・それじゃ、材料を買って来なきゃ・・・。」"
+translation = "[⟦name:mother⟧] \"Now, now... don't pester me. We'll have to buy the ingredients.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2d1b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2d1f, end = 0x2d2e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2d2e, source_mode = 1, source = "】「こらこら・・・甘えないの。・・・それじゃ、材料を買って来なきゃ・・・。」" },
+]
+
+[[composites]]
+id = "f0006-2d5c-mom-ill-go-get-them"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「お母さん、私、買ってくるよ！」"
+translation = "[⟦name:dear-person⟧] \"Mom, I'll go get them!\""
+speaker = "name-slot:dear-person"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2d5c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2d60, end = 0x2d6f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d6f, source_mode = 1, source = "】「お母さん、私、買ってくるよ！」" },
+]
+
+[[composites]]
+id = "f0006-2d86-i-hear-name-answer-brightly"
+target_mode = 2
+source = "⟦name:dear-person⟧の元気な声が聞こえる。"
+translation = "⟦name:dear-person⟧ answers brightly from the kitchen."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2d86, end = 0x2d95, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d95, source_mode = 1, source = "の元気な声が聞こえる。" },
+]
+
+[[composites]]
+id = "f0006-2dbf-name-and-name-are-in-the-kitchen"
+target_mode = 2
+source = "⟦name:dear-person⟧と⟦name:mother⟧は台所。"
+translation = "⟦name:dear-person⟧ and ⟦name:mother⟧ are in the kitchen."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2dbf, end = 0x2dce, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2dce, source_mode = 1, source = "と" },
+  { kind = "token", token = "name:mother", start = 0x2dd2, end = 0x2de1, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2de1, source_mode = 1, source = "は台所。" },
+]
+
+[[entries]]
+id = "f0006-2dea-i-stay-put-and-try-to-be-a-considerate"
+file = "DISKB/F0006.MES"
+offset = 0x2dea
+source_mode = 1
+target_mode = 2
+source = "あたしは気を利かせて、お客として待っている。"
+translation = "I stay put and try to be a considerate guest."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2e10-it-sounds-like-name-is-going-shopping-while-name"
+target_mode = 2
+source = "⟦name:dear-person⟧がお使いに行くようだ。買う物を⟦name:mother⟧が読み上げている。"
+translation = "⟦name:dear-person⟧ seems to be going shopping while ⟦name:mother⟧ reads out the list."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2e10, end = 0x2e1f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e1f, source_mode = 1, source = "がお使いに行くようだ。買う物を" },
+  { kind = "token", token = "name:mother", start = 0x2e34, end = 0x2e43, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2e43, source_mode = 1, source = "が読み上げている。" },
+]
+
+[[composites]]
+id = "f0006-2e53-okay-im-off"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「じゃ、いってきまーす！」"
+translation = "[⟦name:dear-person⟧] \"Okay, I'm off!\""
+speaker = "name-slot:dear-person"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2e53, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2e57, end = 0x2e66, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e66, source_mode = 1, source = "】「じゃ、いってきまーす！」" },
+]
+
+[[composites]]
+id = "f0006-2e79-be-careful"
+target_mode = 2
+source = "【⟦name:mother⟧】「気をつけるのよ。」"
+translation = "[⟦name:mother⟧] \"Be careful.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2e79, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2e7d, end = 0x2e8c, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2e8c, source_mode = 1, source = "】「気をつけるのよ。」" },
+]
+
+[[composites]]
+id = "f0006-2e9c-name-heads-out-in-high-spirits"
+target_mode = 2
+source = "⟦name:dear-person⟧が元気よく出かけて行った。"
+translation = "⟦name:dear-person⟧ heads out in high spirits."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2e9c, end = 0x2eab, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2eab, source_mode = 1, source = "が元気よく出かけて行った。" },
+]
+
+[[composites]]
+id = "f0006-2edd-once-name-leaves-on-her-errand-its-just-name"
+target_mode = 2
+source = "⟦name:dear-person⟧がお使いに出て、家の中はあたしと⟦name:mother⟧だけになった。"
+translation = "⟦name:dear-person⟧ leaves on her errand, and now it's just ⟦name:mother⟧ and me in the house."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2edd, end = 0x2eec, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2eec, source_mode = 1, source = "がお使いに出て、家の中はあたしと" },
+  { kind = "token", token = "name:mother", start = 0x2f01, end = 0x2f10, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2f10, source_mode = 1, source = "だけになった。" },
+]
+
+[[composites]]
+id = "f0006-2f1c-just-wait-connie-dinner-will-be-ready-soon"
+target_mode = 2
+source = "【⟦name:mother⟧】「コニー、待っててね。もうすぐだから。」"
+translation = "[⟦name:mother⟧] \"Just wait, Connie. Dinner will be ready soon.\""
+speaker = "name-slot:mother"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2f1c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x2f20, end = 0x2f2f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x2f2f, source_mode = 1, source = "】「コニー、待っててね。もうすぐだから。」" },
+]
+
+[[entries]]
+id = "f0006-2f49-my-heart-pounds"
+file = "DISKB/F0006.MES"
+offset = 0x2f49
+source_mode = 1
+target_mode = 2
+source = "あたしはドキドキした。"
+translation = "My heart pounds."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2f59-and-i-realize-this-is-my-chance"
+file = "DISKB/F0006.MES"
+offset = 0x2f59
+source_mode = 1
+target_mode = 2
+source = "そして今がチャンスだと思った。"
+translation = "And I realize this is my chance."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0006-2f70-ill-ask-to-examine-mrs-takanos-genes-while-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧がいない間に遺伝子を調べさせて貰おう・・・。）"
+translation = "[CONNIE] (I'll ask to examine Mrs. Takano's genes while ⟦name:dear-person⟧ is out...)"
+speaker = "コニー"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0006.MES"
+segments = [
+  { kind = "text", offset = 0x2f70, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x2f79, end = 0x2f88, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2f88, source_mode = 1, source = "がいない間に遺伝子を調べさせて貰おう・・・。）" },
+]
+
+[[entries]]
+id = "f0006-2fc9-nows-my-chance"
+file = "DISKB/F0006.MES"
+offset = 0x2fc9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（今なら・・・・・・・・・。）"
+translation = "[CONNIE] (Now's my chance...)"
+speaker = "コニー"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0006-2fe2-i-hesitate-unsure-whether-to-get-up"
+file = "DISKB/F0006.MES"
+offset = 0x2fe2
+source_mode = 1
+target_mode = 2
+source = "あたしは席を立つかどうしようか、迷っていた。"
+translation = "I hesitate, unsure whether to get up."
+speaker = "Connie"
+context = "Kanako's mother invites Connie to stay for dinner; Kanako leaves on an errand, giving Connie a chance to request a genetic sample."
 status = "qa-ready"
