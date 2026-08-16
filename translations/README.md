@@ -106,13 +106,17 @@ The current statuses are:
 - `draft`: recorded but not yet exercised in the game;
 - `runtime-proof`: renderer or control-flow proof whose wording is still
   provisional;
+- `qa-ready`: source and context review are complete, the wording builds into a
+  fresh image, and an automated route reaches it without structural or visual
+  regression; a human playtest can still send it back for editorial revision;
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 17 canonical records covering 25 physical anchors
-across `MAIN.MES`, `FOP.MES`, and `F0000.MES`. The setup selector pair and
-three-copy fiction disclaimer are runtime-verified examples of canonical
-multi-anchor entries.
+The current catalog contains 103 canonical records covering 119 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES`. The setup selector pair,
+three-copy fiction disclaimer, repeated terminal timing records, and contextual
+status labels demonstrate when physical anchors should share or split a
+canonical translation.
 
 ## Coverage ledger
 
@@ -130,12 +134,32 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-The initial `boot-to-first-scene-menu` scope contains 178 physical anchors and
-120 unique source lines. Seventeen canonical lines (25 anchors) are translated;
-103 unique lines (153 anchors) remain pending. Nothing is silently treated as
-done. Use `--require-complete` in a release gate once a scope is expected to be
-closed; deliberate non-translations belong in `[[scopes.exclusions]]` with exact
-source anchors and a non-empty reason.
+The first closed scope is `opening-prologue`: all 118 physical text records in
+`FOP.MES`, from the bedside scene through the 2296 premise screen. Ninety-seven
+records are translated, 21 unchanged title/layout records are explicitly
+excluded, and none are pending. They represent 74 canonical source lines, with
+duplicate timing records merged only when their target and context agree.
+
+The older `boot-to-first-scene-menu` scope remains deliberately broader. It
+contains 178 physical anchors and 120 canonical source lines; 119 anchors are
+translated and 59 remain pending across setup UI, unchanged layout records, and
+the opening of `F0000.MES`. Exclusions are scope-local, so closing the focused
+FOP scope does not silently classify records in this broader work queue. Use
+`--require-complete` only for a scope expected to be closed; deliberate
+non-translations belong in `[[scopes.exclusions]]` with exact source anchors and
+a non-empty reason.
+
+The prologue release gate is:
+
+```sh
+uv run fermion translation coverage \
+  translations/fermion.toml \
+  translations/coverage.toml \
+  working/archives \
+  --scope opening-prologue \
+  --verbose \
+  --require-complete
+```
 
 The early duplicates are compiled control-flow, not extractor noise:
 

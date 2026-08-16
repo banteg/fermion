@@ -254,10 +254,11 @@ disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
 to the long translated reply. The command reports a SHA-256 over packed RGB
 pixels for stable checkpoint comparisons.
 
-The complete path is checked in as a named 34,200-frame route with nine exact
-framebuffer checkpoints. It verifies the canonicalized display selector and
-fiction disclaimer, then continues through the prologue and checks all three
-labelled dialogue lines plus the translated in-scene menu. It also verifies the
+The complete path is checked in as a named 34,200-frame route with 19 exact
+framebuffer checkpoints. It verifies the display selector and title menu,
+samples Marie's bedside grief and the Marie/Kanzaki confrontation, checks every
+naturalized terminal stage plus the complete 2296 premise screen, then continues
+through the first labelled exchange and in-scene menu. It also verifies the
 translated HDI's content hash before booting:
 
 ```sh

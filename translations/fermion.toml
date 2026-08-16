@@ -167,16 +167,17 @@ offset = 0x016c
 source_mode = 1
 target_mode = 2
 source = "「見ない方がいいですよ。あなたのお気持ちはわかりますが・・・。」"
-translation = "\"Don't look. I understand, but...\""
+translation = "\"You shouldn't look. I understand how you feel, but...\""
 speaker = "prologue-doctor"
 context = "Unlabelled prologue exchange; the doctor cautions the viewpoint woman."
-status = "runtime-proof"
+status = "qa-ready"
 box_width = 61
 notes = """
-The speaker appears to be the doctor escorting the protagonist. A more literal
-opening is “It would be better not to look.” Revisit tone once speaker names and
-the surrounding scene are established. ASCII quotation marks, apostrophe,
-comma, and periods are all runtime-verified.
+The doctor speaks gently and professionally rather than issuing a blunt order.
+The ending identifies the viewpoint woman as Marie, but the doctor is never
+named. This wording restores あなたのお気持ちは (“how you feel”) after the
+shorter renderer proof. ASCII punctuation remains runtime-proven; this revised
+line awaits the prologue QA playtest.
 """
 
 [[entries]]
@@ -186,17 +187,17 @@ offset = 0x0193
 source_mode = 1
 target_mode = 2
 source = "『いいえ・・・。私の・・・・・・大切な人です。見届けさせてください。』"
-translation = "\"No... He's someone very dear to me. Please let me see him...\""
-speaker = "prologue-viewpoint"
+translation = "\"No... He was... very dear to me. Please let me see him.\""
+speaker = "Marie Procyon"
 context = "Unlabelled prologue exchange; the viewpoint woman answers the doctor."
-status = "runtime-proof"
+status = "qa-ready"
 box_width = 61
 notes = """
-大切な人 may be “someone precious/important to me.” 見届けさせてください is
-closer to “please let me see this through” or “let me watch over him” than the
-current proof wording. The 62-byte runtime probe intentionally leaves the final
-quote on a second line and proves that the engine wraps by character, not word.
-The catalog preview word-wraps this sentence without changing the stored line.
+The ending establishes the unnamed mourner as Marie and the dead man as Akira.
+大切な人 is deliberately understated: “very dear to me” preserves Marie's
+emotional reserve before it breaks. 見届けさせてください literally asks to
+see the matter through; in this immediate request to view his body, “let me see
+him” is the natural English action without inventing a farewell ritual.
 """
 
 [[entries]]
@@ -206,18 +207,1172 @@ offset = 0x01bc
 source_mode = 1
 target_mode = 2
 source = "「・・・・・・・・・・・・・・・・・・わかりました。・・・こちらです・・・。」"
-translation = "\"This way...\""
+translation = "\"...Very well. This way...\""
 speaker = "prologue-doctor"
 context = "Unlabelled prologue exchange; the doctor relents and leads the way."
-status = "runtime-proof"
+status = "qa-ready"
 box_width = 61
 notes = """
-The source also says わかりました (“I understand/very well”). It was omitted
-from the first runtime probe to compensate for the preceding line's growth.
-Catalog builds now support file growth, so the technical constraint is gone;
-restore that nuance during the next editorial pass rather than silently
-changing an already recorded runtime proof.
+The first renderer proof omitted わかりました to conserve bytes. Relocating
+builds remove that constraint, so “Very well” restores the doctor's reluctant
+assent. The long source silence is compressed to one English pause under the
+locked ellipsis policy.
 """
+
+[[entries]]
+id = "opening-follow-doctor"
+file = "DISKA/FOP.MES"
+offset = 0x01e8
+source_mode = 1
+target_mode = 2
+source = "私は、廊下を案内して歩く医師の後ろを歩いた。"
+translation = "I followed the doctor as we walked down the corridor."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie follows the doctor toward Akira's room."
+status = "qa-ready"
+box_width = 61
+notes = "The first-person narration is Marie's. The English avoids assigning the unnamed doctor a gender and fits one runtime line without losing the guided movement."
+
+[[entries]]
+id = "opening-final-look"
+file = "DISKA/FOP.MES"
+offset = 0x0207
+source_mode = 1
+target_mode = 2
+source = "彼と別れる前に、彼のすべてを見ておきたかった。"
+translation = "Before saying goodbye, I wanted to see all of him once more."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie explains why she insisted on seeing Akira's body."
+status = "qa-ready"
+box_width = 61
+notes = "別れる is the final parting implied by the death scene. 'Once more' carries 見ておきたかった without making the line clinical."
+
+[[entries]]
+id = "opening-enter-room"
+file = "DISKA/FOP.MES"
+offset = 0x0225
+source_mode = 1
+target_mode = 2
+source = "廊下を曲って部屋に入った。"
+translation = "We rounded a corner and entered a room."
+speaker = "Marie Procyon"
+context = "Bedside prologue; the doctor and Marie reach Akira's room."
+status = "qa-ready"
+box_width = 61
+notes = "The Japanese omits its subject; 'we' follows the two people already moving together."
+
+[[entries]]
+id = "opening-doctor-steps-aside"
+file = "DISKA/FOP.MES"
+offset = 0x0238
+source_mode = 1
+target_mode = 2
+source = "医師がベッドの脇に避ける。"
+translation = "At the bedside, the doctor stepped aside."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie's narration as the doctor reveals Akira."
+status = "qa-ready"
+box_width = 61
+notes = "脇に避ける describes the doctor moving out of Marie's sightline beside the bed."
+
+[[entries]]
+id = "opening-caught-breath"
+file = "DISKA/FOP.MES"
+offset = 0x02b0
+source_mode = 1
+target_mode = 2
+source = "『・・・・・・・・・ッ・・・・・・』"
+translation = "\"...!\""
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie catches her breath on seeing Akira."
+status = "qa-ready"
+box_width = 61
+notes = "The small ッ marks a choked intake rather than a lexical utterance; the record remains a separate emotional beat."
+
+[[entries]]
+id = "opening-inner-wail"
+file = "DISKA/FOP.MES"
+offset = 0x02c7
+source_mode = 1
+target_mode = 2
+source = "（ああ・・・・・・・・・。ああ・・・・・・・・・）"
+translation = "(Oh... Oh...)"
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie's first internal reaction to Akira's body."
+status = "qa-ready"
+box_width = 61
+notes = "The repeated ああ is grief, not exposition. Parentheses preserve the source's internal-voice distinction."
+
+[[entries]]
+id = "opening-akira-there"
+file = "DISKA/FOP.MES"
+offset = 0x02e5
+source_mode = 1
+target_mode = 2
+source = "彼の、姿が・・・そこにあった。"
+translation = "There... he was."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie recognizes Akira on the bed."
+status = "qa-ready"
+box_width = 61
+notes = "The broken source syntax is preserved as a pause before recognition, without the stiffer literal 'his form was there.'"
+
+[[entries]]
+id = "opening-sits-bedside"
+file = "DISKA/FOP.MES"
+offset = 0x02fa
+source_mode = 1
+target_mode = 2
+source = "私は、倒れそうになる体を支えて、ゆっくりと彼のベッドの側へ座った。"
+translation = "Fighting not to collapse, I slowly sat beside his bed."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie forces herself to approach Akira."
+status = "qa-ready"
+box_width = 61
+notes = "倒れそうになる体を支えて is physical self-control under shock; 'fought to keep from collapsing' is natural first-person English."
+
+[[entries]]
+id = "opening-speaks-unheard"
+file = "DISKA/FOP.MES"
+offset = 0x0326
+source_mode = 1
+target_mode = 2
+source = "彼には聞こえないとわかっていても、私は話さずにはいられなかった。"
+translation = "Even knowing he couldn't hear me, I couldn't keep silent."
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie begins speaking to the dead Akira."
+status = "qa-ready"
+box_width = 61
+notes = "The repetition of 'couldn't' matches the source's helpless compulsion and Marie's collapsing restraint."
+
+[[entries]]
+id = "opening-apology"
+file = "DISKA/FOP.MES"
+offset = 0x034d
+source_mode = 1
+target_mode = 2
+source = "『ごめんなさい・・・・・・・・・。』"
+translation = "\"I'm sorry...\""
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie apologizes to Akira."
+status = "qa-ready"
+box_width = 61
+notes = "A plain apology is stronger here than expanding the unstated cause of Marie's guilt."
+
+[[entries]]
+id = "opening-grief-breaks"
+file = "DISKA/FOP.MES"
+offset = 0x0366
+source_mode = 1
+target_mode = 2
+source = "悲しみが大きくなって、声が溢れて止まらない。"
+translation = "My grief swelled, and the words came pouring out."
+speaker = "Marie Procyon"
+context = "Bedside prologue; narration before Marie loses her formal composure."
+status = "qa-ready"
+box_width = 61
+notes = "The source says her voice overflowed and would not stop. English 'words came pouring out' preserves the image without sounding physiological."
+
+[[entries]]
+id = "opening-cries-akira"
+file = "DISKA/FOP.MES"
+offset = 0x0385
+source_mode = 1
+target_mode = 2
+source = "『アキラ！　アキラ！！　・・・どうして・・・・・・私を残して・・・。』"
+translation = "\"Akira! Akira!! Why...? Why did you leave me...?\""
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie cries out to Akira."
+status = "qa-ready"
+box_width = 61
+notes = "The repeated 'Why' gives the interrupted どうして its spoken object without weakening 私を残して, 'leave me behind.'"
+
+[[entries]]
+id = "opening-refuses-loss"
+file = "DISKA/FOP.MES"
+offset = 0x03ae
+source_mode = 1
+target_mode = 2
+source = "『嫌！！　いやぁぁぁぁぁぁ！！！　アキラ・・・、ああぁぁぁぁぁぁ・・・。』"
+translation = "\"No!! No, no!! Akira... Ahhh...!\""
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie's grief becomes an uncontrolled wail."
+status = "qa-ready"
+box_width = 61
+notes = "The prolonged vowels are reduced but not sanitized: this is the moment Marie's emotional armor breaks completely."
+
+[[entries]]
+id = "opening-blames-herself"
+file = "DISKA/FOP.MES"
+offset = 0x03d9
+source_mode = 1
+target_mode = 2
+source = "『私の・・・、・・・私のせいよ・・・・、私がもっと早く・・・。・・・アキラ、アキラ・・・・・・。』"
+translation = "\"It's... it's my fault... If only I'd been faster...\nAkira... Akira...\""
+speaker = "Marie Procyon"
+context = "Bedside prologue; Marie blames herself for failing to save Akira in time."
+status = "qa-ready"
+box_width = 61
+notes = "もっと早く is left incomplete in Japanese; 'If only I'd been faster' preserves that guilt without inventing the failed intervention. The explicit line break prevents a character-level wrap from stranding Akira's name."
+
+[[entries]]
+id = "opening-kanzaki-limit"
+file = "DISKA/FOP.MES"
+offset = 0x045d
+source_mode = 1
+target_mode = 2
+source = "「・・・・・・・・・。私でもこれ以上のことは無理・・・、考え直して。」"
+translation = "\"I can't do any more than this... Please reconsider.\""
+speaker = "Kaori Kanzaki"
+context = "Later prologue exchange; Kanzaki resists Marie's demand concerning Project D."
+status = "qa-ready"
+box_width = 61
+notes = "The ending resolves the unlabelled speaker as Kanzaki. Her controlled request contrasts with the panic that follows."
+
+[[entries]]
+id = "opening-marie-threat"
+file = "DISKA/FOP.MES"
+offset = 0x0489
+source_mode = 1
+target_mode = 2
+source = "『・・・・・・止めてもいいわ。だけど、あなたの大切なミュータントがどうなるか・・・。』"
+translation = "\"Then stop. But what happens to your precious mutant...?\""
+speaker = "Marie Procyon"
+context = "Later prologue exchange; Marie threatens Connie to coerce Kanzaki."
+status = "qa-ready"
+box_width = 61
+notes = "The threat remains indirect in grammar but unmistakable in context. 'Then stop' is Marie's cold permission, and 'precious' echoes Kanzaki's attachment. The compact line avoids orphaning its final punctuation at the renderer boundary."
+
+[[entries]]
+id = "opening-kanzaki-disgust"
+file = "DISKA/FOP.MES"
+offset = 0x04be
+source_mode = 1
+target_mode = 2
+source = "「・・・くっ・・・。あなたという人は・・・・・・。」"
+translation = "\"...Damn you... How could you...?\""
+speaker = "Kaori Kanzaki"
+context = "Later prologue exchange; Kanzaki reacts to Marie's threat against Connie."
+status = "qa-ready"
+box_width = 61
+notes = "くっ is a bitten-back sound of anger. The unfinished あなたという人は condemns Marie without a literal, unidiomatic predicate."
+
+[[entries]]
+id = "opening-marie-one-subject"
+file = "DISKA/FOP.MES"
+offset = 0x04dd
+source_mode = 1
+target_mode = 2
+source = "『実験体はひとりだけでもいい。帰ってきたとき監視の目が厳しいのは、わかっている。』"
+translation = "\"One test subject will be enough.\nYou know they'll watch us closely when you return.\""
+speaker = "Marie Procyon"
+context = "Later prologue exchange; Marie narrows her demand to one abducted person from 1996."
+status = "qa-ready"
+box_width = 61
+notes = "監視の目 is the scrutiny surrounding the returning mission. 'Us' reflects their shared conspiracy without naming an unspoken institution. The sentence-boundary newline prevents character-level wrapping."
+
+[[entries]]
+id = "opening-kanzaki-silence"
+file = "DISKA/FOP.MES"
+offset = 0x0512
+source_mode = 1
+target_mode = 2
+source = "「・・・・・・・・・。」"
+translation = "\"...\""
+speaker = "Kaori Kanzaki"
+context = "Later prologue exchange; Kanzaki falls silent under Marie's coercion."
+status = "qa-ready"
+box_width = 61
+notes = "A separate silent record is retained as a dramatic and timing beat."
+
+[[entries]]
+id = "opening-marie-orders"
+file = "DISKA/FOP.MES"
+offset = 0x0523
+source_mode = 1
+target_mode = 2
+source = "『私が担当なら、私が行っている。あなたは指示通りにすればいい。』"
+translation = "\"If it were my assignment, I would go myself.\nYou need only follow your orders.\""
+speaker = "Marie Procyon"
+context = "Later prologue exchange; Marie dismisses Kanzaki's moral objection as an assigned duty."
+status = "qa-ready"
+box_width = 61
+notes = "Marie uses clipped formality as emotional armor. 指示通り is rendered as obedience to orders, not voluntary cooperation. The explicit sentence break preserves that clipped delivery in the text box."
+
+[[entries]]
+id = "opening-kanzaki-plea"
+file = "DISKA/FOP.MES"
+offset = 0x054e
+source_mode = 1
+target_mode = 2
+source = "「あなたは間違ってる！！！　お願い、考え直して！！！」"
+translation = "\"You're wrong! Please, reconsider!\""
+speaker = "Kaori Kanzaki"
+context = "Later prologue exchange; Kanzaki's composure finally breaks as Marie leaves."
+status = "qa-ready"
+box_width = 61
+notes = "The repeated source exclamation marks are compressed while retaining the sudden force and desperate plea."
+
+[[entries]]
+id = "opening-door-closes"
+file = "DISKA/FOP.MES"
+offset = 0x0570
+source_mode = 1
+target_mode = 2
+source = "部屋の扉が閉まる。"
+translation = "The door closed."
+speaker = "narrator"
+context = "Later prologue exchange; Marie ends the confrontation by leaving the room."
+status = "qa-ready"
+box_width = 61
+notes = "The terse present-tense stage direction is naturalized to the surrounding English narrative past."
+
+[[entries]]
+id = "opening-kanzaki-wait"
+file = "DISKA/FOP.MES"
+offset = 0x0580
+source_mode = 1
+target_mode = 2
+source = "「待って・・・、まだ話は終わってないわ！！！」"
+translation = "\"Wait! We're not finished yet!\""
+speaker = "Kaori Kanzaki"
+context = "Later prologue exchange; Kanzaki calls after Marie through the closed door."
+status = "qa-ready"
+box_width = 61
+notes = "話は終わってない is idiomatically 'we're not finished'; the line stays urgent rather than formal."
+
+[[entries]]
+id = "opening-terminal-fermion-status-label"
+file = "DISKA/FOP.MES"
+offset = 0x06f1
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = " STATUS "
+speaker = "terminal"
+context = "Timed separator immediately after FERMION; expanded to the locked systems heading label."
+status = "qa-ready"
+notes = "The source used only a layout space before its dot leader. The archival restoration adds STATUS so the final English screen reads as an instrument heading while retaining this physical timing record."
+
+[[entries]]
+id = "opening-terminal-fermion-status"
+file = "DISKA/FOP.MES"
+offset = 0x0727
+source_mode = 1
+target_mode = 2
+source = "ＯＫ．"
+translation = " NOMINAL"
+speaker = "terminal"
+context = "Opening terminal animation; status appended after the timed FERMION title and dot leader."
+status = "qa-ready"
+notes = "Naturalized from the generic source 'OK.' to the locked terse systems-register term 'NOMINAL'. The leading space separates it from the preserved dot leader."
+
+[[entries]]
+id = "opening-terminal-fermion-field"
+file = "DISKA/FOP.MES"
+offset = 0x074a
+source_mode = 1
+target_mode = 2
+source = "『フェルミ粒子、正常。』"
+translation = "Fermion field stable."
+speaker = "terminal"
+context = "Opening terminal animation; spoken/readout confirmation below the FERMION status line."
+status = "qa-ready"
+notes = "フェルミ粒子 literally means fermion particles. The locked terminal copy uses 'Fermion field' as concise period-SF instrumentation prose."
+
+[[entries]]
+id = "opening-terminal-time-quake-t"
+file = "DISKA/FOP.MES"
+offset = 0x087c
+source_mode = 1
+target_mode = 2
+source = "Ｔ"
+translation = "T"
+speaker = "terminal"
+context = "Timed character 1 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "The source term is already correct English; mode 2 and uppercase normalize it to the locked terminal register while preserving the character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-i"
+file = "DISKA/FOP.MES"
+offset = 0x0886
+source_mode = 1
+target_mode = 2
+source = "ｉ"
+translation = "I"
+speaker = "terminal"
+context = "Timed character 2 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-m"
+file = "DISKA/FOP.MES"
+offset = 0x0890
+source_mode = 1
+target_mode = 2
+source = "ｍ"
+translation = "M"
+speaker = "terminal"
+context = "Timed character 3 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-e"
+anchors = [
+  { file = "DISKA/FOP.MES", offset = 0x089a },
+  { file = "DISKA/FOP.MES", offset = 0x08d8 },
+]
+source_mode = 1
+target_mode = 2
+source = "ｅ"
+translation = "E"
+speaker = "terminal"
+context = "Timed E characters in the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Both physical E records have the same source, target, and heading context, so they intentionally share one canonical translation."
+
+[[entries]]
+id = "opening-terminal-time-quake-spaces"
+anchors = [
+  { file = "DISKA/FOP.MES", offset = 0x08a4 },
+  { file = "DISKA/FOP.MES", offset = 0x08e2 },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = " "
+speaker = "terminal"
+context = "Word and status separators in the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Both timed full-width layout cells become ordinary ASCII spaces around the locked heading and its dot leader."
+
+[[entries]]
+id = "opening-terminal-time-quake-q"
+file = "DISKA/FOP.MES"
+offset = 0x08ae
+source_mode = 1
+target_mode = 2
+source = "Ｑ"
+translation = "Q"
+speaker = "terminal"
+context = "Timed character 6 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-u"
+file = "DISKA/FOP.MES"
+offset = 0x08b9
+source_mode = 1
+target_mode = 2
+source = "ｕ"
+translation = "U"
+speaker = "terminal"
+context = "Timed character 7 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-a"
+file = "DISKA/FOP.MES"
+offset = 0x08c3
+source_mode = 1
+target_mode = 2
+source = "ａ"
+translation = "A"
+speaker = "terminal"
+context = "Timed character 8 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-k"
+file = "DISKA/FOP.MES"
+offset = 0x08cd
+source_mode = 1
+target_mode = 2
+source = "ｋ"
+translation = "K"
+speaker = "terminal"
+context = "Timed character 9 of the naturalized TIME QUAKE heading."
+status = "qa-ready"
+notes = "Uppercase mode-2 normalization preserving the source character tick."
+
+[[entries]]
+id = "opening-terminal-time-quake-status"
+file = "DISKA/FOP.MES"
+offset = 0x090e
+source_mode = 1
+target_mode = 2
+source = "ＯＫ．"
+translation = " CONFIRMED"
+speaker = "terminal"
+context = "Opening terminal animation; status appended after the timed Time Quake label and dot leader."
+status = "qa-ready"
+notes = "Context splits this byte-identical OK. record from the FERMION and ALL SYSTEMS statuses; a Time Quake is detected and therefore 'CONFIRMED'."
+
+[[entries]]
+id = "opening-terminal-time-quake-holding"
+file = "DISKA/FOP.MES"
+offset = 0x0931
+source_mode = 1
+target_mode = 2
+source = "『時空震動を確認、・・・・継続中。』"
+translation = "Space-time oscillation holding."
+speaker = "terminal"
+context = "Opening terminal animation; confirms that the detected Time Quake remains active."
+status = "qa-ready"
+notes = "時空震動 is the project's space-time oscillation term. 継続中 means the phenomenon is continuing; 'holding' fits the locked terse register."
+
+[[entries]]
+id = "opening-terminal-target-01"
+file = "DISKA/FOP.MES"
+offset = 0x0a87
+source_mode = 1
+target_mode = 2
+source = "Ｔ"
+translation = "T"
+speaker = "terminal"
+context = "Timed character 1 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "The source types 'Target Dimention Space... input.' one physical record at a time. This record begins the locked replacement while preserving its timing slot."
+
+[[entries]]
+id = "opening-terminal-target-02"
+file = "DISKA/FOP.MES"
+offset = 0x0a91
+source_mode = 1
+target_mode = 2
+source = "ａ"
+translation = "A"
+speaker = "terminal"
+context = "Timed character 2 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement; the source's exact Engrish sequence remains recorded by this anchor and source field."
+
+[[entries]]
+id = "opening-terminal-target-03"
+file = "DISKA/FOP.MES"
+offset = 0x0a9b
+source_mode = 1
+target_mode = 2
+source = "ｒ"
+translation = "R"
+speaker = "terminal"
+context = "Timed character 3 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
+
+[[entries]]
+id = "opening-terminal-target-04"
+file = "DISKA/FOP.MES"
+offset = 0x0aa5
+source_mode = 1
+target_mode = 2
+source = "ｇ"
+translation = "G"
+speaker = "terminal"
+context = "Timed character 4 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
+
+[[entries]]
+id = "opening-terminal-target-05"
+file = "DISKA/FOP.MES"
+offset = 0x0ab0
+source_mode = 1
+target_mode = 2
+source = "ｅ"
+translation = "E"
+speaker = "terminal"
+context = "Timed character 5 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
+
+[[entries]]
+id = "opening-terminal-target-06"
+file = "DISKA/FOP.MES"
+offset = 0x0aba
+source_mode = 1
+target_mode = 2
+source = "ｔ"
+translation = "T"
+speaker = "terminal"
+context = "Timed character 6 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Completes TARGET while preserving the source animation's sixth physical character slot."
+
+[[entries]]
+id = "opening-terminal-target-07"
+file = "DISKA/FOP.MES"
+offset = 0x0ac4
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = " "
+speaker = "terminal"
+context = "Timed separator between TARGET and COORDINATES."
+status = "qa-ready"
+notes = "A literal ASCII separator retained as a managed record because this source space lies inside the rewritten Engrish sequence."
+
+[[entries]]
+id = "opening-terminal-target-08"
+file = "DISKA/FOP.MES"
+offset = 0x0ace
+source_mode = 1
+target_mode = 2
+source = "Ｄ"
+translation = "C"
+speaker = "terminal"
+context = "Timed character 8, beginning COORDINATES in the naturalized target heading."
+status = "qa-ready"
+notes = "The locked restoration replaces the misspelled and misleading 'Dimention Space' with 'COORDINATES'."
+
+[[entries]]
+id = "opening-terminal-target-09"
+file = "DISKA/FOP.MES"
+offset = 0x0ad9
+source_mode = 1
+target_mode = 2
+source = "ｉ"
+translation = "O"
+speaker = "terminal"
+context = "Timed character 9 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-10"
+file = "DISKA/FOP.MES"
+offset = 0x0ae3
+source_mode = 1
+target_mode = 2
+source = "ｍ"
+translation = "O"
+speaker = "terminal"
+context = "Timed character 10 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-11"
+file = "DISKA/FOP.MES"
+offset = 0x0aed
+source_mode = 1
+target_mode = 2
+source = "ｅ"
+translation = "R"
+speaker = "terminal"
+context = "Timed character 11 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-12"
+file = "DISKA/FOP.MES"
+offset = 0x0af7
+source_mode = 1
+target_mode = 2
+source = "ｎ"
+translation = "D"
+speaker = "terminal"
+context = "Timed character 12 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-13"
+file = "DISKA/FOP.MES"
+offset = 0x0b01
+source_mode = 1
+target_mode = 2
+source = "ｔ"
+translation = "I"
+speaker = "terminal"
+context = "Timed character 13 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-14"
+file = "DISKA/FOP.MES"
+offset = 0x0b0b
+source_mode = 1
+target_mode = 2
+source = "ｉ"
+translation = "N"
+speaker = "terminal"
+context = "Timed character 14 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-15"
+file = "DISKA/FOP.MES"
+offset = 0x0b15
+source_mode = 1
+target_mode = 2
+source = "ｏ"
+translation = "A"
+speaker = "terminal"
+context = "Timed character 15 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-16"
+file = "DISKA/FOP.MES"
+offset = 0x0b1f
+source_mode = 1
+target_mode = 2
+source = "ｎ"
+translation = "T"
+speaker = "terminal"
+context = "Timed character 16 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Contextual character replacement preserving the original tick."
+
+[[entries]]
+id = "opening-terminal-target-17"
+file = "DISKA/FOP.MES"
+offset = 0x0b29
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = "E"
+speaker = "terminal"
+context = "Timed character 17 of the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "The original inter-word space becomes a letter because the replacement phrase is shorter; the physical record and delay remain intact."
+
+[[entries]]
+id = "opening-terminal-target-18"
+file = "DISKA/FOP.MES"
+offset = 0x0b33
+source_mode = 1
+target_mode = 2
+source = "Ｓ"
+translation = "S"
+speaker = "terminal"
+context = "Timed character 18, completing the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Completes the locked heading; later obsolete Engrish character slots are retained as timed blanks."
+
+[[entries]]
+id = "opening-terminal-target-padding-p"
+file = "DISKA/FOP.MES"
+offset = 0x0b3d
+source_mode = 1
+target_mode = 2
+source = "ｐ"
+translation = " "
+speaker = "terminal"
+context = "First obsolete character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses the remainder of the longer source Engrish while retaining this physical record and its delay."
+
+[[entries]]
+id = "opening-terminal-target-padding-a"
+file = "DISKA/FOP.MES"
+offset = 0x0b47
+source_mode = 1
+target_mode = 2
+source = "ａ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
+
+[[entries]]
+id = "opening-terminal-target-padding-c"
+file = "DISKA/FOP.MES"
+offset = 0x0b51
+source_mode = 1
+target_mode = 2
+source = "ｃ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
+
+[[entries]]
+id = "opening-terminal-target-padding-e"
+file = "DISKA/FOP.MES"
+offset = 0x0b5c
+source_mode = 1
+target_mode = 2
+source = "ｅ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
+
+[[entries]]
+id = "opening-terminal-target-padding-dots"
+anchors = [
+  { file = "DISKA/FOP.MES", offset = 0x0b66 },
+  { file = "DISKA/FOP.MES", offset = 0x0b70 },
+]
+source_mode = 1
+target_mode = 2
+source = "・"
+translation = " "
+speaker = "terminal"
+context = "Two obsolete punctuation slots after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "Both identical source dots become timed blanks; their shared target and display context justify one canonical entry."
+
+[[entries]]
+id = "opening-terminal-target-padding-i"
+file = "DISKA/FOP.MES"
+offset = 0x0b7a
+source_mode = 1
+target_mode = 2
+source = "ｉ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
+
+[[entries]]
+id = "opening-terminal-target-padding-n"
+file = "DISKA/FOP.MES"
+offset = 0x0b84
+source_mode = 1
+target_mode = 2
+source = "ｎ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
+
+[[entries]]
+id = "opening-terminal-target-padding-input-p"
+file = "DISKA/FOP.MES"
+offset = 0x0b8e
+source_mode = 1
+target_mode = 2
+source = "ｐ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
+
+[[entries]]
+id = "opening-terminal-target-padding-u"
+file = "DISKA/FOP.MES"
+offset = 0x0b98
+source_mode = 1
+target_mode = 2
+source = "ｕ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
+
+[[entries]]
+id = "opening-terminal-target-padding-t"
+file = "DISKA/FOP.MES"
+offset = 0x0ba2
+source_mode = 1
+target_mode = 2
+source = "ｔ"
+translation = " "
+speaker = "terminal"
+context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
+
+[[entries]]
+id = "opening-terminal-target-padding-period"
+file = "DISKA/FOP.MES"
+offset = 0x0bac
+source_mode = 1
+target_mode = 2
+source = "．"
+translation = " "
+speaker = "terminal"
+context = "Final obsolete punctuation slot after the naturalized TARGET COORDINATES heading."
+status = "qa-ready"
+notes = "The source period becomes a timed blank; completion is rendered by the following ENTERED record."
+
+[[entries]]
+id = "opening-terminal-target-progress-prefix"
+file = "DISKA/FOP.MES"
+offset = 0x0bcd
+source_mode = 1
+target_mode = 2
+source = "『目標時間、入力"
+translation = " "
+speaker = "terminal"
+context = "Prompt immediately before the six timed progress dots for target entry."
+status = "qa-ready"
+notes = "The semantic content is already expressed by TARGET COORDINATES. This managed separator keeps the distinct physical record while avoiding a duplicate English prompt."
+
+[[entries]]
+id = "opening-terminal-target-progress-dots"
+anchors = [
+  { file = "DISKA/FOP.MES", offset = 0x0be0 },
+  { file = "DISKA/FOP.MES", offset = 0x0bea },
+  { file = "DISKA/FOP.MES", offset = 0x0bf4 },
+  { file = "DISKA/FOP.MES", offset = 0x0bfe },
+  { file = "DISKA/FOP.MES", offset = 0x0c08 },
+  { file = "DISKA/FOP.MES", offset = 0x0c12 },
+]
+source_mode = 1
+target_mode = 2
+source = "・"
+translation = "."
+speaker = "terminal"
+context = "Six sequential progress ticks while the target coordinates are entered."
+status = "qa-ready"
+notes = "These identical dots share both meaning and target. They remain six physical timed records rather than one merged ellipsis."
+
+[[entries]]
+id = "opening-terminal-target-entered"
+file = "DISKA/FOP.MES"
+offset = 0x0c1c
+source_mode = 1
+target_mode = 2
+source = "完了。』"
+translation = " ENTERED"
+speaker = "terminal"
+context = "Completion status following the target-coordinate progress dots."
+status = "qa-ready"
+notes = "The leading space separates ENTERED from the final progress dot. The locked copy naturalizes 完了 as a terse status rather than a sentence."
+
+[[entries]]
+id = "opening-terminal-all-systems-heading"
+file = "DISKA/FOP.MES"
+offset = 0x0c91
+source_mode = 1
+target_mode = 2
+source = "Ａｌｌ　ｓｙｓｔｅｍ"
+translation = "ALL SYSTEMS"
+speaker = "terminal"
+context = "Opening terminal animation; heading before the final aggregate status."
+status = "qa-ready"
+notes = "The source's singular 'system' is naturalized to the conventional aggregate heading 'ALL SYSTEMS'."
+
+[[entries]]
+id = "opening-terminal-all-systems-status"
+file = "DISKA/FOP.MES"
+offset = 0x0cd1
+source_mode = 1
+target_mode = 2
+source = "ＯＫ．"
+translation = " NOMINAL"
+speaker = "terminal"
+context = "Opening terminal animation; aggregate status appended after ALL SYSTEMS and its dot leader."
+status = "qa-ready"
+notes = "This third contextual OK. means all subsystems are within normal parameters, so the locked copy uses NOMINAL."
+
+[[entries]]
+id = "opening-terminal-instruments-nominal"
+file = "DISKA/FOP.MES"
+offset = 0x0cf4
+source_mode = 1
+target_mode = 2
+source = "『すべての計器、異常なし。』"
+translation = "All instruments nominal."
+speaker = "terminal"
+context = "Opening terminal animation; detailed confirmation after the aggregate systems line."
+status = "qa-ready"
+notes = "計器 refers to instruments or gauges. The terse engineering register matches the surrounding naturalized copy."
+
+[[entries]]
+id = "opening-terminal-final-checks-begin"
+file = "DISKA/FOP.MES"
+offset = 0x0d77
+source_mode = 1
+target_mode = 2
+source = "『最終確認作業、"
+translation = "Final checks..."
+speaker = "terminal"
+context = "Opening terminal animation; first physical half of the final-check completion message."
+status = "qa-ready"
+notes = "The two source records form one displayed status, but remain separately anchored. The ellipsis carries the intervening timed pause."
+
+[[entries]]
+id = "opening-terminal-final-checks-complete"
+file = "DISKA/FOP.MES"
+offset = 0x0d89
+source_mode = 1
+target_mode = 2
+source = "終了。』"
+translation = "complete."
+speaker = "terminal"
+context = "Opening terminal animation; second physical half of the final-check completion message."
+status = "qa-ready"
+notes = "Lowercase completes the preceding physical record as one displayed sentence without merging their anchors."
+
+[[entries]]
+id = "opening-terminal-panel-begin"
+file = "DISKA/FOP.MES"
+offset = 0x0e48
+source_mode = 1
+target_mode = 2
+source = "『操作パネル、"
+translation = "Control panel..."
+speaker = "terminal"
+context = "Opening terminal animation; first physical half of the panel-release message."
+status = "qa-ready"
+notes = "操作パネル is the control panel. The ellipsis preserves the source's staged two-record display."
+
+[[entries]]
+id = "opening-terminal-panel-unlocked"
+file = "DISKA/FOP.MES"
+offset = 0x0e5b
+source_mode = 1
+target_mode = 2
+source = "解除。』"
+translation = "unlocked."
+speaker = "terminal"
+context = "Opening terminal animation; second physical half of the panel-release message."
+status = "qa-ready"
+notes = "解除 can mean release, disengage, or unlock. 'Unlocked' is the locked terminal copy and reads as an operator handoff."
+
+[[entries]]
+id = "opening-terminal-shutdown-heading"
+file = "DISKA/FOP.MES"
+offset = 0x0ec0
+source_mode = 1
+target_mode = 2
+source = "・・Ｓｙｓｔｅｍ　Ｃｌｏｓｅ・・"
+translation = "-- SYSTEM SHUTDOWN --"
+speaker = "terminal"
+context = "Opening terminal animation; shutdown heading after the panel is released."
+status = "qa-ready"
+notes = "'System Close' is naturalized rather than merely respelled. ASCII dashes retain the source's decorative framing."
+
+[[entries]]
+id = "opening-terminal-operations-confirmed"
+file = "DISKA/FOP.MES"
+offset = 0x0ef1
+source_mode = 1
+target_mode = 2
+source = "『作業終了・・・確認。』"
+translation = "End of operations confirmed."
+speaker = "terminal"
+context = "Opening terminal animation; shutdown confirmation."
+status = "qa-ready"
+notes = "The source literally confirms the end of work. This line is kept distinct from the subsequent power-off label."
+
+[[entries]]
+id = "opening-terminal-power-off"
+file = "DISKA/FOP.MES"
+offset = 0x0f6d
+source_mode = 1
+target_mode = 2
+source = "Ｓｙｓｔｅｍ　Ｐｏｗｅｒ　ｏｆｆ"
+translation = "SYSTEM POWER OFF"
+speaker = "terminal"
+context = "Opening terminal animation; final power-state label."
+status = "qa-ready"
+notes = "The source English is intelligible; capitalization and spacing are normalized to the locked terminal register."
+
+[[entries]]
+id = "opening-operator-done-for-day"
+file = "DISKA/FOP.MES"
+offset = 0x106c
+source_mode = 1
+target_mode = 2
+source = "『・・・よし、今日はこれまで。』"
+translation = "\"All right. That's enough for today.\""
+speaker = "Project D operator"
+context = "After the terminal shuts down; an unlabelled operator ends the day's work."
+status = "qa-ready"
+box_width = 61
+notes = "The bytecode contains no speaker identity here. The surrounding plot suggests a Project D scientist, but the catalog deliberately does not guess Kanzaki or Marie."
+
+[[entries]]
+id = "opening-operator-tomorrow"
+file = "DISKA/FOP.MES"
+offset = 0x1104
+source_mode = 1
+target_mode = 2
+source = "（全ては・・・、明日・・・。）"
+translation = "(Everything begins... tomorrow.)"
+speaker = "Project D operator"
+context = "After the terminal shuts down; the same unlabelled operator's private thought."
+status = "qa-ready"
+box_width = 61
+notes = "The source is a fragment, literally 'Everything... tomorrow.' 'Begins' supplies the minimal English predicate while preserving the ominous pause."
+
+[[entries]]
+id = "opening-exposition-year-2296"
+file = "DISKA/FOP.MES"
+offset = 0x11cf
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　　　　　　　＜西暦２２９６年＞\n"
+translation = "                                <THE YEAR 2296>\n"
+speaker = "narrator"
+context = "Opening premise screen; centered date heading after the prologue and terminal sequence."
+status = "qa-ready"
+notes = "西暦 marks the Gregorian year. 'THE YEAR 2296' is natural English screen copy; leading ASCII spaces preserve the source's approximate centering."
+
+[[entries]]
+id = "opening-exposition-population"
+file = "DISKA/FOP.MES"
+offset = 0x11f1
+source_mode = 1
+target_mode = 2
+source = "　　　人類は公害・汚染等により遺伝子を弱体化させられ、人口が激減していた。\n"
+translation = "    Pollution had damaged humanity's genes, and its population was collapsing.\n"
+speaker = "narrator"
+context = "Opening premise screen; first line explaining humanity's crisis in 2296."
+status = "qa-ready"
+notes = "公害・汚染等 is environmental pollution broadly. 'Population was collapsing' preserves the ongoing, severe decline of 激減していた."
+
+[[entries]]
+id = "opening-exposition-environment"
+file = "DISKA/FOP.MES"
+offset = 0x1221
+source_mode = 1
+target_mode = 2
+source = "　大気・海・大地の汚染を戻そうにも、１０年や２０年では自然回復さえしなかった。\n"
+translation = "     The poisoned air, seas, and soil could not heal in ten or twenty years.\n"
+speaker = "narrator"
+context = "Opening premise screen; environmental recovery is too slow to save the population."
+status = "qa-ready"
+notes = "戻そうにも is an attempted reversal, not merely observation. The compact English stays within the screen while retaining the ten-or-twenty-year scale."
+
+[[entries]]
+id = "opening-exposition-repair-attempt"
+file = "DISKA/FOP.MES"
+offset = 0x1253
+source_mode = 1
+target_mode = 2
+source = "　　　　人は弱った遺伝子を強化しようとするが────────────。\n"
+translation = "                Humanity tried to repair its damaged genes--\n"
+speaker = "narrator"
+context = "Opening premise screen; first half of the final statement about failed genetic restoration."
+status = "qa-ready"
+notes = "強化 is literally strengthen, but the next record clarifies recovery of missing information. 'Repair' avoids implying eugenic superiority and follows the locked glossary."
+
+[[entries]]
+id = "opening-exposition-lost-information"
+file = "DISKA/FOP.MES"
+offset = 0x127b
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　『失われた遺伝子情報』は、復元できなかった。"
+translation = "            but lost genetic information could not be recovered."
+speaker = "narrator"
+context = "Opening premise screen; conclusion establishing the genetic-data objective of Project D."
+status = "qa-ready"
+notes = "The source emphasizes 'lost genetic information' as a quoted concept. English emphasis is carried by the sentence structure rather than decorative quotation marks."
 
 [[entries]]
 id = "first-scene-connie-resists"

@@ -71,6 +71,12 @@ Completed work:
 - The catalog can now build a fresh translated image end to end: lime-juice
   recompiles changed-length GM files, Silky's archive offsets are repacked, and
   the copied HDI's nested FAT12 file is safely resized and verified.
+- The first major translation slice, all of `FOP.MES`, is QA-ready. Its focused
+  ledger closes all 118 physical text records as 97 translated and 21 explicit
+  title/layout exclusions, with zero pending records. A fresh image passes the
+  canonical 34,200-frame route through the bedside scene, Marie's coercion of
+  Kanzaki, the naturalized Project D terminal, the centered 2296 premise, and
+  the first following scene.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate

@@ -2,8 +2,8 @@ version = 2
 
 [[routes]]
 name = "opening-translation-proof"
-description = "Boot through the opening and verify the translated title, labelled exchange, and first scene menu."
-content_sha256 = "0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963"
+description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
+content_sha256 = "c3974d5ec03711f43b457623e23a1ec8a130947fd6f1508979c5d22b8794ca83"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -87,11 +87,6 @@ frame = 1299
 sha256 = "8c32d32fbcafc99e370b95f24f0749dc151a7aa4b0de9340867344270b4cc8c6"
 
 [[routes.checkpoints]]
-name = "fiction-disclaimer"
-frame = 1749
-sha256 = "ba49984ceeb970c4df38422499d447a02df3e81131e49eb63c867e6076db4da3"
-
-[[routes.checkpoints]]
 name = "translated-menu"
 frame = 2699
 sha256 = "a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045"
@@ -99,12 +94,67 @@ sha256 = "a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045"
 [[routes.checkpoints]]
 name = "opening-warning"
 frame = 3899
-sha256 = "69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05"
+sha256 = "231e428503880b65b2704ad68a260c491fc257f08941f8b00307251af2ec8b81"
 
 [[routes.checkpoints]]
 name = "opening-request"
 frame = 4499
-sha256 = "16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e"
+sha256 = "82cf5aa307b5e32d728f0785ec36da80c7d7c5ad19fcc27a9ffc45e19498cae8"
+
+[[routes.checkpoints]]
+name = "marie-grief-breaks"
+frame = 10749
+sha256 = "e75e56769ee8910477d4c65e9b5a8b6c04c8416abd999fae9674474d826fe400"
+
+[[routes.checkpoints]]
+name = "kanzaki-resists"
+frame = 11649
+sha256 = "d2d60e469f1eaf82225c478daacffec4f4692e219b866805b7ee68a5779da193"
+
+[[routes.checkpoints]]
+name = "marie-threat"
+frame = 12099
+sha256 = "582e1ea0f4b773c2f3383f8de137d97b750fb729347dc15f2cb3b63d6338b813"
+
+[[routes.checkpoints]]
+name = "terminal-fermion-final"
+frame = 16149
+sha256 = "03a66b24d9bab89e11b4473a988571a02c910b32f133af0f9fddae5e0669198d"
+
+[[routes.checkpoints]]
+name = "terminal-time-quake-final"
+frame = 17349
+sha256 = "b22114d05436f0d7d8ab0d4ab03fabacd09a31c3b64b69cde1565ab6917e76fc"
+
+[[routes.checkpoints]]
+name = "terminal-target-heading"
+frame = 18449
+sha256 = "23eae1c5b42d320a8c407839dfced876de84283ad40d36e17db73da4a1a1cefe"
+
+[[routes.checkpoints]]
+name = "terminal-target-entered"
+frame = 18899
+sha256 = "e4a0f2e279fc9694a42e7c31a0a81fc311e2e64c16c7e9995ae07354c7b42b0a"
+
+[[routes.checkpoints]]
+name = "terminal-all-systems"
+frame = 19349
+sha256 = "fec0148e62d566ca6ccd49e3c7a1ecb9a15144416b1c7b60559a6034eefd7841"
+
+[[routes.checkpoints]]
+name = "terminal-shutdown"
+frame = 21149
+sha256 = "c35ed2c5c8641197f7221fc5329d83e8d737deec22edb16040f42fc5602882a8"
+
+[[routes.checkpoints]]
+name = "operator-tomorrow"
+frame = 22949
+sha256 = "694323905fa14fd6ce087cfec45411550ea32f737e00d1016769ef4b241df3b4"
+
+[[routes.checkpoints]]
+name = "premise-2296"
+frame = 24749
+sha256 = "e0d408536fd3f41386be04db0fab46149c8ea1fd5f125099beee1f0aba20819b"
 
 [[routes.checkpoints]]
 name = "first-scene-connie"

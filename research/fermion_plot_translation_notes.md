@@ -760,7 +760,7 @@ The following decisions are already locked and should be enforced during review:
 
 Recommended order:
 
-1. FOP
+1. FOP — **QA-ready; complete focused coverage and green end-to-end route**
 2. F0001–F0002
 3. non-adult narrative portions of F0003–F0016
 4. F0027–F0042
@@ -788,26 +788,29 @@ Test specifically for:
 
 ## 13. Locked naturalized opening terminal English
 
-The source contains period Engrish such as `Target Dimention Space... input.` A naturalized but appropriately terse 1990s-SF terminal version would be:
+The source contains period Engrish such as `Target Dimention Space... input.` The implemented archival English is:
 
 ```text
-FERMION STATUS ........ NOMINAL
+FERMION STATUS ..... NOMINAL
 Fermion field stable.
 
-TIME QUAKE ............ CONFIRMED
+TIME QUAKE .... CONFIRMED
 Space-time oscillation holding.
 
-TARGET COORDINATES .... ENTERED
+TARGET COORDINATES
+...... ENTERED
 
-ALL SYSTEMS ........... NOMINAL
-Final checks complete.
-Control panel unlocked.
+ALL SYSTEMS .... NOMINAL
+All instruments nominal.
+Final checks... complete.
+Control panel... unlocked.
 
-SYSTEM SHUTDOWN
+-- SYSTEM SHUTDOWN --
 End of operations confirmed.
+SYSTEM POWER OFF
 ```
 
-Use the naturalized version above. A typo-only Engrish pass is not an active alternative. Preserve the original terminal strings and the naturalization rationale in catalog/restoration notes so the archival intervention remains reviewable.
+Use the naturalized version above. A typo-only Engrish pass is not an active alternative. The dot counts and split TARGET/ENTERED screens follow the actual physical timing records rather than an invented consolidated line. The source animation clears and redraws between several stages; do not merge those records merely to make a static transcript resemble one terminal page. Preserve the original terminal strings and the naturalization rationale in catalog/restoration notes so the archival intervention remains reviewable.
 
 ---
 
