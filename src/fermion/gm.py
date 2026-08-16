@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 import struct
 from dataclasses import dataclass
+from itertools import pairwise
 from pathlib import Path
 
 
@@ -72,6 +73,18 @@ class GMTransition:
     @property
     def kind(self) -> str:
         return "replace" if self.opcode == 0x6D else "nested"
+
+
+@dataclass(frozen=True)
+class GMInterpolation:
+    start: int
+    end: int
+    token: str
+    slot: int
+
+    @property
+    def marker(self) -> str:
+        return f"⟦{self.token}⟧"
 
 
 @dataclass(frozen=True)
@@ -187,6 +200,16 @@ class GMFile:
             if instruction.opcode in {0x6D, 0x6F}
         )
 
+    def interpolations(self) -> tuple[GMInterpolation, ...]:
+        """Return exact customizable-name and terminology render spans."""
+        instructions = self.audit().instructions
+        found = []
+        for copy, render in pairwise(instructions):
+            interpolation = _interpolation_at(self.data, copy, render)
+            if interpolation is not None:
+                found.append(interpolation)
+        return tuple(found)
+
 
 _INLINE_SPEAKER = re.compile(r"^【([^】]+)】")
 
@@ -197,6 +220,21 @@ _NAME_SLOT_SPEAKERS = {
     0x0412: GMSpeaker("name-slot:friend-1", "name-slot", "陽子"),
     0x0420: GMSpeaker("name-slot:friend-2", "name-slot", "弘子"),
 }
+
+_INTERPOLATION_TOKENS = {
+    0x03E8: "name:mother",
+    0x03F6: "name:older-sister",
+    0x0404: "name:dear-person",
+    0x0412: "name:friend-1",
+    0x0420: "name:friend-2",
+    0x042E: "term:slot-1",
+    0x043E: "term:slot-2",
+}
+
+
+def interpolation_token_for_slot(slot: int) -> str | None:
+    """Return the authoring token rendered from a known runtime string slot."""
+    return _INTERPOLATION_TOKENS.get(slot)
 
 
 def _inline_speaker(text: str | None) -> GMSpeaker | None:
@@ -225,21 +263,37 @@ def _dynamic_speaker(
     if (copy.opcode, render.opcode, suffix.opcode) != (0x45, 0x4B, 0x4A):
         return None
 
-    copy_data = data[copy.offset : copy.end]
-    render_data = data[render.offset : render.end]
+    interpolation = _interpolation_at(data, copy, render)
     suffix_record = records.get(suffix.offset)
     if (
-        len(copy_data) != 9
-        or copy_data[:6] != b"\x45\x0e\xe0\x00\xff\x0c"
-        or copy_data[8] != 0
-        or render_data != b"\x4b\x0e\xe0\x00\x00\x00"
+        interpolation is None
         or suffix_record is None
         or suffix_record.text is None
         or not suffix_record.text.startswith("】")
     ):
         return None
+    return _NAME_SLOT_SPEAKERS.get(interpolation.slot)
+
+
+def _interpolation_at(
+    data: bytes, copy: GMInstruction, render: GMInstruction
+) -> GMInterpolation | None:
+    if copy.opcode != 0x45 or render.opcode != 0x4B:
+        return None
+    copy_data = data[copy.offset : copy.end]
+    render_data = data[render.offset : render.end]
+    if (
+        len(copy_data) != 9
+        or copy_data[:6] != b"\x45\x0e\xe0\x00\xff\x0c"
+        or copy_data[8] != 0
+        or render_data != b"\x4b\x0e\xe0\x00\x00\x00"
+    ):
+        return None
     slot = int.from_bytes(copy_data[6:8], "little")
-    return _NAME_SLOT_SPEAKERS.get(slot)
+    token = interpolation_token_for_slot(slot)
+    if token is None:
+        return None
+    return GMInterpolation(copy.offset, render.end, token, slot)
 
 
 def _literal_transition_target(data: bytes, instruction: GMInstruction) -> str:

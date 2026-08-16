@@ -6,7 +6,7 @@ compiled MES files or original game media.
 
 Each `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
-default dialogue `box_width`. Each
+default dialogue `box_width`. Schema 5 retains schema-4 simple records; each
 `[[entries]]` table records:
 
 - a stable, descriptive `id`;
@@ -56,7 +56,7 @@ every physical copy. Identical Japanese may still use separate entries when the
 surrounding scene genuinely requires different English; that contextual split
 is explicit and visible to the coverage report.
 
-Catalog schema 4 makes speaker and context mandatory. Source verification
+Catalog schemas 4 and 5 make speaker and context mandatory. Source verification
 checks speaker identities that GM encodes directly:
 
 - a literal `【name】` prefix uses that exact name;
@@ -72,11 +72,11 @@ are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribut
 
 ## Composite interpolation contract
 
-Schema 4 deliberately does not pretend that a physical text record containing
-only `】...` is a complete display line. The next schema will represent rendered
-messages as ordered physical text segments separated by immutable interpolation
-segments. The checked-in TOML remains canonical; a merged translator table or
-database is only a generated view with validated import.
+Schema 5 represents rendered messages as ordered physical text segments
+separated by immutable interpolation segments. A physical record containing
+only `】...` is therefore no longer presented as a complete display line. The
+checked-in TOML remains canonical; a merged translator table or database is
+only a generated view, and any future import must be validated.
 
 Authoring tokens use non-CP932 delimiters so accidental compilation fails:
 
@@ -90,12 +90,51 @@ Authoring tokens use non-CP932 delimiters so accidental compilation fails:
 ⟦term:slot-2⟧
 ```
 
-They are UTF-8 catalog metadata and must never reach lime-juice. Import checks
-that the token sequence, order, and multiplicity match the source composite,
+They are UTF-8 catalog metadata and must never reach lime-juice. Catalog
+validation checks that the token sequence, order, and multiplicity match the
+source composite,
 splits English on those tokens, maps each literal chunk back to its original
 text-opcode anchor, and leaves the copy/render instructions unchanged. Only
 records separated by one of these recognized token spans may be merged for
 display; ordinary adjacent records keep a one-to-one source/target mapping.
+
+`[[tokens]]` records the Japanese default, ASCII release default, maximum
+display width, and any same-sized reset initializer to patch after compilation.
+An initializer's persistent slot must map to the same authoring token. Each
+`[[composites]]` table then stores one merged source/translation pair and one or
+more physical occurrences. Text segments retain their pristine opcode offset,
+mode, and source; token segments retain the exact copy/render span and its
+SHA-256. Verification requires byte adjacency across the whole occurrence and
+rejects missing, reordered, duplicated, unknown, or leaked tokens.
+
+```toml
+[[tokens]]
+id = "name:dear-person"
+source = "加奈子"
+translation = "Kanako"
+max_width = 6
+initializers = [
+  { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
+]
+
+[[composites]]
+id = "example-name-line"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「こんにちは。」"
+translation = "[⟦name:dear-person⟧] \"Hello.\""
+speaker = "name-slot:dear-person"
+context = "Example only."
+status = "draft"
+notes = "The catalog holds the merged display line."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1000, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1004, end = 0x1013, sha256 = "..." },
+  { kind = "text", offset = 0x1013, source_mode = 1, source = "】「こんにちは。」" },
+]
+```
 
 The complete design, translator guidance, QA checklist, and locked editorial
 policies are recorded in
@@ -118,19 +157,20 @@ The current statuses are:
 - `draft`: recorded but not yet exercised in the game;
 - `runtime-proof`: renderer or control-flow proof whose wording is still
   provisional;
-- `qa-ready`: source and context review are complete, the story slice builds
-  into a fresh image, and a representative automated route reaches the slice
-  without structural or visual regression; a human playtest still exercises
-  every line and can send it back for editorial revision;
+- `qa-ready`: source and context review are complete and the story slice builds
+  into a fresh, structurally audited image. A representative automated route is
+  required once a valid scenario fixture exists; a human playtest still
+  exercises every line and can send it back for editorial revision;
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 557 canonical records covering 581 physical
-anchors across `MAIN.MES`, `FOP.MES`, `F0000.MES`, `F0001.MES`, and
-`F0002.MES`. The setup selector pair, three-copy fiction disclaimer, repeated
-terminal timing records, and eight context-safe duplicate collapses in the
-Project D launch/arrival slice demonstrate when physical anchors should share
-or split a canonical translation.
+The current catalog contains 952 canonical records covering 1,007 physical
+anchors across `MAIN.MES`, `FOP.MES`, `F0000.MES`, `F0001.MES`, `F0002.MES`,
+and `F0003.MES`. The setup selector pair, three-copy fiction disclaimer,
+repeated terminal timing records, and context-safe duplicate collapses in the
+Project D and first Kanako slices demonstrate when physical anchors should
+share or split a canonical translation. The 34 F0003 composites demonstrate
+when several physical anchors must instead appear as one rendered line.
 
 ## Coverage ledger
 
@@ -159,6 +199,15 @@ physical text records in `F0001.MES` and `F0002.MES`, from Connie's launch-day
 wait through her collapse after reaching 1996. All 462 anchors are translated
 as 454 managed canonical lines, eight exact contextual duplicates are shared,
 and none are excluded or pending.
+
+The third closed scope is `connie-and-kanako-first-encounter`: all 426 physical
+text records in `F0003.MES`, from Connie waking in Kanako's room through their
+first bath and the `F0004.MES` handoff. They are managed as 395 canonical
+entries, including 34 composite display messages; all 426 anchors are
+translated and none are excluded or pending. The image builds and audits
+cleanly. No trustworthy live F0003 state exists yet, so the upcoming human
+playtest must capture a native fixture before this slice gains automated
+framebuffer checkpoints.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 119 anchors are

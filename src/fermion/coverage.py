@@ -129,10 +129,9 @@ def analyze_coverage(
 
     translated: dict[tuple[str, int], str] = {}
     translated_source_ids: dict[tuple[int, str], set[str]] = {}
-    for entry in catalog.entries:
+    for entry in catalog.physical_translations():
         translated_source_ids.setdefault((entry.source_mode, entry.source), set()).add(entry.id)
-        for anchor in entry.anchors:
-            translated[(anchor.file, anchor.offset)] = entry.id
+        translated[(entry.anchor.file, entry.anchor.offset)] = entry.id
 
     reports = []
     for scope in manifest.select(scope_id):

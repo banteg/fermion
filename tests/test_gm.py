@@ -4,7 +4,7 @@ import struct
 
 import pytest
 
-from fermion.gm import GMError, GMFile
+from fermion.gm import GMError, GMFile, interpolation_token_for_slot
 
 
 def gm_file(code: bytes, dictionary: bytes = b"") -> bytes:
@@ -104,6 +104,11 @@ def test_rejects_computed_scenario_transition_target() -> None:
         gm.transitions()
 
 
+def test_maps_runtime_slots_to_authoring_tokens() -> None:
+    assert interpolation_token_for_slot(0x0404) == "name:dear-person"
+    assert interpolation_token_for_slot(0x1234) is None
+
+
 def test_attributes_literal_speaker_label() -> None:
     gm = GMFile.from_bytes(gm_file(gm_text("【コニー】「はい。」") + b"\x50\x00"))
 
@@ -153,6 +158,15 @@ def test_attributes_customizable_speaker_render_sequence(
     assert attributed[0].speaker is not None
     assert attributed[0].speaker.source == "name-slot"
     assert attributed[0].speaker.default_name == default_name
+    [interpolation] = gm.interpolations()
+    token = speaker.replace("name-slot:", "name:")
+    assert (
+        interpolation.start,
+        interpolation.end,
+        interpolation.token,
+        interpolation.slot,
+        interpolation.marker,
+    ) == (7, 22, token, slot, f"⟦{token}⟧")
 
 
 def test_does_not_guess_speaker_from_quote_style_or_previous_message() -> None:

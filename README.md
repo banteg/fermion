@@ -121,7 +121,10 @@ The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
 translation, speaker, scene context, encoding modes, status, wrapping width,
-and free-form translator notes.
+and free-form translator notes. Schema 5 also keeps named runtime tokens and
+composite display lines in the same catalog: translators see a whole line such
+as `⟦name:dear-person⟧`, while the build maps each literal fragment back to its
+original text record and preserves the intervening bytecode.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 
@@ -140,8 +143,10 @@ uv run fermion translation check translations/fermion.toml \
   --verbose
 ```
 
-Export the catalog in the original translator-table shape. One physical anchor
-is emitted per row while canonical duplicates retain one shared catalog entry:
+Export the catalog in the original translator-table shape. Simple translations
+emit one row per physical anchor; a composite emits one merged row per rendered
+occurrence at its first physical segment. Rows follow file and source-offset order,
+while canonical duplicates retain one shared catalog entry:
 
 ```sh
 uv run fermion translation table translations/fermion.toml \
@@ -169,14 +174,15 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Two focused story scopes are now closed. `opening-prologue` accounts for all
+Three focused story scopes are now closed. `opening-prologue` accounts for all
 118 `FOP.MES` records as 97 translated anchors and 21 explicit title/layout
 exclusions. `project-d-launch-and-first-arrival` accounts for all 462
 `F0001.MES`/`F0002.MES` records as 454 canonical translations, including eight
-context-safe duplicate collapses, with no exclusions or pending records. A
-deliberately untranslated line must be source-anchored in the coverage file
-with a reason; `--require-complete` turns any remaining pending line into an
-error.
+context-safe duplicate collapses. `connie-and-kanako-first-encounter` accounts
+for all 426 `F0003.MES` text records as 395 canonical entries, including 34
+composite messages, with no exclusions or pending records. A deliberately
+untranslated line must be source-anchored in the coverage file with a reason;
+`--require-complete` turns any remaining pending line into an error.
 
 Build lime-juice from the conventional sibling checkout without writing build
 artifacts into that repository:
@@ -206,12 +212,13 @@ changed-length `DISKA`, resizes its FAT12 cluster chain if necessary, and
 verifies every layer in the output image. Generated RKT, MES, archive, and JSON
 report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 557 canonical entries covering 581 physical
-anchors in five MES files. The QA build grows `F0001.MES` from 17,509 to 26,040
-bytes and `F0002.MES` from 4,402 to 5,964 bytes; starting from pristine image
+The current catalog contains 952 canonical entries covering 1,007 physical
+anchors in six MES files. The QA build grows `F0001.MES` from 17,509 to 26,045
+bytes, `F0002.MES` from 4,402 to 5,964 bytes, and `F0003.MES` from 16,938 to
+25,250 bytes; starting from pristine image
 SHA-256 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232`.
+`61210332f62dd94335a01aee1ec83d376426624fa61ce1d5da23371e22d333b6`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 

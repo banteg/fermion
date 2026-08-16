@@ -126,3 +126,12 @@ end = 0x4420
 file = "DISKA/F0002.MES"
 start = 0x02ff
 end = 0x10b0
+
+[[scopes]]
+id = "connie-and-kanako-first-encounter"
+description = "Every decoded F0003 record from Connie waking in Kanako's room through their first bath, mutual introductions, and the F0004 handoff."
+
+[[scopes.ranges]]
+file = "DISKA/F0003.MES"
+start = 0x04bb
+end = 0x41a9

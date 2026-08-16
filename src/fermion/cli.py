@@ -41,7 +41,11 @@ from fermion.save_fixtures import (
     write_save_fixture_manifest,
 )
 from fermion.script import collect_mes_files, render_script, script_groups, story_mes_files
-from fermion.translation import TranslationCatalog, TranslationError
+from fermion.translation import (
+    CompositeTextSegment,
+    TranslationCatalog,
+    TranslationError,
+)
 
 
 def _path(value: str) -> Path:
@@ -923,7 +927,7 @@ def _translation_check(args: argparse.Namespace) -> None:
     if args.source_dir:
         catalog.verify_sources(args.source_dir)
     print(
-        f"{args.catalog}: files={len(catalog.files)} entries={len(catalog.entries)} "
+        f"{args.catalog}: files={len(catalog.files)} entries={catalog.entry_count} "
         f"anchors={catalog.anchor_count} "
         f"sources={'verified' if args.source_dir else 'not-checked'}"
     )
@@ -951,6 +955,38 @@ def _translation_check(args: argparse.Namespace) -> None:
                     print(f"  line {number}/{box_width}: {line}")
             for line in entry.notes.splitlines():
                 print(f"  note: {line}")
+        tokens = {token.id: token for token in catalog.tokens}
+        for entry in catalog.composites:
+            print(
+                f"{entry.id}: composite-occurrences={len(entry.occurrences)} "
+                f"anchors={len(entry.anchors)} speaker={entry.speaker} "
+                f"status={entry.status}"
+            )
+            for occurrence in entry.occurrences:
+                print(f"  occurrence: {occurrence.file}")
+                for segment in occurrence.segments:
+                    if isinstance(segment, CompositeTextSegment):
+                        print(f"    text: 0x{segment.anchor.offset:04x}")
+                    else:
+                        print(
+                            f"    token: {segment.token} "
+                            f"0x{segment.start:04x}-0x{segment.end:04x}"
+                        )
+            print(f"  context: {entry.context}")
+            print(f"  source: {entry.source}")
+            print(f"  translation: {entry.translation}")
+            box_widths = {
+                entry.box_width
+                if entry.box_width is not None
+                else files_by_name[occurrence.file].box_width
+                for occurrence in entry.occurrences
+            }
+            for box_width in sorted(width for width in box_widths if width is not None):
+                wrapped = entry.compiled_translation(box_width, tokens)
+                for number, line in enumerate(wrapped.splitlines() or [""], 1):
+                    print(f"  line {number}/{box_width}: {line}")
+            for line in entry.notes.splitlines():
+                print(f"  note: {line}")
 
 
 def _translation_table(args: argparse.Namespace) -> None:
@@ -971,39 +1007,74 @@ def _translation_table(args: argparse.Namespace) -> None:
     if args.format == "tsv":
         writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
         writer.writerow(columns)
-        for entry in catalog.entries:
-            for anchor in entry.anchors:
-                writer.writerow(
-                    (
-                        entry.id,
-                        anchor.file,
-                        f"0x{anchor.offset:04x}",
-                        entry.speaker,
-                        _tsv_text(entry.source),
-                        _tsv_text(entry.translation),
-                        _tsv_text(entry.context),
-                        entry.status,
-                    )
-                )
-        return
-
-    for entry in catalog.entries:
-        for anchor in entry.anchors:
-            print(
-                json.dumps(
-                    {
-                        "id": entry.id,
-                        "file": anchor.file,
-                        "offset": anchor.offset,
-                        "speaker": entry.speaker,
-                        "jp": entry.source,
-                        "en": entry.translation,
-                        "context": entry.context,
-                        "status": entry.status,
-                    },
-                    ensure_ascii=False,
+        for row in _translation_rows(catalog):
+            writer.writerow(
+                (
+                    row[0],
+                    row[1],
+                    f"0x{row[2]:04x}",
+                    row[3],
+                    _tsv_text(row[4]),
+                    _tsv_text(row[5]),
+                    _tsv_text(row[6]),
+                    row[7],
                 )
             )
+        return
+
+    for row in _translation_rows(catalog):
+        print(
+            json.dumps(
+                {
+                    "id": row[0],
+                    "file": row[1],
+                    "offset": row[2],
+                    "speaker": row[3],
+                    "jp": row[4],
+                    "en": row[5],
+                    "context": row[6],
+                    "status": row[7],
+                },
+                ensure_ascii=False,
+            )
+        )
+
+
+def _translation_rows(
+    catalog: TranslationCatalog,
+) -> list[tuple[str, str, int, str, str, str, str, str]]:
+    rows = []
+    for entry in catalog.entries:
+        for anchor in entry.anchors:
+            rows.append(
+                (
+                    entry.id,
+                    anchor.file,
+                    anchor.offset,
+                    entry.speaker,
+                    entry.source,
+                    entry.translation,
+                    entry.context,
+                    entry.status,
+                )
+            )
+    for entry in catalog.composites:
+        for occurrence in entry.occurrences:
+            rows.append(
+                (
+                    entry.id,
+                    occurrence.file,
+                    occurrence.start,
+                    entry.speaker,
+                    entry.source,
+                    entry.translation,
+                    entry.context,
+                    entry.status,
+                )
+            )
+    file_order = {file.file: index for index, file in enumerate(catalog.files)}
+    rows.sort(key=lambda row: (file_order[row[1]], row[2], row[0]))
+    return rows
 
 
 def _translation_build(args: argparse.Namespace) -> None:

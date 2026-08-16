@@ -503,13 +503,13 @@ build input. For every catalog file it:
   file's cluster chain, updates both FAT copies and its directory entry, and
   verifies the result without modifying the input image.
 
-The current catalog build grows `MAIN.MES` from 7,310 to 7,541 bytes,
+The five-file checkpoint build grew `MAIN.MES` from 7,310 to 7,541 bytes,
 `FOP.MES` from 5,683 to 6,247 bytes, `F0000.MES` from 16,157 to 16,211 bytes,
 `F0001.MES` from 17,509 to 26,040 bytes, `F0002.MES` from 4,402 to 5,964 bytes,
 and `DISKA` from 1,090,166 to 1,101,108 bytes. Starting from pristine image
 SHA-256
 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
-the current QA build has SHA-256
+that QA build had SHA-256
 `bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232`.
 The named routes prove that changed-size media reconstruction preserves live
 control flow and rendering through the prologue, F0000, and the translated
@@ -592,17 +592,44 @@ after installing the `second-scene` fixture, the route input hash is
 `00466ca99ef05e6e2129c64a48a964aa4616b4b998c8f7d707991a4874248b6d`.
 Both images remain ignored build artifacts.
 
+## Completed translation milestone: Connie and Kanako's first encounter
+
+The `connie-and-kanako-first-encounter` scope closes all 426 physical text
+records in `F0003.MES`, from Connie waking in Kanako's room through their first
+bath and the `F0004.MES` handoff. They are managed as 395 canonical entries:
+361 simple entries plus 34 rendered composites. Four context-safe duplicate
+groups share editorial state; every other repeated Japanese line remains split
+when its speaker or scene function differs. Nothing is excluded or pending.
+
+Schema 5 makes the composite lines buildable without destroying their byte
+map. The catalog retains each physical text anchor and immutable `0x45`/`0x4b`
+copy/render span, verifies the token sequence and span hash, wraps using the
+token's maximum width, and splits each English literal back onto its original
+text record. Ruri and Kanako's same-sized reset initializers are localized to
+ASCII while remaining tied to their proven persistent runtime slots.
+
+The fresh image grows `F0003.MES` from 16,938 to 25,250 bytes; the rebuilt file
+audits with 36 preserved name renders and no control-flow issues. Starting from
+pristine image SHA-256
+`533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
+the six-file build produces SHA-256
+`61210332f62dd94335a01aee1ec83d376426624fa61ce1d5da23371e22d333b6`.
+This is a structurally build-verified, QA-ready slice, not a runtime-verified
+one: no trustworthy live F0003 state exists yet. The first human playtest must
+capture a native F0003 fixture for subsequent short automated routes.
+
 ## Locked translation and release contract
 
 - `translations/fermion.toml` is the only canonical translation source. TSV,
-  JSONL, CSV, SQLite, or other translator databases are generated views with a
-  checked import path; no parallel editorial database is allowed.
+  JSONL, CSV, SQLite, or other translator databases are generated views; any
+  future import path must validate back into TOML. No parallel editorial
+  database is allowed.
 - The working and initial release target is the archival A translation. An
   edited B layer may be derived as an auditable overlay shortly before release;
   it is not maintained in parallel. The story-rewrite C route is out of scope.
 - Composite authoring uses non-CP932 metadata tokens such as
-  `⟦name:dear-person⟧` and `⟦term:slot-1⟧`. Schema 5 must retain each physical
-  text anchor and immutable copy/render span, validate the exact token sequence,
+  `⟦name:dear-person⟧` and `⟦term:slot-1⟧`. Schema 5 retains each physical
+  text anchor and immutable copy/render span, validates the exact token sequence,
   split merged English deterministically back into the original text records,
   and reject token leakage before lime-juice.
 - Punctuation can be compressed within a record, but records are never merged
@@ -629,18 +656,16 @@ Both images remain ignored build artifacts.
 
 ## Later work
 
-- Implement catalog schema 5 composite occurrences and generated-view import.
-  Preserve schema-4 simple and multi-anchor entries, add immutable name/term
-  token segments, and make missing/reordered/duplicated tokens a build error.
+- Add validated import for the generated translator views. Schema 5 composite
+  occurrences, immutable name/term segments, and strict token validation are
+  complete; TOML remains the sole canonical source.
 - Run a complete human QA playthrough of the F0001/F0002 slice, recording every
   wording, pacing, overflow, and speaker-voice issue back in the canonical
   catalog rather than fixing only the generated image.
-- Continue from `F0003.MES` after schema 5 can safely represent its composite
-  customizable-name records. Assign contextual speakers explicitly, share a
-  canonical translation only where speaker and scene agree, and retain every
-  editorial uncertainty in the checked-in notes.
-- Apply the existing compile-time word-boundary wrapping only after composite
-  tokens have been resolved and split back to their immutable physical spans.
+- Playtest the complete F0003 slice, capture a trustworthy native scenario
+  fixture, and pin representative composite, dialogue, and menu framebuffers.
+- Continue the main-story spine from `F0004.MES`, assigning contextual speakers
+  explicitly and retaining every editorial uncertainty in the checked-in notes.
 - Continue adding sparse game-native fixtures beyond `F0002.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route
   and translator-facing checkpoint coverage.

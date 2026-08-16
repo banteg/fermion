@@ -1,4 +1,4 @@
-version = 4
+version = 5
 game = "Fermion: Mirai kara no Houmonsha"
 
 [[files]]
@@ -27,6 +27,30 @@ file = "DISKA/F0002.MES"
 source = "disk-a/F0002.MES"
 sha256 = "d808168a21393fad7f8918072cff392a7324ec580d6f10d94861b659db2723eb"
 box_width = 61
+
+[[files]]
+file = "DISKA/F0003.MES"
+source = "disk-a/F0003.MES"
+sha256 = "54b58257dbafc6057e26f5cf116a34c12446ca74a7d3e89043055b9584c097a7"
+box_width = 61
+
+[[tokens]]
+id = "name:older-sister"
+source = "瑠璃"
+translation = "Ruri"
+max_width = 4
+initializers = [
+  { file = "DISKA/MAIN.MES", offset = 0x18d5, slot = 0x03f6 },
+]
+
+[[tokens]]
+id = "name:dear-person"
+source = "加奈子"
+translation = "Kanako"
+max_width = 6
+initializers = [
+  { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
+]
 
 [[entries]]
 id = "main-setup-color-display"
@@ -6973,11 +6997,11 @@ offset = 0x3d4f
 source_mode = 1
 target_mode = 2
 source = "神崎博士は、押し黙ったままだ。"
-translation = "Dr. Kanzaki remains mute."
+translation = "Dr. Kanzaki holds her silence."
 speaker = "Connie"
 context = "The radio silence stretches."
 status = "qa-ready"
-notes = "Mute' gives the deliberate 押し黙る more force than ordinary silence."
+notes = "'Holds her silence' keeps 押し黙る's deliberate suppression before the whispered apology; 'mute' wrongly suggested a silenced mic over the radio, and plain 'silent' was already spent on the comms imagery."
 
 [[entries]]
 id = "launch-connie-waits-kanzaki"
@@ -7407,3 +7431,5313 @@ speaker = "Connie"
 context = "Connie chooses silent wonder inside the tunnel."
 status = "qa-ready"
 notes = "Landscape of time' preserves the source's poetic 時間という景色."
+
+# F0003: Connie's first encounter with Kanako, through the F0004 handoff.
+
+[[entries]]
+id = "f0003-04bb-line"
+file = "DISKA/F0003.MES"
+offset = 0x04bb
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-04f5-my-chilled-body-begins-to-warm"
+file = "DISKA/F0003.MES"
+offset = 0x04f5
+source_mode = 1
+target_mode = 2
+source = "冷えた体が暖まってきた。"
+translation = "My chilled body begins to warm."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0508-connie-warm"
+file = "DISKA/F0003.MES"
+offset = 0x0508
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あったかい・・・・・・・・・。）"
+translation = "[CONNIE] (Warm...)"
+speaker = "コニー"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0523-girl-are-you-okay-kitty"
+file = "DISKA/F0003.MES"
+offset = 0x0523
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・大丈夫かなあ・・・この子・・・。」"
+translation = "[GIRL] \"...Are you okay, kitty...?\""
+speaker = "女の子"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-0542-i-hear-a-voice-its-pronunciation"
+file = "DISKA/F0003.MES"
+offset = 0x0542
+source_mode = 1
+target_mode = 2
+source = "コトバが聞こえた。きれいな発音だ。"
+translation = "I hear a voice. Its pronunciation is clear."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-055b-warmth-seeps-into-my-body-the"
+file = "DISKA/F0003.MES"
+offset = 0x055b
+source_mode = 1
+target_mode = 2
+source = "体で暖かさを感じた。雨の音は遠い。"
+translation = "Warmth seeps into my body. The rain sounds far away."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0574-connie-am-i-inside-a-room"
+file = "DISKA/F0003.MES"
+offset = 0x0574
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・どこか、部屋の中だろうか・・・。）"
+translation = "[CONNIE] (...Am I inside a room somewhere...?)"
+speaker = "コニー"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0595-a-blanket-covers-my-body-it"
+file = "DISKA/F0003.MES"
+offset = 0x0595
+source_mode = 1
+target_mode = 2
+source = "布が体にかけられていた。暖かいのは布で保温しているからだ。"
+translation = "A blanket covers my body. It must be what's keeping me warm."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-05bc-when-i-stir-beneath-it-i"
+file = "DISKA/F0003.MES"
+offset = 0x05bc
+source_mode = 1
+target_mode = 2
+source = "あたしがもぞもぞと動くと、女の子の嬉しそうな声が聞こえた。"
+translation = "When I stir beneath it, I hear the girl's delighted voice."
+speaker = "Connie"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-05e2-girl-oh-it-moved-it-moved"
+file = "DISKA/F0003.MES"
+offset = 0x05e2
+source_mode = 1
+target_mode = 2
+source = "【女の子】「あっ、動いた動いた！」"
+translation = "[GIRL] \"Oh! It moved! It moved!\""
+speaker = "女の子"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-05f8-connie-it-moved-how-rude"
+file = "DISKA/F0003.MES"
+offset = 0x05f8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・動いただと？　失礼な・・・。）"
+translation = "[CONNIE] (...It moved? How rude...)"
+speaker = "コニー"
+context = "Connie regains consciousness in Kanako's room after the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0643-look"
+file = "DISKA/F0003.MES"
+offset = 0x0643
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "Connie"
+context = "Initial look, think, and speak choice while Connie remains in Mini form."
+status = "qa-ready"
+notes = "Compact action label retained for the three-way choice menu."
+
+[[entries]]
+id = "f0003-0654-think"
+file = "DISKA/F0003.MES"
+offset = 0x0654
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "Connie"
+context = "Initial look, think, and speak choice while Connie remains in Mini form."
+status = "qa-ready"
+notes = "Compact action label retained for the three-way choice menu."
+
+[[entries]]
+id = "f0003-0667-talk"
+file = "DISKA/F0003.MES"
+offset = 0x0667
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "Connie"
+context = "Initial look, think, and speak choice while Connie remains in Mini form."
+status = "qa-ready"
+notes = "Compact action label retained for the three-way choice menu."
+
+[[entries]]
+id = "f0003-06cd-bright-light-dazzles-me-when-i"
+file = "DISKA/F0003.MES"
+offset = 0x06cd
+source_mode = 1
+target_mode = 2
+source = "目を開けると光がまぶしかった。"
+translation = "Bright light dazzles me when I open my eyes."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-06e3-girl-too-bright-sorry"
+file = "DISKA/F0003.MES"
+offset = 0x06e3
+source_mode = 1
+target_mode = 2
+source = "【女の子】「まぶしい？　ごめんねっ。」"
+translation = "[GIRL] \"Too bright? Sorry!\""
+speaker = "女の子"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-06fb-the-light-grows-dimmer"
+file = "DISKA/F0003.MES"
+offset = 0x06fb
+source_mode = 1
+target_mode = 2
+source = "光が小さくなった。"
+translation = "The light grows dimmer."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0723-i-look-around-i-m-lying"
+file = "DISKA/F0003.MES"
+offset = 0x0723
+source_mode = 1
+target_mode = 2
+source = "辺りを見た。あたしはベッドの上にいた。どこかの家の部屋らしい。"
+translation = "I look around. I'm lying on a bed in what seems to be someone's room."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-074d-there-s-a-window-rain-is"
+file = "DISKA/F0003.MES"
+offset = 0x074d
+source_mode = 1
+target_mode = 2
+source = "窓がある。窓の外では雨が降っていた。"
+translation = "There's a window. Rain is falling outside."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0769-i-feel-eyes-on-me-without"
+file = "DISKA/F0003.MES"
+offset = 0x0769
+source_mode = 1
+target_mode = 2
+source = "視線を感じたので、目だけで見ると、ヒトが覗き込んでいた。"
+translation = "I feel eyes on me. Without moving my head, I look up and find a human peering down."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0879-she-is-leaning-over-me-with"
+file = "DISKA/F0003.MES"
+offset = 0x0879
+source_mode = 1
+target_mode = 2
+source = "・・・にこにこと笑顔を見せて、あたしを覗き込んでいた。"
+translation = "...She is leaning over me with a cheerful smile."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-089b-the-girl-watches-me-with-kind"
+file = "DISKA/F0003.MES"
+offset = 0x089b
+source_mode = 1
+target_mode = 2
+source = "女の子は優しい目であたしを見ている。"
+translation = "The girl watches me with kind eyes."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-08b3-connie-a-child"
+file = "DISKA/F0003.MES"
+offset = 0x08b3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・子供か・・・・・・。）"
+translation = "[CONNIE] (...A child...)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-08d2-she-gives-me-a-bright-smile"
+file = "DISKA/F0003.MES"
+offset = 0x08d2
+source_mode = 1
+target_mode = 2
+source = "ニコッと微笑む。"
+translation = "She gives me a bright smile."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-08e0-i-almost-smile-back-in-spite"
+file = "DISKA/F0003.MES"
+offset = 0x08e0
+source_mode = 1
+target_mode = 2
+source = "あたしもつられて微笑みそうになってしまう。"
+translation = "I almost smile back in spite of myself."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-08fa-connie-whoa-hold-it"
+file = "DISKA/F0003.MES"
+offset = 0x08fa
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・っとっとっと、・・・。）"
+translation = "[CONNIE] (Whoa, hold it...)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0914-smiling-would-be-a-bad-idea"
+file = "DISKA/F0003.MES"
+offset = 0x0914
+source_mode = 1
+target_mode = 2
+source = "変身しているあたしが微笑むとまずい。"
+translation = "Smiling would be a bad idea while I'm transformed."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-092b-i-keep-my-face-blank-and"
+file = "DISKA/F0003.MES"
+offset = 0x092b
+source_mode = 1
+target_mode = 2
+source = "あたしは表情を出さないようにして、女の子を見つめた。"
+translation = "I keep my face blank and stare back at the girl."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0963-the-girl-smiles-gently-though-there"
+file = "DISKA/F0003.MES"
+offset = 0x0963
+source_mode = 1
+target_mode = 2
+source = "女の子は、穏やかに、それでいて寂しそうに微笑む。"
+translation = "The girl smiles gently, though there is loneliness in it."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-098a-for-someone-who-says-she-saw"
+file = "DISKA/F0003.MES"
+offset = 0x098a
+source_mode = 1
+target_mode = 2
+source = "変な機械を見たという割には、落ち着いて話している。"
+translation = "For someone who says she saw a strange machine, she speaks with surprising calm."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-09ad-connie-maybe-strange-things-don-t"
+file = "DISKA/F0003.MES"
+offset = 0x09ad
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・非日常的なことには鈍感になっているのかな。）"
+translation = "[CONNIE] (...Maybe strange things don't faze her anymore.)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-09dd-once-i-finish-the-soup-with"
+file = "DISKA/F0003.MES"
+offset = 0x09dd
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしがスープをおいしそうに飲み終えると、嬉しそうな顔をした。"
+translation = "Once I finish the soup with obvious relish, the girl beams with delight."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0a09-connie-she-s-adorable"
+file = "DISKA/F0003.MES"
+offset = 0x0a09
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・かわいいな。）"
+translation = "[CONNIE] (...She's adorable.)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0a27-she-seems-like-the-kind-of"
+file = "DISKA/F0003.MES"
+offset = 0x0a27
+source_mode = 1
+target_mode = 2
+source = "この子は、かわいくて、守ってあげたいタイプの女の子だと思う。"
+translation = "She seems like the kind of sweet girl you can't help wanting to protect."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0a53-connie-kids-this-age-are-never-boring"
+file = "DISKA/F0003.MES"
+offset = 0x0a53
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・この年頃の子供を見ていると飽きないな。）"
+translation = "[CONNIE] (...Kids this age are never boring.)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Conveys 見ていると飽きない without the uncomfortable implication of the overly literal 'watch all day.'"
+
+[[entries]]
+id = "f0003-0a78-she-s-someone-i-want-to"
+file = "DISKA/F0003.MES"
+offset = 0x0a78
+source_mode = 1
+target_mode = 2
+source = "守ってあげたい子だ。"
+translation = "She's someone I want to protect."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0a87-that-s-what-i-find-myself"
+file = "DISKA/F0003.MES"
+offset = 0x0a87
+source_mode = 1
+target_mode = 2
+source = "そう思う。"
+translation = "That's what I find myself thinking."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0a9a-the-girl-s-eyes-go-wide"
+file = "DISKA/F0003.MES"
+offset = 0x0a9a
+source_mode = 1
+target_mode = 2
+source = "女の子は目を丸くしている。"
+translation = "The girl's eyes go wide."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0aad-but-she-doesn-t-scream"
+file = "DISKA/F0003.MES"
+offset = 0x0aad
+source_mode = 1
+target_mode = 2
+source = "だけど悲鳴をあげたりはしていない。"
+translation = "But she doesn't scream."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0ac5-connie-maybe-she-s-more-level-headed"
+file = "DISKA/F0003.MES"
+offset = 0x0ac5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（案外しっかり者なのかもしれないぞ・・・。）"
+translation = "[CONNIE] (Maybe she's more level-headed than she looks...)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "しっかり者 describes Kanako as composed or dependable, not physically sturdy."
+
+[[entries]]
+id = "f0003-0ae9-or-perhaps-she-s-simply-too"
+file = "DISKA/F0003.MES"
+offset = 0x0ae9
+source_mode = 1
+target_mode = 2
+source = "それとも単に驚いて声が出ないだけなのか・・・。"
+translation = "Or perhaps she's simply too shocked to make a sound..."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0b0e-the-girl-blinks-rapidly-and-stares"
+file = "DISKA/F0003.MES"
+offset = 0x0b0e
+source_mode = 1
+target_mode = 2
+source = "女の子は、目をパチパチとしばたたかせ、あたしを見つめている。"
+translation = "The girl blinks rapidly and stares at me."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0b3e-she-keeps-staring-long-and-hard"
+file = "DISKA/F0003.MES"
+offset = 0x0b3e
+source_mode = 1
+target_mode = 2
+source = "女の子はじぃーっとあたしを見ている。"
+translation = "She keeps staring, long and hard."
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0b8a-connie-miss-just-call-me-connie"
+file = "DISKA/F0003.MES"
+offset = 0x0b8a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「お姉さん・・・？　コニー、でいい。」"
+translation = "[CONNIE] \"Miss...? Just call me Connie.\""
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0ba7-girl-then-miss-connie"
+file = "DISKA/F0003.MES"
+offset = 0x0ba7
+source_mode = 1
+target_mode = 2
+source = "【女の子】「じゃ・・・コニーさん・・・。」"
+translation = "[GIRL] \"Then... Miss Connie...\""
+speaker = "女の子"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-0bc1-connie-drop-the-miss"
+file = "DISKA/F0003.MES"
+offset = 0x0bc1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「さんはいらない。」"
+translation = "[CONNIE] \"Drop the 'Miss.'\""
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0bd5-girl-um-then-big-sis-connie"
+file = "DISKA/F0003.MES"
+offset = 0x0bd5
+source_mode = 1
+target_mode = 2
+source = "【女の子】「えっと、じゃ・・・コニーおねえちゃん・・・。」"
+translation = "[GIRL] \"Um, then... Big Sis Connie...\""
+speaker = "女の子"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Big Sis is used only where Kanako explicitly adopts おねえちゃん as an affectionate form of address."
+
+[[entries]]
+id = "f0003-0bf7-connie-twitch-fine-what-s-your"
+file = "DISKA/F0003.MES"
+offset = 0x0bf7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「（ひくひく）、まあいい・・・。お前の名前は？」"
+translation = "[CONNIE] \"(Twitch.) Fine... What's your name?\""
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0caf-connie-all-right"
+file = "DISKA/F0003.MES"
+offset = 0x0caf
+source_mode = 1
+target_mode = 2
+source = "【コニー】「わかった。」"
+translation = "[CONNIE] \"All right.\""
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0d49-connie-maybe-she-s-jealous-because"
+file = "DISKA/F0003.MES"
+offset = 0x0d49
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしが元気だから羨ましく思っているのかもしれない・・・。）"
+translation = "[CONNIE] (Maybe she's jealous because I'm healthy...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0d8f-connie-where-am-i"
+file = "DISKA/F0003.MES"
+offset = 0x0d8f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ここは・・・・・・・・・？）"
+translation = "[CONNIE] (Where am I...?)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0da8-my-body-seems-wrapped-in-something"
+file = "DISKA/F0003.MES"
+offset = 0x0da8
+source_mode = 1
+target_mode = 2
+source = "何かふわふわとした布に体が包まれているようだ。"
+translation = "My body seems wrapped in something soft and fluffy."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0dd0-there-s-something-ephemeral-almost-fragile"
+file = "DISKA/F0003.MES"
+offset = 0x0dd0
+source_mode = 1
+target_mode = 2
+source = "この女の子は、どことなく「儚い（はかない）」・・・ように感じる。"
+translation = "There's something ephemeral--almost fragile--about this girl."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "The source glosses 儚い for the reader; the paired English words retain its delicacy and implied mortality."
+
+[[entries]]
+id = "f0003-0df6-or-am-i-imagining-that-too"
+file = "DISKA/F0003.MES"
+offset = 0x0df6
+source_mode = 1
+target_mode = 2
+source = "気のせいだろうか？"
+translation = "Or am I imagining that too?"
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0e04-through-the-blanket-the-girl-gently"
+file = "DISKA/F0003.MES"
+offset = 0x0e04
+source_mode = 1
+target_mode = 2
+source = "女の子は、あたしの背中を布越しに『なでなで』と撫でてくれる。"
+translation = "Through the blanket, the girl gently strokes my back."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0e29-even-her-kindness-feels-as-though"
+file = "DISKA/F0003.MES"
+offset = 0x0e29
+source_mode = 1
+target_mode = 2
+source = "その優しさは、消えゆく優しさに感じてしまう。"
+translation = "Even her kindness feels as though it might fade away."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0e51-connie-what-is-this"
+file = "DISKA/F0003.MES"
+offset = 0x0e51
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんだこれは・・・・・・？）"
+translation = "[CONNIE] (What is this...?)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0e6a-it-smells-like-soup"
+file = "DISKA/F0003.MES"
+offset = 0x0e6a
+source_mode = 1
+target_mode = 2
+source = "スープの匂いがする。"
+translation = "It smells like soup."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0e7a-at-some-point-my-headache-has"
+file = "DISKA/F0003.MES"
+offset = 0x0e7a
+source_mode = 1
+target_mode = 2
+source = "あたしはいつの間にか頭痛が治まり、少し空腹を覚えていた。"
+translation = "At some point my headache has faded, and I'm beginning to feel hungry."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0eab-connie-surely-she-didn-t-poison"
+file = "DISKA/F0003.MES"
+offset = 0x0eab
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まさか、毒は入ってないだろう・・・。）"
+translation = "[CONNIE] (Surely she didn't poison it...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0eca-still-it-never-hurts-to-be"
+file = "DISKA/F0003.MES"
+offset = 0x0eca
+source_mode = 1
+target_mode = 2
+source = "ま。警戒するに越したことはない。"
+translation = "Still, it never hurts to be cautious."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0ee2-after-all-this-food-isn-t"
+file = "DISKA/F0003.MES"
+offset = 0x0ee2
+source_mode = 1
+target_mode = 2
+source = "なにせ、あたしの時代の食べ物じゃない。"
+translation = "After all, this food isn't from my time."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0efb-food-from-this-era-should-agree"
+file = "DISKA/F0003.MES"
+offset = 0x0efb
+source_mode = 1
+target_mode = 2
+source = "この時代の食べ物の方が口に合うと思うけど、用心のため、あたしは皿に近付かなかった。"
+translation = "Food from this era should agree with me, but I keep away from the dish to be safe."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-0f36-connie-delicious"
+file = "DISKA/F0003.MES"
+offset = 0x0f36
+source_mode = 1
+target_mode = 2
+source = "【コニー】（おいしい・・・・・・・・・。）"
+translation = "[CONNIE] (Delicious...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0f50-maybe-it-s-because-i-m-so-hungry"
+file = "DISKA/F0003.MES"
+offset = 0x0f50
+source_mode = 1
+target_mode = 2
+source = "空腹のせいもあったからか、あたしはぴちゃぴちゃと舌で舐めて味わう。"
+translation = "Maybe it's because I'm so hungry, but I lap it up, savoring the taste."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps the feline ぴちゃぴちゃ image and translates 味わう as savoring; the source does not call her greedy."
+
+[[entries]]
+id = "f0003-0f85-connie-collecting-genetic-samples-without-making"
+file = "DISKA/F0003.MES"
+offset = 0x0f85
+source_mode = 1
+target_mode = 2
+source = "【コニー】（大体、接触なしで遺伝子を採取する、っていうのには無理があるわ・・・・・・・・・。）"
+translation = "[CONNIE] (Collecting genetic samples without making contact was never realistic...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Connie critiques the mission's literal no-contact premise; this sets up her uneasy use of Mini form."
+
+[[entries]]
+id = "f0003-0fbd-connie-a-mutant-in-this-shape"
+file = "DISKA/F0003.MES"
+offset = 0x0fbd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ミュータントがこの体型で近付けば、簡単にヒトに取り入ることができるかもしれないけど・・・・・・。）"
+translation = "[CONNIE] (A mutant in this shape could approach a human and win them over easily enough, but...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-0ffb-connie-i-don-t-like-the"
+file = "DISKA/F0003.MES"
+offset = 0x0ffb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ペットとして接近するのは、好きじゃないなあ・・・・・・・・・。）"
+translation = "[CONNIE] (...I don't like the idea of approaching them as a pet.)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1028-connie-besides"
+file = "DISKA/F0003.MES"
+offset = 0x1028
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それに・・・・・・。）"
+translation = "[CONNIE] (Besides...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-103e-i-have-another-mission-a-request"
+file = "DISKA/F0003.MES"
+offset = 0x103e
+source_mode = 1
+target_mode = 2
+source = "あたしには別な使命がある。過去の人に頼む事が。"
+translation = "I have another mission: a request to make of the people of the past."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Past people is natural English for the era's inhabitants and avoids the dehumanizing literal 原住生物 used later."
+
+[[entries]]
+id = "f0003-1060-even-if-it-means-changing-the-past"
+file = "DISKA/F0003.MES"
+offset = 0x1060
+source_mode = 1
+target_mode = 2
+source = "過去を変える事になるが、公害だらけの未来を目指して欲しくないから、過去の人に頼む。"
+translation = "Even if it means changing the past, I have to ask them not to pursue a future choked with pollution."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Archival wording retains the openly interventionist purpose of Project D."
+
+[[entries]]
+id = "f0003-1098-this-is-also-the-decision-of"
+file = "DISKA/F0003.MES"
+offset = 0x1098
+source_mode = 1
+target_mode = 2
+source = "これは神崎博士やＤ計画に関わる政府高官の決定でもある。"
+translation = "This is also the decision of Dr. Kanzaki and the government officials behind Project D."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie as the grammatical agent of 頼む and the intervention as a request, not a command."
+
+[[entries]]
+id = "f0003-10c4-with-some-nourishment-in-me-i"
+file = "DISKA/F0003.MES"
+offset = 0x10c4
+source_mode = 1
+target_mode = 2
+source = "あたしは栄養を補給できたので、心持ち元気がでてきた。"
+translation = "With some nourishment in me, I begin to feel a little stronger."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1109-connie-that-was-good"
+file = "DISKA/F0003.MES"
+offset = 0x1109
+source_mode = 1
+target_mode = 2
+source = "【コニー】（おいしかったな・・・・・・。）"
+translation = "[CONNIE] (That was good...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1123-i-lick-the-dish-clean-and"
+file = "DISKA/F0003.MES"
+offset = 0x1123
+source_mode = 1
+target_mode = 2
+source = "あたしは皿をきれいに舐めて、スープを全部平らげた。"
+translation = "I lick the dish clean and finish every drop of soup."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-114e-connie-still-i-can-t-just"
+file = "DISKA/F0003.MES"
+offset = 0x114e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ただ子供の相手をしてるのもなあ・・・。）"
+translation = "[CONNIE] (...Still, I can't just spend my time entertaining a child.)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-116e-but-i-m-curious-precisely-because"
+file = "DISKA/F0003.MES"
+offset = 0x116e
+source_mode = 1
+target_mode = 2
+source = "でも、この時代の、しかもヒトの子供ということで興味があった。"
+translation = "But I'm curious precisely because she's a human child from this era."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1192-in-my-time-a-mutant-almost"
+file = "DISKA/F0003.MES"
+offset = 0x1192
+source_mode = 1
+target_mode = 2
+source = "あたしの時代だと、ミュータントがヒトの子供と接することはほとんどありえないからだ。"
+translation = "In my time, a mutant almost never has the chance to interact with a human child."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-11c1-people-in-my-time-make-sure"
+file = "DISKA/F0003.MES"
+offset = 0x11c1
+source_mode = 1
+target_mode = 2
+source = "あたしの時代のヒトは、自分の子供をミュータントに近付けないようにしている。"
+translation = "People in my time make sure their children never go near mutants."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-11ec-i-can-understand-why-but-it"
+file = "DISKA/F0003.MES"
+offset = 0x11ec
+source_mode = 1
+target_mode = 2
+source = "わからないでもないけど、あたしはやりきれない気持ちだった。"
+translation = "I can understand why, but it still leaves me feeling wretched."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1227-connie-i-want-to-know-more"
+file = "DISKA/F0003.MES"
+offset = 0x1227
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この子のことを、もっと知りたい・・・。）"
+translation = "[CONNIE] (I want to know more about her...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1247-i-can-feel-myself-being-drawn"
+file = "DISKA/F0003.MES"
+offset = 0x1247
+source_mode = 1
+target_mode = 2
+source = "少しずつこの女の子に惹かれていく自分を感じていた。"
+translation = "I can feel myself being drawn to this girl, little by little."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-126f-connie-i-understand-her"
+file = "DISKA/F0003.MES"
+offset = 0x126f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしにもわかる・・・。）"
+translation = "[CONNIE] (I understand her...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1287-i-ve-known-the-same-loneliness"
+file = "DISKA/F0003.MES"
+offset = 0x1287
+source_mode = 1
+target_mode = 2
+source = "あたしも似たような寂しさを感じた時がある。ミュータントと疎まれ、蔑まれて生きてきた時の気持ちを。"
+translation = "I've known the same loneliness: the pain of living while people shunned and despised me for being a mutant."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "The sentence reconnects Kanako's isolation to Connie's social persecution without making their circumstances identical."
+
+[[entries]]
+id = "f0003-12d8-am-i-drawn-to-her-because"
+file = "DISKA/F0003.MES"
+offset = 0x12d8
+source_mode = 1
+target_mode = 2
+source = "この子に惹かれるのは、あたしと似たような性格だから？"
+translation = "Am I drawn to her because our personalities are alike?"
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-12fb-connie-i-shouldn-t-get-too"
+file = "DISKA/F0003.MES"
+offset = 0x12fb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（深入りしてはいけないんだけど、・・・・・・・・・。）"
+translation = "[CONNIE] (I shouldn't get too involved, but...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1321-or-because-part-of-me-wants"
+file = "DISKA/F0003.MES"
+offset = 0x1321
+source_mode = 1
+target_mode = 2
+source = "この女の子を守りたいという気持ちがあたしにあるから？"
+translation = "Or because part of me wants to protect her?"
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1340-connie-now-even-i-don-t"
+file = "DISKA/F0003.MES"
+offset = 0x1340
+source_mode = 1
+target_mode = 2
+source = "【コニー】（自分でも・・・わからなくなってきちゃった・・・・・・・・・。）"
+translation = "[CONNIE] (...Now even I don't know anymore...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1373-connie-she-really-does-need-someone"
+file = "DISKA/F0003.MES"
+offset = 0x1373
+source_mode = 1
+target_mode = 2
+source = "【コニー】（甘えん坊なんだなぁ・・・。）"
+translation = "[CONNIE] (She really does need someone to cling to...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-138e-it-is-a-simple-guileless-wish"
+file = "DISKA/F0003.MES"
+offset = 0x138e
+source_mode = 1
+target_mode = 2
+source = "純粋に、『誰かに側に居て欲しい』という思考だった。"
+translation = "It is a simple, guileless wish: she wants someone beside her."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-13b3-connie-maybe-i-should-take-a"
+file = "DISKA/F0003.MES"
+offset = 0x13b3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この子の遺伝子から採取するかな・・・。）"
+translation = "[CONNIE] (Maybe I should take a genetic sample from her...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "The clinical thought is intentionally uncomfortable; it belongs to Connie's mission calculus and is not softened away."
+
+[[entries]]
+id = "f0003-13d3-connie-even-if-she-s-lonely"
+file = "DISKA/F0003.MES"
+offset = 0x13d3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（寂しい性格でも、遺伝子は強いかもしれない・・・、まてよ・・・。）"
+translation = "[CONNIE] (Even if she's lonely by nature, her genes may be strong... Wait.)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1401-connie-she-said-she-was-frail"
+file = "DISKA/F0003.MES"
+offset = 0x1401
+source_mode = 1
+target_mode = 2
+source = "【コニー】（体が弱いと言っていたな・・・・・・。・・・。）"
+translation = "[CONNIE] (She said she was frail...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1424-a-frail-body-doesn-t-necessarily"
+file = "DISKA/F0003.MES"
+offset = 0x1424
+source_mode = 1
+target_mode = 2
+source = "体が弱いといっても遺伝子が弱いとは限らない。"
+translation = "A frail body doesn't necessarily mean weak genes."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1442-connie-still-i-d-probably-have"
+file = "DISKA/F0003.MES"
+offset = 0x1442
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だけど・・・、心身共に健康なヒトの側にいた方が、遺伝子採取の目的は達成しやすいかも・・・・・・。）"
+translation = "[CONNIE] (Still... I'd probably have better odds collecting samples from someone healthy in both body and mind...)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "The utilitarian assessment is preserved as part of Connie's early conflict, not endorsed by the narration."
+
+[[entries]]
+id = "f0003-149e-in-any-case"
+file = "DISKA/F0003.MES"
+offset = 0x149e
+source_mode = 1
+target_mode = 2
+source = "とにかく。"
+translation = "In any case."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-14a8-i-have-to-examine-genes-from"
+file = "DISKA/F0003.MES"
+offset = 0x14a8
+source_mode = 1
+target_mode = 2
+source = "こっちの時代で遺伝子を調べなきゃいけないんだ。"
+translation = "I have to examine genes from this era."
+speaker = "Connie"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-14c5-connie-pull-yourself-together"
+file = "DISKA/F0003.MES"
+offset = 0x14c5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（しっかりしなきゃ。）"
+translation = "[CONNIE] (Pull yourself together.)"
+speaker = "コニー"
+context = "Connie weighs Kanako's loneliness against the gene-collection mission."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-14e8-without-thinking-i-close-my-eyes"
+file = "DISKA/F0003.MES"
+offset = 0x14e8
+source_mode = 1
+target_mode = 2
+source = "・・・あたしは自然と目を閉じて、念じていた。"
+translation = "...Without thinking, I close my eyes and concentrate."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1506-girl-huh-kitty-did-you-get"
+file = "DISKA/F0003.MES"
+offset = 0x1506
+source_mode = 1
+target_mode = 2
+source = "【女の子】「あれぇ？　猫ちゃん、目に石鹸入ったかなー？」"
+translation = "[GIRL] \"Huh? Kitty, did you get soap in your eyes?\""
+speaker = "女の子"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-152a-ignoring-the-girl-s-voice-light"
+file = "DISKA/F0003.MES"
+offset = 0x152a
+source_mode = 1
+target_mode = 2
+source = "女の子の声などおかまいなくキューンと光が広がり、変身が始まった。"
+translation = "Ignoring the girl's voice, light flares with a whine and my transformation begins."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-15e2-connie-please-don-t-be-afraid"
+file = "DISKA/F0003.MES"
+offset = 0x15e2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・驚かないで・・・・・。）"
+translation = "[CONNIE] (...Please don't be afraid...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1601-that-is-all-i-can-think"
+file = "DISKA/F0003.MES"
+offset = 0x1601
+source_mode = 1
+target_mode = 2
+source = "あたしはそう思った。"
+translation = "That is all I can think."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1610-my-ears-shift-upward-and-the"
+file = "DISKA/F0003.MES"
+offset = 0x1610
+source_mode = 1
+target_mode = 2
+source = "耳が上にずれて、身体の体毛が短くなる。"
+translation = "My ears shift upward and the fur covering my body grows short."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-166b-connie-will-she-be-all-right"
+file = "DISKA/F0003.MES"
+offset = 0x166b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・この子、・・・・大丈夫かな・・・・・。）"
+translation = "[CONNIE] (...Will she be all right...?)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-168c-i-just-hope-she-doesn-t"
+file = "DISKA/F0003.MES"
+offset = 0x168c
+source_mode = 1
+target_mode = 2
+source = "大声、出さなきゃいいけど・・・。"
+translation = "I just hope she doesn't scream..."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-16e1-my-tail-retracts-and-my-ears"
+file = "DISKA/F0003.MES"
+offset = 0x16e1
+source_mode = 1
+target_mode = 2
+source = "しっぽが縮んで引っ込み、耳が頭の両側へと下がる。"
+translation = "My tail retracts, and my ears slide down to either side of my head."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1747-a-soft-weightless-feeling-follows-the"
+file = "DISKA/F0003.MES"
+offset = 0x1747
+source_mode = 1
+target_mode = 2
+source = "ふんわりとした変身後の感覚。"
+translation = "A soft, weightless feeling follows the transformation."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-175c-connie-somehow-it-feels-good"
+file = "DISKA/F0003.MES"
+offset = 0x175c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんとなく・・、気持ちいいのよね・・。）"
+translation = "[CONNIE] (Somehow... it feels good.)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-177b-i-ve-transformed-back-into-human"
+file = "DISKA/F0003.MES"
+offset = 0x177b
+source_mode = 1
+target_mode = 2
+source = "あたしはヒト型へと変身した。"
+translation = "I've transformed back into human form."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-17a9-the-girl-s-eyes-are-round"
+file = "DISKA/F0003.MES"
+offset = 0x17a9
+source_mode = 1
+target_mode = 2
+source = "女の子は目を丸くしてる。"
+translation = "The girl's eyes are round."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-17bb-connie-ah"
+file = "DISKA/F0003.MES"
+offset = 0x17bb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ・・・・・・。）"
+translation = "[CONNIE] (Ah...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-17cf-the-moment-i-decide-i-want"
+file = "DISKA/F0003.MES"
+offset = 0x17cf
+source_mode = 1
+target_mode = 2
+source = "この子に声を掛けたい、そう思ったら変身していた。"
+translation = "The moment I decide I want to speak to her, I find myself transformed."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-17ed-bad-if-she-screams-will-the"
+file = "DISKA/F0003.MES"
+offset = 0x17ed
+source_mode = 1
+target_mode = 2
+source = "まずい。叫ばれたら女の子の仲間が来るだろうか？"
+translation = "Bad. If she screams, will the other humans come running?"
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-182e-girl-ah"
+file = "DISKA/F0003.MES"
+offset = 0x182e
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・・・・ぁ・・・・・・・・・。」"
+translation = "[GIRL] \"...Ah...\""
+speaker = "女の子"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-184b-the-girl-stares-at-me-in"
+file = "DISKA/F0003.MES"
+offset = 0x184b
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしを見て驚いている。"
+translation = "The girl stares at me in shock."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1869-the-girl-keeps-staring-at-me"
+file = "DISKA/F0003.MES"
+offset = 0x1869
+source_mode = 1
+target_mode = 2
+source = "女の子があたしを見てる。"
+translation = "The girl keeps staring at me."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-187a-the-shock-in-her-eyes-seems"
+file = "DISKA/F0003.MES"
+offset = 0x187a
+source_mode = 1
+target_mode = 2
+source = "その目線が驚いている状態から、興味を示す好奇心へと変わっているようだ。"
+translation = "The shock in her eyes seems to give way to fascinated curiosity."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-18a9-i-can-see-excitement-creeping-into"
+file = "DISKA/F0003.MES"
+offset = 0x18a9
+source_mode = 1
+target_mode = 2
+source = "わくわくっ、とした表情が混ざっているように見える。"
+translation = "I can see excitement creeping into her expression."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-18c8-connie-but-the-loneliness-is-still"
+file = "DISKA/F0003.MES"
+offset = 0x18c8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（けれど・・・、寂しさは変わってないようだ。）"
+translation = "[CONNIE] (But... the loneliness is still there.)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-18e9-my-revealed-form-surprises-her-only"
+file = "DISKA/F0003.MES"
+offset = 0x18e9
+source_mode = 1
+target_mode = 2
+source = "あたしが変身を解いた姿を見ても、一時的に驚いただけだ。"
+translation = "My revealed form surprises her only for a moment."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-190b-the-loneliness-never-leaves-her-face"
+file = "DISKA/F0003.MES"
+offset = 0x190b
+source_mode = 1
+target_mode = 2
+source = "女の子の、寂しいという表情は消えていない。"
+translation = "The loneliness never leaves her face."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-192f-connie-good-thing-she-s-a"
+file = "DISKA/F0003.MES"
+offset = 0x192f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・単純な生物でよかった・・・。）"
+translation = "[CONNIE] (...Good thing she's a simple creature...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Creature preserves Connie's deliberately taxonomic future vocabulary; later she corrects this habit herself."
+
+[[entries]]
+id = "f0003-194d-connie-if-she-were-older-she"
+file = "DISKA/F0003.MES"
+offset = 0x194d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（年齢がもっと上なら疑り深かっただろう・・・。）"
+translation = "[CONNIE] (If she were older, she'd probably be more suspicious...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-198c-her-youth-makes-her-trusting"
+file = "DISKA/F0003.MES"
+offset = 0x198c
+source_mode = 1
+target_mode = 2
+source = "年齢が低いということは、単純なので信じてもらいやすい。"
+translation = "Her youth makes her trusting; it'll be easier to get her to believe me."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's calculating assessment without making the English call Kanako intellectually simple."
+
+[[entries]]
+id = "f0003-19b1-connie-i-m-not-trying-to"
+file = "DISKA/F0003.MES"
+offset = 0x19b1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（騙すわけじゃないから、いいよね。）"
+translation = "[CONNIE] (I'm not trying to deceive her, so it's fine. Right?)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-19ce-i-mutter-as-if-trying-to"
+file = "DISKA/F0003.MES"
+offset = 0x19ce
+source_mode = 1
+target_mode = 2
+source = "あたしは自分に納得するようにつぶやいた。"
+translation = "I mutter as if trying to convince myself."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-19f2-connie-though-we-can-t-exactly"
+file = "DISKA/F0003.MES"
+offset = 0x19f2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（毎日、一緒にお風呂に・・・という訳にはいかないんだが・・・。）"
+translation = "[CONNIE] (Though we can't exactly take a bath together every day...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1a1f-connie-well-we-re-both-girls"
+file = "DISKA/F0003.MES"
+offset = 0x1a1f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・コイツも同性だからいいか・・・。）"
+translation = "[CONNIE] (...Well, we're both girls, so I suppose it's fine...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1a41-i-feel-like-a-big-sister"
+file = "DISKA/F0003.MES"
+offset = 0x1a41
+source_mode = 1
+target_mode = 2
+source = "妹を守る姉、になった気分だ。少しくすぐったさを感じる。"
+translation = "I feel like a big sister protecting her little sister. The thought makes me slightly bashful."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1a6c-connie-is-this-how-i-d"
+file = "DISKA/F0003.MES"
+offset = 0x1a6c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（妹ができたら、こういう気持ちになるのかな。）"
+translation = "[CONNIE] (Is this how I'd feel if I had a little sister?)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1a97-the-bathtub-at-dr-kanzaki-s"
+file = "DISKA/F0003.MES"
+offset = 0x1a97
+source_mode = 1
+target_mode = 2
+source = "あたしが住んでいる神崎博士の家の浴槽は、大きい。"
+translation = "The bathtub at Dr. Kanzaki's house, where I live, is large."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1ab9-even-stretched-out-i-can-sink"
+file = "DISKA/F0003.MES"
+offset = 0x1ab9
+source_mode = 1
+target_mode = 2
+source = "背を延ばしても肩まで入ることができる。単に、浴槽の長さの違いだ。"
+translation = "Even stretched out, I can sink to my shoulders. It is simply longer than this one."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1ae2-connie-come-to-think-of-it"
+file = "DISKA/F0003.MES"
+offset = 0x1ae2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（考えてみたら・・・、広いバスルームの浴槽にしか入ったことないなあ・・・。）"
+translation = "[CONNIE] (Come to think of it... I've only ever used the tub in that huge bathroom...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1b16-even-in-my-hunter-days-i"
+file = "DISKA/F0003.MES"
+offset = 0x1b16
+source_mode = 1
+target_mode = 2
+source = "ハンターをしているときも、浴槽に浸るより、シャワーを好んで使った。"
+translation = "Even in my hunter days, I preferred a shower to soaking in a tub."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1b41-i-have-few-memories-of-actually"
+file = "DISKA/F0003.MES"
+offset = 0x1b41
+source_mode = 1
+target_mode = 2
+source = "浴槽に入った、という思い出は少ない。"
+translation = "I have few memories of actually taking baths."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1b58-with-feline-genes-i-don-t"
+file = "DISKA/F0003.MES"
+offset = 0x1b58
+source_mode = 1
+target_mode = 2
+source = "もともと、猫の遺伝子を持つあたしは、ミニマムに変身して毛づくろいをすれば入浴は不要だ。"
+translation = "With feline genes, I don't need a bath if I change into Mini form and groom myself."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Mini form follows the locked glossary and treats ミニマム as the transformation, not merely a size adjective."
+
+[[entries]]
+id = "f0003-1b8d-i-only-need-to-bathe-when"
+file = "DISKA/F0003.MES"
+offset = 0x1b8d
+source_mode = 1
+target_mode = 2
+source = "ヒト型になったときに入浴が必要になる。"
+translation = "I only need to bathe when I'm in human form."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1ba7-even-as-a-hunter-i-traveled"
+file = "DISKA/F0003.MES"
+offset = 0x1ba7
+source_mode = 1
+target_mode = 2
+source = "ハンター生活のときも、移動はミニマムだったので外をうろうろするときも入浴はない。"
+translation = "Even as a hunter, I traveled in Mini form, so prowling outside never meant I had to bathe."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1bd9-connie-i-like-human-form-but"
+file = "DISKA/F0003.MES"
+offset = 0x1bd9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ヒト型は好きだけど、少し不自由ね。）"
+translation = "[CONNIE] (I like human form, but it can be inconvenient.)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1c51-that-is-how-strongly-she-strikes"
+file = "DISKA/F0003.MES"
+offset = 0x1c51
+source_mode = 1
+target_mode = 2
+source = "そう思える程、『小さくて壊れそうな女の子』という印象が強い。"
+translation = "That is how strongly she strikes me as a tiny girl who might break."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1c82-connie-maybe-i-should-make-sure"
+file = "DISKA/F0003.MES"
+offset = 0x1c82
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・少し・・・なつかせておくか・・・。）"
+translation = "[CONNIE] (...Maybe I should make sure she stays attached to me...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "The calculating edge of なつかせておく remains visible beside Connie's sincere protectiveness."
+
+[[entries]]
+id = "f0003-1ca2-connie-she-might-change-her-mind"
+file = "DISKA/F0003.MES"
+offset = 0x1ca2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この子の気が変わって、家族に告げるかもしれないからな。）"
+translation = "[CONNIE] (She might change her mind and tell her family about me.)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1ccb-connie-she-s-already-this-attached"
+file = "DISKA/F0003.MES"
+offset = 0x1ccb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・ここまで懐いているんだ。そんな事はないと思うけど・・・・・・。）"
+translation = "[CONNIE] (...She's already this attached to me. I doubt she would, but...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1d74-connie-i-ll-press-her-a"
+file = "DISKA/F0003.MES"
+offset = 0x1d74
+source_mode = 1
+target_mode = 2
+source = "【コニー】（少し強引にしてみよう。どういう反応をするのか・・・。）"
+translation = "[CONNIE] (I'll press her a little and see how she reacts...)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1e2a-i-ll-hold-off-on-speaking"
+file = "DISKA/F0003.MES"
+offset = 0x1e2a
+source_mode = 1
+target_mode = 2
+source = "まだ話すのは止めよう。"
+translation = "I'll hold off on speaking for now."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1e44-connie-a-still-developing-organism-human"
+file = "DISKA/F0003.MES"
+offset = 0x1e44
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まだ成長過程にある生物、ヒト、子供でメスの方だ・・・。生まれて１６年くらいか。）"
+translation = "[CONNIE] (A still-developing organism. Human. Child. Female... About sixteen years old.)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "The clinical taxonomy and explicit age are preserved because they frame Connie's learned hunter mindset, not neutral narration."
+
+[[entries]]
+id = "f0003-1e7e-out-of-long-habit-i-find"
+file = "DISKA/F0003.MES"
+offset = 0x1e7e
+source_mode = 1
+target_mode = 2
+source = "もう習慣になっている、いつもの癖で分析してしまう。"
+translation = "Out of long habit, I find myself analyzing her as I always do."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1ea0-it-s-a-habit-born-of"
+file = "DISKA/F0003.MES"
+offset = 0x1ea0
+source_mode = 1
+target_mode = 2
+source = "ヒトを見ると、どうしても警戒をする癖のためだ。"
+translation = "It's a habit born of always being on guard around humans."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1ebf-humans-treat-us-mutants-coldly"
+file = "DISKA/F0003.MES"
+offset = 0x1ebf
+source_mode = 1
+target_mode = 2
+source = "ヒトは、あたしたちミュータントには冷たく接してくる。"
+translation = "Humans treat us mutants coldly."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1edf-i-have-met-almost-no-humans"
+file = "DISKA/F0003.MES"
+offset = 0x1edf
+source_mode = 1
+target_mode = 2
+source = "優しいヒトとは、ほとんど出会ったことはない。"
+translation = "I have met almost no humans who were kind."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1efd-connie-dr-kanzaki-and-the-others"
+file = "DISKA/F0003.MES"
+offset = 0x1efd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士たちは別だけど・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki and the others are exceptions...)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1f1d-humans-look-at-us-mutants-with"
+file = "DISKA/F0003.MES"
+offset = 0x1f1d
+source_mode = 1
+target_mode = 2
+source = "ヒトは、あたしたちミュータントを畏怖と軽蔑の目で見ていた。"
+translation = "Humans look at us mutants with fear and contempt."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1f43-i-understand-why-since-our-abilities"
+file = "DISKA/F0003.MES"
+offset = 0x1f43
+source_mode = 1
+target_mode = 2
+source = "人類を越える能力を持っているから、そういう扱いをされるのはわかるけど、扱いをされた方はたまったものではない。"
+translation = "I understand why, since our abilities surpass humanity's, but being treated that way is unbearable."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "The stronger 'unbearable' retains たまったものではない after Connie's cooler attempt to rationalize the prejudice."
+
+[[entries]]
+id = "f0003-1f83-girl-and-that-s-why"
+file = "DISKA/F0003.MES"
+offset = 0x1f83
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・なの。」"
+translation = "[GIRL] \"...and that's why.\""
+speaker = "女の子"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "A deliberately incomplete tail: Connie realizes Kanako has been speaking while her attention wandered."
+
+[[entries]]
+id = "f0003-1f95-connie-what"
+file = "DISKA/F0003.MES"
+offset = 0x1f95
+source_mode = 1
+target_mode = 2
+source = "【コニー】（えっ！？）"
+translation = "[CONNIE] (What!?)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-1fa5-while-my-thoughts-are-elsewhere-it"
+file = "DISKA/F0003.MES"
+offset = 0x1fa5
+source_mode = 1
+target_mode = 2
+source = "あたしが別なことを考えている間、女の子はあたしに話しかけているらしかった。"
+translation = "While my thoughts are elsewhere, it seems the girl has been talking to me."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-1fd2-girl-i-heard-this-loud-crackling"
+file = "DISKA/F0003.MES"
+offset = 0x1fd2
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・ばしばしっ、って音がしたから庭を覗いてみたの。」"
+translation = "[GIRL] \"...I heard this loud crackling noise, so I looked out into the yard.\""
+speaker = "女の子"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-1ffa-connie"
+file = "DISKA/F0003.MES"
+offset = 0x1ffa
+source_mode = 1
+target_mode = 2
+source = "【コニー】（！？）"
+translation = "[CONNIE] (!?)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2019-the-girl-keeps-talking"
+file = "DISKA/F0003.MES"
+offset = 0x2019
+source_mode = 1
+target_mode = 2
+source = "女の子が話し続ける。"
+translation = "The girl keeps talking."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2029-girl-and-then-this-strange-machine"
+file = "DISKA/F0003.MES"
+offset = 0x2029
+source_mode = 1
+target_mode = 2
+source = "【女の子】「そしたらね、庭に変な機械が落ちてきたの。私、恐くて隠れちゃった。」"
+translation = "[GIRL] \"And then this strange machine fell into our yard. I got scared and hid.\""
+speaker = "女の子"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-205b-connie-the-time-machine"
+file = "DISKA/F0003.MES"
+offset = 0x205b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（！？　タイムマシンだ！！）"
+translation = "[CONNIE] (!? The time machine!)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2074-connie-damn-so-this-is-the"
+file = "DISKA/F0003.MES"
+offset = 0x2074
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まずい・・・。この家の庭だったのか・・・あたしが到着した場所は。）"
+translation = "[CONNIE] (Damn... So this is the yard I arrived in...)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-20a5-girl-when-i-looked-again-it"
+file = "DISKA/F0003.MES"
+offset = 0x20a5
+source_mode = 1
+target_mode = 2
+source = "【女の子】「また見たら、こんどは車のカバーみたいなので覆われてるの・・・。」"
+translation = "[GIRL] \"When I looked again, it was covered with something like a car cover...\""
+speaker = "女の子"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-20d4-connie-it-doesn-t-sound-like"
+file = "DISKA/F0003.MES"
+offset = 0x20d4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・あたしの姿は見られてないようだな・・・。）"
+translation = "[CONNIE] (...It doesn't sound like she saw me...)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2101-girl-i-was-scared-but-i"
+file = "DISKA/F0003.MES"
+offset = 0x2101
+source_mode = 1
+target_mode = 2
+source = "【女の子】「恐かったけど近くに寄って見たの。そしたら誰も人は居ないし・・・。ヘンなの。」"
+translation = "[GIRL] \"I was scared, but I went closer. There wasn't anybody inside... It was so strange.\""
+speaker = "女の子"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2137-connie-i-really-messed-up-i"
+file = "DISKA/F0003.MES"
+offset = 0x2137
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まずったなぁ・・・。この子の家の庭に出現してしまったんだ・・・・・・・・・。）"
+translation = "[CONNIE] (I really messed up... I appeared in this girl's yard...)"
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2184-connie"
+file = "DISKA/F0003.MES"
+offset = 0x2184
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2196-i-open-my-mouth-to-speak"
+file = "DISKA/F0003.MES"
+offset = 0x2196
+source_mode = 1
+target_mode = 2
+source = "口を開けてしゃべろうとしたが、慌てて止めた。"
+translation = "I open my mouth to speak, then hastily stop."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-21b4-i-still-don-t-know-where"
+file = "DISKA/F0003.MES"
+offset = 0x21b4
+source_mode = 1
+target_mode = 2
+source = "ここがどこなのか、なんの目的であたしを連れてきたかまだわからない。しゃべるのは危険。"
+translation = "I still don't know where I am or why she brought me here. Speaking would be dangerous."
+speaker = "Connie"
+context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-21e6-the-girl-sets-a-dish-beside"
+file = "DISKA/F0003.MES"
+offset = 0x21e6
+source_mode = 1
+target_mode = 2
+source = "女の子は皿をあたしの側に置いた。"
+translation = "The girl sets a dish beside me."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-21fe-girl-hungry-here-this-is-for"
+file = "DISKA/F0003.MES"
+offset = 0x21fe
+source_mode = 1
+target_mode = 2
+source = "【女の子】「おなかすいた？　はいっ、これ！」"
+translation = "[GIRL] \"Hungry? Here, this is for you!\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2219-connie-what-is-this"
+file = "DISKA/F0003.MES"
+offset = 0x2219
+source_mode = 1
+target_mode = 2
+source = "【コニー】（これは・・・・・・・・・？）"
+translation = "[CONNIE] (What is this...?)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-224b-a-mini-sized-dish-holds-some"
+file = "DISKA/F0003.MES"
+offset = 0x224b
+source_mode = 1
+target_mode = 2
+source = "ミニマムサイズの皿に液体が入っていた。"
+translation = "A Mini-sized dish holds some liquid."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2268-connie-what-is-this"
+file = "DISKA/F0003.MES"
+offset = 0x2268
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんだこれは・・・・？）"
+translation = "[CONNIE] (What is this...?)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-227f-girl-won-t-you-drink-it"
+file = "DISKA/F0003.MES"
+offset = 0x227f
+source_mode = 1
+target_mode = 2
+source = "【女の子】「飲まないの？　粉すーぷをミルクで溶かしたの。おいしいよ。」"
+translation = "[GIRL] \"Won't you drink it? I mixed powdered soup with milk. It's good.\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-22ac-i-look-up-at-the-girl"
+file = "DISKA/F0003.MES"
+offset = 0x22ac
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・あたしは女の子を見上げた。"
+translation = "...I look up at the girl."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-22de-girl-see-i-let-it-cool"
+file = "DISKA/F0003.MES"
+offset = 0x22de
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ね？　冷ましておいたから熱くないんだよ。」"
+translation = "[GIRL] \"See? I let it cool, so it isn't hot.\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2300-the-girl-dips-in-a-finger"
+file = "DISKA/F0003.MES"
+offset = 0x2300
+source_mode = 1
+target_mode = 2
+source = "女の子は液体に指を当てて、熱くないことを証明した。ぱくっと口を開けて液体の味見をして見せる。"
+translation = "The girl dips in a finger to prove it isn't hot, then opens her mouth and samples the liquid for me."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-233b-connie-it-seems-there-really-isn"
+file = "DISKA/F0003.MES"
+offset = 0x233b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・どうやら毒は入ってないようだ。）"
+translation = "[CONNIE] (...It seems there really isn't any poison in it.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-235a-girl-you-re-tired-aren-t"
+file = "DISKA/F0003.MES"
+offset = 0x235a
+source_mode = 1
+target_mode = 2
+source = "【女の子】「疲れているんでしょ？　飲まないと体力回復しないよ～。」"
+translation = "[GIRL] \"You're tired, aren't you? You won't get your strength back unless you drink.\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2385-connie-i-don-t-sense-any"
+file = "DISKA/F0003.MES"
+offset = 0x2385
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・敵意は感じられない。）"
+translation = "[CONNIE] (...I don't sense any hostility.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-23a0-i-put-my-mouth-to-the"
+file = "DISKA/F0003.MES"
+offset = 0x23a0
+source_mode = 1
+target_mode = 2
+source = "あたしは液体に口をつけた。毒や睡眠薬の味は感じられなかった。"
+translation = "I put my mouth to the liquid. I detect no taste of poison or sedatives."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-23e1-girl-woooow"
+file = "DISKA/F0003.MES"
+offset = 0x23e1
+source_mode = 1
+target_mode = 2
+source = "【女の子】「わあ～～～。」"
+translation = "[GIRL] \"Woooow!\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-23f3-the-girl-watches-every-little-thing"
+file = "DISKA/F0003.MES"
+offset = 0x23f3
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしの動作をいちいち見ている。"
+translation = "The girl watches every little thing I do."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-240d-connie-am-i-really-that-unusual"
+file = "DISKA/F0003.MES"
+offset = 0x240d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・そんなに珍しいか？）"
+translation = "[CONNIE] (...Am I really that unusual?)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2426-girl-you-don-t-have-to"
+file = "DISKA/F0003.MES"
+offset = 0x2426
+source_mode = 1
+target_mode = 2
+source = "【女の子】「恐がらなくても大丈夫だよう。・・・後で一緒にお風呂、入ろっ！」"
+translation = "[GIRL] \"You don't have to be scared. We'll take a bath together later!\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2453-girl-we-have-to-get-you"
+file = "DISKA/F0003.MES"
+offset = 0x2453
+source_mode = 1
+target_mode = 2
+source = "【女の子】「体、キレイにしないとね。」"
+translation = "[GIRL] \"We have to get you clean.\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-246d-she-strokes-my-back-with-her"
+file = "DISKA/F0003.MES"
+offset = 0x246d
+source_mode = 1
+target_mode = 2
+source = "手であたしの背中を撫でる。"
+translation = "She strokes my back with her hand."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-247f-connie-perfect-my-chance"
+file = "DISKA/F0003.MES"
+offset = 0x247f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（しめた！　チャンス。）"
+translation = "[CONNIE] (Perfect! My chance.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2497-i-read-the-girl-s-mind"
+file = "DISKA/F0003.MES"
+offset = 0x2497
+source_mode = 1
+target_mode = 2
+source = "あたしはこの子の心を読んだ。"
+translation = "I read the girl's mind."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-24ab-if-someone-is-touching-my-skin"
+file = "DISKA/F0003.MES"
+offset = 0x24ab
+source_mode = 1
+target_mode = 2
+source = "あたしは肌に触れている人の感情なら、わずかながら読むことが出来る。"
+translation = "If someone is touching my skin, I can faintly read their emotions."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "The limitation is touch-based emotional perception, not unrestricted telepathy."
+
+[[entries]]
+id = "f0003-24d5-girl-is-she-still-scared"
+file = "DISKA/F0003.MES"
+offset = 0x24d5
+source_mode = 1
+target_mode = 2
+source = "【女の子】（・・・まだ怯えてるのかなあ・・・。）"
+translation = "[GIRL] (Is she still scared...?)"
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-24f3-girl-does-something-hurt-she-still"
+file = "DISKA/F0003.MES"
+offset = 0x24f3
+source_mode = 1
+target_mode = 2
+source = "【女の子】（どこか悪いの？　まだ疲れてるみたい・・・。）"
+translation = "[GIRL] (Does something hurt? She still looks tired...)"
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2516-connie"
+file = "DISKA/F0003.MES"
+offset = 0x2516
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-252c-connie-a-civilian-just-an-ordinary"
+file = "DISKA/F0003.MES"
+offset = 0x252c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・一般人か。普通の子供だ・・・・・・。）"
+translation = "[CONNIE] (...A civilian. Just an ordinary child...)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2550-connie-should-i-reveal-myself-what"
+file = "DISKA/F0003.MES"
+offset = 0x2550
+source_mode = 1
+target_mode = 2
+source = "【コニー】（正体を明かそうか？　・・・・・・・・・どうする？　・・・・・・・・・。）"
+translation = "[CONNIE] (Should I reveal myself? ...What do I do...?)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-259a-connie-revealing-myself-here-would-be"
+file = "DISKA/F0003.MES"
+offset = 0x259a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ここで正体を明かすのは・・・・・・。）"
+translation = "[CONNIE] (Revealing myself here would be...)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-25ba-connie-too-soon"
+file = "DISKA/F0003.MES"
+offset = 0x25ba
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まだ早い・・・・・・・・・。）"
+translation = "[CONNIE] (...too soon.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-25d5-i-can-wait-until-i-know"
+file = "DISKA/F0003.MES"
+offset = 0x25d5
+source_mode = 1
+target_mode = 2
+source = "この子のことをもっと知ってからでも遅くはない。"
+translation = "I can wait until I know more about her."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-25f3-i-want-to-watch-a-little"
+file = "DISKA/F0003.MES"
+offset = 0x25f3
+source_mode = 1
+target_mode = 2
+source = "もう少し様子を見たい。"
+translation = "I want to watch a little longer."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-260d-girl-hey-you-re-dirty-let"
+file = "DISKA/F0003.MES"
+offset = 0x260d
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ねー。体、汚れてるよ。お風呂、入ろう！」"
+translation = "[GIRL] \"Hey, you're dirty. Let's take a bath!\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-264b-connie-h-hey"
+file = "DISKA/F0003.MES"
+offset = 0x264b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・こ、こら！）"
+translation = "[CONNIE] (...H-Hey!)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-265f-the-girl-scoops-me-up-in"
+file = "DISKA/F0003.MES"
+offset = 0x265f
+source_mode = 1
+target_mode = 2
+source = "女の子は、『ひょいっ』とあたしを両手で抱えた。"
+translation = "The girl scoops me up in both hands."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-267e-girl-no-don-t-squirm"
+file = "DISKA/F0003.MES"
+offset = 0x267e
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ダメだよぅ。暴れないで」"
+translation = "[GIRL] \"No, don't squirm.\""
+speaker = "女の子"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2699-connie-i-ll-wait-for-my"
+file = "DISKA/F0003.MES"
+offset = 0x2699
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・機会を待つか。危険はなさそうだ。）"
+translation = "[CONNIE] (...I'll wait for my chance. She doesn't seem dangerous.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-26bd-i-sense-no-hostility-nearby"
+file = "DISKA/F0003.MES"
+offset = 0x26bd
+source_mode = 1
+target_mode = 2
+source = "敵意を放つものは、近くには感じられない。"
+translation = "I sense no hostility nearby."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-26fa-i-let-the-girl-pick-me"
+file = "DISKA/F0003.MES"
+offset = 0x26fa
+source_mode = 1
+target_mode = 2
+source = "あたしはおとなしく女の子に抱き上げられた。"
+translation = "I let the girl pick me up without resisting."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2715-carrying-me-she-leaves-the-room"
+file = "DISKA/F0003.MES"
+offset = 0x2715
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしを抱えたまま部屋を出た。"
+translation = "Carrying me, she leaves the room."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2730-she-walks-along-hugging-me-tightly"
+file = "DISKA/F0003.MES"
+offset = 0x2730
+source_mode = 1
+target_mode = 2
+source = "嬉しそうにあたしをぎゅっと抱き締めたまま歩く。"
+translation = "She walks along, hugging me tightly with obvious delight."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2752-connie-i-ll-see-how-this"
+file = "DISKA/F0003.MES"
+offset = 0x2752
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・しばらく様子をみてみるか・・・。）"
+translation = "[CONNIE] (...I'll see how this plays out for a while.)"
+speaker = "コニー"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2778-i-decide-to-let-events-take"
+file = "DISKA/F0003.MES"
+offset = 0x2778
+source_mode = 1
+target_mode = 2
+source = "あたしは成り行きを見守ることにした。"
+translation = "I decide to let events take their course."
+speaker = "Connie"
+context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2843-girl-don-t-you-like-baths"
+file = "DISKA/F0003.MES"
+offset = 0x2843
+source_mode = 1
+target_mode = 2
+source = "【女の子】「お風呂嫌い？」"
+translation = "[GIRL] \"Don't you like baths?\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2856-connie-i-prefer-showers"
+file = "DISKA/F0003.MES"
+offset = 0x2856
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・シャワーの方が好きだ。）"
+translation = "[CONNIE] (...I prefer showers.)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2872-i-answer-silently"
+file = "DISKA/F0003.MES"
+offset = 0x2872
+source_mode = 1
+target_mode = 2
+source = "あたしは心の中で答えた。"
+translation = "I answer silently."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2884-connie-first-i-need-to-work"
+file = "DISKA/F0003.MES"
+offset = 0x2884
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まずはこの子が、どういう性格かを見極めないと・・・・・・・・・。）"
+translation = "[CONNIE] (First I need to work out what kind of person she is...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-28b3-the-girl-splashes-water-over-me"
+file = "DISKA/F0003.MES"
+offset = 0x28b3
+source_mode = 1
+target_mode = 2
+source = "女の子はじゃぶじゃぶと、あたしの体を洗う。"
+translation = "The girl splashes water over me and scrubs."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-28de-i-feel-a-restless-urge-to"
+file = "DISKA/F0003.MES"
+offset = 0x28de
+source_mode = 1
+target_mode = 2
+source = "・・・あたしはムズムズと変身を解きたくなった。"
+translation = "...I feel a restless urge to drop my transformation."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-28fd-connie-she-s-only-a-child"
+file = "DISKA/F0003.MES"
+offset = 0x28fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・どうせ子供だ。・・・協力を得るために元の姿に戻っても・・・・・・・・・。）"
+translation = "[CONNIE] (...She's only a child. If returning to my true form helps me win her cooperation...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2935-connie-if-i-change-back"
+file = "DISKA/F0003.MES"
+offset = 0x2935
+source_mode = 1
+target_mode = 2
+source = "【コニー】（戻っても・・・・・・・・・。）"
+translation = "[CONNIE] (If I change back...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2950-turning-from-feline-to-human-form"
+file = "DISKA/F0003.MES"
+offset = 0x2950
+source_mode = 1
+target_mode = 2
+source = "猫型からヒト型へ戻ったら、まず驚くだろうな。"
+translation = "Turning from feline to human form would certainly shock her."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-296d-i-can-t-decide-what-to"
+file = "DISKA/F0003.MES"
+offset = 0x296d
+source_mode = 1
+target_mode = 2
+source = "あたしはどうしようか迷った。"
+translation = "I can't decide what to do."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2981-girl-i-get-sick-easily-that"
+file = "DISKA/F0003.MES"
+offset = 0x2981
+source_mode = 1
+target_mode = 2
+source = "【女の子】「私ね、体が弱いの。だから今日も学校をお休みしてるの。」"
+translation = "[GIRL] \"I get sick easily. That's why I stayed home from school today.\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-29ac-connie"
+file = "DISKA/F0003.MES"
+offset = 0x29ac
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-29c5-i-look-up-at-the-girl"
+file = "DISKA/F0003.MES"
+offset = 0x29c5
+source_mode = 1
+target_mode = 2
+source = "あたしは女の子を見上げた。女の子は少しだけ悲しげな表情をした。"
+translation = "I look up at the girl. She looks a little sad."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-29ea-girl-at-first-i-only-missed"
+file = "DISKA/F0003.MES"
+offset = 0x29ea
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・最初は、ひと月に１日か２日しか休まなかったのに・・・。」"
+translation = "[GIRL] \"...At first, I only missed one or two days of school each month...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2a19-girl-now-i-miss-about-five"
+file = "DISKA/F0003.MES"
+offset = 0x2a19
+source_mode = 1
+target_mode = 2
+source = "【女の子】「今はひと月に５日くらい休んでしまうの。大丈夫な日は大丈夫なのにね。」"
+translation = "[GIRL] \"Now I miss about five days a month. On good days, I feel perfectly fine.\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2a4a-she-smiles-sadly-as-she-says"
+file = "DISKA/F0003.MES"
+offset = 0x2a4a
+source_mode = 1
+target_mode = 2
+source = "そう言って、寂しそうに微笑む。"
+translation = "She smiles sadly as she says it."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2a6f-girl-why-don-t-you-live"
+file = "DISKA/F0003.MES"
+offset = 0x2a6f
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ねえ、うちに住まない？　そうしようよ、おかあさんに飼ってもいいかってお願いしてみる。ね？」"
+translation = "[GIRL] \"Why don't you live with us? Let's do that! I'll ask Mom if I can keep you. Okay?\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2aaa-connie"
+file = "DISKA/F0003.MES"
+offset = 0x2aaa
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2abd-girl-i-want-you-to-stay"
+file = "DISKA/F0003.MES"
+offset = 0x2abd
+source_mode = 1
+target_mode = 2
+source = "【女の子】「一緒に・・・居て欲しいの・・・・・・・・・。」"
+translation = "[GIRL] \"I want you... to stay with me...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2ae2-she-rests-a-hand-on-my"
+file = "DISKA/F0003.MES"
+offset = 0x2ae2
+source_mode = 1
+target_mode = 2
+source = "あたしの背中に手を当てて、なでなでと撫でる。"
+translation = "She rests a hand on my back and gently strokes me."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2afe-if-she-takes-me-in-as"
+file = "DISKA/F0003.MES"
+offset = 0x2afe
+source_mode = 1
+target_mode = 2
+source = "ペットとして飼ってもらえれば、接近する作戦の第一歩は成功だ。"
+translation = "If she takes me in as a pet, the first step of my plan to get close to humans is complete."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Connie still frames the rescue pragmatically even as Kanako's loneliness begins to affect her."
+
+[[entries]]
+id = "f0003-2b2a-i-say-nothing"
+file = "DISKA/F0003.MES"
+offset = 0x2b2a
+source_mode = 1
+target_mode = 2
+source = "あたしは黙っていた。"
+translation = "I say nothing."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Uses Connie's stated contact strategy without making 接近 sound like hostile infiltration."
+
+[[entries]]
+id = "f0003-2b3a-connie-she-s-lonely-this-girl"
+file = "DISKA/F0003.MES"
+offset = 0x2b3a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（寂しいんだ・・・。この子・・・・・・・・・。）"
+translation = "[CONNIE] (She's lonely... This girl...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2b5c-her-loneliness-flows-into-me-through"
+file = "DISKA/F0003.MES"
+offset = 0x2b5c
+source_mode = 1
+target_mode = 2
+source = "女の子があたしに触れている所から、寂しい気持ちが伝わってくる。"
+translation = "Her loneliness flows into me through her touch."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2b82-a-longing-for-someone-she-can"
+file = "DISKA/F0003.MES"
+offset = 0x2b82
+source_mode = 1
+target_mode = 2
+source = "誰かに甘えたいという気持ち。"
+translation = "A longing for someone she can depend on."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2bb0-girl-ah"
+file = "DISKA/F0003.MES"
+offset = 0x2bb0
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ぁ・・・。」"
+translation = "[GIRL] \"Ah...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2bc1-the-girl-makes-a-troubled-little"
+file = "DISKA/F0003.MES"
+offset = 0x2bc1
+source_mode = 1
+target_mode = 2
+source = "女の子が困ったような声をあげる。"
+translation = "The girl makes a troubled little sound."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2bd7-she-feels-along-my-neck-and"
+file = "DISKA/F0003.MES"
+offset = 0x2bd7
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしの首から背中をを探るように触れ、慈しむように撫でる。"
+translation = "She feels along my neck and back as if searching, then pets me tenderly."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2c00-girl-you-must-already-have-an"
+file = "DISKA/F0003.MES"
+offset = 0x2c00
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・猫ちゃんも飼い主がいるのよね・・・・・・・・・。」"
+translation = "[GIRL] \"...You must already have an owner too, kitty...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2c29-connie-my-collar-of-course-she"
+file = "DISKA/F0003.MES"
+offset = 0x2c29
+source_mode = 1
+target_mode = 2
+source = "【コニー】（首輪・・・？　そうか、首輪を見て、あたしのことを飼い猫だと思っているんだ・・・。）"
+translation = "[CONNIE] (My collar...? Of course. She saw it and thinks I'm somebody's pet...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2c60-i-want-to-say-something-to"
+file = "DISKA/F0003.MES"
+offset = 0x2c60
+source_mode = 1
+target_mode = 2
+source = "声をかけてあげたい。"
+translation = "I want to say something to comfort her."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2c6f-connie-no-but"
+file = "DISKA/F0003.MES"
+offset = 0x2c6f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ううん。・・・だけど。）"
+translation = "[CONNIE] (No... But...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2c86-i-give-a-small-shake-of"
+file = "DISKA/F0003.MES"
+offset = 0x2c86
+source_mode = 1
+target_mode = 2
+source = "あたしは小さく首を振って、その考えを払い除ける。"
+translation = "I give a small shake of my head and push the thought away."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2cb0-the-girl-seems-to-collect-herself"
+file = "DISKA/F0003.MES"
+offset = 0x2cb0
+source_mode = 1
+target_mode = 2
+source = "女の子は気を取り直したようだ。"
+translation = "The girl seems to collect herself."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2cc5-girl-there-there-good-kitty-hold"
+file = "DISKA/F0003.MES"
+offset = 0x2cc5
+source_mode = 1
+target_mode = 2
+source = "【女の子】「そうそう、いい子ねー。おとなしくしてるのよ、洗ってあげるから。」"
+translation = "[GIRL] \"There, there. Good kitty. Hold still and I'll wash you.\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2cf0-looking-pleased-she-puffs-up-with"
+file = "DISKA/F0003.MES"
+offset = 0x2cf0
+source_mode = 1
+target_mode = 2
+source = "嬉しそうに『えっへん』と大人ぶって、子供をあやすような声で話しかけ、体を洗ってくれる。"
+translation = "Looking pleased, she puffs up with grown-up pride and washes me while cooing as though soothing a child."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2d22-scrub-scrub"
+anchors = [
+  { file = "DISKA/F0003.MES", offset = 0x2d22 },
+  { file = "DISKA/F0003.MES", offset = 0x2ebd },
+]
+source_mode = 1
+target_mode = 2
+source = "ごしごし。"
+translation = "Scrub, scrub."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2d2c-girl-ooh-kitty-s-paws-are"
+file = "DISKA/F0003.MES"
+offset = 0x2d2c
+source_mode = 1
+target_mode = 2
+source = "【女の子】「うふ～、猫ちゃんの手、むにむに～。」"
+translation = "[GIRL] \"Ooh, kitty's paws are so squishy!\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2d49-the-girl-takes-my-paw-and"
+file = "DISKA/F0003.MES"
+offset = 0x2d49
+source_mode = 1
+target_mode = 2
+source = "女の子は、あたしの手を握って肉球をむにむにと押して遊んでいる。"
+translation = "The girl takes my paw and amuses herself by pressing its soft pads."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2d72-connie-that-tickles-you-know"
+file = "DISKA/F0003.MES"
+offset = 0x2d72
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・くすぐったいんだけどな・・。）"
+translation = "[CONNIE] (...That tickles, you know...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2d9a-girl-these-are-your-paw-pads"
+file = "DISKA/F0003.MES"
+offset = 0x2d9a
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ここ、にくきゅーねっ。あっ、言ってもわかんないか・・・。」"
+translation = "[GIRL] \"These are your paw pads! Oh, I guess you don't understand me...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2dc3-connie-i-understand-every-word"
+file = "DISKA/F0003.MES"
+offset = 0x2dc3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（わかるよ。あたしには。）"
+translation = "[CONNIE] (I understand. Every word.)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2dda-the-girl-s-excited-expression-darkens"
+file = "DISKA/F0003.MES"
+offset = 0x2dda
+source_mode = 1
+target_mode = 2
+source = "はしゃいでいた女の子の表情が、暗くなる。"
+translation = "The girl's excited expression darkens."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2df4-girl-mom-is-usually-here-but"
+file = "DISKA/F0003.MES"
+offset = 0x2df4
+source_mode = 1
+target_mode = 2
+source = "【女の子】「いつもはおかあさんがいるんだけど・・・。今日はおでかけなの。」"
+translation = "[GIRL] \"Mom is usually here, but... she went out today.\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2e1f-girl-mom-writes-novels-she-said"
+file = "DISKA/F0003.MES"
+offset = 0x2e1f
+source_mode = 1
+target_mode = 2
+source = "【女の子】「おかあさん、小説書いてるの。お昼過ぎに出版社で打ち合せだって言ってたの・・・。」"
+translation = "[GIRL] \"Mom writes novels. She said she had a meeting at the publisher this afternoon...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2e59-scrub-scrub-scrub"
+file = "DISKA/F0003.MES"
+offset = 0x2e59
+source_mode = 1
+target_mode = 2
+source = "ごしごしごし・・・・・・・・・。"
+translation = "Scrub, scrub, scrub..."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2e6e-her-hand-goes-still"
+file = "DISKA/F0003.MES"
+offset = 0x2e6e
+source_mode = 1
+target_mode = 2
+source = "女の子は手を止めた。"
+translation = "Her hand goes still."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2e7e-again-loneliness-washes-over-me"
+file = "DISKA/F0003.MES"
+offset = 0x2e7e
+source_mode = 1
+target_mode = 2
+source = "また、寂しさが伝わってきた。"
+translation = "Again, loneliness washes over me."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2eaa-girl-hold-still-okay"
+file = "DISKA/F0003.MES"
+offset = 0x2eaa
+source_mode = 1
+target_mode = 2
+source = "【女の子】「動かないでね。」"
+translation = "[GIRL] \"Hold still, okay?\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-2ec7-as-i-sit-still-she-gives"
+file = "DISKA/F0003.MES"
+offset = 0x2ec7
+source_mode = 1
+target_mode = 2
+source = "あたしがじっとしていると、『寂しい微笑み』を見せてあたしの体を洗ってくれる。"
+translation = "As I sit still, she gives me a lonely smile and continues washing me."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2ef2-a-smile-suits-her-so-well"
+file = "DISKA/F0003.MES"
+offset = 0x2ef2
+source_mode = 1
+target_mode = 2
+source = "この子には笑顔が似合うのに・・・。"
+translation = "A smile suits her so well..."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2f0a-a-sharp-pang"
+file = "DISKA/F0003.MES"
+offset = 0x2f0a
+source_mode = 1
+target_mode = 2
+source = "きゅうん。"
+translation = "A sharp pang."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2f15-my-chest-fills-with-aching-sadness"
+file = "DISKA/F0003.MES"
+offset = 0x2f15
+source_mode = 1
+target_mode = 2
+source = "あたしの胸が切なさでいっぱいになる。"
+translation = "My chest fills with aching sadness."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2f37-scrub-scrub-puff"
+file = "DISKA/F0003.MES"
+offset = 0x2f37
+source_mode = 1
+target_mode = 2
+source = "ごしごし、ぱふっ。"
+translation = "Scrub, scrub--puff."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2f45-foam-gets-on-my-face-and"
+file = "DISKA/F0003.MES"
+offset = 0x2f45
+source_mode = 1
+target_mode = 2
+source = "泡があたしの顔につく。泡で鼻が塞がれた形になって、くしゃみが出そうになる。"
+translation = "Foam gets on my face and clogs my nose. I feel a sneeze coming."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2f75-connie-uh-ah-ah"
+file = "DISKA/F0003.MES"
+offset = 0x2f75
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うあ・・・ふぇ、ふぇ・・・。）"
+translation = "[CONNIE] (Uh... Ah, ah...)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2f91-connie-achoo"
+file = "DISKA/F0003.MES"
+offset = 0x2f91
+source_mode = 1
+target_mode = 2
+source = "【コニー】「くしゅん！！」"
+translation = "[CONNIE] \"Achoo!!\""
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-2fa4-the-girl-smiles-at-my-reaction"
+file = "DISKA/F0003.MES"
+offset = 0x2fa4
+source_mode = 1
+target_mode = 2
+source = "女の子は、あたしの仕草に微笑む。小さな手で、あたしの背中を毛づくろいするように撫でる。"
+translation = "The girl smiles at my reaction. With one little hand, she strokes my back as if grooming me."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-2fd8-girl-it-s-silly-isn-t"
+file = "DISKA/F0003.MES"
+offset = 0x2fd8
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・・・・、おかしいよね・・・。おかあさん、すぐに帰ってくるのに寂しい・・・って思ってしまうの。」"
+translation = "[GIRL] \"...It's silly, isn't it? Mom will be back soon, but I still get lonely...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3017-girl-i-don-t-want-anyone"
+file = "DISKA/F0003.MES"
+offset = 0x3017
+source_mode = 1
+target_mode = 2
+source = "【女の子】「離れたくないの・・・。ひとりぽっちはイヤなの・・・。」"
+translation = "[GIRL] \"I don't want anyone to leave... I hate being all alone...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3040-connie-what-makes-her-feel-this"
+file = "DISKA/F0003.MES"
+offset = 0x3040
+source_mode = 1
+target_mode = 2
+source = "【コニー】（何がこの子をそう思わせるんだろう・・・。）"
+translation = "[CONNIE] (What makes her feel this way...?)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3061-girl-every-month-i-miss-more"
+file = "DISKA/F0003.MES"
+offset = 0x3061
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・・・・。毎月、学校を休む日が増えているから、このまま病気に負けるんじゃないかって思って・・・。」"
+translation = "[GIRL] \"...Every month I miss more school. I keep wondering if this illness is going to beat me...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Kanako voices fear of dying indirectly as losing to her illness; the English keeps that childlike metaphor."
+
+[[entries]]
+id = "f0003-30a7-the-girl-s-shoulders-tremble"
+file = "DISKA/F0003.MES"
+offset = 0x30a7
+source_mode = 1
+target_mode = 2
+source = "女の子は肩を震わせた。"
+translation = "The girl's shoulders tremble."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-30b9-a-fierce-loneliness-floods-into-my"
+anchors = [
+  { file = "DISKA/F0003.MES", offset = 0x30b9 },
+  { file = "DISKA/F0003.MES", offset = 0x3123 },
+]
+source_mode = 1
+target_mode = 2
+source = "強烈な寂しさが、あたしの心に流れ込む。"
+translation = "A fierce loneliness floods into my heart."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-30d4-a-girl-who-carries-the-same"
+anchors = [
+  { file = "DISKA/F0003.MES", offset = 0x30d4 },
+  { file = "DISKA/F0003.MES", offset = 0x313e },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしと同じ寂しさを持った女の子・・・。"
+translation = "A girl who carries the same loneliness I do..."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-30ee-i-want-to-speak-to-her"
+anchors = [
+  { file = "DISKA/F0003.MES", offset = 0x30ee },
+  { file = "DISKA/F0003.MES", offset = 0x3158 },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしは『声を掛けてあげたい』、そう思った。"
+translation = "I want to speak to her, to comfort her."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-319b-connie-damn-what-do-i-do"
+file = "DISKA/F0003.MES"
+offset = 0x319b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（しまった・・・・・・・・・、どうするか・・・・・・。）"
+translation = "[CONNIE] (Damn... What do I do now...?)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-31c1-connie-shh-keep-quiet"
+file = "DISKA/F0003.MES"
+offset = 0x31c1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「しーっ！　静かに！！！」"
+translation = "[CONNIE] \"Shh! Keep quiet!\""
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-31d9-i-clamp-a-hand-over-the"
+file = "DISKA/F0003.MES"
+offset = 0x31d9
+source_mode = 1
+target_mode = 2
+source = "あたしは女の子の口を押さえた。"
+translation = "I clamp a hand over the girl's mouth."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-31ee-girl-mmmph-mmf-mmf"
+file = "DISKA/F0003.MES"
+offset = 0x31ee
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ふーもごもご、むぐむぐ・・・。」"
+translation = "[GIRL] \"Mmmph, mmf mmf...\""
+speaker = "女の子"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-320b-connie-don-t-scream-all-right"
+file = "DISKA/F0003.MES"
+offset = 0x320b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「叫ばないで。いい？」"
+translation = "[CONNIE] \"Don't scream. All right?\""
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3221-the-girl-nods-rapidly-i-take"
+file = "DISKA/F0003.MES"
+offset = 0x3221
+source_mode = 1
+target_mode = 2
+source = "女の子は『うんうん』と頷く。あたしは手を離した。"
+translation = "The girl nods rapidly. I take my hand away."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3240-connie-looks-like-she-s-okay"
+file = "DISKA/F0003.MES"
+offset = 0x3240
+source_mode = 1
+target_mode = 2
+source = "【コニー】（大丈夫みたいだな。）"
+translation = "[CONNIE] (Looks like she's okay.)"
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3255-when-i-transform-the-soap-suds"
+file = "DISKA/F0003.MES"
+offset = 0x3255
+source_mode = 1
+target_mode = 2
+source = "あたしは変身したことで、体についていたシャボンの泡が吹き飛んでしまった。"
+translation = "When I transform, the soap suds covering my body scatter away."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3283-connie-may-i-get-in"
+file = "DISKA/F0003.MES"
+offset = 0x3283
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ここ、入ってもいいか？」"
+translation = "[CONNIE] \"May I get in?\""
+speaker = "コニー"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-329a-i-gesture-that-i-want-to"
+file = "DISKA/F0003.MES"
+offset = 0x329a
+source_mode = 1
+target_mode = 2
+source = "あたしが浴槽に入りたいと意思表示をすると、女の子はまた『うんうん』と頷く。"
+translation = "I gesture that I want to enter the tub, and the girl nods again."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-32c7-i-slip-into-the-tub-with"
+file = "DISKA/F0003.MES"
+offset = 0x32c7
+source_mode = 1
+target_mode = 2
+source = "あたしはちゃぷん、と浴槽に入った。"
+translation = "I slip into the tub with a splash."
+speaker = "Connie"
+context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-33d4-girl-whew-you-startled-me"
+file = "DISKA/F0003.MES"
+offset = 0x33d4
+source_mode = 1
+target_mode = 2
+source = "【女の子】「はふぅ、・・・・・びっくりしちゃった。」"
+translation = "[GIRL] \"Whew... You startled me.\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-33f5-connie-well-of-course-you-were"
+file = "DISKA/F0003.MES"
+offset = 0x33f5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そりゃ驚くだろうさ。」"
+translation = "[CONNIE] \"Well, of course you were.\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "The omitted Japanese subject is Kanako: Connie dryly agrees that her transformation was startling."
+
+[[entries]]
+id = "f0003-340b-girl-miss-kitty"
+file = "DISKA/F0003.MES"
+offset = 0x340b
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・猫のお姉さん、・・・？」"
+translation = "[GIRL] \"...Miss Kitty...?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Avoids the unrelated English stereotype 'cat lady'; Kanako is tentatively addressing the cat-shaped woman."
+
+[[entries]]
+id = "f0003-3425-she-still-wears-the-same-shocked"
+file = "DISKA/F0003.MES"
+offset = 0x3425
+source_mode = 1
+target_mode = 2
+source = "・・・女の子は驚きの表情のままだ。"
+translation = "...She still wears the same shocked look."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-343b-connie-more-importantly-how-many-other"
+file = "DISKA/F0003.MES"
+offset = 0x343b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「それより、ここにはあと何人居る？」"
+translation = "[CONNIE] \"More importantly, how many other people live here?\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3459-girl-huh-um-no-one-is"
+file = "DISKA/F0003.MES"
+offset = 0x3459
+source_mode = 1
+target_mode = 2
+source = "【女の子】「え？　えーっと・・・今はいないけど、おとうさんとおかあさんとおねえちゃんが・・・」"
+translation = "[GIRL] \"Huh? Um... No one is here right now, but there's my dad, my mom, and my sister...\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-348e-connie-three-i-hope-this-doesn"
+file = "DISKA/F0003.MES"
+offset = 0x348e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「３人か。厄介なことにならなきゃいいが・・・。」"
+translation = "[CONNIE] \"Three. I hope this doesn't become a problem...\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-34b3-girl-hey-are-you-a-cat"
+file = "DISKA/F0003.MES"
+offset = 0x34b3
+source_mode = 1
+target_mode = 2
+source = "【女の子】「ねー。お姉さん、猫の化身？」"
+translation = "[GIRL] \"Hey, are you a cat spirit?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-34cc-forgetting-her-loneliness-the-girl-looks"
+file = "DISKA/F0003.MES"
+offset = 0x34cc
+source_mode = 1
+target_mode = 2
+source = "女の子は寂しさを忘れて、珍しさと好奇心いっぱいに、あたしを見てる。"
+translation = "Forgetting her loneliness, the girl looks at me with wonder and curiosity."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-34f5-connie-for-someone-so-surprised-she"
+file = "DISKA/F0003.MES"
+offset = 0x34f5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・コイツ、驚いてる割に冷静な質問をしてくるぞ。）"
+translation = "[CONNIE] (...For someone so surprised, she asks remarkably calm questions.)"
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3521-connie-not-exactly"
+file = "DISKA/F0003.MES"
+offset = 0x3521
+source_mode = 1
+target_mode = 2
+source = "【コニー】「正確には違う。」"
+translation = "[CONNIE] \"Not exactly.\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3537-girl-then-are-you-a-monster"
+file = "DISKA/F0003.MES"
+offset = 0x3537
+source_mode = 1
+target_mode = 2
+source = "【女の子】「じゃー、化け猫さん？」"
+translation = "[GIRL] \"Then are you a monster cat?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-354d-i-search-my-memory-for-the"
+file = "DISKA/F0003.MES"
+offset = 0x354d
+source_mode = 1
+target_mode = 2
+source = "・・・あたしは記憶を探り『化け猫』の意味を見た。"
+translation = "...I search my memory for the meaning of \"monster cat.\""
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-356e-connie-a-monster"
+file = "DISKA/F0003.MES"
+offset = 0x356e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（妖怪！？）"
+translation = "[CONNIE] (A monster!?)"
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3580-connie-no"
+file = "DISKA/F0003.MES"
+offset = 0x3580
+source_mode = 1
+target_mode = 2
+source = "【コニー】「違う！」"
+translation = "[CONNIE] \"No!\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3590-connie-i-ll-need-her-cooperation"
+file = "DISKA/F0003.MES"
+offset = 0x3590
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・どうせあとで協力してもらわないといけないんだ・・・。・・・今は話せるとこまで話しておくか。）"
+translation = "[CONNIE] (I'll need her cooperation eventually anyway... I might as well tell her what I can now.)"
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-35ce-getting-help-from-a-native-life"
+file = "DISKA/F0003.MES"
+offset = 0x35ce
+source_mode = 1
+target_mode = 2
+source = "原住生物の協力を得るのもいいだろう。"
+translation = "Getting help from a native life-form might not be a bad idea."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "The awkward taxonomy sets up Connie's immediate self-correction; it is a character joke, not the narrator's preferred term."
+
+[[entries]]
+id = "f0003-35fa-connie-i-m-connie-i-came"
+file = "DISKA/F0003.MES"
+offset = 0x35fa
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしは『コニー』。２２９６年の時代からここに来た。警官兼ハンターだ。遺伝子を捜しに来たんだ。」"
+translation = "[CONNIE] \"I'm Connie. I came here from the year 2296. I'm a cop and a hunter. I'm here to find genetic samples.\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Cop keeps Connie direct; genetic samples states the mission more precisely than the source's clipped genes."
+
+[[entries]]
+id = "f0003-3641-girl-whaaat-you-re-a-police"
+file = "DISKA/F0003.MES"
+offset = 0x3641
+source_mode = 1
+target_mode = 2
+source = "【女の子】「えーーーっ！！！　お姉さん、警察官なの？」"
+translation = "[GIRL] \"Whaaat!? You're a police officer?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3664-connie-not-exactly-something-close"
+file = "DISKA/F0003.MES"
+offset = 0x3664
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・違うが似ている。」"
+translation = "[CONNIE] \"...Not exactly. Something close.\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Kanako maps Connie's future hybrid role onto a familiar 1996 police officer; Connie immediately qualifies it."
+
+[[entries]]
+id = "f0003-367d-girl-hmm-it-s-complicated"
+file = "DISKA/F0003.MES"
+offset = 0x367d
+source_mode = 1
+target_mode = 2
+source = "【女の子】「うーん、と。難しいのね・・・。」"
+translation = "[GIRL] \"Hmm. It's complicated...\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3699-seen-from-outside-talking-to-a"
+file = "DISKA/F0003.MES"
+offset = 0x3699
+source_mode = 1
+target_mode = 2
+source = "風呂で原住生物と話しているのも、はたから見たら奇妙だろう。"
+translation = "Seen from outside, talking to a native life-form in the bath would look bizarre."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-36bf-connie-no-i-shouldn-t-call"
+file = "DISKA/F0003.MES"
+offset = 0x36bf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（いや・・・、原住生物と呼ぶのはよくないか。・・・ヒトの子供だし・・・。）"
+translation = "[CONNIE] (No... I shouldn't call her a native life-form. She's a human kid...)"
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "The self-correction preserves Connie's shift from mission taxonomy toward seeing Kanako as a person."
+
+[[entries]]
+id = "f0003-36f1-connie-will-you-help-me"
+file = "DISKA/F0003.MES"
+offset = 0x36f1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「協力してくれるか？」"
+translation = "[CONNIE] \"Will you help me?\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3707-at-those-words-the-girl-s"
+file = "DISKA/F0003.MES"
+offset = 0x3707
+source_mode = 1
+target_mode = 2
+source = "その言葉を聞いたとたん、女の子は目を輝かせた。"
+translation = "At those words, the girl's eyes light up."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3726-girl-yes"
+file = "DISKA/F0003.MES"
+offset = 0x3726
+source_mode = 1
+target_mode = 2
+source = "【女の子】「うんっ！」"
+translation = "[GIRL] \"Yes!\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3736-the-idea-that-someone-needs-her"
+file = "DISKA/F0003.MES"
+offset = 0x3736
+source_mode = 1
+target_mode = 2
+source = "自分が必要とされている、という事で感激したようだ。"
+translation = "The idea that someone needs her seems to thrill her."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3771-the-girl-s-expression-grows-a"
+file = "DISKA/F0003.MES"
+offset = 0x3771
+source_mode = 1
+target_mode = 2
+source = "女の子の表情が少しだけ明るくなった。"
+translation = "The girl's expression grows a little brighter."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3789-connie-so-this-is-what-having"
+file = "DISKA/F0003.MES"
+offset = 0x3789
+source_mode = 1
+target_mode = 2
+source = "【コニー】「妹って・・・こんな感じかな・・・。」"
+translation = "[CONNIE] \"So this is what having a little sister feels like...\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-37a7-girl-huh"
+file = "DISKA/F0003.MES"
+offset = 0x37a7
+source_mode = 1
+target_mode = 2
+source = "【女の子】「えっ。」"
+translation = "[GIRL] \"Huh?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-37b6-connie-uh-nothing"
+file = "DISKA/F0003.MES"
+offset = 0x37b6
+source_mode = 1
+target_mode = 2
+source = "【コニー】「え、あ、なんでもないの。」"
+translation = "[CONNIE] \"Uh--nothing.\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-37ce-connie-i-said-it-out-loud"
+file = "DISKA/F0003.MES"
+offset = 0x37ce
+source_mode = 1
+target_mode = 2
+source = "【コニー】（言葉に出して言っちゃったんだ・・・。）"
+translation = "[CONNIE] (I said it out loud...)"
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-37ed-i-cover-it-with-an-embarrassed"
+file = "DISKA/F0003.MES"
+offset = 0x37ed
+source_mode = 1
+target_mode = 2
+source = "あたしは照れ笑いをしてごまかす。"
+translation = "I cover it with an embarrassed laugh."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-380c-connie-helping-means-i-ll-be"
+file = "DISKA/F0003.MES"
+offset = 0x380c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「協力ということは、しばらくここにやっかいになることだ。いいのか？」"
+translation = "[CONNIE] \"Helping means I'll be imposing on you for a while. Is that all right?\""
+speaker = "コニー"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3839-i-can-stay-in-mini-form"
+file = "DISKA/F0003.MES"
+offset = 0x3839
+source_mode = 1
+target_mode = 2
+source = "普段はミニマムに変身しておけばいいだろう。"
+translation = "I can stay in Mini form most of the time."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3856-girl-um-probably-just-turn-into"
+file = "DISKA/F0003.MES"
+offset = 0x3856
+source_mode = 1
+target_mode = 2
+source = "【女の子】「うーん、とね。たぶん大丈夫よ。さっきみたいに猫に変身しててね。」"
+translation = "[GIRL] \"Um... probably. Just turn into a cat like before, okay?\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3881-perfect-i-ll-accept-her-hospitality"
+file = "DISKA/F0003.MES"
+offset = 0x3881
+source_mode = 1
+target_mode = 2
+source = "好都合だ。世話になろう。"
+translation = "Perfect. I'll accept her hospitality."
+speaker = "Connie"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3894-girl-then-we-can-take-a"
+file = "DISKA/F0003.MES"
+offset = 0x3894
+source_mode = 1
+target_mode = 2
+source = "【女の子】「じゃ、これから毎日一緒にお風呂入れるね！　私、背中、流してあげるぅ。」"
+translation = "[GIRL] \"Then we can take a bath together every day! I'll wash your back.\""
+speaker = "女の子"
+context = "Connie reveals her human form and mission, then asks Kanako for help."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-38c6-the-girl-seems-to-warm-to"
+file = "DISKA/F0003.MES"
+offset = 0x38c6
+source_mode = 1
+target_mode = 2
+source = "女の子は退屈な日常から抜け出せる嬉しさからか、あたしに打ち解けてきた。"
+translation = "The girl seems to warm to me, delighted perhaps at escaping her dull routine."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3916-girl-glance"
+file = "DISKA/F0003.MES"
+offset = 0x3916
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・・・・・・・・・・（ちらっ）。」"
+translation = "[GIRL] \"...(Glance.)\""
+speaker = "女の子"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[entries]]
+id = "f0003-3934-the-girl-looks-at-me-and"
+file = "DISKA/F0003.MES"
+offset = 0x3934
+source_mode = 1
+target_mode = 2
+source = "女の子はあたしの方を見て、何か言いたそうに小さな口をちょっと開くが、言わない。"
+translation = "The girl looks at me and parts her lips slightly as if to say something, but remains silent."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Renders 小さな口 idiomatically through the slight motion rather than dwelling on Kanako's features."
+
+[[entries]]
+id = "f0003-3963-connie-what-is-she-curious-about"
+file = "DISKA/F0003.MES"
+offset = 0x3963
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんだ・・・・・・・・・？　あたしが・・・珍しいのか。）"
+translation = "[CONNIE] (What...? Is she... curious about me?)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3994-i-slosh-around-sending-waves-through"
+file = "DISKA/F0003.MES"
+offset = 0x3994
+source_mode = 1
+target_mode = 2
+source = "あたしはざぶざぶとお湯で波を立てる。"
+translation = "I slosh around, sending waves through the water."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-39ae-my-shoulders-stick-out-of-the"
+file = "DISKA/F0003.MES"
+offset = 0x39ae
+source_mode = 1
+target_mode = 2
+source = "浴槽から肩がはみ出るが、四肢を延ばして入ると気持ちいい。"
+translation = "My shoulders stick out of the tub, but stretching my limbs feels wonderful."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-39d3-the-relief-of-stretching-my-legs"
+file = "DISKA/F0003.MES"
+offset = 0x39d3
+source_mode = 1
+target_mode = 2
+source = "脚を『う～～～ん・・・。』と延ばす気持ち良さは、筆舌に尽くし難い・・・。"
+translation = "The relief of stretching my legs--mmm...--is beyond words."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3a03-connie-it-s-small"
+file = "DISKA/F0003.MES"
+offset = 0x3a03
+source_mode = 1
+target_mode = 2
+source = "【コニー】「小さいな・・・。」"
+translation = "[CONNIE] \"It's small...\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "The referent is intentionally ambiguous until Connie clarifies that she means the bathroom, not Kanako's body."
+
+[[entries]]
+id = "f0003-3a85-connie-oh-she-thought-i-meant"
+file = "DISKA/F0003.MES"
+offset = 0x3a85
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・そうか。胸の大きさを言ったと思ったのか。）"
+translation = "[CONNIE] (...Oh. She thought I meant her chest.)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3aae-connie-no-i-meant-this-bathroom"
+file = "DISKA/F0003.MES"
+offset = 0x3aae
+source_mode = 1
+target_mode = 2
+source = "【コニー】「違う。この浴室が、だ。」"
+translation = "[CONNIE] \"No. I meant this bathroom.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3ac7-connie-it-s-cramped-or-is"
+file = "DISKA/F0003.MES"
+offset = 0x3ac7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・狭い・・・。ただこの家の風呂がこうなっているだけか？）"
+translation = "[CONNIE] (...It's cramped. Or is this just how this house's bath is built?)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3b1a-connie-so-this-is-normal-here"
+file = "DISKA/F0003.MES"
+offset = 0x3b1a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・そうかここではこれが通常なのか・・・。悪いことを言ってしまったかな・・・。）"
+translation = "[CONNIE] (...So this is normal here. Maybe I said something hurtful...)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3b6a-connie-sorry-i-ve-never-used"
+file = "DISKA/F0003.MES"
+offset = 0x3b6a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「すまない・・・。よその家の風呂には、入ったことがないんだ。」"
+translation = "[CONNIE] \"Sorry... I've never used another family's bath before.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3bbd-but-she-still-seems-self-conscious"
+file = "DISKA/F0003.MES"
+offset = 0x3bbd
+source_mode = 1
+target_mode = 2
+source = "でも胸は気にしているようだ。"
+translation = "But she still seems self-conscious about her chest."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3bd1-connie-i-think-she-s-perfectly"
+file = "DISKA/F0003.MES"
+offset = 0x3bd1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それくらいの大きさでも、十分にかわいいと思うけど・・・。）"
+translation = "[CONNIE] (I think she's perfectly cute at that size...)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3bfa-maybe-she-can-t-see-her"
+file = "DISKA/F0003.MES"
+offset = 0x3bfa
+source_mode = 1
+target_mode = 2
+source = "女の子自身から見れば、客観的な魅力はわからないのかもしれない。"
+translation = "Maybe she can't see her own appeal objectively."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3c7c-connie-what"
+file = "DISKA/F0003.MES"
+offset = 0x3c7c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「なんだ？」"
+translation = "[CONNIE] \"What?\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3ccb-connie-b-boobs-i-suppose-they"
+file = "DISKA/F0003.MES"
+offset = 0x3ccb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（お・・・おっぱい？　そ、そりゃあこの子から見れば大きいだろうけど・・・。）"
+translation = "[CONNIE] (B-Boobs? I suppose they must look big to her...)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3cfb-not-to-brag-but-i-think"
+file = "DISKA/F0003.MES"
+offset = 0x3cfb
+source_mode = 1
+target_mode = 2
+source = "自慢じゃないが、あたしの胸とお尻はフツーだと思ってる。"
+translation = "Not to brag, but I think my chest and butt are pretty average."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3d20-dr-kanzaki-is-fuller-figured-and"
+file = "DISKA/F0003.MES"
+offset = 0x3d20
+source_mode = 1
+target_mode = 2
+source = "神崎博士の方がふくよかなので、あたしは神崎博士を羨ましく思っていた。"
+translation = "Dr. Kanzaki is fuller-figured, and I have always envied her."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3d50-connie-i-see-i-suppose-so"
+file = "DISKA/F0003.MES"
+offset = 0x3d50
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そっか・・・そだね・・・。）"
+translation = "[CONNIE] (I see... I suppose so...)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3d97-connie-it-was-made-this-way"
+file = "DISKA/F0003.MES"
+offset = 0x3d97
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・造った体だからな。」"
+translation = "[CONNIE] \"...It was made this way, after all.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "造った体 alludes to Connie's engineered body; the passive wording keeps the creator unstated here."
+
+[[entries]]
+id = "f0003-3db0-i-scrub-my-arm-and-mutter"
+file = "DISKA/F0003.MES"
+offset = 0x3db0
+source_mode = 1
+target_mode = 2
+source = "あたしはごしごしと腕の具合をみながら、聞こえないようにつぶやいた。"
+translation = "I scrub my arm and mutter under my breath so she cannot hear."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3e22-connie-you-will-be"
+file = "DISKA/F0003.MES"
+offset = 0x3e22
+source_mode = 1
+target_mode = 2
+source = "【コニー】「なるさ。」"
+translation = "[CONNIE] \"You will be.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3eb1-connie-at-this-rate-you-will"
+file = "DISKA/F0003.MES"
+offset = 0x3eb1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「このままの発育速度なら、なる。」"
+translation = "[CONNIE] \"At this rate, you will.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-3f34-the-innocent-way-she-blushes-is"
+file = "DISKA/F0003.MES"
+offset = 0x3f34
+source_mode = 1
+target_mode = 2
+source = "ぽっと、頬を染めるところが初々しい。"
+translation = "The innocent way she blushes is endearing."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-3f58-connie-come-on-that-s-enough"
+file = "DISKA/F0003.MES"
+offset = 0x3f58
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ほら、いいから。」"
+translation = "[CONNIE] \"Come on, that's enough.\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-4045-connie-hee-hee-want-me-to"
+file = "DISKA/F0003.MES"
+offset = 0x4045
+source_mode = 1
+target_mode = 2
+source = "【コニー】「うふふふ・・・。髪も洗ってあげようか？」"
+translation = "[CONNIE] \"Hee hee... Want me to wash your hair too?\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-4076-i-pick-up-the-shampoo-bottle"
+file = "DISKA/F0003.MES"
+offset = 0x4076
+source_mode = 1
+target_mode = 2
+source = "あたしはシャンプーの容器を手に取る。"
+translation = "I pick up the shampoo bottle."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-4090-connie-huh-it-s-empty"
+file = "DISKA/F0003.MES"
+offset = 0x4090
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あれ？　空っぽだ・・・。）"
+translation = "[CONNIE] (Huh? It's empty...)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-40aa-when-i-shake-the-container-i"
+file = "DISKA/F0003.MES"
+offset = 0x40aa
+source_mode = 1
+target_mode = 2
+source = "容器を振ると、ちゃぷちゃぷと底に残った音がする。"
+translation = "When I shake the container, I hear a little shampoo sloshing at the bottom."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-40cc-only-the-faintest-sloshing-sound-remains"
+file = "DISKA/F0003.MES"
+offset = 0x40cc
+source_mode = 1
+target_mode = 2
+source = "少しだけ、ちゃぷちゃぷと音がする程度だ。"
+translation = "Only the faintest sloshing sound remains."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[entries]]
+id = "f0003-40e7-connie-enough-for-two-or-three"
+file = "DISKA/F0003.MES"
+offset = 0x40e7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あと２～３回なら使えるかな？）"
+translation = "[CONNIE] (Enough for two or three more washes, maybe?)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[entries]]
+id = "f0003-415d-connie-all-right-then"
+file = "DISKA/F0003.MES"
+offset = 0x415d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「よぉ～し、それじゃ・・・。」"
+translation = "[CONNIE] \"All right, then...\""
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[composites]]
+id = "f0003-0b56-girl-you-look-just-like-my"
+target_mode = 2
+source = "【女の子】「お姉さん、⟦name:older-sister⟧おねえちゃんみたぁい・・・・・・。」"
+translation = "[GIRL] \"You look just like my sister, ⟦name:older-sister⟧...\""
+speaker = "女の子"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "The editable Ruri slot stays live; English kinship carries the omitted honorific."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x0b56, source_mode = 1, source = "【女の子】「お姉さん、" },
+  { kind = "token", token = "name:older-sister", start = 0x0b64, end = 0x0b73, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0b73, source_mode = 1, source = "おねえちゃんみたぁい・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0003-0c1c-girl-oh-i-m-sorry-i"
+target_mode = 2
+source = "【女の子】「あ、あっ、ごめんね。まだ言ってなかったよね。私、【⟦name:dear-person⟧】。」"
+translation = "[GIRL] \"Oh! I'm sorry. I never told you, did I? I'm ⟦name:dear-person⟧.\""
+speaker = "女の子"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "The line is authored as one readable message but builds around the immutable editable-name bytecode."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x0c1c, source_mode = 1, source = "【女の子】「あ、あっ、ごめんね。まだ言ってなかったよね。私、【" },
+  { kind = "token", token = "name:dear-person", start = 0x0c3e, end = 0x0c4d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0c4d, source_mode = 1, source = "】。」" },
+]
+
+[[composites]]
+id = "f0003-0c55-connie-so-you-re-name"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧ちゃんか。」"
+translation = "[CONNIE] \"So you're ⟦name:dear-person⟧.\""
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "The source's ちゃん is expressed by Connie's gently familiar syntax rather than a suffix."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x0c55, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x0c5e, end = 0x0c6d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0c6d, source_mode = 1, source = "ちゃんか。」" },
+]
+
+[[composites]]
+id = "f0003-0c78-name-no-call-me-name"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「や！　⟦name:dear-person⟧って呼んで。」"
+translation = "[⟦name:dear-person⟧] \"No! Call me ⟦name:dear-person⟧.\""
+speaker = "name-slot:dear-person"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Both renderings reference the same live slot: speaker label and requested form of address."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x0c78, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0c7c, end = 0x0c8b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0c8b, source_mode = 1, source = "】「や！　" },
+  { kind = "token", token = "name:dear-person", start = 0x0c93, end = 0x0ca2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ca2, source_mode = 1, source = "って呼んで。」" },
+]
+
+[[composites]]
+id = "f0003-0ce1-connie-so-name-is-the-clingy"
+target_mode = 2
+source = "【コニー】（甘えん坊の⟦name:dear-person⟧ちゃんか・・・。）"
+translation = "[CONNIE] (So ⟦name:dear-person⟧ is the clingy sort...)"
+speaker = "コニー"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x0ce1, source_mode = 1, source = "【コニー】（甘えん坊の" },
+  { kind = "token", token = "name:dear-person", start = 0x0cf1, end = 0x0d00, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d00, source_mode = 1, source = "ちゃんか・・・。）" },
+]
+
+[[composites]]
+id = "f0003-0d0e-name-looks-at-me-with-something"
+target_mode = 2
+source = "⟦name:dear-person⟧の眼差しに、羨望の感情が混ざっていると感じるのは、気のせいだろうか。"
+translation = "⟦name:dear-person⟧ looks at me with something like envy. Or am I imagining it?"
+speaker = "Connie"
+context = "Connie studies the girl who rescued her and they exchange names."
+status = "qa-ready"
+notes = "Starting with the token preserves the source's physical token-first record shape."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0d0e, end = 0x0d1d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d1d, source_mode = 1, source = "の眼差しに、羨望の感情が混ざっていると感じるのは、気のせいだろうか。" },
+]
+
+[[composites]]
+id = "f0003-1c11-connie-if-name-were-my-little"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧が妹だったら、毎日、仕事が終わったら遊んであげてもいい。）"
+translation = "[CONNIE] (If ⟦name:dear-person⟧ were my little sister, I wouldn't mind playing with her every day after work.)"
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1c11, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x1c1a, end = 0x1c29, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1c29, source_mode = 1, source = "が妹だったら、毎日、仕事が終わったら遊んであげてもいい。）" },
+]
+
+[[composites]]
+id = "f0003-1cfe-connie-name-want-me-to-wash"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧、体を洗ってあげようか？」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, want me to wash you?\""
+speaker = "コニー"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1cfe, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1d07, end = 0x1d16, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d16, source_mode = 1, source = "、体を洗ってあげようか？」" },
+]
+
+[[composites]]
+id = "f0003-1d28-name-oh-no-that-s-okay"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えっ・・・、いいよぉ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Oh... no, that's okay...\""
+speaker = "name-slot:dear-person"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1d28, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1d2c, end = 0x1d3b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d3b, source_mode = 1, source = "】「えっ・・・、いいよぉ・・・。」" },
+]
+
+[[composites]]
+id = "f0003-1d52-blushing-name-answers"
+target_mode = 2
+source = "赤くなって答える⟦name:dear-person⟧。"
+translation = "Blushing, ⟦name:dear-person⟧ answers."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "English reorders the split Japanese sentence while retaining text-token-text structure."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1d52, source_mode = 1, source = "赤くなって答える" },
+  { kind = "token", token = "name:dear-person", start = 0x1d5f, end = 0x1d6e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d6e, source_mode = 1, source = "。" },
+]
+
+[[composites]]
+id = "f0003-1db7-name-fidgets-bashfully"
+target_mode = 2
+source = "⟦name:dear-person⟧は、照れてもじもじしている。"
+translation = "⟦name:dear-person⟧ fidgets bashfully."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1db7, end = 0x1dc6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1dc6, source_mode = 1, source = "は、照れてもじもじしている。" },
+]
+
+[[composites]]
+id = "f0003-1dda-seeing-name-like-this"
+target_mode = 2
+source = "そんな⟦name:dear-person⟧を、ますますかわいい、守ってあげたい、と思ってしまう。"
+translation = "Seeing ⟦name:dear-person⟧ like this, I find her even more adorable and want to protect her all the more."
+speaker = "Connie"
+context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x1dda, source_mode = 1, source = "そんな" },
+  { kind = "token", token = "name:dear-person", start = 0x1de0, end = 0x1def, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1def, source_mode = 1, source = "を、ますますかわいい、守ってあげたい、と思ってしまう。" },
+]
+
+[[composites]]
+id = "f0003-3a17-name-what"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えっ！？」"
+translation = "[⟦name:dear-person⟧] \"What!?\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3a17, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3a1b, end = 0x3a2a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3a2a, source_mode = 1, source = "】「えっ！？」" },
+]
+
+[[composites]]
+id = "f0003-3a36-name-hurriedly-covers-her-chest"
+target_mode = 2
+source = "⟦name:dear-person⟧は慌てて胸を隠した。"
+translation = "⟦name:dear-person⟧ hurriedly covers her chest."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3a36, end = 0x3a45, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3a45, source_mode = 1, source = "は慌てて胸を隠した。" },
+]
+
+[[composites]]
+id = "f0003-3a57-name-nyeh-i-m-just-a"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「べーっ！　私、どうせ、子供ですよーだ！」"
+translation = "[⟦name:dear-person⟧] \"Nyeh! I'm just a kid anyway!\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Nyeh carries the childish tongue-out defiance of べーっ without adding an honorific."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3a57, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3a5b, end = 0x3a6a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3a6a, source_mode = 1, source = "】「べーっ！　私、どうせ、子供ですよーだ！」" },
+]
+
+[[composites]]
+id = "f0003-3af1-name-what-it-s-a-normal"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えーっ？　普通だよぉ。」"
+translation = "[⟦name:dear-person⟧] \"What? It's a normal size.\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3af1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3af5, end = 0x3b04, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3b04, source_mode = 1, source = "】「えーっ？　普通だよぉ。」" },
+]
+
+[[composites]]
+id = "f0003-3b93-name-shakes-her-head-and-says"
+target_mode = 2
+source = "⟦name:dear-person⟧は首を振って『気にしないで。』と答える。"
+translation = "⟦name:dear-person⟧ shakes her head and says, \"Don't worry about it.\""
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3b93, end = 0x3ba2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3ba2, source_mode = 1, source = "は首を振って『気にしないで。』と答える。" },
+]
+
+[[composites]]
+id = "f0003-3c2a-name-openly-studies-my-body"
+target_mode = 2
+source = "⟦name:dear-person⟧がしげしげとあたしの体を見ている。"
+translation = "⟦name:dear-person⟧ openly studies my body."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3c2a, end = 0x3c39, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3c39, source_mode = 1, source = "がしげしげとあたしの体を見ている。" },
+]
+
+[[composites]]
+id = "f0003-3c4f-name-big-sis-connie-you-re"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃん、いいなぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Connie, you're so lucky...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3c4f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3c53, end = 0x3c62, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3c62, source_mode = 1, source = "】「コニーおねえちゃん、いいなぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0003-3c8c-name-your-boobs-and-butt-are"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「おっぱいとおしり、大きいし、・・・モデルさんみたいな体してるもン。」"
+translation = "[⟦name:dear-person⟧] \"Your boobs and butt are big, and... you're built like a model.\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "The direct child vocabulary is preserved without embellishing the comparison or making Connie reciprocate it."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3c8c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3c90, end = 0x3c9f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3c9f, source_mode = 1, source = "】「おっぱいとおしり、大きいし、・・・モデルさんみたいな体してるもン。」" },
+]
+
+[[composites]]
+id = "f0003-3d69-name-must-see-my-body-as"
+target_mode = 2
+source = "⟦name:dear-person⟧から見れば、あたしの身体は魅力的に思えるのだろう。"
+translation = "⟦name:dear-person⟧ must see my body as attractive."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3d69, end = 0x3d78, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3d78, source_mode = 1, source = "から見れば、あたしの身体は魅力的に思えるのだろう。" },
+]
+
+[[composites]]
+id = "f0003-3dea-name-i-want-to-be-pretty"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「私、コニーおねえちゃんみたいにキレイになりたい・・・。」"
+translation = "[⟦name:dear-person⟧] \"I want to be pretty like you, Big Sis Connie...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3dea, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3dee, end = 0x3dfd, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3dfd, source_mode = 1, source = "】「私、コニーおねえちゃんみたいにキレイになりたい・・・。」" },
+]
+
+[[composites]]
+id = "f0003-3e32-name-really-you-really-think-so"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ホント？　本当に？」"
+translation = "[⟦name:dear-person⟧] \"Really? You really think so?\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3e32, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3e36, end = 0x3e45, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3e45, source_mode = 1, source = "】「ホント？　本当に？」" },
+]
+
+[[composites]]
+id = "f0003-3e59-name-s-eyes-shine"
+target_mode = 2
+source = "⟦name:dear-person⟧は目を輝かせている。"
+translation = "⟦name:dear-person⟧'s eyes shine."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3e59, end = 0x3e68, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3e68, source_mode = 1, source = "は目を輝かせている。" },
+]
+
+[[composites]]
+id = "f0003-3e78-connie-name-is-still-growing-but"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧は未発達だが、成長すれば美人になるだろう。）"
+translation = "[CONNIE] (⟦name:dear-person⟧ is still growing, but she'll become a beautiful woman.)"
+speaker = "コニー"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3e78, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x3e81, end = 0x3e90, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3e90, source_mode = 1, source = "は未発達だが、成長すれば美人になるだろう。）" },
+]
+
+[[composites]]
+id = "f0003-3ed0-name-really-wow"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ホントに？　わぁ～！！！」"
+translation = "[⟦name:dear-person⟧] \"Really? Wow!\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3ed0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3ed4, end = 0x3ee3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3ee3, source_mode = 1, source = "】「ホントに？　わぁ～！！！」" },
+]
+
+[[composites]]
+id = "f0003-3f11-name-i-m-so-happy"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うれしい・・・。」"
+translation = "[⟦name:dear-person⟧] \"I'm so happy...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3f11, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3f15, end = 0x3f24, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3f24, source_mode = 1, source = "】「うれしい・・・。」" },
+]
+
+[[composites]]
+id = "f0003-3f8b-with-a-splash-i-climb-out"
+target_mode = 2
+source = "あたしは、ざばあっと上がって⟦name:dear-person⟧の後ろに回った。"
+translation = "With a splash, I climb out and move behind ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3f8b, source_mode = 1, source = "あたしは、ざばあっと上がって" },
+  { kind = "token", token = "name:dear-person", start = 0x3f9c, end = 0x3fab, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3fab, source_mode = 1, source = "の後ろに回った。" },
+]
+
+[[composites]]
+id = "f0003-3fba-name-stays-seated-on-the-stool"
+target_mode = 2
+source = "⟦name:dear-person⟧は椅子に座ったままで、うつむいて動かない。"
+translation = "⟦name:dear-person⟧ stays seated on the stool, head bowed and motionless."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3fba, end = 0x3fc9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3fc9, source_mode = 1, source = "は椅子に座ったままで、うつむいて動かない。" },
+]
+
+[[composites]]
+id = "f0003-3fe5-i-pick-up-the-body-brush"
+target_mode = 2
+source = "あたしはボディブラシを手に取って、⟦name:dear-person⟧の背中を擦る。"
+translation = "I pick up the body brush and scrub ⟦name:dear-person⟧'s back."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x3fe5, source_mode = 1, source = "あたしはボディブラシを手に取って、" },
+  { kind = "token", token = "name:dear-person", start = 0x3ffe, end = 0x400d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x400d, source_mode = 1, source = "の背中を擦る。" },
+]
+
+[[composites]]
+id = "f0003-401a-name-this-is-embarrassing"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・恥ずかしいよぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...This is embarrassing...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x401a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x401e, end = 0x402d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x402d, source_mode = 1, source = "】「・・・恥ずかしいよぅ・・・。」" },
+]
+
+[[composites]]
+id = "f0003-4105-name-i-already-washed-my-hair"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・もぉ頭、洗っちゃったからいいよ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...I already washed my hair, so I'm fine...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x4105, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x4109, end = 0x4118, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x4118, source_mode = 1, source = "】「・・・もぉ頭、洗っちゃったからいいよ・・・。」" },
+]
+
+[[composites]]
+id = "f0003-413d-name-shakes-her-head-vigorously"
+target_mode = 2
+source = "⟦name:dear-person⟧はぷるぷると首を振る。"
+translation = "⟦name:dear-person⟧ shakes her head vigorously."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Preserves Connie's first-person observation and the source scene beat."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x413d, end = 0x414c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x414c, source_mode = 1, source = "はぷるぷると首を振る。" },
+]
+
+[[composites]]
+id = "f0003-4177-i-move-around-to-face-name"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の正面に回った。⟦name:dear-person⟧はますます赤くなる。"
+translation = "I move around to face ⟦name:dear-person⟧. ⟦name:dear-person⟧ turns even redder."
+speaker = "Connie"
+context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
+status = "qa-ready"
+notes = "Both name insertions remain live and the merged sentence splits back across all three physical text records."
+
+[[composites.occurrences]]
+file = "DISKA/F0003.MES"
+segments = [
+  { kind = "text", offset = 0x4177, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x417e, end = 0x418d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x418d, source_mode = 1, source = "の正面に回った。" },
+  { kind = "token", token = "name:dear-person", start = 0x419a, end = 0x41a9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x41a9, source_mode = 1, source = "はますます赤くなる。" },
+]

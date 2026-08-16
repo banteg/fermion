@@ -873,10 +873,11 @@ Recommended order:
 
 1. FOP — **complete and QA-ready; focused coverage and end-to-end route are green**
 2. F0001–F0002 — **complete and QA-ready; 462 physical records / 454 canonical translations**
-3. Non-adult narrative portions of F0003–F0016 — next after schema 5 can represent composite name records
-4. F0027–F0042
-5. Route branches and scene replay labels
-6. Menus, name editor, term editor, and catalog last
+3. F0003 — **translation and structural build complete; human playtest and native fixture pending**
+4. Non-adult narrative portions of F0004–F0016 — next translation batch
+5. F0027–F0042
+6. Route branches and scene replay labels
+7. Menus, name editor, term editor, and catalog last
 
 This gives the team a stable understanding of every character before translating optional intimacy.
 
