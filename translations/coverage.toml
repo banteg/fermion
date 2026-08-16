@@ -153,3 +153,12 @@ description = "Every decoded F0004 record from Connie washing Kanako through the
 file = "DISKA/F0004.MES"
 start = 0x05b1
 end = 0x34b0
+
+[[scopes]]
+id = "connie-explains-her-mission"
+description = "Every decoded F0005 record from Connie and Kanako's post-bath talk through the genetic analysis and their plan to introduce Connie to the Takano family."
+
+[[scopes.ranges]]
+file = "DISKB/F0005.MES"
+start = 0x0404
+end = 0x2ee0

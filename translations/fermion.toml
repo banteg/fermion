@@ -40,6 +40,12 @@ source = "disk-a/F0004.MES"
 sha256 = "14936108cbbe23df035301b4eb1ed45cf6dfd6c74c299f04e210d3a73e60b577"
 box_width = 61
 
+[[files]]
+file = "DISKB/F0005.MES"
+source = "disk-b/F0005.MES"
+sha256 = "837e5867ba05e30e902a3ad7661c01ca621e9e66c44cc5459cdcde71c5426ebc"
+box_width = 61
+
 [[tokens]]
 id = "name:older-sister"
 source = "瑠璃"
@@ -21666,3 +21672,3375 @@ segments = [
   { kind = "token", token = "name:dear-person", start = 0x34a1, end = 0x34b0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x34b0, source_mode = 1, source = "の嬉しそうな仕草を見て、跳ね退けることなんて、・・・あたしにはできない。" },
 ]
+
+[[composites]]
+id = "f0005-0404-i-follow-name-to-her-room"
+target_mode = 2
+source = "あたしは、⟦name:dear-person⟧の部屋に案内してもらった。"
+translation = "I follow ⟦name:dear-person⟧ to her room."
+speaker = "Connie"
+context = "Connie and Kanako settle in Kanako's room after the bath and prepare for a secret explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0404, source_mode = 1, source = "あたしは、" },
+  { kind = "token", token = "name:dear-person", start = 0x040c, end = 0x041b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x041b, source_mode = 1, source = "の部屋に案内してもらった。" },
+]
+
+[[entries]]
+id = "f0005-0430-i-left-my-clothes-behind-when-i-changed-into"
+file = "DISKB/F0005.MES"
+offset = 0x0430
+source_mode = 1
+target_mode = 2
+source = "あたしの服は、ミニマムに変身するときに脱いでいるから、庭に置いてあるタイムマシンから取ってきた。"
+translation = "I take my clothes off when I change into Mini form, so I go get them from the time machine in the garden."
+speaker = "Connie"
+context = "Connie and Kanako settle in Kanako's room after the bath and prepare for a secret explanation."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-046a-i-should-explain-can-you-keep-what-im-about"
+file = "DISKB/F0005.MES"
+offset = 0x046a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「訳を話しておこう。これからあたしが話すことは秘密にできるか？」"
+translation = "[CONNIE] \"I should explain. Can you keep what I'm about to tell you secret?\""
+speaker = "コニー"
+context = "Connie and Kanako settle in Kanako's room after the bath and prepare for a secret explanation."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0497-name-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん。」"
+translation = "[⟦name:dear-person⟧] \"Yeah.\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako settle in Kanako's room after the bath and prepare for a secret explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0497, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x049b, end = 0x04aa, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x04aa, source_mode = 1, source = "】「うん。」" },
+]
+
+[[composites]]
+id = "f0005-04b5-the-promise-of-a-secret-makes-names-eyes-light"
+target_mode = 2
+source = "秘密めいた話、に⟦name:dear-person⟧は目をキラキラさせた。"
+translation = "The hint of a secret makes ⟦name:dear-person⟧'s eyes light up."
+speaker = "Connie"
+context = "Connie and Kanako settle in Kanako's room after the bath and prepare for a secret explanation."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x04b5, source_mode = 1, source = "秘密めいた話、に" },
+  { kind = "token", token = "name:dear-person", start = 0x04c2, end = 0x04d1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x04d1, source_mode = 1, source = "は目をキラキラさせた。" },
+]
+
+[[entries]]
+id = "f0005-0511-look"
+file = "DISKB/F0005.MES"
+offset = 0x0511
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0522-think"
+file = "DISKB/F0005.MES"
+offset = 0x0522
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0534-talk"
+file = "DISKB/F0005.MES"
+offset = 0x0534
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0570-across-from-me-name-meets-my-eyes"
+target_mode = 2
+source = "あたしと⟦name:dear-person⟧は向い合っている。"
+translation = "I sit facing ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0570, source_mode = 1, source = "あたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x0577, end = 0x0586, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0586, source_mode = 1, source = "は向い合っている。" },
+]
+
+[[composites]]
+id = "f0005-0595-fresh-from-the-bath-name-smells-wonderful"
+target_mode = 2
+source = "お風呂上がりの、⟦name:dear-person⟧のいい匂いがする。"
+translation = "Fresh from the bath, ⟦name:dear-person⟧ smells wonderful."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0595, source_mode = 1, source = "お風呂上がりの、" },
+  { kind = "token", token = "name:dear-person", start = 0x05a3, end = 0x05b2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x05b2, source_mode = 1, source = "のいい匂いがする。" },
+]
+
+[[composites]]
+id = "f0005-05ca-name-frowns-deep-in-thought"
+target_mode = 2
+source = "⟦name:dear-person⟧は、難しそうな顔をして悩んでいる。"
+translation = "⟦name:dear-person⟧ frowns, deep in thought."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x05ca, end = 0x05d9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x05d9, source_mode = 1, source = "は、難しそうな顔をして悩んでいる。" },
+]
+
+[[composites]]
+id = "f0005-05f0-dont-think-so-hard-name-im-right-here-beside"
+target_mode = 2
+source = "【コニー】「そう悩まなくてもいいの。あたしはここにいる。⟦name:dear-person⟧の側に。」"
+translation = "[CONNIE] \"Don't think so hard, ⟦name:dear-person⟧. I'm right here beside you.\""
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x05f0, source_mode = 1, source = "【コニー】「そう悩まなくてもいいの。あたしはここにいる。" },
+  { kind = "token", token = "name:dear-person", start = 0x0610, end = 0x061f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x061f, source_mode = 1, source = "の側に。」" },
+]
+
+[[entries]]
+id = "f0005-062a-thats-enough-isnt-it-right"
+file = "DISKB/F0005.MES"
+offset = 0x062a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「それでいいじゃない？　ねっ。」"
+translation = "[CONNIE] \"That's enough, isn't it? Right?\""
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0644-i-give-names-head-a-little-pat-and-name"
+target_mode = 2
+source = "あたしが⟦name:dear-person⟧の頭をなでなでとすると、⟦name:dear-person⟧は嬉しそうに言う。"
+translation = "I give ⟦name:dear-person⟧'s head a little pat, and ⟦name:dear-person⟧ answers happily."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0644, source_mode = 1, source = "あたしが" },
+  { kind = "token", token = "name:dear-person", start = 0x064b, end = 0x065a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x065a, source_mode = 1, source = "の頭をなでなでとすると、" },
+  { kind = "token", token = "name:dear-person", start = 0x066a, end = 0x0679, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0679, source_mode = 1, source = "は嬉しそうに言う。" },
+]
+
+[[composites]]
+id = "f0005-0687-name-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うんっ。」"
+translation = "[⟦name:dear-person⟧] \"Yeah!\""
+speaker = "name-slot:dear-person"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0687, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x068b, end = 0x069a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x069a, source_mode = 1, source = "】「うんっ。」" },
+]
+
+[[composites]]
+id = "f0005-06bf-when-i-stroke-names-head-name-looks-up-at"
+target_mode = 2
+source = "あたしが⟦name:dear-person⟧の頭を撫でてあげると、⟦name:dear-person⟧はくすぐったそうにあたしを見る。"
+translation = "When I stroke ⟦name:dear-person⟧'s head, ⟦name:dear-person⟧ looks at me as if it tickles."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x06bf, source_mode = 1, source = "あたしが" },
+  { kind = "token", token = "name:dear-person", start = 0x06c6, end = 0x06d5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x06d5, source_mode = 1, source = "の頭を撫でてあげると、" },
+  { kind = "token", token = "name:dear-person", start = 0x06e5, end = 0x06f4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x06f4, source_mode = 1, source = "はくすぐったそうにあたしを見る。" },
+]
+
+[[composites]]
+id = "f0005-0713-the-analyzer-is-reacting-to-names-genes-does-name"
+target_mode = 2
+source = "【コニー】（・・・⟦name:dear-person⟧の遺伝子に反応が！？　⟦name:dear-person⟧が強い遺伝子の持ち主！？）"
+translation = "[CONNIE] (...The analyzer is reacting to ⟦name:dear-person⟧'s genes!? Does ⟦name:dear-person⟧ have strong genes!?)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0713, source_mode = 1, source = "【コニー】（・・・" },
+  { kind = "token", token = "name:dear-person", start = 0x071f, end = 0x072e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x072e, source_mode = 1, source = "の遺伝子に反応が！？　" },
+  { kind = "token", token = "name:dear-person", start = 0x073e, end = 0x074d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x074d, source_mode = 1, source = "が強い遺伝子の持ち主！？）" },
+]
+
+[[composites]]
+id = "f0005-0761-names-genes-they-carry-the-information-for-enough-vitality"
+target_mode = 2
+source = "⟦name:dear-person⟧の遺伝子・・・。生きるのに悪い環境に負けないだけの強い生命力の情報が書かれた遺伝子を持つ・・・。"
+translation = "⟦name:dear-person⟧'s genes... They carry the information for enough vitality to survive a hostile environment..."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0761, end = 0x0770, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0770, source_mode = 1, source = "の遺伝子・・・。生きるのに悪い環境に負けないだけの強い生命力の情報が書かれた遺伝子を持つ・・・。" },
+]
+
+[[entries]]
+id = "f0005-07ab-though-strong-genes-isnt-really-accurate"
+file = "DISKB/F0005.MES"
+offset = 0x07ab
+source_mode = 1
+target_mode = 2
+source = "まあ、強い遺伝子という言い方は正確ではない。"
+translation = "Though \"strong genes\" isn't really accurate."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+notes = "The source itself corrects 'strong genes' as imprecise shorthand. Later uses remain Connie's operational simplification, not the project's technical claim."
+
+[[entries]]
+id = "f0005-07c8-this-analyzer-counts-it-as-a-match-if-it"
+file = "DISKB/F0005.MES"
+offset = 0x07c8
+source_mode = 1
+target_mode = 2
+source = "この調べる装置は、あたしたちの時代のヒトの遺伝子の『失った部分』が、あれば良しとしている。"
+translation = "This analyzer counts it as a match if it finds any genetic information missing from humans in our era."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+notes = "The analyzer checks for genetic information missing from humans in 2296; this keeps the mission's locked missing-information distinction."
+
+[[entries]]
+id = "f0005-07fe-we-wont-know-what-those-missing-pieces-contain-until"
+file = "DISKB/F0005.MES"
+offset = 0x07fe
+source_mode = 1
+target_mode = 2
+source = "『失った部分』の解析は、あたしがこの遺伝子を持ち帰ってからだ。"
+translation = "We won't know what those missing pieces contain until I bring these genes home for analysis."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-083d-i-cant-help-admiring-name-as-i-look-at"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧を惚れ惚れとした目で見つめる。"
+translation = "I look at ⟦name:dear-person⟧, impressed."
+
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x083d, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0844, end = 0x0853, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0853, source_mode = 1, source = "を惚れ惚れとした目で見つめる。" },
+]
+
+[[composites]]
+id = "f0005-0869-name-n-no"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「や、やだぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"N-no...\""
+speaker = "name-slot:dear-person"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0869, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x086d, end = 0x087c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x087c, source_mode = 1, source = "】「や、やだぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0005-088d-name-blushes-under-my-gaze"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの目線に照れる。"
+translation = "⟦name:dear-person⟧ blushes under my gaze."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x088d, end = 0x089c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x089c, source_mode = 1, source = "はあたしの目線に照れる。" },
+]
+
+[[composites]]
+id = "f0005-08ca-how-much-should-i-tell-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧にどこまで話したものかな・・・・・・・・・。）"
+translation = "[CONNIE] (How much should I tell ⟦name:dear-person⟧...?)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x08ca, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x08d3, end = 0x08e2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x08e2, source_mode = 1, source = "にどこまで話したものかな・・・・・・・・・。）" },
+]
+
+[[entries]]
+id = "f0005-08fe-will-she-understand-if-i-make-it-too-complicated"
+file = "DISKB/F0005.MES"
+offset = 0x08fe
+source_mode = 1
+target_mode = 2
+source = "【コニー】（難しい話をしても、理解してくれるか・・・・・・。）"
+translation = "[CONNIE] (Will she understand if I make it too complicated...?)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-092b-how-can-we-restore-weakened-human-genes-to-their"
+file = "DISKB/F0005.MES"
+offset = 0x092b
+source_mode = 1
+target_mode = 2
+source = "弱った人間の遺伝子を、元のように強くするためにはどうすればいいか。"
+translation = "How can we restore weakened human genes to their former strength?"
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0952-strengthen-them-with-drugs-no-it-isnt-that-simple"
+file = "DISKB/F0005.MES"
+offset = 0x0952
+source_mode = 1
+target_mode = 2
+source = "薬で遺伝子を強くするか？　ＮＯだ。簡単にできるものじゃない。"
+translation = "Strengthen them with drugs? No. It isn't that simple."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-097a-train-people-until-they-grow-stronger-no-it-was"
+file = "DISKB/F0005.MES"
+offset = 0x097a
+source_mode = 1
+target_mode = 2
+source = "鍛えて強くするか？　ＮＯ。この時代では遅すぎる。"
+translation = "Strengthen them through training? No. By then, it was already too late."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-099c-genetic-information-lost-over-many-years-cannot-be-restored"
+file = "DISKB/F0005.MES"
+offset = 0x099c
+source_mode = 1
+target_mode = 2
+source = "何年もかけて消えていった遺伝子情報は、すぐに回復できない。"
+translation = "Genetic information lost over many years cannot be restored overnight."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-09c4-then-bring-back-intact-genetic-material-from-healthy-people"
+file = "DISKB/F0005.MES"
+offset = 0x09c4
+source_mode = 1
+target_mode = 2
+source = "ならば、元気な、正常だった頃の人間の遺伝子を持ってくればいい。"
+translation = "Then bring back intact genetic material from healthy people who lived before the damage."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+notes = "The healthy pre-damage source is rendered as intact genetic material, avoiding a eugenic reading of 正常だった頃の人間の遺伝子."
+
+[[entries]]
+id = "f0005-09ec-across-time"
+file = "DISKB/F0005.MES"
+offset = 0x09ec
+source_mode = 1
+target_mode = 2
+source = "時を越えて。"
+translation = "Across time."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-09f8-right-across-time"
+file = "DISKB/F0005.MES"
+offset = 0x09f8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そう。・・・時を越えて。）"
+translation = "[CONNIE] (Right... across time.)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0a11-without-the-discovery-of-the-space-time-distortion-time"
+file = "DISKB/F0005.MES"
+offset = 0x0a11
+source_mode = 1
+target_mode = 2
+source = "時空の歪みが発見されなければ、永遠にタイムワープはできなかっただろう。"
+translation = "Without the discovery of the space-time distortion, time travel would have remained impossible forever."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0a3f-without-that-distortion"
+anchors = [
+  { file = "DISKB/F0005.MES", offset = 0x0a3f },
+  { file = "DISKB/F0005.MES", offset = 0x0ae9 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空の歪みがなければ・・・。）"
+translation = "[CONNIE] (Without that distortion...)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0a5a-i-never-would-have-met-name-like-this"
+target_mode = 2
+source = "【コニー】（こうしてあたしと⟦name:dear-person⟧が出会うこともなかったんだ・・・。）"
+translation = "[CONNIE] (I never would have met ⟦name:dear-person⟧ like this...)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0a5a, source_mode = 1, source = "【コニー】（こうしてあたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x0a6b, end = 0x0a7a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a7a, source_mode = 1, source = "が出会うこともなかったんだ・・・。）" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0b04, source_mode = 1, source = "【コニー】（こうしてあたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x0b15, end = 0x0b24, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b24, source_mode = 1, source = "が出会うこともなかったんだ・・・。）" },
+]
+
+[[entries]]
+id = "f0005-0a91-im-grateful-that-we-met"
+anchors = [
+  { file = "DISKB/F0005.MES", offset = 0x0a91 },
+  { file = "DISKB/F0005.MES", offset = 0x0b3b },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしは出会いに感謝した。"
+translation = "I'm grateful that we met."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0aa5-even-knowing-that-one-day-ill-have-to-leave"
+target_mode = 2
+source = "やがて、⟦name:dear-person⟧との別れが来るとわかっていても。"
+translation = "Even knowing that one day I'll have to leave ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0aa5, source_mode = 1, source = "やがて、" },
+  { kind = "token", token = "name:dear-person", start = 0x0aac, end = 0x0abb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0abb, source_mode = 1, source = "との別れが来るとわかっていても。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0b4f, source_mode = 1, source = "やがて、" },
+  { kind = "token", token = "name:dear-person", start = 0x0b56, end = 0x0b65, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b65, source_mode = 1, source = "との別れが来るとわかっていても。" },
+]
+
+[[entries]]
+id = "f0005-0b83-observations-from-my-era-estimated-that-the-distortion-would"
+file = "DISKB/F0005.MES"
+offset = 0x0b83
+source_mode = 1
+target_mode = 2
+source = "あたしの時代の観測結果では、あと１０日で終わると推定された。"
+translation = "Observations from my era estimated that the distortion would end in ten days."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0bab-ten-days-is-only-an-estimate-of-course-we"
+file = "DISKB/F0005.MES"
+offset = 0x0bab
+source_mode = 1
+target_mode = 2
+source = "もちろん、それは予定の１０日であり、早まるか遅くなるかはその時にならないとわからない。"
+translation = "Ten days is only an estimate, of course. We won't know whether it ends sooner or later until it happens."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0bde-it-took-a-long-time-after-discovering-the-time"
+file = "DISKB/F0005.MES"
+offset = 0x0bde
+source_mode = 1
+target_mode = 2
+source = "時空震動を見つけてから、タイムトンネルに入る方法を見つけるまでの時間が長かった。"
+translation = "It took a long time after discovering the Time Quake to learn how to enter the time tunnel."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0c0d-even-while-i-sit-here-thinking-the-time-machine"
+file = "DISKB/F0005.MES"
+offset = 0x0c0d
+source_mode = 1
+target_mode = 2
+source = "あたしがこうして考えている間にも、タイムマシンは時空の観測を行っている。"
+translation = "Even while I sit here thinking, the time machine keeps monitoring space-time."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0c39-if-the-space-time-oscillation-begins-to-collapse-toward"
+file = "DISKB/F0005.MES"
+offset = 0x0c39
+source_mode = 1
+target_mode = 2
+source = "時空震動が縮退し限界に近付く傾向を見せると、パイロットに知らせるようになっている。"
+translation = "If the space-time oscillation begins to collapse toward its limit, the machine will alert its pilot."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0c72-right-the-time-quake-will-end-in-ten-days"
+file = "DISKB/F0005.MES"
+offset = 0x0c72
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そう、時空震動が１０日後には終わる・・・。）"
+translation = "[CONNIE] (Right. The Time Quake will end in ten days...)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0cad-ive-grown-close-to-name-but-ill-still-have"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧と仲よくなれたけど、別れなきゃいけないんだ・・・。）"
+translation = "[CONNIE] (I've grown close to ⟦name:dear-person⟧, but I'll still have to leave her...)"
+speaker = "コニー"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0cad, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0cb6, end = 0x0cc5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0cc5, source_mode = 1, source = "と仲よくなれたけど、別れなきゃいけないんだ・・・。）" },
+]
+[[entries]]
+id = "f0005-0ce5-no"
+file = "DISKB/F0005.MES"
+offset = 0x0ce5
+source_mode = 1
+target_mode = 2
+source = "いけない。"
+translation = "No."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0cef-i-wont-let-myself-dwell-on-anything-depressing"
+file = "DISKB/F0005.MES"
+offset = 0x0cef
+source_mode = 1
+target_mode = 2
+source = "落ち込むことは考えないようにしよう。"
+translation = "I won't let myself dwell on anything depressing."
+speaker = "Connie"
+context = "The bedroom LOOK and THINK branches let Connie observe Kanako, detect her useful genetic information, and reckon with the ten-day limit."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0d11-she-seems-embarrassed-to-hear-the-word-wetness-when"
+file = "DISKB/F0005.MES"
+offset = 0x0d11
+source_mode = 1
+target_mode = 2
+source = "愛液、という言葉をえっちしていない時に聞かされると照れるみたいだ。"
+translation = "She seems embarrassed to hear the word \"wetness\" when we aren't having sex."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0d38-name"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...\""
+speaker = "name-slot:dear-person"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0d38, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0d3c, end = 0x0d4b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d4b, source_mode = 1, source = "】「・・・・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-0d60-name-looks-embarrassed"
+target_mode = 2
+source = "⟦name:dear-person⟧は恥ずかしそうにしている。"
+translation = "⟦name:dear-person⟧ looks embarrassed."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0d60, end = 0x0d6f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d6f, source_mode = 1, source = "は恥ずかしそうにしている。" },
+]
+
+[[composites]]
+id = "f0005-0d9b-name-and-i-are-sitting-so-close-that-we"
+target_mode = 2
+source = "⟦name:dear-person⟧の側に寄って話していると、またえっちしちゃいそう。"
+translation = "⟦name:dear-person⟧ is so close while we talk that we might end up having sex again."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0d9b, end = 0x0daa, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0daa, source_mode = 1, source = "の側に寄って話していると、またえっちしちゃいそう。" },
+]
+
+[[composites]]
+id = "f0005-0dca-thats-how-attractive-name-is"
+target_mode = 2
+source = "それだけ⟦name:dear-person⟧は魅力的だ。"
+translation = "That's how attractive ⟦name:dear-person⟧ is."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0dca, source_mode = 1, source = "それだけ" },
+  { kind = "token", token = "name:dear-person", start = 0x0dd1, end = 0x0de0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0de0, source_mode = 1, source = "は魅力的だ。" },
+]
+
+[[composites]]
+id = "f0005-0df6-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧・・・・・・・・・・・・。）"
+translation = "[CONNIE] (⟦name:dear-person⟧...)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0df6, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0dff, end = 0x0e0e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e0e, source_mode = 1, source = "・・・・・・・・・・・・。）" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0ebd, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0ec6, end = 0x0ed5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ed5, source_mode = 1, source = "・・・・・・・・・・・・。）" },
+]
+
+[[composites]]
+id = "f0005-0e21-i-remember-when-i-first-met-name"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧と出会ったときの事を思い出した。"
+translation = "I remember when I first met ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0e21, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0e28, end = 0x0e37, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e37, source_mode = 1, source = "と出会ったときの事を思い出した。" },
+]
+
+[[entries]]
+id = "f0005-0e4d-i-get-sick-easily-thats-why-i-stayed-home"
+file = "DISKB/F0005.MES"
+offset = 0x0e4d
+source_mode = 1
+target_mode = 2
+source = "『私ね、体が弱いの。だから今日も学校をお休みしてるの。』"
+translation = "\"I get sick easily. That's why I stayed home from school today.\""
+speaker = "name-slot:dear-person"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+notes = "This remembered sentence repeats Kanako's wording from F0003 so the English reprise remains exact."
+
+[[entries]]
+id = "f0005-0e6f-yes-thats-what-she-said"
+file = "DISKB/F0005.MES"
+offset = 0x0e6f
+source_mode = 1
+target_mode = 2
+source = "・・・確か、そう言っていた。"
+translation = "...Yes. That's what she said."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0e83-that-only-makes-me-want-to-protect-her-more"
+file = "DISKB/F0005.MES"
+offset = 0x0e83
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ますます守ってあげたくなっちゃう・・・。）"
+translation = "[CONNIE] (That only makes me want to protect her more...)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0ee8-god-is-unfair"
+file = "DISKB/F0005.MES"
+offset = 0x0ee8
+source_mode = 1
+target_mode = 2
+source = "神様は不公平だ。"
+translation = "God is unfair."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0efa-name-was-born-burdened-with-so-much-pain"
+target_mode = 2
+source = "⟦name:dear-person⟧に生まれつきの不幸せを与えるなんて。"
+translation = "⟦name:dear-person⟧ was born burdened with so much pain."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0efa, end = 0x0f09, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f09, source_mode = 1, source = "に生まれつきの不幸せを与えるなんて。" },
+]
+
+[[entries]]
+id = "f0005-0f23-line"
+file = "DISKB/F0005.MES"
+offset = 0x0f23
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-0f39-i-dont-put-much-faith-in-gods-but-when"
+target_mode = 2
+source = "あたしはそうそう神様は信じてないけど、⟦name:dear-person⟧のことを思うと神様のせいにしてしまいたくなる。"
+translation = "I don't really believe in God, but when I think of ⟦name:dear-person⟧, I still want to blame God."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0f39, source_mode = 1, source = "あたしはそうそう神様は信じてないけど、" },
+  { kind = "token", token = "name:dear-person", start = 0x0f51, end = 0x0f60, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f60, source_mode = 1, source = "のことを思うと神様のせいにしてしまいたくなる。" },
+]
+
+[[composites]]
+id = "f0005-0f87-even-if-name-introduces-me-what-am-i-supposed"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧に紹介してもらうにも、どう説明させよう？）"
+translation = "[CONNIE] (Even if ⟦name:dear-person⟧ introduces me, what am I supposed to have her say?)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x0f87, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0f90, end = 0x0f9f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f9f, source_mode = 1, source = "に紹介してもらうにも、どう説明させよう？）" },
+]
+
+[[entries]]
+id = "f0005-0fbd-hardly-anyone-will-believe-i-came-from-the-future"
+file = "DISKB/F0005.MES"
+offset = 0x0fbd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（未来から来ました、なんて信じるヤツは、まずいない。）"
+translation = "[CONNIE] (Hardly anyone will believe I came from the future.)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-0fe4-what-do-i-do"
+file = "DISKB/F0005.MES"
+offset = 0x0fe4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・どうするか・・・・・・。）"
+translation = "[CONNIE] (What do I do...?)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1018-getting-people-in-this-era-to-trust-me-thats"
+file = "DISKB/F0005.MES"
+offset = 0x1018
+source_mode = 1
+target_mode = 2
+source = "この時代のヒトに、あたしを信用させる・・・という難関が立ちふさがっている。"
+translation = "Getting people in this era to trust me... That's the wall in my way."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1044-what-a-mess"
+file = "DISKB/F0005.MES"
+offset = 0x1044
+source_mode = 1
+target_mode = 2
+source = "【コニー】（弱ったなあ・・・。）"
+translation = "[CONNIE] (What a mess...)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1062-there-are-few-humans-left-in-my-era-and"
+file = "DISKB/F0005.MES"
+offset = 0x1062
+source_mode = 1
+target_mode = 2
+source = "あたしの時代はもうヒトが少ないし、外を歩くのは危険なので家庭で個別の教育だ。"
+translation = "There are few humans left in my era, and going outside is dangerous, so education happens one-on-one at home."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1097-a-learning-machine-puts-knowledge-into-our-memories-we"
+file = "DISKB/F0005.MES"
+offset = 0x1097
+source_mode = 1
+target_mode = 2
+source = "学習マシンで知識を記憶する。たまに集まることはあるが、たまにだ。"
+translation = "A learning machine puts knowledge into our memories. We meet in groups once in a while, but only once in a while."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-10da-a-learning-machine-cant-teach-the-things-name-is"
+target_mode = 2
+source = "【コニー】（学習マシンだけじゃ、学習できないことを⟦name:dear-person⟧は勉強しているんだ・・・。）"
+translation = "[CONNIE] (A learning machine can't teach the things ⟦name:dear-person⟧ is learning...)"
+speaker = "コニー"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x10da, source_mode = 1, source = "【コニー】（学習マシンだけじゃ、学習できないことを" },
+  { kind = "token", token = "name:dear-person", start = 0x10f8, end = 0x1107, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1107, source_mode = 1, source = "は勉強しているんだ・・・。）" },
+]
+
+[[composites]]
+id = "f0005-111b-i-envy-name-for-getting-to-go-to-school"
+target_mode = 2
+source = "あたしは、学校に行っている⟦name:dear-person⟧が羨ましくなった。"
+translation = "I envy ⟦name:dear-person⟧ for getting to go to school."
+speaker = "Connie"
+context = "Connie's TALK branch moves between attraction, Kanako's illness and schooling, and the problem of gaining the family's trust."
+
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x111b, source_mode = 1, source = "あたしは、学校に行っている" },
+  { kind = "token", token = "name:dear-person", start = 0x112c, end = 0x113b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x113b, source_mode = 1, source = "が羨ましくなった。" },
+]
+
+[[entries]]
+id = "f0005-1165-as-you-can-see-im-not-human-and-im"
+file = "DISKB/F0005.MES"
+offset = 0x1165
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしは・・・見てのとおり人間じゃない。ましてやこの時代の人間でもない。」"
+translation = "[CONNIE] \"As you can see... I'm not human. And I'm certainly not from this era.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1195-name-stares-at-me-blankly"
+target_mode = 2
+source = "⟦name:dear-person⟧は、きょとん、とした顔であたしを見た。"
+translation = "⟦name:dear-person⟧ stares at me blankly."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1195, end = 0x11a4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x11a4, source_mode = 1, source = "は、きょとん、とした顔であたしを見た。" },
+]
+
+[[entries]]
+id = "f0005-11bd-my-era-is-the-year-2296"
+file = "DISKB/F0005.MES"
+offset = 0x11bd
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしの時代は、西暦２２９６年だ。」"
+translation = "[CONNIE] \"My era is the year 2296.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-11e1-name-three-hundred-years-from-now"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・今から３００年後！？・・・。」"
+translation = "[⟦name:dear-person⟧] \"Three hundred years from now!?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x11e1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x11e5, end = 0x11f4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x11f4, source_mode = 1, source = "】「・・・今から３００年後！？・・・。」" },
+]
+
+[[composites]]
+id = "f0005-1211-name-looks-like-she-cant-believe-it"
+target_mode = 2
+source = "⟦name:dear-person⟧は信じられないという表情だ。"
+translation = "⟦name:dear-person⟧ looks like she can't believe it."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1211, end = 0x1220, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1220, source_mode = 1, source = "は信じられないという表情だ。" },
+]
+
+[[entries]]
+id = "f0005-1233-i-cant-blame-her-if-she-doesnt"
+file = "DISKB/F0005.MES"
+offset = 0x1233
+source_mode = 1
+target_mode = 2
+source = "まあ、これは信じてくれなくても仕方ない。"
+translation = "I can't blame her if she doesn't."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-124d-i-keep-talking"
+file = "DISKB/F0005.MES"
+offset = 0x124d
+source_mode = 1
+target_mode = 2
+source = "あたしは話し続ける。"
+translation = "I keep talking."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-125d-im-a-mutant-made-from-cat-and-human-cells"
+file = "DISKB/F0005.MES"
+offset = 0x125d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あたしはミュータント。猫とヒトの細胞から造られたんだ。」"
+translation = "[CONNIE] \"I'm a mutant, made from cat and human cells.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+notes = "Made preserves the established manufacture language for Connie rather than recasting her creation as an ordinary birth."
+
+[[composites]]
+id = "f0005-129b-name-a-mu-tant"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「みゅーたん・・・と？」"
+translation = "[⟦name:dear-person⟧] \"A mu... tant?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x129b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x129f, end = 0x12ae, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x12ae, source_mode = 1, source = "】「みゅーたん・・・と？」" },
+]
+
+[[entries]]
+id = "f0005-12c1-in-my-era-pollution-weakened-humanity-until-human-cells"
+file = "DISKB/F0005.MES"
+offset = 0x12c1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしの住んでいる時代は、公害で人間が衰え、人間の細胞だけでは生きていけなくなった。」"
+translation = "[CONNIE] \"In my era, pollution weakened humanity until human cells could no longer survive on their own.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-12fb-so-they-mixed-the-nuclei-of-hardy-animal-cells"
+file = "DISKB/F0005.MES"
+offset = 0x12fb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「だから生命力の強い、動物の細胞核をヒトの細胞へ混入させ生み出されたのがミュータントだ。」"
+translation = "[CONNIE] \"So they mixed the nuclei of hardy animal cells into human cells. That's how mutants were made.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1336-when-the-deterioration-of-human-cells-stopped-the-mutant"
+file = "DISKB/F0005.MES"
+offset = 0x1336
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ヒトの細胞劣化が止まると、ミュータント計画は中断された。」"
+translation = "[CONNIE] \"When the deterioration of human cells stopped, the mutant program was suspended.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1363-name"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1363, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1367, end = 0x1376, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1376, source_mode = 1, source = "】「・・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0005-139f-do-you-understand"
+file = "DISKB/F0005.MES"
+offset = 0x139f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「わかるか？」"
+translation = "[CONNIE] \"Do you understand?\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-13b0-name-yeah-in-the-future-humanity-couldnt-survive-on"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん・・・、未来は人間の力だけでは、生きていけなくなったのね・・・。」"
+translation = "[⟦name:dear-person⟧] \"Yeah... In the future, humanity couldn't survive on its own anymore...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x13b0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x13b4, end = 0x13c3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x13c3, source_mode = 1, source = "】「うん・・・、未来は人間の力だけでは、生きていけなくなったのね・・・。」" },
+]
+
+[[entries]]
+id = "f0005-13ee-she-sounds-a-little-sad"
+file = "DISKB/F0005.MES"
+offset = 0x13ee
+source_mode = 1
+target_mode = 2
+source = "少し寂しそうに言う。"
+translation = "She sounds a little sad."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1408-name-big-sis-connie-thats-a-huge-responsibility"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃん・・・責任重大なんだ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Connie... That's a huge responsibility...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1408, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x140c, end = 0x141b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x141b, source_mode = 1, source = "】「コニーおねえちゃん・・・責任重大なんだ・・・。」" },
+]
+
+[[composites]]
+id = "f0005-143d-name-looks-at-me-pained"
+target_mode = 2
+source = "⟦name:dear-person⟧は辛そうな顔であたしを見た。"
+translation = "⟦name:dear-person⟧ looks at me, pained."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x143d, end = 0x144c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x144c, source_mode = 1, source = "は辛そうな顔であたしを見た。" },
+]
+
+[[entries]]
+id = "f0005-1460-i-dont-want-her-pity"
+file = "DISKB/F0005.MES"
+offset = 0x1460
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・同情はされたくないがな。）"
+translation = "[CONNIE] (I don't want her pity.)"
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1499-of-course-i-cant-time-warp-whenever-i-want"
+file = "DISKB/F0005.MES"
+offset = 0x1499
+source_mode = 1
+target_mode = 2
+source = "【コニー】「もちろん、自在にタイムワープできる訳じゃない。」"
+translation = "[CONNIE] \"Of course, I can't time-warp whenever I want.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+[[composites]]
+id = "f0005-14c1-a-space-time-distortion-has-linked-my-era-to"
+target_mode = 2
+source = "【コニー】「あたしと⟦name:dear-person⟧の時代が、時空のひずみが出来ている間、トンネルのようなものでつながっているからこっちへ来れたんだ。」"
+translation = "[CONNIE] \"My era and ⟦name:dear-person⟧'s are linked by a kind of tunnel while the space-time distortion lasts. That's how I got here.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x14c1, source_mode = 1, source = "【コニー】「あたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x14ce, end = 0x14dd, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x14dd, source_mode = 1, source = "の時代が、時空のひずみが出来ている間、トンネルのようなものでつながっているからこっちへ来れたんだ。」" },
+]
+
+[[composites]]
+id = "f0005-1514-when-the-tunnel-disappears-the-link-between-my-era"
+target_mode = 2
+source = "【コニー】「トンネルが消滅すると、あたしと⟦name:dear-person⟧の時代のつながりは切れる。」"
+translation = "[CONNIE] \"When the tunnel disappears, the link between my era and ⟦name:dear-person⟧'s will be cut.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1514, source_mode = 1, source = "【コニー】「トンネルが消滅すると、あたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x152e, end = 0x153d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x153d, source_mode = 1, source = "の時代のつながりは切れる。」" },
+]
+
+[[composites]]
+id = "f0005-1551-name-oh-wait-then-wont-you-be-able-to"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ふぅん・・・。えっ、じゃぁ、もう帰れないの？」"
+translation = "[⟦name:dear-person⟧] \"Oh... Wait, then won't you be able to go home?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1551, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1555, end = 0x1564, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1564, source_mode = 1, source = "】「ふぅん・・・。えっ、じゃぁ、もう帰れないの？」" },
+]
+
+[[entries]]
+id = "f0005-1583-our-calculations-say-the-distortion-will-last-about-ten"
+file = "DISKB/F0005.MES"
+offset = 0x1583
+source_mode = 1
+target_mode = 2
+source = "【コニー】「時空のひずみは計算ではあと１０日ほど、起きている。その間に健康な遺伝子を捜すんだ。」"
+translation = "[CONNIE] \"Our calculations say the distortion will last about ten more days. I have to find intact genetic material before then.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-15bd-name-what-if-the-distortion-ends"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「もし・・・時空のひずみ・・・が、終わったら・・・？」"
+translation = "[⟦name:dear-person⟧] \"What if... the distortion... ends?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x15bd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x15c1, end = 0x15d0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x15d0, source_mode = 1, source = "】「もし・・・時空のひずみ・・・が、終わったら・・・？」" },
+]
+
+[[entries]]
+id = "f0005-15f1-then-i-wont-be-able-to-return-to-my"
+file = "DISKB/F0005.MES"
+offset = 0x15f1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「その時はあたしは戻れなくなる。あたしの時代に。」"
+translation = "[CONNIE] \"Then I won't be able to return to my era.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1615-when-i-say-that-names-face-turns-lonely-for"
+target_mode = 2
+source = "あたしがそういうと、一瞬だけ、⟦name:dear-person⟧が寂しそうな表情になる。"
+translation = "When I say that, ⟦name:dear-person⟧ looks lonely for just a moment."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1615, source_mode = 1, source = "あたしがそういうと、一瞬だけ、" },
+  { kind = "token", token = "name:dear-person", start = 0x1629, end = 0x1638, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1638, source_mode = 1, source = "が寂しそうな表情になる。" },
+]
+
+[[composites]]
+id = "f0005-164a-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧・・・。）"
+translation = "[CONNIE] (⟦name:dear-person⟧...)"
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x164a, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x1653, end = 0x1662, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1662, source_mode = 1, source = "・・・。）" },
+]
+
+[[composites]]
+id = "f0005-1685-name-gives-me-a-shy-smile"
+target_mode = 2
+source = "⟦name:dear-person⟧は、はにかむ表情になった。"
+translation = "⟦name:dear-person⟧'s expression turns shy."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1685, end = 0x1694, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1694, source_mode = 1, source = "は、はにかむ表情になった。" },
+]
+
+[[composites]]
+id = "f0005-16a6-name-um-uh-mm-right-of-course"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えっと・・・、えと、・・・ん・・・、そう・・・よね・・・。」"
+translation = "[⟦name:dear-person⟧] \"Um... uh... mm... Right... of course...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x16a6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x16aa, end = 0x16b9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x16b9, source_mode = 1, source = "】「えっと・・・、えと、・・・ん・・・、そう・・・よね・・・。」" },
+]
+
+[[composites]]
+id = "f0005-16de-i-can-guess-what-name-was-thinking"
+target_mode = 2
+source = "あたしには⟦name:dear-person⟧が何を思ったか想像がついた。"
+translation = "I can guess what ⟦name:dear-person⟧ was thinking."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x16de, source_mode = 1, source = "あたしには" },
+  { kind = "token", token = "name:dear-person", start = 0x16e6, end = 0x16f5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x16f5, source_mode = 1, source = "が何を思ったか想像がついた。" },
+]
+
+[[entries]]
+id = "f0005-170b-do-you-want-me-to-stay-here-forever"
+file = "DISKB/F0005.MES"
+offset = 0x170b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしにずっといて欲しい？」"
+translation = "[CONNIE] \"Do you want me to stay here forever?\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1725-name-shakes-her-head-fiercely-in-denial"
+target_mode = 2
+source = "⟦name:dear-person⟧は、ぶんぶんぶんっ、と首を大きく振って否定する。"
+translation = "⟦name:dear-person⟧ shakes her head fiercely in denial."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1725, end = 0x1734, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1734, source_mode = 1, source = "は、ぶんぶんぶんっ、と首を大きく振って否定する。" },
+]
+
+[[composites]]
+id = "f0005-1757-you-dont-have-to-force-yourself-im-glad-name"
+target_mode = 2
+source = "【コニー】「いいんだ。無理をしなくても。・・・嬉しいよ。⟦name:dear-person⟧がそう思ってくれて。」"
+translation = "[CONNIE] \"You don't have to force yourself. I'm glad ⟦name:dear-person⟧ feels that way.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1757, source_mode = 1, source = "【コニー】「いいんだ。無理をしなくても。・・・嬉しいよ。" },
+  { kind = "token", token = "name:dear-person", start = 0x1777, end = 0x1786, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1786, source_mode = 1, source = "がそう思ってくれて。」" },
+]
+
+[[composites]]
+id = "f0005-1796-name-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Yeah...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1796, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x179a, end = 0x17a9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17a9, source_mode = 1, source = "】「うん・・・。」" },
+]
+
+[[entries]]
+id = "f0005-17b7-the-mood-turns-a-little-melancholy"
+file = "DISKB/F0005.MES"
+offset = 0x17b7
+source_mode = 1
+target_mode = 2
+source = "ちょっとしんみりしてしまう。"
+translation = "We both go a little quiet."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-17d4-name-big-sis-connie-what-is-that-space-time"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃん・・・、時空なんとか・・・ってどういうものなの？」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Connie... what is that space-time whatever, anyway?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x17d4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x17d8, end = 0x17e7, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17e7, source_mode = 1, source = "】「コニーおねえちゃん・・・、時空なんとか・・・ってどういうものなの？」" },
+]
+
+[[composites]]
+id = "f0005-1810-name-is-trying-to-change-the-subject"
+target_mode = 2
+source = "⟦name:dear-person⟧は話題を変えようとしている。"
+translation = "⟦name:dear-person⟧ is trying to change the subject."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1810, end = 0x181f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x181f, source_mode = 1, source = "は話題を変えようとしている。" },
+]
+
+[[entries]]
+id = "f0005-1833-i-go-along-with-it-and-explain-the-time"
+file = "DISKB/F0005.MES"
+offset = 0x1833
+source_mode = 1
+target_mode = 2
+source = "あたしは応じて、時空震動のことを話した。"
+translation = "I go along with it and explain the Time Quake."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-184c-you-can-enter-a-time-tunnel-by-using-matter"
+file = "DISKB/F0005.MES"
+offset = 0x184c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「時空震動のトンネルは、物質を媒体にして入ることが出来るんだ。」"
+translation = "[CONNIE] \"You can enter a time tunnel by using matter as the medium.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1878-matter-is-made-of-atoms-atoms-are-made-of"
+file = "DISKB/F0005.MES"
+offset = 0x1878
+source_mode = 1
+target_mode = 2
+source = "【コニー】「物質は原子でできている。原子は原子核と電子でできている。わかるな？」"
+translation = "[CONNIE] \"Matter is made of atoms. Atoms are made of nuclei and electrons. You follow?\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+
+id = "f0005-18a8-name-y-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「う、うん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Y-yeah...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x18a8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x18ac, end = 0x18bb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x18bb, source_mode = 1, source = "】「う、うん・・・。」" },
+]
+
+[[entries]]
+id = "f0005-18cb-the-nucleus-is-made-of-elementary-particles-called-protons"
+file = "DISKB/F0005.MES"
+offset = 0x18cb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「原子核は陽子と中性子という素粒子からできているんだ。」"
+translation = "[CONNIE] \"The nucleus is made of elementary particles called protons and neutrons.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-18f4-name-y-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「う・・・、うん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Y... yeah...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x18f4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x18f8, end = 0x1907, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1907, source_mode = 1, source = "】「う・・・、うん・・・。」" },
+]
+
+[[entries]]
+id = "f0005-191a-among-elementary-particles-we-look-at-the-oscillation-of"
+file = "DISKB/F0005.MES"
+offset = 0x191a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「素粒子の中でも、『フェルミ粒子』に分類される粒子の震動をみて、振動数を決めるんだ。」"
+translation = "[CONNIE] \"Among elementary particles, we look at the oscillation of particles classified as 'Fermi particles' and determine the frequency.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+notes = "The game deliberately says 'Fermi particles' before Connie supplies fermion in the next exchange. The English preserves that staged pseudo-scientific reveal instead of silently correcting it."
+
+[[entries]]
+id = "f0005-1954-match-that-frequency-to-the-time-quakes-and-you"
+file = "DISKB/F0005.MES"
+offset = 0x1954
+source_mode = 1
+target_mode = 2
+source = "【コニー】「その震動数を、時空震動の数に合わせるとタイムトンネルに入ることができる。」"
+translation = "[CONNIE] \"Match that frequency to the space-time oscillation, and you can enter the time tunnel.\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1984-name-fer-mi"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・『ふぇるみ・・・？？？』・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...'Fer... mi...???'...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1984, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1988, end = 0x1997, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1997, source_mode = 1, source = "】「・・・『ふぇるみ・・・？？？』・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-19b6-fermions-helium-3-makes-the-oscillation-especially-easy-to"
+target_mode = 2
+source = "【コニー】「フェルミオンの事だ。特にヘリウム３だと震動が分かりやすいので・・・、⟦name:dear-person⟧、聞いてるか？」"
+translation = "[CONNIE] \"Fermions. Helium-3 makes the oscillation especially easy to observe, so... ⟦name:dear-person⟧, are you listening?\""
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x19b6, source_mode = 1, source = "【コニー】「フェルミオンの事だ。特にヘリウム３だと震動が分かりやすいので・・・、" },
+  { kind = "token", token = "name:dear-person", start = 0x19e9, end = 0x19f8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x19f8, source_mode = 1, source = "、聞いてるか？」" },
+]
+
+[[composites]]
+id = "f0005-1a05-name-m-mmm-this-is-too-hard"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「う、うーん・・・。難しーい・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"M-mmm... This is too hard...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1a05, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1a09, end = 0x1a18, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a18, source_mode = 1, source = "】「う、うーん・・・。難しーい・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-1a34-name-groans-as-she-tries-to-follow-i-dont"
+target_mode = 2
+source = "⟦name:dear-person⟧は理解しようとうんうん唸っているが、悩ませるのは悪いのであたしは説明を諦めた。"
+translation = "⟦name:dear-person⟧ groans as she tries to follow. I don't want to make her struggle, so I stop explaining."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1a34, end = 0x1a43, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a43, source_mode = 1, source = "は理解しようとうんうん唸っているが、悩ませるのは悪いのであたしは説明を諦めた。" },
+]
+
+[[entries]]
+id = "f0005-1a75-well-it-is-complicated"
+file = "DISKB/F0005.MES"
+offset = 0x1a75
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ま・・・・・・・・・、難しいからな・・・。）"
+translation = "[CONNIE] (Well... it is complicated.)"
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1aaf-enough-technical-talk-for-now"
+file = "DISKB/F0005.MES"
+offset = 0x1aaf
+source_mode = 1
+target_mode = 2
+source = "今は、難しいことを話すのは止めよう。"
+translation = "Enough technical talk for now."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1ac7-i-dont-know-the-details-either"
+file = "DISKB/F0005.MES"
+offset = 0x1ac7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしも詳しいことを知らないし・・・。）"
+translation = "[CONNIE] (I don't know the details either...)"
+speaker = "コニー"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1ae7-i-only-know-what-i-need-to-operate-the"
+file = "DISKB/F0005.MES"
+offset = 0x1ae7
+source_mode = 1
+target_mode = 2
+source = "マシンの操作方法を知る上での、知識だけだ。"
+translation = "I only know what I need to operate the machine."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1b06-name-watches-me-full-of-curiosity"
+target_mode = 2
+source = "⟦name:dear-person⟧は好奇心いっぱいの表情をしてあたしを見ている。"
+translation = "⟦name:dear-person⟧ watches me, full of curiosity."
+speaker = "Connie"
+context = "Connie explains 2296, mutant history, the temporary Time Quake, and as much of its theory as either woman can follow."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1b06, end = 0x1b15, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1b15, source_mode = 1, source = "は好奇心いっぱいの表情をしてあたしを見ている。" },
+]
+
+[[composites]]
+id = "f0005-1b3d-name-if-you-need-to-test-genes-um-do"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「遺伝子を調べるならー、えーと、血液とか・・・を調べるの？」"
+translation = "[⟦name:dear-person⟧] \"If you need to test genes... um, do you test blood or something?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1b3d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1b41, end = 0x1b50, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1b50, source_mode = 1, source = "】「遺伝子を調べるならー、えーと、血液とか・・・を調べるの？」" },
+]
+
+[[composites]]
+id = "f0005-1b75-name-asks-brow-furrowed"
+target_mode = 2
+source = "⟦name:dear-person⟧は、難しそうな顔をして尋ねてくる。"
+translation = "⟦name:dear-person⟧ asks, brow furrowed."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1b75, end = 0x1b84, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1b84, source_mode = 1, source = "は、難しそうな顔をして尋ねてくる。" },
+]
+
+[[entries]]
+id = "f0005-1b9b-it-doesnt-have-to-be-blood-hair-would-work"
+file = "DISKB/F0005.MES"
+offset = 0x1b9b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「血でなくてもいい。例えば・・・髪の毛とか・・・・・・、」"
+translation = "[CONNIE] \"It doesn't have to be blood. Hair would work, for example...\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1bc6-or-from-what-we-did-earlier-name-if-i"
+target_mode = 2
+source = "【コニー】「・・・そうだな、さっき⟦name:dear-person⟧にしたアレの行為とかで愛液から細胞を入手できれば、調べることは可能だ。」"
+translation = "[CONNIE] \"Or... from what we did earlier, ⟦name:dear-person⟧. If I can collect cells from your wetness, I can test them.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1bc6, source_mode = 1, source = "【コニー】「・・・そうだな、さっき" },
+  { kind = "token", token = "name:dear-person", start = 0x1bda, end = 0x1be9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1be9, source_mode = 1, source = "にしたアレの行為とかで愛液から細胞を入手できれば、調べることは可能だ。」" },
+]
+
+[[composites]]
+id = "f0005-1c18-names-cheeks-flush-at-that"
+target_mode = 2
+source = "⟦name:dear-person⟧は、あたしのセリフにほんのりと頬を赤く染める。"
+translation = "⟦name:dear-person⟧'s cheeks flush at that."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1c18, end = 0x1c27, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1c27, source_mode = 1, source = "は、あたしのセリフにほんのりと頬を赤く染める。" },
+]
+
+[[entries]]
+id = "f0005-1c48-hair-works-too-but-collecting-and-breaking-it-down"
+file = "DISKB/F0005.MES"
+offset = 0x1c48
+source_mode = 1
+target_mode = 2
+source = "【コニー】「髪の毛を調べてもいいんだが、採取して分解しなきゃいけないから時間がかかる。」"
+translation = "[CONNIE] \"Hair works too, but collecting and breaking it down takes time.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-1c7d-the-best-sample-is-wetness-produced-during-arousal-it"
+file = "DISKB/F0005.MES"
+offset = 0x1c7d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「一番いいのは興奮状態の体液、愛液だ。これがあればすぐに反応が判るからな。」"
+translation = "[CONNIE] \"The best sample is wetness produced during arousal. It gives an immediate reading.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+notes = "愛液 keeps the established narration and dialogue term wetness; the sentence identifies arousal as the sampling condition without importing the configurable slot word."
+
+[[composites]]
+id = "f0005-1cb6-name-hesitates-over-the-word-wetness-before-answering"
+target_mode = 2
+source = "⟦name:dear-person⟧は愛液、という言葉に戸惑いながら言った。"
+translation = "⟦name:dear-person⟧ hesitates over the word \"wetness\" before answering."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1cb6, end = 0x1cc5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1cc5, source_mode = 1, source = "は愛液、という言葉に戸惑いながら言った。" },
+]
+
+[[composites]]
+id = "f0005-1ce0-name-o-oh-i-see"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・そ、そうなんだ・・・。」"
+translation = "[⟦name:dear-person⟧] \"O-oh. I see...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1ce0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1ce4, end = 0x1cf3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1cf3, source_mode = 1, source = "】「・・・・・・そ、そうなんだ・・・。」" },
+]
+
+[[composites]]
+id = "f0005-1d25-name-dont-be-embarrassed-we-already-have-that-kind"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧、照れなくてもいいわ。あたしたち、もうそういう仲なのよ。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, don't be embarrassed. We already have that kind of relationship.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1d25, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1d2e, end = 0x1d3d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d3d, source_mode = 1, source = "、照れなくてもいいわ。あたしたち、もうそういう仲なのよ。」" },
+]
+[[composites]]
+id = "f0005-1d61-name-fidgets-still-embarrassed"
+target_mode = 2
+source = "⟦name:dear-person⟧はモジモジとして、恥ずかしそうだ。"
+translation = "⟦name:dear-person⟧ fidgets, still embarrassed."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1d61, end = 0x1d70, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d70, source_mode = 1, source = "はモジモジとして、恥ずかしそうだ。" },
+]
+
+[[entries]]
+id = "f0005-1d8b-shes-so-cute-i-want-to-squeeze-her-tight"
+file = "DISKB/F0005.MES"
+offset = 0x1d8b
+source_mode = 1
+target_mode = 2
+source = "その姿は、ぎゅ～～～～～～～っ、と抱き締めたくなる程カワイイ。"
+translation = "She's so cute I want to squeeze her tight."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1dc0-name-are-you-going-to-have-sex-with-other"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・他の人とも・・・えっちしちゃうの・・・？」"
+translation = "[⟦name:dear-person⟧] \"Are you... going to have sex with other people too...?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1dc0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1dc4, end = 0x1dd3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1dd3, source_mode = 1, source = "】「・・・・・・・・・他の人とも・・・えっちしちゃうの・・・？」" },
+]
+
+[[composites]]
+id = "f0005-1df9-names-voice-carries-just-a-hint-of-jealousy"
+target_mode = 2
+source = "⟦name:dear-person⟧の言葉に、こころなしか『やきもち』っぽい口調が混ざっている。"
+translation = "⟦name:dear-person⟧'s voice carries just a hint of jealousy."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1df9, end = 0x1e08, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e08, source_mode = 1, source = "の言葉に、こころなしか『やきもち』っぽい口調が混ざっている。" },
+]
+
+[[composites]]
+id = "f0005-1e2f-i-squeeze-names-hand-as-i-answer"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の手をきゅっ、と握って答えた。"
+translation = "I squeeze ⟦name:dear-person⟧'s hand as I answer."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1e2f, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1e36, end = 0x1e45, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e45, source_mode = 1, source = "の手をきゅっ、と握って答えた。" },
+]
+
+[[composites]]
+id = "f0005-1e5c-are-you-jealous-name"
+target_mode = 2
+source = "【コニー】「妬いてるの？　⟦name:dear-person⟧？」"
+translation = "[CONNIE] \"Are you jealous, ⟦name:dear-person⟧?\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1e5c, source_mode = 1, source = "【コニー】「妬いてるの？　" },
+  { kind = "token", token = "name:dear-person", start = 0x1e6d, end = 0x1e7c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e7c, source_mode = 1, source = "？」" },
+]
+
+[[composites]]
+id = "f0005-1e83-name-tries-to-pull-away-in-a-panic-but"
+target_mode = 2
+source = "⟦name:dear-person⟧は慌てて手を引っ込めようとしたが、あたしは優しく手を包んで引き留める。"
+translation = "⟦name:dear-person⟧ tries to pull away in a panic, but I gently close my hand around hers and hold on."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1e83, end = 0x1e92, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e92, source_mode = 1, source = "は慌てて手を引っ込めようとしたが、あたしは優しく手を包んで引き留める。" },
+]
+
+[[composites]]
+id = "f0005-1ec1-name-i-dont-know-but-my-chest-started-aching"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「わかんない・・・・・・・・・。でも、胸が切なくなったの・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"I don't know... But my chest started aching...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1ec1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1ec5, end = 0x1ed4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1ed4, source_mode = 1, source = "】「わかんない・・・・・・・・・。でも、胸が切なくなったの・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-1f00-name-thats-proof-your-feelings-have-grown"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧が成長した証拠よ。それは。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, that's proof your feelings have grown.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+notes = "The English makes the growth emotional rather than implying a younger player-facing age, while preserving Connie's claim that jealousy marks development."
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1f00, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1f09, end = 0x1f18, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f18, source_mode = 1, source = "が成長した証拠よ。それは。」" },
+]
+
+[[composites]]
+id = "f0005-1f2f-i-almost-say-i-would-never-abandon-name-but"
+target_mode = 2
+source = "『あたしは⟦name:dear-person⟧を見捨てたりしないよ』、かろうじてそう言いそうになったけど、別な言葉でごまかす。"
+translation = "I almost say, \"I would never abandon ⟦name:dear-person⟧,\" but manage to cover it with something else."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1f2f, source_mode = 1, source = "『あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1f37, end = 0x1f46, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f46, source_mode = 1, source = "を見捨てたりしないよ』、かろうじてそう言いそうになったけど、別な言葉でごまかす。" },
+]
+
+[[entries]]
+id = "f0005-1f75-i-have-no-right-to-say-those-words"
+file = "DISKB/F0005.MES"
+offset = 0x1f75
+source_mode = 1
+target_mode = 2
+source = "この言葉を、あたしには言う権利はない。"
+translation = "I have no right to say those words."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-1f8f-once-i-return-to-my-era-i-wont-be"
+target_mode = 2
+source = "あたしがあたしの時代へ帰ってしまったら、⟦name:dear-person⟧を守ってあげることが出来なくなるからだ。"
+translation = "Once I return to my era, I won't be able to protect ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1f8f, source_mode = 1, source = "あたしがあたしの時代へ帰ってしまったら、" },
+  { kind = "token", token = "name:dear-person", start = 0x1fa6, end = 0x1fb5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1fb5, source_mode = 1, source = "を守ってあげることが出来なくなるからだ。" },
+]
+
+[[composites]]
+id = "f0005-1fcf-more-than-that-i-want-name-to-have-a"
+target_mode = 2
+source = "それ以前に、⟦name:dear-person⟧には正常な恋愛を、素敵な男の人として欲しい。そう思う。"
+translation = "More than that, I want ⟦name:dear-person⟧ to have a normal romance with a wonderful man."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+notes = "The source's period assumption that Kanako should pursue a normal romance with a man is retained as Connie's attitude rather than modernized away."
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x1fcf, source_mode = 1, source = "それ以前に、" },
+  { kind = "token", token = "name:dear-person", start = 0x1fda, end = 0x1fe9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1fe9, source_mode = 1, source = "には正常な恋愛を、素敵な男の人として欲しい。そう思う。" },
+]
+
+[[composites]]
+id = "f0005-2010-i-hold-names-gaze-as-i-slowly-release-her"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の目を見つめながら、ゆっくりと手を離す。"
+translation = "I hold ⟦name:dear-person⟧'s gaze as I slowly release her hand."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2010, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2017, end = 0x2026, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2026, source_mode = 1, source = "の目を見つめながら、ゆっくりと手を離す。" },
+]
+
+[[composites]]
+id = "f0005-2052-name-to-test-genes-you-need-um-we-wet"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「遺伝子を・・・調べるのって・・・、その・・・・・・、あい、愛・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"To test genes... you need... um... we... wet...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+notes = "The Japanese stammer begins 愛液; the English moves the broken start to wetness so the unfinished taboo word remains audible."
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2052, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2056, end = 0x2065, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2065, source_mode = 1, source = "】「遺伝子を・・・調べるのって・・・、その・・・・・・、あい、愛・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-2095-name-looks-down-unable-to-say-all-of-wetness"
+target_mode = 2
+source = "⟦name:dear-person⟧はうつむいて、『愛液』を全部言えない。"
+translation = "⟦name:dear-person⟧ looks down, unable to get the whole word \"wetness\" out."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2095, end = 0x20a4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x20a4, source_mode = 1, source = "はうつむいて、『愛液』を全部言えない。" },
+]
+
+[[entries]]
+id = "f0005-20bc-right-wetness-is-better"
+file = "DISKB/F0005.MES"
+offset = 0x20bc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そう。愛液の方がいいわ。」"
+translation = "[CONNIE] \"Right. Wetness is better.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-20d4-hair-can-be-tested-but-it-has-to-be"
+file = "DISKB/F0005.MES"
+offset = 0x20d4
+source_mode = 1
+target_mode = 2
+source = "髪の毛でも調べることは出来るが、溶解させてから調べるのでわかりにくい。"
+translation = "Hair can be tested, but it has to be dissolved first, which makes the reading less clear."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-20ff-name-speaks-looking-troubled"
+target_mode = 2
+source = "⟦name:dear-person⟧は困惑したように言った。"
+translation = "⟦name:dear-person⟧ speaks, looking troubled."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x20ff, end = 0x210e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x210e, source_mode = 1, source = "は困惑したように言った。" },
+]
+
+[[composites]]
+
+id = "f0005-2121-name-then-you-cant-use-my-genes-can-you"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「それじゃあ、私の遺伝子は使えないよね・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Then you can't use my genes, can you...?\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2121, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2125, end = 0x2134, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2134, source_mode = 1, source = "】「それじゃあ、私の遺伝子は使えないよね・・・・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0005-2159-why-not-we-wont-know-until-i-test-them"
+file = "DISKB/F0005.MES"
+offset = 0x2159
+source_mode = 1
+target_mode = 2
+source = "【コニー】「どうして？　調べないとわからないぞ。」"
+translation = "[CONNIE] \"Why not? We won't know until I test them.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2178-name-because-im-weak-here"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「だって私、ここが弱いから・・・。」"
+translation = "[⟦name:dear-person⟧] \"Because I'm weak here...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2178, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x217c, end = 0x218b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x218b, source_mode = 1, source = "】「だって私、ここが弱いから・・・。」" },
+]
+
+[[composites]]
+id = "f0005-21a3-name-presses-a-hand-to-her-chest"
+target_mode = 2
+source = "⟦name:dear-person⟧は自分の胸を押えた。"
+translation = "⟦name:dear-person⟧ presses a hand to her chest."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x21a3, end = 0x21b2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x21b2, source_mode = 1, source = "は自分の胸を押えた。" },
+]
+
+[[entries]]
+id = "f0005-21c4-her-heart"
+file = "DISKB/F0005.MES"
+offset = 0x21c4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（心臓・・・？）"
+translation = "[CONNIE] (Her heart...?)"
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-21d7-name-i-was-born-with-a-bad-heart-they"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「私の体、生まれつき心臓が悪いの・・・。急に激しい運動とかしちゃいけないんだって。」"
+translation = "[⟦name:dear-person⟧] \"I was born with a bad heart... They say I can't do sudden, strenuous exercise.\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x21d7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x21db, end = 0x21ea, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x21ea, source_mode = 1, source = "】「私の体、生まれつき心臓が悪いの・・・。急に激しい運動とかしちゃいけないんだって。」" },
+]
+
+[[entries]]
+id = "f0005-221f-are-you-all-right-now"
+anchors = [
+  { file = "DISKB/F0005.MES", offset = 0x221f },
+  { file = "DISKB/F0005.MES", offset = 0x22fa },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】「今は・・・平気なの？」"
+translation = "[CONNIE] \"Are you... all right now?\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2236-i-ask-worried"
+anchors = [
+  { file = "DISKB/F0005.MES", offset = 0x2236 },
+  { file = "DISKB/F0005.MES", offset = 0x2311 },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしは心配して聞く。"
+translation = "I ask, worried."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2247-name-yeah-im-okay-i-can-tell-when-im"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん、へいき。苦しくなりそうだったらわかるもの。」"
+translation = "[⟦name:dear-person⟧] \"Yeah, I'm okay. I can tell when an attack is coming.\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2247, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x224b, end = 0x225a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x225a, source_mode = 1, source = "】「うん、へいき。苦しくなりそうだったらわかるもの。」" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2322, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2326, end = 0x2335, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2335, source_mode = 1, source = "】「うん、へいき。苦しくなりそうだったらわかるもの。」" },
+]
+
+[[composites]]
+id = "f0005-227b-name-smiles-shes-so-cute"
+target_mode = 2
+source = "⟦name:dear-person⟧は微笑む。かわいい笑顔だ。"
+translation = "⟦name:dear-person⟧ smiles. She's so cute."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x227b, end = 0x228a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x228a, source_mode = 1, source = "は微笑む。かわいい笑顔だ。" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2356, end = 0x2365, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2365, source_mode = 1, source = "は微笑む。かわいい笑顔だ。" },
+]
+
+[[composites]]
+id = "f0005-229d-name-i-only-have-attacks-a-few-times-a"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「発作はひと月に数回なの。ほぼ決まった日に起きるから・・・。今はへいき。」"
+translation = "[⟦name:dear-person⟧] \"I only have attacks a few times a month. They happen on almost the same days, so... I'm fine now.\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x229d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x22a1, end = 0x22b0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x22b0, source_mode = 1, source = "】「発作はひと月に数回なの。ほぼ決まった日に起きるから・・・。今はへいき。」" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2378, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x237c, end = 0x238b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x238b, source_mode = 1, source = "】「発作はひと月に数回なの。ほぼ決まった日に起きるから・・・。今はへいき。」" },
+]
+
+[[entries]]
+id = "f0005-23c5-earlier"
+file = "DISKB/F0005.MES"
+offset = 0x23c5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「さっき・・・、」"
+translation = "[CONNIE] \"Earlier...\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-23d8-i-was-about-to-ask-whether-what-wed-just"
+file = "DISKB/F0005.MES"
+offset = 0x23d8
+source_mode = 1
+target_mode = 2
+source = "さっきエッチしたのは大丈夫だったのか、と聞こうとした。"
+translation = "I was about to ask whether what we'd just done had been too much for her."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-23fb-name-its-okay-as-long-as-it-isnt-sudden"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・急に、じゃなきゃいいの・・・。」"
+translation = "[⟦name:dear-person⟧] \"It's okay as long as it isn't sudden...\""
+speaker = "name-slot:dear-person"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x23fb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x23ff, end = 0x240e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x240e, source_mode = 1, source = "】「・・・・・・急に、じゃなきゃいいの・・・。」" },
+]
+
+[[composites]]
+id = "f0005-242c-name-must-have-thought-of-the-same-thing-she"
+target_mode = 2
+source = "⟦name:dear-person⟧も同じ事を考えたらしい。真っ赤になって答えた。"
+translation = "⟦name:dear-person⟧ must have thought of the same thing. She answers, bright red."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x242c, end = 0x243b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x243b, source_mode = 1, source = "も同じ事を考えたらしい。真っ赤になって答えた。" },
+]
+
+[[entries]]
+id = "f0005-245c-i-see-well-im-only-running-a-test"
+file = "DISKB/F0005.MES"
+offset = 0x245c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・そうか・・・・・・。でも、ま、調べるだけだから。」"
+translation = "[CONNIE] \"I see... Well, I'm only running a test.\""
+speaker = "コニー"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2483-ive-already-put-the-wetness-i-collected-from-name"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧から採取した愛液を、すでに指輪（リング）に入れて検査中だ。"
+translation = "I've already put the wetness I collected from ⟦name:dear-person⟧ into the ring, and it's running the test."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2483, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x248a, end = 0x2499, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2499, source_mode = 1, source = "から採取した愛液を、すでに指輪（リング）に入れて検査中だ。" },
+]
+
+[[entries]]
+id = "f0005-24c3-beep-beep-beep-the-sensor-gives-a-strong-response"
+file = "DISKB/F0005.MES"
+offset = 0x24c3
+source_mode = 1
+target_mode = 2
+source = "ピピピッ、とセンサーが強い反応を示した。"
+translation = "Beep-beep-beep. The sensor gives a strong response."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-24e4-the-analysis-finishes-i-check-the-result"
+file = "DISKB/F0005.MES"
+offset = 0x24e4
+source_mode = 1
+target_mode = 2
+source = "分析が終った。結果を見る。"
+translation = "The analysis finishes. I check the result."
+speaker = "Connie"
+context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2512-name-what-is-it"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「どうしたの？」"
+translation = "[⟦name:dear-person⟧] \"What is it?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2512, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2516, end = 0x2525, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2525, source_mode = 1, source = "】「どうしたの？」" },
+]
+
+[[composites]]
+id = "f0005-2533-name-watches-with-interest"
+target_mode = 2
+source = "⟦name:dear-person⟧が興味深そうに見ている。"
+translation = "⟦name:dear-person⟧ watches with interest."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2533, end = 0x2542, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2542, source_mode = 1, source = "が興味深そうに見ている。" },
+]
+
+[[composites]]
+id = "f0005-255f-name-what-what-happened"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「なあに？　どうしたの？」"
+translation = "[⟦name:dear-person⟧] \"What is it? What's wrong?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x255f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2563, end = 0x2572, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2572, source_mode = 1, source = "】「なあに？　どうしたの？」" },
+]
+
+[[entries]]
+id = "f0005-2585-wait"
+file = "DISKB/F0005.MES"
+offset = 0x2585
+source_mode = 1
+target_mode = 2
+source = "【コニー】「待て・・・。」"
+translation = "[CONNIE] \"Wait...\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2598-i-scan-names-genetic-information-it-really-is-different"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の遺伝子情報をスキャンした。確かにあたしたちの時代の遺伝子とは違う。"
+translation = "I scan ⟦name:dear-person⟧'s genetic information. It really is different from the genes of humans in my era."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2598, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x259f, end = 0x25ae, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x25ae, source_mode = 1, source = "の遺伝子情報をスキャンした。確かにあたしたちの時代の遺伝子とは違う。" },
+]
+
+[[composites]]
+id = "f0005-25da-does-everyone-in-this-era-have-strong-genes-like"
+target_mode = 2
+source = "【コニー】（この時代に生きるヒトはみんな、⟦name:dear-person⟧みたいに強い遺伝子を持っているのか・・・？）"
+translation = "[CONNIE] (Does everyone in this era have strong genes like ⟦name:dear-person⟧...?)"
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x25da, source_mode = 1, source = "【コニー】（この時代に生きるヒトはみんな、" },
+  { kind = "token", token = "name:dear-person", start = 0x25f2, end = 0x2601, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2601, source_mode = 1, source = "みたいに強い遺伝子を持っているのか・・・？）" },
+]
+
+[[entries]]
+id = "f0005-261c-ill-have-to-find-out"
+file = "DISKB/F0005.MES"
+offset = 0x261c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（調べる必要がありそうだ・・・。）"
+translation = "[CONNIE] (I'll have to find out...)"
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+[[entries]]
+id = "f0005-2639-the-more-different-peoples-genes-i-bring-home-the"
+file = "DISKB/F0005.MES"
+offset = 0x2639
+source_mode = 1
+target_mode = 2
+source = "さまざまなヒトの遺伝子を持ち帰れば、サンプルが多い分、役に立つというものだ。"
+translation = "The more different people's genes I bring home, the more useful the samples will be."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2669-name-youve-got-good-genes"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧・・・。いい遺伝子を持っているな。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧... You've got good genes.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2669, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2672, end = 0x2681, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2681, source_mode = 1, source = "・・・。いい遺伝子を持っているな。」" },
+]
+
+[[composites]]
+id = "f0005-2698-name-huh-what"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「え？　え？」"
+translation = "[⟦name:dear-person⟧] \"Huh? What?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2698, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x269c, end = 0x26ab, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x26ab, source_mode = 1, source = "】「え？　え？」" },
+]
+
+[[composites]]
+id = "f0005-26b8-that-odd-compliment-leaves-name-confused"
+target_mode = 2
+source = "妙な所を褒められた⟦name:dear-person⟧は戸惑っている。"
+translation = "That odd compliment leaves ⟦name:dear-person⟧ confused."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x26b8, source_mode = 1, source = "妙な所を褒められた" },
+  { kind = "token", token = "name:dear-person", start = 0x26c7, end = 0x26d6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x26d6, source_mode = 1, source = "は戸惑っている。" },
+]
+
+[[composites]]
+id = "f0005-26f6-name-no-way-my-genes-but-my-heart"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・ウソだよぉ・・・。私の遺伝子が・・・？　だって私、心臓が・・・。」"
+translation = "[⟦name:dear-person⟧] \"No way... My genes? But my heart...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x26f6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x26fa, end = 0x2709, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2709, source_mode = 1, source = "】「・・・ウソだよぉ・・・。私の遺伝子が・・・？　だって私、心臓が・・・。」" },
+]
+
+[[entries]]
+id = "f0005-2738-the-problem-with-your-body-came-from-a-mutation"
+file = "DISKB/F0005.MES"
+offset = 0x2738
+source_mode = 1
+target_mode = 2
+source = "【コニー】「体に異常があるのは、遺伝子情報から体を造るときに変異を起こしたんだ。遺伝子は大丈夫。使えそうだ。」"
+translation = "[CONNIE] \"The problem with your body came from a mutation while it was being formed from your genetic information. Your genes themselves are fine. We can use them.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+notes = "The source distinguishes a mutation during bodily development from the genetic information itself. The English keeps that in-world claim without endorsing its science."
+
+[[composites]]
+id = "f0005-2779-name-oh-i-dont-really-get-it-but-my"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・ふぅーん・・・。よくわかんないけど、私の遺伝子が役に立つのね。」"
+translation = "[⟦name:dear-person⟧] \"Oh... I don't really get it, but my genes can help?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2779, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x277d, end = 0x278c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x278c, source_mode = 1, source = "】「・・・ふぅーん・・・。よくわかんないけど、私の遺伝子が役に立つのね。」" },
+]
+
+[[composites]]
+id = "f0005-27b8-name-looks-unsure-whether-this-is-good-news"
+target_mode = 2
+source = "⟦name:dear-person⟧は喜んでいいのか、複雑な面持ちだ。"
+translation = "⟦name:dear-person⟧ looks unsure whether this is good news."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x27b8, end = 0x27c7, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x27c7, source_mode = 1, source = "は喜んでいいのか、複雑な面持ちだ。" },
+]
+
+[[composites]]
+id = "f0005-27e0-name-if-it-helps-you-big-sis-connie-then"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・コニーおねえちゃんの役に立つんだったら、嬉しい。」"
+translation = "[⟦name:dear-person⟧] \"If it helps you, Big Sis Connie... then I'm glad.\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x27e0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x27e4, end = 0x27f3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x27f3, source_mode = 1, source = "】「・・・コニーおねえちゃんの役に立つんだったら、嬉しい。」" },
+]
+
+[[composites]]
+id = "f0005-2817-name-says-it-with-a-happy-smile"
+target_mode = 2
+source = "⟦name:dear-person⟧は嬉しそうに言う。"
+translation = "⟦name:dear-person⟧ says it happily."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2817, end = 0x2826, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2826, source_mode = 1, source = "は嬉しそうに言う。" },
+]
+
+[[composites]]
+id = "f0005-2845-names-family-may-have-it-too-ill-need-to"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧の家族もそうなのかな。調べる必要がありそうだ。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧'s family might carry it too. I'll need to test them.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2845, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x284e, end = 0x285d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x285d, source_mode = 1, source = "の家族もそうなのかな。調べる必要がありそうだ。」" },
+]
+
+[[composites]]
+id = "f0005-287e-name-m-my-sister-too"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「わ・・・私のおねえちゃんも？」"
+translation = "[⟦name:dear-person⟧] \"M-my sister too?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x287e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2882, end = 0x2891, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2891, source_mode = 1, source = "】「わ・・・私のおねえちゃんも？」" },
+]
+
+[[entries]]
+id = "f0005-28a7-yeah-when-will-she-be-home"
+file = "DISKB/F0005.MES"
+offset = 0x28a7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ああ。いつ帰ってくる？」"
+translation = "[CONNIE] \"Yeah. When will she be home?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-28be-name-is-it-safe-for-you-to-meet-other"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「私の他の人間に会っても・・・大丈夫？」"
+translation = "[⟦name:dear-person⟧] \"Is it... safe for you to meet other people besides me?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x28be, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x28c2, end = 0x28d1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x28d1, source_mode = 1, source = "】「私の他の人間に会っても・・・大丈夫？」" },
+]
+
+[[entries]]
+id = "f0005-28ec-hmm-that-could-be-a-problem"
+file = "DISKB/F0005.MES"
+offset = 0x28ec
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そうだなー・・・マズイか・・・。」"
+translation = "[CONNIE] \"Hmm... That could be a problem.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2922-but-if-i-dont-meet-anyone-i-cant-bring"
+file = "DISKB/F0005.MES"
+offset = 0x2922
+source_mode = 1
+target_mode = 2
+source = "【コニー】「でも、会わないと・・・他の遺伝子を持って帰ることはできないし・・・。」"
+translation = "[CONNIE] \"But if I don't meet anyone, I can't bring back any other genes...\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2951-name-hmm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うーん・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hmm...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2951, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2955, end = 0x2964, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2964, source_mode = 1, source = "】「うーん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-297f-name-could-we-tell-people-im-a-friend-of"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧、あたしを⟦name:dear-person⟧の友達ということにできないか？」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, could we tell people I'm a friend of ⟦name:dear-person⟧'s?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x297f, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2988, end = 0x2997, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2997, source_mode = 1, source = "、あたしを" },
+  { kind = "token", token = "name:dear-person", start = 0x299f, end = 0x29ae, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x29ae, source_mode = 1, source = "の友達ということにできないか？」" },
+]
+
+[[composites]]
+id = "f0005-29c5-name-hmm-maybe-if-you-wore-my-schools-uniform"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うーん、とねー。・・・私の学校の服を着ていれば大丈夫かなぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hmm... Maybe it would work if you wore my school's uniform...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x29c5, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x29c9, end = 0x29d8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x29d8, source_mode = 1, source = "】「うーん、とねー。・・・私の学校の服を着ていれば大丈夫かなぁ・・・。」" },
+]
+
+[[entries]]
+id = "f0005-2a02-school-a-school-uniform-from-this-era"
+file = "DISKB/F0005.MES"
+offset = 0x2a02
+source_mode = 1
+target_mode = 2
+source = "【コニー】「学校？　この時代の学校の制服か・・・。」"
+translation = "[CONNIE] \"School? A school uniform from this era...\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+[[composites]]
+id = "f0005-2a3b-name-want-to-try-one-on"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「着てみる？」"
+translation = "[⟦name:dear-person⟧] \"Want to try one on?\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2a3b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2a3f, end = 0x2a4e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a4e, source_mode = 1, source = "】「着てみる？」" },
+]
+
+[[entries]]
+id = "f0005-2a5c-im-a-little-curious-but"
+file = "DISKB/F0005.MES"
+offset = 0x2a5c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「少しは興味あるけど・・・・・・・・・。」"
+translation = "[CONNIE] \"I'm a little curious, but...\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2a7e-changing-clothes-wont-help-i-know-nothing-about-schools"
+file = "DISKB/F0005.MES"
+offset = 0x2a7e
+source_mode = 1
+target_mode = 2
+source = "服を着ても、この時代の学校の知識がないからダメだ。"
+translation = "Changing clothes won't help. I know nothing about schools in this era."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2aa9-name-big-sis-connie-want-to-try-on-a"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃん、制服着てみる？　⟦name:older-sister⟧おねえちゃんのならサイズ合いそうだよ。」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Connie, want to try on a uniform? My sister ⟦name:older-sister⟧ has one that should fit you.\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2aa9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2aad, end = 0x2abc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2abc, source_mode = 1, source = "】「コニーおねえちゃん、制服着てみる？　" },
+  { kind = "token", token = "name:older-sister", start = 0x2ad5, end = 0x2ae4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2ae4, source_mode = 1, source = "おねえちゃんのならサイズ合いそうだよ。」" },
+]
+
+[[composites]]
+id = "f0005-2aff-name-looks-at-me-brimming-with-curiosity"
+target_mode = 2
+source = "⟦name:dear-person⟧は好奇心いっぱいであたしを見た。"
+translation = "⟦name:dear-person⟧ looks at me, brimming with curiosity."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2aff, end = 0x2b0e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2b0e, source_mode = 1, source = "は好奇心いっぱいであたしを見た。" },
+]
+
+[[entries]]
+id = "f0005-2b26-she-says-it-should-fit-hmm-would-it"
+file = "DISKB/F0005.MES"
+offset = 0x2b26
+source_mode = 1
+target_mode = 2
+source = "【コニー】（『合いそうだよ。』と言われても・・・。むー、そうかな。）"
+translation = "[CONNIE] (She says it should fit... Hmm. Would it?)"
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2b4d-will-changing-my-clothes-really-make-them-trust-me"
+file = "DISKB/F0005.MES"
+offset = 0x2b4d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「服を変えただけで信じてくれるか？」"
+translation = "[CONNIE] \"Will changing my clothes really make them trust me?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2b69-name-hmm-i-dont-know"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うーん。どうかなぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hmm. I don't know...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2b69, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2b6d, end = 0x2b7c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2b7c, source_mode = 1, source = "】「うーん。どうかなぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0005-2ba2-are-names-mother-and-sister-anything-like-name"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧のお母さんとお姉さん、⟦name:dear-person⟧のような性格なのか？」"
+translation = "[CONNIE] \"Are ⟦name:dear-person⟧'s mother and sister anything like ⟦name:dear-person⟧?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2ba2, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2bab, end = 0x2bba, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2bba, source_mode = 1, source = "のお母さんとお姉さん、" },
+  { kind = "token", token = "name:dear-person", start = 0x2bca, end = 0x2bd9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2bd9, source_mode = 1, source = "のような性格なのか？」" },
+]
+
+[[composites]]
+id = "f0005-2be9-name-well-mom-is-quiet-but-my-sister-name"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えっとね。お母さんは物静かだけど、⟦name:older-sister⟧おねえちゃんは違うの。」"
+translation = "[⟦name:dear-person⟧] \"Well, Mom is quiet, but my sister ⟦name:older-sister⟧ isn't.\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2be9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2bed, end = 0x2bfc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2bfc, source_mode = 1, source = "】「えっとね。お母さんは物静かだけど、" },
+  { kind = "token", token = "name:older-sister", start = 0x2c14, end = 0x2c23, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2c23, source_mode = 1, source = "おねえちゃんは違うの。」" },
+]
+
+[[entries]]
+id = "f0005-2c35-what-is-she-like"
+file = "DISKB/F0005.MES"
+offset = 0x2c35
+source_mode = 1
+target_mode = 2
+source = "【コニー】「どんな性格だ？」"
+translation = "[CONNIE] \"What is she like?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2c48-name-shes-kind-but-shes-the-most-strong-willed"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「優しいけど、家族の中で一番強気な性格。」"
+translation = "[⟦name:dear-person⟧] \"She's kind, but she's also the most strong-willed person in our family.\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2c48, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2c4c, end = 0x2c5b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2c5b, source_mode = 1, source = "】「優しいけど、家族の中で一番強気な性格。」" },
+]
+
+[[composites]]
+id = "f0005-2c7b-name-she-says-exactly-what-she-thinks-and-shes"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「きっぱりものを言う性格で、はきはきしてるの・・・。」"
+translation = "[⟦name:dear-person⟧] \"She says exactly what she thinks, and she's very direct...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2c7b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2c7f, end = 0x2c8e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2c8e, source_mode = 1, source = "】「きっぱりものを言う性格で、はきはきしてるの・・・。」" },
+]
+
+[[entries]]
+id = "f0005-2cb0-so-she-doesnt-hide-what-she-thinks-probably"
+file = "DISKB/F0005.MES"
+offset = 0x2cb0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・表裏のない性格だな。きっと。）"
+translation = "[CONNIE] (So she doesn't hide what she thinks. Probably.)"
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2cce-her-mother-should-be-fine-but-her-sister-may"
+file = "DISKB/F0005.MES"
+offset = 0x2cce
+source_mode = 1
+target_mode = 2
+source = "【コニー】（母親はよしとして、姉の方は手懐けるのは難しいかもしれないな。）"
+translation = "[CONNIE] (Her mother should be fine, but her sister may be hard to tame.)"
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+[[entries]]
+id = "f0005-2d0d-maybe-we-should-tell-them-the-truth"
+file = "DISKB/F0005.MES"
+offset = 0x2d0d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「本当のことを話しておくか・・・。」"
+translation = "[CONNIE] \"Maybe we should tell them the truth...\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites]]
+id = "f0005-2d2b-name-but-im-sure-they-wont-believe-us"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「え・・だって信じてくれないよ、きっと・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"But... I'm sure they won't believe us...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2d2b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2d2f, end = 0x2d3e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d3e, source_mode = 1, source = "】「え・・だって信じてくれないよ、きっと・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0005-2d5f-name-believed-me-so-i-think-names-mother-and"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧は信じてくれた。だから、あたしは⟦name:dear-person⟧のお母さんもお姉さんも信じてくれると思う。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧ believed me. So I think ⟦name:dear-person⟧'s mother and sister will too.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2d5f, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2d68, end = 0x2d77, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d77, source_mode = 1, source = "は信じてくれた。だから、あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2d8a, end = 0x2d99, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d99, source_mode = 1, source = "のお母さんもお姉さんも信じてくれると思う。」" },
+]
+
+[[composites]]
+id = "f0005-2db6-name-normal-people-wont-believe-you-if-you-say"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・フツーの人は、未来から遺伝子をとるためにやってきました・・・って話しても信じてくれないよぉ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Normal people won't believe you if you say, 'I came from the future to collect genetic material'...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2db6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2dba, end = 0x2dc9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2dc9, source_mode = 1, source = "】「・・・フツーの人は、未来から遺伝子をとるためにやってきました・・・って話しても信じてくれないよぉ・・・。」" },
+]
+
+[[composites]]
+id = "f0005-2e07-name-turns-practical-at-the-strangest-times"
+target_mode = 2
+source = "⟦name:dear-person⟧は妙なところだけ、現実的だ。"
+translation = "⟦name:dear-person⟧ turns practical at the strangest times."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2e07, end = 0x2e16, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e16, source_mode = 1, source = "は妙なところだけ、現実的だ。" },
+]
+
+[[composites]]
+id = "f0005-2e2d-name-believed-me-so-is-name-not-normal"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧は信じてくれた。⟦name:dear-person⟧はフツーじゃないのか？」"
+translation = "[CONNIE] \"⟦name:dear-person⟧ believed me. Does that mean ⟦name:dear-person⟧ isn't normal?\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2e2d, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2e36, end = 0x2e45, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e45, source_mode = 1, source = "は信じてくれた。" },
+  { kind = "token", token = "name:dear-person", start = 0x2e50, end = 0x2e5f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e5f, source_mode = 1, source = "はフツーじゃないのか？」" },
+]
+
+[[composites]]
+id = "f0005-2e70-name-no-i-think-im-normal"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うぅん、・・・フツーだと・・思うよ・・・。」"
+translation = "[⟦name:dear-person⟧] \"No... I think I'm... normal...\""
+speaker = "name-slot:dear-person"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0005.MES"
+segments = [
+  { kind = "text", offset = 0x2e70, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2e74, end = 0x2e83, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e83, source_mode = 1, source = "】「うぅん、・・・フツーだと・・思うよ・・・。」" },
+]
+
+[[entries]]
+id = "f0005-2ea1-she-doesnt-sound-very-sure"
+file = "DISKB/F0005.MES"
+offset = 0x2ea1
+source_mode = 1
+target_mode = 2
+source = "ちょっと頼りなげだ。"
+translation = "She doesn't sound very sure."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2eb2-then-introduce-me-ill-transform-in-front-of-everyone"
+file = "DISKB/F0005.MES"
+offset = 0x2eb2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「じゃ、紹介してくれ。あたしはみんなの前でまた変身してみせる。」"
+translation = "[CONNIE] \"Then introduce me. I'll transform in front of everyone again.\""
+speaker = "コニー"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"
+
+[[entries]]
+id = "f0005-2ee0-either-way-i-dont-have-time-to-waste"
+file = "DISKB/F0005.MES"
+offset = 0x2ee0
+source_mode = 1
+target_mode = 2
+source = "なにしろ時間がない。"
+translation = "There's no time to waste."
+speaker = "Connie"
+context = "The ring confirms Kanako carries useful genetic information, and the pair plan how to introduce Connie to the Takano family."
+status = "qa-ready"

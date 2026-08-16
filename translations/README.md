@@ -173,9 +173,9 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 1,335 canonical records covering 1,399 physical
-anchors across `MAIN.MES`, `FOP.MES`, `F0000.MES`, `F0001.MES`, `F0002.MES`,
-and `F0003.MES`. The setup selector pair, three-copy fiction disclaimer,
+The current catalog contains 1,845 canonical records covering 2,166 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0005.MES`.
+The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
 share or split a canonical translation. The 34 F0003 composites demonstrate
@@ -236,6 +236,21 @@ translated and none are excluded or pending. The image builds and audits
 cleanly. No trustworthy live F0003 state exists yet, so the upcoming human
 playtest must capture a native fixture before this slice gains automated
 framebuffer checkpoints.
+
+The fifth closed scope is `connie-and-kanako-first-intimacy`: all 424 physical
+text records in `F0004.MES`, from Connie washing Kanako through their first
+sexual encounter, genetic-sample collection, and post-bath confession. They
+are managed as 286 catalog entries, including 175 composite display messages;
+all anchors are translated and none are excluded or pending.
+
+The sixth closed scope is `connie-explains-her-mission`: all 343 physical text
+records in `F0005.MES`, from the post-bath conversation through Connie's
+genetic analysis and the plan to meet Kanako's family. They are managed as 225
+catalog entries, including 124 composite display messages; all anchors are
+translated and none are excluded or pending. The file is stored in `DISKB`,
+and the rebuilt image audits both changed archives. No trustworthy live F0005
+state exists yet, so this slice remains `qa-ready` pending a human playtest and
+native fixture capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 136 anchors are
