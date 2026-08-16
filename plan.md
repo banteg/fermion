@@ -79,11 +79,12 @@ Completed work:
   the first following scene.
 - A chronology audit corrected the next-story priority: `FOP.MES` transfers to
   `F0000.MES`, and `F0000.MES` does not hand off to `F0001.MES` until after its
-  complete departure-eve scene. The dedicated
-  `departure-eve-with-kanzaki` ledger covers all 398 physical text records in
-  `F0000.MES`; only the six opening/menu records are currently managed, leaving
-  392 pending. No new post-`F0003` translation slice should begin until this
-  contiguous gap is closed.
+  complete departure-eve scene. The `departure-eve-with-kanzaki` ledger is now
+  closed: all 398 physical text records in `F0000.MES` are translated as 391
+  canonical lines with zero pending, including the explicit launch-eve scene
+  and the Marna rescue flashback, and the `first-scene-save-fixture-proof`
+  route is re-pinned to and green against the rebuilt fixture image. A human
+  playtest remains the editorial gate because no later F0000 fixture exists.
 - The second major slice, all of `F0001.MES` and `F0002.MES`, is QA-ready. Its
   ledger closes 462 physical records as 454 canonical translations with eight
   context-safe duplicate collapses and zero pending records. A native-load
@@ -689,10 +690,9 @@ across translation rebuilds.
 
 ## Later work
 
-- Complete `departure-eve-with-kanzaki` in pristine-offset order before adding
-  any `F0004.MES` or later story text. Keep alternate F0000 choices in the same
-  scope so the chronological prefix is complete across every reachable branch,
-  not merely one QA path.
+- Playtest the complete `departure-eve-with-kanzaki` slice and capture native
+  fixtures past the first scene so the rest of F0000 gains automated
+  framebuffer checkpoints.
 - Add validated import for the generated translator views. Schema 5 composite
   occurrences, immutable name/term segments, and strict token validation are
   complete; TOML remains the sole canonical source.

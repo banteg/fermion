@@ -179,7 +179,7 @@ sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"
 [[routes]]
 name = "first-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0000.MES."
-content_sha256 = "4a17c0cc68b9baf3737297ee18806baea7b05dc705d180156aa7a2605ae79905"
+content_sha256 = "bd3997f8d098f19a5cfdaa4871dc67c2a7b6334d5da3b3c98d17da8bb391f90f"
 frames = 10500
 cache_frame = 8299
 taps = [

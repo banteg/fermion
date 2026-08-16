@@ -166,13 +166,16 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 952 canonical records covering 1,007 physical
+The current catalog contains 1,335 canonical records covering 1,399 physical
 anchors across `MAIN.MES`, `FOP.MES`, `F0000.MES`, `F0001.MES`, `F0002.MES`,
 and `F0003.MES`. The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
 share or split a canonical translation. The 34 F0003 composites demonstrate
-when several physical anchors must instead appear as one rendered line.
+when several physical anchors must instead appear as one rendered line. The
+departure-eve slice shows the inverse cross-file case: two contentless pause
+records in `F0000.MES` join canonical entries first anchored in `F0001.MES`
+and `F0002.MES`.
 
 ## Coverage ledger
 
@@ -202,7 +205,20 @@ wait through her collapse after reaching 1996. All 462 anchors are translated
 as 454 managed canonical lines, eight exact contextual duplicates are shared,
 and none are excluded or pending.
 
-The third closed scope is `connie-and-kanako-first-encounter`: all 426 physical
+The third closed scope is `departure-eve-with-kanzaki`: all 398 physical text
+records in `F0000.MES`, from the launch-eve scene with Dr. Kanzaki through the
+Marna rescue flashback and the next-day handoff to `F0001.MES`. They are
+managed as 391 canonical lines; five exact duplicates share wording across
+reconverging menu branches, and two contentless pause records join
+pre-existing canonical entries from later files. None are excluded or pending.
+The slice contains the game's first explicit scene; its translation follows
+the locked archival-A policy, and the batch terminology choices (`arousal`
+for 愛液, `sex` for 割れ目) are recorded in the entry notes. A
+`first-scene-save-fixture-proof` route re-pinned to the rebuilt image verifies
+the first scene's framebuffer and scenario register; the full scene still
+needs a human playtest because no later F0000 fixture exists.
+
+The fourth closed scope is `connie-and-kanako-first-encounter`: all 426 physical
 text records in `F0003.MES`, from Connie waking in Kanako's room through their
 first bath and the `F0004.MES` handoff. They are managed as 395 canonical
 entries, including 34 composite display messages; all 426 anchors are
@@ -212,9 +228,10 @@ playtest must capture a native fixture before this slice gains automated
 framebuffer checkpoints.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
-contains 178 physical anchors and 120 canonical source lines; 119 anchors are
-translated and 59 remain pending across setup UI, unchanged layout records, and
-the opening of `F0000.MES`. Exclusions are scope-local, so closing the focused
+contains 178 physical anchors and 120 canonical source lines; 136 anchors are
+translated and 42 remain pending across setup UI and unchanged layout records,
+now that the `F0000.MES` opening is closed by the departure-eve scope.
+Exclusions are scope-local, so closing the focused
 FOP scope does not silently classify records in this broader work queue. Use
 `--require-complete` only for a scope expected to be closed; deliberate
 non-translations belong in `[[scopes.exclusions]]` with exact source anchors and

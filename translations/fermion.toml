@@ -1515,6 +1515,5378 @@ alternative if later choices favor more explicit action labels.
 """
 
 [[entries]]
+id = "f0000-05d6-half-a-lie"
+file = "DISKA/F0000.MES"
+offset = 0x05d6
+source_mode = 1
+target_mode = 2
+source = "半分は嘘。あたしは明日のことを思うと、落ち着かなかった。"
+translation = "Half a lie. The thought of tomorrow left me restless."
+speaker = "Connie"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Admits the excuse in first-scene-connie-explains was only half true; the honesty stays in private narration."
+
+[[entries]]
+id = "f0000-05f9-kanzaki-wants-to-love-her"
+file = "DISKA/F0000.MES"
+offset = 0x05f9
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・。明日・・・、いいえ。きっと大丈夫。・・・、今日はあなたを愛したいの。」"
+translation = "[KANZAKI] \"...Tomorrow... no. It will be all right. ...Today, I want to make love to you.\""
+speaker = "神崎"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "愛したい carries emotional and physical intent together; 'make love' keeps both. Kanzaki answers Connie's fear with intimacy, not dismissal."
+
+[[entries]]
+id = "f0000-062e-connie-ah"
+file = "DISKA/F0000.MES"
+offset = 0x062e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・・・・・・・。」"
+translation = "[CONNIE] \"Ah...\""
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's flustered beat; long pause compressed per the ellipsis policy."
+
+[[entries]]
+id = "f0000-0645-i-could-not-refuse"
+file = "DISKA/F0000.MES"
+offset = 0x0645
+source_mode = 1
+target_mode = 2
+source = "あたしは逆らえなかった。神崎博士の頼みを、あたしは断ることができなかった。"
+translation = "I couldn't resist her. I could never refuse anything Dr. Kanzaki asked."
+speaker = "Connie"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Consent-dynamic line: the source frames compliance as an inability to refuse, and the English preserves that instead of manufacturing eagerness."
+
+[[entries]]
+id = "f0000-0672-connie-dr-kanzaki-thought"
+file = "DISKA/F0000.MES"
+offset = 0x0672
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・神崎博士？）"
+translation = "[CONNIE] (...Dr. Kanzaki?)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Connie notices Kanzaki's own unease mid-embrace."
+
+[[entries]]
+id = "f0000-0692-not-just-me-anxious"
+file = "DISKA/F0000.MES"
+offset = 0x0692
+source_mode = 1
+target_mode = 2
+source = "あたしだけでなく、神崎博士も不安そうにしている。"
+translation = "I'm not the only one who's anxious. Dr. Kanzaki is, too."
+speaker = "Connie"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Sets up Kanzaki's hidden grief about the departure without naming it."
+
+[[entries]]
+id = "f0000-06b0-when-you-look-anxious"
+file = "DISKA/F0000.MES"
+offset = 0x06b0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あなたが不安そうにしていると・・・・・・。）"
+translation = "[CONNIE] (When you look anxious...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "First half of a thought completed by the next record."
+
+[[entries]]
+id = "f0000-06d2-it-makes-me-anxious-too"
+file = "DISKA/F0000.MES"
+offset = 0x06d2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしまで不安になってしまいます・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...it makes me anxious, too...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's deferential です persists even in private thought toward Kanzaki."
+
+[[entries]]
+id = "f0000-06ff-connie-dr-kanzaki-long"
+file = "DISKA/F0000.MES"
+offset = 0x06ff
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Long trailing pause compressed; the ache is in what Connie cannot say."
+
+[[entries]]
+id = "f0000-0728-tomorrow"
+file = "DISKA/F0000.MES"
+offset = 0x0728
+source_mode = 1
+target_mode = 2
+source = "【コニー】（明日・・・・・・・・・。）"
+translation = "[CONNIE] (Tomorrow...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Fragment one of a three-beat escalation."
+
+[[entries]]
+id = "f0000-0740-by-tomorrow"
+file = "DISKA/F0000.MES"
+offset = 0x0740
+source_mode = 1
+target_mode = 2
+source = "【コニー】（明日には・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (By tomorrow...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Fragment two of three."
+
+[[entries]]
+id = "f0000-0760-this-world-too"
+file = "DISKA/F0000.MES"
+offset = 0x0760
+source_mode = 1
+target_mode = 2
+source = "【コニー】（明日にはこの世界とも・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (By tomorrow, this world, too...)"
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "The unspoken farewell to 2296 stays unspoken; the trail-off does the work."
+
+[[entries]]
+id = "f0000-0788-connie-speaks-name"
+file = "DISKA/F0000.MES"
+offset = 0x0788
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・神崎博士・・・・・・。」"
+translation = "[CONNIE] \"...Dr. Kanzaki...\""
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Connie says the name aloud without being able to continue."
+
+[[entries]]
+id = "f0000-07a2-ear-nibble"
+file = "DISKA/F0000.MES"
+offset = 0x07a2
+source_mode = 1
+target_mode = 2
+source = "はむっ。と、あたしの耳を軽く噛む。"
+translation = "Her teeth close softly on my ear."
+speaker = "Connie"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "はむっ converted from sound to action per the onomatopoeia policy."
+
+[[entries]]
+id = "f0000-07bb-connie-aaahn"
+file = "DISKA/F0000.MES"
+offset = 0x07bb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ああーん・・・・・・。」"
+translation = "[CONNIE] \"Aahn...\""
+speaker = "コニー"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's first voiced pleasure in the scene; elongated vowel compressed."
+
+[[entries]]
+id = "f0000-07d2-kanzaki-like-that"
+file = "DISKA/F0000.MES"
+offset = 0x07d2
+source_mode = 1
+target_mode = 2
+source = "【神崎】「いいわね・・・？」"
+translation = "[KANZAKI] \"You like that...?\""
+speaker = "神崎"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "Teasing check-in rather than a request for permission; 'Does that feel good?' is the weaker alternative."
+
+[[entries]]
+id = "f0000-07e5-small-nod"
+file = "DISKA/F0000.MES"
+offset = 0x07e5
+source_mode = 1
+target_mode = 2
+source = "あたしはコクンと頷いた。"
+translation = "I gave a small nod."
+speaker = "Connie"
+context = "Kanzaki asks to love Connie on the night before the launch."
+status = "qa-ready"
+box_width = 61
+notes = "こくん converted to action, matching the locked SFX-policy example."
+
+[[entries]]
+id = "f0000-089b-connie-doctor-ah"
+file = "DISKA/F0000.MES"
+offset = 0x089b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「博士・・・ぁ・・・。」"
+translation = "[CONNIE] \"Doctor... ah...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "The title drops the family-name formality of 神崎博士 as the scene turns intimate; English keeps the bare title."
+
+[[entries]]
+id = "f0000-08b1-hot-gaze"
+file = "DISKA/F0000.MES"
+offset = 0x08b1
+source_mode = 1
+target_mode = 2
+source = "神崎博士の視線を感じる。熱い感覚。"
+translation = "I feel Dr. Kanzaki's gaze on me. It's hot."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "熱い is the gaze's heat, not the room's."
+
+[[entries]]
+id = "f0000-08cb-feelings-from-behind"
+file = "DISKA/F0000.MES"
+offset = 0x08cb
+source_mode = 1
+target_mode = 2
+source = "あたしの背後から思いが伝わってくる。"
+translation = "From behind me, her feelings reach me."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's touch-empathy is established in F0003 as skin-contact emotion reading; proximity is enough here."
+
+[[entries]]
+id = "f0000-08e4-kanzaki-undress"
+file = "DISKA/F0000.MES"
+offset = 0x08e4
+source_mode = 1
+target_mode = 2
+source = "【神崎】「脱いで・・・。見せて、コニー・・・・・。」"
+translation = "[KANZAKI] \"Take them off... Show me, Connie...\""
+speaker = "神崎"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Imperative softened by the trailing address; Kanzaki's bedroom register is gentle command."
+
+[[entries]]
+id = "f0000-0904-connie-but"
+file = "DISKA/F0000.MES"
+offset = 0x0904
+source_mode = 1
+target_mode = 2
+source = "【コニー】「でも・・・。」"
+translation = "[CONNIE] \"But...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Her hesitation is launch anxiety, not refusal of Kanzaki; the narration explains it next."
+
+[[entries]]
+id = "f0000-0916-unknown-world-anxiety"
+file = "DISKA/F0000.MES"
+offset = 0x0916
+source_mode = 1
+target_mode = 2
+source = "あたしは、未知の世界へ行くという事で不安になっていた。"
+translation = "The thought of going to an unknown world had me on edge."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "1996 is 'unknown' to Connie despite being the past; the English keeps her future-native framing."
+
+[[entries]]
+id = "f0000-093d-that-much-i-knew"
+file = "DISKA/F0000.MES"
+offset = 0x093d
+source_mode = 1
+target_mode = 2
+source = "それは自分でもわかる。"
+translation = "That much, I knew about myself."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's self-aware beat before guessing at Kanzaki's motive."
+
+[[entries]]
+id = "f0000-094d-kanzaki-noticed"
+file = "DISKA/F0000.MES"
+offset = 0x094d
+source_mode = 1
+target_mode = 2
+source = "神崎博士はその事に気づいて、あたしの緊張をほぐそうとしているのだろうか。"
+translation = "Had Dr. Kanzaki noticed, and was she trying to loosen my tension?"
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Connie reads the intimacy as care, which frames the whole scene; kept as her inference, not fact."
+
+[[entries]]
+id = "f0000-097a-happy-in-her-arms"
+file = "DISKA/F0000.MES"
+offset = 0x097a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（博士に抱かれるのは嬉しい・・・。嬉しいけど。）"
+translation = "[CONNIE] (Being in her arms makes me happy... It does, but...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "抱かれる is embrace here, not the sexual 抱く of Kanzaki's later confession; context decides."
+
+[[entries]]
+id = "f0000-099e-anxiety-is-bigger"
+file = "DISKA/F0000.MES"
+offset = 0x099e
+source_mode = 1
+target_mode = 2
+source = "あたしは、心の中にある不安の方が大きくて、なんとなく落ち着かない。"
+translation = "But the anxiety inside me was bigger, and I couldn't settle down."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "The comparison structure 不安の方が大きくて is preserved."
+
+[[entries]]
+id = "f0000-09df-gentle-gaze"
+file = "DISKA/F0000.MES"
+offset = 0x09df
+source_mode = 1
+target_mode = 2
+source = "神崎博士は優しく見つめてくれる。"
+translation = "Dr. Kanzaki gazes at me gently."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-09fd-kanzaki-want-to-relax"
+file = "DISKA/F0000.MES"
+offset = 0x09fd
+source_mode = 1
+target_mode = 2
+source = "【神崎】「落ち着きたいんでしょう？　コニー。」"
+translation = "[KANZAKI] \"You want to feel calm, don't you, Connie?\""
+speaker = "神崎"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki names the goal aloud; the seduction is framed as treatment for Connie's nerves."
+
+[[entries]]
+id = "f0000-0a19-slow-touch"
+file = "DISKA/F0000.MES"
+offset = 0x0a19
+source_mode = 1
+target_mode = 2
+source = "博士はゆっくりあたしの体に触れる。あたしは博士の愛撫に耐えられなくなり、体をしならせる。"
+translation = "The doctor touches me slowly. I can't withstand her caresses, and my body arches."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "愛撫 is 'caresses'; 体をしならせる is the arching response."
+
+[[entries]]
+id = "f0000-0a4c-connie-ah-nnh"
+file = "DISKA/F0000.MES"
+offset = 0x0a4c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ぁっ・・・・・・、んッ・・・。」"
+translation = "[CONNIE] \"Ah... nnh...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; moans use the restrained English set (ah, nnh, mmh) throughout the scene."
+
+[[entries]]
+id = "f0000-0a67-holding-back-voice"
+file = "DISKA/F0000.MES"
+offset = 0x0a67
+source_mode = 1
+target_mode = 2
+source = "あたしは声を我慢する。"
+translation = "I hold back my voice."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "First instance of the scene's running held-voice motif."
+
+[[entries]]
+id = "f0000-0a77-kanzaki-leave-it-to-me"
+file = "DISKA/F0000.MES"
+offset = 0x0a77
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー・・・、体から力を抜いて。いつも通りに・・・、私に任せて・・・。」"
+translation = "[KANZAKI] \"Connie... let the strength out of your body. Just like always... leave it to me...\""
+speaker = "神崎"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "いつも通り establishes this as their practiced routine, which matters for reading the later refusals as play."
+
+[[entries]]
+id = "f0000-0aa9-connie-ah-thought"
+file = "DISKA/F0000.MES"
+offset = 0x0aa9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あっ・・・。）"
+translation = "[CONNIE] (Ah...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Internal reaction beat."
+
+[[entries]]
+id = "f0000-0abb-soft-scent"
+file = "DISKA/F0000.MES"
+offset = 0x0abb
+source_mode = 1
+target_mode = 2
+source = "あたしが体から力を抜くと、ふわっとした博士の匂いがあたしをくすぐる。"
+translation = "When I relax, the doctor's soft scent washes over me and tickles my senses."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Scent is Connie's strongest sense; her narration keeps returning to it."
+
+[[entries]]
+id = "f0000-0b03-hurriedly-close-eyes"
+file = "DISKA/F0000.MES"
+offset = 0x0b03
+source_mode = 1
+target_mode = 2
+source = "あたしは慌てて目を閉じる。"
+translation = "I hurriedly shut my eyes."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Embarrassment beat."
+
+[[entries]]
+id = "f0000-0b17-warm-lips"
+file = "DISKA/F0000.MES"
+offset = 0x0b17
+source_mode = 1
+target_mode = 2
+source = "すぐに暖かい唇があたしに触れる。"
+translation = "A moment later, warm lips touch mine."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-0b2d-kiss-and-nape"
+file = "DISKA/F0000.MES"
+offset = 0x0b2d
+source_mode = 1
+target_mode = 2
+source = "キスを交わすと、博士はうなじにもキスをしてくれる。"
+translation = "We kiss, and then she kisses my nape, too."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "うなじ rendered 'nape' throughout, matching the glossary-level body-term choices."
+
+[[entries]]
+id = "f0000-0b4c-connie-mmh-ah"
+file = "DISKA/F0000.MES"
+offset = 0x0b4c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっ・・・・・、あ・・・。」"
+translation = "[CONNIE] \"Mmh... ah...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-0b65-she-knows-everything"
+file = "DISKA/F0000.MES"
+offset = 0x0b65
+source_mode = 1
+target_mode = 2
+source = "あたしの敏感な部分。全部、神崎博士は知っている。"
+translation = "Every sensitive part of me--Dr. Kanzaki knows them all."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Double dash stands in for the source's fragment break."
+
+[[entries]]
+id = "f0000-0b84-because-she-loved-me"
+file = "DISKA/F0000.MES"
+offset = 0x0b84
+source_mode = 1
+target_mode = 2
+source = "なぜなら、全て神崎博士があたしの体を愛してくれたから。"
+translation = "Because she has loved every part of my body."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "愛してくれた is bodily love with the emotional sense intact."
+
+[[entries]]
+id = "f0000-0c67-connie-no-thought"
+file = "DISKA/F0000.MES"
+offset = 0x0c67
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ダメ・・・・・・・・・・・・。）"
+translation = "[CONNIE] (No...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "First ダメ of the scene. Per the consent policy the refusal word stays literal; the surrounding narration supplies the consensual frame."
+
+[[entries]]
+id = "f0000-0c84-looking-down"
+file = "DISKA/F0000.MES"
+offset = 0x0c84
+source_mode = 1
+target_mode = 2
+source = "あたしはうつむき加減になる。"
+translation = "I find myself looking down."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Embarrassment beat."
+
+[[entries]]
+id = "f0000-0c99-want-to-look-cannot"
+file = "DISKA/F0000.MES"
+offset = 0x0c99
+source_mode = 1
+target_mode = 2
+source = "神崎博士を見つめたいけど、見ることができない。"
+translation = "I want to look at her, but I can't."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-0cbe-kanzaki-leans-in"
+file = "DISKA/F0000.MES"
+offset = 0x0cbe
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、体をあたしに預けてくる。"
+translation = "Dr. Kanzaki leans her body into me."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "体を預ける echoes the menu verb 体を委ねる; here it is Kanzaki yielding her weight to Connie."
+
+[[entries]]
+id = "f0000-0cd6-warmth-on-back"
+file = "DISKA/F0000.MES"
+offset = 0x0cd6
+source_mode = 1
+target_mode = 2
+source = "あたしは、背中に神崎博士の暖かみを感じていた。"
+translation = "I could feel her warmth against my back."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-0d0c-soft-breasts-on-back"
+file = "DISKA/F0000.MES"
+offset = 0x0d0c
+source_mode = 1
+target_mode = 2
+source = "あたしの背中に神崎博士の柔らかな胸が触れている。"
+translation = "Her soft breasts pressed against my back."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "胸 is 'breasts' in physical contexts, 'heart' in emotional ones."
+
+[[entries]]
+id = "f0000-0d45-enraptured"
+file = "DISKA/F0000.MES"
+offset = 0x0d45
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士にそうされているだけで、うっとりとなる。"
+translation = "Just having her do that leaves me enraptured."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "うっとり as 'enraptured' keeps the dreamy register."
+
+[[entries]]
+id = "f0000-0d6f-i-look-at-her"
+file = "DISKA/F0000.MES"
+offset = 0x0d6f
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士を見つめる。"
+translation = "I turn to look at Dr. Kanzaki."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-0d82-eyes-meet-cheeks-burn"
+file = "DISKA/F0000.MES"
+offset = 0x0d82
+source_mode = 1
+target_mode = 2
+source = "目線が合うと、あたしの頬が燃えるように熱くなる。"
+translation = "When our eyes meet, my cheeks burn."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "燃えるように compressed; the fire simile survives in 'burn.'"
+
+[[entries]]
+id = "f0000-0da4-connie-silence"
+file = "DISKA/F0000.MES"
+offset = 0x0da4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Silent beat kept as its own record per the one-to-one anchor invariant."
+
+[[entries]]
+id = "f0000-0dbd-begging-for-kiss"
+file = "DISKA/F0000.MES"
+offset = 0x0dbd
+source_mode = 1
+target_mode = 2
+source = "自然と眼を閉じてキスをねだる。"
+translation = "My eyes close on their own, begging for a kiss."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "ねだる is Connie actively asking without words."
+
+[[entries]]
+id = "f0000-0dd4-kanzaki-mhmhm"
+file = "DISKA/F0000.MES"
+offset = 0x0dd4
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んふふふっ・・・、コニー・・・。」"
+translation = "[KANZAKI] \"Mhmhm... Connie...\""
+speaker = "神崎"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki's fond laugh kept as a vocalization."
+
+[[entries]]
+id = "f0000-0def-becoming-a-woman"
+file = "DISKA/F0000.MES"
+offset = 0x0def
+source_mode = 1
+target_mode = 2
+source = "神崎博士の指があたしに触れる都度、あたし自身が女に変わっていくのがわかる。"
+translation = "Every time her fingers touch me, I feel myself becoming a woman."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "女に変わっていく kept literal; Connie is engineered and three years old, so the phrase is about womanhood, not age."
+
+[[entries]]
+id = "f0000-0e1c-connie-dr-kanzaki-longer"
+file = "DISKA/F0000.MES"
+offset = 0x0e1c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Repeated name-thought; same rendering as 0x06ff."
+
+[[entries]]
+id = "f0000-0e42-body-and-heart-yours"
+file = "DISKA/F0000.MES"
+offset = 0x0e42
+source_mode = 1
+target_mode = 2
+source = "【コニー】（体も心も、全部あなたのものです・・・。）"
+translation = "[CONNIE] (My body and my heart... all of me is yours...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "ものです states belonging plainly; pairs with 0x2120 later."
+
+[[entries]]
+id = "f0000-0e7a-watching-where-she-touches"
+file = "DISKA/F0000.MES"
+offset = 0x0e7a
+source_mode = 1
+target_mode = 2
+source = "神崎博士が触れてくれる所を見る。"
+translation = "I watch the places she touches."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-0e90-softly-kneading"
+file = "DISKA/F0000.MES"
+offset = 0x0e90
+source_mode = 1
+target_mode = 2
+source = "むにゅっむにゅうっ、と柔らかく揉みほぐしてくれる。"
+translation = "She kneads me softly, working the tension out."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "むにゅっ converted from sound to action; the tactile SFX would read comic in English."
+
+[[entries]]
+id = "f0000-0eaf-connie-aah-thought"
+anchors = [
+  { file = "DISKA/F0000.MES", offset = 0x0eaf },
+  { file = "DISKA/F0000.MES", offset = 0x357a },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あぁ・・・・・・・・・。）"
+translation = "[CONNIE] (Aah...)"
+speaker = "コニー"
+context = "Connie's helpless reaction, identical in both teasing beats."
+status = "qa-ready"
+box_width = 61
+notes = "Exact duplicate serving the same reaction beat twice in one scene; shared wording is context-safe."
+
+[[entries]]
+id = "f0000-0ed0-curious-gaze"
+file = "DISKA/F0000.MES"
+offset = 0x0ed0
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、わくわくと、好奇心いっぱいの表情であたしの股間を見ている。"
+translation = "Dr. Kanzaki peers between my legs, her face alight with curiosity."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "股間 is 'between my legs' in Connie's narration register; わくわく kept as eager curiosity."
+
+[[entries]]
+id = "f0000-0efa-connie-starting-to-feel"
+file = "DISKA/F0000.MES"
+offset = 0x0efa
+source_mode = 1
+target_mode = 2
+source = "【コニー】（やだぁ・・・・・・・・・、感じてきちゃ・・・う・・・・・・。）"
+translation = "[CONNIE] (Oh no... I'm... starting to feel it...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "やだ here is flustered embarrassment, not refusal; 'Oh no' carries that without inventing a stop."
+
+[[entries]]
+id = "f0000-0f24-aching-inside"
+file = "DISKA/F0000.MES"
+offset = 0x0f24
+source_mode = 1
+target_mode = 2
+source = "見られるだけで、あたしの体の奥が疼いてくる。"
+translation = "Just being watched makes me ache deep inside."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "疼く as 'ache' keeps the bodily longing register."
+
+[[entries]]
+id = "f0000-0f41-connie-ah-aah"
+file = "DISKA/F0000.MES"
+offset = 0x0f41
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・・・・ああ・・・・・・。」"
+translation = "[CONNIE] \"Ah... aah...\""
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-0f5d-lips-brush-my-sex"
+file = "DISKA/F0000.MES"
+offset = 0x0f5d
+source_mode = 1
+target_mode = 2
+source = "神崎博士の唇が、あたしの割れ目にちょっとだけ触れる。"
+translation = "Dr. Kanzaki's lips brush my sex, just barely."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Locked batch term: 割れ目 renders uniformly as 'sex'; plainer than the source's euphemism would allow in clinical English, less crude than the alternatives."
+
+[[entries]]
+id = "f0000-0f7c-connie-ah-aah-trailing"
+file = "DISKA/F0000.MES"
+offset = 0x0f7c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あっ・・・、あぁ・・・・・・、・・・。）"
+translation = "[CONNIE] (Ah... aah... ...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced-thought beat; trailing pause kept."
+
+[[entries]]
+id = "f0000-0f9b-kanzaki-mmh"
+file = "DISKA/F0000.MES"
+offset = 0x0f9b
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・・・・・・・うふッ・・・。」"
+translation = "[KANZAKI] \"...Mmh...\""
+speaker = "神崎"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki's pleased hum."
+
+[[entries]]
+id = "f0000-0fb9-touches-again"
+file = "DISKA/F0000.MES"
+offset = 0x0fb9
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、再びあたしの割れ目に、少しだけ触れる。"
+translation = "She touches my sex again, just a little."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "The teasing-withdrawal rhythm starts here."
+
+[[entries]]
+id = "f0000-0fd9-connie-want-her-to-touch"
+file = "DISKA/F0000.MES"
+offset = 0x0fd9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あぁぁ・・・ッ、触って欲しい・・・・・・・・・。）"
+translation = "[CONNIE] (Aah... I want her to touch me...)"
+speaker = "コニー"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "The narration makes Connie's want explicit while her speech still says no; both layers stay."
+
+[[entries]]
+id = "f0000-1016-teasing-for-pleasure"
+file = "DISKA/F0000.MES"
+offset = 0x1016
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしの体を焦らしては楽しんでいる。"
+translation = "Dr. Kanzaki enjoys drawing out my body's anticipation."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "焦らす is deliberate teasing delay; 'drawing out anticipation' keeps the game-like aspect."
+
+[[entries]]
+id = "f0000-1050-wrapped-in-sweet-scent"
+file = "DISKA/F0000.MES"
+offset = 0x1050
+source_mode = 1
+target_mode = 2
+source = "あたしは、神崎博士の甘い匂いに包まれてうっとりとなる。"
+translation = "Wrapped in her sweet scent, I melt."
+speaker = "Connie"
+context = "Kanzaki undresses and caresses Connie to ease her launch-eve tension."
+status = "qa-ready"
+box_width = 61
+notes = "Scent motif again; うっとり here is 'melt' for variety against 0x0d45's 'enraptured.'"
+
+[[entries]]
+id = "f0000-1072-kanzaki-so-warm"
+file = "DISKA/F0000.MES"
+offset = 0x1072
+source_mode = 1
+target_mode = 2
+source = "【神崎】「暖かいわ・・・コニー・・・。」"
+translation = "[KANZAKI] \"You're so warm... Connie...\""
+speaker = "神崎"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "Tenderness immediately before the mood shifts."
+
+[[entries]]
+id = "f0000-1095-speaks-gently"
+file = "DISKA/F0000.MES"
+offset = 0x1095
+source_mode = 1
+target_mode = 2
+source = "神崎博士は優しくあたしに話しかけてくる。"
+translation = "Dr. Kanzaki speaks to me gently."
+speaker = "Connie"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-10c7-trembling-under-gaze"
+file = "DISKA/F0000.MES"
+offset = 0x10c7
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士の熱い視線に耐えられず、体が小刻みに震える。"
+translation = "I can't bear her heated gaze; my body trembles in small shivers."
+speaker = "Connie"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "The trembling is overwhelm, not fear."
+
+[[entries]]
+id = "f0000-10f1-shell-notice"
+file = "DISKA/F0000.MES"
+offset = 0x10f1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（やだ・・・、気づかれちゃう・・・・・・。）"
+translation = "[CONNIE] (Oh no... she'll notice...)"
+speaker = "コニー"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "What Connie fears her noticing is the next line's question."
+
+[[entries]]
+id = "f0000-111b-connie-um-um"
+file = "DISKA/F0000.MES"
+offset = 0x111b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あの、あの・・・神崎博士、・・・。」"
+translation = "[CONNIE] \"Um, um... Dr. Kanzaki...\""
+speaker = "コニー"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "Doubled あの kept as doubled 'um.'"
+
+[[entries]]
+id = "f0000-1138-kanzaki-what-is-it"
+file = "DISKA/F0000.MES"
+offset = 0x1138
+source_mode = 1
+target_mode = 2
+source = "【神崎】「なあに？」"
+translation = "[KANZAKI] \"What is it?\""
+speaker = "神崎"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "なあに is affectionate casual; the plain question carries it."
+
+[[entries]]
+id = "f0000-1147-tilts-head"
+file = "DISKA/F0000.MES"
+offset = 0x1147
+source_mode = 1
+target_mode = 2
+source = "あたしを優しく包み込むように首を傾げ、答える。"
+translation = "She tilts her head, answering with a warmth that wraps around me."
+speaker = "Connie"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "The gesture sets up Connie's confession of weakness to it."
+
+[[entries]]
+id = "f0000-1166-weak-to-this-gesture"
+file = "DISKA/F0000.MES"
+offset = 0x1166
+source_mode = 1
+target_mode = 2
+source = "あたしはこの仕草に弱い。もっと甘えたくなるからだ。"
+translation = "That gesture always undoes me. It makes me want to be spoiled even more."
+speaker = "Connie"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "甘えたい is Connie's dependency wish; 'be spoiled' keeps the childlike tint without baby talk."
+
+[[entries]]
+id = "f0000-1186-another-mutants-scent"
+file = "DISKA/F0000.MES"
+offset = 0x1186
+source_mode = 1
+target_mode = 2
+source = "【コニー】「神崎博士から・・・、・・・他の・・・ミュータントの臭いがするの・・・。」"
+translation = "[CONNIE] \"Dr. Kanzaki, you smell... like... another... mutant...\""
+speaker = "コニー"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "The hesitant pauses mark how hard the question is to ask."
+
+[[entries]]
+id = "f0000-11b6-sorry-strange-question"
+file = "DISKA/F0000.MES"
+offset = 0x11b6
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ごめんなさい、変な事を聞いて・・・。」"
+translation = "[CONNIE] \"I'm sorry, that's a strange thing to ask...\""
+speaker = "コニー"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "Connie apologizes for the implication of suspicion."
+
+[[entries]]
+id = "f0000-11d7-but-it-bothers-me"
+file = "DISKA/F0000.MES"
+offset = 0x11d7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「だけど、気になるから・・・。」"
+translation = "[CONNIE] \"But it's been bothering me...\""
+speaker = "コニー"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "She asks anyway; the jealousy thread starts."
+
+[[entries]]
+id = "f0000-11f1-licks-nape"
+file = "DISKA/F0000.MES"
+offset = 0x11f1
+source_mode = 1
+target_mode = 2
+source = "あたしがもじもじしていると、神崎博士はあたしのうなじをぺろりとなめて、優しく話しかけてくる。"
+translation = "As I fidget, Dr. Kanzaki licks my nape and speaks gently."
+speaker = "Connie"
+context = "Connie smells an unfamiliar mutant on Kanzaki and asks about her."
+status = "qa-ready"
+box_width = 61
+notes = "ぺろり reduced to the plain action; the sound would be comic here."
+
+[[entries]]
+id = "f0000-1225-sharp-as-ever"
+file = "DISKA/F0000.MES"
+offset = 0x1225
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・いいわ。さすがね。」"
+translation = "[KANZAKI] \"...Very well. Sharp as ever.\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "さすが praises Connie's nose; Kanzaki does not dodge the question."
+
+[[entries]]
+id = "f0000-123c-her-name-is-marna"
+file = "DISKA/F0000.MES"
+offset = 0x123c
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・近いうちに紹介するわ。あなたと同じミュータントの女の子で、【マーナ】。あなたよりふたつくらい下の年齢ね。その子の臭いよ。」"
+translation = "[KANZAKI] \"...I'll introduce you soon. She's a mutant girl like you, named Marna. About two years younger than you. That's who you smell.\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The inline 【マーナ】 is a name callout, not a speaker label, so it renders as plain 'Marna' mid-sentence. Two years younger lands Marna near one in engineered-mutant terms; kept literal."
+
+[[entries]]
+id = "f0000-128d-connie-marna"
+file = "DISKA/F0000.MES"
+offset = 0x128d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「マーナ・・・。」"
+translation = "[CONNIE] \"Marna...\""
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie tastes the new name."
+
+[[entries]]
+id = "f0000-12a0-serious-tone"
+file = "DISKA/F0000.MES"
+offset = 0x12a0
+source_mode = 1
+target_mode = 2
+source = "博士は真剣な口調になった。"
+translation = "The doctor's tone turned serious."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Register shift cue."
+
+[[entries]]
+id = "f0000-12b5-be-good-to-her"
+file = "DISKA/F0000.MES"
+offset = 0x12b5
+source_mode = 1
+target_mode = 2
+source = "【神崎】「かわいがってあげてね。・・・マーナの育ての親がひと月前に亡くなったの・・・。」"
+translation = "[KANZAKI] \"Be good to her, won't you? ...Marna's foster parent died a month ago...\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "かわいがってあげてね asks Connie to dote on Marna; 'be good to her' keeps the request soft."
+
+[[entries]]
+id = "f0000-12eb-taken-in-as-your-sister"
+anchors = [
+  { file = "DISKA/F0000.MES", offset = 0x12eb },
+  { file = "DISKA/F0000.MES", offset = 0x1399 },
+]
+source_mode = 1
+target_mode = 2
+source = "【神崎】「身寄りがないから、私が引き取ることにしたわ。・・・あなたの妹として。」"
+translation = "[KANZAKI] \"She has no one left, so I've taken her in. ...As your little sister.\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Exact duplicate across the reconverging menu branches; same speaker, same beat, shared wording. 妹 is 'little sister' throughout."
+
+[[entries]]
+id = "f0000-131b-connie-i-see"
+anchors = [
+  { file = "DISKA/F0000.MES", offset = 0x131b },
+  { file = "DISKA/F0000.MES", offset = 0x13c9 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そうですか・・・。」"
+translation = "[CONNIE] \"I see...\""
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Exact duplicate across the reconverging branches. The polite ですか is Connie processing, not accepting yet."
+
+[[entries]]
+id = "f0000-1330-easy-to-imagine"
+anchors = [
+  { file = "DISKA/F0000.MES", offset = 0x1330 },
+  { file = "DISKA/F0000.MES", offset = 0x13de },
+]
+source_mode = 1
+target_mode = 2
+source = "だいたい想像がつく。ヒトの世界で保護を失ったミュータントがどうなるか。"
+translation = "I can imagine well enough what happens to a mutant who loses her guardian in the human world."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Exact duplicate across the reconverging branches. ヒト keeps the biological 'human' register."
+
+[[entries]]
+id = "f0000-1360-shunned-and-wandering"
+anchors = [
+  { file = "DISKA/F0000.MES", offset = 0x1360 },
+  { file = "DISKA/F0000.MES", offset = 0x140e },
+]
+source_mode = 1
+target_mode = 2
+source = "人々にうとまれ、そのまま外をさすらうことになる。"
+translation = "Shunned by everyone, left to wander the streets."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Exact duplicate across the reconverging branches. Connie's hunter experience supplies this knowledge."
+
+[[entries]]
+id = "f0000-1437-you-can-tell-when-i-lie"
+file = "DISKA/F0000.MES"
+offset = 0x1437
+source_mode = 1
+target_mode = 2
+source = "【神崎】「正直に話すわね、コニー。あなたは、私が嘘をついているか見分けることができるでしょう？」"
+translation = "[KANZAKI] \"I'll be honest with you, Connie. You can tell when I'm lying, can't you?\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki invokes Connie's empathy before the confession, choosing a setting where disbelief is impossible."
+
+[[entries]]
+id = "f0000-146f-only-within-guessing"
+file = "DISKA/F0000.MES"
+offset = 0x146f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まあ・・・、想像の範囲での『嘘をついているか、いないか』程度だけど・・・。）"
+translation = "[CONNIE] (Well... only at the level of guessing 'is she lying or not'...)"
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie downplays her own ability; the quoted fragment keeps the source's scare-quote shape."
+
+[[entries]]
+id = "f0000-14a6-hesitation-in-words"
+file = "DISKA/F0000.MES"
+offset = 0x14a6
+source_mode = 1
+target_mode = 2
+source = "神崎博士との普段の会話から、ためらいや戸惑いが会話に含まれていればわかるというくらいだ。"
+translation = "From our everyday talks, I can only tell when hesitation or confusion creeps into her words."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Keeps the limit explicit: inference from speech, not mind reading."
+
+[[entries]]
+id = "f0000-14df-found-her-a-week-ago"
+file = "DISKA/F0000.MES"
+offset = 0x14df
+source_mode = 1
+target_mode = 2
+source = "【神崎】「私がその子を見つけたのが１週間前・・・。落ち着いたのが３日前よ・・・。」"
+translation = "[KANZAKI] \"I found her a week ago... She only settled down three days ago...\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The timeline matters for the later scratch reveal."
+
+[[entries]]
+id = "f0000-1512-sweet-breath-on-neck"
+file = "DISKA/F0000.MES"
+offset = 0x1512
+source_mode = 1
+target_mode = 2
+source = "神崎博士の甘い吐息が、あたしの首筋に掛かる。"
+translation = "Her sweet breath falls on my neck."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki confesses against Connie's skin, which is exactly what makes the next lines land."
+
+[[entries]]
+id = "f0000-1531-flinch"
+file = "DISKA/F0000.MES"
+offset = 0x1531
+source_mode = 1
+target_mode = 2
+source = "びくっ。"
+translation = "I flinch."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "びくっ converted from sound to action."
+
+[[entries]]
+id = "f0000-153a-going-limp"
+file = "DISKA/F0000.MES"
+offset = 0x153a
+source_mode = 1
+target_mode = 2
+source = "肩から力が抜けて、ふにゃりとなってしまう。"
+translation = "The strength drains from my shoulders and I go limp."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "ふにゃり is the boneless slump, pre-reaction."
+
+[[entries]]
+id = "f0000-1557-connie-um-so"
+file = "DISKA/F0000.MES"
+offset = 0x1557
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ぁの・・・。それで・・・。」"
+translation = "[CONNIE] \"Um... So...\""
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie prompts for the rest of the sentence she already suspects."
+
+[[entries]]
+id = "f0000-1570-i-slept-with-her"
+file = "DISKA/F0000.MES"
+offset = 0x1570
+source_mode = 1
+target_mode = 2
+source = "【神崎】「うん。抱いてきたわ。・・・・・・。」"
+translation = "[KANZAKI] \"Yes. I slept with her. ...\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "抱いてきた is the sexual 抱く plus completed-trip きた; 'slept with her' matches the directness. Kanzaki does not euphemize, and the English must not either."
+
+[[entries]]
+id = "f0000-158c-connie-shock-marks"
+file = "DISKA/F0000.MES"
+offset = 0x158c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（！！！）"
+translation = "[CONNIE] (!!!)"
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Pure reaction record kept as-is."
+
+[[entries]]
+id = "f0000-159b-connie-ah-long"
+file = "DISKA/F0000.MES"
+offset = 0x159b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Ah...)"
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The long pause is the shock landing; compressed per policy."
+
+[[entries]]
+id = "f0000-15bb-expected-but-shocked"
+file = "DISKA/F0000.MES"
+offset = 0x15bb
+source_mode = 1
+target_mode = 2
+source = "予測していたとはいえ、ショックだった。あたしは複雑な気持ちになった。"
+translation = "I'd half expected it, but it was still a shock. My feelings tangled."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "複雑な気持ち as 'tangled feelings' keeps the unnamed jealousy-sisterhood mix."
+
+[[entries]]
+id = "f0000-15e8-kanzaki-never-thoughtless"
+file = "DISKA/F0000.MES"
+offset = 0x15e8
+source_mode = 1
+target_mode = 2
+source = "神崎博士は軽はずみなことはしない。よほど気にいったのかと思ってしまう。"
+translation = "Dr. Kanzaki never does anything thoughtless. She must truly care for the girl."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's respect for Kanzaki survives the jealousy, which is the point of the beat."
+
+[[entries]]
+id = "f0000-1611-jealousy-and-a-sister"
+file = "DISKA/F0000.MES"
+offset = 0x1611
+source_mode = 1
+target_mode = 2
+source = "『神崎博士を奪われた』という嫉妬と、『妹ができる』という気持ちが混ざっていた。"
+translation = "Jealousy--'she's taken Dr. Kanzaki from me'--mixed with the thought, 'I'm gaining a little sister.'"
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The two quoted feelings stay balanced; neither wins yet."
+
+[[entries]]
+id = "f0000-1642-presses-her-breasts"
+file = "DISKA/F0000.MES"
+offset = 0x1642
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、むぎゅっ、と胸を強く押し付けてくる。"
+translation = "She presses her breasts firmly against me."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "むぎゅっ reduced to the plain action; Kanzaki answers jealousy with closeness."
+
+[[entries]]
+id = "f0000-1663-i-want-to-love-you-both"
+file = "DISKA/F0000.MES"
+offset = 0x1663
+source_mode = 1
+target_mode = 2
+source = "【神崎】「嫉妬してるの？　・・・私はコニー、マーナ、共に愛したいの。」"
+translation = "[KANZAKI] \"Are you jealous? ...I want to love you both--you and Marna.\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "共に愛したい is the brief's flagged category-collapse: lover and sister framed as one love. Kept as written."
+
+[[entries]]
+id = "f0000-168e-steals-my-kiss"
+file = "DISKA/F0000.MES"
+offset = 0x168e
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしのキスを奪う。"
+translation = "Dr. Kanzaki claims my lips."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "キスを奪う is the stock idiom; 'claims my lips' keeps its assertiveness."
+
+[[entries]]
+id = "f0000-16a8-connie-ah-exclaim"
+file = "DISKA/F0000.MES"
+offset = 0x16a8
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ・・・・・・・・・！」"
+translation = "[CONNIE] \"Ah...!\""
+speaker = "コニー"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-16c0-kanzaki-listen"
+file = "DISKA/F0000.MES"
+offset = 0x16c0
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー、聞いて・・・・・・。」"
+translation = "[KANZAKI] \"Connie, listen...\""
+speaker = "神崎"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Transition into the flashback."
+
+[[entries]]
+id = "f0000-16d9-she-told-me-how-they-met"
+file = "DISKA/F0000.MES"
+offset = 0x16d9
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、『マーナ』という女の子との出会いをあたしに話してくれた。"
+translation = "Dr. Kanzaki told me how she met the girl called Marna."
+speaker = "Connie"
+context = "Kanzaki reveals she adopted Marna, a mutant girl, as Connie's little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Explicit handoff into Kanzaki's first-person flashback."
+
+[[entries]]
+id = "f0000-177e-too-weak-to-move"
+file = "DISKA/F0000.MES"
+offset = 0x177e
+source_mode = 1
+target_mode = 2
+source = "マーナを見つけたとき、動けないほど弱っていたわ。"
+translation = "When I found Marna, she was too weak to move."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki narrates the flashback in first person; speaker follows the established Kaori Kanzaki narration convention."
+
+[[entries]]
+id = "f0000-179b-tried-to-flee"
+file = "DISKA/F0000.MES"
+offset = 0x179b
+source_mode = 1
+target_mode = 2
+source = "体が衰弱しきって、ヒトである私が近付いたらそれでもなお、動けない体で逃げようとしていたの・・・。"
+translation = "Her body was wasted away, yet when I--a human--approached, she still tried to flee on limbs that couldn't move..."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "ヒトである私 marks the species gap Kanzaki names herself; dashes keep the parenthetical."
+
+[[entries]]
+id = "f0000-17d5-cornered-she-fought"
+file = "DISKA/F0000.MES"
+offset = 0x17d5
+source_mode = 1
+target_mode = 2
+source = "ビルの間の袋小路に逃げ込んだ所で、マーナは抵抗をした・・・。"
+translation = "Cornered in a dead end between the buildings, Marna fought back..."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "抵抗 is desperate self-defense, not aggression."
+
+[[entries]]
+id = "f0000-1801-marna-get-away"
+file = "DISKA/F0000.MES"
+offset = 0x1801
+source_mode = 1
+target_mode = 2
+source = "【女の子】「いやああああ！！！　あっち行ってぇぇぇぇぇっ！！！」"
+translation = "[GIRL] \"Noooo!!! Get away from me!!!\""
+speaker = "女の子"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Screaming keeps its exclamation marks per the melodrama exception; the label is 【女の子】 because Marna is not yet named."
+
+[[entries]]
+id = "f0000-1827-there-its-all-right"
+file = "DISKA/F0000.MES"
+offset = 0x1827
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ほら、大丈夫。怖くないよ・・・。」"
+translation = "[KANZAKI] \"There, it's all right. Don't be afraid...\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki drops her usual わ speech for plain よ with the frightened girl; the English softens to match."
+
+[[entries]]
+id = "f0000-1843-marna-no-no-no"
+file = "DISKA/F0000.MES"
+offset = 0x1843
+source_mode = 1
+target_mode = 2
+source = "【女の子】「イヤ、イヤイヤ！！！」"
+translation = "[GIRL] \"No, no, no!!!\""
+speaker = "女の子"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Panic repetition kept."
+
+[[entries]]
+id = "f0000-1859-claws-raked"
+file = "DISKA/F0000.MES"
+offset = 0x1859
+source_mode = 1
+target_mode = 2
+source = "がりっ！！！"
+translation = "Her claws raked me."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "がりっ converted from sound to action; the wound becomes the cut Kanzaki shows Connie a week later."
+
+[[entries]]
+id = "f0000-1864-kanzaki-agh"
+file = "DISKA/F0000.MES"
+offset = 0x1864
+source_mode = 1
+target_mode = 2
+source = "【神崎】「痛ッ！！！」"
+translation = "[KANZAKI] \"Agh!!!\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "A rare yelp of pain from the composed Kanzaki."
+
+[[entries]]
+id = "f0000-1875-marna-ah"
+file = "DISKA/F0000.MES"
+offset = 0x1875
+source_mode = 1
+target_mode = 2
+source = "【女の子】「あっ・・・・・・。」"
+translation = "[GIRL] \"Ah...\""
+speaker = "女の子"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "She registers what she has done."
+
+[[entries]]
+id = "f0000-188a-its-all-right"
+file = "DISKA/F0000.MES"
+offset = 0x188a
+source_mode = 1
+target_mode = 2
+source = "【神崎】「だ・・・大丈夫。大丈夫よ。」"
+translation = "[KANZAKI] \"I-it's all right. It's all right.\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "The stutter shows the pain she is hiding for Marna's sake."
+
+[[entries]]
+id = "f0000-1943-am-i-not-enough"
+file = "DISKA/F0000.MES"
+offset = 0x1943
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・そう、落ち着いて話を聞いて・・・。私と一緒に来て欲しいの。私じゃだめかな・・・？」"
+translation = "[KANZAKI] \"...That's it. Calm down and listen... I want you to come with me. Am I not good enough...?\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "私じゃだめかな is self-deprecating softness toward a child; 'am I not good enough' keeps her vulnerability."
+
+[[entries]]
+id = "f0000-197b-take-you-in"
+file = "DISKA/F0000.MES"
+offset = 0x197b
+source_mode = 1
+target_mode = 2
+source = "【神崎】「大丈夫。あなたを引きとって育ててあげたいの・・・・・・。」"
+translation = "[KANZAKI] \"It's all right. I want to take you in and raise you...\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "引きとって育ててあげたい is the adoption offer in plain words."
+
+[[entries]]
+id = "f0000-19a3-marna-i-i"
+file = "DISKA/F0000.MES"
+offset = 0x19a3
+source_mode = 1
+target_mode = 2
+source = "【女の子】「私・・・・・・、私・・・・・・。」"
+translation = "[GIRL] \"I... I...\""
+speaker = "女の子"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Overwhelmed stammer."
+
+[[entries]]
+id = "f0000-19bf-i-am-kaori-kanzaki"
+file = "DISKA/F0000.MES"
+offset = 0x19bf
+source_mode = 1
+target_mode = 2
+source = "【神崎】「私が貴方を守ってあげる。・・・私は神崎香織。あなたの名前は？」"
+translation = "[KANZAKI] \"I'll protect you. ...My name is Kaori Kanzaki. What's yours?\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Her public full name is safe to render here; the reveal-protection rules concern the younger daughter's name slot, not Kanzaki's own name."
+
+[[entries]]
+id = "f0000-19ef-im-marna"
+file = "DISKA/F0000.MES"
+offset = 0x19ef
+source_mode = 1
+target_mode = 2
+source = "【女の子】「わたし・・・、マーナ・・・・・・・・・。」"
+translation = "[GIRL] \"I'm... Marna...\""
+speaker = "女の子"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "The label stays 【女の子】 through the naming; the engine swaps to 【マーナ】 only afterward."
+
+[[entries]]
+id = "f0000-1a0f-staring-at-my-wound"
+file = "DISKA/F0000.MES"
+offset = 0x1a0f
+source_mode = 1
+target_mode = 2
+source = "マーナは私の傷を見ている。"
+translation = "Marna stares at my wound."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-1a21-blood-runs-down"
+file = "DISKA/F0000.MES"
+offset = 0x1a21
+source_mode = 1
+target_mode = 2
+source = "血が、腕をつたって流れる。"
+translation = "Blood runs down my arm."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-1a36-my-arm-hurts"
+file = "DISKA/F0000.MES"
+offset = 0x1a36
+source_mode = 1
+target_mode = 2
+source = "腕が痛い。"
+translation = "It hurts."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "The blunt three-beat wound description sets up the comparison next."
+
+[[entries]]
+id = "f0000-1a42-compared-to-her-wounds"
+file = "DISKA/F0000.MES"
+offset = 0x1a42
+source_mode = 1
+target_mode = 2
+source = "【神崎】（だけど・・・、この子が今まで受けてきた、体の傷と心の傷に比べたら・・・。）"
+translation = "[KANZAKI] (But... compared to the wounds this girl has carried, in body and in heart...)"
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki's flashback interiority uses the labeled-thought form; body/heart wounds is the source's own pairing."
+
+[[entries]]
+id = "f0000-1a75-sorry-miss"
+file = "DISKA/F0000.MES"
+offset = 0x1a75
+source_mode = 1
+target_mode = 2
+source = "【マーナ】「ごめんなさい・・・。ごめんなさい、おねえさん・・・・・・・・・。」"
+translation = "[MARNA] \"I'm sorry... I'm so sorry, miss...\""
+speaker = "マーナ"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "おねえさん to a stranger renders as 'miss'; the kinship-weighted sister forms are reserved for the Takano household."
+
+[[entries]]
+id = "f0000-1aa3-apologizes-again-and-again"
+file = "DISKA/F0000.MES"
+offset = 0x1aa3
+source_mode = 1
+target_mode = 2
+source = "マーナは、何度も何度も謝る。"
+translation = "Marna apologizes over and over."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-1ab7-i-smile-through-the-pain"
+file = "DISKA/F0000.MES"
+offset = 0x1ab7
+source_mode = 1
+target_mode = 2
+source = "私は痛みを我慢して笑顔を見せる。"
+translation = "I bear the pain and smile for her."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-1acf-a-smile-is-best"
+file = "DISKA/F0000.MES"
+offset = 0x1acf
+source_mode = 1
+target_mode = 2
+source = "心に傷を負ったミュータントの女の子。感情をほぐすには笑顔を見せてあげるのが一番だ。"
+translation = "A mutant girl with a wounded heart. The best way to loosen her fear is to show her a smile."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "感情をほぐす is easing her locked-up feelings; 'loosen her fear' names what Kanzaki is actually treating."
+
+[[entries]]
+id = "f0000-1b01-stroke-her-gently"
+file = "DISKA/F0000.MES"
+offset = 0x1b01
+source_mode = 1
+target_mode = 2
+source = "私はマーナをそろりそろりと撫でる。"
+translation = "I reach out and stroke her, slowly, gently."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "そろりそろり is the cautious pace of approaching a frightened animal; the doubled adverb carries it."
+
+[[entries]]
+id = "f0000-1b17-no-longer-refused"
+file = "DISKA/F0000.MES"
+offset = 0x1b17
+source_mode = 1
+target_mode = 2
+source = "マーナは、もう私が触れるのを拒まなかった。"
+translation = "Marna no longer refused my touch."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "拒まなかった is literal here; the rescue consent arc is the flashback's whole point."
+
+[[entries]]
+id = "f0000-1b32-disinfect-later"
+file = "DISKA/F0000.MES"
+offset = 0x1b32
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・平気よ。後で消毒しておくから・・・。」"
+translation = "[KANZAKI] \"...I'm fine. I'll disinfect it later...\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Practical calm to reassure Marna."
+
+[[entries]]
+id = "f0000-1b56-live-with-me"
+file = "DISKA/F0000.MES"
+offset = 0x1b56
+source_mode = 1
+target_mode = 2
+source = "【神崎】「今日から私と生活しましょう。私の家にはね、あなたと同じミュータントの女の子がいるのよ。」"
+translation = "[KANZAKI] \"Starting today, you'll live with me. You know, there's a mutant girl just like you at my house.\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "The unnamed housemate is Connie; the reveal lands on the reader, not on Marna."
+
+[[entries]]
+id = "f0000-1b91-marna-miss-miss"
+file = "DISKA/F0000.MES"
+offset = 0x1b91
+source_mode = 1
+target_mode = 2
+source = "【マーナ】「おねえさん・・・・・・、おねえさん・・・・・・！！！」"
+translation = "[MARNA] \"Miss... miss...!!!\""
+speaker = "マーナ"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "The repeated address carries the dam breaking."
+
+[[entries]]
+id = "f0000-1bf7-burst-into-tears"
+file = "DISKA/F0000.MES"
+offset = 0x1bf7
+source_mode = 1
+target_mode = 2
+source = "マーナは私の腕の中に飛び込んで、わあっ、と泣き出した。"
+translation = "Marna threw herself into my arms and burst into tears."
+speaker = "Kaori Kanzaki"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "わあっ converted from sound to action."
+
+[[entries]]
+id = "f0000-1c1a-youre-safe-now"
+file = "DISKA/F0000.MES"
+offset = 0x1c1a
+source_mode = 1
+target_mode = 2
+source = "【神崎】「辛かったのね・・・。もう大丈夫。私が守ってあげる。」"
+translation = "[KANZAKI] \"It's been so hard, hasn't it... You're safe now. I'll protect you.\""
+speaker = "神崎"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "守ってあげる echoes her self-introduction promise; the repetition is deliberate."
+
+[[entries]]
+id = "f0000-1c40-marna-waaah"
+file = "DISKA/F0000.MES"
+offset = 0x1c40
+source_mode = 1
+target_mode = 2
+source = "【マーナ】「ひくっ、ひくっ、わぁぁぁぁぁん！！！！！！！！」"
+translation = "[MARNA] \"*hic*... *hic*... Waaah!!!\""
+speaker = "マーナ"
+context = "Flashback: Kanzaki finds, calms, and adopts the wounded Marna."
+status = "qa-ready"
+box_width = 61
+notes = "Crying keeps the melodrama-level exclamation per policy; sob hiccups rendered as *hic*."
+
+[[entries]]
+id = "f0000-1c78-connie-silent"
+file = "DISKA/F0000.MES"
+offset = 0x1c78
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Silent beat after the flashback ends."
+
+[[entries]]
+id = "f0000-1c8e-listened-in-silence"
+file = "DISKA/F0000.MES"
+offset = 0x1c8e
+source_mode = 1
+target_mode = 2
+source = "あたしは黙って聞いていた。保護のなくなったミュータントの行く末は決まっているからだ。"
+translation = "I listened in silence. The fate of a mutant without a guardian is already decided."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "決まっている is grim certainty from Connie's hunter years."
+
+[[entries]]
+id = "f0000-1cc3-revenge-or-toyed-with"
+file = "DISKA/F0000.MES"
+offset = 0x1cc3
+source_mode = 1
+target_mode = 2
+source = "生き延びてヒトを襲って復讐をするか、・・・玩ばれて死ぬか。"
+translation = "Survive and take revenge on the humans, or... be toyed with until she dies."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "玩ばれて implies sexual use without stating it; 'toyed with' keeps the euphemism and the cruelty."
+
+[[entries]]
+id = "f0000-1cef-the-cut-a-week-ago"
+file = "DISKA/F0000.MES"
+offset = 0x1cef
+source_mode = 1
+target_mode = 2
+source = "【神崎】「１週間前、私が腕に切傷を作って帰ってきたこと、あったでしょう？」"
+translation = "[KANZAKI] \"A week ago, I came home with a cut on my arm. Do you remember?\""
+speaker = "神崎"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Ties the flashback's scratch to something Connie already saw."
+
+[[entries]]
+id = "f0000-1d20-i-remembered"
+file = "DISKA/F0000.MES"
+offset = 0x1d20
+source_mode = 1
+target_mode = 2
+source = "あたしは思い出した。"
+translation = "I remembered."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-1d2f-never-asked-about-it"
+file = "DISKA/F0000.MES"
+offset = 0x1d2f
+source_mode = 1
+target_mode = 2
+source = "神崎博士も傷について、特に何も言わなかったし、実験か何かで傷ができたのかと思ったので、何も聞かなかった。"
+translation = "She never explained the cut, and I'd assumed it came from some experiment, so I never asked."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The mutual silence explains why the Marna story stayed hidden for a week."
+
+[[entries]]
+id = "f0000-1d6b-she-scratched-me"
+file = "DISKA/F0000.MES"
+offset = 0x1d6b
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・マーナを保護するとき、引っ掻かれたの。幸い、私の説得を聞いてくれたからよかったわ。」"
+translation = "[KANZAKI] \"...Marna scratched me when I took her in. I'm glad she listened to my persuasion in the end.\""
+speaker = "神崎"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "説得を聞いてくれた downplays the alley terror into a negotiation, which is very Kanzaki."
+
+[[entries]]
+id = "f0000-1e97-faint-jealousy"
+file = "DISKA/F0000.MES"
+offset = 0x1e97
+source_mode = 1
+target_mode = 2
+source = "あたしの心は、かすかな嫉妬と、妹ができる・・・という今までにない複雑な心境に陥っていた。"
+translation = "My heart sank into something unfamiliar--faint jealousy mixed with the thought of gaining a little sister."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Restates the 0x1611 mix as Connie's settled self-diagnosis."
+
+[[entries]]
+id = "f0000-1ecf-how-do-i-act"
+file = "DISKA/F0000.MES"
+offset = 0x1ecf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（妹・・・か・・・・・・・・・。どう接したらいいのかな・・・・・・・・・。）"
+translation = "[CONNIE] (A little sister, huh... How am I supposed to act around her...?)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie is three; she has never had a family role to rehearse."
+
+[[entries]]
+id = "f0000-1f24-hear-her-out"
+file = "DISKA/F0000.MES"
+offset = 0x1f24
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まだ、・・・話を聞こう。）"
+translation = "[CONNIE] (Not yet... Let's hear her out.)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "まだ sets aside the jealousy for later, not forever."
+
+[[entries]]
+id = "f0000-1f45-another-mutants-scent-thought"
+file = "DISKA/F0000.MES"
+offset = 0x1f45
+source_mode = 1
+target_mode = 2
+source = "【コニー】（他のミュータントの臭いがする・・・・・・・・・。）"
+translation = "[CONNIE] (She smells of another mutant...)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The thought form of the spoken 0x1186 line; same scent finding, now dwelled on."
+
+[[entries]]
+id = "f0000-1f6a-not-my-scent"
+file = "DISKA/F0000.MES"
+offset = 0x1f6a
+source_mode = 1
+target_mode = 2
+source = "神崎博士から、あたし以外のミュータントの臭いがした。"
+translation = "The mutant scent on Dr. Kanzaki wasn't mine."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Tightened to the possessive reading Connie is embarrassed by."
+
+[[entries]]
+id = "f0000-1f8b-not-just-meeting"
+file = "DISKA/F0000.MES"
+offset = 0x1f8b
+source_mode = 1
+target_mode = 2
+source = "神崎博士が、ただ、ミュータントに会ってきた臭いじゃない。"
+translation = "It wasn't the smell of merely meeting a mutant."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's nose quantifies intimacy; the next line completes it."
+
+[[entries]]
+id = "f0000-1fad-long-hours-together"
+file = "DISKA/F0000.MES"
+offset = 0x1fad
+source_mode = 1
+target_mode = 2
+source = "もっと長い時間、一緒にいた臭いの強さだ。"
+translation = "It was the stronger scent of spending long hours together."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Scent-strength as evidence; kept concrete."
+
+[[entries]]
+id = "f0000-1fca-connie-dr-kanzaki-short"
+file = "DISKA/F0000.MES"
+offset = 0x1fca
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Same rendering as the longer name-thoughts; only the pause length differs."
+
+[[entries]]
+id = "f0000-1fde-never-thought-i-owned-her"
+file = "DISKA/F0000.MES"
+offset = 0x1fde
+source_mode = 1
+target_mode = 2
+source = "もちろん、神崎博士をあたしが独占できるなんて思っていない。"
+translation = "Of course, I never thought I could keep her all to myself."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "独占 is possessiveness Connie disavows while feeling it."
+
+[[entries]]
+id = "f0000-2002-connie-but-thought"
+file = "DISKA/F0000.MES"
+offset = 0x2002
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だけど・・・・・・。）"
+translation = "[CONNIE] (But...)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The disavowal fails in one word."
+
+[[entries]]
+id = "f0000-2018-it-bothers-me"
+file = "DISKA/F0000.MES"
+offset = 0x2018
+source_mode = 1
+target_mode = 2
+source = "あたし以外のミュータントと一緒に居たのは・・・。気になる。"
+translation = "Her spending that long with another mutant... bothers me."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "気になる repeated from 0x11d7; 'bothers me' kept identical in both."
+
+[[entries]]
+id = "f0000-205a-is-this-jealousy"
+file = "DISKA/F0000.MES"
+offset = 0x205a
+source_mode = 1
+target_mode = 2
+source = "これも嫉妬だろうか。"
+translation = "Is this jealousy, too?"
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie has no native vocabulary for the feeling; the question is sincere."
+
+[[entries]]
+id = "f0000-206b-restless"
+file = "DISKA/F0000.MES"
+offset = 0x206b
+source_mode = 1
+target_mode = 2
+source = "あたしはそわそわとした。"
+translation = "I grew restless."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-207c-kanzaki-you-seem-restless"
+file = "DISKA/F0000.MES"
+offset = 0x207c
+source_mode = 1
+target_mode = 2
+source = "【神崎】「どうしたの、コニー・・・・・・。落ち着かないわね・・・。」"
+translation = "[KANZAKI] \"What is it, Connie...? You seem restless...\""
+speaker = "神崎"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki mirrors Connie's own 落ち着かない from the scene's start."
+
+[[entries]]
+id = "f0000-20bc-take-the-plunge"
+file = "DISKA/F0000.MES"
+offset = 0x20bc
+source_mode = 1
+target_mode = 2
+source = "あたしは思い切って聞いてみることにした。"
+translation = "I decided to take the plunge and ask."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The question itself is elided; Kanzaki's next line answers it."
+
+[[entries]]
+id = "f0000-20df-kanzaki-is-that-all-right"
+file = "DISKA/F0000.MES"
+offset = 0x20df
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー。いいわね・・・？」"
+translation = "[KANZAKI] \"Connie. You're all right with this...?\""
+speaker = "神崎"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "いいわね here asks Connie's acceptance of Marna, not the earlier teasing 'like that?'; the shift is contextual."
+
+[[entries]]
+id = "f0000-20f6-couldnt-abandon-her"
+file = "DISKA/F0000.MES"
+offset = 0x20f6
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、そのマーナという女の子を見捨てることができなかったんだろう。"
+translation = "Dr. Kanzaki simply couldn't abandon that girl, Marna."
+speaker = "Connie"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Connie arrives at the kindest reading, and it is the correct one."
+
+[[entries]]
+id = "f0000-2120-i-belong-to-her"
+file = "DISKA/F0000.MES"
+offset = 0x2120
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしに向けられた優しさが変わらない限り、あたしは神崎博士のもの・・・。）"
+translation = "[CONNIE] (As long as her kindness toward me doesn't change, I belong to Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "Pairs with 0x0e42; belonging is Connie's chosen frame, not Kanzaki's demand."
+
+[[entries]]
+id = "f0000-2153-my-little-sister"
+file = "DISKA/F0000.MES"
+offset = 0x2153
+source_mode = 1
+target_mode = 2
+source = "【コニー】「うん・・・・・・。妹・・・だね。あたしの妹・・・。楽しみです・・・。」"
+translation = "[CONNIE] \"Yeah... A little sister... My little sister. ...I'm looking forward to it...\""
+speaker = "コニー"
+context = "Connie works through jealousy and accepts Marna as her little sister."
+status = "qa-ready"
+box_width = 61
+notes = "The jealousy resolves into anticipation aloud; 楽しみです keeps her polite register with Kanzaki."
+
+[[entries]]
+id = "f0000-2244-kanzaki-watches"
+file = "DISKA/F0000.MES"
+offset = 0x2244
+source_mode = 1
+target_mode = 2
+source = "神崎博士があたしを見ている。"
+translation = "Dr. Kanzaki is watching me."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2257-splitting-the-love"
+file = "DISKA/F0000.MES"
+offset = 0x2257
+source_mode = 1
+target_mode = 2
+source = "【コニー】（妹ができて、愛情が分割されるってこういう感じがするのかな・・・・・・・・・。）"
+translation = "[CONNIE] (So this is what it feels like when a little sister splits your share of love...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Connie frames jealousy as a math of love; the naïve arithmetic is her voice."
+
+[[entries]]
+id = "f0000-2289-lost-in-thought"
+file = "DISKA/F0000.MES"
+offset = 0x2289
+source_mode = 1
+target_mode = 2
+source = "あたしが考え込んでいると、博士が声をかけてくる。"
+translation = "While I was lost in thought, the doctor spoke."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-22a7-lets-enjoy-ourselves"
+file = "DISKA/F0000.MES"
+offset = 0x22a7
+source_mode = 1
+target_mode = 2
+source = "【神崎】「さ、他のことを考えないで。・・・楽しみましょ。」"
+translation = "[KANZAKI] \"Come now, don't think about anything else. ...Let's enjoy ourselves.\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki gently closes the Marna topic and reopens the intimacy."
+
+[[entries]]
+id = "f0000-22cc-playful-scolding"
+file = "DISKA/F0000.MES"
+offset = 0x22cc
+source_mode = 1
+target_mode = 2
+source = "『めっ！』とあたしを叱る。"
+translation = "She scolds me with a playful 'Hey, now.'"
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "めっ is a light scolding interjection, not anger; the quoted rendering keeps its shape."
+
+[[entries]]
+id = "f0000-22df-leave-my-body-to-her"
+file = "DISKA/F0000.MES"
+offset = 0x22df
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士に体を任せることにして、緊張した体から力を抜いた。"
+translation = "I decided to leave my body to Dr. Kanzaki, and let the tension go."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "体を任せる is Connie's explicit internal decision to yield, restating the menu verb as consent."
+
+[[entries]]
+id = "f0000-230a-kanzaki-mmh"
+file = "DISKA/F0000.MES"
+offset = 0x230a
+source_mode = 1
+target_mode = 2
+source = "【神崎】「うふ・・・。」"
+translation = "[KANZAKI] \"Mmh...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Pleased hum."
+
+[[entries]]
+id = "f0000-2394-tongue-nape-to-shoulder"
+file = "DISKA/F0000.MES"
+offset = 0x2394
+source_mode = 1
+target_mode = 2
+source = "神崎博士の柔らかな舌があたしのうなじから肩へと動く。"
+translation = "Her soft tongue slides from my nape to my shoulder."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-23b4-connie-nnh-ah-ah"
+file = "DISKA/F0000.MES"
+offset = 0x23b4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んんっ・・・、あ、あ、ぁぁっ、・・・ふぅぅぅっ・・・・・・。」"
+translation = "[CONNIE] \"Nnh... ah, ah, aah... haaah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; breaths compressed."
+
+[[entries]]
+id = "f0000-23de-kanzaki-connie-connie"
+file = "DISKA/F0000.MES"
+offset = 0x23de
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー・・・・・・、コニー・・・・・・。」"
+translation = "[KANZAKI] \"Connie... Connie...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Repeated name as endearment."
+
+[[entries]]
+id = "f0000-23fd-connie-ah-nnh-aah"
+file = "DISKA/F0000.MES"
+offset = 0x23fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、んっ、ああっ・・・！」"
+translation = "[CONNIE] \"Ah, nnh, aah...!\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2416-one-weak-spot-after-another"
+file = "DISKA/F0000.MES"
+offset = 0x2416
+source_mode = 1
+target_mode = 2
+source = "神崎博士は次々にあたしの弱点を攻めてくる。"
+translation = "Dr. Kanzaki works one weak spot after another."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "攻める per the menu glossary: 'works/presses,' never 'attacks,' in intimacy contexts."
+
+[[entries]]
+id = "f0000-2434-connie-no-no"
+file = "DISKA/F0000.MES"
+offset = 0x2434
+source_mode = 1
+target_mode = 2
+source = "【コニー】「嫌・・・・・・、イヤ・・・・・・。」"
+translation = "[CONNIE] \"No... no...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "嫌/イヤ stay literal as 'no'; the scene's consensual frame is carried by the narration, not by rewriting her words."
+
+[[entries]]
+id = "f0000-2451-body-bucks"
+file = "DISKA/F0000.MES"
+offset = 0x2451
+source_mode = 1
+target_mode = 2
+source = "あたしの体は何度も何度も跳ねる。"
+translation = "My body bucks again and again."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2467-connie-hnggh"
+file = "DISKA/F0000.MES"
+offset = 0x2467
+source_mode = 1
+target_mode = 2
+source = "【コニー】「っ・・・くぅーん・・・・・・。」"
+translation = "[CONNIE] \"Nnh... hnggh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "くぅーん is a stifled whine; the nasal English form keeps it wordless."
+
+[[entries]]
+id = "f0000-2482-a-sweet-cry-escapes"
+file = "DISKA/F0000.MES"
+offset = 0x2482
+source_mode = 1
+target_mode = 2
+source = "声を出すまいと我慢していたのに、ふっと意識が緩んで甘い声が出てしまう。"
+translation = "I was holding my voice back, but my focus slipped and a sweet cry escaped."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The held-voice motif loses its first battle here."
+
+[[entries]]
+id = "f0000-24ad-connie-aah-nnh-mmh"
+file = "DISKA/F0000.MES"
+offset = 0x24ad
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あぁっ、んんっ、むっ・・・・・・んんっ・・・。」"
+translation = "[CONNIE] \"Aah, nnh, mmh... nnh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-24d0-seals-my-lips"
+file = "DISKA/F0000.MES"
+offset = 0x24d0
+source_mode = 1
+target_mode = 2
+source = "あたしの唇を、神崎博士が塞ぐ。"
+translation = "Dr. Kanzaki seals my lips with hers."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-24e5-connie-nnh-mmh-haah"
+file = "DISKA/F0000.MES"
+offset = 0x24e5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んんっ、・・・あむっ・・・・・・・・・、はふぅ・・・。」"
+translation = "[CONNIE] \"Nnh... mmh... haah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Muffled against the kiss; あむっ reduced to a nasal vocalization."
+
+[[entries]]
+id = "f0000-250c-kanzaki-i-love-you"
+file = "DISKA/F0000.MES"
+offset = 0x250c
+source_mode = 1
+target_mode = 2
+source = "【神崎】「好き・・・。コニー・・・。」"
+translation = "[KANZAKI] \"I love you... Connie...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "好き mid-scene is love, not mere liking; Connie answers with the same word at 0x3d77."
+
+[[entries]]
+id = "f0000-2524-kiss-on-my-breast"
+file = "DISKA/F0000.MES"
+offset = 0x2524
+source_mode = 1
+target_mode = 2
+source = "胸へのキス。"
+translation = "A kiss on my breast."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Fragment record kept as a fragment."
+
+[[entries]]
+id = "f0000-25a8-soft-kiss-sound"
+file = "DISKA/F0000.MES"
+offset = 0x25a8
+source_mode = 1
+target_mode = 2
+source = "ちゅっ・・・。"
+translation = "A soft kiss..."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "ちゅっ converted from sound to its action, kept as a fragment for pacing."
+
+[[entries]]
+id = "f0000-25b4-tongue-loves-my-breasts"
+file = "DISKA/F0000.MES"
+offset = 0x25b4
+source_mode = 1
+target_mode = 2
+source = "あたしの胸を柔らかな舌が愛してくれる。"
+translation = "Her soft tongue lavishes love on my breasts."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "愛してくれる again fuses the physical and emotional."
+
+[[entries]]
+id = "f0000-25cc-connie-ah-mmmhh"
+file = "DISKA/F0000.MES"
+offset = 0x25cc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ぁ・・・・・・、ぅぅんんっ・・・・・・。」"
+translation = "[CONNIE] \"Ah... mmmhh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-25ec-kanzaki-mmh-reaction"
+file = "DISKA/F0000.MES"
+offset = 0x25ec
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んふっ・・・・・・。」"
+translation = "[KANZAKI] \"Mmh...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2601-strict-doctor-nuzzles"
+file = "DISKA/F0000.MES"
+offset = 0x2601
+source_mode = 1
+target_mode = 2
+source = "すりすりと、いつも厳しい博士があたしの胸に甘えてくれる。"
+translation = "The usually strict doctor nuzzles sweetly against my breast."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "すりすり converted to 'nuzzles'; the strict/sweet inversion is the beat."
+
+[[entries]]
+id = "f0000-2623-connie-haaahn"
+file = "DISKA/F0000.MES"
+offset = 0x2623
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はぁぁぁん、ふぅぅぅん・・・・・・。」"
+translation = "[CONNIE] \"Haaahn, haaah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; elongated vowels compressed."
+
+[[entries]]
+id = "f0000-2641-her-sweetness-makes-me-happy"
+file = "DISKA/F0000.MES"
+offset = 0x2641
+source_mode = 1
+target_mode = 2
+source = "あたしは甘えてくれることで嬉しくなった。"
+translation = "Her letting herself be sweet with me made me happy."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "甘えてくれる is Kanzaki depending on Connie for once; the reversal matters."
+
+[[entries]]
+id = "f0000-265b-glimpse-of-her-heart"
+file = "DISKA/F0000.MES"
+offset = 0x265b
+source_mode = 1
+target_mode = 2
+source = "神崎博士の心が、一瞬だけど見えることがある。"
+translation = "Sometimes, for an instant, I can glimpse Dr. Kanzaki's heart."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Touch-empathy limits stated again: instants only."
+
+[[entries]]
+id = "f0000-2677-loneliness-and-warmth"
+file = "DISKA/F0000.MES"
+offset = 0x2677
+source_mode = 1
+target_mode = 2
+source = "寂しさと絶望に包まれた感情と、それを乗り越えた強く、暖かな心と。"
+translation = "Feelings wrapped in loneliness and despair--and the strong, warm heart that overcame them."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Early foreshadowing of Kanzaki's buried past, glimpsed and not yet understood."
+
+[[entries]]
+id = "f0000-26a4-kanzaki-ammh"
+file = "DISKA/F0000.MES"
+offset = 0x26a4
+source_mode = 1
+target_mode = 2
+source = "【神崎】「あんむっ・・・、んっんっ・・・・・・。」"
+translation = "[KANZAKI] \"Ammh... nnh, nnh...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction with mouth occupied."
+
+[[entries]]
+id = "f0000-26c2-prods-my-nipple"
+file = "DISKA/F0000.MES"
+offset = 0x26c2
+source_mode = 1
+target_mode = 2
+source = "優しくあたしの乳首を舌でつついては、離れる。"
+translation = "She gently prods my nipple with her tongue, then pulls away."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "乳首 is 'nipple' throughout; the tease-withdraw rhythm resumes."
+
+[[entries]]
+id = "f0000-26dd-stopped-peeking"
+file = "DISKA/F0000.MES"
+offset = 0x26dd
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士の心を覗き見るのは止めた。"
+translation = "I stopped peeking into Dr. Kanzaki's heart."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voluntary restraint; the next line gives her reason."
+
+[[entries]]
+id = "f0000-26f8-must-never-read-a-loved-one"
+file = "DISKA/F0000.MES"
+offset = 0x26f8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・好きな人の心を読み取るなんて、しちゃいけないことだ・・・・・・・・・。）"
+translation = "[CONNIE] (...Reading the heart of the person you love is something you must never do...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Connie's ethic of her own power, stated once and held to."
+
+[[entries]]
+id = "f0000-272d-connie-aah-nn-haa"
+file = "DISKA/F0000.MES"
+offset = 0x272d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あぁっ、ん、ぅあ・・・。」"
+translation = "[CONNIE] \"Aah, nn, haa...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2745-arching-toward-her"
+file = "DISKA/F0000.MES"
+offset = 0x2745
+source_mode = 1
+target_mode = 2
+source = "あたしは離れる舌を求め、自然と胸を反らす。"
+translation = "Wanting her tongue back, my chest arches toward her on its own."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The body answers the withdrawal before Connie can."
+
+[[entries]]
+id = "f0000-2762-kanzaki-haaah-nnh"
+file = "DISKA/F0000.MES"
+offset = 0x2762
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・ふぅぅ・・・んんっ・・・。」"
+translation = "[KANZAKI] \"...Haaah... nnh...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2780-lips-close-around"
+file = "DISKA/F0000.MES"
+offset = 0x2780
+source_mode = 1
+target_mode = 2
+source = "神崎博士が、かぷっ、とあたしの乳首を食べるように唇で挟む。"
+translation = "Her lips close around my nipple as if to taste it."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "かぷっ and 食べるように reduced to a single tactile image."
+
+[[entries]]
+id = "f0000-27a5-connie-ah-hnnh"
+file = "DISKA/F0000.MES"
+offset = 0x27a5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・っ、うぅぅん・・・。」"
+translation = "[CONNIE] \"Ah... hnnh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-27bf-tingling-pleasure"
+file = "DISKA/F0000.MES"
+offset = 0x27bf
+source_mode = 1
+target_mode = 2
+source = "あたしの胸、乳首から、ぴりっ、と気持ちよさが走る。"
+translation = "A tingling pleasure shoots from my nipples through my chest."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "ぴりっ converted to the sensation it marks."
+
+[[entries]]
+id = "f0000-27df-kanzaki-so-soft"
+file = "DISKA/F0000.MES"
+offset = 0x27df
+source_mode = 1
+target_mode = 2
+source = "【神崎】「わぁ、柔らか・・・。」"
+translation = "[KANZAKI] \"Oh... so soft...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki's rare childlike わぁ."
+
+[[entries]]
+id = "f0000-27f4-warm-hands-kneading"
+file = "DISKA/F0000.MES"
+offset = 0x27f4
+source_mode = 1
+target_mode = 2
+source = "暖かな手が、あたしの胸を、むにむにと揉んでいる。"
+translation = "Warm hands knead my breasts."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "むにむに reduced to the plain action."
+
+[[entries]]
+id = "f0000-2814-connie-ah-ah-thought"
+file = "DISKA/F0000.MES"
+offset = 0x2814
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ・・あ・・・・。）"
+translation = "[CONNIE] (Ah... ah...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Internal reaction beat."
+
+[[entries]]
+id = "f0000-2829-connie-n-no-stutter"
+file = "DISKA/F0000.MES"
+offset = 0x2829
+source_mode = 1
+target_mode = 2
+source = "【コニー】「だっだめで・・・す・・・・・・。」"
+translation = "[CONNIE] \"N-no... we can't...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The stutter on だめ kept; polite です hangs on through the protest, marking it as Connie's embarrassed script."
+
+[[entries]]
+id = "f0000-2845-kanzaki-mhmhm-laugh"
+file = "DISKA/F0000.MES"
+offset = 0x2845
+source_mode = 1
+target_mode = 2
+source = "【神崎】「うふふふ。」"
+translation = "[KANZAKI] \"Mhmhm.\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The laugh answers the protest without honoring it; source dynamic preserved."
+
+[[entries]]
+id = "f0000-2855-kiss-kiss"
+file = "DISKA/F0000.MES"
+offset = 0x2855
+source_mode = 1
+target_mode = 2
+source = "ちゅっ、ちゅっ。"
+translation = "Kiss after kiss."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Repeated ちゅっ compressed into the plural action."
+
+[[entries]]
+id = "f0000-2862-connie-hah-nnnh"
+file = "DISKA/F0000.MES"
+offset = 0x2862
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ひぁっ・・・・・・んっっっ・・・。」"
+translation = "[CONNIE] \"Hah...! Nnnh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-287f-connie-no-thought-quiet"
+file = "DISKA/F0000.MES"
+offset = 0x287f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だめ・・・。）"
+translation = "[CONNIE] (No...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Internal no; see 0x0c67 for the standing refusal-word policy."
+
+[[entries]]
+id = "f0000-2891-knows-all-my-weak-spots"
+file = "DISKA/F0000.MES"
+offset = 0x2891
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしの弱いところを全部知っている。"
+translation = "Dr. Kanzaki knows all my weak spots."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Restates 0x0b65 as the scene's governing fact."
+
+[[entries]]
+id = "f0000-28ae-sucked-between-her-lips"
+file = "DISKA/F0000.MES"
+offset = 0x28ae
+source_mode = 1
+target_mode = 2
+source = "乳首を吸われて唇に挟まれると、あたしは自然と背を延ばし、声を出しそうになる。"
+translation = "When she sucks my nipple between her lips, my back straightens and a cry nearly escapes."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-28dd-connie-ah-ah-aah"
+file = "DISKA/F0000.MES"
+offset = 0x28dd
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、あっ、ぁっ・・・・・・。」"
+translation = "[CONNIE] \"Ah, ah, aah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-28f8-connie-no-thought-long"
+file = "DISKA/F0000.MES"
+offset = 0x28f8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（イヤ・・・・・・。）"
+translation = "[CONNIE] (No...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Internal no."
+
+[[entries]]
+id = "f0000-290d-hated-my-own-voice"
+file = "DISKA/F0000.MES"
+offset = 0x290d
+source_mode = 1
+target_mode = 2
+source = "自分のあの時の声を聞かれるのは嫌だった。"
+translation = "I hated hearing the sounds I make at times like this."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The embarrassment is about being heard, not about the act; the translation keeps that object clear."
+
+[[entries]]
+id = "f0000-2927-face-on-fire"
+file = "DISKA/F0000.MES"
+offset = 0x2927
+source_mode = 1
+target_mode = 2
+source = "特に最も親しい人に聞かれるのは、恥ずかしさで顔から火が出るようだ。"
+translation = "Especially by the person closest to me--the embarrassment sets my face on fire."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "顔から火が出る kept as fire imagery."
+
+[[entries]]
+id = "f0000-2953-she-knows-and-presses"
+file = "DISKA/F0000.MES"
+offset = 0x2953
+source_mode = 1
+target_mode = 2
+source = "そんな気持ちを知っているからこそ、神崎博士はあたしの声を聞こうと攻めてくる。"
+translation = "And because she knows that, Dr. Kanzaki presses on, determined to make me cry out."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "からこそ names the consent-play loop explicitly: the embarrassment is the point."
+
+[[entries]]
+id = "f0000-2980-kanzaki-so-cute"
+file = "DISKA/F0000.MES"
+offset = 0x2980
+source_mode = 1
+target_mode = 2
+source = "【神崎】「かわいい・・・コニー・・・。」"
+translation = "[KANZAKI] \"So cute... Connie...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2999-connie-ahn"
+file = "DISKA/F0000.MES"
+offset = 0x2999
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あんっ・・・。」"
+translation = "[CONNIE] \"Ahn...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-29ac-cannot-hold-back"
+file = "DISKA/F0000.MES"
+offset = 0x29ac
+source_mode = 1
+target_mode = 2
+source = "ぴくっぴくっ、と乳首から刺激が送られてきて、あたしは声を我慢できなくなる。"
+translation = "Twitches of stimulation run from my nipples, and I can no longer hold back my voice."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "ぴくっぴくっ converted to the twitching sensation."
+
+[[entries]]
+id = "f0000-29db-connie-no-aah"
+file = "DISKA/F0000.MES"
+offset = 0x29db
+source_mode = 1
+target_mode = 2
+source = "【コニー】「嫌ぁぁ・・・っ・・・。」"
+translation = "[CONNIE] \"No... aah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal collapsing into a moan; both halves kept."
+
+[[entries]]
+id = "f0000-29f2-overcome-with-embarrassment"
+file = "DISKA/F0000.MES"
+offset = 0x29f2
+source_mode = 1
+target_mode = 2
+source = "あたしは恥ずかしさでいっぱいになった。"
+translation = "I was overcome with embarrassment."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2a0a-wet-kiss-sound"
+file = "DISKA/F0000.MES"
+offset = 0x2a0a
+source_mode = 1
+target_mode = 2
+source = "ちゅぱっ。"
+translation = "A wet kiss."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "ちゅぱっ converted to the action, keeping the moisture."
+
+[[entries]]
+id = "f0000-2a14-pull-and-release"
+file = "DISKA/F0000.MES"
+offset = 0x2a14
+source_mode = 1
+target_mode = 2
+source = "あたしの乳首を口に含んで引っ張り、弾くように唇を離す。"
+translation = "She takes my nipple in her mouth, pulls, and lets it snap free from her lips."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2a37-soft-bounce"
+file = "DISKA/F0000.MES"
+offset = 0x2a37
+source_mode = 1
+target_mode = 2
+source = "乳房がむにゅっと揺れて、それが心地よい。"
+translation = "My breast bounces softly, and the feeling is sweet."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "乳房 is 'breast'; 心地よい is physical comfort."
+
+[[entries]]
+id = "f0000-2a53-connie-ah-aaaah"
+file = "DISKA/F0000.MES"
+offset = 0x2a53
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・、あぁぁぁ・・・・・・・・・。」"
+translation = "[CONNIE] \"Ah... aah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; vowel run compressed."
+
+[[entries]]
+id = "f0000-2a72-hips-jerk"
+file = "DISKA/F0000.MES"
+offset = 0x2a72
+source_mode = 1
+target_mode = 2
+source = "腰がぴくん、と跳ねる。"
+translation = "My hips jerk upward."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "ぴくん converted to the jerk."
+
+[[entries]]
+id = "f0000-2a85-cannot-stop-myself"
+file = "DISKA/F0000.MES"
+offset = 0x2a85
+source_mode = 1
+target_mode = 2
+source = "あたし自身も、もう止められない。"
+translation = "Even I can't stop myself anymore."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The narration states Connie's own unwillingness to stop, anchoring the scene's consent frame."
+
+[[entries]]
+id = "f0000-2a9b-connie-hh-ah"
+file = "DISKA/F0000.MES"
+offset = 0x2a9b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ひ・・・っ、あ・・・。」"
+translation = "[CONNIE] \"Hh... ah...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2ab2-kanzaki-so-sensitive"
+file = "DISKA/F0000.MES"
+offset = 0x2ab2
+source_mode = 1
+target_mode = 2
+source = "【神崎】「敏感ね・・・。コニーが感じてくれて嬉しいわ・・・。」"
+translation = "[KANZAKI] \"So sensitive... I'm happy you're feeling it, Connie...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki voices what the scene has shown."
+
+[[entries]]
+id = "f0000-2ad8-saying-that-she-kisses"
+file = "DISKA/F0000.MES"
+offset = 0x2ad8
+source_mode = 1
+target_mode = 2
+source = "そういうとキスをしてくれる。"
+translation = "Saying that, she kisses me."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2aeb-connie-ammh-hamh"
+file = "DISKA/F0000.MES"
+offset = 0x2aeb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あんむっ・・・、はむっ・・・・・・。」"
+translation = "[CONNIE] \"Ammh... mmh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Muffled against the kiss."
+
+[[entries]]
+id = "f0000-2b09-kanzaki-nnh-nnh"
+file = "DISKA/F0000.MES"
+offset = 0x2b09
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んっんんっ・・・・・・・・・。」"
+translation = "[KANZAKI] \"Nnh, nnh...\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2b3c-sweet-kiss-melts-me"
+file = "DISKA/F0000.MES"
+offset = 0x2b3c
+source_mode = 1
+target_mode = 2
+source = "神崎博士のキスは、甘く、あたしの心をとろけさせる。"
+translation = "Her kisses are sweet, melting my heart."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2b63-nibbling-while-fingers-tease"
+file = "DISKA/F0000.MES"
+offset = 0x2b63
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、乳房の周りを軽く噛みながら、指で刺激を与えてくる。"
+translation = "She nibbles lightly around my breast while her fingers tease me."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2b8e-connie-ah-haaah"
+file = "DISKA/F0000.MES"
+offset = 0x2b8e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっふぅぅ・・・、んっ・・・。」"
+translation = "[CONNIE] \"Ah, haaah... nnh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2ba9-close-as-we-are"
+file = "DISKA/F0000.MES"
+offset = 0x2ba9
+source_mode = 1
+target_mode = 2
+source = "気心が知れているとはいえ、行為中の声を聞かれるのは、やっぱり恥ずかしい。"
+translation = "Close as we are, having her hear my voice during the act is still embarrassing."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "気心が知れている states the established-relationship frame outright."
+
+[[entries]]
+id = "f0000-2bd5-bite-my-lip"
+file = "DISKA/F0000.MES"
+offset = 0x2bd5
+source_mode = 1
+target_mode = 2
+source = "あたしは唇を噛んで、声を出すまいと我慢する。"
+translation = "I bite my lip, determined not to make a sound."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Held-voice motif continues."
+
+[[entries]]
+id = "f0000-2bf1-kanzaki-hehe"
+file = "DISKA/F0000.MES"
+offset = 0x2bf1
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・ふふっ。」"
+translation = "[KANZAKI] \"...Hehe.\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The knowing laugh."
+
+[[entries]]
+id = "f0000-2c03-wont-let-you-hold-back"
+file = "DISKA/F0000.MES"
+offset = 0x2c03
+source_mode = 1
+target_mode = 2
+source = "博士の含み笑いが、『我慢させないわよ』というように聞こえる。"
+translation = "Her knowing laugh seems to say, 'I won't let you hold back.'"
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Connie interprets the laugh; the quoted gloss is her reading, kept distinct from speech."
+
+[[entries]]
+id = "f0000-2c28-connie-aah-nn"
+file = "DISKA/F0000.MES"
+offset = 0x2c28
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ぁぁ・・ん・・・・・・。」"
+translation = "[CONNIE] \"Aah... nn...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2c40-fingers-slip-in"
+file = "DISKA/F0000.MES"
+offset = 0x2c40
+source_mode = 1
+target_mode = 2
+source = "すっ、とあたしの股間に指が入ってくる。"
+translation = "Her fingers slip between my legs."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "すっ reduced into the smoothness of the motion."
+
+[[entries]]
+id = "f0000-2c59-connie-aah-oh"
+file = "DISKA/F0000.MES"
+offset = 0x2c59
+source_mode = 1
+target_mode = 2
+source = "【コニー】「きゃぁッ！　ぁ・・・・・・。」"
+translation = "[CONNIE] \"Aah--! Oh...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "きゃぁ is a startled yelp; the dash carries the cut-off."
+
+[[entries]]
+id = "f0000-2c73-kanzaki-ill-make-you-cry-out"
+file = "DISKA/F0000.MES"
+offset = 0x2c73
+source_mode = 1
+target_mode = 2
+source = "【神崎】「我慢してもダメよ。・・・・・・すぐに声を出させてあげる。」"
+translation = "[KANZAKI] \"Holding back won't work. ...I'll have you crying out soon enough.\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki names her own game; the play frame is spoken, not just narrated."
+
+[[entries]]
+id = "f0000-2c9c-legs-squeezed-shut"
+file = "DISKA/F0000.MES"
+offset = 0x2c9c
+source_mode = 1
+target_mode = 2
+source = "あたしは両足を閉じたが、指はもうあたしの下腹部の膨らみを撫でていた。"
+translation = "I squeezed my legs shut, but her fingers were already stroking the soft swell of my mound."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "下腹部の膨らみ is the mons, stated obliquely in the source and kept oblique."
+
+[[entries]]
+id = "f0000-2cc9-connie-noaa"
+file = "DISKA/F0000.MES"
+offset = 0x2cc9
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いやぁ・・・・・・。」"
+translation = "[CONNIE] \"No...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal; standing policy applies."
+
+[[entries]]
+id = "f0000-2cdf-shudders-of-stimulation"
+file = "DISKA/F0000.MES"
+offset = 0x2cdf
+source_mode = 1
+target_mode = 2
+source = "びくびくびくっ、と刺激が襲ってくる。"
+translation = "The stimulation washes over me in shudders."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "びくびく converted to the shuddering it marks."
+
+[[entries]]
+id = "f0000-2cf9-skillful-stroking"
+file = "DISKA/F0000.MES"
+offset = 0x2cf9
+source_mode = 1
+target_mode = 2
+source = "神崎博士が上手にあたしの股間を撫でている。"
+translation = "Dr. Kanzaki strokes between my legs so skillfully."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2d15-knows-where-i-react"
+file = "DISKA/F0000.MES"
+offset = 0x2d15
+source_mode = 1
+target_mode = 2
+source = "もう、どこに触れたらあたしが反応するか、すべてお見通しというわけだ。"
+translation = "She already knows exactly where to touch to make me react."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Third restatement of the known-body theme; each phrasing differs slightly in the source, so the English varies too."
+
+[[entries]]
+id = "f0000-2d40-connie-no-no-again"
+file = "DISKA/F0000.MES"
+offset = 0x2d40
+source_mode = 1
+target_mode = 2
+source = "【コニー】「嫌・・・、いや・・・。」"
+translation = "[CONNIE] \"No... no...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal."
+
+[[entries]]
+id = "f0000-2d57-shake-my-head"
+file = "DISKA/F0000.MES"
+offset = 0x2d57
+source_mode = 1
+target_mode = 2
+source = "あたしはいやいやと頭を左右に振る。"
+translation = "I shake my head from side to side."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "いやいやと is the petulant head-shake; the refusal stays physical here."
+
+[[entries]]
+id = "f0000-2d71-i-know-why-she-holds-me"
+file = "DISKA/F0000.MES"
+offset = 0x2d71
+source_mode = 1
+target_mode = 2
+source = "博士が緊張をほぐしてくれるために、あたしを抱こうとしているのは分かる。"
+translation = "I know she's holding me like this to loosen my tension."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Connie states the caring motive even while protesting; both layers preserved."
+
+[[entries]]
+id = "f0000-2d9b-connie-but-quiet"
+file = "DISKA/F0000.MES"
+offset = 0x2d9b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だけど・・・。）"
+translation = "[CONNIE] (But...)"
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Internal hesitation beat."
+
+[[entries]]
+id = "f0000-2dae-lets-stop-after-all"
+file = "DISKA/F0000.MES"
+offset = 0x2dae
+source_mode = 1
+target_mode = 2
+source = "【コニー】「博士・・・、やっぱり止めよう・・・。」"
+translation = "[CONNIE] \"Doctor... let's stop after all...\""
+speaker = "コニー"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The clearest stop-request in the scene, kept literal; Kanzaki's response reframes rather than overrides it."
+
+[[entries]]
+id = "f0000-2dcc-cant-you-do-as-i-say"
+file = "DISKA/F0000.MES"
+offset = 0x2dcc
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ふーん。私の言うことが聞けないの？」"
+translation = "[KANZAKI] \"Oh? You can't do as I say?\""
+speaker = "神崎"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "The power-dynamic beat: teasing authority, not threat. The English keeps the mild mock-scolding register."
+
+[[entries]]
+id = "f0000-2de8-another-idea"
+file = "DISKA/F0000.MES"
+offset = 0x2de8
+source_mode = 1
+target_mode = 2
+source = "博士がまた何か思い付いた表情をした。"
+translation = "The doctor's face lit up with another idea."
+speaker = "Connie"
+context = "Back in bed, Kanzaki teases Connie past her embarrassment."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2e01-kanzaki-there"
+file = "DISKA/F0000.MES"
+offset = 0x2e01
+source_mode = 1
+target_mode = 2
+source = "【神崎】「えいっ！」"
+translation = "[KANZAKI] \"There!\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "えいっ is the exertion interjection of flipping Connie's legs open."
+
+[[entries]]
+id = "f0000-2e10-connie-ah-no"
+file = "DISKA/F0000.MES"
+offset = 0x2e10
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、イヤあ！」"
+translation = "[CONNIE] \"Ah, no!\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal; standing policy applies."
+
+[[entries]]
+id = "f0000-2ee5-everything-on-display"
+file = "DISKA/F0000.MES"
+offset = 0x2ee5
+source_mode = 1
+target_mode = 2
+source = "あたしの股間が、全部見られている。"
+translation = "Everything between my legs is on display."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The exposure is the embarrassment, stated plainly."
+
+[[entries]]
+id = "f0000-2efb-kanzaki-long-breath"
+file = "DISKA/F0000.MES"
+offset = 0x2efb
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ふぅぅぅぅぅ～～～～～～っ。」"
+translation = "[KANZAKI] \"Haaah--\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The ~~~ blow compressed to a held breath; the next line explains it."
+
+[[entries]]
+id = "f0000-2f14-connie-haa-nnh"
+file = "DISKA/F0000.MES"
+offset = 0x2f14
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はぁ・・・っ、んんっ・・・・・・。」"
+translation = "[CONNIE] \"Haa... nnh...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-2f31-light-breath-heat"
+file = "DISKA/F0000.MES"
+offset = 0x2f31
+source_mode = 1
+target_mode = 2
+source = "軽く息を吹きかけられただけで、あたしの股間は熱くなる。"
+translation = "Just that light breath sets me burning between my legs."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-2f5e-holding-my-legs"
+file = "DISKA/F0000.MES"
+offset = 0x2f5e
+source_mode = 1
+target_mode = 2
+source = "博士はあたしの脚を抱えて、じっと見入ってる。"
+translation = "The doctor holds my legs and stares, transfixed."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "じっと見入ってる is absorbed looking, not clinical."
+
+[[entries]]
+id = "f0000-2f7b-connie-no-nooo"
+file = "DISKA/F0000.MES"
+offset = 0x2f7b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いやあ、いやぁぁ・・・。」"
+translation = "[CONNIE] \"No, nooo...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal."
+
+[[entries]]
+id = "f0000-2f93-thrash-but-pinned"
+file = "DISKA/F0000.MES"
+offset = 0x2f93
+source_mode = 1
+target_mode = 2
+source = "じたばたと暴れたが、博士はあたしを押え込んで離さない。"
+translation = "I thrash, but the doctor pins me down and won't let go."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The physical restraint is stated as-is; the established play frame surrounds it, and neither layer is rewritten."
+
+[[entries]]
+id = "f0000-2fb6-kanzaki-maybe-i-should-bite"
+file = "DISKA/F0000.MES"
+offset = 0x2fb6
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ふーん。暴れるの。噛んじゃおうかなー。」"
+translation = "[KANZAKI] \"Oh? You're squirming. Maybe I should bite.\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Playful menace in the drawn-out かなー; kept teasing."
+
+[[entries]]
+id = "f0000-2fd6-sensitive-bud"
+file = "DISKA/F0000.MES"
+offset = 0x2fd6
+source_mode = 1
+target_mode = 2
+source = "あたしの股間をぐいっと押し広げ、唇であたしの敏感な突起を挟む。"
+translation = "She pushes me open wider and closes her lips around my sensitive bud."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "敏感な突起 is the source's own euphemism; 'sensitive bud' keeps it a euphemism."
+
+[[entries]]
+id = "f0000-2fff-connie-ah-no-stop"
+file = "DISKA/F0000.MES"
+offset = 0x2fff
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ、ヤっ！　だめっ・・・。」"
+translation = "[CONNIE] \"Ah, no! Stop...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal; だめ here maps to 'stop.'"
+
+[[entries]]
+id = "f0000-3018-kanzaki-nnh-mmh-quiet"
+file = "DISKA/F0000.MES"
+offset = 0x3018
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ん・・・むっ・・・・・・。」"
+translation = "[KANZAKI] \"Nnh... mmh...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction with mouth occupied."
+
+[[entries]]
+id = "f0000-3030-held-between-her-lips"
+file = "DISKA/F0000.MES"
+offset = 0x3030
+source_mode = 1
+target_mode = 2
+source = "むにむにむに、と唇で挟まれると、じーんと気持ちよさが沸き上がる。"
+translation = "Held between her lips, a tingling pleasure wells up inside me."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "むにむにむに and じーん reduced into the sensation sentence."
+
+[[entries]]
+id = "f0000-3057-tongue-slides-in"
+file = "DISKA/F0000.MES"
+offset = 0x3057
+source_mode = 1
+target_mode = 2
+source = "神崎博士が突起から唇を離し、舌を差し込んできた。"
+translation = "Her lips leave the bud, and her tongue slides in."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3077-connie-no-ah-thought"
+file = "DISKA/F0000.MES"
+offset = 0x3077
+source_mode = 1
+target_mode = 2
+source = "【コニー】（いや・・・・・・、あ・・・。）"
+translation = "[CONNIE] (No... ah...)"
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Internal refusal melting mid-thought."
+
+[[entries]]
+id = "f0000-3091-pressed-my-lips-shut"
+file = "DISKA/F0000.MES"
+offset = 0x3091
+source_mode = 1
+target_mode = 2
+source = "あたしはきゅっと口を閉じて、声を出すまいとした。"
+translation = "I pressed my lips shut to keep my voice in."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Held-voice motif."
+
+[[entries]]
+id = "f0000-30af-burrowing-tongue"
+file = "DISKA/F0000.MES"
+offset = 0x30af
+source_mode = 1
+target_mode = 2
+source = "あたしの膣口へもぐり込もうとするように、博士の舌が動く。"
+translation = "The doctor's tongue moves as if to burrow into my vaginal opening."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "膣口 is anatomical in the source; 'vaginal opening' matches without softening to euphemism."
+
+[[entries]]
+id = "f0000-30d1-connie-nnh-aah-open"
+file = "DISKA/F0000.MES"
+offset = 0x30d1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んぅっ・・・、あぁぁ・・・。」"
+translation = "[CONNIE] \"Nnh... aah...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-30fc-want-you-to-come"
+file = "DISKA/F0000.MES"
+offset = 0x30fc
+source_mode = 1
+target_mode = 2
+source = "【神崎】「今日は、コニーにイッて欲しいの・・・。」"
+translation = "[KANZAKI] \"Today, I want you to come, Connie...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Locked batch term: イク is 'come'; Kanzaki states the scene's goal aloud."
+
+[[entries]]
+id = "f0000-311b-connie-just-me"
+file = "DISKA/F0000.MES"
+offset = 0x311b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はあぁっ、はあっ、でも・・・あたし・・・だけなんて・・・。」"
+translation = "[CONNIE] \"Haa, haa... but... just me... that's...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Her protest is that only she finishes; fairness, not refusal."
+
+[[entries]]
+id = "f0000-3144-kanzaki-i-want-you-to-feel"
+file = "DISKA/F0000.MES"
+offset = 0x3144
+source_mode = 1
+target_mode = 2
+source = "【神崎】「いいの、あなたに感じて欲しいの・・・・・・。」"
+translation = "[KANZAKI] \"It's all right. I want you to feel it...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Kanzaki declines reciprocity tonight; generosity is her answer to the launch-eve fear."
+
+[[entries]]
+id = "f0000-3165-connie-ah-hnngh"
+file = "DISKA/F0000.MES"
+offset = 0x3165
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、くぅぅぅん・・・、はぁぅぅ・・・・・・・・・。」"
+translation = "[CONNIE] \"Ah, hnngh... haaah...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-318b-sensitive-spot"
+file = "DISKA/F0000.MES"
+offset = 0x318b
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしの割れ目の中の、敏感なポイントを攻めてくる。"
+translation = "Dr. Kanzaki works the sensitive spot inside my sex."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "攻める again as 'works'; ポイント naturalized to 'spot.'"
+
+[[entries]]
+id = "f0000-31b2-connie-aah-nnh-ha"
+file = "DISKA/F0000.MES"
+offset = 0x31b2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ああ・・・んっ。は・・・くぅぅぅ。」"
+translation = "[CONNIE] \"Aah... nnh. Ha... hnngh.\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-31cf-kanzaki-this-spot"
+file = "DISKA/F0000.MES"
+offset = 0x31cf
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ここが・・・弱かったわね・・・。」"
+translation = "[KANZAKI] \"So this spot... was your weakness...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Discovery phrased as confirmation of prior knowledge."
+
+[[entries]]
+id = "f0000-31ea-connie-n-no"
+file = "DISKA/F0000.MES"
+offset = 0x31ea
+source_mode = 1
+target_mode = 2
+source = "【コニー】「や・・・嫌ぁッ・・・・・・。」"
+translation = "[CONNIE] \"N-no...!\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal."
+
+[[entries]]
+id = "f0000-3204-twist-my-hips"
+file = "DISKA/F0000.MES"
+offset = 0x3204
+source_mode = 1
+target_mode = 2
+source = "あたしは腰をひねって体の向きを変えようとする。"
+translation = "I twist my hips, trying to turn away."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Evasion attempt within the play frame."
+
+[[entries]]
+id = "f0000-3223-kanzaki-connie-call"
+file = "DISKA/F0000.MES"
+offset = 0x3223
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー！」"
+translation = "[KANZAKI] \"Connie!\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The name as gentle restraint."
+
+[[entries]]
+id = "f0000-3232-only-kick-my-feet"
+file = "DISKA/F0000.MES"
+offset = 0x3232
+source_mode = 1
+target_mode = 2
+source = "神崎博士ががっちりとあたしの足を押えているので、あたしは足先をジタバタさせるだけだ。"
+translation = "She has my legs pinned tight, so all I can do is kick my feet."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "ジタバタ converted to the futile kicking."
+
+[[entries]]
+id = "f0000-3267-a-lick"
+file = "DISKA/F0000.MES"
+offset = 0x3267
+source_mode = 1
+target_mode = 2
+source = "ぺろっ。"
+translation = "A lick."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "ぺろっ converted to the action, kept as a fragment."
+
+[[entries]]
+id = "f0000-3271-connie-nnnh-aah"
+file = "DISKA/F0000.MES"
+offset = 0x3271
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んーーーっ、あんぁっ、あふっ・・・。あぁあーっ！」"
+translation = "[CONNIE] \"Nnnh-- aah, ahah... Aaah--!\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; dashes carry the held cries."
+
+[[entries]]
+id = "f0000-3295-tongue-moves-inside"
+file = "DISKA/F0000.MES"
+offset = 0x3295
+source_mode = 1
+target_mode = 2
+source = "神崎博士の舌が、あたしの割れ目の中を舐め、動く。"
+translation = "Her tongue licks and moves inside my sex."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-32b3-kanzaki-nnh-haa-mmh"
+file = "DISKA/F0000.MES"
+offset = 0x32b3
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んっ、ふぅっ・・・あむ・・・。」"
+translation = "[KANZAKI] \"Nnh, haa... mmh...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-32cd-connie-hah-nnh-mmh"
+file = "DISKA/F0000.MES"
+offset = 0x32cd
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はふっ！！！　んんっ・・・・・・んふぅ・・・。」"
+translation = "[CONNIE] \"Hah--! Nnh... mmh...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction; exclamation run reduced to one."
+
+[[entries]]
+id = "f0000-32f0-tongue-leaves"
+file = "DISKA/F0000.MES"
+offset = 0x32f0
+source_mode = 1
+target_mode = 2
+source = "神崎博士の舌は、一旦、割れ目から離れる。"
+translation = "Her tongue slips out of my sex, just for a moment."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "一旦 marks the teasing pause."
+
+[[entries]]
+id = "f0000-330a-connie-ah-cut-off"
+file = "DISKA/F0000.MES"
+offset = 0x330a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あ・・・・・・・・・っ・・・・・・。」"
+translation = "[CONNIE] \"...Ah...--...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The stranded voice during the pause."
+
+[[entries]]
+id = "f0000-332b-tongue-over-my-rear"
+file = "DISKA/F0000.MES"
+offset = 0x332b
+source_mode = 1
+target_mode = 2
+source = "にゅむっにゅむっ、と舌があたしのお尻を舐める。"
+translation = "Her tongue slides wetly over my rear."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "にゅむ reduced to 'wetly'; お尻 is 'rear' in Connie's non-crude register."
+
+[[entries]]
+id = "f0000-3349-connie-its-dirty"
+file = "DISKA/F0000.MES"
+offset = 0x3349
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ嫌あッ・・・、汚い・・・・・・。」"
+translation = "[CONNIE] \"Ah, no... it's dirty...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "汚い is hygiene embarrassment, not disgust at Kanzaki."
+
+[[entries]]
+id = "f0000-3367-kanzaki-you-just-showered"
+file = "DISKA/F0000.MES"
+offset = 0x3367
+source_mode = 1
+target_mode = 2
+source = "【神崎】「あら、さっきシャワーを浴びたでしょう？」"
+translation = "[KANZAKI] \"My, didn't you just take a shower?\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "あら keeps her amused superiority; she answers the objection on its own terms."
+
+[[entries]]
+id = "f0000-3389-baring-my-rear"
+file = "DISKA/F0000.MES"
+offset = 0x3389
+source_mode = 1
+target_mode = 2
+source = "それはそうなのだが、お尻を無防備にさらすのは恥ずかしさをそそる。"
+translation = "That's true, but baring my rear so defenselessly only feeds the embarrassment."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "恥ずかしさをそそる: the exposure heightens rather than kills the mood; kept."
+
+[[entries]]
+id = "f0000-33b2-connie-embarrassing"
+file = "DISKA/F0000.MES"
+offset = 0x33b2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「は・・・恥ずかしいよぅ・・・・・・。」"
+translation = "[CONNIE] \"I-it's embarrassing...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The よぅ wobble becomes the stutter."
+
+[[entries]]
+id = "f0000-33d0-kanzaki-down-here-disagrees"
+file = "DISKA/F0000.MES"
+offset = 0x33d0
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ここはそうは言ってないわよ・・・。」"
+translation = "[KANZAKI] \"Down here says otherwise...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The body-contradicts-words line, kept as Kanzaki's tease rather than a narrator's verdict."
+
+[[entries]]
+id = "f0000-33ec-fingers-move-with-wet-sounds"
+file = "DISKA/F0000.MES"
+offset = 0x33ec
+source_mode = 1
+target_mode = 2
+source = "ちゅぷちゅぷ、とあたしの割れ目の中を神崎博士の指が動く。"
+translation = "Her fingers move inside my sex with wet sounds."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "ちゅぷちゅぷ reduced to 'wet sounds.'"
+
+[[entries]]
+id = "f0000-340f-sound-reaches-my-ears"
+file = "DISKA/F0000.MES"
+offset = 0x340f
+source_mode = 1
+target_mode = 2
+source = "指が液体をかき混ぜる音が、あたしの耳に飛び込んでくる。"
+translation = "The sound of her fingers stirring my wetness reaches my ears."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "液体 here is 'wetness'; the heavier 愛液 term is reserved for 0x3493 and later."
+
+[[entries]]
+id = "f0000-3435-connie-no-no-no"
+file = "DISKA/F0000.MES"
+offset = 0x3435
+source_mode = 1
+target_mode = 2
+source = "【コニー】「イヤイヤイヤぁッ・・・・・・。」"
+translation = "[CONNIE] \"No, no, no...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Spoken refusal."
+
+[[entries]]
+id = "f0000-3450-welling-up-inside"
+file = "DISKA/F0000.MES"
+offset = 0x3450
+source_mode = 1
+target_mode = 2
+source = "あたしの体内の奥から、とろりとした液体が沸き上がるのが感じられる。"
+translation = "I can feel thick arousal welling up from deep inside me."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "とろりとした液体 rendered with the batch term 'arousal' for consistency with 愛液."
+
+[[entries]]
+id = "f0000-347b-kanzaki-nnh-swallow"
+file = "DISKA/F0000.MES"
+offset = 0x347b
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・んくっ・・・。」"
+translation = "[KANZAKI] \"...Nnh...\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Swallowing sound reduced to a nasal vocalization."
+
+[[entries]]
+id = "f0000-3493-lapping-up-arousal"
+file = "DISKA/F0000.MES"
+offset = 0x3493
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしの割れ目を吸って、愛液を音を立てて舐める。"
+translation = "Dr. Kanzaki sucks at my sex, lapping up my arousal with audible relish."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Locked batch term: 愛液 is 'arousal' (single consistent adult term per the brief's archival-A glossary slot)."
+
+[[entries]]
+id = "f0000-34bb-connie-no-no-dont"
+file = "DISKA/F0000.MES"
+offset = 0x34bb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「イヤイヤ・・・ダメダ・・・メぇ・・・・・・・・・。」"
+translation = "[CONNIE] \"No, no... don't... don't...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "ダメダ・・・メぇ broken across the moan; the doubled 'don't' keeps its shape."
+
+[[entries]]
+id = "f0000-34e4-kanzaki-liar"
+file = "DISKA/F0000.MES"
+offset = 0x34e4
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ウソ。気持ちいいくせに・・・。止めちゃうわよ。」"
+translation = "[KANZAKI] \"Liar. You love it... Or should I stop?\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "The refusal-contradiction is Kanzaki's spoken tease, and the offered stop is real within the game; both kept."
+
+[[entries]]
+id = "f0000-3508-connie-ah-aah-breath"
+file = "DISKA/F0000.MES"
+offset = 0x3508
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ・・・ぁっ・・・。」"
+translation = "[CONNIE] \"Ah... aah...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-351f-when-her-fingers-leave"
+file = "DISKA/F0000.MES"
+offset = 0x351f
+source_mode = 1
+target_mode = 2
+source = "神崎博士の指があたしの体から離れると、急に切なくなってくる。"
+translation = "When her fingers leave me, the ache hits all at once."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "切なく is the longing ache; the withdrawal produces it instantly."
+
+[[entries]]
+id = "f0000-3544-connie-n-no-quiet"
+file = "DISKA/F0000.MES"
+offset = 0x3544
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・い、いや・・・。」"
+translation = "[CONNIE] \"...N-no...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Now the 'no' protests the stopping; the word's reversal is the scene's pivot, kept literal."
+
+[[entries]]
+id = "f0000-355e-kanzaki-you-want-me-to-stop"
+file = "DISKA/F0000.MES"
+offset = 0x355e
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・止めて欲しいんでしょ？」"
+translation = "[KANZAKI] \"...You want me to stop, don't you?\""
+speaker = "神崎"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "She throws Connie's own word back; the negotiation is explicit in the source."
+
+[[entries]]
+id = "f0000-3592-enjoying-keeping-me-on-edge"
+file = "DISKA/F0000.MES"
+offset = 0x3592
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしを焦らせて楽しんでいる。"
+translation = "Dr. Kanzaki is enjoying keeping me on edge."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Mirrors 0x1016; same verb 焦らす, same rendering."
+
+[[entries]]
+id = "f0000-35ae-i-play-along"
+file = "DISKA/F0000.MES"
+offset = 0x35ae
+source_mode = 1
+target_mode = 2
+source = "焦らすと切ない後の快感が高まるので、あたしも言葉のやりとりで気持ちよさを引き出す。"
+translation = "Teasing heightens the pleasure that follows, so I play along with the exchange to draw it out."
+speaker = "Connie"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "Connie names the game as a game and her own complicity in it; this is the archival answer to the refusal-convention problem in this scene."
+
+[[entries]]
+id = "f0000-35e2-connie-please-do-it"
+file = "DISKA/F0000.MES"
+offset = 0x35e2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「お願い・・・します・・・。して・・・ください・・・。」"
+translation = "[CONNIE] \"Please... I'm begging you... please... do it...\""
+speaker = "コニー"
+context = "Kanzaki pleasures the protesting Connie and draws out her begging."
+status = "qa-ready"
+box_width = 61
+notes = "お願いします/してください kept as formal pleading; the politeness is the kink texture, not deference to authority."
+
+[[entries]]
+id = "f0000-3609-kanzaki-where-here"
+file = "DISKA/F0000.MES"
+offset = 0x3609
+source_mode = 1
+target_mode = 2
+source = "【神崎】「どこかな？？　ここ？」"
+translation = "[KANZAKI] \"Where was it? Here?\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Feigned ignorance; the doubled question marks compress to one."
+
+[[entries]]
+id = "f0000-361e-strokes-my-thighs"
+file = "DISKA/F0000.MES"
+offset = 0x361e
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしの太股を、さわさわと撫でる。"
+translation = "Dr. Kanzaki strokes my thighs, feather-light."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "さわさわ converted to the light touch it marks."
+
+[[entries]]
+id = "f0000-363a-connie-not-there"
+file = "DISKA/F0000.MES"
+offset = 0x363a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ちっ違いま・・・す・・・・・・・・・。」"
+translation = "[CONNIE] \"N-not there...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Stuttered polite denial; the begging has begun."
+
+[[entries]]
+id = "f0000-365a-connie-inside-my-sex"
+file = "DISKA/F0000.MES"
+offset = 0x365a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・あたしの・・・・・・・・・割れ目の・・・・・・中を・・・。」"
+translation = "[CONNIE] \"Ah... my... inside... my sex...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "She says the word herself at last; the pauses are the embarrassment."
+
+[[entries]]
+id = "f0000-3687-kanzaki-heh"
+file = "DISKA/F0000.MES"
+offset = 0x3687
+source_mode = 1
+target_mode = 2
+source = "【神崎】「くすっ。」"
+translation = "[KANZAKI] \"Heh.\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "A satisfied chuckle."
+
+[[entries]]
+id = "f0000-3696-wet-slick-sounds"
+file = "DISKA/F0000.MES"
+offset = 0x3696
+source_mode = 1
+target_mode = 2
+source = "ぬちゃっぬちゃっ・・・。"
+translation = "A wet, slick sound..."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "ぬちゃっ reduced to a minimal sound description; a transliteration would read comic."
+
+[[entries]]
+id = "f0000-36a9-practiced-middle-finger"
+file = "DISKA/F0000.MES"
+offset = 0x36a9
+source_mode = 1
+target_mode = 2
+source = "神崎博士は中指を器用に使い、あたしの割れ目の中の、膣への入口付近をきゅっきゅっと撫でる。"
+translation = "With a practiced middle finger, she strokes the entrance to my vagina."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "膣への入口 anatomical, kept; きゅっきゅっ reduced into 'strokes.'"
+
+[[entries]]
+id = "f0000-36e1-connie-aaaah-scream"
+file = "DISKA/F0000.MES"
+offset = 0x36e1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ああああああっ！！！」"
+translation = "[CONNIE] \"Aaaah!!!\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Genuine scream; keeps the melodrama-level force per policy."
+
+[[entries]]
+id = "f0000-36f7-cry-out-without-thinking"
+file = "DISKA/F0000.MES"
+offset = 0x36f7
+source_mode = 1
+target_mode = 2
+source = "とたんに襲ってくる快感。あたしは無意識に悦びの声を出す。"
+translation = "The pleasure hits instantly, and I cry out without thinking."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The held-voice motif ends here."
+
+[[entries]]
+id = "f0000-371e-connie-aah-no-haa"
+file = "DISKA/F0000.MES"
+offset = 0x371e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いぁぁ・・・いやぁ・・・はぁっ、はぁっ・・・。」"
+translation = "[CONNIE] \"Aah... no... haa, haa...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-3752-kanzaki-say-the-usual"
+file = "DISKA/F0000.MES"
+offset = 0x3752
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー。いつもの言ってくれなきゃ、止めちゃうぞ。」"
+translation = "[KANZAKI] \"Connie. If you don't say the usual, I'll stop.\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "いつもの establishes the begging script as their standing ritual; the soft ぞ kept neutral."
+
+[[entries]]
+id = "f0000-3776-connie-aah-long"
+file = "DISKA/F0000.MES"
+offset = 0x3776
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あぁ・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"Aah...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-3791-shivers-up-my-spine"
+file = "DISKA/F0000.MES"
+offset = 0x3791
+source_mode = 1
+target_mode = 2
+source = "おねだりする言葉を口に出すことで、背中からぞくぞくっとした快感が襲ってくる。"
+translation = "Speaking the begging words sends shivers of pleasure up my spine."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "おねだり is the performed plea; saying it is itself part of the pleasure."
+
+[[entries]]
+id = "f0000-37c1-connie-it-feels-good"
+file = "DISKA/F0000.MES"
+offset = 0x37c1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「気持ち・・・、いっ、いいです・・・・・・、」"
+translation = "[CONNIE] \"It feels... s-so good...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The ritual line, delivered with its polite です intact."
+
+[[entries]]
+id = "f0000-37e2-connie-more-more"
+file = "DISKA/F0000.MES"
+offset = 0x37e2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「もっと・・・・・・、もっと・・・、して・・・ください・・・・・・。」"
+translation = "[CONNIE] \"More... more... please...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "ください kept as 'please'; the formality is the point."
+
+[[entries]]
+id = "f0000-380f-connie-ah-aaah-thought"
+file = "DISKA/F0000.MES"
+offset = 0x380f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ・・・・・・ぁぁぁ・・・。）"
+translation = "[CONNIE] (Ah... aah...)"
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Internal reaction beat."
+
+[[entries]]
+id = "f0000-3829-kanzaki-where"
+file = "DISKA/F0000.MES"
+offset = 0x3829
+source_mode = 1
+target_mode = 2
+source = "【神崎】「どこを？」"
+translation = "[KANZAKI] \"Where?\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "She makes Connie say it again."
+
+[[entries]]
+id = "f0000-3838-she-asks-on-purpose"
+file = "DISKA/F0000.MES"
+offset = 0x3838
+source_mode = 1
+target_mode = 2
+source = "わざと聞いてくる。"
+translation = "She asks on purpose."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Connie knows the game and names it."
+
+[[entries]]
+id = "f0000-3847-connie-ah-my"
+file = "DISKA/F0000.MES"
+offset = 0x3847
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・あたしの・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"Ah... my...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The plea breaks off before the word."
+
+[[entries]]
+id = "f0000-3868-kanzaki-mmh-short"
+file = "DISKA/F0000.MES"
+offset = 0x3868
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んふ。」"
+translation = "[KANZAKI] \"Mmh.\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Prompting hum."
+
+[[entries]]
+id = "f0000-3876-connie-my-split"
+file = "DISKA/F0000.MES"
+offset = 0x3876
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしの・・・・・・"
+translation = "[CONNIE] \"My..."
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The plea splits across two physical records around a separate line-break instruction; each record keeps its own fragment per the one-to-one anchor invariant."
+
+[[entries]]
+id = "f0000-3898-connie-love-me-split"
+file = "DISKA/F0000.MES"
+offset = 0x3898
+source_mode = 1
+target_mode = 2
+source = "・・・を・・・、愛して・・・くだ・・・・・・さ・・・い・・・・・・。」"
+translation = "...love me... there... p-please...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Second half of the split plea; 'there' stands for the word Connie cannot say, and the broken ください keeps its stutter."
+
+[[entries]]
+id = "f0000-38c0-face-burns-crimson"
+file = "DISKA/F0000.MES"
+offset = 0x38c0
+source_mode = 1
+target_mode = 2
+source = "言ってから、顔が猛烈に赤くなる。"
+translation = "The moment I say it, my face burns crimson."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-38d9-made-to-say-it"
+file = "DISKA/F0000.MES"
+offset = 0x38d9
+source_mode = 1
+target_mode = 2
+source = "『恥ずかしいセリフを言わされた』、という気持ちがあたしの快感を大きくする。"
+translation = "The thought that she made me say such embarrassing things only swells my pleasure."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "言わされた is 'was made to say'; Connie frames the coercion-play as pleasure's engine, kept as written."
+
+[[entries]]
+id = "f0000-3907-kanzaki-ill-do-it"
+file = "DISKA/F0000.MES"
+offset = 0x3907
+source_mode = 1
+target_mode = 2
+source = "【神崎】「うふふ。まあいいわ。してあげる・・・・・・・・・。」"
+translation = "[KANZAKI] \"Mhmhm. Oh, all right. I'll do it...\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The teasing yields; まあいいわ is indulgent concession."
+
+[[entries]]
+id = "f0000-392b-fingers-move-in-circles"
+file = "DISKA/F0000.MES"
+offset = 0x392b
+source_mode = 1
+target_mode = 2
+source = "あたしの割れ目の中で指が回るように動く。"
+translation = "Inside my sex, her fingers move in circles."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3945-connie-hhh-nnnh"
+file = "DISKA/F0000.MES"
+offset = 0x3945
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ひっっっ、んんんっ・・・・・・、んくぅぅぅぅん・・・。」"
+translation = "[CONNIE] \"Hhh--, nnnh... nngh...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-396c-kanzaki-nnh-mmh-eat"
+file = "DISKA/F0000.MES"
+offset = 0x396c
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んーっ、あむっ。」"
+translation = "[KANZAKI] \"Nnh--, mmh.\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-397f-connie-hh-gasp"
+file = "DISKA/F0000.MES"
+offset = 0x397f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ひっ！！！」"
+translation = "[CONNIE] \"Hh--!!!\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Sharp gasp."
+
+[[entries]]
+id = "f0000-3990-clitoris-between-her-lips"
+file = "DISKA/F0000.MES"
+offset = 0x3990
+source_mode = 1
+target_mode = 2
+source = "割れ目の上のクリトリスを、唇に挟み舌でつつく。"
+translation = "She takes the clitoris above my sex between her lips and prods it with her tongue."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The source names クリトリス clinically here; the English keeps 'clitoris' rather than retreating to euphemism."
+
+[[entries]]
+id = "f0000-39af-sucks-up-my-arousal"
+file = "DISKA/F0000.MES"
+offset = 0x39af
+source_mode = 1
+target_mode = 2
+source = "ちゅっちゅっと愛液をすする。"
+translation = "She sucks up my arousal with soft, wet sounds."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "愛液 keeps the locked 'arousal'; ちゅっちゅっ folded into 'soft, wet sounds.'"
+
+[[entries]]
+id = "f0000-39c3-kanzaki-pink-and-cute"
+file = "DISKA/F0000.MES"
+offset = 0x39c3
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ピンク色で・・・かわいいわ・・・・・・。」"
+translation = "[KANZAKI] \"So pink... and cute...\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Admiration stated plainly."
+
+[[entries]]
+id = "f0000-39e4-connie-ahaa-ahaa"
+file = "DISKA/F0000.MES"
+offset = 0x39e4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あふぅ、あふぅ・・・。」"
+translation = "[CONNIE] \"Ahaa, ahaa...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-39fb-about-to-come"
+file = "DISKA/F0000.MES"
+offset = 0x39fb
+source_mode = 1
+target_mode = 2
+source = "あたしは意識が白く霞がかり、昇り詰めそうになる。"
+translation = "My consciousness whites out; I'm about to come."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "昇り詰める pairs with the locked イク as 'come'; the approach and the arrival share the verb."
+
+[[entries]]
+id = "f0000-3a1e-kanzaki-not-yet"
+file = "DISKA/F0000.MES"
+offset = 0x3a1e
+source_mode = 1
+target_mode = 2
+source = "【神崎】「ま・だ・よ。・・・んっ・・・。」"
+translation = "[KANZAKI] \"Not... yet... Nnh...\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The drawn-out denial kept in broken syllables."
+
+[[entries]]
+id = "f0000-3a38-waits-for-me-to-ebb"
+file = "DISKA/F0000.MES"
+offset = 0x3a38
+source_mode = 1
+target_mode = 2
+source = "神崎博士は割れ目への刺激を止めて、あたしの気持ちが緩やかになるのを待つ。"
+translation = "She stops stimulating my sex and waits for my excitement to ebb."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The edging is deliberate and stated."
+
+[[entries]]
+id = "f0000-3a65-connie-dont-stop"
+file = "DISKA/F0000.MES"
+offset = 0x3a65
+source_mode = 1
+target_mode = 2
+source = "【コニー】「イヤ・・・、止めちゃ、いやぁ・・・。」"
+translation = "[CONNIE] \"No... don't stop... no...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The refusal word now defends the act; the reversal is preserved word for word."
+
+[[entries]]
+id = "f0000-3a83-cant-stop-pleading"
+file = "DISKA/F0000.MES"
+offset = 0x3a83
+source_mode = 1
+target_mode = 2
+source = "自分でも恥ずかしいと思っても、求める言葉を止められない。"
+translation = "Even ashamed of myself, I can't stop the pleading words."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3aa6-kanzaki-i-love-you-again"
+file = "DISKA/F0000.MES"
+offset = 0x3aa6
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー。好きよ・・・。」"
+translation = "[KANZAKI] \"Connie. I love you...\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Same rendering as 0x250c; the repetition is deliberate."
+
+[[entries]]
+id = "f0000-3abc-every-fold-of-my-sex"
+file = "DISKA/F0000.MES"
+offset = 0x3abc
+source_mode = 1
+target_mode = 2
+source = "割れ目のひだを丁寧に舐めてくれる。"
+translation = "She carefully licks every fold of my sex."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "ひだ is 'folds'; 丁寧に is the carefulness."
+
+[[entries]]
+id = "f0000-3ad5-connie-ah-ah-haaahn"
+file = "DISKA/F0000.MES"
+offset = 0x3ad5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっあっ、ふぅぅぅぅん・・・・・・。」"
+translation = "[CONNIE] \"Ah, ah, haaahn...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced reaction."
+
+[[entries]]
+id = "f0000-3af3-legs-shake"
+file = "DISKA/F0000.MES"
+offset = 0x3af3
+source_mode = 1
+target_mode = 2
+source = "あたしの足がガクガクッと震える。"
+translation = "My legs shake uncontrollably."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "ガクガク converted to the shaking."
+
+[[entries]]
+id = "f0000-3b0c-kanzaki-ill-let-you-come"
+file = "DISKA/F0000.MES"
+offset = 0x3b0c
+source_mode = 1
+target_mode = 2
+source = "【神崎】「んふ・・・、いいわ。いかせてあげる・・・。あむっ・・・・・・。」"
+translation = "[KANZAKI] \"Mmh... all right. I'll let you come... Mmh...\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "いかせてあげる is permission granted; 'let you come' keeps the control and the generosity."
+
+[[entries]]
+id = "f0000-3b36-lips-clamp-down"
+file = "DISKA/F0000.MES"
+offset = 0x3b36
+source_mode = 1
+target_mode = 2
+source = "きゅきゅきゅーっと、クリトリスを唇で強く挟む。"
+translation = "Her lips clamp down hard on my clitoris."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "きゅきゅきゅー reduced into the pressure."
+
+[[entries]]
+id = "f0000-3b55-connie-im-coming"
+file = "DISKA/F0000.MES"
+offset = 0x3b55
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ、あ、あ、あ、いやいやいやあ、あ、き、き、きちゃぅ、・・・。」"
+translation = "[CONNIE] \"Ah, ah, no, no, no-- ah, I-I-I'm coming...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "きちゃぅ is the slurred いっちゃう; the stuttered 'I'm coming' keeps both the slur and the locked term."
+
+[[entries]]
+id = "f0000-3b80-hold-on-with-everything"
+file = "DISKA/F0000.MES"
+offset = 0x3b80
+source_mode = 1
+target_mode = 2
+source = "あたしは耐えうる限りの努力をして、我慢する。"
+translation = "I hold on with everything I have left."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3b9f-kanzaki-show-me"
+file = "DISKA/F0000.MES"
+offset = 0x3b9f
+source_mode = 1
+target_mode = 2
+source = "【神崎】「いいの・・・。私のことは気にしないで。・・・見せて。コニーがイクところを。」"
+translation = "[KANZAKI] \"It's all right... Don't worry about me. ...Show me. Show me when you come.\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "私のことは気にしないで answers Connie's 0x311b fairness protest directly."
+
+[[entries]]
+id = "f0000-3bcf-head-shake-body-wont-stop"
+file = "DISKA/F0000.MES"
+offset = 0x3bcf
+source_mode = 1
+target_mode = 2
+source = "あたしは首をぶんぶんと振って拒否の意志を示すが、体は止まらない。"
+translation = "I shake my head to refuse, but my body won't stop."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The refusal-contradiction convention in its purest form, kept exactly; 拒否の意志 stays 'refuse.'"
+
+[[entries]]
+id = "f0000-3bfc-connie-no-no-aaaah"
+file = "DISKA/F0000.MES"
+offset = 0x3bfc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、あっ、あんっ、やっ！　いやっ、いやぁあ、あああああ・・・。」"
+translation = "[CONNIE] \"Ah, ah, ahn-- no! No, nooo, aaaah...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Voiced refusal collapsing into the cry."
+
+[[entries]]
+id = "f0000-3c28-kanzaki-yes-show-me"
+file = "DISKA/F0000.MES"
+offset = 0x3c28
+source_mode = 1
+target_mode = 2
+source = "【神崎】「そう、見せて・・・、コニー・・・！」"
+translation = "[KANZAKI] \"Yes, show me... Connie...!\""
+speaker = "神崎"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3c44-dont-want-her-to-watch"
+file = "DISKA/F0000.MES"
+offset = 0x3c44
+source_mode = 1
+target_mode = 2
+source = "好きな人に見られたくない。だけど見て欲しい・・・・・・。"
+translation = "I don't want the woman I love to watch. And yet I want her to see..."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The contradiction stated as Connie's own; no editorial smoothing."
+
+[[entries]]
+id = "f0000-3c66-connie-climax-scream"
+file = "DISKA/F0000.MES"
+offset = 0x3c66
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっあっ、あっ、あああああああああああっぅっっっっ！！！」"
+translation = "[CONNIE] \"Ah, ah, ah, aaaaaaaah!!!\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The climax scream keeps extended vowels and exclamation under the melodrama exception."
+
+[[entries]]
+id = "f0000-3c8e-i-came"
+file = "DISKA/F0000.MES"
+offset = 0x3c8e
+source_mode = 1
+target_mode = 2
+source = "あたしは混乱する気持ちの中、昇り詰めた。"
+translation = "Amid my tangled feelings, I came."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "昇り詰めた completes the 0x39fb approach with the same verb."
+
+[[entries]]
+id = "f0000-3cab-back-arches-in-shudders"
+file = "DISKA/F0000.MES"
+offset = 0x3cab
+source_mode = 1
+target_mode = 2
+source = "びくんびくんっ、と背中が跳ねる。"
+translation = "My back arches in shudders."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "びくん converted to the shuddering arch."
+
+[[entries]]
+id = "f0000-3cc1-connie-haa-haa-haa"
+file = "DISKA/F0000.MES"
+offset = 0x3cc1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・はぁっ、はぁっ、はぁっはぁっ・・・はぁっ・・・・・・。」"
+translation = "[CONNIE] \"Ah... haa, haa, haa, haa... haa...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Breathing beat."
+
+[[entries]]
+id = "f0000-3cec-mind-blank-afterglow"
+file = "DISKA/F0000.MES"
+offset = 0x3cec
+source_mode = 1
+target_mode = 2
+source = "頭が真っ白になったまま、あたしは余韻を味わっていた。"
+translation = "My mind blank, I savored the lingering afterglow."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "余韻 is 'afterglow.'"
+
+[[entries]]
+id = "f0000-3d51-lies-down-beside-me"
+file = "DISKA/F0000.MES"
+offset = 0x3d51
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしの横に寝て、あたしの体を抱き締めてくれる。"
+translation = "Dr. Kanzaki lies down beside me and holds me tight."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3d77-connie-i-love-you"
+file = "DISKA/F0000.MES"
+offset = 0x3d77
+source_mode = 1
+target_mode = 2
+source = "【コニー】「好き・・・・・・・・・・・・。」"
+translation = "[CONNIE] \"I love you...\""
+speaker = "コニー"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Connie finally returns Kanzaki's word from 0x250c and 0x3aa6."
+
+[[entries]]
+id = "f0000-3d92-i-whisper-it"
+file = "DISKA/F0000.MES"
+offset = 0x3d92
+source_mode = 1
+target_mode = 2
+source = "あたしは小さく呟く。"
+translation = "I murmur it softly."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3da3-slowly-kneads"
+file = "DISKA/F0000.MES"
+offset = 0x3da3
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしの乳房を、ゆっくりと揉む。"
+translation = "Dr. Kanzaki slowly kneads my breast."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Afterglow tenderness, not renewed arousal."
+
+[[entries]]
+id = "f0000-3dc5-ticklish-pleasant-strange"
+file = "DISKA/F0000.MES"
+offset = 0x3dc5
+source_mode = 1
+target_mode = 2
+source = "くすぐったいような、気持ちいいような、不思議な気分があたしを包み込む。"
+translation = "A strange feeling--ticklish, pleasant--wraps around me."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Simple scene beat."
+
+[[entries]]
+id = "f0000-3def-held-each-other"
+file = "DISKA/F0000.MES"
+offset = 0x3def
+source_mode = 1
+target_mode = 2
+source = "あたしたちはしばらく抱き合って、お互いの温もりを感じ合っていた。"
+translation = "We held each other for a while, sharing our warmth."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "The scene closes on warmth, matching its opening anxiety."
+
+[[entries]]
+id = "f0000-3e88-and-then-the-next-day"
+file = "DISKA/F0000.MES"
+offset = 0x3e88
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・そして、次の日。"
+translation = "...And then, the next day."
+speaker = "Connie"
+context = "Connie begs for release, climaxes, and the two hold each other until morning."
+status = "qa-ready"
+box_width = 61
+notes = "Time card bridging to F0001's launch morning."
+
+[[entries]]
 id = "arrival-year-1996"
 file = "DISKA/F0002.MES"
 offset = 0x02ff
@@ -2291,8 +7663,11 @@ notes = "The timing record is preserved and the source ellipsis is compressed."
 
 [[entries]]
 id = "arrival-fading-beat-two"
-file = "DISKA/F0002.MES"
-offset = 0x0ba9
+anchors = [
+  { file = "DISKA/F0002.MES", offset = 0x0ba9 },
+  { file = "DISKA/F0000.MES", offset = 0x1769 },
+  { file = "DISKA/F0000.MES", offset = 0x1c63 },
+]
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・。"
@@ -2300,7 +7675,7 @@ translation = "..."
 speaker = "Connie"
 context = "Second silent blackout beat before Connie detects an unexpected scent."
 status = "qa-ready"
-notes = "This separately anchored pause is not merged with its neighbor."
+notes = "This separately anchored pause is not merged with its neighbor. The identical record also marks the flashback entry and exit transitions in F0000; a pure timing pause shares wording safely across scenes."
 
 [[entries]]
 id = "arrival-what-scent"
@@ -4399,8 +9774,11 @@ notes = "Officials' is inferred from the government-position context, not a new 
 
 [[entries]]
 id = "launch-before-past-silence"
-file = "DISKA/F0001.MES"
-offset = 0x1b6c
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x1b6c },
+  { file = "DISKA/F0000.MES", offset = 0x0d29 },
+  { file = "DISKA/F0000.MES", offset = 0x203e },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・・・・。）"
@@ -4408,7 +9786,7 @@ translation = "[CONNIE] (...)"
 speaker = "コニー"
 context = "Connie falls silent as the departure becomes real."
 status = "qa-ready"
-notes = "The pause begins a sequence of increasingly personal thoughts."
+notes = "The pause begins a sequence of increasingly personal thoughts. The identical labeled-silence record also serves the two departure-eve beats in F0000 where Connie has no words; a contentless pause is context-safe to share."
 
 [[entries]]
 id = "launch-to-the-past"
