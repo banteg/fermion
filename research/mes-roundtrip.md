@@ -39,16 +39,12 @@ The same `system.mll` prefix occurs immediately after the dictionary in other
 scenario files. This looks like a consistent, unsupported Silky's VM variant,
 not corruption or a one-file anomaly.
 
-Reproduce the compatibility check after building lime-juice:
+The temporary `fermion mes roundtrip` compatibility probe was retired after
+the General Message dialect was identified and implemented directly. This
+document retains the original negative result as provenance for that decision.
 
-```sh
-uv run fermion mes roundtrip working/archives/disk-a/MAIN.MES \
-  --juice /path/to/lime-juice/build/juice
-```
+## Outcome
 
-## Next investigation
-
-Recover the instruction grammar from `SIL.EXE`, starting with the handler for
-opcode `0x6e` and the `system.mll` loader. Once statement boundaries are known,
-add this dialect to a maintained decompiler/compiler rather than attempting
-translation through lime-juice's current AI5 parser.
+Analysis of `SIL.EXE` recovered the General Message instruction grammar. The
+dialect now has direct support in lime-juice, so translation no longer passes
+through the incompatible AI5 parser.

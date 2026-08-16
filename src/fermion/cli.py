@@ -27,7 +27,6 @@ from fermion.emulator import (
 from fermion.fat import FAT12, FATError
 from fermion.gm import GMError, GMFile
 from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
-from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
 from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest, route_cache_key
@@ -93,16 +92,6 @@ def build_parser() -> argparse.ArgumentParser:
     archive_extract.add_argument("archive", type=_path)
     archive_extract.add_argument("destination", type=_path)
     archive_extract.set_defaults(handler=_archive_extract)
-
-    mes = commands.add_parser("mes", help="probe MES decompiler/compiler compatibility")
-    mes_commands = mes.add_subparsers(dest="mes_command", required=True)
-    roundtrip = mes_commands.add_parser(
-        "roundtrip", help="try plausible lime-juice configurations and compare outputs"
-    )
-    roundtrip.add_argument("source", type=_path)
-    roundtrip.add_argument("--juice", type=_path, default=Path("juice"))
-    roundtrip.add_argument("--output-dir", type=_path, default=Path("working/roundtrip"))
-    roundtrip.set_defaults(handler=_mes_roundtrip)
 
     gm = commands.add_parser("gm", help="inspect General Message MES bytecode")
     gm_commands = gm.add_subparsers(dest="gm_command", required=True)
@@ -356,21 +345,6 @@ def _archive_extract(args: argparse.Namespace) -> None:
     archive = InstallerArchive.from_file(args.archive)
     for destination in archive.extract(args.destination):
         print(destination)
-
-
-def _mes_roundtrip(args: argparse.Namespace) -> None:
-    results = probe_roundtrip(args.source, args.juice, args.output_dir)
-    print(f"{'variant':<16} {'decompile':>9} {'compile':>7} {'sizes':>15} {'exact':>5}")
-    for result in results:
-        compile_code = "-" if result.compile_returncode is None else str(result.compile_returncode)
-        output_size = "-" if result.output_size is None else str(result.output_size)
-        sizes = f"{result.input_size}->{output_size}"
-        print(
-            f"{result.variant:<16} {result.decompile_returncode:>9} "
-            f"{compile_code:>7} {sizes:>15} {('yes' if result.exact else 'no'):>5}"
-        )
-    if not any(result.exact for result in results):
-        raise MESProbeError("no configuration produced an exact no-op round-trip")
 
 
 def _mz_extract_load_image(args: argparse.Namespace) -> None:
@@ -794,7 +768,6 @@ def main() -> None:
         FATError,
         GMError,
         HDIError,
-        MESProbeError,
         MZError,
         OSError,
         SaveFixtureError,

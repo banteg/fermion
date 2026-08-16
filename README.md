@@ -35,14 +35,6 @@ uv run fermion archive ls working/files/disk-a/DISKA
 uv run fermion archive extract working/files/disk-a/DISKA working/installed
 ```
 
-Probe a scenario with a locally built `lime-juice` executable. The command
-tries the plausible AI5 configurations, recompiles every successful
-decompilation, and reports whether any result is byte-identical:
-
-```sh
-uv run fermion mes roundtrip working/installed/MAIN.MES --juice /path/to/juice
-```
-
 Walk General Message bytecode and verify that embedded local addresses land on
 instruction boundaries. Pass either one MES file or a directory tree:
 

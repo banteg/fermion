@@ -19,7 +19,6 @@ Completed work:
 
 - Preservation images can be materialized and hash-verified.
 - FAT12 disks and Silky's installer archives can be listed and extracted.
-- MES compatibility probes are reproducible through the `fermion` CLI.
 - EXEPACK-compressed `SIL.EXE` has been unpacked for analysis.
 - The DOS MZ load image and entry offset can be extracted reproducibly.
 - A relocation-aware Ghidra project recovers substantially more 16-bit code
