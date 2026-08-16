@@ -97,8 +97,9 @@ text-opcode anchor, and leaves the copy/render instructions unchanged. Only
 records separated by one of these recognized token spans may be merged for
 display; ordinary adjacent records keep a one-to-one source/target mapping.
 
-The complete design and locked editorial policies are recorded in
-[`../research/fermion_plot_translation_notes.md`](../research/fermion_plot_translation_notes.md).
+The complete design, translator guidance, QA checklist, and locked editorial
+policies are recorded in
+[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md).
 
 For holistic plot review or LLM-assisted translator notes, generate the compact
 speaker-annotated corpus under the ignored working directory:

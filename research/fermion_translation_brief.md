@@ -1,8 +1,8 @@
-# FERMION — Plot Reconstruction and English Translator’s Notes
+# FERMION — English Translation Brief
 
-**Source:** extracted Japanese script (`script.md`), 77 MES sections / 17,401 mode-1 text records  
-**Purpose:** story bible, terminology guide, voice guide, extraction/engineering notes, and localization-risk register for an English fan translation  
-**Spoilers:** complete, including the central identity reveal and ending  
+- **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
+- **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, QA guide, and localization-risk register for the English fan translation
+- **Spoilers:** complete, including the central identity reveal and ending
 **Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. Section 11 records the project’s archival editorial policy for that material.
 
 ---
@@ -24,6 +24,8 @@ The central dramatic idea is not merely “save the future.” It is:
 Kaori’s crime is an attempt to repair that trauma by force: save her younger body, recover her mother and sister for a few hours, and prevent another version of herself from suffering the same exile. Connie’s arc mirrors hers. Connie was manufactured rather than born, longs for a mother and a family, and keeps finding substitute sisters and maternal figures. She begins as Kanzaki’s created dependent and ends as a moral agent capable of protecting Kanzaki, the younger Kanzaki, Marna, the Takano family, and even Marie.
 
 The erotic routes are therefore not wholly detachable from the themes, although their execution is often exploitative. They repeatedly collapse the categories of lover, mother, sister, daughter, guardian, creator, and genetic relative. An English version should understand that thematic function even if it edits or removes individual scenes.
+
+The translation’s thematic compass is the game’s unexpected shift: what first looks like a playful erotic time-travel premise becomes a story about a woman returning to the family she lost, a created person discovering that she belongs to two eras, and grief deciding whether science saves people or treats them as material.
 
 ---
 
@@ -207,19 +209,27 @@ The script does not resolve the temporal paradox in detail. Adult Kanzaki contin
 
 ### Original history
 
-| Date | Event |
-|---|---|
-| 1996 | The sick Takano daughter cannot be cured. Her family prepares an experimental cold-sleep plan. |
-| 2288 | She wakes after successful heart treatment, learns that her family is long dead, and is adopted by the Kanzaki family as **Kaori Kanzaki**. |
-| 2288–2296 | Kaori studies medicine/genetics and joins Project D. Pollution and genetic loss continue to endanger humanity. |
-| 2296 | Project D detects a Time Quake linking 2296 to 1996. Connie is sent to collect intact genetic information. |
+1. **1996:** The younger Takano daughter is about sixteen and has a congenital heart condition that contemporary medicine cannot cure.
+2. Her family arranges experimental cryosleep in the hope that future medicine can save her. She believes she is undergoing an ordinary operation.
+3. **2288:** She wakes after successful heart treatment and learns that her parents, sister, and everyone she knew are dead.
+4. Nurse Miki Kanzaki supports her. The Kanzaki family adopts her, and she takes the new legal name **Kaori Kanzaki**.
+5. Kaori studies medicine and genetics, joins the secret Space-Time Project, and eventually becomes head of Project D.
+6. She creates Connie from human and feline genetic material. Connie understands Kaori as creator, mother, older sister, superior, and lover.
+7. **2296:** Project D detects a temporary Time Quake linking 2296 with 1996.
+8. Kaori sends Connie to recover genetic information missing from future humanity and secretly sets the Takano home as Connie’s first destination.
 
 ### Altered history created during the game
 
-| Date | Event |
-|---|---|
-| 1996 | Adult Kaori brings her younger self to 2296, cures her, and Connie returns her to the Takano family. The family receives future environmental knowledge. |
-| 2296 | Adult Kaori still exists, returns with Connie, Marie, Marna, and the samples, and helps repair humanity’s missing genetic data. |
+1. Connie befriends Kaori’s younger self without knowing who she is, collects intact genetic material, and gives the Takano family warnings about future pollution.
+2. Connie returns to 2296 with samples and transit data, then makes a second trip to 1996.
+3. Adult Kaori visits the Takano home, meets her lost family, and covertly takes her younger self to 2296.
+4. Future medicine repairs the younger girl’s heart.
+5. Connie escapes Kaori’s staged imprisonment, rescues the girl, and returns her to 1996.
+6. The Takano mother exposes adult Kaori’s identity.
+7. Marie’s plan to abduct healthy people from the past is stopped after Marna intervenes.
+8. Connie, Kaori, Marie, and Marna return to 2296 with the recovered samples.
+9. Kaori and Marie reconstruct missing genetic information for the next generation.
+10. The altered 1996 family begins trying to prevent the environmental history that produced Kaori’s ruined future.
 
 ### Deliberate unresolved paradox
 
@@ -229,11 +239,38 @@ The ending lets the saved younger self and the already existing adult Kaori coex
 
 ## 5. Character and voice bible
 
+### At-a-glance voice matrix
+
+| Character | Story function | English voice target |
+|---|---|---|
+| **Connie** | Protagonist, hunter, pilot, and emotional viewpoint | Fast, direct, warm, and slightly cocky. Use contractions. Let professional lines become crisp and procedural; use feline comedy selectively and never reduce her to cat puns or baby talk. |
+| **Dr. Kaori Kanzaki** | Project D leader, Connie’s creator, and the younger daughter’s future self | Precise and restrained in public, soft and maternal in private. Her false-villain register should be deliberately cold but visibly strained; at the reveal, adult control collapses into the voice of a lost daughter. |
+| **Kanako / young Kaori** | Connie’s rescuer and emotional center of the Takano home | Gentle, affectionate, and recognizably teenage rather than childlike. Preserve both her fear of abandonment and her capacity for resolve. |
+| **Yuki / Takano mother** | Family anchor and the person who recognizes adult Kaori | Warm and unhurried, then short and authoritative when her family is threatened. She is observant, not mystical or vague. |
+| **Ruri / Takano older sister** | Skeptic and protector | Casual, blunt, socially grounded, and protective, with room for dry humor. |
+| **Remia** | Connie’s professional peer and intended second pilot | Practical, confident, and teasing. Concern appears through dry humor rather than sentimentality. |
+| **Marna** | Connie’s intended younger sister and Marie’s moral counterweight | Quiet, deferential, and sincere. Keep her language simple without making her naïve, comic, or babyish. |
+| **Dr. Marie Procyon** | Antagonist and geneticist whose grief drives the crisis | Clipped, clinical, and intimidating. Her late change should emerge from shock and grief rather than an instant personality replacement. |
+| **Miki Kanzaki** | Kaori’s nurse and adoptive older sister | Gentle professional reassurance that gradually becomes familial. |
+| **Akira** | Marie’s deceased loved one and research partner | Preserve his emotional importance without inventing a legal or romantic label the source does not supply. |
+
+### Relationship map
+
+- **Connie → Kaori:** creator, mother figure, older-sister figure, superior, and lover.
+- **Kaori → Connie:** created daughter/protégé, subordinate, protected mutant, and lover.
+- **Connie → young Kaori:** protected younger-sister figure and romantic/sexual partner.
+- **Young Kaori = adult Kaori:** the two relationships form an intentional temporal mirror.
+- **Kaori → Takano mother and older sister:** an adult daughter returning to the family she lost.
+- **Connie → Marna:** promised younger sister and fellow mutant.
+- **Marna → Marie:** empathic attachment that interrupts Marie’s grief-driven violence.
+
+This network is both the story’s emotional structure and the source of many of its editorial and rating risks. Preserve the distinctions among chosen family, authority, genetic relationship, and erotic attachment rather than flattening them into generic affection.
+
 ### Connie / コニー
 
-**Function:** protagonist; cat-human mutant; hunter; pilot; emotional viewpoint.  
-**Core contradiction:** physically formidable and professionally observant, but only three years old in lived experience and desperate for family connection.  
-**Japanese voice:** predominantly `あたし`; lively, informal, sometimes blunt; switches to polite speech with authority or elders; internal narration can become mock-clinical, bashful, or overtly catlike.
+- **Function:** protagonist; cat-human mutant; hunter; pilot; emotional viewpoint.
+- **Core contradiction:** physically formidable and professionally observant, but only three years old in lived experience and desperate for family connection.
+- **Japanese voice:** predominantly `あたし`; lively, informal, sometimes blunt; switches to polite speech with authority or elders; internal narration can become mock-clinical, bashful, or overtly catlike.
 
 **English voice recommendations:**
 
@@ -252,60 +289,60 @@ The ending lets the saved younger self and the already existing adult Kaori coex
 
 ### Dr. Kaori Kanzaki / 神崎香織
 
-**Function:** Project D leader; Connie’s creator/guardian/lover; adult future self of the sick Takano daughter.  
-**Public voice:** precise, strict, professionally controlled.  
-**Private voice:** maternal, teasing, tactile, sometimes vulnerable.  
-**Reveal voice:** once she says `おかあさん`, her diction and emotional posture regress to the abandoned child she still is.
+- **Function:** Project D leader; Connie’s creator/guardian/lover; adult future self of the sick Takano daughter.
+- **Public voice:** precise, strict, professionally controlled.
+- **Private voice:** maternal, teasing, tactile, sometimes vulnerable.
+- **Reveal voice:** once she says `おかあさん`, her diction and emotional posture regress to the abandoned child she still is.
 
 Do not make her apparent-villain dialogue too melodramatic. It should sound deliberately cold, as though she is forcing herself to say lines she despises. Her missed shot and trembling hands are essential signals.
 
 ### The sick Takano daughter — default Kanako / 加奈子
 
-**Function:** Connie’s rescuer; emotional center of the 1996 household; younger Kaori.  
-**Age/status:** described as around sixteen and in high school; physically frail but curious, affectionate, and eager to be useful.  
-**Voice:** bright, colloquial, somewhat childish in affect but not a small child; frequent elongated vowels and excited questions; fear of loneliness undercuts the cheerfulness.
+- **Function:** Connie’s rescuer; emotional center of the 1996 household; younger Kaori.
+- **Age/status:** described as around sixteen and in high school; physically frail but curious, affectionate, and eager to be useful.
+- **Voice:** bright, colloquial, somewhat childish in affect but not a small child; frequent elongated vowels and excited questions; fear of loneliness undercuts the cheerfulness.
 
 Because the name is player-configurable, source-facing documentation may call her **the younger daughter** or **young Kaori** when identity matters more than the default. Catalog records use the stable `name-slot:dear-person` role; the recovered slot mapping confirms **Kanako** as its reset value.
 
 ### Takano mother — default Yuki / 由貴
 
-**Function:** novelist; warm maternal authority; the first person to recognize adult Kaori.  
-**Voice:** calm, elegant, teasing, emotionally perceptive; can become sharply commanding when protecting her children.  
-**Key localization point:** her recognition is not mystical. It is accumulated domestic knowledge—towels, shampoo, scent, habits—and should sound observant rather than supernatural.
+- **Function:** novelist; warm maternal authority; the first person to recognize adult Kaori.
+- **Voice:** calm, elegant, teasing, emotionally perceptive; can become sharply commanding when protecting her children.
+- **Key localization point:** her recognition is not mystical. It is accumulated domestic knowledge—towels, shampoo, scent, habits—and should sound observant rather than supernatural.
 
 ### Takano older sister — default Ruri / 瑠璃
 
-**Function:** skeptical/practical older sister; counterweight to the younger daughter’s immediate trust.  
-**Voice:** blunter and more adult; protective; capable of dry humor.  
-**Extraction issue:** many lines contain only the runtime name token and therefore appear blank.
+- **Function:** skeptical/practical older sister; counterweight to the younger daughter’s immediate trust.
+- **Voice:** blunter and more adult; protective; capable of dry humor.
+- **Extraction issue:** many lines contain only the runtime name token and therefore appear blank.
 
 ### Remia / レミア
 
-**Function:** Connie’s hunter partner and intended second pilot.  
-**Voice:** practical and direct, with an impulsive streak; less deferential than Connie; uses teasing to conceal concern.  
-**Plot note:** her machine malfunction explains why Connie conducts the second trip alone and why Kanzaki later crosses personally.
+- **Function:** Connie’s hunter partner and intended second pilot.
+- **Voice:** practical and direct, with an impulsive streak; less deferential than Connie; uses teasing to conceal concern.
+- **Plot note:** her machine malfunction explains why Connie conducts the second trip alone and why Kanzaki later crosses personally.
 
 ### Marna / マーナ
 
-**Function:** rescued younger mutant; Connie’s intended adoptive sister; moral catalyst in the climax.  
-**Voice:** hesitant, apologetic, very polite, prone to repetition; grows more decisive after Connie encourages her.  
-**Do not flatten her into comic timidity.** Her empathy is the one force capable of reaching Marie.
+- **Function:** rescued younger mutant; Connie’s intended adoptive sister; moral catalyst in the climax.
+- **Voice:** hesitant, apologetic, very polite, prone to repetition; grows more decisive after Connie encourages her.
+- **Do not flatten her into comic timidity.** Her empathy is the one force capable of reaching Marie.
 
 ### Dr. Marie Procyon / マリー・プロシオン
 
-**Function:** mutant-development chief; antagonist driven by grief; brilliant geneticist needed for the solution.  
-**Voice:** clipped, intimidating, emotionally brittle; anger often hides panic or bereavement.  
-**Name issue:** introduced as `プロシオン` (**Procyon**) but called `プレシオン` in the ending. Use **Marie Procyon** provisionally and record the ending spelling as a likely source typo.
+- **Function:** mutant-development chief; antagonist driven by grief; brilliant geneticist needed for the solution.
+- **Voice:** clipped, intimidating, emotionally brittle; anger often hides panic or bereavement.
+- **Name issue:** introduced as `プロシオン` (**Procyon**) but called `プレシオン` in the ending. Use **Marie Procyon** provisionally and record the ending spelling as a likely source typo.
 
 ### Miki Kanzaki / 神崎美樹
 
-**Function:** nurse in 2288; Kaori’s adoptive older sister and first attachment after waking.  
-**Voice:** gentle, hesitant because she knows the truth before Kaori does; becomes a stable familial presence.
+- **Function:** nurse in 2288; Kaori’s adoptive older sister and first attachment after waking.
+- **Voice:** gentle, hesitant because she knows the truth before Kaori does; becomes a stable familial presence.
 
 ### Akira / アキラ
 
-**Function:** Marie’s loved one and research partner, killed after a laboratory accident.  
-**Voice:** no substantial living dialogue in the extracted main script; his importance is retrospective.
+- **Function:** Marie’s loved one and research partner, killed after a laboratory accident.
+- **Voice:** no substantial living dialogue in the extracted main script; his importance is retrospective.
 
 ### The 1996 duty physician / 医師
 
@@ -357,6 +394,12 @@ The editor roles, reset strings, and recovered bytecode slots establish this map
 | `0x0420` | friend 2 | 弘子 | Hiroko |
 
 With reset names, young Kaori’s original 1996 name is therefore **Kanako Takano**. The editable given name changes what the game displays, not the character’s identity or her later legal identity as Kaori Kanzaki.
+
+### Reveal and spoiler invariant
+
+The `name-slot:dear-person` value is also adult Kaori’s original given name. When the mother addresses the adult scientist by that name in `F0039`, the rendering must exactly match the player-selected value. Do not replace it with **Kaori**, and do not expose the identity link early through catalog context visible to players, speaker labels, save descriptions, menus, route names, gallery titles, or character profiles.
+
+The final letter and every replay/gallery surface that displays the younger daughter’s name are part of the same regression surface. A name preset is not complete merely because ordinary dialogue renders correctly.
 
 ### What the dump actually contains
 
@@ -416,6 +459,8 @@ Japanese can insert a bare name almost anywhere. English may need:
 
 A raw byte substitution cannot automatically supply apostrophes, articles, or comma spacing. The English script should keep punctuation outside the variable and avoid constructions whose grammar depends on the spelling of the chosen name.
 
+Fixed Japanese surnames also precede editable given-name tokens where English normally reverses them. Treat forms such as `鷹野 + ⟦name:dear-person⟧`, `七瀬 + ⟦name:friend-2⟧`, and `速水 + ⟦name:friend-1⟧` as explicit schema-5 grammar and design tests. Preserve the existing runtime tokens; before claiming natural English order, prove a reversible segment mapping or an intentionally scoped renderer patch. Do not invent parallel preassembled variables or accept Japanese order silently.
+
 ### Locked name-editor policy
 
 The archival English build keeps the name system but localizes it as a **tested preset selector**. It does not promise arbitrary Latin input: `0x4b` renders the stored strings through the game’s mode-1 path, and an unrestricted ASCII editor would require a separate engine patch plus exhaustive length and grammar testing. Every shipped preset must be encodable in the existing slot, tested at all five roles, and exercised in story, letter, and replay/gallery surfaces. The feature is preserved rather than removed; free-form Latin entry can be reconsidered only after the renderer and slot limits are proven.
@@ -431,6 +476,7 @@ The archival English build keeps the name system but localizes it as a **tested 
 | 時空震動数 | **space-time oscillation frequency** | Avoid “time-quake number.” |
 | 時空のひずみ／歪み | **space-time distortion** | Sometimes “rift” is smoother in dialogue. |
 | 時空トンネル | **time tunnel** / **space-time tunnel** | Pick one as the formal term; “time tunnel” is more natural in Connie’s speech. |
+| 時空移動マシン | **time-transfer machine** in formal explanation; **time machine** in ordinary dialogue | Preserve Connie’s occasional distinction without forcing the formal compound into every line. |
 | Ｄ計画（時空計画） | **Project D (the Space-Time Project)** | The script never explains what D stands for. Do not invent “Dimension.” |
 | ミュータント | **mutant** | In-world social class: engineered animal-human posthumans, not random comic-book mutation. |
 | ミュータントハンター | **Mutant Hunter** | A formal occupational title is defensible. |
@@ -440,14 +486,22 @@ The archival English build keeps the name system but localizes it as a **tested 
 | 正常な遺伝子 | **intact genetic material** / **undamaged genetic data** | “Normal genes” carries modern eugenic implications and is less accurate to the script’s own clarification. |
 | 強い遺伝子 | **robust genes** only when characters use the shorthand | Narration explicitly says this is imprecise. |
 | 失われた／欠落した遺伝子情報 | **lost/missing genetic information** | Central scientific term. |
+| 遺伝子劣化 | **genetic degradation** | Environmental decline across generations. |
+| 遺伝子崩壊 | **genetic collapse** | Stronger term used in the Marie/Akira exposition; do not flatten every occurrence into “degradation.” |
 | ヒト | **human(s)** | Katakana marks humans as a biological species from Connie’s perspective. Occasionally “the human species” helps. |
+| 獣の遺伝子 | **animal genes** | “Beast genes” is too fantasy-coded for the scientific register. |
+| 実験体 | **test subject**; occasionally **specimen** in deliberately dehumanizing speech | Marie and false-villain Kaori must sound abusive without the translation endorsing their framing. |
 | パラサイト銃 | provisionally **capture gun** or **tranquilizer gun** | Literal “Parasite Gun” is suspicious. Verify art/manual before treating it as a proper noun. |
 | 対ミュータント用捕獲薬 | **anti-mutant capture drug** / **mutant tranquilizer** | Choose based on scene register. |
 | 電磁首輪 | **electromagnetic restraint collar** | Later revealed to be fake. |
+| 前頭葉の手術 / ロボトミー | **frontal-lobe surgery / lobotomy** | The staged threat is meant to be horrifying; do not euphemize it. |
 | フェルミ粒子 | **fermions** | `フェルミ粒子` is awkward Japanese scientific shorthand. |
 | ヘリウム３ | **helium-3** | The pseudo-science links it to measurable oscillation. |
 | コールドスリープ | **cryosleep** in normal dialogue; **suspended animation** in medical exposition | “Cold sleep” is intelligible but dated Engrish. |
+| 一日留学 | **one-day visiting student** / **one-day exchange student** | This is a school visit, not literal international study abroad. |
+| 博士 | **Dr.** | Use **Dr. Kanzaki** and **Dr. Marie**; “Professor” changes the institutional meaning. |
 | 愛液 | For edited/non-explicit script, **bodily fluid/sample**; for an archival adult script, choose one consistent adult term | The main plot only needs the biological sampling function. |
+| エッチ / Ｈ | Contextual: **sex**, **fooling around**, **naughty**, or **intimate** | Translate the function and register rather than forcing one English equivalent everywhere. |
 | `さん` / `ちゃん` / `様` / address-form `先生` | **Do not retain as romanized suffixes** | Express distance, affection, deference, or authority through syntax, names, kinship terms, and ordinary English titles such as **Dr.** |
 
 ### “Gene” versus “genetic information”
@@ -474,6 +528,8 @@ An English patch should reproduce these shifts through syntax and word choice ra
 
 Do not use systematic romanized suffixes such as `-san`, `-chan`, `-sama`, or `-sensei`. Render their relationship work in English: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, a softened request, a formal sentence, or no overt marker where English naturally leaves one out. A plot-significant title or kinship term remains; a suffix does not survive merely because it is present in Japanese. Apply this policy consistently in dialogue, labels, and translator notes.
 
+Kinship terms carry plot information. At the reveal, `おかあさん` should be **Mom**, not formal “Mother.” `コニーおねえちゃん` can begin as **Big Sis Connie** and become less marked as intimacy grows. Adult Kaori’s farewell to `おねえちゃん` should use the form already established for her older sister. Marna’s changing address to Connie should likewise register growing trust without importing a romanized suffix.
+
 ### Ellipses
 
 The script uses very long runs of Japanese full stops as pacing and textbox timing. Do not reproduce every dot one-for-one. Recommended policy:
@@ -483,6 +539,14 @@ The script uses very long runs of Japanese full stops as pacing and textbox timi
 - silent beat in its own record → preserve that record and normally render a short `…`
 
 Punctuation may be compressed **within** a record, but records are never merged, deleted, or reassigned to adjacent narration. Some silent records are branch timing, CG pacing, or voice/SFX synchronization points; the one-to-one anchor invariant applies even when two neighboring lines would read more smoothly as one paragraph.
+
+### Exclamation and elongation
+
+Reduce repeated `！！！！！`, `～～～～`, and elongated vowels unless they are essential to the performance. A single exclamation mark plus stronger wording is normally more natural. Preserve excess selectively for screaming, comic panic, or deliberate melodrama, and retain every physical timing record even when its visible punctuation is compressed.
+
+### Internal thought
+
+Connie’s internal monologue creates the contrast between her competent exterior and flustered private reactions. Keep thought visibly distinct from spoken dialogue using only presentation the renderer actually supports—source parentheses, quotation conventions, or a proven text-window treatment. Do not assume italics exist, and do not turn thoughts into neutral narration merely to simplify punctuation.
 
 ### Onomatopoeia
 
@@ -506,6 +570,27 @@ The joke is that Connie’s mission mindset momentarily dehumanizes the very peo
 
 The Japanese pseudo-science is repetitive and sometimes internally loose. The translation should improve sentence flow but not invent real physics. Connie herself admits she only understands enough to operate the machine. Preserve that limitation; it is part of the humor and protects the story from sounding as though it makes a rigorous scientific claim.
 
+Use a three-level register for Connie:
+
+1. **Procedural commands:** concise and confident.
+2. **General explanation:** accessible and slightly textbook-like.
+3. **Underlying theory:** hesitant, memorized, or openly incomplete.
+
+Kanzaki and Marie may use more exact scientific language, but the translation must not repair the source’s fictional physics by adding unsupported explanations.
+
+### Historical attitudes and negative utterances
+
+The source contains period dialogue that treats same-sex attraction as strange and sexual scenes where narration contradicts spoken refusal. The archival translation preserves characterization and meaning; it does not modernize isolated lines or disguise coercion through inaccurate vocabulary.
+
+Translate negatives according to syntax and context:
+
+- `恥ずかしい` → **I’m embarrassed / This is embarrassing**;
+- `やめて` → **Stop**;
+- `嫌` / `いや` → **No / I don’t want that**, or a non-lexical emotional cry only where the context genuinely supports it;
+- `だめ` → **Don’t / You can’t / I can’t / This is too much**, according to the construction.
+
+If a later edited-B overlay changes consent, it must revise setup and action explicitly and remain mechanically separate from archival A. The archival layer must not manufacture assent line by line.
+
 ---
 
 ## 9. Script/route structure for implementation
@@ -520,6 +605,22 @@ uv run fermion gm script --story working/archives
 ```
 
 The graph preserves branches, rejoins, cycles, and separately reachable duplicate records. The story view selects the 72 files reachable from `FOP.MES`; its filename order is convenient for reading but is not control flow. See [`gm-scenario-flow.md`](gm-scenario-flow.md) for the recovered topology and exact commands.
+
+### Narrative section index — editorial aid only
+
+This is a translator-facing map of narrative function, not a substitute for the generated graph:
+
+| Span | Narrative phase |
+|---|---|
+| `FOP`–`F0001` | Akira and Marie prologue; Project D; Connie’s launch |
+| `F0002`–`F0014` | First Takano-household stay, early branches, and Connie’s first return |
+| `F0015`–`F0026L/R` | Second expedition, donor routes, and one-day school visit |
+| `F0027`–`F0033` | Kaori’s homecoming, disappearance, capture, and staged betrayal |
+| `F0034` / `F003400*`–`F0038` | Facility graph, Marna, escape, and the successful heart treatment |
+| `F0039`–`F0040` | Identity reveal and Kaori’s original history |
+| `F0041`–`F0042` | Marie and Akira, Marna’s intervention, farewell, and epilogue |
+
+The extraction contains one clear common final ending. That does not by itself rule out hidden flag prerequisites, local game-over exits, or non-mode-1 behavior; retain those as executable QA questions rather than inferring them from filename order.
 
 ### Physical extraction order is not play order
 
@@ -657,6 +758,9 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 ### Ambiguities to preserve
 
 - Adult Kaori’s continued existence after younger Kaori is saved.
+- The environmental warnings given to the Takano family should alter the ruined future, yet the epilogue still describes Kaori and Marie repairing the 2296 genome. The source does not say whether prevention is gradual, creates a branch, or changes a later future.
+- Only eight years separate Kaori’s 2288 awakening from the 2296 mission. In that interval she recovers, enters university, studies medicine and genetics, joins the project, creates three-year-old Connie, and becomes project head. The chronology is implausibly compressed, but no alternate date is established.
+- `F0040.MES:0x49cf` says that the Kanzaki couple who adopt Kaori are **her descendants** and caretakers of the old house. A childless sixteen-year-old entering cryosleep cannot have literal direct descendants; wider-family or older-sister descendants are plausible, but the source does not clarify.
 - Whether final “Connie Kanzaki” is a legal surname, an affectionate family claim, or symbolic address.
 - Exact expansion of the “D” in Project D.
 - Whether `パラサイト銃` is a proper product name or an extraction/authorial oddity.
@@ -674,19 +778,24 @@ The canonical project goal is an **archival translation** of the 1995 work. This
 
 ### Major issues
 
-1. **High-school-age sexual content**  
+1. **High-school-age sexual content**
+
    The younger daughter is described as about sixteen/high-school age. A disclaimer does not solve this for many jurisdictions or distribution platforms.
 
-2. **Ambiguous or coercive consent**  
+2. **Ambiguous or coercive consent**
+
    The source often has a character say “no,” “stop,” or try to move away while narration asserts that she does not “really” mean refusal. Literal English makes the coercion more explicit, not less.
 
-3. **Family/incest-adjacent framing**  
+3. **Family/incest-adjacent framing**
+
    The story repeatedly overlaps mother/daughter/sister/lover categories, and one adult character describes prior sexual contact with a sister.
 
-4. **Adultery and household power dynamics**  
+4. **Adultery and household power dynamics**
+
    Some optional routes involve married adults or members of the same household.
 
-5. **Abduction, reproductive coercion, lobotomy threat, and experimentation**  
+5. **Abduction, reproductive coercion, lobotomy threat, and experimentation**
+
    These are plot-critical villain actions and should remain clearly framed as abuse, not euphemized away.
 
 ### A. Canonical archival translation — accepted
@@ -756,20 +865,30 @@ The following decisions are already locked and should be enforced during review:
 - preset-only localized name and adult-term editors; and
 - archival A as the canonical content policy.
 
+Voice-calibration examples belong in anchored canonical catalog entries with source, context, and notes. Do not create a second table of free-floating “final” translations inside this brief.
+
 ### Phase 4 — Translate the main-story spine first
 
 Recommended order:
 
-1. FOP — **QA-ready; complete focused coverage and green end-to-end route**
-2. F0001–F0002
-3. non-adult narrative portions of F0003–F0016
+1. FOP — **complete and QA-ready; focused coverage and end-to-end route are green**
+2. F0001–F0002 — **complete and QA-ready; 462 physical records / 454 canonical translations**
+3. Non-adult narrative portions of F0003–F0016 — next after schema 5 can represent composite name records
 4. F0027–F0042
-5. route branches and scene replay labels
-6. menus, name editor, term editor, and catalog last
+5. Route branches and scene replay labels
+6. Menus, name editor, term editor, and catalog last
 
 This gives the team a stable understanding of every character before translating optional intimacy.
 
-### Phase 5 — In-engine QA
+### Phase 5 — Review passes and in-engine QA
+
+Run distinct passes rather than treating “edited once” as completion:
+
+1. **Source and linguistic pass:** verify meaning, register, and terminology against the exact anchored Japanese.
+2. **Reveal pass:** make every early clue work retrospectively without letting metadata or wording spoil Kaori’s identity.
+3. **Variable pass:** exercise every name and term preset, including maximum-length values and English punctuation around tokens.
+4. **Editorial pass:** audit content warnings and confirm that archival A contains no undocumented adaptation.
+5. **Playthrough pass:** exercise every branch, the facility graph, replay/gallery surfaces, and the final letter in the emulator.
 
 Test specifically for:
 
@@ -820,11 +939,73 @@ Use the naturalized version above. A typo-only Engrish pass is not an active alt
 
 ---
 
-## 15. Highest-priority unresolved tasks
+## 15. Translation QA checklist
+
+### Story and reveal
+
+- [ ] The selected younger-daughter name is reproduced exactly when the mother addresses adult Kaori.
+- [ ] No save label, gallery/replay title, speaker tag, route name, or player-visible profile spoils the identity reveal.
+- [ ] Kaori’s staged-villain dialogue remains frightening, while her restraint, missed shots, and dummy collar make retrospective sense.
+- [ ] The collar’s apparent and actual functions remain consistent before and after its discovery.
+- [ ] Marie’s threat to Connie clearly pays off the prologue’s “precious mutant” coercion.
+- [ ] Akira remains Marie’s loved one and research partner without an unsupported legal or romantic label.
+- [ ] Adult Kaori’s farewell distinguishes Mom, her older sister, and her past self clearly.
+
+### Names, tokens, and address
+
+- [ ] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text.
+- [ ] Editable given names appear in natural English full-name order with Takano, Nanase, and Hayami.
+- [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for every shipped preset.
+- [ ] No systematic romanized honorific suffix survives; titles and kinship terms follow the locked English policy.
+- [ ] Every preset is exercised in ordinary story text, the identity reveal, final letter, save data, and replay/gallery surfaces.
+- [ ] **Connie Kanzaki** appears only where the ending intends it and is not normalized backward through the script.
+
+### Terminology and voice
+
+- [ ] **Project D**, **Space-Time Project**, **Time Quake**, **space-time oscillation**, and **time tunnel** do not drift between equivalent contexts.
+- [ ] Genetic exposition distinguishes missing information from simplistic “normal” or “superior” genes.
+- [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 292-year restoration remain consistent.
+- [ ] Connie sounds procedurally competent without becoming a theoretical physicist or a generic catgirl.
+- [ ] Kaori’s public/private/reveal registers, Marie’s grief, Remia’s peer voice, and Marna’s sincere deference remain distinct.
+- [ ] Refusal and negative utterances are translated accurately rather than softened into manufactured assent.
+
+### Engine and presentation
+
+- [ ] Only proven interpolation spans are merged in translator views; every physical record, silent beat, and opcode span remains anchored.
+- [ ] Exact Japanese duplicates are shared only after speaker, meaning, and route context agree.
+- [ ] Literal `\n`, explicit line breaks, full-width/half-width Latin text, and one-glyph terminal animation are tested in engine.
+- [ ] L/R branches reach the verified destinations, and facility nodes are tested through actual navigation rather than filename order.
+- [ ] Long technical explanations, the mother’s deduction, the Marie/Akira exposition, and epilogue cards fit their message windows.
+- [ ] Maximum-length names and terms wrap safely without corrupting control flow or save compatibility.
+- [ ] Gallery unlocks, scene replay, name editor, term editor, and return-to-menu behavior remain functional.
+
+### Editorial and release
+
+- [ ] Archival A preserves source meaning without embellishment or undocumented censorship.
+- [ ] Every restoration intervention is logged at its source anchor.
+- [ ] Content warnings cover high-school-age sexual material, coercive consent framing, family/incest-adjacent dynamics, adultery, abduction, reproductive coercion, medical abuse, grief, death, and gun violence.
+- [ ] Any future edited-B change is mechanically separate, internally consistent, and reviewable against archival A.
+- [ ] Distribution and platform review are completed independently of linguistic QA.
+
+---
+
+## 16. Evidence questions and highest-priority unresolved tasks
+
+### Questions requiring executable, visual, or external evidence
+
+1. What official Latin spellings, if any, exist for Connie, Remia, Marna, Procyon, and the reading of 良美?
+2. Is `パラサイト銃` visibly named in art, packaging, or a manual, or should the provisional **capture gun / tranquilizer gun** remain?
+3. Do condition flags expose a bad ending, game-over exit, or prerequisite not captured by the recovered inter-MES transition graph?
+4. What are the effective line and column limits for message surfaces beyond the proven 61-column F0001/F0002 dialogue windows?
+5. Does original documentation explain the intended time-travel model or the in-world meaning of **FERMION**?
+6. Is **Connie Kanzaki** official nomenclature or only the younger daughter’s familial sign-off?
+
+### Highest-priority implementation and research tasks
 
 1. Implement catalog schema 5 composite occurrences, immutable authoring tokens, and validated merged-view import without changing the existing simple-entry behavior.
-2. Semantically identify the two adult-term slots (`0x042e` and `0x043e`) and define a small grammatically safe preset set for all 12 story insertions.
-3. Determine encodable, length-safe name presets and exercise every role in story, final-letter, replay, and gallery contexts.
-4. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
-5. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
-6. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.
+2. Prove a reversible strategy for English full-name order around the existing name-token spans, or define the smallest renderer change that can do so without creating parallel variables.
+3. Semantically identify the two adult-term slots (`0x042e` and `0x043e`) and define a small grammatically safe preset set for all 12 story insertions.
+4. Determine encodable, length-safe name presets and exercise every role in story, final-letter, replay, and gallery contexts.
+5. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
+6. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
+7. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.
