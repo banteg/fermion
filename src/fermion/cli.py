@@ -30,6 +30,7 @@ from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mz import MZError, MZImage
 from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest, route_cache_key
+from fermion.script import collect_mes_files, render_script
 from fermion.save_fixtures import (
     SaveFixtureError,
     SaveFixtureManifest,
@@ -108,6 +109,11 @@ def build_parser() -> argparse.ArgumentParser:
     gm_texts.add_argument("--mode", type=int, choices=(1, 2))
     gm_texts.add_argument("--contains", help="only show decoded text containing this string")
     gm_texts.set_defaults(handler=_gm_texts)
+    gm_script = gm_commands.add_parser(
+        "script", help="dump the deduplicated scenario script with per-line anchors"
+    )
+    gm_script.add_argument("source", type=_path)
+    gm_script.set_defaults(handler=_gm_script)
 
     binary = commands.add_parser("binary", help="patch copied binary media conservatively")
     binary_commands = binary.add_subparsers(dest="binary_command", required=True)
@@ -476,6 +482,13 @@ def _gm_texts(args: argparse.Namespace) -> None:
                 f"{source}:0x{record.offset:04x} mode={record.mode} "
                 f"size={len(record.payload)} {payload}"
             )
+
+
+def _gm_script(args: argparse.Namespace) -> None:
+    files = collect_mes_files(args.source)
+    if not files:
+        raise GMError(f"no MES files found under {args.source}")
+    print(render_script(files))
 
 
 def _binary_replace_exact(args: argparse.Namespace) -> None:
