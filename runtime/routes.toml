@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "98d830b27f20963713f19216465a133d46297f471b8b3aa09819f0cf420836ab"
+content_sha256 = "8cb36bfadd3f601576e2595447216a0fa3483325bfb3d817bbe526e802f5b83c"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -179,7 +179,7 @@ sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"
 [[routes]]
 name = "first-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0000.MES."
-content_sha256 = "bd598c88f494d31ff3e398dc8df8b69c7df085bdb02ba105df9c065eba45eaab"
+content_sha256 = "070c25c9e0b2e834b28c5f392b7582efae02321c9bdf5052202b8e65c5293d5f"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -210,7 +210,7 @@ state_offset = 0x1c7e0
 [[routes]]
 name = "opening-dialogue-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of FOP.MES."
-content_sha256 = "31c1c4cbade0e5145bd87db5830385389949e04da438c2b9d4edf28b9ac72fe9"
+content_sha256 = "3543253bc4d0e41df338d1ad6875829c6dc2b4b6f3d54a4cd8d074ba24522abb"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -241,7 +241,7 @@ state_offset = 0x1c7e0
 [[routes]]
 name = "second-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0001.MES."
-content_sha256 = "09df5e6ba7a5f6595ef5336cab5d6d16999cd7fde852a259dde0885c83be0e2d"
+content_sha256 = "78d1c665cc3018220ae3dad39a3e47b729474dc3097b9a1a978380bd6e236944"
 frames = 15300
 cache_frame = 8299
 taps = [

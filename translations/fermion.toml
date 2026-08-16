@@ -34,6 +34,12 @@ source = "disk-a/F0003.MES"
 sha256 = "54b58257dbafc6057e26f5cf116a34c12446ca74a7d3e89043055b9584c097a7"
 box_width = 61
 
+[[files]]
+file = "DISKA/F0004.MES"
+source = "disk-a/F0004.MES"
+sha256 = "14936108cbbe23df035301b4eb1ed45cf6dfd6c74c299f04e210d3a73e60b577"
+box_width = 61
+
 [[tokens]]
 id = "name:older-sister"
 source = "瑠璃"
@@ -59,6 +65,15 @@ translation = "pussy"
 max_width = 5
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b37, slot = 0x042e },
+]
+
+[[tokens]]
+id = "term:slot-2"
+source = "お○んち○"
+translation = "penis"
+max_width = 5
+initializers = [
+  { file = "DISKA/MAIN.MES", offset = 0x1b50, slot = 0x043e },
 ]
 
 [[entries]]
@@ -17360,4 +17375,4294 @@ segments = [
   { kind = "text", offset = 0x418d, source_mode = 1, source = "の正面に回った。" },
   { kind = "token", token = "name:dear-person", start = 0x419a, end = 0x41a9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x41a9, source_mode = 1, source = "はますます赤くなる。" },
+]
+
+[[entries]]
+id = "f0004-05b1-connie-arms-up-i-need-to-wash-your"
+file = "DISKA/F0004.MES"
+offset = 0x05b1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「さあ手をあげて。脇もきれいにしないとね。」"
+translation = "[CONNIE] \"Arms up. I need to wash your underarms too.\""
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-05d2-name-dear-person-okay"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Okay...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x05d2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x05d6, end = 0x05e5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x05e5, source_mode = 1, source = "】「うん・・・。」" },
+]
+
+[[composites]]
+id = "f0004-05f3-with-an-embarrassed-look-name-dear-person-raises"
+target_mode = 2
+source = "⟦name:dear-person⟧は恥ずかしそうに、腕を斜めにして脇を開ける。"
+translation = "⟦name:dear-person⟧ raises her arms at an angle, exposing her underarms with an embarrassed look."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x05f3, end = 0x0602, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0602, source_mode = 1, source = "は恥ずかしそうに、腕を斜めにして脇を開ける。" },
+]
+
+[[entries]]
+id = "f0004-064b-look"
+file = "DISKA/F0004.MES"
+offset = 0x064b
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-065c-think"
+file = "DISKA/F0004.MES"
+offset = 0x065c
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-066f-talk"
+file = "DISKA/F0004.MES"
+offset = 0x066f
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-06ac-name-dear-person-has-a-dreamy-look"
+target_mode = 2
+source = "⟦name:dear-person⟧は、とろんとした表情だ。"
+translation = "⟦name:dear-person⟧ has a dreamy look."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x06ac, end = 0x06bb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x06bb, source_mode = 1, source = "は、とろんとした表情だ。" },
+]
+
+[[entries]]
+id = "f0004-06cd-connie-so-this-is-what-it-means-to"
+file = "DISKA/F0004.MES"
+offset = 0x06cd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（翻弄されるっていうのかな、かわいい・・・。）"
+translation = "[CONNIE] (So this is what it means to be at someone's mercy. She's cute...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-06f9-i-m-itching-to-touch-her"
+file = "DISKA/F0004.MES"
+offset = 0x06f9
+source_mode = 1
+target_mode = 2
+source = "うずうず。"
+translation = "I'm itching to touch her."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0703-the-longer-i-look-at-name-dear-person"
+target_mode = 2
+source = "⟦name:dear-person⟧のかわいい乳首を見ているうちに、摘みたくなった。"
+translation = "⟦name:dear-person⟧'s nipples are so cute that the longer I look, the more I want to pinch one."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0703, end = 0x0712, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0712, source_mode = 1, source = "のかわいい乳首を見ているうちに、摘みたくなった。" },
+]
+
+[[entries]]
+id = "f0004-0730-i-m-itching-to-do-it"
+file = "DISKA/F0004.MES"
+offset = 0x0730
+source_mode = 1
+target_mode = 2
+source = "うずうず。"
+translation = "I'm itching to do it."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-073a-connie-mmmmm-just-a-little-should-be-fine"
+file = "DISKA/F0004.MES"
+offset = 0x073a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ん～～～～～～～っ、ちょっとだけなら・・・いいよね・・・・・・。）"
+translation = "[CONNIE] (Mmmmm... Just a little should be fine... right?)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0766-connie"
+file = "DISKA/F0004.MES"
+offset = 0x0766
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-077f-i-give-her-nipple-a-firm-pinch"
+file = "DISKA/F0004.MES"
+offset = 0x077f
+source_mode = 1
+target_mode = 2
+source = "乳首をぎゅっ、と摘む。"
+translation = "I give her nipple a firm pinch."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0791-name-dear-person-ahh-nnngh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっっ！！！　んふぅぅぅぅん・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ahh!! Nnngh...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0791, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0795, end = 0x07a4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x07a4, source_mode = 1, source = "】「あっっ！！！　んふぅぅぅぅん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-07c1-name-dear-person-s-reaction-makes-me-want"
+target_mode = 2
+source = "⟦name:dear-person⟧の反応に、あたしの心がうずく。"
+translation = "⟦name:dear-person⟧'s reaction makes me want more."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x07c1, end = 0x07d0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x07d0, source_mode = 1, source = "の反応に、あたしの心がうずく。" },
+]
+
+[[composites]]
+id = "f0004-07f0-name-dear-person-presses-close-to-me"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしに甘えてくる。"
+translation = "⟦name:dear-person⟧ presses close to me."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x07f0, end = 0x07ff, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x07ff, source_mode = 1, source = "はあたしに甘えてくる。" },
+]
+
+[[composites]]
+id = "f0004-080f-name-dear-person-hee-hee-hee"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・くすっ・・・くすくす・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...Hee... hee-hee...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x080f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0813, end = 0x0822, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0822, source_mode = 1, source = "】「・・・くすっ・・・くすくす・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-083e-she-clings-to-me-like-she-s-delighted"
+file = "DISKA/F0004.MES"
+offset = 0x083e
+source_mode = 1
+target_mode = 2
+source = "甘えるのが嬉しいっというようにあたしにまとわりつく。"
+translation = "She clings to me like she's delighted to be spoiled."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0878-connie-i-m-glad-name-dear-person-doesn"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧に嫌われなくてよかった・・・。）"
+translation = "[CONNIE] (I'm glad ⟦name:dear-person⟧ doesn't hate me...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0878, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0881, end = 0x0890, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0890, source_mode = 1, source = "に嫌われなくてよかった・・・。）" },
+]
+
+[[entries]]
+id = "f0004-08a5-she-doesn-t-pull-away-when-i-touch"
+file = "DISKA/F0004.MES"
+offset = 0x08a5
+source_mode = 1
+target_mode = 2
+source = "体に触れても拒否をしてこないから、少しは期待していいのかな。"
+translation = "She doesn't pull away when I touch her. Maybe I can hope for a little more."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-08d3-connie-i-think-name-dear-person-will-get"
+target_mode = 2
+source = "【コニー】（・・・⟦name:dear-person⟧はうまく懐いてくれそうだ。）"
+translation = "[CONNIE] (...I think ⟦name:dear-person⟧ will get attached to me.)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x08d3, source_mode = 1, source = "【コニー】（・・・" },
+  { kind = "token", token = "name:dear-person", start = 0x08df, end = 0x08ee, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x08ee, source_mode = 1, source = "はうまく懐いてくれそうだ。）" },
+]
+
+[[composites]]
+id = "f0004-0901-i-think-name-dear-person-is-cute"
+target_mode = 2
+source = "⟦name:dear-person⟧はかわいいと思う。"
+translation = "⟦name:dear-person⟧ is cute."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0901, end = 0x0910, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0910, source_mode = 1, source = "はかわいいと思う。" },
+]
+
+[[entries]]
+id = "f0004-091e-i-want-a-girl-like-her-to-cling"
+file = "DISKA/F0004.MES"
+offset = 0x091e
+source_mode = 1
+target_mode = 2
+source = "こんな子に甘えて欲しいとも思う。"
+translation = "I want a girl like her to cling to me."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0934-she-trusts-me-so-innocently-that-i-want"
+file = "DISKA/F0004.MES"
+offset = 0x0934
+source_mode = 1
+target_mode = 2
+source = "無邪気にあたしを信頼してくれるから、守ってあげたいと思う。"
+translation = "She trusts me so innocently that I want to protect her."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0974-connie-i-shouldn-t-be-falling-for-her"
+file = "DISKA/F0004.MES"
+offset = 0x0974
+source_mode = 1
+target_mode = 2
+source = "【コニー】（惹かれちゃいけないのに・・・・・・。）"
+translation = "[CONNIE] (I shouldn't be falling for her...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0992-i-m-someone-who-should-return-to-my"
+file = "DISKA/F0004.MES"
+offset = 0x0992
+source_mode = 1
+target_mode = 2
+source = "あたしはこの時代から帰るべき存在だ。"
+translation = "I'm someone who should return to my own time."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-09ac-i-know-i-shouldn-t-get-involved-but"
+target_mode = 2
+source = "深入りしてはいけないのに・・・、どうしても⟦name:dear-person⟧に惹かれていく自分を止められなかった。"
+translation = "I know I shouldn't get involved... but I can't stop myself from falling for ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x09ac, source_mode = 1, source = "深入りしてはいけないのに・・・、どうしても" },
+  { kind = "token", token = "name:dear-person", start = 0x09c5, end = 0x09d4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x09d4, source_mode = 1, source = "に惹かれていく自分を止められなかった。" },
+]
+
+[[composites]]
+id = "f0004-09f5-name-dear-person-blushes-and-doesn-t-answer"
+target_mode = 2
+source = "⟦name:dear-person⟧は照れて答えない。"
+translation = "⟦name:dear-person⟧ blushes and doesn't answer."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x09f5, end = 0x0a04, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a04, source_mode = 1, source = "は照れて答えない。" },
+]
+
+[[entries]]
+id = "f0004-0a12-connie-she-s-so-cute-i-could-eat"
+file = "DISKA/F0004.MES"
+offset = 0x0a12
+source_mode = 1
+target_mode = 2
+source = "【コニー】（食べちゃいたいくらいカワイイ、って表現がぴったり・・・・・・。）"
+translation = "[CONNIE] (She's so cute I could eat her up. That's exactly it...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0a41-i-give-name-dear-person-s-ear-a"
+target_mode = 2
+source = "かぷっ、と⟦name:dear-person⟧の耳を軽く噛む。"
+translation = "I give ⟦name:dear-person⟧'s ear a light nip."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0a41, source_mode = 1, source = "かぷっ、と" },
+  { kind = "token", token = "name:dear-person", start = 0x0a4a, end = 0x0a59, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a59, source_mode = 1, source = "の耳を軽く噛む。" },
+]
+
+[[entries]]
+id = "f0004-0a68-she-flinches"
+file = "DISKA/F0004.MES"
+offset = 0x0a68
+source_mode = 1
+target_mode = 2
+source = "びくっ。"
+translation = "She flinches."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0a71-name-dear-person-ahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あふぅ・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ahh...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0a71, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0a75, end = 0x0a84, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a84, source_mode = 1, source = "】「あふぅ・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0a99-name-dear-person-s-involuntary-reaction-pulls-me"
+target_mode = 2
+source = "⟦name:dear-person⟧の無意識の反応に、あたしはますます夢中になった。"
+translation = "⟦name:dear-person⟧'s involuntary reaction pulls me in deeper."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0a99, end = 0x0aa8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0aa8, source_mode = 1, source = "の無意識の反応に、あたしはますます夢中になった。" },
+]
+
+[[composites]]
+id = "f0004-0ae5-i-give-name-dear-person-one-kiss"
+target_mode = 2
+source = "⟦name:dear-person⟧にキスをひとつ。"
+translation = "⟦name:dear-person⟧ gets a kiss."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0ae5, end = 0x0af4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0af4, source_mode = 1, source = "にキスをひとつ。" },
+]
+
+[[composites]]
+id = "f0004-0b01-name-dear-person-mmm-mmph"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あんむ・・・んむっ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mmm... mmph...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0b01, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0b05, end = 0x0b14, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b14, source_mode = 1, source = "】「あんむ・・・んむっ・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-0b2c-i-love-the-little-sound-that-escapes-her"
+file = "DISKA/F0004.MES"
+offset = 0x0b2c
+source_mode = 1
+target_mode = 2
+source = "塞がれた唇から洩らす声がいとおしい。"
+translation = "I love the little sound that escapes her covered lips."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0b45-a-second-kiss-for-name-dear-person"
+target_mode = 2
+source = "⟦name:dear-person⟧にキスをふたつ。"
+translation = "⟦name:dear-person⟧ gets a second kiss."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0b45, end = 0x0b54, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b54, source_mode = 1, source = "にキスをふたつ。" },
+]
+
+[[composites]]
+id = "f0004-0b61-name-dear-person-nnh-mmm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「んんっ・・・・・・あむっ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Nnh... mmm...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0b61, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0b65, end = 0x0b74, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b74, source_mode = 1, source = "】「んんっ・・・・・・あむっ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0b8f-i-touch-name-dear-person-s-soft-lips"
+target_mode = 2
+source = "舌先で⟦name:dear-person⟧の柔らかな唇に触れて、味わう。"
+translation = "I touch ⟦name:dear-person⟧'s soft lips with the tip of my tongue and taste them."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0b8f, source_mode = 1, source = "舌先で" },
+  { kind = "token", token = "name:dear-person", start = 0x0b97, end = 0x0ba6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ba6, source_mode = 1, source = "の柔らかな唇に触れて、味わう。" },
+]
+
+[[entries]]
+id = "f0004-0bc4-connie-cute"
+file = "DISKA/F0004.MES"
+offset = 0x0bc4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（かわいい・・・。）"
+translation = "[CONNIE] (Cute...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0bd8-connie-i-know-i-shouldn-t-get-involved"
+file = "DISKA/F0004.MES"
+offset = 0x0bd8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・この時代のヒトとは、関わりにならない方がいいんだけど・・・。）"
+translation = "[CONNIE] (...I know I shouldn't get involved with people from this time...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0c08-connie-but-i"
+file = "DISKA/F0004.MES"
+offset = 0x0c08
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だけど、・・・、・・・。）"
+translation = "[CONNIE] (But... I...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-0c20-i-don-t-want-to-stop-yet-and"
+file = "DISKA/F0004.MES"
+offset = 0x0c20
+source_mode = 1
+target_mode = 2
+source = "あたしはまだ止めたくなかったし、一度燃え上がった炎は簡単には消せなかった。"
+translation = "I don't want to stop yet, and the heat in me won't die down so easily."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0c68-connie-you-re-the-one-who-lit-this"
+target_mode = 2
+source = "【コニー】（あたしの身体に火をつけたのは⟦name:dear-person⟧よ・・・。）"
+translation = "[CONNIE] (You're the one who lit this fire in me, ⟦name:dear-person⟧...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0c68, source_mode = 1, source = "【コニー】（あたしの身体に火をつけたのは" },
+  { kind = "token", token = "name:dear-person", start = 0x0c7f, end = 0x0c8e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0c8e, source_mode = 1, source = "よ・・・。）" },
+]
+
+[[composites]]
+id = "f0004-0c99-connie-this-is-your-fault-name-dear-person"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧がいけないんだ・・・。」"
+translation = "[CONNIE] \"This is your fault, ⟦name:dear-person⟧...\""
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0c99, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x0ca2, end = 0x0cb1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0cb1, source_mode = 1, source = "がいけないんだ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0cc2-name-dear-person-ahh-nnh-hahhh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あふぅ・・・・・・っ・・・、・・・んっ・・・・・・はぁぁぁっ・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ahh... nnh... hahhh...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0cc2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0cc6, end = 0x0cd5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0cd5, source_mode = 1, source = "】「あふぅ・・・・・・っ・・・、・・・んっ・・・・・・はぁぁぁっ・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0d03-name-dear-person-hears-my-words-through-a"
+target_mode = 2
+source = "あたしの言葉をもうろうとして聞いている⟦name:dear-person⟧。"
+translation = "Through a haze, ⟦name:dear-person⟧ listens to my words."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0d03, source_mode = 1, source = "あたしの言葉をもうろうとして聞いている" },
+  { kind = "token", token = "name:dear-person", start = 0x0d19, end = 0x0d28, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d28, source_mode = 1, source = "。" },
+]
+
+[[composites]]
+id = "f0004-0d2e-connie-you-re-so-cute-name-dear-person"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧がカワイイから・・・あたし、好きになっちゃった・・・。」"
+translation = "[CONNIE] \"You're so cute, ⟦name:dear-person⟧... I think I've fallen for you...\""
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0d2e, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x0d37, end = 0x0d46, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d46, source_mode = 1, source = "がカワイイから・・・あたし、好きになっちゃった・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0d69-name-dear-person-ah-nnnh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ、ふぅっ、ふぅぅーーん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... nnnh...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0d69, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0d6d, end = 0x0d7c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0d7c, source_mode = 1, source = "】「あっ、ふぅっ、ふぅぅーーん・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0d95-name-dear-person-lets-out-a-pleased-sound"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの愛撫に、嬉しそうな声をあげる。"
+translation = "⟦name:dear-person⟧ gives a pleased cry as I caress her."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0d95, end = 0x0da4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0da4, source_mode = 1, source = "はあたしの愛撫に、嬉しそうな声をあげる。" },
+]
+
+[[composites]]
+id = "f0004-0dbd-i-can-t-look-away-as-name-dear"
+target_mode = 2
+source = "ぶるぶると小刻みに震える⟦name:dear-person⟧は、見ていて飽きない。"
+translation = "I can't look away as ⟦name:dear-person⟧ trembles in little shivers."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0dbd, source_mode = 1, source = "ぶるぶると小刻みに震える" },
+  { kind = "token", token = "name:dear-person", start = 0x0dcd, end = 0x0ddc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ddc, source_mode = 1, source = "は、見ていて飽きない。" },
+]
+
+[[composites]]
+id = "f0004-0df6-i-press-my-breasts-against-name-dear-person"
+target_mode = 2
+source = "⟦name:dear-person⟧の胸にあたしの胸を押し付ける。"
+translation = "⟦name:dear-person⟧'s breasts meet mine as I press against her."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0df6, end = 0x0e05, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e05, source_mode = 1, source = "の胸にあたしの胸を押し付ける。" },
+]
+
+[[entries]]
+id = "f0004-0e19-squish"
+file = "DISKA/F0004.MES"
+offset = 0x0e19
+source_mode = 1
+target_mode = 2
+source = "むにむにぃっ。"
+translation = "Squish."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0e25-name-dear-person-ah-no-hah-hah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あイヤあぁ・・・、はぁはぁっ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah, no... Hah, hah...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0e25, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0e29, end = 0x0e38, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e38, source_mode = 1, source = "】「あイヤあぁ・・・、はぁはぁっ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0e56-name-dear-person-s-nipples-press-into-my"
+target_mode = 2
+source = "⟦name:dear-person⟧の乳首が、あたしの胸に押し付けられてくる。"
+translation = "⟦name:dear-person⟧'s nipples press into my breasts."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0e56, end = 0x0e65, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e65, source_mode = 1, source = "の乳首が、あたしの胸に押し付けられてくる。" },
+]
+
+[[composites]]
+id = "f0004-0e7f-name-dear-person-ah-hah-my-chest-it"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あ・・・はぁっ、胸が・・・はふぅっ、熱いよぅ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... hah... My chest... it's so hot...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0e7f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0e83, end = 0x0e92, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e92, source_mode = 1, source = "】「あ・・・はぁっ、胸が・・・はふぅっ、熱いよぅ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-0ec0-connie-have-i-led-name-dear-person-down"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧を悪い道に染めちゃったかな・・・・・・。）"
+translation = "[CONNIE] (Have I led ⟦name:dear-person⟧ down a bad path...?)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0ec0, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0ec9, end = 0x0ed8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ed8, source_mode = 1, source = "を悪い道に染めちゃったかな・・・・・・。）" },
+]
+
+[[composites]]
+id = "f0004-0ef5-this-is-name-dear-person-s-first-sexual"
+target_mode = 2
+source = "⟦name:dear-person⟧にとって、他人にえっちされるのは初体験だ。"
+translation = "⟦name:dear-person⟧ has never had anyone do anything sexual to her before."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0ef5, end = 0x0f04, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f04, source_mode = 1, source = "にとって、他人にえっちされるのは初体験だ。" },
+]
+
+[[composites]]
+id = "f0004-0f39-i-have-to-stop-name-dear-person-from"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧が甘えてくるのを止めなきゃいけない。"
+translation = "I have to stop ⟦name:dear-person⟧ from clinging to me."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0f39, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0f40, end = 0x0f4f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f4f, source_mode = 1, source = "が甘えてくるのを止めなきゃいけない。" },
+]
+
+[[entries]]
+id = "f0004-0f66-connie-ngh"
+file = "DISKA/F0004.MES"
+offset = 0x0f66
+source_mode = 1
+target_mode = 2
+source = "【コニー】（っ・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Ngh...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-0f80-but-i-can-t-stop-name-dear-person"
+target_mode = 2
+source = "でも嬉しそうにしている⟦name:dear-person⟧を止めることはできなかった。"
+translation = "But I can't stop ⟦name:dear-person⟧ when she looks so happy."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0f80, source_mode = 1, source = "でも嬉しそうにしている" },
+  { kind = "token", token = "name:dear-person", start = 0x0f8e, end = 0x0f9d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0f9d, source_mode = 1, source = "を止めることはできなかった。" },
+]
+
+[[composites]]
+id = "f0004-0fb9-connie-have-i-led-name-dear-person-toward"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧を、女色の道へ染めちゃったかな・・・・・・。）"
+translation = "[CONNIE] (Have I led ⟦name:dear-person⟧ into sex with women...?)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x0fb9, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0fc2, end = 0x0fd1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0fd1, source_mode = 1, source = "を、女色の道へ染めちゃったかな・・・・・・。）" },
+]
+
+[[composites]]
+id = "f0004-0ff2-for-name-dear-person-sexual-pleasure-is-supposed"
+target_mode = 2
+source = "⟦name:dear-person⟧にとって、性の刺激は男から与えられるべきものだ。"
+translation = "⟦name:dear-person⟧ is supposed to get sexual stimulation from a man."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0ff2, end = 0x1001, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1001, source_mode = 1, source = "にとって、性の刺激は男から与えられるべきものだ。" },
+]
+
+[[composites]]
+id = "f0004-1022-i-want-to-stop-name-dear-person-from"
+target_mode = 2
+source = "⟦name:dear-person⟧が甘えるのを止めたいけど・・・。"
+translation = "⟦name:dear-person⟧ keeps clinging to me. I want to stop her, but..."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1022, end = 0x1031, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1031, source_mode = 1, source = "が甘えるのを止めたいけど・・・。" },
+]
+
+[[composites]]
+id = "f0004-1046-but-i-m-too-drawn-to-name-dear"
+target_mode = 2
+source = "どうしても⟦name:dear-person⟧に惹かれて、お互いに甘えてしまう。"
+translation = "But I'm too drawn to ⟦name:dear-person⟧, and we end up clinging to each other."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1046, source_mode = 1, source = "どうしても" },
+  { kind = "token", token = "name:dear-person", start = 0x104e, end = 0x105d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x105d, source_mode = 1, source = "に惹かれて、お互いに甘えてしまう。" },
+]
+
+[[composites]]
+id = "f0004-1073-connie-name-dear-person"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧・・・・・・・・。）"
+translation = "[CONNIE] (⟦name:dear-person⟧...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1073, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x107c, end = 0x108b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x108b, source_mode = 1, source = "・・・・・・・・。）" },
+]
+
+[[entries]]
+id = "f0004-10b5-i-rub-from-her-underarm-down-to-her"
+file = "DISKA/F0004.MES"
+offset = 0x10b5
+source_mode = 1
+target_mode = 2
+source = "あたしは脇から胸を擦る。"
+translation = "I rub from her underarm down to her breast."
+speaker = "Connie"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-10c6-name-dear-person-tickles"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「くすぐったぁい・・・。」"
+translation = "[⟦name:dear-person⟧] \"Tickles...\""
+speaker = "name-slot:dear-person"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x10c6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x10ca, end = 0x10d9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x10d9, source_mode = 1, source = "】「くすぐったぁい・・・。」" },
+]
+
+[[entries]]
+id = "f0004-10ec-connie-hold-still"
+file = "DISKA/F0004.MES"
+offset = 0x10ec
+source_mode = 1
+target_mode = 2
+source = "【コニー】「動かないで。」"
+translation = "[CONNIE] \"Hold still.\""
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-10fe-connie-it-s-about-time"
+file = "DISKA/F0004.MES"
+offset = 0x10fe
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そろそろ頃合か・・・。）"
+translation = "[CONNIE] (It's about time...)"
+speaker = "コニー"
+context = "Connie washes Kanako and lets her attraction overtake her judgment."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1116-i-hold-name-dear-person-s-gaze-i"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の目をじっと見つめた。胸を擦ると見せかけて、じっくりと指で揉みほぐして愛撫する。"
+translation = "I hold ⟦name:dear-person⟧'s gaze. I make it look as if I'm rubbing her chest, then slowly knead and caress her breast with my fingers."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1116, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x111d, end = 0x112c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x112c, source_mode = 1, source = "の目をじっと見つめた。胸を擦ると見せかけて、じっくりと指で揉みほぐして愛撫する。" },
+]
+
+[[composites]]
+id = "f0004-115b-name-dear-person-ah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x115b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x115f, end = 0x116e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x116e, source_mode = 1, source = "】「あっ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-117c-name-dear-person-looks-away-and-gives-a"
+target_mode = 2
+source = "⟦name:dear-person⟧が目をそらし、小さな悲鳴をあげる。あたしはかまわずに続けた。"
+translation = "⟦name:dear-person⟧ looks away and gives a small cry. I keep going anyway."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x117c, end = 0x118b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x118b, source_mode = 1, source = "が目をそらし、小さな悲鳴をあげる。あたしはかまわずに続けた。" },
+]
+
+[[composites]]
+id = "f0004-11b1-name-dear-person-n-no-this-feels-strange"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「や・・・。なんだか・・・ヘン・・・。」"
+translation = "[⟦name:dear-person⟧] \"N-no... This feels... strange...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+notes = "Kanako's verbal refusal remains explicit; later narration reports Connie's interpretation rather than turning the refusal into consent."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x11b1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x11b5, end = 0x11c4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x11c4, source_mode = 1, source = "】「や・・・。なんだか・・・ヘン・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1200-name-dear-person-no-there"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「いやぁ・・・、そこ・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"No... there...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+notes = "The second verbal refusal remains literal and is not softened into mere surprise."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1200, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1204, end = 0x1213, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1213, source_mode = 1, source = "】「いやぁ・・・、そこ・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-122e-name-dear-person-protests-aloud-but-leaves-her"
+target_mode = 2
+source = "⟦name:dear-person⟧は声で抵抗するものの、体はあたしに任せたままだ。"
+translation = "⟦name:dear-person⟧ protests aloud, but leaves her body in my hands."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+notes = "This is Connie's self-serving interpretation of Kanako's body language, not an objective consent statement."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x122e, end = 0x123d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x123d, source_mode = 1, source = "は声で抵抗するものの、体はあたしに任せたままだ。" },
+]
+
+[[entries]]
+id = "f0004-1266-connie-that-should-be-enough"
+file = "DISKA/F0004.MES"
+offset = 0x1266
+source_mode = 1
+target_mode = 2
+source = "【コニー】（もういいかな。）"
+translation = "[CONNIE] (That should be enough.)"
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1279-i-bring-my-face-close-to-name-dear"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧に顔を近づけた。⟦name:dear-person⟧は目線をあちこちにそらしたが、顔はそむけなかった。"
+translation = "I bring my face close to ⟦name:dear-person⟧. ⟦name:dear-person⟧'s eyes dart around, but she doesn't turn her face away."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1279, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1280, end = 0x128f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x128f, source_mode = 1, source = "に顔を近づけた。" },
+  { kind = "token", token = "name:dear-person", start = 0x129b, end = 0x12aa, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x12aa, source_mode = 1, source = "は目線をあちこちにそらしたが、顔はそむけなかった。" },
+]
+
+[[composites]]
+id = "f0004-12c9-name-dear-person-u-um-big-sis-connie"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あ、あ、あ、あの、コニーおねえちゃぁん・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"U-um, Big Sis Connie...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x12c9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x12cd, end = 0x12dc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x12dc, source_mode = 1, source = "】「あ、あ、あ、あの、コニーおねえちゃぁん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-12fe-as-i-bring-my-lips-closer-name-dear"
+target_mode = 2
+source = "あたしが唇を近付けると、⟦name:dear-person⟧があたしの唇に指を触れて止める。"
+translation = "As I bring my lips closer, ⟦name:dear-person⟧ touches a finger to them and stops me."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x12fe, source_mode = 1, source = "あたしが唇を近付けると、" },
+  { kind = "token", token = "name:dear-person", start = 0x130d, end = 0x131c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x131c, source_mode = 1, source = "があたしの唇に指を触れて止める。" },
+]
+
+[[composites]]
+id = "f0004-1331-name-dear-person-i-i-ve-never-kissed"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「私・・・、私・・・、キス、初めてなの・・・・・・・。・・・。」"
+translation = "[⟦name:dear-person⟧] \"I... I've never kissed anyone before...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1331, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1335, end = 0x1344, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1344, source_mode = 1, source = "】「私・・・、私・・・、キス、初めてなの・・・・・・・。・・・。」" },
+]
+
+[[entries]]
+id = "f0004-136a-connie-can-i-have-it"
+file = "DISKA/F0004.MES"
+offset = 0x136a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・貰って、いい？」"
+translation = "[CONNIE] \"...Can I have it?\""
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1384-a-first-kiss-is-precious-i-ask-because"
+file = "DISKA/F0004.MES"
+offset = 0x1384
+source_mode = 1
+target_mode = 2
+source = "初めての女の子にとって貴重なものだ。だめなのかな、と思って聞く。"
+translation = "A first kiss is precious. I ask because maybe I shouldn't take it."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-13ab-name-dear-person-no-if-it-s-you"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・ううん、コニーおねえちゃんなら・・・・・・、あげても、・・・ぃぃ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...No. If it's you, Big Sis Connie... you can have it...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+notes = "Kanako grants permission specifically for her first kiss; the line is not broadened into blanket consent."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x13ab, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x13af, end = 0x13be, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x13be, source_mode = 1, source = "】「・・・・・・・・・・・・ううん、コニーおねえちゃんなら・・・・・・、あげても、・・・ぃぃ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-13f6-i-move-slowly-toward-name-dear-person"
+target_mode = 2
+source = "あたしはそっと⟦name:dear-person⟧に接近する。"
+translation = "I move slowly toward ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x13f6, source_mode = 1, source = "あたしはそっと" },
+  { kind = "token", token = "name:dear-person", start = 0x1400, end = 0x140f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x140f, source_mode = 1, source = "に接近する。" },
+]
+
+[[composites]]
+id = "f0004-141b-name-dear-person-mm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mm...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x141b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x141f, end = 0x142e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x142e, source_mode = 1, source = "】「あん・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1463-my-lips-meet-name-dear-person-s-soft"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の唇に触れた。柔らかく溶けてしまいそうな感触。"
+translation = "My lips meet ⟦name:dear-person⟧'s. Soft enough to melt."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1463, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x146a, end = 0x1479, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1479, source_mode = 1, source = "の唇に触れた。柔らかく溶けてしまいそうな感触。" },
+]
+
+[[entries]]
+id = "f0004-1496-slowly-at-first-then-i-take-my-time"
+file = "DISKA/F0004.MES"
+offset = 0x1496
+source_mode = 1
+target_mode = 2
+source = "最初はゆっくり、そしてじっくりと。"
+translation = "Slowly at first. Then I take my time."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-14ae-name-dear-person-big-sis-con-ah-mmph"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニーおねえちゃ・・・、ぁっ・・・あんむっ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Big Sis Con... ah... mmph...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x14ae, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x14b2, end = 0x14c1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x14c1, source_mode = 1, source = "】「コニーおねえちゃ・・・、ぁっ・・・あんむっ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-151d-name-dear-person-doesn-t-pull-away-keeping"
+target_mode = 2
+source = "⟦name:dear-person⟧は拒まなかった。唇を合わせたまま、手を胸の愛撫から下半身へ移す。"
+translation = "⟦name:dear-person⟧ doesn't pull away. Keeping our lips together, I move my hand from her breast down between her legs."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x151d, end = 0x152c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x152c, source_mode = 1, source = "は拒まなかった。唇を合わせたまま、手を胸の愛撫から下半身へ移す。" },
+]
+
+[[composites]]
+id = "f0004-1556-name-dear-person-nnh-hah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「んぁ・・・ふうっ・・・！」"
+translation = "[⟦name:dear-person⟧] \"Nnh... hah...!\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1556, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x155a, end = 0x1569, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1569, source_mode = 1, source = "】「んぁ・・・ふうっ・・・！」" },
+]
+
+[[composites]]
+id = "f0004-157d-i-feel-a-faint-stickiness-here-between-name"
+target_mode = 2
+source = "⟦name:dear-person⟧の下半身のここに、かすかに粘りを感じる。拒否はなかったものの、⟦name:dear-person⟧は震えていた。"
+translation = "⟦name:dear-person⟧ is faintly sticky here between the legs. She hasn't pulled away, but ⟦name:dear-person⟧ is trembling."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x157d, end = 0x158c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x158c, source_mode = 1, source = "の下半身のここに、かすかに粘りを感じる。拒否はなかったものの、" },
+  { kind = "token", token = "name:dear-person", start = 0x15b1, end = 0x15c0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x15c0, source_mode = 1, source = "は震えていた。" },
+]
+
+[[entries]]
+id = "f0004-15cc-connie-are-you-cold"
+file = "DISKA/F0004.MES"
+offset = 0x15cc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「寒いのか？」"
+translation = "[CONNIE] \"Are you cold?\""
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-15de-i-break-the-kiss-and-ask-just-to"
+file = "DISKA/F0004.MES"
+offset = 0x15de
+source_mode = 1
+target_mode = 2
+source = "唇を離し、一応、聞いてみる。"
+translation = "I break the kiss and ask, just to be sure."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-15f2-name-dear-person-no-my-head-is-tingling"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・ううん・・・、頭がジンジンしちゃって体が熱いの・・・。」"
+translation = "[⟦name:dear-person⟧] \"No... My head is tingling, and my whole body feels hot...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x15f2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x15f6, end = 0x1605, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1605, source_mode = 1, source = "】「・・・ううん・・・、頭がジンジンしちゃって体が熱いの・・・。」" },
+]
+
+[[entries]]
+id = "f0004-162e-then-she-s-fine"
+file = "DISKA/F0004.MES"
+offset = 0x162e
+source_mode = 1
+target_mode = 2
+source = "なら大丈夫だ。"
+translation = "Then she's fine."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-163d-name-dear-person-um-listen-i-ve-never"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あの、あのね・・・。私・・・こういうこと・・・・・・初めてだから・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Um, listen... I've... never done anything like this before...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x163d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1641, end = 0x1650, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1650, source_mode = 1, source = "】「あの、あのね・・・。私・・・こういうこと・・・・・・初めてだから・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-167f-then-she-falters"
+file = "DISKA/F0004.MES"
+offset = 0x167f
+source_mode = 1
+target_mode = 2
+source = "それから言葉を詰まらせる。"
+translation = "Then she falters."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1692-name-dear-person-so-um"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・・・・、だから・・・。あの・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...So... um...\""
+speaker = "name-slot:dear-person"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1692, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1696, end = 0x16a5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x16a5, source_mode = 1, source = "】「・・・・・・・・・・・・・・・、だから・・・。あの・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-16cd-connie-i-know-i-ll-be-gen-tle"
+file = "DISKA/F0004.MES"
+offset = 0x16cd
+source_mode = 1
+target_mode = 2
+source = "【コニー】「わかってる。・・・優しくしてあ・げ・る・・・。」"
+translation = "[CONNIE] \"I know. ...I'll be gen-tle...\""
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-16f1-i-look-at-name-dear-person"
+target_mode = 2
+source = "⟦name:dear-person⟧を見る。"
+translation = "⟦name:dear-person⟧ is in front of me. I look at her."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x16f1, end = 0x1700, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1700, source_mode = 1, source = "を見る。" },
+]
+
+[[entries]]
+id = "f0004-1709-connie-okay"
+file = "DISKA/F0004.MES"
+offset = 0x1709
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いい？」"
+translation = "[CONNIE] \"Okay?\""
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1718-name-dear-person-nods-once"
+target_mode = 2
+source = "コクンと頷く⟦name:dear-person⟧。"
+translation = "A small nod from ⟦name:dear-person⟧ is her answer."
+speaker = "Connie"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1718, source_mode = 1, source = "コクンと頷く" },
+  { kind = "token", token = "name:dear-person", start = 0x1722, end = 0x1731, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1731, source_mode = 1, source = "。" },
+]
+
+[[entries]]
+id = "f0004-1737-connie-my-heart-s-pounding-too"
+file = "DISKA/F0004.MES"
+offset = 0x1737
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしもドキドキしちゃう・・・。）"
+translation = "[CONNIE] (My heart's pounding too...)"
+speaker = "コニー"
+context = "Connie escalates intimacy while Kanako voices hesitation and grants permission for a first kiss."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1753-a-quick-kiss"
+file = "DISKA/F0004.MES"
+offset = 0x1753
+source_mode = 1
+target_mode = 2
+source = "ちゅっ・・・、とキス。"
+translation = "A quick kiss."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1763-name-dear-person-hah-ah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「はふぅ・・・ぁんっ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hah... ah...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1763, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1767, end = 0x1776, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1776, source_mode = 1, source = "】「はふぅ・・・ぁんっ・・・。」" },
+]
+
+[[entries]]
+id = "f0004-178b-then-a-longer-kiss"
+file = "DISKA/F0004.MES"
+offset = 0x178b
+source_mode = 1
+target_mode = 2
+source = "ちゅぱっ・・・と長いキス。"
+translation = "A long, wet kiss."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-179f-name-dear-person-ah-mmm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ、あんっ、んむっ・・・・・・、・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... mmm...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x179f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x17a3, end = 0x17b2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17b2, source_mode = 1, source = "】「あっ、あんっ、んむっ・・・・・・、・・・。」" },
+]
+
+[[entries]]
+id = "f0004-17cf-connie-mm"
+file = "DISKA/F0004.MES"
+offset = 0x17cf
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっ・・・・・・。」"
+translation = "[CONNIE] \"Mm...\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-17e4-name-dear-person-s-soft-lips-taste-sweet"
+target_mode = 2
+source = "⟦name:dear-person⟧の柔らかな唇は、触れているだけで甘い。"
+translation = "⟦name:dear-person⟧'s soft lips taste sweet even when I only touch them."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x17e4, end = 0x17f3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17f3, source_mode = 1, source = "の柔らかな唇は、触れているだけで甘い。" },
+]
+
+[[composites]]
+id = "f0004-180b-name-dear-person-ah-mmm-nnnh-hah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ・・・・・・んむっ・・んん・・・・・・・・・・、はふぅ。」"
+translation = "[⟦name:dear-person⟧] \"Ah... mmm... nnnh... hah...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x180b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x180f, end = 0x181e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x181e, source_mode = 1, source = "】「あっ・・・・・・んむっ・・んん・・・・・・・・・・、はふぅ。」" },
+]
+
+[[composites]]
+id = "f0004-1844-when-i-pull-away-name-dear-person-moves"
+target_mode = 2
+source = "あたしが唇を離すと、⟦name:dear-person⟧は『あっ。』というようにもっと欲しいという仕草をする。"
+translation = "When I pull away, ⟦name:dear-person⟧ moves as if to say \"Ah,\" asking for more."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1844, source_mode = 1, source = "あたしが唇を離すと、" },
+  { kind = "token", token = "name:dear-person", start = 0x1851, end = 0x1860, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1860, source_mode = 1, source = "は『あっ。』というようにもっと欲しいという仕草をする。" },
+]
+
+[[composites]]
+id = "f0004-1885-connie-you-gave-me-your-first-kiss-name"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧が、ファーストキスをあたしにくれたんだ。悦ばせてあげるわ。」"
+translation = "[CONNIE] \"You gave me your first kiss, ⟦name:dear-person⟧. I'll make you feel good.\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1885, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x188e, end = 0x189d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x189d, source_mode = 1, source = "が、ファーストキスをあたしにくれたんだ。悦ばせてあげるわ。」" },
+]
+
+[[composites]]
+id = "f0004-18dd-connie-name-dear-person"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧・・・・・・。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧...\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x18dd, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x18e6, end = 0x18f5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x18f5, source_mode = 1, source = "・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1902-i-whisper-into-name-dear-person-s-ear"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の耳許でささやく。そしてふうっ、と息を吐く。"
+translation = "I whisper into ⟦name:dear-person⟧'s ear, then breathe softly against it."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1902, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1909, end = 0x1918, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1918, source_mode = 1, source = "の耳許でささやく。そしてふうっ、と息を吐く。" },
+]
+
+[[composites]]
+id = "f0004-1935-name-dear-person-eep-ah-aahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「きゃ・・・、あっ、あぁぁん・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Eep... ah... aahh...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1935, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1939, end = 0x1948, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1948, source_mode = 1, source = "】「きゃ・・・、あっ、あぁぁん・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1967-name-dear-person-shudders"
+target_mode = 2
+source = "⟦name:dear-person⟧はぶるぶるっと震える。"
+translation = "⟦name:dear-person⟧ shudders."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1967, end = 0x1976, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1976, source_mode = 1, source = "はぶるぶるっと震える。" },
+]
+
+[[entries]]
+id = "f0004-198f-connie-do-you-hate-this"
+file = "DISKA/F0004.MES"
+offset = 0x198f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「こんなことは、嫌いか？」"
+translation = "[CONNIE] \"Do you hate this?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-19a6-a-wet-sound-comes-from-between-name-dear"
+target_mode = 2
+source = "くちゅくちゅと、⟦name:dear-person⟧のそこは、音を立てるまでになっていた。"
+translation = "A wet sound comes from between ⟦name:dear-person⟧'s legs."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x19a6, source_mode = 1, source = "くちゅくちゅと、" },
+  { kind = "token", token = "name:dear-person", start = 0x19b1, end = 0x19c0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x19c0, source_mode = 1, source = "のそこは、音を立てるまでになっていた。" },
+]
+
+[[composites]]
+id = "f0004-19da-name-dear-person"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・。」"
+translation = "[⟦name:dear-person⟧] \"...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x19da, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x19de, end = 0x19ed, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x19ed, source_mode = 1, source = "】「・・・。」" },
+]
+
+[[composites]]
+id = "f0004-19f9-name-dear-person-doesn-t-answer"
+target_mode = 2
+source = "⟦name:dear-person⟧は答えない。"
+translation = "⟦name:dear-person⟧ doesn't answer."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x19f9, end = 0x1a08, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a08, source_mode = 1, source = "は答えない。" },
+]
+
+[[entries]]
+id = "f0004-1a13-connie-if-you-don-t-answer-i-ll"
+file = "DISKA/F0004.MES"
+offset = 0x1a13
+source_mode = 1
+target_mode = 2
+source = "【コニー】「答えないと止めるわ。」"
+translation = "[CONNIE] \"If you don't answer, I'll stop.\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1a29-name-dear-person-i-don-t-dislike-it"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・嫌いじゃ・・・、な・・・ぃ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...I don't... dislike it...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1a29, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1a2d, end = 0x1a3c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a3c, source_mode = 1, source = "】「・・・嫌いじゃ・・・、な・・・ぃ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1a58-name-dear-person-says-it-in-a-voice"
+target_mode = 2
+source = "消え掛かりそうな声で言う⟦name:dear-person⟧。"
+translation = "In a voice that almost disappears, ⟦name:dear-person⟧ says it."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1a58, source_mode = 1, source = "消え掛かりそうな声で言う" },
+  { kind = "token", token = "name:dear-person", start = 0x1a68, end = 0x1a77, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1a77, source_mode = 1, source = "。" },
+]
+
+[[composites]]
+id = "f0004-1a8e-connie-name-dear-person-have-you-ever-had"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧、男の人とセックスした事ある？」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, have you ever had sex with a man?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1a8e, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1a97, end = 0x1aa6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1aa6, source_mode = 1, source = "、男の人とセックスした事ある？」" },
+]
+
+[[entries]]
+id = "f0004-1abd-her-head-whips-from-side-to-side"
+file = "DISKA/F0004.MES"
+offset = 0x1abd
+source_mode = 1
+target_mode = 2
+source = "ぶんぶんぶんっ。"
+translation = "Her head whips from side to side."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1aca-still-bright-red-name-dear-person-keeps-shaking"
+target_mode = 2
+source = "⟦name:dear-person⟧は真っ赤になったまま首を振って否定する。"
+translation = "⟦name:dear-person⟧ stays bright red as she keeps shaking her head no."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1aca, end = 0x1ad9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1ad9, source_mode = 1, source = "は真っ赤になったまま首を振って否定する。" },
+]
+
+[[entries]]
+id = "f0004-1af5-connie-oh-so-you-re-a-virgin"
+file = "DISKA/F0004.MES"
+offset = 0x1af5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そっかぁ・・・ヴァージンなんだぁ・・・。」"
+translation = "[CONNIE] \"Oh... So you're a virgin...\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1b18-of-course-the-kiss-with-me-was-her"
+file = "DISKA/F0004.MES"
+offset = 0x1b18
+source_mode = 1
+target_mode = 2
+source = "そうよね、あたしとしたのがファーストキスだったんだし。"
+translation = "Of course. The kiss with me was her first."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1b3a-the-thought-that-i-m-about-to-teach"
+file = "DISKA/F0004.MES"
+offset = 0x1b3a
+source_mode = 1
+target_mode = 2
+source = "あたしがこれから教えてあげるんだと思うと、ゾクゾクしてきちゃう。"
+translation = "The thought that I'm about to teach her sends a thrill through me."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1b62-as-for-me-ahem-se-cret"
+file = "DISKA/F0004.MES"
+offset = 0x1b62
+source_mode = 1
+target_mode = 2
+source = "かくいうあたしは・・・・・・・・・。コホン、ひ・み・つ。"
+translation = "As for me... Ahem. Se-cret."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1b84-flushed-by-my-sudden-question-name-dear-person"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの突発的な質問に、身体を火照らせてうつむいている。"
+translation = "⟦name:dear-person⟧ hangs her head, flushed by my sudden question."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1b84, end = 0x1b93, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1b93, source_mode = 1, source = "はあたしの突発的な質問に、身体を火照らせてうつむいている。" },
+]
+
+[[composites]]
+id = "f0004-1bba-name-dear-person-but-if-it-s-you"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「でも・・・・・・、コニーおねえちゃんになら・・・・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"But... if it's you, Big Sis Connie...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1bba, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1bbe, end = 0x1bcd, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1bcd, source_mode = 1, source = "】「でも・・・・・・、コニーおねえちゃんになら・・・・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-1bf7-name-dear-person-it-s-okay"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・いいよ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...It's okay...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1bf7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1bfb, end = 0x1c0a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1c0a, source_mode = 1, source = "】「・・・・・・・・・・・・いいよ・・・。」" },
+]
+
+[[entries]]
+id = "f0004-1c25-connie"
+file = "DISKA/F0004.MES"
+offset = 0x1c25
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1c3b-i-answer-by-stroking-name-dear-person-s"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の頭を撫でることで答えた。"
+translation = "I answer by stroking ⟦name:dear-person⟧'s head."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1c3b, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1c42, end = 0x1c51, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1c51, source_mode = 1, source = "の頭を撫でることで答えた。" },
+]
+
+[[composites]]
+id = "f0004-1c64-connie-save-that-for-when-you-find-a"
+target_mode = 2
+source = "【コニー】（・・・それは⟦name:dear-person⟧に好きな男の子ができたときのために、とっておきなさい。）"
+translation = "[CONNIE] (...Save that for when you find a boy you love, ⟦name:dear-person⟧.)"
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1c64, source_mode = 1, source = "【コニー】（・・・それは" },
+  { kind = "token", token = "name:dear-person", start = 0x1c73, end = 0x1c82, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1c82, source_mode = 1, source = "に好きな男の子ができたときのために、とっておきなさい。）" },
+]
+
+[[entries]]
+id = "f0004-1ca3-i-don-t-say-it-aloud"
+file = "DISKA/F0004.MES"
+offset = 0x1ca3
+source_mode = 1
+target_mode = 2
+source = "あたしは、この言葉を口に出して言わなかった。"
+translation = "I don't say it aloud."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1cbf-because-right-now-more-than-anything-i-want"
+target_mode = 2
+source = "今はなによりも⟦name:dear-person⟧を愛したいから。"
+translation = "Because right now, more than anything, I want to love ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1cbf, source_mode = 1, source = "今はなによりも" },
+  { kind = "token", token = "name:dear-person", start = 0x1cca, end = 0x1cd9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1cd9, source_mode = 1, source = "を愛したいから。" },
+]
+
+[[entries]]
+id = "f0004-1cf7-to-heighten-the-mood-i-ask-her-more"
+file = "DISKA/F0004.MES"
+offset = 0x1cf7
+source_mode = 1
+target_mode = 2
+source = "気分を盛り上げるため、あたしはもっと聞く。"
+translation = "I keep asking questions to work us up."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1d12-connie-name-dear-person-do-you-know-what"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧、ここ、何て呼ぶか知ってる？」"
+translation = "[CONNIE] \"⟦name:dear-person⟧, do you know what this is called?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1d12, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1d1b, end = 0x1d2a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d2a, source_mode = 1, source = "、ここ、何て呼ぶか知ってる？」" },
+]
+
+[[entries]]
+id = "f0004-1d40-my-heart-pounds"
+file = "DISKA/F0004.MES"
+offset = 0x1d40
+source_mode = 1
+target_mode = 2
+source = "どきどき。"
+translation = "My heart pounds."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1d4a-name-dear-person-keeps-her-cute-lips-pressed"
+target_mode = 2
+source = "⟦name:dear-person⟧はかわいい唇をきゅっと閉じたままだ。"
+translation = "⟦name:dear-person⟧ keeps her cute lips pressed tight."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1d4a, end = 0x1d59, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d59, source_mode = 1, source = "はかわいい唇をきゅっと閉じたままだ。" },
+]
+
+[[entries]]
+id = "f0004-1d71-connie-you-know"
+file = "DISKA/F0004.MES"
+offset = 0x1d71
+source_mode = 1
+target_mode = 2
+source = "【コニー】「知ってる？」"
+translation = "[CONNIE] \"You know?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1d82-name-dear-person-gives-a-tiny-nod"
+target_mode = 2
+source = "わずかに頷く⟦name:dear-person⟧。"
+translation = "With the slightest motion, ⟦name:dear-person⟧ nods."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1d82, source_mode = 1, source = "わずかに頷く" },
+  { kind = "token", token = "name:dear-person", start = 0x1d8c, end = 0x1d9b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d9b, source_mode = 1, source = "。" },
+]
+
+[[entries]]
+id = "f0004-1da1-my-heart-pounds"
+file = "DISKA/F0004.MES"
+offset = 0x1da1
+source_mode = 1
+target_mode = 2
+source = "どきどき。"
+translation = "My heart pounds."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1dab-connie-will-you-say-it-for-me-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧・・・言ってくれるかな。）"
+translation = "[CONNIE] (Will you say it for me, ⟦name:dear-person⟧...?)"
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1dab, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x1db4, end = 0x1dc3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1dc3, source_mode = 1, source = "・・・言ってくれるかな。）" },
+]
+
+[[composites]]
+id = "f0004-1dd5-my-heart-races-at-the-thought-of-making"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧に言わせたくてドキドキしていた。"
+translation = "My heart races at the thought of making ⟦name:dear-person⟧ say it."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1dd5, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1ddc, end = 0x1deb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1deb, source_mode = 1, source = "に言わせたくてドキドキしていた。" },
+]
+
+[[entries]]
+id = "f0004-1e00-connie-what-do-you-call-it"
+file = "DISKA/F0004.MES"
+offset = 0x1e00
+source_mode = 1
+target_mode = 2
+source = "【コニー】「何て言うの？」"
+translation = "[CONNIE] \"What do you call it?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1e13-name-dear-person-i-uh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ぁ・・・、ぉ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"I... uh...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1e13, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1e17, end = 0x1e26, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e26, source_mode = 1, source = "】「ぁ・・・、ぉ・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-1e3b-connie-tell-me-and-i-ll-do-something"
+file = "DISKA/F0004.MES"
+offset = 0x1e3b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「教えてくれたら、もっとイイ事、してあげる。」"
+translation = "[CONNIE] \"Tell me, and I'll do something even better.\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1e5e-name-dear-person-s-body-twitches"
+target_mode = 2
+source = "⟦name:dear-person⟧の身体がピクッと震えた。"
+translation = "⟦name:dear-person⟧'s body twitches."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1e5e, end = 0x1e6d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e6d, source_mode = 1, source = "の身体がピクッと震えた。" },
+]
+
+[[composites]]
+id = "f0004-1e90-name-dear-person-i"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「私・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"I...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1e90, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1e94, end = 0x1ea3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1ea3, source_mode = 1, source = "】「私・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-1eb3-connie-whispering-it-to-someone-you-love-is"
+file = "DISKA/F0004.MES"
+offset = 0x1eb3
+source_mode = 1
+target_mode = 2
+source = "【コニー】「好きな者同士でささやくと興奮するのよ。だいじょぉぶ。他の人には言わない。」"
+translation = "[CONNIE] \"It's exciting when two people who love each other whisper it. It's okay. I won't tell anyone.\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1ee9-name-dear-person"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1ee9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1eed, end = 0x1efc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1efc, source_mode = 1, source = "】「・・・・・・・・・・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-1f2d-connie-you-can-say-it-to-someone-you"
+file = "DISKA/F0004.MES"
+offset = 0x1f2d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「好きな人になら、言えるわ。」"
+translation = "[CONNIE] \"You can say it to someone you love.\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1f46-i-whisper-the-word-into-name-dear-person"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の耳許でその言葉をささやく。"
+translation = "I whisper the word into ⟦name:dear-person⟧'s ear."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1f46, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1f4d, end = 0x1f5c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f5c, source_mode = 1, source = "の耳許でその言葉をささやく。" },
+]
+
+[[entries]]
+id = "f0004-1f70-connie-do-to-me"
+file = "DISKA/F0004.MES"
+offset = 0x1f70
+source_mode = 1
+target_mode = 2
+source = "【コニー】「－－－－して・・・。」"
+translation = "[CONNIE] \"Do ---- to me...\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+notes = "The source itself replaces the operative word with a long dash; the English keeps that censorship rather than inventing the missing phrase."
+
+[[composites]]
+id = "f0004-1f86-name-dear-person-gasps"
+target_mode = 2
+source = "ハッ、と息を呑む⟦name:dear-person⟧。"
+translation = "With a start, ⟦name:dear-person⟧ draws a sharp breath."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1f86, source_mode = 1, source = "ハッ、と息を呑む" },
+  { kind = "token", token = "name:dear-person", start = 0x1f93, end = 0x1fa2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1fa2, source_mode = 1, source = "。" },
+]
+
+[[entries]]
+id = "f0004-1fa8-she-lowers-her-head-but-she-doesn-t"
+file = "DISKA/F0004.MES"
+offset = 0x1fa8
+source_mode = 1
+target_mode = 2
+source = "うつむくけど、拒否はしていない。"
+translation = "She lowers her head, but she doesn't refuse."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1fbd-she-wants-to-say-it-but-she-can"
+file = "DISKA/F0004.MES"
+offset = 0x1fbd
+source_mode = 1
+target_mode = 2
+source = "言いたいけど戸惑っている、そんな状態だ。"
+translation = "She wants to say it, but she can't quite bring herself to."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-1fda-connie-i-ve-never-met-anyone-like-her"
+file = "DISKA/F0004.MES"
+offset = 0x1fda
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こんな子・・・・・・初めて・・・・・・・・・。）"
+translation = "[CONNIE] (I've never met anyone like her...)"
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-1ffd-i-can-t-take-my-eyes-off-anything"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の一挙一動に夢中になる。"
+translation = "I can't take my eyes off anything ⟦name:dear-person⟧ does."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x1ffd, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2004, end = 0x2013, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2013, source_mode = 1, source = "の一挙一動に夢中になる。" },
+]
+
+[[entries]]
+id = "f0004-2030-connie-what-was-the-word"
+file = "DISKA/F0004.MES"
+offset = 0x2030
+source_mode = 1
+target_mode = 2
+source = "【コニー】「何て言ってるの？」"
+translation = "[CONNIE] \"What was the word?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2045-name-dear-person-term-slot-1"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・・・・・・・⟦term:slot-1⟧・・・。」"
+translation = "[⟦name:dear-person⟧] \"...⟦term:slot-1⟧...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2045, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2049, end = 0x2058, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2058, source_mode = 1, source = "】「・・・・・・・・・・・・・・・・・・" },
+  { kind = "token", token = "term:slot-1", start = 0x206f, end = 0x207e, sha256 = "df9cd9c21054919e9a10a247997f351d6cb92015174bdf4f9c35cbbbcdc488ef" },
+  { kind = "text", offset = 0x207e, source_mode = 1, source = "・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2088-as-soon-as-name-dear-person-says-it"
+target_mode = 2
+source = "そう言った⟦name:dear-person⟧の体が、みるみるうちに熱くなる。"
+translation = "As soon as ⟦name:dear-person⟧ says it, her body grows hotter by the second."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2088, source_mode = 1, source = "そう言った" },
+  { kind = "token", token = "name:dear-person", start = 0x2090, end = 0x209f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x209f, source_mode = 1, source = "の体が、みるみるうちに熱くなる。" },
+]
+
+[[composites]]
+id = "f0004-20b4-connie-a-man-s-term-slot-2-goes"
+target_mode = 2
+source = "【コニー】「ここに男の人の⟦term:slot-2⟧が入るの。それも知ってるわよね。」"
+translation = "[CONNIE] \"A man's ⟦term:slot-2⟧ goes in here. You know that too, right?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+notes = "The second configurable adult-term slot defaults to 'penis' and remains live in the sentence."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x20b4, source_mode = 1, source = "【コニー】「ここに男の人の" },
+  { kind = "token", token = "term:slot-2", start = 0x20c4, end = 0x20d3, sha256 = "0a28207346050a8b27a38ad95b2fb0d0ca5768362aba4c2c45b4904315bdab2d" },
+  { kind = "text", offset = 0x20d3, source_mode = 1, source = "が入るの。それも知ってるわよね。」" },
+]
+
+[[composites]]
+id = "f0004-20e9-connie-name-dear-person-is-eighteen-and-in"
+target_mode = 2
+source = "【コニー】（高校生だし・・・、⟦name:dear-person⟧も知ってるよね・・・。）"
+translation = "[CONNIE] (⟦name:dear-person⟧ is eighteen and in high school... She knows that much, right...?)"
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+notes = "The Japanese source says high-school student. The player-facing age follows the disclosed English-release policy that everyone depicted in sexual content is eighteen or older."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x20e9, source_mode = 1, source = "【コニー】（高校生だし・・・、" },
+  { kind = "token", token = "name:dear-person", start = 0x20fe, end = 0x210d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x210d, source_mode = 1, source = "も知ってるよね・・・。）" },
+]
+
+[[composites]]
+id = "f0004-211e-name-dear-person-y-yeah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「う、うんっ・・・・・・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Y-yeah...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x211e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2122, end = 0x2131, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2131, source_mode = 1, source = "】「う、うんっ・・・・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-214b-name-dear-person-s-body-is-flushed"
+target_mode = 2
+source = "⟦name:dear-person⟧の体が火照っている。"
+translation = "⟦name:dear-person⟧'s body is flushed."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x214b, end = 0x215a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x215a, source_mode = 1, source = "の体が火照っている。" },
+]
+
+[[entries]]
+id = "f0004-2169-she-can-barely-get-her-voice-out"
+file = "DISKA/F0004.MES"
+offset = 0x2169
+source_mode = 1
+target_mode = 2
+source = "声を出すのもやっとのようだ。"
+translation = "She can barely get her voice out."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2195-connie-do-you-ever-touch-your-term-slot"
+target_mode = 2
+source = "【コニー】「自分でも、⟦term:slot-1⟧をいじるってコト、・・・してるの？」"
+translation = "[CONNIE] \"Do you ever touch your ⟦term:slot-1⟧ yourself...?\""
+speaker = "コニー"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2195, source_mode = 1, source = "【コニー】「自分でも、" },
+  { kind = "token", token = "term:slot-1", start = 0x21a3, end = 0x21b2, sha256 = "df9cd9c21054919e9a10a247997f351d6cb92015174bdf4f9c35cbbbcdc488ef" },
+  { kind = "text", offset = 0x21b2, source_mode = 1, source = "をいじるってコト、・・・してるの？」" },
+]
+
+[[composites]]
+id = "f0004-21c9-name-dear-person"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"...\""
+speaker = "name-slot:dear-person"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x21c9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x21cd, end = 0x21dc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x21dc, source_mode = 1, source = "】「・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-21eb-name-dear-person-turns-bright-red-and-says"
+target_mode = 2
+source = "⟦name:dear-person⟧は真っ赤になって答えない。"
+translation = "⟦name:dear-person⟧ turns bright red and says nothing."
+speaker = "Connie"
+context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x21eb, end = 0x21fa, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x21fa, source_mode = 1, source = "は真っ赤になって答えない。" },
+]
+
+[[entries]]
+id = "f0004-220e-i-stop-my-finger-dead-her-hot-labia"
+file = "DISKA/F0004.MES"
+offset = 0x220e
+source_mode = 1
+target_mode = 2
+source = "あたしは指をぴたっと止めた。熱い秘唇が指を押し返すように締まる。"
+translation = "I stop my finger dead. Her hot labia tighten against it, as if pushing it away."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "秘唇 is translated anatomically as labia; the line describes pressure against the finger and does not add penetration."
+
+[[composites]]
+id = "f0004-22e1-name-dear-person-rocks-her-hips-without-realizing"
+target_mode = 2
+source = "⟦name:dear-person⟧は無意識に腰を震わせ、あたしの指が抜かれると切なそうな顔を見せる。"
+translation = "⟦name:dear-person⟧ rocks her hips without realizing it. When I pull my finger away, she gives me a longing look."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x22e1, end = 0x22f0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x22f0, source_mode = 1, source = "は無意識に腰を震わせ、あたしの指が抜かれると切なそうな顔を見せる。" },
+]
+
+[[composites]]
+id = "f0004-231c-connie-tell-me-name-dear-person"
+target_mode = 2
+source = "【コニー】「教・え・て・・・。⟦name:dear-person⟧。」"
+translation = "[CONNIE] \"Tell me... ⟦name:dear-person⟧.\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x231c, source_mode = 1, source = "【コニー】「教・え・て・・・。" },
+  { kind = "token", token = "name:dear-person", start = 0x232f, end = 0x233e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x233e, source_mode = 1, source = "。」" },
+]
+
+[[entries]]
+id = "f0004-2345-when-she-doesn-t-answer-i-tap-the"
+file = "DISKA/F0004.MES"
+offset = 0x2345
+source_mode = 1
+target_mode = 2
+source = "答えがないので、入り口付近の敏感な部分をチョン、と触っては離れる。"
+translation = "When she doesn't answer, I tap the sensitive spot near her vaginal opening, then pull away."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "The vaginal opening remains an explicit landmark; the nearby sensitive spot is not collapsed into the configurable term."
+
+[[composites]]
+id = "f0004-236e-with-me-pressing-her-name-dear-person-answers"
+target_mode = 2
+source = "あたしの攻めに、⟦name:dear-person⟧は消え掛かりそうな声で言った。"
+translation = "With me pressing her, ⟦name:dear-person⟧ answers in a voice that almost disappears."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x236e, source_mode = 1, source = "あたしの攻めに、" },
+  { kind = "token", token = "name:dear-person", start = 0x237a, end = 0x2389, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2389, source_mode = 1, source = "は消え掛かりそうな声で言った。" },
+]
+
+[[composites]]
+id = "f0004-239e-name-dear-person-sometimes-i-do-ah-hah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「時々・・・・・・、し・・・てる・・・の・・・、あッ、はぁッ、はぁッ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Sometimes... I... do... Ah, hah, hah...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x239e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x23a2, end = 0x23b1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x23b1, source_mode = 1, source = "】「時々・・・・・・、し・・・てる・・・の・・・、あッ、はぁッ、はぁッ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-23df-once-she-starts-name-dear-person-answers-in"
+target_mode = 2
+source = "せき止めた言葉が溢れるように、⟦name:dear-person⟧は息を荒くしながら答える。"
+translation = "Once she starts, ⟦name:dear-person⟧ answers in a rush, breathing hard."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x23df, source_mode = 1, source = "せき止めた言葉が溢れるように、" },
+  { kind = "token", token = "name:dear-person", start = 0x23f2, end = 0x2401, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2401, source_mode = 1, source = "は息を荒くしながら答える。" },
+]
+
+[[entries]]
+id = "f0004-2414-connie-that-s-right-good-girl-for-being"
+file = "DISKA/F0004.MES"
+offset = 0x2414
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そう、正直でいい子ね・・・。」"
+translation = "[CONNIE] \"That's right. Good girl for being honest...\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2441-i-press-our-chests-together-and-enjoy-the"
+file = "DISKA/F0004.MES"
+offset = 0x2441
+source_mode = 1
+target_mode = 2
+source = "胸を合わせ、お互いの胸を触れさせて楽しむ。"
+translation = "I press our chests together and enjoy the feel of our breasts touching."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-245c-name-dear-person-ahh-my-body-feels-all"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あふぅ・・・、体が・・・ふわふわ・・・しちゃ・・・ぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ahh... My body... feels all floaty...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x245c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2460, end = 0x246f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x246f, source_mode = 1, source = "】「あふぅ・・・、体が・・・ふわふわ・・・しちゃ・・・ぅ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2495-i-hug-name-dear-person-tight-and-blow"
+target_mode = 2
+source = "あたしはキュッと抱きしめて、⟦name:dear-person⟧の耳にささやくように息を吹きかける。"
+translation = "I hug ⟦name:dear-person⟧ tight and blow softly into her ear."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2495, source_mode = 1, source = "あたしはキュッと抱きしめて、" },
+  { kind = "token", token = "name:dear-person", start = 0x24a7, end = 0x24b6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x24b6, source_mode = 1, source = "の耳にささやくように息を吹きかける。" },
+]
+
+[[composites]]
+id = "f0004-24ce-name-dear-person-ah-a-aahhh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「っ！　あ、あ、あぁぁぁ・・・ん・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... a-aahhh...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x24ce, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x24d2, end = 0x24e1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x24e1, source_mode = 1, source = "】「っ！　あ、あ、あぁぁぁ・・・ん・・・。」" },
+]
+
+[[composites]]
+id = "f0004-24fc-name-dear-person-jerks-shudders-and-arches-back"
+target_mode = 2
+source = "びくん、と⟦name:dear-person⟧は体を震わせてのけぞる。"
+translation = "With a jerk, ⟦name:dear-person⟧ shudders and arches back."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x24fc, source_mode = 1, source = "びくん、と" },
+  { kind = "token", token = "name:dear-person", start = 0x2504, end = 0x2513, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2513, source_mode = 1, source = "は体を震わせてのけぞる。" },
+]
+
+[[composites]]
+id = "f0004-2525-name-dear-person-seems-sensitive-from-her-ears"
+target_mode = 2
+source = "⟦name:dear-person⟧は耳からうなじにかけてが弱いみたい。"
+translation = "⟦name:dear-person⟧ seems sensitive from her ears down to the nape of her neck."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2525, end = 0x2534, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2534, source_mode = 1, source = "は耳からうなじにかけてが弱いみたい。" },
+]
+
+[[entries]]
+id = "f0004-254c-i-aim-for-her-ear"
+file = "DISKA/F0004.MES"
+offset = 0x254c
+source_mode = 1
+target_mode = 2
+source = "耳をめがけて・・・・・・。"
+translation = "I aim for her ear..."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-255e-connie-ffff"
+file = "DISKA/F0004.MES"
+offset = 0x255e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ふーっ。」"
+translation = "[CONNIE] \"Ffff...\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-256e-she-shudders-hard"
+file = "DISKA/F0004.MES"
+offset = 0x256e
+source_mode = 1
+target_mode = 2
+source = "びくびくびくぅっ！"
+translation = "She shudders hard!"
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-257c-name-dear-person-nn-aahhh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ゃぁ・・・・・・・・・ぁぁぁぁぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Nn... aahhh...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x257c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2580, end = 0x258f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x258f, source_mode = 1, source = "】「ゃぁ・・・・・・・・・ぁぁぁぁぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-25ab-name-dear-person-arches-back-shaking"
+target_mode = 2
+source = "がくがくっと⟦name:dear-person⟧がのけぞる。"
+translation = "Shaking hard, ⟦name:dear-person⟧ arches back."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x25ab, source_mode = 1, source = "がくがくっと" },
+  { kind = "token", token = "name:dear-person", start = 0x25b4, end = 0x25c3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x25c3, source_mode = 1, source = "がのけぞる。" },
+]
+
+[[entries]]
+id = "f0004-25cf-connie-hee-hee-hee-hee-hee"
+file = "DISKA/F0004.MES"
+offset = 0x25cf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うふ。うふ。うふふふふふふ・・・・。）"
+translation = "[CONNIE] (Hee. Hee. Hee-hee-hee...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-25ed-seeing-name-dear-person-at-my-mercy-makes"
+target_mode = 2
+source = "あたしに自由にされる⟦name:dear-person⟧を見ていると、もっといぢめたくなっちゃう。"
+translation = "Seeing ⟦name:dear-person⟧ at my mercy makes me want to tease her even more."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x25ed, source_mode = 1, source = "あたしに自由にされる" },
+  { kind = "token", token = "name:dear-person", start = 0x25fb, end = 0x260a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x260a, source_mode = 1, source = "を見ていると、もっといぢめたくなっちゃう。" },
+]
+
+[[composites]]
+id = "f0004-2625-connie-if-it-feels-good-for-name-dear"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）"
+translation = "[CONNIE] (If it feels good for ⟦name:dear-person⟧... I want to do even more...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2625, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x262e, end = 0x263d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x263d, source_mode = 1, source = "が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）" },
+]
+
+[[entries]]
+id = "f0004-267c-connie-hee-hee-hee-hee-hee"
+file = "DISKA/F0004.MES"
+offset = 0x267c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うふ。うふ。うふふふふふふ・・・・。）"
+translation = "[CONNIE] (Hee. Hee. Hee-hee-hee...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-269a-connie-name-dear-person"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧・・・・・。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧...\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x269a, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x26a3, end = 0x26b2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x26b2, source_mode = 1, source = "・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-26be-name-dear-person-aah-hahh-hahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あぁあ・・・・・・・・、はぁふぅ・・はぁふぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Aah... hahh... hahh...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x26be, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x26c2, end = 0x26d1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x26d1, source_mode = 1, source = "】「あぁあ・・・・・・・・、はぁふぅ・・はぁふぅ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-26f3-seeing-name-dear-person-at-my-mercy-makes"
+target_mode = 2
+source = "あたしに自由にされる⟦name:dear-person⟧を見ていると、もっといぢめたくなっちゃう。"
+translation = "Seeing ⟦name:dear-person⟧ at my mercy makes me want to tease her even more."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x26f3, source_mode = 1, source = "あたしに自由にされる" },
+  { kind = "token", token = "name:dear-person", start = 0x2701, end = 0x2710, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2710, source_mode = 1, source = "を見ていると、もっといぢめたくなっちゃう。" },
+]
+
+[[composites]]
+id = "f0004-272b-connie-if-it-feels-good-for-name-dear"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）"
+translation = "[CONNIE] (If it feels good for ⟦name:dear-person⟧... I want to do even more...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x272b, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x2734, end = 0x2743, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2743, source_mode = 1, source = "が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）" },
+]
+
+[[composites]]
+id = "f0004-2772-name-dear-person-ah-hahh-hahh-stop"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あぅ、はぁぁ、はふぅ、はふぅっ、やめ・・て・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... hahh, hahh... stop...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "Kanako's request to stop remains literal."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2772, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2776, end = 0x2785, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2785, source_mode = 1, source = "】「あぅ、はぁぁ、はふぅ、はふぅっ、やめ・・て・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-27a7-maybe-the-pleasure-is-too-much-name-dear"
+target_mode = 2
+source = "⟦name:dear-person⟧は興奮に耐えきれなくなったのか、離れようとした。だが力が入ってない。"
+translation = "⟦name:dear-person⟧ seems overwhelmed by the stimulation and tries to pull away, but she has no strength."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "The source frames this as Connie's guess that Kanako is overwhelmed by stimulation; the English does not convert the attempt to pull away into pleasure or consent."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x27a7, end = 0x27b6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x27b6, source_mode = 1, source = "は興奮に耐えきれなくなったのか、離れようとした。だが力が入ってない。" },
+]
+
+[[entries]]
+id = "f0004-27e1-connie-is-it-okay-if-i-stop"
+file = "DISKA/F0004.MES"
+offset = 0x27e1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「止めて・・・いいの？」"
+translation = "[CONNIE] \"Is it okay if I stop...?\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "Connie's follow-up question remains literal and separate from Kanako's subsequent nonverbal response."
+
+[[entries]]
+id = "f0004-27f7-i-touch-between-her-legs-her-clit"
+file = "DISKA/F0004.MES"
+offset = 0x27f7
+source_mode = 1
+target_mode = 2
+source = "秘部に触れる。一番敏感な突起に。"
+translation = "I touch between her legs. Her clit."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2810-she-jerks"
+file = "DISKA/F0004.MES"
+offset = 0x2810
+source_mode = 1
+target_mode = 2
+source = "びくうっ。"
+translation = "She jerks."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-281a-name-dear-person-shakes-her-head-no-and"
+target_mode = 2
+source = "いやいやと頭を左右に振って、⟦name:dear-person⟧はますますあたしを抱きしめる。"
+translation = "Shaking her head no, ⟦name:dear-person⟧ hugs me even tighter."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "Kanako's head shake and tighter embrace are reported as actions, without rewriting the preceding stop request."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x281a, source_mode = 1, source = "いやいやと頭を左右に振って、" },
+  { kind = "token", token = "name:dear-person", start = 0x282f, end = 0x283e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x283e, source_mode = 1, source = "はますますあたしを抱きしめる。" },
+]
+
+[[entries]]
+id = "f0004-2852-connie-ah"
+file = "DISKA/F0004.MES"
+offset = 0x2852
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ・・・。」"
+translation = "[CONNIE] \"Ah...\""
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2864-she-s-so-wet-that-hot-fluid-runs"
+file = "DISKA/F0004.MES"
+offset = 0x2864
+source_mode = 1
+target_mode = 2
+source = "熱い液があたしの指を伝わって垂れるほどに、しっとりと潤ってきた。"
+translation = "She's so wet that hot fluid runs down my finger."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "The source uses generic 液 here, so the English uses fluid rather than the locked 愛液 term."
+
+[[composites]]
+id = "f0004-289f-name-dear-person-ah-it-s-so-hot"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あ・・あぁ・・・熱ぃよぉぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah... It's so hot...\""
+speaker = "name-slot:dear-person"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x289f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x28a3, end = 0x28b2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x28b2, source_mode = 1, source = "】「あ・・あぁ・・・熱ぃよぉぅ・・・。」" },
+]
+
+[[entries]]
+id = "f0004-28cb-my-body-is-heating-up-too"
+file = "DISKA/F0004.MES"
+offset = 0x28cb
+source_mode = 1
+target_mode = 2
+source = "あたしも体が火照ってきた。"
+translation = "My body is heating up too."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-28dd-connie-before-i-forget"
+file = "DISKA/F0004.MES"
+offset = 0x28dd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（忘れる前に、と・・・・・・・・・。）"
+translation = "[CONNIE] (Before I forget...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-28fc-i-fiddle-with-my-ring-while-i-keep"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧を愛撫しながら、自分の指輪をいじる。"
+translation = "I fiddle with my ring while I keep caressing ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x28fc, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2903, end = 0x2912, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2912, source_mode = 1, source = "を愛撫しながら、自分の指輪をいじる。" },
+]
+
+[[entries]]
+id = "f0004-293a-this-ring-is-designed-to-test-genes"
+file = "DISKA/F0004.MES"
+offset = 0x293a
+source_mode = 1
+target_mode = 2
+source = "この指輪は、遺伝子を検査するためのものだ。"
+translation = "This ring is designed to test genetic material."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2958-when-i-m-in-mini-form-it-becomes"
+file = "DISKA/F0004.MES"
+offset = 0x2958
+source_mode = 1
+target_mode = 2
+source = "ミニマムに変身しているときには腕輪になっている。"
+translation = "When I'm in Mini form, it becomes a bracelet."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2979-i-feed-name-dear-person-s-wetness-into"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の愛液を、指輪に流し込む。"
+translation = "I feed ⟦name:dear-person⟧'s wetness into the ring."
+speaker = "Connie"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+notes = "愛液 uses the established narration term wetness and remains distinct from the configurable slot word."
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2979, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2980, end = 0x298f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x298f, source_mode = 1, source = "の愛液を、指輪に流し込む。" },
+]
+
+[[entries]]
+id = "f0004-29a4-connie-that-does-it"
+file = "DISKA/F0004.MES"
+offset = 0x29a4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（これでよし、・・・・・・・・・。）"
+translation = "[CONNIE] (That does it...)"
+speaker = "コニー"
+context = "Connie manually stimulates Kanako, responds to her stop request, and collects a genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-29c0-to-share-this-moment-with-name-dear-person"
+target_mode = 2
+source = "再び⟦name:dear-person⟧との時間を共有するべく、あたしは⟦name:dear-person⟧を攻める。"
+translation = "To share this moment with ⟦name:dear-person⟧ again, I turn back to pleasuring ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x29c0, source_mode = 1, source = "再び" },
+  { kind = "token", token = "name:dear-person", start = 0x29c6, end = 0x29d5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x29d5, source_mode = 1, source = "との時間を共有するべく、あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x29eb, end = 0x29fa, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x29fa, source_mode = 1, source = "を攻める。" },
+]
+
+[[composites]]
+id = "f0004-2a05-name-dear-person-ahh-nnh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ひゃぁ・・・んっ・・・、ぁぁ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Eep... nnh... ahh...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2a05, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2a09, end = 0x2a18, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a18, source_mode = 1, source = "】「ひゃぁ・・・んっ・・・、ぁぁ・・・。」" },
+]
+
+[[entries]]
+id = "f0004-2a32-i-press-my-clit-to-hers-and-rub"
+file = "DISKA/F0004.MES"
+offset = 0x2a32
+source_mode = 1
+target_mode = 2
+source = "秘唇の上にある敏感な部分を、擦り併せるように触れる。"
+translation = "I press my clit to hers and rub."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+notes = "The sensitive spot above the labia is rendered directly as the clit after Connie has just identified the most sensitive projection."
+
+[[composites]]
+id = "f0004-2a53-name-dear-person-aah-ahh-ahhh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ひぁっ！　・・・あふぅ、あふぅぅっ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Eek! ...Ahh, ahhh...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2a53, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2a57, end = 0x2a66, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a66, source_mode = 1, source = "】「ひぁっ！　・・・あふぅ、あふぅぅっ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2a83-name-dear-person-starts-matching-my-rhythm-rocking"
+target_mode = 2
+source = "⟦name:dear-person⟧も動きを同調させてきた。すりすりと腰を揺すり立てる。"
+translation = "⟦name:dear-person⟧ starts matching my rhythm, rocking her hips against me."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2a83, end = 0x2a92, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2a92, source_mode = 1, source = "も動きを同調させてきた。すりすりと腰を揺すり立てる。" },
+]
+
+[[composites]]
+id = "f0004-2ab6-name-dear-person-ah-ah-aahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっあっ、あぁ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah, ah... aahh...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2ab6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2aba, end = 0x2ac9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2ac9, source_mode = 1, source = "】「あっあっ、あぁ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2af0-i-lick-from-name-dear-person-s-shoulder"
+target_mode = 2
+source = "⟦name:dear-person⟧の肩から耳にかけてなめる。"
+translation = "⟦name:dear-person⟧ feels my tongue trace from her shoulder up to her ear."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2af0, end = 0x2aff, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2aff, source_mode = 1, source = "の肩から耳にかけてなめる。" },
+]
+
+[[entries]]
+id = "f0004-2b12-lick-lick-slowly-upward"
+file = "DISKA/F0004.MES"
+offset = 0x2b12
+source_mode = 1
+target_mode = 2
+source = "ぺろっぺろっ。つつつーーーっ。"
+translation = "Lick, lick. Slowly upward."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2b28-name-dear-person-ah-ah-aahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あん、あんっ・・・ひゃぅぅっ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Ah, ah... eep...!\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2b28, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2b2c, end = 0x2b3b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2b3b, source_mode = 1, source = "】「あん、あんっ・・・ひゃぅぅっ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2b55-name-dear-person-s-body-bucks-and-shakes"
+target_mode = 2
+source = "⟦name:dear-person⟧の身体ががくっがくっと震える。"
+translation = "⟦name:dear-person⟧'s body bucks and shakes."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2b55, end = 0x2b64, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2b64, source_mode = 1, source = "の身体ががくっがくっと震える。" },
+]
+
+[[composites]]
+id = "f0004-2b78-name-dear-person-no-aahhh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「嫌ぁ・・・、ぁぁぁっ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"No... aahhh...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2b78, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2b7c, end = 0x2b8b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2b8b, source_mode = 1, source = "】「嫌ぁ・・・、ぁぁぁっ・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-2ba4-connie-not-yet-don-t-come-yet"
+file = "DISKA/F0004.MES"
+offset = 0x2ba4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・。まだイっちゃだめよ。」"
+translation = "[CONNIE] \"...Not yet. Don't come yet.\""
+speaker = "コニー"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2bbe-i-bite-and-nibble-at-name-dear-person"
+target_mode = 2
+source = "あたしは、はむはむっと⟦name:dear-person⟧の首・肩・乳房を噛む。"
+translation = "I bite and nibble at ⟦name:dear-person⟧'s neck, shoulders, and breasts."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2bbe, source_mode = 1, source = "あたしは、はむはむっと" },
+  { kind = "token", token = "name:dear-person", start = 0x2bcc, end = 0x2bdb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2bdb, source_mode = 1, source = "の首・肩・乳房を噛む。" },
+]
+
+[[entries]]
+id = "f0004-2bee-hard-but-not-hard-enough-to-leave-marks"
+file = "DISKA/F0004.MES"
+offset = 0x2bee
+source_mode = 1
+target_mode = 2
+source = "強く。でも跡が残らないように。"
+translation = "Hard, but not hard enough to leave marks."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2c05-name-dear-person-nnh-nnnh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「んん、んんんっ・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Nnh... nnnh...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2c05, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2c09, end = 0x2c18, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2c18, source_mode = 1, source = "】「んん、んんんっ・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2c40-name-dear-person-s-arms-shake-unevenly-as"
+target_mode = 2
+source = "あたしを抱き締める⟦name:dear-person⟧の腕が、不規則に震える。"
+translation = "Clinging to me, ⟦name:dear-person⟧'s arms shake unevenly."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2c40, source_mode = 1, source = "あたしを抱き締める" },
+  { kind = "token", token = "name:dear-person", start = 0x2c4d, end = 0x2c5c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2c5c, source_mode = 1, source = "の腕が、不規則に震える。" },
+]
+
+[[entries]]
+id = "f0004-2c70-connie-she-s-about-to-come"
+file = "DISKA/F0004.MES"
+offset = 0x2c70
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そろそろ・・・イっちゃうわね・・・。）"
+translation = "[CONNIE] (She's about to come...)"
+speaker = "コニー"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2c8e-i-want-to-come-with-name-dear-person"
+target_mode = 2
+source = "あたしも⟦name:dear-person⟧と一緒に昇り詰めたかった。"
+translation = "I want to come with ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2c8e, source_mode = 1, source = "あたしも" },
+  { kind = "token", token = "name:dear-person", start = 0x2c95, end = 0x2ca4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2ca4, source_mode = 1, source = "と一緒に昇り詰めたかった。" },
+]
+
+[[entries]]
+id = "f0004-2cb9-we-grind-our-clits-hard-against-each-other"
+file = "DISKA/F0004.MES"
+offset = 0x2cb9
+source_mode = 1
+target_mode = 2
+source = "きゅっきゅっ、とお互いの敏感な部分を強く擦る。"
+translation = "We grind our clits hard against each other."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2cd6-name-dear-person-ah"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あっ！」"
+translation = "[⟦name:dear-person⟧] \"Ah!\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2cd6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2cda, end = 0x2ce9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2ce9, source_mode = 1, source = "】「あっ！」" },
+]
+
+[[composites]]
+id = "f0004-2cf4-name-dear-person-jerks-and-goes-rigid"
+target_mode = 2
+source = "びくっ、と⟦name:dear-person⟧の体が硬直する。"
+translation = "With a jerk, ⟦name:dear-person⟧'s body goes rigid."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2cf4, source_mode = 1, source = "びくっ、と" },
+  { kind = "token", token = "name:dear-person", start = 0x2cfc, end = 0x2d0b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d0b, source_mode = 1, source = "の体が硬直する。" },
+]
+
+[[composites]]
+id = "f0004-2d1a-connie-come-for-me-name-dear-person-i"
+target_mode = 2
+source = "【コニー】「イッて・・・、⟦name:dear-person⟧・・・。好きよ・・・。」"
+translation = "[CONNIE] \"Come... ⟦name:dear-person⟧... I love you...\""
+speaker = "コニー"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2d1a, source_mode = 1, source = "【コニー】「イッて・・・、" },
+  { kind = "token", token = "name:dear-person", start = 0x2d2a, end = 0x2d39, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d39, source_mode = 1, source = "・・・。好きよ・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2d4a-suddenly-name-dear-person-s-body-bucks-she"
+target_mode = 2
+source = "唐突に⟦name:dear-person⟧の体が跳ねた。がくんがくんと大きく揺れてのけ反る。"
+translation = "Suddenly ⟦name:dear-person⟧'s body bucks. She arches back, convulsing hard."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2d4a, source_mode = 1, source = "唐突に" },
+  { kind = "token", token = "name:dear-person", start = 0x2d52, end = 0x2d61, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d61, source_mode = 1, source = "の体が跳ねた。がくんがくんと大きく揺れてのけ反る。" },
+]
+
+[[composites]]
+id = "f0004-2d83-name-dear-person-aah-nnngh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「はあっ！！！！！！　くううぅぅぅぅぅぅぅっ！！！！！！！！」"
+translation = "[⟦name:dear-person⟧] \"Aah!!!!!! Nnngh!!!!!!\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2d83, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2d87, end = 0x2d96, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2d96, source_mode = 1, source = "】「はあっ！！！！！！　くううぅぅぅぅぅぅぅっ！！！！！！！！」" },
+]
+
+[[composites]]
+id = "f0004-2dbb-connie-ah-ah-name-dear-person"
+target_mode = 2
+source = "【コニー】「あっあっ、⟦name:dear-person⟧っ・・・・・・！！」"
+translation = "[CONNIE] \"Ah, ah, ⟦name:dear-person⟧...!\""
+speaker = "コニー"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2dbb, source_mode = 1, source = "【コニー】「あっあっ、" },
+  { kind = "token", token = "name:dear-person", start = 0x2dc9, end = 0x2dd8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2dd8, source_mode = 1, source = "っ・・・・・・！！」" },
+]
+
+[[entries]]
+id = "f0004-2de7-i-come-too-and-my-vision-goes-white"
+file = "DISKA/F0004.MES"
+offset = 0x2de7
+source_mode = 1
+target_mode = 2
+source = "あたしも弾け飛び、目の前が真っ白になった。"
+translation = "I come too, and my vision goes white."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2e06-silence"
+file = "DISKA/F0004.MES"
+offset = 0x2e06
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2e34-silence"
+file = "DISKA/F0004.MES"
+offset = 0x2e34
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2e49-silence"
+file = "DISKA/F0004.MES"
+offset = 0x2e49
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Connie and Kanako continue the encounter and climax together."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2e61-name-dear-person-and-i-lie-spent-for"
+target_mode = 2
+source = "あたしと⟦name:dear-person⟧はぐったりとして、しばらく動かなかった。"
+translation = "For a while, ⟦name:dear-person⟧ and I lie spent without moving."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2e61, source_mode = 1, source = "あたしと" },
+  { kind = "token", token = "name:dear-person", start = 0x2e68, end = 0x2e77, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2e77, source_mode = 1, source = "はぐったりとして、しばらく動かなかった。" },
+]
+
+[[entries]]
+id = "f0004-2e91-couldn-t-move-is-more-like-it-still"
+file = "DISKA/F0004.MES"
+offset = 0x2e91
+source_mode = 1
+target_mode = 2
+source = "動けなかった、というのが妥当だろう。ぴったりと密着したまま、余韻を感じとっている。"
+translation = "Couldn't move is more like it. Still pressed tight together, we let the feeling linger."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2ec5-i-move-just-enough-to-rub-our-breasts"
+file = "DISKA/F0004.MES"
+offset = 0x2ec5
+source_mode = 1
+target_mode = 2
+source = "少しだけ胸を合わせて動かす。"
+translation = "I move just enough to rub our breasts together."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-2ed9-our-nipples-brush-the-lingering-sensation-after-climax"
+file = "DISKA/F0004.MES"
+offset = 0x2ed9
+source_mode = 1
+target_mode = 2
+source = "お互いの乳首が擦れて、昇り詰めた後の余韻が、肌に心地よかった。"
+translation = "Our nipples brush. The lingering sensation after climax feels good against my skin."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2f05-name-dear-person-hah-hah-big-sis-connie"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「はぁっ・・・、はぁっ・・・、コニーおねえちゃん・・・、・・・・・・すごぉい・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hah... hah... Big Sis Connie... that was... amazing...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2f05, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x2f09, end = 0x2f18, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2f18, source_mode = 1, source = "】「はぁっ・・・、はぁっ・・・、コニーおねえちゃん・・・、・・・・・・すごぉい・・・。」" },
+]
+
+[[composites]]
+id = "f0004-2f49-connie-you-too-name-dear-person-you-were"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧も・・・。大胆ね。」"
+translation = "[CONNIE] \"You too, ⟦name:dear-person⟧... You were bold.\""
+speaker = "コニー"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2f49, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x2f52, end = 0x2f61, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2f61, source_mode = 1, source = "も・・・。大胆ね。」" },
+]
+
+[[composites]]
+id = "f0004-2f72-name-dear-person-snuggles-against-me-rubbing-close"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしに甘えてきた。にゃーにゃーといいたげに擦り寄ってくる。"
+translation = "⟦name:dear-person⟧ snuggles against me, rubbing close as if she wants to meow."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x2f72, end = 0x2f81, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2f81, source_mode = 1, source = "はあたしに甘えてきた。にゃーにゃーといいたげに擦り寄ってくる。" },
+]
+
+[[entries]]
+id = "f0004-2fa6-connie-this-time-i-ll-actually-wash-you"
+file = "DISKA/F0004.MES"
+offset = 0x2fa6
+source_mode = 1
+target_mode = 2
+source = "【コニー】「今度はちゃんと洗ってあげる。」"
+translation = "[CONNIE] \"This time I'll actually wash you.\""
+speaker = "コニー"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-2fc3-i-scrub-name-dear-person-clean"
+target_mode = 2
+source = "あたしはきゅっきゅっ、と⟦name:dear-person⟧の体を洗ってあげた。"
+translation = "I scrub ⟦name:dear-person⟧ clean."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2fc3, source_mode = 1, source = "あたしはきゅっきゅっ、と" },
+  { kind = "token", token = "name:dear-person", start = 0x2fd2, end = 0x2fe1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2fe1, source_mode = 1, source = "の体を洗ってあげた。" },
+]
+
+[[composites]]
+id = "f0004-2ff1-the-heaviness-afterward-still-lingers-once-i-finish"
+target_mode = 2
+source = "終わった後のけだるさがまだ残っていた。あたしは⟦name:dear-person⟧の体を洗い終わると、先に浴槽から出た。"
+translation = "The heaviness afterward still lingers. Once I finish washing ⟦name:dear-person⟧, I climb out of the tub first."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x2ff1, source_mode = 1, source = "終わった後のけだるさがまだ残っていた。あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x300e, end = 0x301d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x301d, source_mode = 1, source = "の体を洗い終わると、先に浴槽から出た。" },
+]
+
+[[composites]]
+id = "f0004-3079-i-climb-out-of-the-tub-pleasantly-tired"
+target_mode = 2
+source = "あたしは心地よい疲れを感じながら浴槽から出た。⟦name:dear-person⟧もふらふらしながら出た。"
+translation = "I climb out of the tub, pleasantly tired. ⟦name:dear-person⟧ climbs out unsteadily too."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x3079, source_mode = 1, source = "あたしは心地よい疲れを感じながら浴槽から出た。" },
+  { kind = "token", token = "name:dear-person", start = 0x3098, end = 0x30a7, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x30a7, source_mode = 1, source = "もふらふらしながら出た。" },
+]
+
+[[composites]]
+id = "f0004-30b8-name-dear-person-i-m-tired"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「疲れちゃった・・・。」"
+translation = "[⟦name:dear-person⟧] \"I'm tired...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x30b8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x30bc, end = 0x30cb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x30cb, source_mode = 1, source = "】「疲れちゃった・・・。」" },
+]
+
+[[composites]]
+id = "f0004-30de-name-dear-person-sticks-out-her-tongue-and"
+target_mode = 2
+source = "ペロッと舌を出して照れる⟦name:dear-person⟧。"
+translation = "Embarrassed, ⟦name:dear-person⟧ sticks out her tongue."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x30de, source_mode = 1, source = "ペロッと舌を出して照れる" },
+  { kind = "token", token = "name:dear-person", start = 0x30f0, end = 0x30ff, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x30ff, source_mode = 1, source = "。" },
+]
+
+[[composites]]
+id = "f0004-3116-connie-i-ll-dry-you-name-dear-person"
+target_mode = 2
+source = "【コニー】「拭いてあげる、⟦name:dear-person⟧。」"
+translation = "[CONNIE] \"I'll dry you, ⟦name:dear-person⟧.\""
+speaker = "コニー"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x3116, source_mode = 1, source = "【コニー】「拭いてあげる、" },
+  { kind = "token", token = "name:dear-person", start = 0x3127, end = 0x3136, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3136, source_mode = 1, source = "。」" },
+]
+
+[[composites]]
+id = "f0004-313d-i-wrap-name-dear-person-in-a-bath"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧をバスタオルで包み、支えながらごしごしと拭いた。"
+translation = "I wrap ⟦name:dear-person⟧ in a bath towel and rub her dry while holding her steady."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x313d, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x3144, end = 0x3153, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3153, source_mode = 1, source = "をバスタオルで包み、支えながらごしごしと拭いた。" },
+]
+
+[[composites]]
+id = "f0004-3177-name-dear-person-throws-her-arms-around-me"
+target_mode = 2
+source = "⟦name:dear-person⟧は甘えてあたしに抱きついてくる。"
+translation = "⟦name:dear-person⟧ throws her arms around me and clings."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x3177, end = 0x3186, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3186, source_mode = 1, source = "は甘えてあたしに抱きついてくる。" },
+]
+
+[[entries]]
+id = "f0004-319b-connie-hey-i-can-t-dry-you-like"
+file = "DISKA/F0004.MES"
+offset = 0x319b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「こら。拭けないでしょ。」"
+translation = "[CONNIE] \"Hey. I can't dry you like that.\""
+speaker = "コニー"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-31b3-name-dear-person-sooorry"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・ごめんなさーい・・・。」"
+translation = "[⟦name:dear-person⟧] \"Sooorry...\""
+speaker = "name-slot:dear-person"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x31b3, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x31b7, end = 0x31c6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x31c6, source_mode = 1, source = "】「・・・ごめんなさーい・・・。」" },
+]
+
+[[composites]]
+id = "f0004-31ed-even-after-being-scolded-name-dear-person-keeps"
+target_mode = 2
+source = "⟦name:dear-person⟧は叱られても、甘えてあたしにまとわりつく。"
+translation = "⟦name:dear-person⟧ keeps clinging to me, even after being scolded."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x31ed, end = 0x31fc, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x31fc, source_mode = 1, source = "は叱られても、甘えてあたしにまとわりつく。" },
+]
+
+[[entries]]
+id = "f0004-3217-looks-like-she-s-gotten-attached-to-me"
+file = "DISKA/F0004.MES"
+offset = 0x3217
+source_mode = 1
+target_mode = 2
+source = "どうやら、懐かれてしまったようだ。"
+translation = "Looks like she's gotten attached to me."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-322d-for-better-or-worse-having-someone-this-attached"
+file = "DISKA/F0004.MES"
+offset = 0x322d
+source_mode = 1
+target_mode = 2
+source = "良くも悪くも懐かれすぎ、というのは調子が狂う。"
+translation = "For better or worse, having someone this attached to me throws me off."
+speaker = "Connie"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-324e-connie-is-this-what-i-look-like-when"
+file = "DISKA/F0004.MES"
+offset = 0x324e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしが神崎博士に甘えているときも、こんなふうに見えているのかなあ・・・。）"
+translation = "[CONNIE] (Is this what I look like when I cling to Dr. Kanzaki...?)"
+speaker = "コニー"
+context = "Connie and Kanako recover, finish bathing, and dry off."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-3283-name-dear-person-um-big-sis-connie"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あのね、コニーおねえちゃん・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Um, Big Sis Connie...\""
+speaker = "name-slot:dear-person"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x3283, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3287, end = 0x3296, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3296, source_mode = 1, source = "】「あのね、コニーおねえちゃん・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-32b2-connie-what"
+file = "DISKA/F0004.MES"
+offset = 0x32b2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「なに？」"
+translation = "[CONNIE] \"What?\""
+speaker = "コニー"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-32d2-name-dear-person-um-um"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・・・・・・・・・・、・・・んと、・・・んと・・・。」"
+translation = "[⟦name:dear-person⟧] \"...Um... um...\""
+speaker = "name-slot:dear-person"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x32d2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x32d6, end = 0x32e5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x32e5, source_mode = 1, source = "】「・・・・・・・・・・・・・・・、・・・んと、・・・んと・・・。」" },
+]
+
+[[composites]]
+id = "f0004-330c-name-dear-person-looks-embarrassed-searching-for-the"
+target_mode = 2
+source = "⟦name:dear-person⟧は恥ずかしそうにして、言葉を選んでいる。"
+translation = "⟦name:dear-person⟧ looks embarrassed, searching for the words."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x330c, end = 0x331b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x331b, source_mode = 1, source = "は恥ずかしそうにして、言葉を選んでいる。" },
+]
+
+[[entries]]
+id = "f0004-3335-connie"
+file = "DISKA/F0004.MES"
+offset = 0x3335
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-334e-name-dear-person-i-love-you"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・好き・・・。」"
+translation = "[⟦name:dear-person⟧] \"...I love you...\""
+speaker = "name-slot:dear-person"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x334e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x3352, end = 0x3361, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3361, source_mode = 1, source = "】「・・・・・・好き・・・。」" },
+]
+
+[[entries]]
+id = "f0004-3375-she-says-it-shyly-and-buries-her-face"
+file = "DISKA/F0004.MES"
+offset = 0x3375
+source_mode = 1
+target_mode = 2
+source = "恥ずかしそうに言うと、あたしの胸に顔を埋める。"
+translation = "She says it shyly and buries her face in my chest."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-3392-connie-s-so-cute"
+file = "DISKA/F0004.MES"
+offset = 0x3392
+source_mode = 1
+target_mode = 2
+source = "【コニー】（か・・・かわいい・・・・・・・・・。）"
+translation = "[CONNIE] (S-so cute...)"
+speaker = "コニー"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-33b0-my-heart-squeezes-i-feel-so-much-affection"
+target_mode = 2
+source = "胸がきゅうん、となって⟦name:dear-person⟧をいとおしく感じる。"
+translation = "My heart squeezes. I feel so much affection for ⟦name:dear-person⟧."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x33b0, source_mode = 1, source = "胸がきゅうん、となって" },
+  { kind = "token", token = "name:dear-person", start = 0x33be, end = 0x33cd, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x33cd, source_mode = 1, source = "をいとおしく感じる。" },
+]
+
+[[composites]]
+id = "f0004-33dc-name-dear-person-big-sis-i-love-you"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「おねえちゃん・・・・・・、だぁーい好き・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Big Sis... I love you so much...\""
+speaker = "name-slot:dear-person"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x33dc, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x33e0, end = 0x33ef, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x33ef, source_mode = 1, source = "】「おねえちゃん・・・・・・、だぁーい好き・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0004-3411-she-clings-to-me-like-a-little-kid"
+file = "DISKA/F0004.MES"
+offset = 0x3411
+source_mode = 1
+target_mode = 2
+source = "小さい子のように甘える。"
+translation = "She clings to me like a little kid."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-3422-connie-my-clingy-name-dear-person"
+target_mode = 2
+source = "【コニー】（甘えん坊の⟦name:dear-person⟧・・・。）"
+translation = "[CONNIE] (My clingy ⟦name:dear-person⟧...)"
+speaker = "コニー"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x3422, source_mode = 1, source = "【コニー】（甘えん坊の" },
+  { kind = "token", token = "name:dear-person", start = 0x3431, end = 0x3440, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x3440, source_mode = 1, source = "・・・。）" },
+]
+
+[[entries]]
+id = "f0004-344a-a-pang-hits-me"
+file = "DISKA/F0004.MES"
+offset = 0x344a
+source_mode = 1
+target_mode = 2
+source = "ずきっ。"
+translation = "A pang hits me."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-3453-she-shouldn-t-get-too-involved-with-me"
+file = "DISKA/F0004.MES"
+offset = 0x3453
+source_mode = 1
+target_mode = 2
+source = "あたしにあまり深入りしない方がいい。"
+translation = "She shouldn't get too involved with me."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-346c-sooner-or-later-i-ll-be-gone-from"
+file = "DISKA/F0004.MES"
+offset = 0x346c
+source_mode = 1
+target_mode = 2
+source = "あたしはいずれこの時代からいなくなる存在だ。"
+translation = "Sooner or later, I'll be gone from this time."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[entries]]
+id = "f0004-3489-connie-but"
+file = "DISKA/F0004.MES"
+offset = 0x3489
+source_mode = 1
+target_mode = 2
+source = "【コニー】（でも・・・・・・・・・。）"
+translation = "[CONNIE] (But...)"
+speaker = "コニー"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites]]
+id = "f0004-34a1-i-see-how-happy-name-dear-person-is"
+target_mode = 2
+source = "⟦name:dear-person⟧の嬉しそうな仕草を見て、跳ね退けることなんて、・・・あたしにはできない。"
+translation = "⟦name:dear-person⟧ looks so happy that I can't push her away."
+speaker = "Connie"
+context = "Kanako declares her attachment while Connie remembers that she must leave this era."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x34a1, end = 0x34b0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x34b0, source_mode = 1, source = "の嬉しそうな仕草を見て、跳ね退けることなんて、・・・あたしにはできない。" },
 ]

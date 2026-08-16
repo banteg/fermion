@@ -144,3 +144,12 @@ description = "Every decoded F0003 record from Connie waking in Kanako's room th
 file = "DISKA/F0003.MES"
 start = 0x04bb
 end = 0x41a9
+
+[[scopes]]
+id = "connie-and-kanako-first-intimacy"
+description = "Every decoded F0004 record from Connie washing Kanako through their first sexual encounter, genetic-sample collection, and post-bath confession."
+
+[[scopes.ranges]]
+file = "DISKA/F0004.MES"
+start = 0x05b1
+end = 0x34b0
