@@ -19,6 +19,7 @@ from fermion.emulator import (
     LibretroFrontend,
     load_core_options,
     parse_key_tap,
+    parse_mouse_tap,
     parse_option,
     run_checkpoints,
     run_scheduled,
@@ -30,6 +31,11 @@ from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
 from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest, route_cache_key
+from fermion.save_fixtures import (
+    SaveFixtureError,
+    SaveFixtureManifest,
+    write_fixture_hdi,
+)
 from fermion.translation import TranslationCatalog, TranslationError
 
 
@@ -55,9 +61,7 @@ def build_parser() -> argparse.ArgumentParser:
         "materialize", help="create and verify HDM images from the preservation zip"
     )
     materialize_parser.add_argument("archive", type=_path)
-    materialize_parser.add_argument(
-        "--output-dir", type=_path, default=Path("working/disks")
-    )
+    materialize_parser.add_argument("--output-dir", type=_path, default=Path("working/disks"))
     materialize_parser.set_defaults(handler=_materialize)
 
     fat = commands.add_parser("fat", help="read FAT12 filesystems from raw disk images")
@@ -140,6 +144,20 @@ def build_parser() -> argparse.ArgumentParser:
     hdi_replace.add_argument("output", type=_path)
     hdi_replace.set_defaults(handler=_hdi_replace_file)
 
+    save = commands.add_parser("save", help="work with portable runtime save fixtures")
+    save_commands = save.add_subparsers(dest="save_command", required=True)
+    save_list = save_commands.add_parser("list", help="list checked-in save fixtures")
+    save_list.add_argument("manifest", type=_path)
+    save_list.set_defaults(handler=_save_list)
+    save_apply = save_commands.add_parser(
+        "apply", help="install one sparse save fixture into a copied HDI"
+    )
+    save_apply.add_argument("manifest", type=_path)
+    save_apply.add_argument("fixture")
+    save_apply.add_argument("image", type=_path)
+    save_apply.add_argument("output", type=_path)
+    save_apply.set_defaults(handler=_save_apply)
+
     emulator = commands.add_parser("emulator", help="run headless NP2kai translation tests")
     emulator_commands = emulator.add_subparsers(dest="emulator_command", required=True)
     emulator_run = emulator_commands.add_parser(
@@ -155,6 +173,13 @@ def build_parser() -> argparse.ArgumentParser:
         help="tap a libretro keyboard key at a frame; may be repeated",
     )
     emulator_run.add_argument(
+        "--click",
+        action="append",
+        default=[],
+        metavar="FRAME:BUTTON[:HOLD]",
+        help="click a libretro mouse button at a frame; may be repeated",
+    )
+    emulator_run.add_argument(
         "--core",
         type=_path,
         default=Path("working/emulator/np2kai_libretro.dylib"),
@@ -166,9 +191,7 @@ def build_parser() -> argparse.ArgumentParser:
         default=Path("working/emulator/system"),
         help="RetroArch system directory containing np2kai/",
     )
-    emulator_run.add_argument(
-        "--options", type=_path, help="RetroArch per-game .opt file to load"
-    )
+    emulator_run.add_argument("--options", type=_path, help="RetroArch per-game .opt file to load")
     emulator_run.add_argument(
         "--option",
         action="append",
@@ -177,7 +200,9 @@ def build_parser() -> argparse.ArgumentParser:
         help="override one NP2kai core option; may be repeated",
     )
     emulator_run.add_argument("--capture", type=_path, help="write the final frame as PNG")
-    emulator_run.add_argument("--state-in", type=_path, help="restore a libretro state before running")
+    emulator_run.add_argument(
+        "--state-in", type=_path, help="restore a libretro state before running"
+    )
     emulator_run.add_argument("--state-out", type=_path, help="save a libretro state after running")
     emulator_run.set_defaults(handler=_emulator_run)
     emulator_route = emulator_commands.add_parser(
@@ -227,9 +252,7 @@ def build_parser() -> argparse.ArgumentParser:
     translation = commands.add_parser(
         "translation", help="work with the checked-in translation catalog"
     )
-    translation_commands = translation.add_subparsers(
-        dest="translation_command", required=True
-    )
+    translation_commands = translation.add_subparsers(dest="translation_command", required=True)
     translation_check = translation_commands.add_parser(
         "check", help="validate catalog structure, encodings, and source anchors"
     )
@@ -348,6 +371,25 @@ def _hdi_replace_file(args: argparse.Namespace) -> None:
     print(f"size: {len(before)} -> {len(after)}")
 
 
+def _save_list(args: argparse.Namespace) -> None:
+    manifest = SaveFixtureManifest.from_file(args.manifest)
+    for fixture in manifest.fixtures:
+        print(
+            f"{fixture.name}: scenario={fixture.scenario} target={fixture.target_path} "
+            f"hunks={len(fixture.hunks)}"
+        )
+        print(f"  {fixture.description}")
+
+
+def _save_apply(args: argparse.Namespace) -> None:
+    fixture = SaveFixtureManifest.from_file(args.manifest).fixture(args.fixture)
+    write_fixture_hdi(fixture, args.image, args.output)
+    print(args.output)
+    print(f"fixture: {fixture.name}")
+    print(f"scenario: {fixture.scenario}")
+    print(f"slot: {fixture.target_path} sha256={fixture.result_sha256}")
+
+
 def _gm_audit(args: argparse.Namespace) -> None:
     if args.source.is_dir():
         sources = sorted(path for path in args.source.rglob("*") if path.suffix.upper() == ".MES")
@@ -374,10 +416,7 @@ def _gm_audit(args: argparse.Namespace) -> None:
         if args.verbose:
             for item in audit.relocations:
                 scope = "local" if gm.code_start <= item.target < len(gm.data) else "external"
-                print(
-                    f"  0x{item.field_offset:04x} -> 0x{item.target:04x} "
-                    f"{scope} {item.purpose}"
-                )
+                print(f"  0x{item.field_offset:04x} -> 0x{item.target:04x} {scope} {item.purpose}")
         for issue in audit.issues:
             print(f"  issue: {issue}")
         if audit.issues:
@@ -427,6 +466,7 @@ def _emulator_run(args: argparse.Namespace) -> None:
         key, value = parse_option(encoded)
         options[key] = value
     taps = [parse_key_tap(encoded) for encoded in args.tap]
+    clicks = [parse_mouse_tap(encoded) for encoded in args.click]
 
     with LibretroFrontend(args.core, args.system_dir, args.image, options) as frontend:
         print(f"core: {frontend.core_identity}")
@@ -436,6 +476,7 @@ def _emulator_run(args: argparse.Namespace) -> None:
             frontend,
             args.frames,
             taps,
+            mouse_taps=clicks,
             capture_final=args.capture is not None,
         )
         print(f"frames: {args.frames}")
@@ -502,11 +543,7 @@ def _emulator_route(args: argparse.Namespace) -> None:
             frontend.load_state(cache_state)
 
         def save_prefix(current: int) -> None:
-            if (
-                not use_cache
-                or cache_hit
-                or current != route.cache_frame
-            ):
+            if not use_cache or cache_hit or current != route.cache_frame:
                 return
             assert cache_state is not None and cache_disk is not None
             cache_state.parent.mkdir(parents=True, exist_ok=True)
@@ -522,6 +559,7 @@ def _emulator_route(args: argparse.Namespace) -> None:
             route.frames,
             list(route.taps),
             capture_frames,
+            mouse_taps=list(route.clicks),
             start_frame=start_frame,
             after_frame=save_prefix,
         )
@@ -533,8 +571,7 @@ def _emulator_route(args: argparse.Namespace) -> None:
         if frame is None:
             if checkpoint.frame < start_frame:
                 print(
-                    f"checkpoint: {checkpoint.name} frame={checkpoint.frame} "
-                    "cached-prefix skipped"
+                    f"checkpoint: {checkpoint.name} frame={checkpoint.frame} cached-prefix skipped"
                 )
                 continue
             raise EmulatorError(f"route did not capture checkpoint {checkpoint.name!r}")
@@ -635,9 +672,7 @@ def _translation_coverage(args: argparse.Namespace) -> None:
         if args.verbose:
             for group in report.pending_groups:
                 existing = (
-                    f" canonical={','.join(group.translated_ids)}"
-                    if group.translated_ids
-                    else ""
+                    f" canonical={','.join(group.translated_ids)}" if group.translated_ids else ""
                 )
                 print(
                     f"  pending: mode={group.source_mode} anchors={len(group.anchors)}"
@@ -646,9 +681,7 @@ def _translation_coverage(args: argparse.Namespace) -> None:
                 for anchor in group.anchors:
                     print(f"    {anchor.file}:0x{anchor.offset:04x}")
     if args.require_complete and incomplete:
-        raise TranslationError(
-            "coverage incomplete for " + ", ".join(incomplete)
-        )
+        raise TranslationError("coverage incomplete for " + ", ".join(incomplete))
 
 
 def _fail(message: str) -> NoReturn:
@@ -672,6 +705,7 @@ def main() -> None:
         MESProbeError,
         MZError,
         OSError,
+        SaveFixtureError,
         TranslationError,
         UnicodeError,
     ) as error:

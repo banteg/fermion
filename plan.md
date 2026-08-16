@@ -53,6 +53,9 @@ Completed work:
 - Named headless routes can drive a writable copy of one translated HDI, capture
   several frames in a single run, reject content or framebuffer hash drift, and
   restore hash-keyed prefix state plus its matching disk snapshot.
+- Sparse, checked-in save fixtures can reconstruct a native loadable slot from
+  hash-pinned `REG` banks, allowing short scenario-entry routes across rebuilt
+  translation images without committing complete game state or disk images.
 - The catalog can now build a fresh translated image end to end: lime-juice
   recompiles changed-length GM files, Silky's archive offsets are repacked, and
   the copied HDI's nested FAT12 file is safely resized and verified.
@@ -305,10 +308,10 @@ tests without GUI accessibility or OCR.
 
 The packaged `fermion emulator run` command now:
 
-- load an ignored copied HDI with the existing NP2kai system directory;
-- run a deterministic number of frames and tap PC-98 keys;
-- capture the raw framebuffer to PNG and save/restore emulator state;
-- report a stable SHA-256 over packed RGB pixels for checkpoint comparisons.
+- loads an ignored copied HDI with the existing NP2kai system directory;
+- runs a deterministic number of frames and taps PC-98 keys or mouse buttons;
+- captures the raw framebuffer to PNG and saves/restores emulator state;
+- reports a stable SHA-256 over packed RGB pixels for checkpoint comparisons.
 
 The installed RetroArch core is x86-64 and cannot load into the arm64 `uv`
 Python process. A clean arm64 build from upstream NP2kai commit `c023417` works;
@@ -327,10 +330,12 @@ Save and restore also work: restoring the 1,200-frame information-screen state,
 tapping Return at frame 1, and running 200 frames reproduces the mode-selector
 hash `910a14549d5812f2bda9df0ba206c4e2907c03f2a7d21bd0632b79d09f695965`.
 
-Keep NP2debug for manual register, memory, breakpoint, and stepping work. If
-those debugger facilities later need automation, patch its Windows frame loop
-with a narrow local command channel and no-dialog screenshot path; a full native
-port of its Win9x-only debugger UI is not required for the translation pipeline.
+Use the relocation-aware Ghidra project for native control-flow and data-format
+recovery. Keep NP2debug for manual register, memory, breakpoint, and stepping
+work. If those debugger facilities later need automation, patch its Windows
+frame loop with a narrow local command channel and no-dialog screenshot path; a
+full native port of its Win9x-only debugger UI is not required for the
+translation pipeline.
 
 The named route in `runtime/routes.toml` now pins the expanded translated HDI
 and drives 34,200 frames through the prologue to the first scene menu. Two new
@@ -421,6 +426,40 @@ The named opening route passes all nine framebuffer hashes on that fresh image,
 proving that changed-size media reconstruction preserves live control flow and
 rendering across the prologue and into `F0000.MES`.
 
+## Completed enabling milestone: portable save fixtures
+
+### 10. Start runtime tests at scenario boundaries — complete
+
+Relocation-aware Ghidra analysis recovered the native `0x72` through `0x75` and
+`0x7e` register handlers. `REG_00` is the persistent global/template bank;
+`REG_01` through `REG_10` are ten loadable slots. Opcode `0x74` writes the
+current 6,944-byte global segment to the selected slot, while `0x75` reloads a
+slot and restarts the scenario named at offset `0x1b10`. Opcode `0x7e` merges a
+small progress range into `REG_00`; it is not a user save operation.
+
+The first native fixture was recovered from the same global segment inside an
+ignored NP2kai serialized state and validated through the game's actual `LOAD`
+menu. It starts `F0000.MES` at the first translated scene. Relative to the
+hash-pinned `REG_00` template, the loadable snapshot changes 110 bytes in 35
+contiguous hunks. `runtime/save-fixtures.toml` records only those before/after
+bytes and hashes; the complete 6,944-byte slot remains generated and ignored.
+
+`fermion save apply` verifies the template and empty target slot, reconstructs
+`REG_01`, verifies result SHA-256
+`d53b209b09c42e969156a1a6e5599b2b2898c27bb058a3a55be0f7aa6abb4f24`,
+and writes a new HDI without touching the input. The game-native load route
+reaches the translated opening of `F0000.MES` in 10,500 frames and reproduced
+framebuffer SHA-256
+`f9abdf0e2bc12996538c9fcffea8dabe22965337822124a29673dac70fb047a0`.
+It measured about 15.5 seconds cold and 3.9 seconds from its exact-build
+8,299-frame cache boundary, versus about 49 seconds for the full prologue route.
+
+The two acceleration layers have distinct roles. Native `REG` fixtures survive
+translation-image rebuilds when their pinned banks are unchanged and resume at
+scenario entry. Libretro states are core/config/content-specific but resume at
+an exact frame within that shorter route. Full end-to-end routes remain the
+release gate.
+
 ## Tooling conventions and gates
 
 - Python tooling uses `uv` and the packaged `fermion` entry point.
@@ -440,9 +479,9 @@ rendering across the prologue and into `F0000.MES`.
 - Placeholder/control-token validation and enforced word-boundary wrapping.
 - Cropped framebuffer checkpoints where full-screen animation makes an exact
   whole-frame hash unnecessarily fragile.
-- Generate ignored game-native save fixtures at scene boundaries and add short
-  boot/load routes. Those can exercise rebuilt later scripts across image
-  changes, while libretro state caches remain exact-build-only accelerators.
+- Add sparse game-native fixtures at later scenario boundaries as translation
+  reaches them, pairing each with a short boot/load route and translator-facing
+  checkpoint coverage.
 - Graphics inventory and translation through `juice-img` where applicable.
 - Reproducible binary-difference release with exact input hashes and emulator
   instructions.

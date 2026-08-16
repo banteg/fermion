@@ -1,0 +1,52 @@
+version = 1
+
+# REG_00 is the game's persistent global/template bank. REG_01 through REG_10
+# are loadable slots. The game writes a 0x1b20-byte snapshot of its global
+# segment to a selected slot; fixtures retain only sparse changes from REG_00.
+
+[[fixtures]]
+name = "first-scene"
+description = "Start F0000.MES at the first translated scene, skipping the boot prologue."
+scenario = "f0000.mes"
+template_path = "FERM/REG_00"
+template_sha256 = "74b06b199593f7fda7de93648464031530634f313276471c7dcc639b25005332"
+target_path = "FERM/REG_01"
+target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
+result_sha256 = "d53b209b09c42e969156a1a6e5599b2b2898c27bb058a3a55be0f7aa6abb4f24"
+hunks = [
+  { offset = 0x0001, before = "00", data = "01" },
+  { offset = 0x0033, before = "0000", data = "0401" },
+  { offset = 0x0bba, before = "0000000000000000", data = "3c03010101010303" },
+  { offset = 0x0bce, before = "00", data = "5c" },
+  { offset = 0x0bd4, before = "000000000000", data = "1a08100d2b07" },
+  { offset = 0x0bdb, before = "000000000000000000000000", data = "010201020304050607080903" },
+  { offset = 0x0be8, before = "00", data = "01" },
+  { offset = 0x0c16, before = "00", data = "04" },
+  { offset = 0x0c18, before = "00", data = "01" },
+  { offset = 0x0c1a, before = "00", data = "ff" },
+  { offset = 0x0c1d, before = "0000000000", data = "ff010201ff" },
+  { offset = 0x0c29, before = "00", data = "02" },
+  { offset = 0x0c2b, before = "00", data = "01" },
+  { offset = 0x0c32, before = "00000000", data = "01973214" },
+  { offset = 0x0ffe, before = "00aa", data = "0200" },
+  { offset = 0x1012, before = "00", data = "64" },
+  { offset = 0x101a, before = "00", data = "03" },
+  { offset = 0x101c, before = "0000", data = "4201" },
+  { offset = 0x14b8, before = "00", data = "03" },
+  { offset = 0x14ba, before = "000000", data = "46013e" },
+  { offset = 0x14be, before = "0000", data = "7501" },
+  { offset = 0x14c8, before = "00", data = "03" },
+  { offset = 0x14ca, before = "000000", data = "46013e" },
+  { offset = 0x14ce, before = "0000000000", data = "5501590801" },
+  { offset = 0x14d4, before = "0000000000", data = "9f014e0103" },
+  { offset = 0x14da, before = "0000", data = "4601" },
+  { offset = 0x1526, before = "00", data = "12" },
+  { offset = 0x1528, before = "00", data = "b9" },
+  { offset = 0x15ca, before = "0000000000000000000000000000000000000000", data = "59087b08900882169616a916c916e916fe162517" },
+  { offset = 0x16d8, before = "00", data = "26" },
+  { offset = 0x16da, before = "00", data = "25" },
+  { offset = 0x19dc, before = "00", data = "05" },
+  { offset = 0x19e0, before = "00", data = "03" },
+  { offset = 0x19e4, before = "0000", data = "4a01" },
+  { offset = 0x1b10, before = "6d61696e2e6d657300", data = "66303030302e6d6573" },
+]

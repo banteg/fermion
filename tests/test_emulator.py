@@ -11,6 +11,7 @@ from fermion.emulator import (
     Frame,
     load_core_options,
     parse_key_tap,
+    parse_mouse_tap,
     parse_option,
     run_checkpoints,
     run_scheduled,
@@ -29,6 +30,18 @@ def test_rejects_invalid_key_tap(value: str) -> None:
         parse_key_tap(value)
 
 
+def test_parses_scheduled_mouse_tap() -> None:
+    tap = parse_mouse_tap("120:right:3")
+
+    assert (tap.frame, tap.name, tap.button, tap.hold_frames) == (120, "right", 3, 3)
+
+
+@pytest.mark.parametrize("value", ["right", "-1:right", "1:nope", "1:right:0"])
+def test_rejects_invalid_mouse_tap(value: str) -> None:
+    with pytest.raises(EmulatorError):
+        parse_mouse_tap(value)
+
+
 def test_loads_retroarch_options(tmp_path) -> None:
     path = tmp_path / "game.opt"
     path.write_text('np2kai_model = "PC-9801VX"\nnp2kai_clk_mult = "20"\n')
@@ -45,9 +58,7 @@ def test_converts_rgb565_and_writes_png(tmp_path) -> None:
     data = struct.pack("<4H", 0xF800, 0x07E0, 0x001F, 0xFFFF)
     frame = Frame(2, 2, 4, RETRO_PIXEL_FORMAT_RGB565, data)
 
-    assert frame.rgb() == bytes(
-        [255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 255, 255]
-    )
+    assert frame.rgb() == bytes([255, 0, 0, 0, 255, 0, 0, 0, 255, 255, 255, 255])
 
     output = tmp_path / "frame.png"
     frame.write_png(output)
@@ -107,6 +118,40 @@ def test_captures_several_frames_in_one_run() -> None:
         1: captured,
         3: captured,
     }
+
+
+def test_runs_scheduled_mouse_transitions() -> None:
+    class FakeFrontend:
+        def __init__(self) -> None:
+            self.pressed: set[int] = set()
+            self.seen: list[frozenset[int]] = []
+
+        def key_down(self, _key: int) -> None:
+            return None
+
+        def key_up(self, _key: int) -> None:
+            return None
+
+        def mouse_down(self, button: int) -> None:
+            self.pressed.add(button)
+
+        def mouse_up(self, button: int) -> None:
+            self.pressed.discard(button)
+
+        def run_frame(self, *, capture: bool = False) -> Frame | None:
+            self.seen.append(frozenset(self.pressed))
+            return None
+
+    frontend = FakeFrontend()
+    run_checkpoints(
+        frontend,
+        4,
+        [],
+        set(),
+        mouse_taps=[parse_mouse_tap("1:right:2")],
+    )
+
+    assert frontend.seen == [frozenset(), frozenset({3}), frozenset({3}), frozenset()]
 
 
 def test_resumes_at_global_frame_and_calls_after_frame() -> None:

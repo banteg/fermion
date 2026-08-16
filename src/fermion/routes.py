@@ -9,7 +9,13 @@ import tomllib
 from dataclasses import dataclass
 from pathlib import Path
 
-from fermion.emulator import EmulatorError, KeyTap, parse_key_tap
+from fermion.emulator import (
+    EmulatorError,
+    KeyTap,
+    MouseTap,
+    parse_key_tap,
+    parse_mouse_tap,
+)
 
 _SAFE_NAME = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
@@ -28,6 +34,7 @@ class EmulatorRoute:
     content_sha256: str
     frames: int
     taps: tuple[KeyTap, ...]
+    clicks: tuple[MouseTap, ...]
     checkpoints: tuple[RouteCheckpoint, ...]
     cache_frame: int | None
 
@@ -35,8 +42,7 @@ class EmulatorRoute:
         actual = hashlib.sha256(path.read_bytes()).hexdigest()
         if actual != self.content_sha256:
             raise EmulatorError(
-                f"route {self.name!r} expects content SHA-256 {self.content_sha256}, "
-                f"got {actual}"
+                f"route {self.name!r} expects content SHA-256 {self.content_sha256}, got {actual}"
             )
 
 
@@ -90,6 +96,14 @@ def _parse_route(value: object, index: int) -> EmulatorRoute:
         if tap.frame >= frames:
             raise EmulatorError(f"{context}: tap {tap.name!r} falls outside the route")
 
+    raw_clicks = value.get("clicks", [])
+    if not isinstance(raw_clicks, list) or not all(isinstance(item, str) for item in raw_clicks):
+        raise EmulatorError(f"{context}.clicks must be an array of strings")
+    clicks = tuple(parse_mouse_tap(item) for item in raw_clicks)
+    for click in clicks:
+        if click.frame >= frames:
+            raise EmulatorError(f"{context}: mouse click {click.name!r} falls outside the route")
+
     raw_checkpoints = value.get("checkpoints")
     if not isinstance(raw_checkpoints, list) or not raw_checkpoints:
         raise EmulatorError(f"{context} must contain at least one [[routes.checkpoints]] table")
@@ -113,8 +127,11 @@ def _parse_route(value: object, index: int) -> EmulatorRoute:
             raise EmulatorError(f"{context}.cache_frame must precede a checkpoint")
         for tap in taps:
             if tap.frame <= cache_frame < tap.frame + tap.hold_frames:
+                raise EmulatorError(f"{context}.cache_frame crosses held key {tap.name!r}")
+        for click in clicks:
+            if click.frame <= cache_frame < click.frame + click.hold_frames:
                 raise EmulatorError(
-                    f"{context}.cache_frame crosses held key {tap.name!r}"
+                    f"{context}.cache_frame crosses held mouse button {click.name!r}"
                 )
     return EmulatorRoute(
         name,
@@ -122,6 +139,7 @@ def _parse_route(value: object, index: int) -> EmulatorRoute:
         content_sha256,
         frames,
         taps,
+        clicks,
         checkpoints,
         cache_frame,
     )
@@ -180,10 +198,16 @@ def route_cache_key(
         for tap in route.taps
         if tap.frame <= route.cache_frame
     ]
+    clicks = [
+        [click.frame, click.button, click.hold_frames]
+        for click in route.clicks
+        if click.frame <= route.cache_frame
+    ]
     identity = {
         "content_sha256": route.content_sha256,
         "cache_frame": route.cache_frame,
         "taps": taps,
+        "clicks": clicks,
         "options": options,
         "core_sha256": hashlib.sha256(core.read_bytes()).hexdigest(),
         "system_sha256": _system_fingerprint(system_directory),

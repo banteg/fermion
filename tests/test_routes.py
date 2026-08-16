@@ -20,11 +20,12 @@ content_sha256 = "{content_hash}"
 frames = 20
 cache_frame = 9
 taps = ["3:return", "10:space:1"]
+clicks = ["4:right"]
 
 [[routes.checkpoints]]
 name = "menu"
 frame = 9
-sha256 = "{'1' * 64}"
+sha256 = "{"1" * 64}"
 
 [[routes.checkpoints]]
 name = "dialogue"
@@ -45,6 +46,7 @@ def test_loads_route_and_verifies_content(tmp_path) -> None:
     assert route.frames == 20
     assert route.cache_frame == 9
     assert [(tap.frame, tap.name) for tap in route.taps] == [(3, "return"), (10, "space")]
+    assert [(click.frame, click.name) for click in route.clicks] == [(4, "right")]
     assert [(item.name, item.frame, item.sha256) for item in route.checkpoints] == [
         ("menu", 9, "1" * 64),
         ("dialogue", 19, None),

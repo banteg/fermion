@@ -154,8 +154,8 @@ uv run fermion hdi replace-file input.hdi FERM/DISKA rebuilt-DISKA output.hdi
 ## Headless runtime tests
 
 The packaged CLI can drive NP2kai directly through libretro. It does not launch
-RetroArch, Wine, or a GUI: scheduled keyboard input goes into the emulator and
-the final framebuffer is written directly to PNG.
+RetroArch, Wine, or a GUI: scheduled keyboard and mouse-button input goes into
+the emulator and the final framebuffer is written directly to PNG.
 
 The installed RetroArch core is x86-64, so build a native arm64 core from the
 current upstream source. All source, firmware copies, cores, states, and captures
@@ -172,8 +172,10 @@ mkdir -p working/emulator/system
 cp -R "$HOME/Documents/RetroArch/system/np2kai" working/emulator/system/
 ```
 
-Run an exact number of frames, inject one or more key taps, and capture the final
-640x400 framebuffer. A tap uses `FRAME:KEY[:HOLD_FRAMES]`:
+Run an exact number of frames, inject one or more key taps or mouse clicks, and
+capture the final 640x400 framebuffer. A tap uses
+`FRAME:KEY[:HOLD_FRAMES]`; a click uses
+`FRAME:BUTTON[:HOLD_FRAMES]` with `left`, `right`, or `middle`:
 
 ```sh
 uv run fermion emulator run working/emulator/fermion-translation.hdi \
@@ -208,6 +210,49 @@ uv run fermion emulator route \
 Checkpoint PNGs are written under ignored
 `working/emulator/checkpoints/opening-translation-proof/`.
 
+### Portable save fixtures
+
+Ghidra analysis of the native save/load handlers established that `REG_00` is
+the persistent global/template bank and `REG_01` through `REG_10` are the ten
+loadable slots. A slot is a 6,944-byte snapshot of the game's global segment.
+The checked-in [`runtime/save-fixtures.toml`](runtime/save-fixtures.toml) file
+stores only hash-pinned sparse changes, never a complete slot or game image.
+
+List the available fixtures and install one into a new copied HDI:
+
+```sh
+uv run fermion save list runtime/save-fixtures.toml
+uv run fermion save apply \
+  runtime/save-fixtures.toml \
+  first-scene \
+  working/emulator/fermion-translation.hdi \
+  working/emulator/first-scene.hdi
+```
+
+Application refuses an in-place output, a pre-existing output, a changed
+template bank, or a non-pristine target slot. The first fixture contains 35
+hunks changing 110 bytes relative to `REG_00`; it reconstructs `REG_01`
+SHA-256 `d53b209b09c42e969156a1a6e5599b2b2898c27bb058a3a55be0f7aa6abb4f24`.
+The game accepts that slot through its native `LOAD` flow and starts
+`F0000.MES`, bypassing the long prologue.
+
+Verify that path with its short named route:
+
+```sh
+uv run fermion emulator route \
+  runtime/routes.toml \
+  first-scene-save-fixture-proof \
+  working/emulator/first-scene.hdi
+```
+
+The clean route executes 10,500 frames in about 15.5 seconds on this Mac. Its
+exact-build cache resumes at frame 8,300 and executes the final 2,200 frames in
+about 3.9 seconds, compared with roughly 49 seconds for the full opening route.
+Game-native fixtures are portable across translation rebuilds as long as their
+hash-pinned `REG` banks remain unchanged; libretro states remain the precise,
+core-specific accelerator within one such route. Native loads resume at a
+scenario entry rather than an arbitrary dialogue instruction.
+
 Named routes may declare a `cache_frame`. On a cache miss the command performs
 the full route and stores both the libretro state and its matching writable HDI
 snapshot under ignored `working/emulator/state-cache/`. On a hit it restores
@@ -220,8 +265,9 @@ cannot invalidate the hash-pinned build artifact.
 The cache is deliberately invalidated by any HDI, core, firmware/config,
 effective-option, or prefix-input change. It accelerates repeated checks of one
 build without claiming that an opaque emulator state is portable across changed
-game data. Later scene-by-scene iteration should use ignored game-native save
-fixtures and short boot/load routes; keep the full route as the release check.
+game data. Later scene-by-scene iteration should use checked-in sparse
+game-native save fixtures and short boot/load routes; keep the full route as the
+release check.
 
 Force the full end-to-end path for release validation with:
 

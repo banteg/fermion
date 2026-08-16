@@ -18,6 +18,11 @@ class EmulatorError(RuntimeError):
 
 
 RETRO_DEVICE_KEYBOARD = 3
+RETRO_DEVICE_MOUSE = 2
+
+RETRO_DEVICE_ID_MOUSE_LEFT = 2
+RETRO_DEVICE_ID_MOUSE_RIGHT = 3
+RETRO_DEVICE_ID_MOUSE_MIDDLE = 6
 
 RETRO_ENVIRONMENT_GET_CAN_DUPE = 3
 RETRO_ENVIRONMENT_GET_SYSTEM_DIRECTORY = 9
@@ -82,6 +87,12 @@ KEY_CODES.update({f"f{number}": 281 + number for number in range(1, 16)})
 KEY_CODES.update({str(number): ord(str(number)) for number in range(10)})
 KEY_CODES.update({chr(code): code for code in range(ord("a"), ord("z") + 1)})
 
+MOUSE_BUTTON_CODES = {
+    "left": RETRO_DEVICE_ID_MOUSE_LEFT,
+    "right": RETRO_DEVICE_ID_MOUSE_RIGHT,
+    "middle": RETRO_DEVICE_ID_MOUSE_MIDDLE,
+}
+
 
 class _RetroVariable(ctypes.Structure):
     _fields_ = [("key", ctypes.c_char_p), ("value", ctypes.c_char_p)]
@@ -129,6 +140,14 @@ class KeyTap:
 
 
 @dataclass(frozen=True)
+class MouseTap:
+    frame: int
+    button: int
+    name: str
+    hold_frames: int = 2
+
+
+@dataclass(frozen=True)
 class Frame:
     width: int
     height: int
@@ -166,7 +185,9 @@ class Frame:
                         green = _expand(value >> 5, 5)
                         blue = _expand(value, 5)
                     else:
-                        raise EmulatorError(f"unsupported libretro pixel format: {self.pixel_format}")
+                        raise EmulatorError(
+                            f"unsupported libretro pixel format: {self.pixel_format}"
+                        )
                 output[destination : destination + 3] = bytes((red, green, blue))
                 destination += 3
         return bytes(output)
@@ -179,8 +200,7 @@ class Frame:
         """Write the frame as a dependency-free RGB PNG."""
         rgb = self.rgb()
         scanlines = b"".join(
-            b"\x00" + rgb[y * self.width * 3 : (y + 1) * self.width * 3]
-            for y in range(self.height)
+            b"\x00" + rgb[y * self.width * 3 : (y + 1) * self.width * 3] for y in range(self.height)
         )
         header = struct.pack(">IIBBBBB", self.width, self.height, 8, 2, 0, 0, 0)
         png = b"\x89PNG\r\n\x1a\n" + _png_chunk(b"IHDR", header)
@@ -220,6 +240,27 @@ def parse_key_tap(value: str) -> KeyTap:
         choices = ", ".join(sorted(KEY_CODES))
         raise EmulatorError(f"unknown key {name!r}; choose one of: {choices}")
     return KeyTap(frame, KEY_CODES[name], name, hold_frames)
+
+
+def parse_mouse_tap(value: str) -> MouseTap:
+    """Parse FRAME:BUTTON[:HOLD_FRAMES] into a scheduled mouse click."""
+    parts = value.split(":")
+    if len(parts) not in (2, 3):
+        raise EmulatorError("mouse tap must use FRAME:BUTTON[:HOLD_FRAMES]")
+    try:
+        frame = int(parts[0])
+        hold_frames = int(parts[2]) if len(parts) == 3 else 2
+    except ValueError as error:
+        raise EmulatorError("mouse tap frame values must be integers") from error
+    name = parts[1].lower()
+    if frame < 0:
+        raise EmulatorError("mouse tap frame must not be negative")
+    if hold_frames < 1:
+        raise EmulatorError("mouse tap hold duration must be at least one frame")
+    if name not in MOUSE_BUTTON_CODES:
+        choices = ", ".join(sorted(MOUSE_BUTTON_CODES))
+        raise EmulatorError(f"unknown mouse button {name!r}; choose one of: {choices}")
+    return MouseTap(frame, MOUSE_BUTTON_CODES[name], name, hold_frames)
 
 
 def load_core_options(path: Path) -> dict[str, str]:
@@ -279,12 +320,11 @@ class LibretroFrontend:
         self.options = dict(FERMION_CORE_OPTIONS)
         if options:
             self.options.update(options)
-        self._option_bytes = {
-            key: value.encode("utf-8") for key, value in self.options.items()
-        }
+        self._option_bytes = {key: value.encode("utf-8") for key, value in self.options.items()}
         self._system_bytes = str(self.system_directory).encode("utf-8")
         self._content_bytes = str(self.content_path).encode("utf-8")
         self._pressed: set[int] = set()
+        self._mouse_buttons: set[int] = set()
         self._capture_requested = False
         self._frame: Frame | None = None
         self.pixel_format = RETRO_PIXEL_FORMAT_0RGB1555
@@ -408,6 +448,8 @@ class LibretroFrontend:
     def _input_state(self, _port: int, device: int, _index: int, identifier: int) -> int:
         if device == RETRO_DEVICE_KEYBOARD and identifier in self._pressed:
             return 1
+        if device == RETRO_DEVICE_MOUSE and identifier in self._mouse_buttons:
+            return 1
         return 0
 
     def run_frame(self, *, capture: bool = False) -> Frame | None:
@@ -426,6 +468,12 @@ class LibretroFrontend:
 
     def key_up(self, key: int) -> None:
         self._pressed.discard(key)
+
+    def mouse_down(self, button: int) -> None:
+        self._mouse_buttons.add(button)
+
+    def mouse_up(self, button: int) -> None:
+        self._mouse_buttons.discard(button)
 
     def save_state(self, path: Path) -> None:
         size = self.core.retro_serialize_size()
@@ -461,11 +509,18 @@ def run_scheduled(
     frame_count: int,
     taps: list[KeyTap],
     *,
+    mouse_taps: list[MouseTap] | None = None,
     capture_final: bool,
 ) -> Frame | None:
     """Run an exact number of frames while applying scheduled key transitions."""
     capture_frames = {frame_count - 1} if capture_final else set()
-    return run_checkpoints(frontend, frame_count, taps, capture_frames).get(frame_count - 1)
+    return run_checkpoints(
+        frontend,
+        frame_count,
+        taps,
+        capture_frames,
+        mouse_taps=mouse_taps,
+    ).get(frame_count - 1)
 
 
 def run_checkpoints(
@@ -474,6 +529,7 @@ def run_checkpoints(
     taps: list[KeyTap],
     capture_frames: set[int],
     *,
+    mouse_taps: list[MouseTap] | None = None,
     start_frame: int = 0,
     after_frame: Callable[[int], None] | None = None,
 ) -> dict[int, Frame]:
@@ -487,7 +543,7 @@ def run_checkpoints(
         raise EmulatorError(
             f"checkpoint frame {invalid_captures[0]} is outside a {frame_count}-frame run"
         )
-    events: dict[int, list[tuple[int, bool]]] = {}
+    events: dict[int, list[tuple[str, int, bool]]] = {}
     for tap in taps:
         if tap.frame >= frame_count:
             raise EmulatorError(
@@ -498,16 +554,32 @@ def run_checkpoints(
             raise EmulatorError(
                 f"cannot resume at frame {start_frame} during held key {tap.name!r}"
             )
-        events.setdefault(tap.frame, []).append((tap.key, True))
-        events.setdefault(tap.frame + tap.hold_frames, []).append((tap.key, False))
+        events.setdefault(tap.frame, []).append(("key", tap.key, True))
+        events.setdefault(tap.frame + tap.hold_frames, []).append(("key", tap.key, False))
+    for tap in mouse_taps or []:
+        if tap.frame >= frame_count:
+            raise EmulatorError(
+                f"mouse tap {tap.name!r} is scheduled at frame {tap.frame}, "
+                f"outside a {frame_count}-frame run"
+            )
+        if tap.frame < start_frame < tap.frame + tap.hold_frames:
+            raise EmulatorError(
+                f"cannot resume at frame {start_frame} during held mouse button {tap.name!r}"
+            )
+        events.setdefault(tap.frame, []).append(("mouse", tap.button, True))
+        events.setdefault(tap.frame + tap.hold_frames, []).append(("mouse", tap.button, False))
 
     captured: dict[int, Frame] = {}
     for current in range(start_frame, frame_count):
-        for key, pressed in events.get(current, []):
-            if pressed:
-                frontend.key_down(key)
+        for device, code, pressed in events.get(current, []):
+            if device == "key" and pressed:
+                frontend.key_down(code)
+            elif device == "key":
+                frontend.key_up(code)
+            elif pressed:
+                frontend.mouse_down(code)
             else:
-                frontend.key_up(key)
+                frontend.mouse_up(code)
         frame = frontend.run_frame(capture=current in capture_frames)
         if frame is not None:
             captured[current] = frame
