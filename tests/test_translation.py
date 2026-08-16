@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import struct
+from pathlib import Path
 
 import pytest
 
@@ -89,6 +90,25 @@ def test_notes_may_be_omitted_from_simple_entry(tmp_path) -> None:
     catalog = TranslationCatalog.from_file(catalog_path)
 
     assert catalog.entries[0].notes == ""
+
+
+def test_opening_exposition_reveal_ticks_do_not_split_words() -> None:
+    catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
+    catalog = TranslationCatalog.from_file(catalog_path)
+    crawl = [
+        entry
+        for entry in catalog.entries
+        if entry.id.startswith("opening-exposition-")
+    ]
+
+    assert crawl
+    for entry in crawl:
+        text = entry.translation.rstrip("\n")
+        assert len(text) <= 72, f"{entry.id} exceeds two 36-character reveals"
+        for boundary in range(36, len(text), 36):
+            assert not (text[boundary - 1].isalnum() and text[boundary].isalnum()), (
+                f"{entry.id} splits a word at reveal boundary {boundary}"
+            )
 
 
 def test_file_width_is_the_compile_default(tmp_path) -> None:

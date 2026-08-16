@@ -1365,11 +1365,11 @@ offset = 0x11f1
 source_mode = 1
 target_mode = 2
 source = "　　　人類は公害・汚染等により遺伝子を弱体化させられ、人口が激減していた。\n"
-translation = "    Pollution had damaged humanity's genes, and its population was collapsing.\n"
+translation = "    Pollution had damaged humanity's genes. Its numbers were collapsing.\n"
 speaker = "narrator"
 context = "Opening premise screen; first line explaining humanity's crisis in 2296."
 status = "qa-ready"
-notes = "公害・汚染等 is environmental pollution broadly. 'Population was collapsing' preserves the ongoing, severe decline of 激減していた."
+notes = "公害・汚染等 is environmental pollution broadly. 'Its numbers were collapsing' preserves the ongoing, severe decline of 激減していた while keeping both 36-character crawl reveals word-safe."
 
 [[entries]]
 id = "opening-exposition-environment"
@@ -1378,11 +1378,11 @@ offset = 0x1221
 source_mode = 1
 target_mode = 2
 source = "　大気・海・大地の汚染を戻そうにも、１０年や２０年では自然回復さえしなかった。\n"
-translation = "     The poisoned air, seas, and soil could not heal in ten or twenty years.\n"
+translation = "    The poisoned air, sea, and soil did not heal in ten or twenty years.\n"
 speaker = "narrator"
 context = "Opening premise screen; environmental recovery is too slow to save the population."
 status = "qa-ready"
-notes = "戻そうにも is an attempted reversal, not merely observation. The compact English stays within the screen while retaining the ten-or-twenty-year scale."
+notes = "戻そうにも is an attempted reversal, not merely observation. The compact English stays within two 36-character crawl reveals and retains the ten-or-twenty-year scale; singular 'sea' follows 海 and puts the tick boundary after 'soil'."
 
 [[entries]]
 id = "opening-exposition-repair-attempt"
@@ -1391,11 +1391,11 @@ offset = 0x1253
 source_mode = 1
 target_mode = 2
 source = "　　　　人は弱った遺伝子を強化しようとするが────────────。\n"
-translation = "                Humanity tried to repair its damaged genes--\n"
+translation = "                  Humanity tried to repair its damaged genes--\n"
 speaker = "narrator"
 context = "Opening premise screen; first half of the final statement about failed genetic restoration."
 status = "qa-ready"
-notes = "強化 is literally strengthen, but the next record clarifies recovery of missing information. 'Repair' avoids implying eugenic superiority and follows the locked glossary."
+notes = "強化 is literally strengthen, but the next record clarifies recovery of missing information. 'Repair' avoids implying eugenic superiority and follows the locked glossary. The centering also leaves the crawl's 36-character reveal boundary between words."
 
 [[entries]]
 id = "opening-exposition-lost-information"
@@ -1404,11 +1404,11 @@ offset = 0x127b
 source_mode = 1
 target_mode = 2
 source = "　　　　　　　　　『失われた遺伝子情報』は、復元できなかった。"
-translation = "            but lost genetic information could not be recovered."
+translation = "            but what their genes had lost could not be recovered."
 speaker = "narrator"
 context = "Opening premise screen; conclusion establishing the genetic-data objective of Project D."
 status = "qa-ready"
-notes = "The source emphasizes 'lost genetic information' as a quoted concept. English emphasis is carried by the sentence structure rather than decorative quotation marks."
+notes = "The source emphasizes 'lost genetic information' as a quoted concept. 'What their genes had lost' preserves that meaning while placing the crawl's 36-character reveal boundary between words; English emphasis is carried by the sentence structure rather than decorative quotation marks."
 
 [[entries]]
 id = "first-scene-connie-resists"
