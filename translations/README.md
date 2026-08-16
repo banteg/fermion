@@ -28,6 +28,11 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
+The current catalog contains 12 records across `MAIN.MES`, `FOP.MES`, and
+`F0000.MES`. The first scene batch deliberately retains literal alternatives
+and contextual inferences in its notes even though the rendered English lines
+and three-choice menu are runtime-verified.
+
 Validate structure and encodability after every edit:
 
 ```sh

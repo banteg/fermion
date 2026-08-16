@@ -119,6 +119,11 @@ changed-length `DISKA`, resizes its FAT12 cluster chain if necessary, and
 verifies every layer in the output image. Generated RKT, MES, archive, and JSON
 report files are kept under ignored `working/translation-build/`.
 
+The current 12-entry catalog produces image SHA-256
+`5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d`.
+It includes the translated title menu, opening proof lines, first explicitly
+labelled Connie/Kanzaki exchange, and first three-choice scene menu.
+
 The underlying HDI support is also available directly:
 
 ```sh
@@ -162,13 +167,15 @@ uv run fermion emulator run working/emulator/fermion-translation.hdi \
   --capture working/emulator/headless-exchange.png
 ```
 
-This route boots through the information screen, color-mode selector,
+This short smoke run boots through the information screen, color-mode selector,
 disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
 to the long translated reply. The command reports a SHA-256 over packed RGB
 pixels for stable checkpoint comparisons.
 
-The same path is checked in as a named route with three exact framebuffer
-checkpoints. It also verifies the translated HDI's content hash before booting:
+The complete path is checked in as a named 34,200-frame route with seven exact
+framebuffer checkpoints. It continues through the prologue and verifies all
+three labelled dialogue lines plus the translated in-scene menu before selecting
+an option. It also verifies the translated HDI's content hash before booting:
 
 ```sh
 uv run fermion emulator route \

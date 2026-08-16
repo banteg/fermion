@@ -2,9 +2,9 @@ version = 1
 
 [[routes]]
 name = "opening-translation-proof"
-description = "Boot through the title menu and verify the first translated exchange."
-content_sha256 = "4480860f8a45b7c29a0223fd0e942fb287f111687236528acdd31359db75c25a"
-frames = 4500
+description = "Boot through the opening and verify the translated title, labelled exchange, and first scene menu."
+content_sha256 = "5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d"
+frames = 34200
 taps = [
   "1000:return",
   "1300:return",
@@ -12,6 +12,72 @@ taps = [
   "2200:return",
   "2900:return",
   "4100:return",
+  "4550:return",
+  "5000:return",
+  "5450:return",
+  "5900:return",
+  "6350:return",
+  "6800:return",
+  "7250:return",
+  "7700:return",
+  "8150:return",
+  "8600:return",
+  "9050:return",
+  "9500:return",
+  "9950:return",
+  "10400:return",
+  "10850:return",
+  "11300:return",
+  "11750:return",
+  "12200:return",
+  "12650:return",
+  "13100:return",
+  "13550:return",
+  "14000:return",
+  "14450:return",
+  "14900:return",
+  "15350:return",
+  "15800:return",
+  "16250:return",
+  "16700:return",
+  "17150:return",
+  "17600:return",
+  "18050:return",
+  "18500:return",
+  "18950:return",
+  "19400:return",
+  "19850:return",
+  "20300:return",
+  "20750:return",
+  "21200:return",
+  "21650:return",
+  "22100:return",
+  "22550:return",
+  "23000:return",
+  "23450:return",
+  "23900:return",
+  "24350:return",
+  "24800:return",
+  "25250:return",
+  "25700:return",
+  "26150:return",
+  "26600:return",
+  "27050:return",
+  "27500:return",
+  "27950:return",
+  "28400:return",
+  "28850:return",
+  "29300:return",
+  "29750:return",
+  "30200:return",
+  "30650:return",
+  "31100:return",
+  "31550:return",
+  "32000:return",
+  "32450:return",
+  "32900:return",
+  "33350:return",
+  "33800:return",
 ]
 
 [[routes.checkpoints]]
@@ -28,3 +94,23 @@ sha256 = "69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05"
 name = "opening-request"
 frame = 4499
 sha256 = "16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e"
+
+[[routes.checkpoints]]
+name = "first-scene-connie"
+frame = 25199
+sha256 = "cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6"
+
+[[routes.checkpoints]]
+name = "first-scene-kanzaki"
+frame = 25649
+sha256 = "9e82f1f74ad3ff813585ff64e383e730faa12961fecb58461b41bef6862e95f5"
+
+[[routes.checkpoints]]
+name = "first-scene-response"
+frame = 26099
+sha256 = "ba44453ad344526336e9b161f8c78f93fa48a154dd83d63cc180e3517bfa1f78"
+
+[[routes.checkpoints]]
+name = "first-scene-menu"
+frame = 34199
+sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"

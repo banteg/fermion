@@ -11,6 +11,11 @@ file = "DISKA/FOP.MES"
 source = "disk-a/FOP.MES"
 sha256 = "90062762e0c553222d66adad5668a6c089e7e7104b9f5ed618e3586bdc5b004d"
 
+[[files]]
+file = "DISKA/F0000.MES"
+source = "disk-a/F0000.MES"
+sha256 = "9ad87fb6ef7db90bea1d75ec8e02c1476fd9d5d477ec56ed458951f3facb55cb"
+
 [[entries]]
 id = "main-menu-new-game"
 file = "DISKA/MAIN.MES"
@@ -104,4 +109,96 @@ from the first runtime probe to compensate for the preceding line's growth.
 Catalog builds now support file growth, so the technical constraint is gone;
 restore that nuance during the next editorial pass rather than silently
 changing an already recorded runtime proof.
+"""
+
+[[entries]]
+id = "first-scene-connie-resists"
+file = "DISKA/F0000.MES"
+offset = 0x0554
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あンッ、だ・・・だめです・・・。明日は・・・・・・出発だから・・・・・・。」"
+translation = "[CONNIE] \"Ah... n-no... We leave tomorrow...\""
+status = "runtime-verified"
+box_width = 61
+notes = """
+This is the first line in F0000.MES and the first runtime target with an inline
+speaker label. 出発だから is literally “because [we] depart”; “we leave” is a
+natural contextual compression. The interrupted だめです is kept as “n-no.”
+"""
+
+[[entries]]
+id = "first-scene-kanzaki-asks"
+file = "DISKA/F0000.MES"
+offset = 0x0586
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・コニー。私を嫌いになったの？」"
+translation = "[KANZAKI] \"...Connie. Don't you love me anymore?\""
+status = "runtime-verified"
+box_width = 61
+notes = """
+私を嫌いになったの is literally “Have you come to hate me?” The current line
+uses the more natural intimate question “Don't you love me anymore?” The source
+label gives only the surname Kanzaki; later context identifies her as Dr. Kaori
+Kanzaki, but the visible label remains simply KANZAKI here.
+"""
+
+[[entries]]
+id = "first-scene-connie-explains"
+file = "DISKA/F0000.MES"
+offset = 0x05a2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そ・・・そうじゃありません。明日に備えて休んでおいた方がいいかなと・・・。」"
+translation = "[CONNIE] \"No... I just thought we should rest for tomorrow.\""
+status = "runtime-verified"
+box_width = 61
+notes = """
+明日に備えて means “in preparation for tomorrow.” The 60-character English
+line includes its speaker label and stays just under the observed 61 half-width
+character boundary, avoiding an automatic mid-word wrap.
+"""
+
+[[entries]]
+id = "first-scene-menu-look-at-kanzaki"
+file = "DISKA/F0000.MES"
+offset = 0x0832
+source_mode = 1
+target_mode = 2
+source = "神崎博士を見る"
+translation = "LOOK AT DR. KANZAKI"
+status = "runtime-verified"
+notes = """
+Literal choice: “Look at Dr. Kanzaki.” The imperative menu style matches the
+checked-in title actions and preserves the source's 博士 title.
+"""
+
+[[entries]]
+id = "first-scene-menu-listen"
+file = "DISKA/F0000.MES"
+offset = 0x0848
+source_mode = 1
+target_mode = 2
+source = "話を聞く"
+translation = "LISTEN"
+status = "runtime-verified"
+notes = """
+Literally “listen to [her] talk.” The object is visually and narratively clear,
+so the compact command avoids adding an English pronoun absent from the source.
+"""
+
+[[entries]]
+id = "first-scene-menu-give-in"
+file = "DISKA/F0000.MES"
+offset = 0x085b
+source_mode = 1
+target_mode = 2
+source = "体を委ねる"
+translation = "GIVE IN"
+status = "runtime-verified"
+notes = """
+体を委ねる is literally “entrust/yield one's body [to her].” “GIVE IN” is a
+short, idiomatic scene command; “LET HER TAKE THE LEAD” remains an editorial
+alternative if later choices favor more explicit action labels.
 """

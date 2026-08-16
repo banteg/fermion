@@ -226,9 +226,9 @@ advance and unchanged selection geometry. Activating `START NEW GAME` reaches th
 opening Japanese dialogue, proving the resized menu's relocated control flow is
 executable rather than merely structurally valid.
 
-## Active milestone: first narrative vertical slice
+## Completed milestone: first narrative vertical slice
 
-### 6. Translate and test the opening sequence — in progress
+### 6. Translate and test the opening sequence — complete
 
 Locate the first displayed line in its scenario MES, then translate and test:
 
@@ -263,18 +263,26 @@ shows `"This way..."` normally, with the text box and continue indicator intact.
 Translation tooling must wrap English deliberately instead of relying on the
 renderer.
 
-The six translated menu/dialogue records and their translator notes now live in
+The initial six translated menu/dialogue records and their translator notes live in
 `translations/fermion.toml`. Their anchors verify exactly against hash-pinned
 pristine `MAIN.MES` and `FOP.MES` files. This keeps editorial decisions and
 runtime discoveries reviewable while generated MES and HDI artifacts remain
 ignored.
 
-The current catalog slice now survives catalog validation, decompile, edit,
-compile, archive repacking, filesystem-aware media replacement, unattended
-boot, and exact framebuffer checks. It is safe to expand while keeping wording
-marked as provisional where the notes still identify uncertainty. An explicit
-speaker-labelled exchange and an additional in-scene command menu remain before
-calling the narrative milestone complete.
+The catalog now also covers the first three lines of `F0000.MES`, whose inline
+`【コニー】` and `【神崎】` labels are rendered as `[CONNIE]` and `[KANZAKI]`.
+All three English lines fit on one observed 61-character half-width row. The
+first in-scene menu at offsets `0x0832`, `0x0848`, and `0x085b` renders as
+`LOOK AT DR. KANZAKI`, `LISTEN`, and `GIVE IN`, with its highlight, cursor, and
+spacing intact. Literal alternatives and contextual inferences remain recorded
+in the translator notes even though these six entries are runtime-verified.
+
+The completed technical slice now contains a translated opening line,
+speaker-labelled exchange, title and in-scene command menus, a deliberately
+wrapped dialogue box, and mode-2 English. It survives catalog validation,
+decompile, edit, compile, archive repacking, filesystem-aware media replacement,
+unattended boot, and exact framebuffer checks. Editorial revision and contiguous
+translation of the intervening Japanese remain separate ongoing work.
 
 ## Completed enabling milestone: self-driving runtime tests
 
@@ -301,7 +309,7 @@ the ignored core has SHA-256
 The harness uses an ignored copy of the NP2kai system directory so the core's
 configuration writes do not touch the RetroArch installation.
 
-An unattended 4,500-frame route now boots through the information screen,
+The initial unattended 4,500-frame smoke route boots through the information screen,
 color-mode selector, disclaimer, title, and translated menu; selects
 `START NEW GAME`; displays `"Don't look. I understand, but..."`; and advances to
 the deliberately wrapped long reply. Its final 640x400 RGB565 checkpoint has
@@ -316,15 +324,22 @@ those debugger facilities later need automation, patch its Windows frame loop
 with a narrow local command channel and no-dialog screenshot path; a full native
 port of its Win9x-only debugger UI is not required for the translation pipeline.
 
-The first named route is now checked in as `runtime/routes.toml`. It pins the
-translated HDI hash and the six key taps needed to reach the opening exchange,
-then captures three frames in one 4,500-frame run. `fermion emulator route`
-reproduces and verifies the translated-menu hash
+The named route in `runtime/routes.toml` now pins the expanded translated HDI
+and drives 34,200 frames through the prologue to the first scene menu. It retains
+the three opening checkpoints: translated-menu hash
 `a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045`,
 opening-warning hash
 `69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05`, and
 opening-request hash
 `16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e`.
+Four further checkpoints verify Connie's first line
+`cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6`,
+Kanzaki's reply
+`9e82f1f74ad3ff813585ff64e383e730faa12961fecb58461b41bef6862e95f5`,
+Connie's response
+`ba44453ad344526336e9b161f8c78f93fa48a154dd83d63cc180e3517bfa1f78`,
+and the three-choice menu
+`1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c`.
 
 ## Completed enabling milestone: catalog-driven image builds
 
@@ -344,14 +359,15 @@ build input. For every catalog file it:
   file's cluster chain, updates both FAT copies and its directory entry, and
   verifies the result without modifying the input image.
 
-The first clean catalog build grows `MAIN.MES` from 7,310 to 7,318 bytes and
-`DISKA` from 1,090,166 to 1,090,174 bytes. Starting from pristine image SHA-256
+The current catalog build grows `MAIN.MES` from 7,310 to 7,318 bytes,
+`F0000.MES` from 16,157 to 16,211 bytes, and `DISKA` from 1,090,166 to
+1,090,228 bytes. Starting from pristine image SHA-256
 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`, it
 produces `fermion-translation.hdi` SHA-256
-`4480860f8a45b7c29a0223fd0e942fb287f111687236528acdd31359db75c25a`.
-The named opening route passes all three pre-existing framebuffer hashes on
-that fresh image, proving that changed-size media reconstruction preserves live
-control flow and rendering.
+`5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d`.
+The named opening route passes all seven framebuffer hashes on that fresh image,
+proving that changed-size media reconstruction preserves live control flow and
+rendering across the prologue and into `F0000.MES`.
 
 ## Tooling conventions and gates
 
