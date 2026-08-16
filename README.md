@@ -125,6 +125,11 @@ and free-form translator notes.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 
+Dialogue width is normally declared once on the containing `[[files]]` table.
+The builder inserts deterministic word-boundary newlines at compile time while
+leaving the canonical English prose unwrapped in TOML; an entry-level
+`box_width` remains available for a real scene-specific exception.
+
 Validate the catalog on its own, or verify every original line against a
 hash-checked pristine extraction:
 
@@ -164,8 +169,11 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-The first scope currently tracks 178 anchors as 120 unique lines: 25 anchors
-are covered by 17 canonical translations and 153 anchors remain pending. A
+Two focused story scopes are now closed. `opening-prologue` accounts for all
+118 `FOP.MES` records as 97 translated anchors and 21 explicit title/layout
+exclusions. `project-d-launch-and-first-arrival` accounts for all 462
+`F0001.MES`/`F0002.MES` records as 454 canonical translations, including eight
+context-safe duplicate collapses, with no exclusions or pending records. A
 deliberately untranslated line must be source-anchored in the coverage file
 with a reason; `--require-complete` turns any remaining pending line into an
 error.
@@ -198,11 +206,14 @@ changed-length `DISKA`, resizes its FAT12 cluster chain if necessary, and
 verifies every layer in the output image. Generated RKT, MES, archive, and JSON
 report files are kept under ignored `working/translation-build/`.
 
-The current 17-entry, 25-anchor catalog produces image SHA-256
-`0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963`.
-It includes the duplicated setup selector and disclaimer branches, translated
-title menu, opening proof lines, first explicitly labelled Connie/Kanzaki
-exchange, and first three-choice scene menu.
+The current catalog contains 557 canonical entries covering 581 physical
+anchors in five MES files. The QA build grows `F0001.MES` from 17,509 to 26,040
+bytes and `F0002.MES` from 4,402 to 5,964 bytes; starting from pristine image
+SHA-256 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
+it produces SHA-256
+`bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232`.
+Generated filenames are intentionally not release interfaces; rebuild from the
+hash-pinned pristine input before testing.
 
 The underlying HDI support is also available directly:
 
@@ -341,12 +352,13 @@ uv run fermion emulator route \
   working/emulator/second-scene.hdi
 ```
 
-Each route executes 10,500 frames in about 15.5 seconds on this Mac and resumes
-from its exact-build cache at frame 8,300. Eight-frame keyboard pulses reliably
-cross the PC-98 scan without triggering the menu repeat seen with longer holds.
-Every route verifies the visible `LOAD` operation and the exact scenario marker
-inside serialized live state; the F0001 proof also hashes only the 640x308 scene
-area so later dialogue translation will not invalidate its room-load assertion.
+The FOP and F0000 routes execute 10,500 frames; the translated F0001 route now
+continues to frame 15,300 and pins eight dialogue checkpoints after the native
+load. Eight-frame keyboard pulses reliably cross the PC-98 scan without
+triggering the menu repeat seen with longer holds. Every route verifies the
+visible `LOAD` operation and the exact scenario marker inside serialized live
+state; the F0001 proof also retains its 640x308 room-only checkpoint before the
+dialogue hashes.
 Game-native fixtures are portable across translation rebuilds as long as their
 hash-pinned `REG` banks remain unchanged; libretro states remain the precise,
 core-specific accelerator within one such route. Native loads resume at a

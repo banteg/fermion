@@ -15,8 +15,19 @@ from fermion.translation import (
 )
 
 
-def write_catalog(tmp_path, source_hash: str, *, translation: str = "Hello world"):
+def write_catalog(
+    tmp_path,
+    source_hash: str,
+    *,
+    translation: str = "Hello world",
+    file_box_width: int | None = None,
+    entry_box_width: int | None = 8,
+):
     catalog = tmp_path / "catalog.toml"
+    file_width = f"box_width = {file_box_width}\n" if file_box_width is not None else ""
+    entry_width = (
+        f"box_width = {entry_box_width}\n" if entry_box_width is not None else ""
+    )
     catalog.write_text(
         f'''version = 4
 game = "Test"
@@ -25,6 +36,7 @@ game = "Test"
 file = "DISKA/SCENE.MES"
 source = "disk-a/SCENE.MES"
 sha256 = "{source_hash}"
+{file_width}
 
 [[entries]]
 id = "scene-0001"
@@ -37,8 +49,7 @@ translation = "{translation}"
 speaker = "narrator"
 context = "Synthetic scene."
 status = "draft"
-box_width = 8
-notes = "A useful note."
+{entry_width}notes = "A useful note."
 '''
     )
     return catalog
@@ -61,6 +72,24 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
     assert entry.anchors == (TranslationAnchor("DISKA/SCENE.MES", 2),)
     [catalog_file] = catalog.files
     assert (catalog_file.archive, catalog_file.name) == ("DISKA", "SCENE.MES")
+
+
+def test_file_width_is_the_compile_default(tmp_path) -> None:
+    source = struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00"
+    catalog_path = write_catalog(
+        tmp_path,
+        hashlib.sha256(source).hexdigest(),
+        file_box_width=8,
+        entry_box_width=None,
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+    [entry] = catalog.entries
+    [catalog_file] = catalog.files
+
+    assert catalog_file.box_width == 8
+    assert entry.wrapped_translation == ("Hello world",)
+    assert entry.compiled_translation(catalog_file.box_width) == "Hello\nworld"
 
 
 def test_rejects_changed_source_anchor(tmp_path) -> None:
@@ -159,6 +188,36 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
 
     assert '(gm-text 2 "He said \\"hello\\"")' in patched
     assert '(gm-text 2 "Other")' in patched
+
+
+def test_patch_applies_the_file_width_and_entry_override() -> None:
+    original = GMFile.from_bytes(struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00")
+    entry = TranslationEntry(
+        id="scene-0001",
+        anchors=(TranslationAnchor("DISKA/SCENE.MES", 2),),
+        source_mode=2,
+        target_mode=2,
+        source="Original",
+        translation="Hello world again",
+        speaker="narrator",
+        context="Synthetic scene.",
+        status="draft",
+        notes="Test",
+        box_width=11,
+    )
+    source = '''(mes
+ (gm-text 2 "Original")
+ (raw 0))
+'''
+
+    patched = _patch_gm_source(
+        source,
+        original,
+        ((2, entry),),
+        default_box_width=8,
+    )
+
+    assert '(gm-text 2 "Hello world\\nagain")' in patched
 
 
 def test_one_canonical_entry_can_cover_several_physical_anchors(tmp_path) -> None:

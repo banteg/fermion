@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "c3974d5ec03711f43b457623e23a1ec8a130947fd6f1508979c5d22b8794ca83"
+content_sha256 = "bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -240,9 +240,9 @@ state_offset = 0x1c7e0
 
 [[routes]]
 name = "second-scene-save-fixture-proof"
-description = "Load the sparse REG_01 fixture and verify the start of F0001.MES."
-content_sha256 = "437249632a78c3d8f287f57551913cc87543093dbeb050e78257e2cfd5a9050a"
-frames = 10500
+description = "Load the sparse REG_01 fixture and verify the translated start of F0001.MES."
+content_sha256 = "00466ca99ef05e6e2129c64a48a964aa4616b4b998c8f7d707991a4874248b6d"
+frames = 15300
 cache_frame = 8299
 taps = [
   "1000:return",
@@ -255,6 +255,14 @@ taps = [
   "4800:return:8",
   "6500:return:8",
   "8300:return:8",
+  "10600:return:8",
+  "11200:return:8",
+  "11800:return:8",
+  "12400:return:8",
+  "13050:return:8",
+  "13650:return:8",
+  "14250:return:8",
+  "14850:return:8",
 ]
 
 [[routes.checkpoints]]
@@ -269,3 +277,43 @@ crop = [0, 0, 640, 308]
 sha256 = "24f99058f153f312ca3b6fb9a95e77945dae63ded556679b531b488e7f33a9e4"
 scenario = "f0001.mes"
 state_offset = 0x1c7e0
+
+[[routes.checkpoints]]
+name = "second-scene-launch-order"
+frame = 10999
+sha256 = "98e3b595a8f9bead14233f5b6666267f34212aa1d3453349d153078718b56271"
+
+[[routes.checkpoints]]
+name = "second-scene-connie-name"
+frame = 11599
+sha256 = "fdbd554b40ec8833c25bf7115621dbb0351efbaf41be6beb902c2ef4cb1e3c67"
+
+[[routes.checkpoints]]
+name = "second-scene-connie-origin"
+frame = 12199
+sha256 = "1adf40298edec94a6b4681ae60a89e9591de92ab1fe61d1bd6965749a9a52b15"
+
+[[routes.checkpoints]]
+name = "second-scene-connie-hunter"
+frame = 12999
+sha256 = "43a791ea8712b80305aaefb42f8787ebe3364b00a3e59903d14f6982085223f5"
+
+[[routes.checkpoints]]
+name = "second-scene-police-status"
+frame = 13399
+sha256 = "7a3fbeaf669952c0280ae9f51ac116d5d138efc1a4dfbe0c6278a7c8234ae88e"
+
+[[routes.checkpoints]]
+name = "second-scene-time-patrol-authority"
+frame = 13999
+sha256 = "4b0f802e16414007e27535d66338ccb9a4d9e12352d9a21b066c720b1cd0d58a"
+
+[[routes.checkpoints]]
+name = "second-scene-no-other-travelers"
+frame = 14599
+sha256 = "99a812f1916d4cae6d9f626d212d24bb1b117193699bbff2d9cefcf70e22c72b"
+
+[[routes.checkpoints]]
+name = "second-scene-kanzaki-created-connie"
+frame = 15299
+sha256 = "07d943658a87caf19a5b6897baa7073c3abdb12c9bbc433cba414274c5ed8e9b"

@@ -77,6 +77,11 @@ Completed work:
   canonical 34,200-frame route through the bedside scene, Marie's coercion of
   Kanzaki, the naturalized Project D terminal, the centered 2296 premise, and
   the first following scene.
+- The second major slice, all of `F0001.MES` and `F0002.MES`, is QA-ready. Its
+  ledger closes 462 physical records as 454 canonical translations with eight
+  context-safe duplicate collapses and zero pending records. A native-load
+  route verifies the opening F0001 dialogue and compile-time word wrapping;
+  complete human playthrough remains the editorial gate for the slice.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -499,14 +504,16 @@ build input. For every catalog file it:
   verifies the result without modifying the input image.
 
 The current catalog build grows `MAIN.MES` from 7,310 to 7,541 bytes,
-`F0000.MES` from 16,157 to 16,211 bytes, and `DISKA` from 1,090,166 to
-1,090,451 bytes. Starting from pristine image SHA-256
-`533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`, it
-produces `fermion-translation.hdi` SHA-256
-`0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963`.
-The named opening route passes all nine framebuffer hashes on that fresh image,
-proving that changed-size media reconstruction preserves live control flow and
-rendering across the prologue and into `F0000.MES`.
+`FOP.MES` from 5,683 to 6,247 bytes, `F0000.MES` from 16,157 to 16,211 bytes,
+`F0001.MES` from 17,509 to 26,040 bytes, `F0002.MES` from 4,402 to 5,964 bytes,
+and `DISKA` from 1,090,166 to 1,101,108 bytes. Starting from pristine image
+SHA-256
+`533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
+the current QA build has SHA-256
+`bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232`.
+The named routes prove that changed-size media reconstruction preserves live
+control flow and rendering through the prologue, F0000, and the translated
+opening of F0001.
 
 ## Completed enabling milestone: portable save fixtures
 
@@ -535,24 +542,55 @@ hunks, 110 bytes in 35 hunks, and 114 bytes in 40 hunks respectively.
 
 `fermion save apply` verifies the template and empty target slot, reconstructs
 `REG_01`, verifies the fixture's result hash, and writes a new HDI without
-touching the input. Three 10,500-frame routes reproduce the FOP and F0000 full
+touching the input. The FOP and F0000 10,500-frame routes reproduce full
 framebuffer hashes
 `980c7d275c55077af9c5c66729e9b4f74dfb0f7547217f9ebeff20c4f2976e4c`
 and `cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6`,
-plus the F0001 640x308 room hash
+while the extended 15,300-frame F0001 route retains the 640x308 room hash
 `24f99058f153f312ca3b6fb9a95e77945dae63ded556679b531b488e7f33a9e4`.
+It then pins eight translated dialogue frames.
 Eight-frame keyboard pulses cross the PC-98 scan without the missed input seen
 with two frames or the repeat seen with thirty. Each route also verifies the
 visible load operation and the exact scenario marker at serialized-state offset
-`0x1c7e0`, so a visually similar fallback path cannot pass. A short fixture
-route measured about 15.5 seconds cold and 3.9 seconds from its exact-build
-8,299-frame cache boundary, versus about 49 seconds for the full prologue route.
+`0x1c7e0`, so a visually similar fallback path cannot pass. A 10,500-frame
+fixture route measured about 15.5 seconds cold and 3.9 seconds from its
+exact-build 8,299-frame cache boundary, versus about 49 seconds for the full
+prologue route.
 
 The two acceleration layers have distinct roles. Native `REG` fixtures survive
 translation-image rebuilds when their pinned banks are unchanged and resume at
 scenario entry. Libretro states are core/config/content-specific but resume at
 an exact frame within that shorter route. Full end-to-end routes remain the
 release gate.
+
+## Completed translation milestone: Project D launch and first arrival
+
+The `project-d-launch-and-first-arrival` scope covers every mode-1 text record
+in `F0001.MES` and `F0002.MES`: 367 launch-side anchors and 95 arrival-side
+anchors. The 462 physical records are managed as 454 canonical translations;
+only eight exact repeats share editorial state, and no context-dependent line
+was merged merely because its Japanese matched.
+
+The slice follows Connie through launch preparation, the Project D and Time
+Quake exposition, her relationships with Kanzaki, Marie, and Remia, the first
+time-machine crossing, the failed arrival in 1996, and the unnamed girl's first
+attempt to help her. Every line has an explicit speaker, scene context, status,
+and translator note. The English follows the archival voice bible: Connie's
+technical competence and private insecurity coexist, Remia stays blunt but
+protective, Marie remains coldly clinical, and Kanzaki's public control cracks
+only at departure.
+
+Both files declare a 61-column dialogue width. The catalog retains clean prose;
+the build inserts deterministic word-boundary newlines, honors explicit
+newlines and per-entry overrides, and rejects words that cannot fit. The native
+F0001 fixture route now pins the room load plus eight translated dialogue
+frames. That run caught and fixed the renderer's former mid-word wrapping of
+“specializes” and “authority” before the slice was promoted to `qa-ready`.
+The generated QA HDI hash is
+`bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232`;
+after installing the `second-scene` fixture, the route input hash is
+`00466ca99ef05e6e2129c64a48a964aa4616b4b998c8f7d707991a4874248b6d`.
+Both images remain ignored build artifacts.
 
 ## Locked translation and release contract
 
@@ -594,13 +632,16 @@ release gate.
 - Implement catalog schema 5 composite occurrences and generated-view import.
   Preserve schema-4 simple and multi-anchor entries, add immutable name/term
   token segments, and make missing/reordered/duplicated tokens a build error.
-- Work down the 103-line initial coverage backlog, beginning with the contiguous
-  `FOP.MES` opening narration. Assign contextual speakers explicitly as each
-  scene is reviewed, use one canonical translation only where speaker and
-  context agree, retain editorial review notes, and promote reviewed candidates
-  from the story inventory into the catalog.
-- Enforced word-boundary wrapping after composite tokens are resolved.
-- Continue adding sparse game-native fixtures beyond `F0001.MES` as translation
+- Run a complete human QA playthrough of the F0001/F0002 slice, recording every
+  wording, pacing, overflow, and speaker-voice issue back in the canonical
+  catalog rather than fixing only the generated image.
+- Continue from `F0003.MES` after schema 5 can safely represent its composite
+  customizable-name records. Assign contextual speakers explicitly, share a
+  canonical translation only where speaker and scene agree, and retain every
+  editorial uncertainty in the checked-in notes.
+- Apply the existing compile-time word-boundary wrapping only after composite
+  tokens have been resolved and split back to their immutable physical spans.
+- Continue adding sparse game-native fixtures beyond `F0002.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route
   and translator-facing checkpoint coverage.
 - Graphics inventory and translation through `juice-img` where applicable.

@@ -5,14 +5,15 @@ and the reasoning behind it. It intentionally contains text and metadata, not
 compiled MES files or original game media.
 
 Each `[[files]]` table identifies one pristine MES file by its logical
-`DISKA/FILENAME` archive path, extracted source path, and SHA-256. Each
+`DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
+default dialogue `box_width`. Each
 `[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
 - the exact original Japanese and current English translation;
 - an explicit stable `speaker` and short scene `context`;
-- the target encoding mode and optional dialogue-box width;
+- the target encoding mode and optional per-entry dialogue-box-width override;
 - a progress `status` and free-form translator `notes`.
 
 Offsets always refer to the pristine file named by the enclosing catalog, not a
@@ -20,6 +21,16 @@ rebuilt or relocated MES. Notes should retain useful alternatives, speaker and
 scene context, tone decisions, technical compromises, and anything worth
 revisiting. Do not erase an unresolved nuance merely because the current probe
 uses shorter wording.
+
+Draft canonical English by reading the Japanese in scene context and applying
+the checked-in plot, voice, and terminology notes. Automated tools may expose
+anchors, duplicates, speakers, length problems, and runtime regressions; they
+must not manufacture the catalog prose as a substitute for translation.
+
+The catalog stores readable, unwrapped English. At build time the file default
+width inserts newlines only at word boundaries, preserving explicit authoring
+newlines; a narrower entry override wins when a specific display requires it.
+Validation rejects an unbreakable word longer than its effective width.
 
 A line with one physical occurrence may use the compact `file` and `offset`
 fields. Exact duplicates use one canonical entry with an `anchors` array:
@@ -106,17 +117,19 @@ The current statuses are:
 - `draft`: recorded but not yet exercised in the game;
 - `runtime-proof`: renderer or control-flow proof whose wording is still
   provisional;
-- `qa-ready`: source and context review are complete, the wording builds into a
-  fresh image, and an automated route reaches it without structural or visual
-  regression; a human playtest can still send it back for editorial revision;
+- `qa-ready`: source and context review are complete, the story slice builds
+  into a fresh image, and a representative automated route reaches the slice
+  without structural or visual regression; a human playtest still exercises
+  every line and can send it back for editorial revision;
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 103 canonical records covering 119 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES`. The setup selector pair,
-three-copy fiction disclaimer, repeated terminal timing records, and contextual
-status labels demonstrate when physical anchors should share or split a
-canonical translation.
+The current catalog contains 557 canonical records covering 581 physical
+anchors across `MAIN.MES`, `FOP.MES`, `F0000.MES`, `F0001.MES`, and
+`F0002.MES`. The setup selector pair, three-copy fiction disclaimer, repeated
+terminal timing records, and eight context-safe duplicate collapses in the
+Project D launch/arrival slice demonstrate when physical anchors should share
+or split a canonical translation.
 
 ## Coverage ledger
 
@@ -140,6 +153,12 @@ records are translated, 21 unchanged title/layout records are explicitly
 excluded, and none are pending. They represent 74 canonical source lines, with
 duplicate timing records merged only when their target and context agree.
 
+The second closed scope is `project-d-launch-and-first-arrival`: all 462
+physical text records in `F0001.MES` and `F0002.MES`, from Connie's launch-day
+wait through her collapse after reaching 1996. All 462 anchors are translated
+as 454 managed canonical lines, eight exact contextual duplicates are shared,
+and none are excluded or pending.
+
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 119 anchors are
 translated and 59 remain pending across setup UI, unchanged layout records, and
@@ -157,6 +176,18 @@ uv run fermion translation coverage \
   translations/coverage.toml \
   working/archives \
   --scope opening-prologue \
+  --verbose \
+  --require-complete
+```
+
+Run the corresponding gate for the next slice with:
+
+```sh
+uv run fermion translation coverage \
+  translations/fermion.toml \
+  translations/coverage.toml \
+  working/archives \
+  --scope project-d-launch-and-first-arrival \
   --verbose \
   --require-complete
 ```

@@ -919,6 +919,7 @@ def _emulator_route(args: argparse.Namespace) -> None:
 
 def _translation_check(args: argparse.Namespace) -> None:
     catalog = TranslationCatalog.from_file(args.catalog)
+    files_by_name = {file.file: file for file in catalog.files}
     if args.source_dir:
         catalog.verify_sources(args.source_dir)
     print(
@@ -937,9 +938,17 @@ def _translation_check(args: argparse.Namespace) -> None:
             print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
-            if entry.box_width is not None:
-                for number, line in enumerate(entry.wrapped_translation, 1):
-                    print(f"  line {number}/{entry.box_width}: {line}")
+            box_widths = {
+                entry.box_width
+                if entry.box_width is not None
+                else files_by_name[anchor.file].box_width
+                for anchor in entry.anchors
+            }
+            for box_width in sorted(width for width in box_widths if width is not None):
+                for number, line in enumerate(
+                    entry.wrapped_translation_for(box_width), 1
+                ):
+                    print(f"  line {number}/{box_width}: {line}")
             for line in entry.notes.splitlines():
                 print(f"  note: {line}")
 

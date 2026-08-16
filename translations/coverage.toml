@@ -112,3 +112,17 @@ anchors = [
 source_mode = 1
 source = "・"
 reason = "These timed dot records are terminal animation/layout punctuation and remain byte-for-byte unchanged."
+
+[[scopes]]
+id = "project-d-launch-and-first-arrival"
+description = "Every decoded F0001 and F0002 text record from Connie's launch-day wait through her blackout after the girl finds her in 1996."
+
+[[scopes.ranges]]
+file = "DISKA/F0001.MES"
+start = 0x06b6
+end = 0x4420
+
+[[scopes.ranges]]
+file = "DISKA/F0002.MES"
+start = 0x02ff
+end = 0x10b0

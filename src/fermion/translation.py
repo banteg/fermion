@@ -25,6 +25,7 @@ class TranslationFile:
     file: str
     source: str
     sha256: str
+    box_width: int | None = None
 
     @property
     def archive(self) -> str:
@@ -57,14 +58,20 @@ class TranslationEntry:
 
     @property
     def wrapped_translation(self) -> tuple[str, ...]:
-        if self.box_width is None:
+        return self.wrapped_translation_for()
+
+    def wrapped_translation_for(
+        self, default_box_width: int | None = None
+    ) -> tuple[str, ...]:
+        box_width = self.box_width if self.box_width is not None else default_box_width
+        if box_width is None:
             return (self.translation,)
         lines: list[str] = []
         for paragraph in self.translation.splitlines() or [""]:
             lines.extend(
                 textwrap.wrap(
                     paragraph,
-                    width=self.box_width,
+                    width=box_width,
                     break_long_words=False,
                     break_on_hyphens=False,
                     replace_whitespace=False,
@@ -72,6 +79,9 @@ class TranslationEntry:
                 or [""]
             )
         return tuple(lines)
+
+    def compiled_translation(self, default_box_width: int | None = None) -> str:
+        return "\n".join(self.wrapped_translation_for(default_box_width))
 
 
 @dataclass(frozen=True)
@@ -199,7 +209,12 @@ def build_translation_files(
             rkt_path,
         )
         original = GMFile.from_file(source_path)
-        edited = _patch_gm_source(rkt_path.read_text(), original, entries)
+        edited = _patch_gm_source(
+            rkt_path.read_text(),
+            original,
+            entries,
+            default_box_width=file.box_width,
+        )
         rkt_path.write_text(edited)
         _run_juice(
             executable,
@@ -227,6 +242,8 @@ def _patch_gm_source(
     source: str,
     original: GMFile,
     entries: tuple[tuple[int, TranslationEntry], ...],
+    *,
+    default_box_width: int | None = None,
 ) -> str:
     records = original.text_records()
     matches = list(_GM_TEXT.finditer(source))
@@ -251,8 +268,9 @@ def _patch_gm_source(
         if entry is None:
             chunks.append(match.group(0))
         else:
+            translation = entry.compiled_translation(default_box_width)
             chunks.append(
-                f'(gm-text {entry.target_mode} "{_escape_rkt_string(entry.translation)}")'
+                f'(gm-text {entry.target_mode} "{_escape_rkt_string(translation)}")'
             )
             used.add(record.offset)
         position = match.end()
@@ -304,7 +322,7 @@ def _verify_compiled_file(
     for before, after in zip(original_records, compiled_records, strict=True):
         entry = edits.get(before.offset)
         if entry is not None:
-            expected = (entry.target_mode, entry.translation)
+            expected = (entry.target_mode, entry.compiled_translation(file.box_width))
             actual = (after.mode, after.text)
             if actual != expected:
                 raise TranslationError(
@@ -395,7 +413,14 @@ def _parse_file(value: object, index: int) -> TranslationFile:
     sha256 = _string(value, "sha256", context=context).lower()
     if len(sha256) != 64 or any(char not in "0123456789abcdef" for char in sha256):
         raise TranslationError(f"{context}.sha256 must contain 64 hexadecimal characters")
-    return TranslationFile(file, source, sha256)
+    box_width_value = value.get("box_width")
+    if box_width_value is not None and (
+        not isinstance(box_width_value, int)
+        or isinstance(box_width_value, bool)
+        or box_width_value < 1
+    ):
+        raise TranslationError(f"{context}.box_width must be a positive integer")
+    return TranslationFile(file, source, sha256, box_width_value)
 
 
 def _parse_entry(value: object, index: int) -> TranslationEntry:
@@ -494,6 +519,7 @@ def _validate_catalog(
     if len(file_names) != len({name.casefold() for name in file_names}):
         raise TranslationError("translation catalog contains duplicate file names")
     known_files = set(file_names)
+    files_by_name = {file.file: file for file in files}
     ids: set[str] = set()
     anchors: set[tuple[str, int]] = set()
     for entry in entries:
@@ -512,6 +538,20 @@ def _validate_catalog(
                     f"{entry_anchor.file}:0x{entry_anchor.offset:04x}"
                 )
             anchors.add(anchor)
+        effective_widths = {
+            entry.box_width
+            if entry.box_width is not None
+            else files_by_name[entry_anchor.file].box_width
+            for entry_anchor in entry.anchors
+        }
+        for box_width in effective_widths:
+            if box_width is None:
+                continue
+            for line in entry.wrapped_translation_for(box_width):
+                if len(line) > box_width:
+                    raise TranslationError(
+                        f"{entry.id}: word longer than box width {box_width}: {line!r}"
+                    )
 
 
 def _relative_path(value: str, context: str) -> str:

@@ -16,6 +16,18 @@ file = "DISKA/F0000.MES"
 source = "disk-a/F0000.MES"
 sha256 = "9ad87fb6ef7db90bea1d75ec8e02c1476fd9d5d477ec56ed458951f3facb55cb"
 
+[[files]]
+file = "DISKA/F0001.MES"
+source = "disk-a/F0001.MES"
+sha256 = "88ea9033a3e4e9e56708239b8c656d66e5c7afa1b5b87c16cf946d99f712900c"
+box_width = 61
+
+[[files]]
+file = "DISKA/F0002.MES"
+source = "disk-a/F0002.MES"
+sha256 = "d808168a21393fad7f8918072cff392a7324ec580d6f10d94861b659db2723eb"
+box_width = 61
+
 [[entries]]
 id = "main-setup-color-display"
 anchors = [
@@ -1477,3 +1489,5921 @@ notes = """
 short, idiomatic scene command; “LET HER TAKE THE LEAD” remains an editorial
 alternative if later choices favor more explicit action labels.
 """
+
+[[entries]]
+id = "arrival-year-1996"
+file = "DISKA/F0002.MES"
+offset = 0x02ff
+source_mode = 1
+target_mode = 2
+source = "西暦・・・１９９６年へ・・・・・・・・・・・・・・・・・・。"
+translation = "Toward the year... 1996..."
+speaker = "system"
+context = "Opening time card for Connie's arrival in 1996."
+status = "qa-ready"
+notes = "The directional へ makes this a journey toward 1996, not merely a date caption."
+
+[[entries]]
+id = "arrival-transition-silence"
+file = "DISKA/F0002.MES"
+offset = 0x0324
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "system"
+context = "Silent transition beat immediately before the rainy arrival view."
+status = "qa-ready"
+notes = "The physical timing record is preserved while the very long Japanese pause is compressed."
+
+[[entries]]
+id = "arrival-rain-over-megalocity"
+file = "DISKA/F0002.MES"
+offset = 0x0348
+source_mode = 1
+target_mode = 2
+source = "メガロシティに雨が降っている。"
+translation = "Rain is falling over Megalocity."
+speaker = "Connie"
+context = "Connie's initial, mistaken orientation after emerging from the time tunnel."
+status = "qa-ready"
+notes = "The next thought immediately corrects her assumption that she is still in Megalocity."
+
+[[entries]]
+id = "arrival-not-megalocity"
+file = "DISKA/F0002.MES"
+offset = 0x035c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（メガロシティ・・・じゃないわ、ここは・・・・・・。）"
+translation = "[CONNIE] (Megalocity... No, this isn't...)"
+speaker = "コニー"
+context = "Connie realizes the rain-soaked place is not her future city."
+status = "qa-ready"
+notes = "Her self-correction is kept fragmentary because she is disoriented and in pain."
+
+[[entries]]
+id = "arrival-head-hurts"
+file = "DISKA/F0002.MES"
+offset = 0x0381
+source_mode = 1
+target_mode = 2
+source = "【コニー】（痛たたたたたっ・・・・・・・・・。）"
+translation = "[CONNIE] (Ow-ow-ow-ow...)"
+speaker = "コニー"
+context = "Connie reacts to the physical shock of transit."
+status = "qa-ready"
+notes = "The repeated 痛 is a rapid pain cry, not a full sentence."
+
+[[entries]]
+id = "arrival-throbbing-head"
+file = "DISKA/F0002.MES"
+offset = 0x039e
+source_mode = 1
+target_mode = 2
+source = "あたしは、ずきずきと痛む頭を抑えながら考えていた。"
+translation = "I tried to think while clutching my throbbing head."
+speaker = "Connie"
+context = "Arrival-site narration as Connie assesses her condition."
+status = "qa-ready"
+notes = "ずきずき establishes the recurring pounding quality of the transit headache."
+
+[[entries]]
+id = "exploration-command-look"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x08a3 },
+  { file = "DISKA/F0002.MES", offset = 0x03e9 },
+]
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Standard exploration command in the launch room and at the 1996 arrival site."
+status = "qa-ready"
+notes = "A single canonical imperative covers both context-equivalent command-menu anchors."
+
+[[entries]]
+id = "exploration-command-think"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x08b4 },
+  { file = "DISKA/F0002.MES", offset = 0x03fa },
+]
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Standard exploration command in the launch room and at the 1996 arrival site."
+status = "qa-ready"
+notes = "The compact verb matches the recurring adventure-game command vocabulary."
+
+[[entries]]
+id = "exploration-command-talk"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x08c7 },
+  { file = "DISKA/F0002.MES", offset = 0x040c },
+]
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Standard exploration command in the launch room and at the 1996 arrival site."
+status = "qa-ready"
+notes = "No object is supplied because the available conversation target is established visually."
+
+[[entries]]
+id = "arrival-blank-beat"
+file = "DISKA/F0002.MES"
+offset = 0x0449
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Silent beat before Connie reconstructs where she has arrived."
+status = "qa-ready"
+notes = "The pause remains its own record for scene timing."
+
+[[entries]]
+id = "arrival-remembers-not-city"
+file = "DISKA/F0002.MES"
+offset = 0x0466
+source_mode = 1
+target_mode = 2
+source = "【コニー】（－－－そうか・・・。ここはメガロシティじゃない・・・。・・・・・・あたしは・・・。）"
+translation = "[CONNIE] (That's right... This isn't Megalocity... I...)"
+speaker = "コニー"
+context = "Connie slowly reconstructs the result of the time jump."
+status = "qa-ready"
+notes = "The broken clauses preserve her impaired, incremental realization."
+
+[[entries]]
+id = "arrival-realizes-1996"
+file = "DISKA/F0002.MES"
+offset = 0x049b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしは・・・１９９６年に・・・来た・・・・・・のか・・・・・・・・・。）"
+translation = "[CONNIE] (I... made it... to 1996...)"
+speaker = "コニー"
+context = "Connie confirms that the time jump succeeded."
+status = "qa-ready"
+notes = "The English keeps wonder and uncertainty without mechanically reproducing every pause."
+
+[[entries]]
+id = "arrival-past-ordinary"
+file = "DISKA/F0002.MES"
+offset = 0x04e4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（過去も・・・・・・・・・、普通の世界だったんだ・・・・・・。）"
+translation = "[CONNIE] (The past... is just an ordinary world...)"
+speaker = "コニー"
+context = "Connie's first surprised impression of 1996."
+status = "qa-ready"
+notes = "Her expectation of an alien past gives this otherwise simple observation its wonder."
+
+[[entries]]
+id = "arrival-cleaner-air"
+file = "DISKA/F0002.MES"
+offset = 0x0514
+source_mode = 1
+target_mode = 2
+source = "【コニー】（当たり前かな・・・。あたしの時代より空気がキレイだ・・・・・・。）"
+translation = "[CONNIE] (I guess that's obvious... The air is cleaner than in my time...)"
+speaker = "コニー"
+context = "Connie compares 1996 with polluted 2296."
+status = "qa-ready"
+notes = "キレイ refers to environmental cleanliness, not merely visual beauty."
+
+[[entries]]
+id = "arrival-searches-for-cover"
+file = "DISKA/F0002.MES"
+offset = 0x054b
+source_mode = 1
+target_mode = 2
+source = "あたしは、吐き気と頭痛が襲い来る中、体を隠せそうな場所を捜そうとした。"
+translation = "As nausea and a pounding headache hit me, I tried to find somewhere to hide."
+speaker = "Connie"
+context = "Connie attempts to follow mission procedure despite transit sickness."
+status = "qa-ready"
+notes = "The action stays purposeful: even incapacitated, Connie first thinks about concealment."
+
+[[entries]]
+id = "arrival-connie-silent"
+anchors = [
+  { file = "DISKA/F0002.MES", offset = 0x0575 },
+  { file = "DISKA/F0002.MES", offset = 0x0f79 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Two wordless Connie thoughts: during the first pain wave and after the girl offers help."
+status = "qa-ready"
+notes = "Both anchors are true silent beats with the same speaker and rendering, despite their different emotional surroundings."
+
+[[entries]]
+id = "arrival-cannot-move-head"
+file = "DISKA/F0002.MES"
+offset = 0x0594
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だめ・・・。頭を動かすと頭痛が・・・）"
+translation = "[CONNIE] (No... Moving my head makes it worse...)"
+speaker = "コニー"
+context = "Connie discovers that even looking around intensifies the headache."
+status = "qa-ready"
+notes = "頭痛 is not repeated literally because 'makes it worse' naturally carries the established pain."
+
+[[entries]]
+id = "arrival-headache-fragment"
+file = "DISKA/F0002.MES"
+offset = 0x05cb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（頭痛が・・・・・・・・・。）"
+translation = "[CONNIE] (My head...)"
+speaker = "コニー"
+context = "Connie's thought breaks under the intensity of the headache."
+status = "qa-ready"
+notes = "A literal 'the headache' is stiff in English; the fragment communicates the same overwhelmed focus."
+
+[[entries]]
+id = "arrival-head-splitting"
+file = "DISKA/F0002.MES"
+offset = 0x05e4
+source_mode = 1
+target_mode = 2
+source = "頭が割れそうに痛い。"
+translation = "It feels like my head is splitting open."
+speaker = "Connie"
+context = "Arrival-site narration during severe transit sickness."
+status = "qa-ready"
+notes = "The familiar English idiom closely preserves the source image."
+
+[[entries]]
+id = "arrival-childhood-fever"
+file = "DISKA/F0002.MES"
+offset = 0x05f4
+source_mode = 1
+target_mode = 2
+source = "こんな痛みは、子供の頃に風邪をひいたとき以来だ。"
+translation = "I haven't hurt like this since I caught a cold as a child."
+speaker = "Connie"
+context = "Connie reaches for the only comparable pain in her short life."
+status = "qa-ready"
+notes = "The childhood reference matters because Connie has existed for only three years despite her mature body."
+
+[[entries]]
+id = "arrival-heavy-eyelids"
+file = "DISKA/F0002.MES"
+offset = 0x061f
+source_mode = 1
+target_mode = 2
+source = "まぶたが・・・・・・重い・・・。"
+translation = "My eyelids... feel so heavy..."
+speaker = "Connie"
+context = "Connie begins losing consciousness."
+status = "qa-ready"
+notes = "The pause preserves her fading ability to form a complete thought."
+
+[[entries]]
+id = "arrival-eyelids-this-heavy"
+file = "DISKA/F0002.MES"
+offset = 0x0634
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こんなに重かったっけ・・・・・・。）"
+translation = "[CONNIE] (Were they always this heavy...?)"
+speaker = "コニー"
+context = "Connie dimly fixates on the weight of her eyelids."
+status = "qa-ready"
+notes = "The slightly absurd literal thought fits Connie's dazed self-questioning."
+
+[[entries]]
+id = "arrival-stab-of-pain"
+file = "DISKA/F0002.MES"
+offset = 0x066c
+source_mode = 1
+target_mode = 2
+source = "ズキッ・・・。"
+translation = "Throb..."
+speaker = "Connie"
+context = "A sharp pulse of pain interrupts Connie's thoughts."
+status = "qa-ready"
+notes = "ズキッ is localized as a compact pain sound rather than explained in narration."
+
+[[entries]]
+id = "arrival-thinking-throbs"
+file = "DISKA/F0002.MES"
+offset = 0x0679
+source_mode = 1
+target_mode = 2
+source = "ものを考えようとすると、頭がずきずきするぅ・・・。"
+translation = "Every time I try to think, my head starts pounding..."
+speaker = "Connie"
+context = "Connie struggles to reason through transit sickness."
+status = "qa-ready"
+notes = "The drawn-out するぅ conveys a groan; the English cadence carries it without baby talk."
+
+[[entries]]
+id = "arrival-leaves-machine"
+file = "DISKA/F0002.MES"
+offset = 0x06a1
+source_mode = 1
+target_mode = 2
+source = "あたしは、痛む体を動かしてタイムマシンから外に出る。"
+translation = "I force my aching body to move and climb out of the time machine."
+speaker = "Connie"
+context = "Connie leaves the exposed time machine despite her condition."
+status = "qa-ready"
+notes = "Force' supplies the effort implicit in moving an injured body."
+
+[[entries]]
+id = "arrival-clear-outside-air"
+file = "DISKA/F0002.MES"
+offset = 0x06c0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（外の空気が・・・・・・・・、澄んでいる・・・・・・・・。）"
+translation = "[CONNIE] (The air out here... is so clean...)"
+speaker = "コニー"
+context = "Connie breathes unpolluted outdoor air for the first time."
+status = "qa-ready"
+notes = "澄んでいる is rendered environmentally as 'clean,' consistent with the premise."
+
+[[entries]]
+id = "arrival-not-her-era"
+file = "DISKA/F0002.MES"
+offset = 0x06e9
+source_mode = 1
+target_mode = 2
+source = "あたしの時代じゃない。こんなに綺麗な空気は、あたしの時代では山の方にしかない。"
+translation = "This isn't my time. Back home, air this clean exists only up in the mountains."
+speaker = "Connie"
+context = "The clean air gives Connie sensory proof that she reached 1996."
+status = "qa-ready"
+notes = "Back home' refers to her era rather than a particular residence."
+
+[[entries]]
+id = "arrival-staggers-and-falls"
+file = "DISKA/F0002.MES"
+offset = 0x0718
+source_mode = 1
+target_mode = 2
+source = "あたしはよろよろと地上を歩いて、倒れてしまった。"
+translation = "I stagger across the ground, then collapse."
+speaker = "Connie"
+context = "Connie gets only a short distance from the machine."
+status = "qa-ready"
+notes = "The present-tense narration matches the surrounding immediate action."
+
+[[entries]]
+id = "arrival-quake-effect"
+file = "DISKA/F0002.MES"
+offset = 0x0737
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空震動が・・・、体へ・・・こんなに影響するなんて・・・・・・。）"
+translation = "[CONNIE] (I never knew the Time Quake... could do this to my body...)"
+speaker = "コニー"
+context = "Connie realizes the crossing itself caused her condition."
+status = "qa-ready"
+notes = "Time Quake is the locked story shorthand; the line concerns bodily effects, not the machine's vibration alone."
+
+[[entries]]
+id = "arrival-takes-mini-form"
+file = "DISKA/F0002.MES"
+offset = 0x0763
+source_mode = 1
+target_mode = 2
+source = "力を振り絞ってミニマムへ変身する。"
+translation = "I summon what strength I have left and shift into Mini form."
+speaker = "Connie"
+context = "Connie assumes her small catlike form to conserve energy and hide."
+status = "qa-ready"
+notes = "Mini form is the locked localization of ミニマム and is treated as a named transformation state."
+
+[[entries]]
+id = "arrival-cries-from-pain"
+file = "DISKA/F0002.MES"
+offset = 0x077b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いっ・・・つつつつ・・・・・。」"
+translation = "[CONNIE] \"O-owww...\""
+speaker = "コニー"
+context = "Connie cries out as she transforms while injured."
+status = "qa-ready"
+notes = "The stammer and drawn-out cry carry the source pain without inventing dialogue."
+
+[[entries]]
+id = "arrival-every-joint-aches"
+file = "DISKA/F0002.MES"
+offset = 0x0796
+source_mode = 1
+target_mode = 2
+source = "体の節々が痛い。"
+translation = "Every joint in my body aches."
+speaker = "Connie"
+context = "Connie inventories the full-body effects of the crossing."
+status = "qa-ready"
+notes = "節々 idiomatically means the joints or every part of the body."
+
+[[entries]]
+id = "arrival-body-not-her-own"
+file = "DISKA/F0002.MES"
+offset = 0x07a3
+source_mode = 1
+target_mode = 2
+source = "【コニー】（自分の体じゃないみたい・・・・・・・・・。）"
+translation = "[CONNIE] (It doesn't even feel like my own body...)"
+speaker = "コニー"
+context = "Connie feels alienated from her exhausted body."
+status = "qa-ready"
+notes = "The line describes loss of bodily control, not a literal transformation-identity doubt."
+
+[[entries]]
+id = "arrival-worse-than-training"
+file = "DISKA/F0002.MES"
+offset = 0x07d5
+source_mode = 1
+target_mode = 2
+source = "戦闘訓練をしているときでも、こんな疲労感はなかった。"
+translation = "Not even combat training ever left me this exhausted."
+speaker = "Connie"
+context = "The veteran Mutant Hunter compares transit sickness with combat training."
+status = "qa-ready"
+notes = "The comparison reinforces that this is exceptional even for Connie's engineered body."
+
+[[entries]]
+id = "arrival-cannot-run"
+file = "DISKA/F0002.MES"
+offset = 0x07f7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（走れない－－－。とにかく身を隠さなきゃ・・・。）"
+translation = "[CONNIE] (I can't run. I have to find cover somehow...)"
+speaker = "コニー"
+context = "Connie falls back on mission priorities when her body fails."
+status = "qa-ready"
+notes = "身を隠す is rendered as the concise tactical 'find cover,' fitting Connie's hunter voice."
+
+[[entries]]
+id = "arrival-mission-concealment"
+file = "DISKA/F0002.MES"
+offset = 0x081b
+source_mode = 1
+target_mode = 2
+source = "到着したらタイムマシンから離れて、身を隠せる場所を探す。"
+translation = "After landing, I was supposed to leave the machine and find somewhere to hide."
+speaker = "Connie"
+context = "Connie recalls the first step of the arrival protocol."
+status = "qa-ready"
+notes = "The past-tense obligation makes clear that this is a rehearsed instruction she is failing to carry out."
+
+[[entries]]
+id = "arrival-if-this-continues"
+file = "DISKA/F0002.MES"
+offset = 0x0840
+source_mode = 1
+target_mode = 2
+source = "【コニー】（このままだと・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (If I stay like this...)"
+speaker = "コニー"
+context = "Connie anticipates the danger of remaining exposed."
+status = "qa-ready"
+notes = "The unfinished condition resolves in the next physical record and is not merged with it."
+
+[[entries]]
+id = "arrival-someone-will-find-her"
+file = "DISKA/F0002.MES"
+offset = 0x0862
+source_mode = 1
+target_mode = 2
+source = "【コニー】（誰かに見つかってしまう・・・。）"
+translation = "[CONNIE] (Someone will find me...)"
+speaker = "コニー"
+context = "Connie completes her warning to herself while lying exposed."
+status = "qa-ready"
+notes = "しまう adds the unwanted inevitability conveyed by 'will.'"
+
+[[entries]]
+id = "arrival-joints-throbbing"
+file = "DISKA/F0002.MES"
+offset = 0x0896
+source_mode = 1
+target_mode = 2
+source = "【コニー】（体の節々が・・・ずきずきする・・・。）"
+translation = "[CONNIE] (Every joint... is throbbing...)"
+speaker = "コニー"
+context = "Connie's pain keeps her from following the concealment plan."
+status = "qa-ready"
+notes = "The repeated symptom is retained because the source uses it to slow the collapse beat by beat."
+
+[[entries]]
+id = "arrival-headache-too"
+file = "DISKA/F0002.MES"
+offset = 0x08b4
+source_mode = 1
+target_mode = 2
+source = "おまけに頭痛もひどい。"
+translation = "And the headache is just as bad."
+speaker = "Connie"
+context = "Connie adds the headache to her list of incapacitating symptoms."
+status = "qa-ready"
+notes = "おまけに is a weary 'on top of that'; the English avoids sounding clinical."
+
+[[entries]]
+id = "arrival-thinks-of-kanzaki"
+file = "DISKA/F0002.MES"
+offset = 0x08cd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie reaches mentally for her creator and guardian while stranded."
+status = "qa-ready"
+notes = "The title is retained in English because it is Connie's normal form of address for Kanzaki."
+
+[[entries]]
+id = "arrival-kanzaki-coordinates"
+file = "DISKA/F0002.MES"
+offset = 0x08e4
+source_mode = 1
+target_mode = 2
+source = "神崎博士が練りに練ってくれた転移先の座標。"
+translation = "Dr. Kanzaki had planned these arrival coordinates down to the last detail."
+speaker = "Connie"
+context = "Connie evaluates where the machine materialized."
+status = "qa-ready"
+notes = "練りに練る stresses painstaking refinement rather than merely calculating coordinates."
+
+[[entries]]
+id = "arrival-not-mountain-or-sea"
+file = "DISKA/F0002.MES"
+offset = 0x0903
+source_mode = 1
+target_mode = 2
+source = "幸いなことに、山の中とか海の上でなくて助かった。"
+translation = "At least I didn't land in the mountains or out at sea."
+speaker = "Connie"
+context = "Connie recognizes that the targeting itself succeeded."
+status = "qa-ready"
+notes = "助かった is relief at avoiding an immediately fatal destination, not a claim that she is safe overall."
+
+[[entries]]
+id = "arrival-machine-needs-damping"
+file = "DISKA/F0002.MES"
+offset = 0x0922
+source_mode = 1
+target_mode = 2
+source = "けど、震動は耐えられるものではない。マシンの震動が内部に影響しないようにしないと。"
+translation = "But no one could endure that shaking. We have to keep the hull's vibration from reaching the cockpit."
+speaker = "Connie"
+context = "Connie diagnoses the dangerous flaw in the first crossing."
+status = "qa-ready"
+notes = "内部 is made concrete as the cockpit: Connie is identifying a damping problem for the next machine run."
+
+[[entries]]
+id = "arrival-g-force-training"
+file = "DISKA/F0002.MES"
+offset = 0x0952
+source_mode = 1
+target_mode = 2
+source = "【コニー】（耐Ｇ訓練の時みたいだ・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (It's like high-G training...)"
+speaker = "コニー"
+context = "Connie compares the crossing's physical stress with pilot conditioning."
+status = "qa-ready"
+notes = "耐G訓練 is standard high-G tolerance training; the concise term sounds natural in a pilot's thought."
+
+[[entries]]
+id = "arrival-remembers-vomiting"
+file = "DISKA/F0002.MES"
+offset = 0x097c
+source_mode = 1
+target_mode = 2
+source = "パイロットと同じ訓練をして、何度も吐いた事を思い出した。"
+translation = "I remember taking the same training as the pilots and throwing up again and again."
+speaker = "Connie"
+context = "Connie recalls her preparation for Project D."
+status = "qa-ready"
+notes = "The plain bodily detail suits Connie's candid internal narration."
+
+[[entries]]
+id = "arrival-no-one-to-help"
+file = "DISKA/F0002.MES"
+offset = 0x09a0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あの時と同じ・・・・・・・・・。だけどここにはあたしを助けてくれる人はいない・・・・・・・・・。）"
+translation = "[CONNIE] (It feels just like then... But this time, no one is here to help me...)"
+speaker = "コニー"
+context = "Connie contrasts supervised training with being alone in 1996."
+status = "qa-ready"
+notes = "This time' naturalizes the deictic contrast without adding a new event."
+
+[[entries]]
+id = "arrival-end-of-the-line"
+file = "DISKA/F0002.MES"
+offset = 0x09dc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（もう・・・・・・・・・・・・ここまでかな・・・。）"
+translation = "[CONNIE] (Maybe... this is as far as I go...)"
+speaker = "コニー"
+context = "Connie fears she may die before beginning the mission."
+status = "qa-ready"
+notes = "ここまでかな is understated resignation; the English avoids a melodramatic explicit mention of death."
+
+[[entries]]
+id = "arrival-splash"
+file = "DISKA/F0002.MES"
+offset = 0x0a00
+source_mode = 1
+target_mode = 2
+source = "ばしゃっ。"
+translation = "Splash."
+speaker = "sfx"
+context = "Connie's small body hits the rain-soaked ground."
+status = "qa-ready"
+notes = "The onomatopoeia remains a compact impact sound in its own timing record."
+
+[[entries]]
+id = "arrival-strength-leaves"
+file = "DISKA/F0002.MES"
+offset = 0x0a0a
+source_mode = 1
+target_mode = 2
+source = "体から力が抜け、動けなくなって倒れてしまった。"
+translation = "The strength drains from my body. I collapse, unable to move."
+speaker = "Connie"
+context = "Connie loses the last of her physical control in the rain."
+status = "qa-ready"
+notes = "Two short English clauses reproduce the source's progression from weakness to immobility."
+
+[[entries]]
+id = "arrival-cannot-move"
+file = "DISKA/F0002.MES"
+offset = 0x0a66
+source_mode = 1
+target_mode = 2
+source = "【コニー】（動けない・・・。）"
+translation = "[CONNIE] (I can't move...)"
+speaker = "コニー"
+context = "Connie confirms that she is fully immobilized."
+status = "qa-ready"
+notes = "The repeated fact is an immediate panicked realization, not redundant exposition."
+
+[[entries]]
+id = "arrival-body-will-not-move"
+file = "DISKA/F0002.MES"
+offset = 0x0a7a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（力が・・・。・・・・・・体が・・・、動かせない・・・・・・。）"
+translation = "[CONNIE] (No strength... I can't make my body move...)"
+speaker = "コニー"
+context = "Connie tries and fails to command her body."
+status = "qa-ready"
+notes = "The line distinguishes total weakness from the previous observation that she is motionless."
+
+[[entries]]
+id = "arrival-rain-steals-heat"
+file = "DISKA/F0002.MES"
+offset = 0x0aa4
+source_mode = 1
+target_mode = 2
+source = "雨が容赦なく降り注ぎ、体の熱を奪う。酸性雨じゃないのが救いだ。"
+translation = "The merciless rain pours down and steals my body heat. At least it isn't acid rain."
+speaker = "Connie"
+context = "Connie lies exposed in the garden in Mini form."
+status = "qa-ready"
+notes = "The casual relief about acid rain anchors how normalized pollution is in Connie's future."
+
+[[entries]]
+id = "arrival-rain-does-not-burn"
+file = "DISKA/F0002.MES"
+offset = 0x0acf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この時代の雨は、まだ痛くない・・・・・・・・・。）"
+translation = "[CONNIE] (Rain in this age doesn't burn... not yet...)"
+speaker = "コニー"
+context = "Connie compares the clean rain with the corrosive rain of 2296."
+status = "qa-ready"
+notes = "痛くない is interpreted through the immediately preceding acid-rain reference; 'not yet' preserves the ominous まだ."
+
+[[entries]]
+id = "arrival-rain-pelts-her"
+file = "DISKA/F0002.MES"
+offset = 0x0af3
+source_mode = 1
+target_mode = 2
+source = "雨が降り注ぎ体に叩きつけるようにぶつかってくる。"
+translation = "The rain pelts my body as if each drop were striking me."
+speaker = "Connie"
+context = "In Mini form, ordinary raindrops hit Connie with disproportionate force."
+status = "qa-ready"
+notes = "The apparent repetition sets up the scale observation in the next record."
+
+[[entries]]
+id = "arrival-raindrop-speed-hurts"
+file = "DISKA/F0002.MES"
+offset = 0x0b11
+source_mode = 1
+target_mode = 2
+source = "雨粒が落下する速度だけで痛いというのも奇妙な感覚だった。"
+translation = "It feels strange that the speed of a falling raindrop alone can hurt."
+speaker = "Connie"
+context = "Connie experiences the rain from the scale of her Mini form."
+status = "qa-ready"
+notes = "The odd sensation is physical scale, not acid content."
+
+[[entries]]
+id = "arrival-mini-form-failed"
+file = "DISKA/F0002.MES"
+offset = 0x0b37
+source_mode = 1
+target_mode = 2
+source = "【コニー】（エネルギーの消耗を押さえるためミニマムに変身してたのに・・・。）"
+translation = "[CONNIE] (I took Mini form to conserve energy, and still...)"
+speaker = "コニー"
+context = "Connie recognizes that even her emergency transformation has not saved her strength."
+status = "qa-ready"
+notes = "The sentence remains unfinished as her consciousness fades."
+
+[[entries]]
+id = "arrival-cannot-go-on"
+file = "DISKA/F0002.MES"
+offset = 0x0b68
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・、もう・・・だめ・・・。）"
+translation = "[CONNIE] (...I can't... go on...)"
+speaker = "コニー"
+context = "Connie reaches the edge of consciousness."
+status = "qa-ready"
+notes = "もうだめ is localized as exhausted surrender rather than a literal judgment that something is 'no good.'"
+
+[[entries]]
+id = "arrival-fading-beat-one"
+file = "DISKA/F0002.MES"
+offset = 0x0b9a
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "First silent blackout beat before Connie detects an unexpected scent."
+status = "qa-ready"
+notes = "The timing record is preserved and the source ellipsis is compressed."
+
+[[entries]]
+id = "arrival-fading-beat-two"
+file = "DISKA/F0002.MES"
+offset = 0x0ba9
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Second silent blackout beat before Connie detects an unexpected scent."
+status = "qa-ready"
+notes = "This separately anchored pause is not merged with its neighbor."
+
+[[entries]]
+id = "arrival-what-scent"
+file = "DISKA/F0002.MES"
+offset = 0x0bcf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（何・・・・・・？）"
+translation = "[CONNIE] (What...?)"
+speaker = "コニー"
+context = "A scent interrupts Connie's fading consciousness."
+status = "qa-ready"
+notes = "The vague question precedes identification of the milk scent."
+
+[[entries]]
+id = "arrival-smells-milk"
+file = "DISKA/F0002.MES"
+offset = 0x0be3
+source_mode = 1
+target_mode = 2
+source = "一瞬、ミルクの匂いがした。"
+translation = "For an instant, I smell milk."
+speaker = "Connie"
+context = "Connie first senses the unidentified girl."
+status = "qa-ready"
+notes = "The milk scent becomes a recurring sensory link to young Kaori and the Takano household."
+
+[[entries]]
+id = "arrival-hallucinated-scent"
+file = "DISKA/F0002.MES"
+offset = 0x0bf6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（幻惑かな・・・。あれっ、匂いは・・・幻聴・・・じゃなくて・・・。）"
+translation = "[CONNIE] (Am I hallucinating...? Wait, a smell isn't... hearing things...)"
+speaker = "コニー"
+context = "Dazed Connie reaches for and then corrects the wrong sensory term."
+status = "qa-ready"
+notes = "The comic self-correction is intentional: she almost calls an imagined smell an auditory hallucination."
+
+[[entries]]
+id = "arrival-nose-malfunction"
+file = "DISKA/F0002.MES"
+offset = 0x0c3d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（鼻がおかしくなったのかな・・・。）"
+translation = "[CONNIE] (Maybe something's wrong with my nose...)"
+speaker = "コニー"
+context = "Connie doubts her enhanced sense of smell."
+status = "qa-ready"
+notes = "The wording stays informal and immediate rather than medical."
+
+[[entries]]
+id = "arrival-confident-in-scents"
+file = "DISKA/F0002.MES"
+offset = 0x0c5a
+source_mode = 1
+target_mode = 2
+source = "これでも臭いの識別には自信がある。"
+translation = "Even like this, I trust my nose to tell scents apart."
+speaker = "Connie"
+context = "The Mutant Hunter assesses whether her perception is reliable."
+status = "qa-ready"
+notes = "The line foregrounds Connie's animal-derived sensory skill without adding feline gimmicks."
+
+[[entries]]
+id = "arrival-sensitive-even-exhausted"
+file = "DISKA/F0002.MES"
+offset = 0x0c72
+source_mode = 1
+target_mode = 2
+source = "どんなに疲れていても臭いには敏感だ。"
+translation = "No matter how tired I am, my sense of smell stays sharp."
+speaker = "Connie"
+context = "Connie reasons that the milk scent must be real."
+status = "qa-ready"
+notes = "Sharp' fits her concise hunter self-assessment."
+
+[[entries]]
+id = "arrival-surprised-by-milk"
+file = "DISKA/F0002.MES"
+offset = 0x0c8a
+source_mode = 1
+target_mode = 2
+source = "ミルクの匂いを感じとるなんて自分でも驚いてしまった。"
+translation = "Even I'm surprised I can pick out the smell of milk right now."
+speaker = "Connie"
+context = "Connie confirms the delicate scent despite near-unconsciousness."
+status = "qa-ready"
+notes = "Right now' carries the exceptional condition implied by her surprise."
+
+[[entries]]
+id = "arrival-no-human-presence"
+file = "DISKA/F0002.MES"
+offset = 0x0cc5
+source_mode = 1
+target_mode = 2
+source = "ヒトの気配は感じられない。"
+translation = "I can't sense a human presence."
+speaker = "Connie"
+context = "Connie's other enhanced senses have not detected the approaching girl."
+status = "qa-ready"
+notes = "Human' preserves Connie's biological-species register for ヒト."
+
+[[entries]]
+id = "arrival-thinks-alone"
+file = "DISKA/F0002.MES"
+offset = 0x0cd8
+source_mode = 1
+target_mode = 2
+source = "あたし一人だ。"
+translation = "I'm alone."
+speaker = "Connie"
+context = "Connie concludes incorrectly that no one is nearby."
+status = "qa-ready"
+notes = "The short certainty heightens the surprise of the girl's immediate entrance."
+
+[[entries]]
+id = "arrival-too-weak-to-speak"
+file = "DISKA/F0002.MES"
+offset = 0x0ced
+source_mode = 1
+target_mode = 2
+source = "声を出すのも辛い。"
+translation = "Even making a sound hurts."
+speaker = "Connie"
+context = "Connie is too weak to call for help."
+status = "qa-ready"
+notes = "Sound' works in Mini form without forcing the audience to decide whether she can produce human speech."
+
+[[entries]]
+id = "arrival-panting"
+file = "DISKA/F0002.MES"
+offset = 0x0cfc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はぁっ・・・、はぁっ・・・。」"
+translation = "[CONNIE] \"Hah... hah...\""
+speaker = "コニー"
+context = "Connie's labored breathing is the only sound in the garden."
+status = "qa-ready"
+notes = "The breath is kept as voiced text because the source presents it under Connie's label."
+
+[[entries]]
+id = "arrival-only-breathing"
+file = "DISKA/F0002.MES"
+offset = 0x0d16
+source_mode = 1
+target_mode = 2
+source = "あたしの呼吸音だけが聞こえる。"
+translation = "All I can hear is my own breathing."
+speaker = "Connie"
+context = "The soundscape goes quiet immediately before the girl speaks."
+status = "qa-ready"
+notes = "The line reinforces why Connie is startled: even her enhanced hearing missed the approach."
+
+[[entries]]
+id = "arrival-girl-asks-whats-wrong"
+file = "DISKA/F0002.MES"
+offset = 0x0d36
+source_mode = 1
+target_mode = 2
+source = "【女の子】「どうしたの？」"
+translation = "[GIRL] \"What's wrong?\""
+speaker = "女の子"
+context = "The unidentified sick girl first addresses Connie in Mini form."
+status = "qa-ready"
+notes = "The label remains GIRL because her editable name has not been introduced and no token is present here."
+
+[[entries]]
+id = "arrival-who-startled"
+file = "DISKA/F0002.MES"
+offset = 0x0d48
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・誰・・・！？）"
+translation = "[CONNIE] (...Who...!?)"
+speaker = "コニー"
+context = "Connie is startled by a voice at point-blank range."
+status = "qa-ready"
+notes = "The reversed punctuation preserves surprise within Connie's broken thought."
+
+[[entries]]
+id = "arrival-girl-appears"
+file = "DISKA/F0002.MES"
+offset = 0x0d87
+source_mode = 1
+target_mode = 2
+source = "あたしの目の前で、気配がすると同時に女の子の声が聞こえた。"
+translation = "Only when she is right in front of me do I sense someone and hear a girl's voice."
+speaker = "Connie"
+context = "Connie realizes how close the stranger came undetected."
+status = "qa-ready"
+notes = "The simultaneity matters: sight, presence, and voice register only at the final moment."
+
+[[entries]]
+id = "arrival-a-human"
+file = "DISKA/F0002.MES"
+offset = 0x0daa
+source_mode = 1
+target_mode = 2
+source = "【コニー】（人・・・？）"
+translation = "[CONNIE] (A human...?)"
+speaker = "コニー"
+context = "Connie identifies the approaching being by species."
+status = "qa-ready"
+notes = "The plain species noun reflects her mission-trained viewpoint."
+
+[[entries]]
+id = "arrival-caught-unaware"
+file = "DISKA/F0002.MES"
+offset = 0x0dbb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（不覚・・・こんなに接近されるまでわからなかったなんて・・・。）"
+translation = "[CONNIE] (Careless... I didn't notice her until she was this close...)"
+speaker = "コニー"
+context = "The hunter rebukes herself for missing the girl's approach."
+status = "qa-ready"
+notes = "不覚 is professional self-reproach; 'careless' keeps it concise rather than samurai-stilted."
+
+[[entries]]
+id = "arrival-tries-to-look-up"
+file = "DISKA/F0002.MES"
+offset = 0x0de8
+source_mode = 1
+target_mode = 2
+source = "あたしは顔を上げようとした。"
+translation = "I try to lift my head."
+speaker = "Connie"
+context = "Connie attempts to see the person who found her."
+status = "qa-ready"
+notes = "The immediate present tense suits the failed physical effort."
+
+[[entries]]
+id = "arrival-cannot-even-blink"
+file = "DISKA/F0002.MES"
+offset = 0x0dfd
+source_mode = 1
+target_mode = 2
+source = "だけどもう、まばたきする力さえも－－－ない。"
+translation = "But I no longer have the strength even to blink."
+speaker = "Connie"
+context = "Connie cannot raise her head to see the girl."
+status = "qa-ready"
+notes = "The dash is naturalized into a final, exhausted statement."
+
+[[entries]]
+id = "arrival-who-fading"
+file = "DISKA/F0002.MES"
+offset = 0x0e42
+source_mode = 1
+target_mode = 2
+source = "【コニー】（誰・・・・・？）"
+translation = "[CONNIE] (Who...?)"
+speaker = "コニー"
+context = "Connie tries once more to identify the unseen girl."
+status = "qa-ready"
+notes = "This quieter repetition follows the initial startled question as Connie fades."
+
+[[entries]]
+id = "arrival-realizes-scent"
+file = "DISKA/F0002.MES"
+offset = 0x0e7f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・！？）"
+translation = "[CONNIE] (...!?)"
+speaker = "コニー"
+context = "Connie suddenly connects the girl with the milk scent."
+status = "qa-ready"
+notes = "The punctuation-only realization remains separate from its explanation."
+
+[[entries]]
+id = "arrival-girls-scent"
+file = "DISKA/F0002.MES"
+offset = 0x0e90
+source_mode = 1
+target_mode = 2
+source = "【コニー】（女の子の匂い・・・。）"
+translation = "[CONNIE] (The girl's scent...)"
+speaker = "コニー"
+context = "Connie identifies a personal scent at close range."
+status = "qa-ready"
+notes = "The fragment marks a sensory association rather than an evaluative comment."
+
+[[entries]]
+id = "arrival-milk-is-girl"
+file = "DISKA/F0002.MES"
+offset = 0x0ea6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（さっきのミルクの匂いはこの子・・・？）"
+translation = "[CONNIE] (That smell of milk... was it her?)"
+speaker = "コニー"
+context = "Connie connects the earlier scent with the girl."
+status = "qa-ready"
+notes = "This begins the recurring milk-scent motif linking Connie and young Kaori."
+
+[[entries]]
+id = "arrival-tension-eases"
+file = "DISKA/F0002.MES"
+offset = 0x0ec4
+source_mode = 1
+target_mode = 2
+source = "ぴりぴりと張り詰めた緊張感がほぐれた。"
+translation = "The taut edge of my fear begins to ease."
+speaker = "Connie"
+context = "The girl's gentle scent and manner reduce Connie's threat response."
+status = "qa-ready"
+notes = "ぴりぴり describes a prickling, tightly wound tension; 'taut edge' keeps it embodied."
+
+[[entries]]
+id = "arrival-girl-touches"
+file = "DISKA/F0002.MES"
+offset = 0x0ee0
+source_mode = 1
+target_mode = 2
+source = "あたしの体に手が触れる。"
+translation = "A hand touches my body."
+speaker = "Connie"
+context = "The girl reaches down to examine Connie in Mini form."
+status = "qa-ready"
+notes = "The neutral wording matches Connie's still-alert sensory report."
+
+[[entries]]
+id = "arrival-girl-strokes-gently"
+file = "DISKA/F0002.MES"
+offset = 0x0ef3
+source_mode = 1
+target_mode = 2
+source = "そろりそろりと、優しく撫でてくれる。"
+translation = "Slowly, carefully, she strokes me."
+speaker = "Connie"
+context = "The girl comforts what she believes is an injured animal."
+status = "qa-ready"
+notes = "そろりそろり conveys cautious, gentle movement; 'strokes' fits Connie's Mini form."
+
+[[entries]]
+id = "arrival-no-hostility-sensed"
+file = "DISKA/F0002.MES"
+offset = 0x0f0c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（敵意は感じられない・・・。）"
+translation = "[CONNIE] (I don't sense any hostility...)"
+speaker = "コニー"
+context = "Connie reads the girl's intent through touch."
+status = "qa-ready"
+notes = "Connie's mutant empathy is presented as a tactical threat assessment."
+
+[[entries]]
+id = "arrival-girl-asks-all-right"
+file = "DISKA/F0002.MES"
+offset = 0x0f25
+source_mode = 1
+target_mode = 2
+source = "【女の子】「・・・だいじょうぶ？」"
+translation = "[GIRL] \"...Are you all right?\""
+speaker = "女の子"
+context = "The unidentified girl gently checks on Connie."
+status = "qa-ready"
+notes = "Her simple, soft concern establishes her bright but compassionate voice."
+
+[[entries]]
+id = "arrival-seems-no-hostility"
+file = "DISKA/F0002.MES"
+offset = 0x0f41
+source_mode = 1
+target_mode = 2
+source = "敵意はないようだ。"
+translation = "She doesn't seem hostile."
+speaker = "Connie"
+context = "Connie confirms her touch-based reading from the girl's words."
+status = "qa-ready"
+notes = "The apparent repetition shows Connie methodically validating an unknown contact while impaired."
+
+[[entries]]
+id = "arrival-reads-curiosity-kindness"
+file = "DISKA/F0002.MES"
+offset = 0x0f4f
+source_mode = 1
+target_mode = 2
+source = "女の子の言葉に、『好奇心』と『助けたいという気持ち』を感じた。"
+translation = "In her words, I sense curiosity... and a real desire to help."
+speaker = "Connie"
+context = "Connie reads the girl's emotions and decides she is safe."
+status = "qa-ready"
+notes = "The emphasis distinguishes mere curiosity from genuine compassion without making the empathy mystical."
+
+[[entries]]
+id = "arrival-cold"
+file = "DISKA/F0002.MES"
+offset = 0x0fc2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・寒い・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...Cold...)"
+speaker = "コニー"
+context = "Connie's attention collapses back to her failing body."
+status = "qa-ready"
+notes = "The noun-like fragment sounds appropriately weak and avoids adding a full sentence."
+
+[[entries]]
+id = "arrival-no-strength-left"
+file = "DISKA/F0002.MES"
+offset = 0x100e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・力が・・・・・・、は・・い・・ら・・・ない・・。）"
+translation = "[CONNIE] (...No... strength... left...)"
+speaker = "コニー"
+context = "Connie can barely sustain an internal thought."
+status = "qa-ready"
+notes = "The source syllables break apart; the English fragments likewise fade without imitating Japanese morae."
+
+[[entries]]
+id = "arrival-who-last-thought"
+file = "DISKA/F0002.MES"
+offset = 0x105e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・だ・・・れ・・・？・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...Who... are you...?)"
+speaker = "コニー"
+context = "Connie's last conscious question is directed toward the girl."
+status = "qa-ready"
+notes = "Adding 'are you' completes the natural English question while retaining the failing cadence."
+
+[[entries]]
+id = "arrival-loses-consciousness"
+file = "DISKA/F0002.MES"
+offset = 0x10b0
+source_mode = 1
+target_mode = 2
+source = "敵意がないと分かり、あたしはそこで意識を失った。"
+translation = "Once I know she means no harm, I finally lose consciousness."
+speaker = "Connie"
+context = "The arrival slice ends as Connie entrusts herself to the unidentified girl."
+status = "qa-ready"
+notes = "The causal link matters: Connie lets go only after judging the girl safe."
+
+[[entries]]
+id = "launch-waits-in-facility"
+file = "DISKA/F0001.MES"
+offset = 0x06b6
+source_mode = 1
+target_mode = 2
+source = "あたしは出発の時まで、ここ、研究施設の中で時間が過ぎるのを待っていた。"
+translation = "Until departure, I wait here in the research facility and watch the time crawl by."
+speaker = "Connie"
+context = "Opening narration in the Project D briefing room."
+status = "qa-ready"
+notes = "The slow waiting establishes Connie's restless launch-day viewpoint."
+
+[[entries]]
+id = "launch-ordered-to-wait"
+file = "DISKA/F0001.MES"
+offset = 0x06e3
+source_mode = 1
+target_mode = 2
+source = "出発の時間まで、この部屋で待機を命じられている。"
+translation = "I've been ordered to stay in this room until launch time."
+speaker = "Connie"
+context = "Connie explains why she remains in the briefing room."
+status = "qa-ready"
+notes = "待機を命じられている is a formal assignment, contrasting with her informal narration."
+
+[[entries]]
+id = "launch-connie-name"
+file = "DISKA/F0001.MES"
+offset = 0x0704
+source_mode = 1
+target_mode = 2
+source = "あたしの名は【コニー】。"
+translation = "My name is Connie."
+speaker = "Connie"
+context = "Connie introduces herself to the player."
+status = "qa-ready"
+notes = "The fixed name is naturalized without reproducing decorative Japanese brackets."
+
+[[entries]]
+id = "launch-connie-mutant"
+file = "DISKA/F0001.MES"
+offset = 0x0716
+source_mode = 1
+target_mode = 2
+source = "獣とヒトの両方の遺伝子を掛け合わせて造られた、ミュータントだ。"
+translation = "I'm a mutant, engineered by combining animal and human genes."
+speaker = "Connie"
+context = "Connie defines what she is."
+status = "qa-ready"
+notes = "Engineered' keeps the deliberate manufactured origin; ヒト is biological 'human.'"
+
+[[entries]]
+id = "launch-mutant-hunter"
+file = "DISKA/F0001.MES"
+offset = 0x0740
+source_mode = 1
+target_mode = 2
+source = "あたしは、ミュータント専門のハンターをしている。"
+translation = "I work as a Mutant Hunter."
+speaker = "Connie"
+context = "Connie states her normal occupation."
+status = "qa-ready"
+notes = "Mutant Hunter is treated as the formal occupational title."
+
+[[entries]]
+id = "launch-hunter-police-status"
+file = "DISKA/F0001.MES"
+offset = 0x0760
+source_mode = 1
+target_mode = 2
+source = "表向きは警官扱いだが、専門は、あたしと同じ能力を持つミュータントを狩るための部署だ。"
+translation = "Officially, I'm treated as a police officer. My unit specializes in hunting mutants with abilities like mine."
+speaker = "Connie"
+context = "Connie explains the legal cover and function of Mutant Hunters."
+status = "qa-ready"
+notes = "The translation preserves the uneasy fact that mutants are used to hunt their own kind."
+
+[[entries]]
+id = "launch-time-patrol-authority"
+file = "DISKA/F0001.MES"
+offset = 0x0799
+source_mode = 1
+target_mode = 2
+source = "今回はタイムパトロールとしての権利も与えられた。"
+translation = "For this mission, I've also been granted Time Patrol authority."
+speaker = "Connie"
+context = "Connie states her additional Project D jurisdiction."
+status = "qa-ready"
+notes = "権利 is rendered as operational authority rather than an abstract civil right."
+
+[[entries]]
+id = "launch-no-other-time-travelers"
+file = "DISKA/F0001.MES"
+offset = 0x07ba
+source_mode = 1
+target_mode = 2
+source = "【コニー】（タイムマシンはここにしかないし、危険な時空越えをする酔狂な人間はいないと思うけど・・・。）"
+translation = "[CONNIE] (This is the only time machine, and who else would be crazy enough to risk crossing time...?)"
+speaker = "コニー"
+context = "Connie dryly considers whether Time Patrol authority will matter."
+status = "qa-ready"
+notes = "酔狂な人間 becomes Connie's wry 'crazy enough,' preserving the joke about needless jurisdiction."
+
+[[entries]]
+id = "launch-kanzaki-created-connie"
+file = "DISKA/F0001.MES"
+offset = 0x07f7
+source_mode = 1
+target_mode = 2
+source = "あたしを造ったのは神崎博士。"
+translation = "Dr. Kanzaki is the one who created me."
+speaker = "Connie"
+context = "Connie introduces her creator."
+status = "qa-ready"
+notes = "Created' is deliberately retained: Connie was manufactured, not born."
+
+[[entries]]
+id = "launch-kanzaki-project-d-lead"
+file = "DISKA/F0001.MES"
+offset = 0x080a
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、今回のＤ計画（時空計画）の責任者でもある。"
+translation = "She also leads Project D, the Space-Time Project behind this mission."
+speaker = "Connie"
+context = "Connie identifies Kanzaki's professional role."
+status = "qa-ready"
+notes = "The script never expands the D; the parenthetical formal project name is preserved."
+
+[[entries]]
+id = "launch-deep-breath"
+file = "DISKA/F0001.MES"
+offset = 0x0831
+source_mode = 1
+target_mode = 2
+source = "・・・・・・。あたしは落ち着くために深呼吸をした。"
+translation = "...I take a deep breath to calm myself."
+speaker = "Connie"
+context = "Connie tries to settle her nerves before exploring the room."
+status = "qa-ready"
+notes = "The leading pause remains part of this physical record."
+
+[[entries]]
+id = "launch-breath-sound"
+file = "DISKA/F0001.MES"
+offset = 0x0854
+source_mode = 1
+target_mode = 2
+source = "【コニー】「すぅ～～～～～～、はふーーー。」"
+translation = "[CONNIE] \"Innnn... and out...\""
+speaker = "コニー"
+context = "Connie audibly performs the calming breath."
+status = "qa-ready"
+notes = "The localized breath keeps her lightly comic self-consciousness."
+
+[[entries]]
+id = "launch-looks-around"
+file = "DISKA/F0001.MES"
+offset = 0x0904
+source_mode = 1
+target_mode = 2
+source = "あたしは辺りを見回した。"
+translation = "I look around."
+speaker = "Connie"
+context = "Look-command response in the empty briefing room."
+status = "qa-ready"
+notes = "The compact present-tense action matches the exploration loop."
+
+[[entries]]
+id = "launch-woke-too-early"
+file = "DISKA/F0001.MES"
+offset = 0x0917
+source_mode = 1
+target_mode = 2
+source = "【コニー】（出発までに、早く起きすぎたかなぁ・・・。）"
+translation = "[CONNIE] (Maybe I woke up too early for the launch...)"
+speaker = "コニー"
+context = "Connie fills time before departure."
+status = "qa-ready"
+notes = "かなぁ gives the thought a casual, slightly sheepish cadence."
+
+[[entries]]
+id = "launch-stares-at-wall"
+file = "DISKA/F0001.MES"
+offset = 0x093a
+source_mode = 1
+target_mode = 2
+source = "ミーティングルームの壁を、ボォーッと眺める。"
+translation = "I stare blankly at the briefing-room wall."
+speaker = "Connie"
+context = "Connie idles in the briefing room."
+status = "qa-ready"
+notes = "ボォーッと conveys zoning out rather than careful observation."
+
+[[entries]]
+id = "launch-room-quiet"
+file = "DISKA/F0001.MES"
+offset = 0x095b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（静かだ・・・・・・・・・。）"
+translation = "[CONNIE] (It's quiet...)"
+speaker = "コニー"
+context = "Connie notices the apparent silence."
+status = "qa-ready"
+notes = "The simple thought sets up her enhanced hearing in the next record."
+
+[[entries]]
+id = "launch-enhanced-hearing-noise"
+file = "DISKA/F0001.MES"
+offset = 0x0974
+source_mode = 1
+target_mode = 2
+source = "それでもミュータントのあたしの耳には、いろんな音やざわめきが飛び込んでくる。"
+translation = "Even so, my mutant ears catch every kind of sound and distant commotion."
+speaker = "Connie"
+context = "Connie describes the sensory overload beneath the quiet."
+status = "qa-ready"
+notes = "The active 'catch' suits her hunter-trained sensory narration."
+
+[[entries]]
+id = "launch-blocks-noise"
+file = "DISKA/F0001.MES"
+offset = 0x09b2
+source_mode = 1
+target_mode = 2
+source = "あたしは心を落ち着けて、耳から入る音を遮断した。"
+translation = "I steady myself and shut out the noise pouring into my ears."
+speaker = "Connie"
+context = "Connie consciously attenuates her enhanced hearing."
+status = "qa-ready"
+notes = "The source presents sensory filtering as an active mutant ability."
+
+[[entries]]
+id = "launch-human-hearing-level"
+file = "DISKA/F0001.MES"
+offset = 0x09d3
+source_mode = 1
+target_mode = 2
+source = "人間の聴力程度のレベルに調整したら、ざわめきが聞こえなくなり、辺りは静かになる。"
+translation = "Once I tune it down to ordinary human hearing, the bustle vanishes and the room falls silent."
+speaker = "Connie"
+context = "Connie reduces her hearing to a human baseline."
+status = "qa-ready"
+notes = "Tune it down' makes the deliberate sensory adjustment clear without inventing machinery."
+
+[[entries]]
+id = "launch-quiet-silent-thought"
+file = "DISKA/F0001.MES"
+offset = 0x0a07
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie sits in the silence she created."
+status = "qa-ready"
+notes = "The silent record is retained as an exploration timing beat."
+
+[[entries]]
+id = "launch-anxiety-and-curiosity"
+file = "DISKA/F0001.MES"
+offset = 0x0a20
+source_mode = 1
+target_mode = 2
+source = "ちょっぴりの不安と、見知らぬ世界へ行く好奇心が、今のあたしの心を満たしていた。"
+translation = "A little fear and a lot of curiosity about an unknown world fill my mind."
+speaker = "Connie"
+context = "Connie names her mixed feelings before launch."
+status = "qa-ready"
+notes = "The asymmetry in English gives curiosity the lively emphasis characteristic of Connie."
+
+[[entries]]
+id = "launch-alone-in-room"
+file = "DISKA/F0001.MES"
+offset = 0x0a6b
+source_mode = 1
+target_mode = 2
+source = "ここにはあたし以外、誰もいない。"
+translation = "No one else is here."
+speaker = "Connie"
+context = "Connie confirms the briefing room is empty."
+status = "qa-ready"
+notes = "The concise observation supports the room's waiting-space mood."
+
+[[entries]]
+id = "launch-quiet-again"
+file = "DISKA/F0001.MES"
+offset = 0x0a82
+source_mode = 1
+target_mode = 2
+source = "【コニー】（静かだ・・・・・・。）"
+translation = "[CONNIE] (So quiet...)"
+speaker = "コニー"
+context = "Connie repeats the observation after filtering her hearing."
+status = "qa-ready"
+notes = "So quiet' distinguishes this satisfied repetition from the first neutral observation."
+
+[[entries]]
+id = "launch-someone-outside-door"
+file = "DISKA/F0001.MES"
+offset = 0x0aa1
+source_mode = 1
+target_mode = 2
+source = "扉の外に、誰か来ているようだ。"
+translation = "It seems someone has come to the other side of the door."
+speaker = "Connie"
+context = "Connie belatedly detects a visitor."
+status = "qa-ready"
+notes = "The spatial wording retains her hunter-like attention to proximity."
+
+[[entries]]
+id = "launch-missed-presence"
+file = "DISKA/F0001.MES"
+offset = 0x0ab6
+source_mode = 1
+target_mode = 2
+source = "あたしは、気配を感じとれなかった。"
+translation = "I didn't sense them approach."
+speaker = "Connie"
+context = "Connie notices that distraction dulled her normally sharp awareness."
+status = "qa-ready"
+notes = "Approach' supplies the event implied by the newly detected presence."
+
+[[entries]]
+id = "launch-lost-in-thought"
+file = "DISKA/F0001.MES"
+offset = 0x0acd
+source_mode = 1
+target_mode = 2
+source = "それほど考え込んでいたのだろうか。"
+translation = "Was I really that lost in thought?"
+speaker = "Connie"
+context = "Connie questions her lapse in awareness."
+status = "qa-ready"
+notes = "The self-questioning keeps her candid, slightly embarrassed voice."
+
+[[entries]]
+id = "launch-introduces-marie"
+file = "DISKA/F0001.MES"
+offset = 0x0aed
+source_mode = 1
+target_mode = 2
+source = "マリー博士。フルネーム、マリー・プロシオン。"
+translation = "Dr. Marie. Her full name is Marie Procyon."
+speaker = "Connie"
+context = "Connie identifies the visitor in an inspection branch."
+status = "qa-ready"
+notes = "Dr. Marie' reflects Connie's Japanese address; the full name resolves the surname spelling."
+
+[[entries]]
+id = "launch-marie-development-chief"
+file = "DISKA/F0001.MES"
+offset = 0x0b0b
+source_mode = 1
+target_mode = 2
+source = "あたしたちミュータントの開発責任者だ。"
+translation = "She is in charge of mutant development."
+speaker = "Connie"
+context = "Connie states Marie's institutional role."
+status = "qa-ready"
+notes = "Development' preserves the setting's clinical language about engineered people."
+
+[[entries]]
+id = "launch-marie-mental-support"
+file = "DISKA/F0001.MES"
+offset = 0x0b27
+source_mode = 1
+target_mode = 2
+source = "ミュータントの開発が下火になっている今、あたしたちのメンタル的なサポートをしてくれる。"
+translation = "Now that mutant development is winding down, she is supposed to provide our psychological support."
+speaker = "Connie"
+context = "Connie explains Marie's present duties."
+status = "qa-ready"
+notes = "Supposed to' preserves Connie's skepticism toward Marie's actual warmth without overstating hostility."
+
+[[entries]]
+id = "launch-mutant-production-stopped"
+file = "DISKA/F0001.MES"
+offset = 0x0b5e
+source_mode = 1
+target_mode = 2
+source = "ミュータントの開発は下火、というより、もう停止している。"
+translation = "Winding down isn't quite right. Mutant production has already stopped."
+speaker = "Connie"
+context = "Connie corrects her euphemistic description."
+status = "qa-ready"
+notes = "Production' makes the dehumanizing institutional reality explicit, as the source does."
+
+[[entries]]
+id = "launch-humans-ended-mutants"
+file = "DISKA/F0001.MES"
+offset = 0x0b84
+source_mode = 1
+target_mode = 2
+source = "ヒトを越える生物を造り出してしまった人間は、ミュータントがヒトに逆らわないうちに製造を打ち切ったらしい。"
+translation = "Humans had created beings who surpassed them, so they apparently ended production before mutants could turn against humanity."
+speaker = "Connie"
+context = "Connie summarizes why mutant creation was halted."
+status = "qa-ready"
+notes = "The source shifts 人間 and ヒト; English uses humans/humanity to preserve the species framing."
+
+[[entries]]
+id = "launch-another-humanity"
+file = "DISKA/F0001.MES"
+offset = 0x0bc2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ヒトはもうひとつの人類を造り出してしまった・・・。）"
+translation = "[CONNIE] (Humans created another human race...)"
+speaker = "コニー"
+context = "Connie reflects on mutants as a manufactured people."
+status = "qa-ready"
+notes = "Another human race' carries the social weight of もうひとつの人類 without reducing mutants to a product."
+
+[[entries]]
+id = "launch-mutant-human-marriage"
+file = "DISKA/F0001.MES"
+offset = 0x0be9
+source_mode = 1
+target_mode = 2
+source = "ミュータントもヒトと結婚できるし、結婚して家庭を営んでいる前例もある。"
+translation = "Mutants can marry humans. Some already have, and built families together."
+speaker = "Connie"
+context = "Connie considers mutants' place in ordinary society."
+status = "qa-ready"
+notes = "The second sentence emphasizes lived precedent rather than only legal permission."
+
+[[entries]]
+id = "launch-connie-future"
+file = "DISKA/F0001.MES"
+offset = 0x0c19
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしは・・・・・・・・・どうなるのかなぁ・・・・・・。）"
+translation = "[CONNIE] (I wonder... what will happen to me...)"
+speaker = "コニー"
+context = "Connie turns the social question toward her own future."
+status = "qa-ready"
+notes = "The vulnerable pause begins the story's recurring family longing."
+
+[[entries]]
+id = "launch-marry-human"
+file = "DISKA/F0001.MES"
+offset = 0x0c42
+source_mode = 1
+target_mode = 2
+source = "ヒトと出会い、結婚するのだろうか。"
+translation = "Will I meet a human and marry them?"
+speaker = "Connie"
+context = "Connie imagines one possible adult future."
+status = "qa-ready"
+notes = "The gender-neutral object avoids inventing information absent from the Japanese."
+
+[[entries]]
+id = "launch-love-mutant-man"
+file = "DISKA/F0001.MES"
+offset = 0x0c5b
+source_mode = 1
+target_mode = 2
+source = "それとも同じミュータントの男性を好きになるのだろうか。"
+translation = "Or will I fall for a male mutant like me?"
+speaker = "Connie"
+context = "Connie imagines another conventional future."
+status = "qa-ready"
+notes = "The explicit male alternative is preserved as Connie's speculation, not a project-wide statement about her desires."
+
+[[entries]]
+id = "launch-silly-worry"
+file = "DISKA/F0001.MES"
+offset = 0x0c7e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・ヘンな事に悩んじゃうな・・・・・・。）"
+translation = "[CONNIE] (...What a weird thing to worry about...)"
+speaker = "コニー"
+context = "Connie catches herself daydreaming about marriage before launch."
+status = "qa-ready"
+notes = "Her self-mockery stays youthful without becoming childish."
+
+[[entries]]
+id = "launch-thinks-of-marie"
+file = "DISKA/F0001.MES"
+offset = 0x0cba
+source_mode = 1
+target_mode = 2
+source = "【コニー】（マリー博士・・・・・・。）"
+translation = "[CONNIE] (Dr. Marie...)"
+speaker = "コニー"
+context = "Connie's thoughts return to mutant development."
+status = "qa-ready"
+notes = "The title remains Connie's established form of address."
+
+[[entries]]
+id = "launch-marie-creation-feelings"
+file = "DISKA/F0001.MES"
+offset = 0x0cd2
+source_mode = 1
+target_mode = 2
+source = "マリー博士が、あたしたちミュータントを造っているとき、どんな気持ちで造っていたのだろう。"
+translation = "I wonder what Dr. Marie felt while she was creating mutants like us."
+speaker = "Connie"
+context = "Connie wonders about Marie's emotional relationship to her work."
+status = "qa-ready"
+notes = "The repetition of 'creating' keeps the source's uncomfortable emphasis on manufacture."
+
+[[entries]]
+id = "launch-marie-gone"
+file = "DISKA/F0001.MES"
+offset = 0x0d0c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（マリー博士はもういない・・・。）"
+translation = "[CONNIE] (Dr. Marie is gone now...)"
+speaker = "コニー"
+context = "Connie notes that Marie has already left the room."
+status = "qa-ready"
+notes = "Gone' is spatial here; later context confirms Marie remains alive and nearby."
+
+[[entries]]
+id = "launch-marie-lingering-scent"
+file = "DISKA/F0001.MES"
+offset = 0x0d27
+source_mode = 1
+target_mode = 2
+source = "マリー博士の残り香だけが、彼女がここへ来たという証を残している。"
+translation = "Only Dr. Marie's lingering scent proves that she was ever here."
+speaker = "Connie"
+context = "Connie uses her enhanced smell after Marie leaves."
+status = "qa-ready"
+notes = "The sensory evidence is important groundwork for Connie's later scent-based deductions."
+
+[[entries]]
+id = "launch-remia-fidgeting"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x0d5b },
+  { file = "DISKA/F0001.MES", offset = 0x0ed7 },
+]
+source_mode = 1
+target_mode = 2
+source = "レミアは、幾分かそわそわしているように思える。"
+translation = "Remia seems a little restless."
+speaker = "Connie"
+context = "Two inspection-loop observations of Remia before launch."
+status = "qa-ready"
+notes = "Both byte-identical anchors describe the same visible state and share one canonical rendering."
+
+[[entries]]
+id = "launch-remia-mutant"
+file = "DISKA/F0001.MES"
+offset = 0x0d79
+source_mode = 1
+target_mode = 2
+source = "レミアもあたしと同じミュータントだ。"
+translation = "Remia is a mutant like me."
+speaker = "Connie"
+context = "Connie introduces her partner."
+status = "qa-ready"
+notes = "The plain comparison establishes common identity before their personality contrast."
+
+[[entries]]
+id = "launch-remia-former-partner"
+file = "DISKA/F0001.MES"
+offset = 0x0d90
+source_mode = 1
+target_mode = 2
+source = "あたしとレミアがペアを組んで、はぐれミュータントの捜索をしたこともある。"
+translation = "Remia and I have partnered up to track down rogue mutants before."
+speaker = "Connie"
+context = "Connie recalls working with Remia as a hunter."
+status = "qa-ready"
+notes = "Rogue mutants' conveys はぐれ as unaffiliated or at large, not morally evil by definition."
+
+[[entries]]
+id = "launch-remia-temperament"
+file = "DISKA/F0001.MES"
+offset = 0x0dbd
+source_mode = 1
+target_mode = 2
+source = "レミアの性格は、猪突猛進のところがあるけど、ここぞというときには慎重にコトを運ぶほうだ。"
+translation = "Remia can charge ahead without thinking, but when it truly matters, she handles things carefully."
+speaker = "Connie"
+context = "Connie sketches Remia's practical, impulsive personality."
+status = "qa-ready"
+notes = "猪突猛進 is naturalized as impulsive forward motion rather than a literal charging boar."
+
+[[entries]]
+id = "launch-hunters-learn-caution"
+file = "DISKA/F0001.MES"
+offset = 0x0df8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ハンターなんて仕事をしていると、命懸けだから慎重になるんだけど・・・。）"
+translation = "[CONNIE] (Being a hunter teaches you caution. Your life depends on it...)"
+speaker = "コニー"
+context = "Connie qualifies her description of Remia."
+status = "qa-ready"
+notes = "The two compact clauses reproduce Connie's matter-of-fact professional judgment."
+
+[[entries]]
+id = "launch-remia-volunteered"
+file = "DISKA/F0001.MES"
+offset = 0x0e2c
+source_mode = 1
+target_mode = 2
+source = "あたしに続いて、レミアがパイロットに志願してきたのは意外だった。"
+translation = "I was surprised when Remia volunteered as the second pilot after me."
+speaker = "Connie"
+context = "Connie explains how Remia joined Project D."
+status = "qa-ready"
+notes = "Second' clarifies the sequencing implicit in あたしに続いて."
+
+[[entries]]
+id = "launch-remia-too-practical"
+file = "DISKA/F0001.MES"
+offset = 0x0e55
+source_mode = 1
+target_mode = 2
+source = "【コニー】（レミアは現実主義なので、こういう危険なことはしないはずなのに・・・。）"
+translation = "[CONNIE] (Remia is so practical. She should be the last person to take a risk like this...)"
+speaker = "コニー"
+context = "Connie wonders about Remia's hidden motive."
+status = "qa-ready"
+notes = "The English turns the causal statement into Connie's natural conversational reasoning."
+
+[[entries]]
+id = "launch-remia-evaded-question"
+file = "DISKA/F0001.MES"
+offset = 0x0e89
+source_mode = 1
+target_mode = 2
+source = "一度だけ、レミアに聞いたことがあるけど、その時は答えをはぐらかされてしまった。"
+translation = "I asked her once, but she dodged the question."
+speaker = "Connie"
+context = "Connie recalls trying to learn why Remia volunteered."
+status = "qa-ready"
+notes = "The concise phrasing suits Connie's familiarity with Remia."
+
+[[entries]]
+id = "launch-looks-around-again"
+file = "DISKA/F0001.MES"
+offset = 0x0efe
+source_mode = 1
+target_mode = 2
+source = "あたしは周りを見た。"
+translation = "I look around again."
+speaker = "Connie"
+context = "Repeated inspection action in the launch room."
+status = "qa-ready"
+notes = "Again' distinguishes the revisited exploration response."
+
+[[entries]]
+id = "launch-surely-fragment"
+file = "DISKA/F0001.MES"
+offset = 0x0f0e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・きっと、・・・・・・。）"
+translation = "[CONNIE] (...I'm sure...)"
+speaker = "コニー"
+context = "Connie reassures herself about the mission."
+status = "qa-ready"
+notes = "The fragment is kept separate from the next anchored thought."
+
+[[entries]]
+id = "launch-will-return"
+file = "DISKA/F0001.MES"
+offset = 0x0f2e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（帰ってくる・・・・・・・・・・・・。）"
+translation = "[CONNIE] (I'll come back...)"
+speaker = "コニー"
+context = "Connie promises herself she will return from 1996."
+status = "qa-ready"
+notes = "The omitted Japanese subject resolves naturally to Connie in the surrounding self-reassurance."
+
+[[entries]]
+id = "launch-after-promise-silence"
+file = "DISKA/F0001.MES"
+offset = 0x0f4c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Silent beat after Connie promises to return."
+status = "qa-ready"
+notes = "The record remains separate to preserve pacing."
+
+[[entries]]
+id = "launch-kanzaki-silent"
+file = "DISKA/F0001.MES"
+offset = 0x0f6b
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、黙ったままだ。"
+translation = "Dr. Kanzaki remains silent."
+speaker = "Connie"
+context = "Connie observes Kanzaki before launch."
+status = "qa-ready"
+notes = "The controlled silence foreshadows the apology Connie later overhears."
+
+[[entries]]
+id = "launch-kanzaki-uneasy"
+file = "DISKA/F0001.MES"
+offset = 0x0f7e
+source_mode = 1
+target_mode = 2
+source = "少し不安そうにしている。"
+translation = "She looks a little uneasy."
+speaker = "Connie"
+context = "Connie reads unusual anxiety in Kanzaki."
+status = "qa-ready"
+notes = "Uneasy' is deliberately restrained; Kanzaki is trying to maintain professional control."
+
+[[entries]]
+id = "launch-worried-to-send-her"
+file = "DISKA/F0001.MES"
+offset = 0x0f90
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしを送り出す不安かな・・・・・・・・・。）"
+translation = "[CONNIE] (Is she worried about sending me away...?)"
+speaker = "コニー"
+context = "Connie misreads the deeper cause of Kanzaki's distress."
+status = "qa-ready"
+notes = "The apparent explanation is plausible to Connie while preserving the later reveal."
+
+[[entries]]
+id = "launch-checks-machine"
+file = "DISKA/F0001.MES"
+offset = 0x0fcc
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンの具合をチェック。"
+translation = "I check the machine's condition."
+speaker = "Connie"
+context = "Connie inspects the time machine before launch."
+status = "qa-ready"
+notes = "The clipped noun phrase matches her practical checklist voice."
+
+[[entries]]
+id = "launch-machine-looks-fine"
+file = "DISKA/F0001.MES"
+offset = 0x0fe4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（見たところ順調のようだけど・・・・・・。）"
+translation = "[CONNIE] (Everything looks fine so far...)"
+speaker = "コニー"
+context = "Connie's visual inspection finds no fault."
+status = "qa-ready"
+notes = "So far' retains the caution implicit in ようだけど."
+
+[[entries]]
+id = "launch-looks-out-at-present"
+file = "DISKA/F0001.MES"
+offset = 0x100f
+source_mode = 1
+target_mode = 2
+source = "あたしは、現代を忘れないようにと外を見つめた。"
+translation = "I gaze outside, trying to fix the present in my memory."
+speaker = "Connie"
+context = "Connie looks at 2296 before leaving it."
+status = "qa-ready"
+notes = "The source's 現代 is Connie's present, not the player's 1996."
+
+[[entries]]
+id = "launch-second-machine-visible"
+file = "DISKA/F0001.MES"
+offset = 0x102e
+source_mode = 1
+target_mode = 2
+source = "タイムポートには、次にレミアが乗るマシンが見える。"
+translation = "At the time port, I can see the machine Remia will pilot next."
+speaker = "Connie"
+context = "Connie looks toward Unit Two."
+status = "qa-ready"
+notes = "Next' refers to the planned second departure after Connie proves the route."
+
+[[entries]]
+id = "launch-first-test-return"
+file = "DISKA/F0001.MES"
+offset = 0x104e
+source_mode = 1
+target_mode = 2
+source = "あたしが無事に出発して過去に到着したら、一旦様子を見て現代へ戻る。"
+translation = "If I reach the past safely, I'll assess the situation, then return to the present."
+speaker = "Connie"
+context = "Connie summarizes the first test crossing."
+status = "qa-ready"
+notes = "The mission plan calls for a reconnaissance return before the paired crossing."
+
+[[entries]]
+id = "launch-second-paired-trip"
+file = "DISKA/F0001.MES"
+offset = 0x107c
+source_mode = 1
+target_mode = 2
+source = "ここへ戻ってきて、１号機の情報に基づいて２号機のレミアと一緒に再び出発することになっている。"
+translation = "Once I'm back, Remia and I will depart together, using Unit One's data to guide Unit Two."
+speaker = "Connie"
+context = "Connie explains the intended two-machine second trip."
+status = "qa-ready"
+notes = "Unit One and Unit Two keep the test-machine distinction clear."
+
+[[entries]]
+id = "launch-looks-at-kanzaki-remia"
+file = "DISKA/F0001.MES"
+offset = 0x10b5
+source_mode = 1
+target_mode = 2
+source = "神崎博士とレミアを見る。"
+translation = "I look at Dr. Kanzaki and Remia."
+speaker = "Connie"
+context = "Look response from inside the time machine."
+status = "qa-ready"
+notes = "Both launch observers are named because they are visible together."
+
+[[entries]]
+id = "launch-remia-waves"
+file = "DISKA/F0001.MES"
+offset = 0x10c6
+source_mode = 1
+target_mode = 2
+source = "レミアは『行ってらっしゃい』というように、軽く手を振ってくれた。"
+translation = "Remia gives me a small wave, as if to say, \"See you soon.\""
+speaker = "Connie"
+context = "Remia silently sends Connie off."
+status = "qa-ready"
+notes = "See you soon' carries 行ってらっしゃい's expectation that the departing person will return."
+
+[[entries]]
+id = "launch-waves-back"
+file = "DISKA/F0001.MES"
+offset = 0x10ef
+source_mode = 1
+target_mode = 2
+source = "あたしはレミアに手を振る。"
+translation = "I wave back to Remia."
+speaker = "Connie"
+context = "Connie answers Remia's silent farewell."
+status = "qa-ready"
+notes = "Back' makes the reciprocal gesture explicit."
+
+[[entries]]
+id = "launch-wave-is-allowed"
+file = "DISKA/F0001.MES"
+offset = 0x1102
+source_mode = 1
+target_mode = 2
+source = "【コニー】（手を振るくらいは、いいわよね・・・。）"
+translation = "[CONNIE] (I'm allowed one little wave, right...?)"
+speaker = "コニー"
+context = "Connie worries that the informal gesture breaks launch discipline."
+status = "qa-ready"
+notes = "The line reveals how seriously she takes Kanzaki's public strictness."
+
+[[entries]]
+id = "launch-panel-after-wave"
+file = "DISKA/F0001.MES"
+offset = 0x113a
+source_mode = 1
+target_mode = 2
+source = "レミアに手を振った後、マシンのパネルを見てトラブルがないかを確認。"
+translation = "After waving, I check the control panel for trouble."
+speaker = "Connie"
+context = "Connie immediately returns to launch procedure."
+status = "qa-ready"
+notes = "The quick shift from affection to checklist reinforces her pilot discipline."
+
+[[entries]]
+id = "launch-systems-normal"
+file = "DISKA/F0001.MES"
+offset = 0x1166
+source_mode = 1
+target_mode = 2
+source = "【コニー】（機械は正常・・・と・・・。）"
+translation = "[CONNIE] (Machine status... normal...)"
+speaker = "コニー"
+context = "Connie reads the pre-launch instruments."
+status = "qa-ready"
+notes = "The clipped status language echoes the naturalized terminal register."
+
+[[entries]]
+id = "launch-time-tunnel-thought"
+file = "DISKA/F0001.MES"
+offset = 0x118b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空トンネル・・・・・・・・・。）"
+translation = "[CONNIE] (The time tunnel...)"
+speaker = "コニー"
+context = "Connie contemplates the phenomenon outside the machine."
+status = "qa-ready"
+notes = "Time tunnel is the locked natural term in Connie's speech."
+
+[[entries]]
+id = "launch-first-to-see-view"
+file = "DISKA/F0001.MES"
+offset = 0x11a7
+source_mode = 1
+target_mode = 2
+source = "ここの景色を見るのは、あたしが初めてだろうか。"
+translation = "Am I the first person ever to see this view?"
+speaker = "Connie"
+context = "Connie wonders at the untraveled time tunnel."
+status = "qa-ready"
+notes = "Person' is neutral here; the wonder matters more than species terminology."
+
+[[entries]]
+id = "launch-strange-feeling"
+file = "DISKA/F0001.MES"
+offset = 0x11c5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（不思議な感覚・・・・・・・・・。）"
+translation = "[CONNIE] (What a strange feeling...)"
+speaker = "コニー"
+context = "Connie reacts to the time-tunnel view."
+status = "qa-ready"
+notes = "不思議 carries wonder as well as strangeness."
+
+[[entries]]
+id = "launch-eyes-fixed-outside"
+file = "DISKA/F0001.MES"
+offset = 0x11e3
+source_mode = 1
+target_mode = 2
+source = "あたしは外に目線が釘付けになった。"
+translation = "I can't tear my eyes away from the view outside."
+speaker = "Connie"
+context = "Connie becomes absorbed by the time tunnel."
+status = "qa-ready"
+notes = "The English idiom naturally renders 目線が釘付け."
+
+[[entries]]
+id = "launch-theory-versus-doing"
+file = "DISKA/F0001.MES"
+offset = 0x1217
+source_mode = 1
+target_mode = 2
+source = "理論上、できるとわかっている事でも、いざ実行する当事者になると不安が募る。"
+translation = "Knowing something works in theory doesn't stop the fear when you're the one putting it to the test."
+speaker = "Connie"
+context = "Connie contrasts Project D theory with being its first pilot."
+status = "qa-ready"
+notes = "The English stays reflective but informal, matching Connie rather than a scientist."
+
+[[entries]]
+id = "launch-only-in-theory"
+file = "DISKA/F0001.MES"
+offset = 0x1247
+source_mode = 1
+target_mode = 2
+source = "【コニー】（理論上・・・、確かに理論の上では・・・そう。）"
+translation = "[CONNIE] (In theory... Sure. In theory...)"
+speaker = "コニー"
+context = "Connie dryly repeats the qualification."
+status = "qa-ready"
+notes = "The repetition carries her skepticism and rising nerves."
+
+[[entries]]
+id = "launch-volunteered-pilot"
+file = "DISKA/F0001.MES"
+offset = 0x1275
+source_mode = 1
+target_mode = 2
+source = "あたしはタイムマシンのパイロットに志願した。"
+translation = "I volunteered to pilot the time machine."
+speaker = "Connie"
+context = "Connie recalls choosing this mission."
+status = "qa-ready"
+notes = "The active choice is central to her sense of duty toward Kanzaki."
+
+[[entries]]
+id = "launch-mutant-reflexes-qualified"
+file = "DISKA/F0001.MES"
+offset = 0x1292
+source_mode = 1
+target_mode = 2
+source = "もともと、ミュータントは運動神経にも優れているので、あたしはすぐに認められた。"
+translation = "Mutants naturally have exceptional reflexes, so I was approved right away."
+speaker = "Connie"
+context = "Connie explains why Project D accepted her."
+status = "qa-ready"
+notes = "運動神経 is idiomatically reflexes and coordination, not literal motor nerves."
+
+[[entries]]
+id = "launch-kanzaki-was-to-go"
+file = "DISKA/F0001.MES"
+offset = 0x12c2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（本当は神崎博士が行くはずだった・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki was supposed to go...)"
+speaker = "コニー"
+context = "Connie reveals the original pilot."
+status = "qa-ready"
+notes = "The quiet thought begins her personal reason for volunteering."
+
+[[entries]]
+id = "launch-opposed-kanzaki-going"
+file = "DISKA/F0001.MES"
+offset = 0x12e6
+source_mode = 1
+target_mode = 2
+source = "神崎博士が行くことに周囲も反対したけど、あたしも反対だった。"
+translation = "Everyone around her objected, and so did I."
+speaker = "Connie"
+context = "Connie recalls resistance to Kanzaki piloting."
+status = "qa-ready"
+notes = "Her personal objection is given equal weight with institutional opposition."
+
+[[entries]]
+id = "launch-risk-in-kanzaki-place"
+file = "DISKA/F0001.MES"
+offset = 0x130f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（だから・・・・・・・・・あたしが神崎博士の代わりに、危険を犯してもいいと思った。）"
+translation = "[CONNIE] (So I decided I could take the risk in Dr. Kanzaki's place.)"
+speaker = "コニー"
+context = "Connie explains her protective motive."
+status = "qa-ready"
+notes = "The phrasing is resolute without turning her devotion into a boast."
+
+[[entries]]
+id = "launch-devotion-silence"
+file = "DISKA/F0001.MES"
+offset = 0x1347
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Silent beat before Connie names whom she is doing this for."
+status = "qa-ready"
+notes = "The physical pause preserves the emotional hesitation."
+
+[[entries]]
+id = "launch-for-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x136c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士のために・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (For Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie states the personal core of her choice."
+status = "qa-ready"
+notes = "The fragment is deliberately intimate despite retaining her formal title."
+
+[[entries]]
+id = "launch-knock-sound"
+file = "DISKA/F0001.MES"
+offset = 0x1390
+source_mode = 1
+target_mode = 2
+source = "コンコンッ。"
+translation = "Knock, knock."
+speaker = "sfx"
+context = "A visitor knocks at the briefing-room door."
+status = "qa-ready"
+notes = "The localized sound remains its own timing record."
+
+[[entries]]
+id = "launch-someone-knocks"
+file = "DISKA/F0001.MES"
+offset = 0x139b
+source_mode = 1
+target_mode = 2
+source = "誰かが扉を叩いた。"
+translation = "Someone knocks on the door."
+speaker = "Connie"
+context = "Narration following the knock sound."
+status = "qa-ready"
+notes = "The present tense matches the interactive room sequence."
+
+[[entries]]
+id = "launch-missed-footsteps"
+file = "DISKA/F0001.MES"
+offset = 0x13cc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（扉の外の足音を感知できなかった・・・・・・。）"
+translation = "[CONNIE] (I didn't even detect the footsteps outside...)"
+speaker = "コニー"
+context = "Connie notices another lapse in her enhanced hearing."
+status = "qa-ready"
+notes = "Even' captures her surprise at missing such an obvious sensory cue."
+
+[[entries]]
+id = "launch-normally-hear-footsteps"
+file = "DISKA/F0001.MES"
+offset = 0x13ef
+source_mode = 1
+target_mode = 2
+source = "普段のあたしなら聞き逃さなかっただろう。"
+translation = "Normally, I never would have missed them."
+speaker = "Connie"
+context = "Connie measures her distraction against her usual senses."
+status = "qa-ready"
+notes = "Them' refers to the footsteps without needless repetition."
+
+[[entries]]
+id = "launch-tired-or-nervous"
+file = "DISKA/F0001.MES"
+offset = 0x140b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（疲れているのかな・・・、緊張しているのかな・・・。）"
+translation = "[CONNIE] (Am I tired...? Or just nervous...?)"
+speaker = "コニー"
+context = "Connie diagnoses her uncharacteristic inattention."
+status = "qa-ready"
+notes = "The two questions retain her honest uncertainty."
+
+[[entries]]
+id = "launch-rumor-marie-hates-mutants"
+file = "DISKA/F0001.MES"
+offset = 0x143a
+source_mode = 1
+target_mode = 2
+source = "マリー博士は、噂ではミュータント嫌いだそうだ。"
+translation = "Rumor says Dr. Marie hates mutants."
+speaker = "Connie"
+context = "Connie considers why Marie makes her tense."
+status = "qa-ready"
+notes = "Rumor says' preserves that Connie does not claim firsthand certainty."
+
+[[entries]]
+id = "launch-marie-childhood-prototypes"
+file = "DISKA/F0001.MES"
+offset = 0x1458
+source_mode = 1
+target_mode = 2
+source = "マリー博士が子供の頃は、ミュータントがまだ試作段階だった。"
+translation = "When Dr. Marie was a child, mutants were still in the prototype stage."
+speaker = "Connie"
+context = "Connie recounts the background to Marie's fear."
+status = "qa-ready"
+notes = "Prototype stage' preserves the setting's dehumanizing development vocabulary."
+
+[[entries]]
+id = "launch-marie-attacked-by-failure"
+file = "DISKA/F0001.MES"
+offset = 0x1480
+source_mode = 1
+target_mode = 2
+source = "融合に失敗したミュータントに襲われたことがあるからだ、と聞いている。"
+translation = "I've heard she was attacked by a mutant whose gene fusion had failed."
+speaker = "Connie"
+context = "Connie relays the stated cause of Marie's hostility."
+status = "qa-ready"
+notes = "The failure describes the engineering process, not the person's moral worth."
+
+[[entries]]
+id = "launch-marie-harsh-to-mutants"
+file = "DISKA/F0001.MES"
+offset = 0x14ab
+source_mode = 1
+target_mode = 2
+source = "マリー博士はそのため、時々、あたしたちミュータントにきつい態度をとる。"
+translation = "That's why Dr. Marie can be harsh with us mutants."
+speaker = "Connie"
+context = "Connie connects the childhood attack with Marie's conduct."
+status = "qa-ready"
+notes = "Can be harsh' leaves room for the occasional nature of her behavior."
+
+[[entries]]
+id = "launch-marie-strict-without-kindness"
+file = "DISKA/F0001.MES"
+offset = 0x14d5
+source_mode = 1
+target_mode = 2
+source = "厳しい態度とも言えるけど、神崎博士と違って、優しさのない厳しさだった。"
+translation = "You could call it strictness, but unlike Dr. Kanzaki's, there is no kindness behind it."
+speaker = "Connie"
+context = "Connie distinguishes Marie's severity from Kanzaki's."
+status = "qa-ready"
+notes = "This relationship contrast is central to Connie's voice and later judgment of Marie."
+
+[[entries]]
+id = "launch-marie-unkind-thought"
+file = "DISKA/F0001.MES"
+offset = 0x1519
+source_mode = 1
+target_mode = 2
+source = "【コニー】（厳しい態度とも言えるけど、神崎博士と違って、優しさのない厳しさだ・・・。）"
+translation = "[CONNIE] (You could call her strict, but unlike Dr. Kanzaki, she isn't kind about it...)"
+speaker = "コニー"
+context = "Connie repeats the comparison as an internal judgment."
+status = "qa-ready"
+notes = "The near-duplicate source is contextually distinct and therefore keeps its own canonical entry."
+
+[[entries]]
+id = "launch-relaxes-tension"
+file = "DISKA/F0001.MES"
+offset = 0x1555
+source_mode = 1
+target_mode = 2
+source = "あたしは緊張をほぐす。"
+translation = "I try to loosen up."
+speaker = "Connie"
+context = "Connie consciously releases the tension Marie caused."
+status = "qa-ready"
+notes = "Try' reflects that her following thoughts remain tense."
+
+[[entries]]
+id = "launch-pressure-from-above"
+file = "DISKA/F0001.MES"
+offset = 0x1565
+source_mode = 1
+target_mode = 2
+source = "【コニー】（体が上から圧迫されている感じがする・・・。）"
+translation = "[CONNIE] (It feels like something is pressing down on my whole body...)"
+speaker = "コニー"
+context = "Connie describes Marie's oppressive presence."
+status = "qa-ready"
+notes = "The sensation is figurative atmosphere, clarified by Connie shortly afterward."
+
+[[entries]]
+id = "launch-marie-makes-her-tense"
+file = "DISKA/F0001.MES"
+offset = 0x1589
+source_mode = 1
+target_mode = 2
+source = "【コニー】（マリー博士には悪いけど、あの人の側に居ると変に緊張しちゃう・・・。）"
+translation = "[CONNIE] (Sorry, Dr. Marie, but being near her makes me tense in the strangest way...)"
+speaker = "コニー"
+context = "Connie admits her discomfort around Marie."
+status = "qa-ready"
+notes = "The apology is internal and reflexively polite, keeping Connie sympathetic rather than accusatory."
+
+[[entries]]
+id = "launch-feels-tired"
+file = "DISKA/F0001.MES"
+offset = 0x15ca
+source_mode = 1
+target_mode = 2
+source = "【コニー】（何だか・・・、疲れちゃった・・・。）"
+translation = "[CONNIE] (Somehow... I'm exhausted...)"
+speaker = "コニー"
+context = "Marie's visit leaves Connie drained."
+status = "qa-ready"
+notes = "The casual ちゃった softens the admission."
+
+[[entries]]
+id = "launch-air-changes-near-marie"
+file = "DISKA/F0001.MES"
+offset = 0x15e9
+source_mode = 1
+target_mode = 2
+source = "あの人が近くに来ると、空気の流れが変わる。"
+translation = "Whenever she comes close, even the air seems to shift."
+speaker = "Connie"
+context = "Connie elaborates on Marie's intimidating atmosphere."
+status = "qa-ready"
+notes = "Seems' keeps the description figurative rather than granting Marie a supernatural effect."
+
+[[entries]]
+id = "launch-skin-prickles"
+file = "DISKA/F0001.MES"
+offset = 0x1605
+source_mode = 1
+target_mode = 2
+source = "あたしの肌にピリピリとした感覚が伝わってくる。"
+translation = "A prickling sensation runs across my skin."
+speaker = "Connie"
+context = "Connie describes her bodily response to Marie."
+status = "qa-ready"
+notes = "Prickling' carries ピリピリ without implying literal electricity."
+
+[[entries]]
+id = "launch-just-the-atmosphere"
+file = "DISKA/F0001.MES"
+offset = 0x1625
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんて・・・ね。それほど雰囲気が変わるって事だけど・・・。）"
+translation = "[CONNIE] (Well... not literally. That's just how much the mood changes around her...)"
+speaker = "コニー"
+context = "Connie corrects her own dramatic description."
+status = "qa-ready"
+notes = "This self-correction preserves her comic overthinking and confirms the prior imagery is figurative."
+
+[[entries]]
+id = "launch-marie-gentler-earlier"
+file = "DISKA/F0001.MES"
+offset = 0x1650
+source_mode = 1
+target_mode = 2
+source = "【コニー】（さっきは少し優しかった・・・・・・・・・。）"
+translation = "[CONNIE] (She was a little gentler earlier...)"
+speaker = "コニー"
+context = "Connie reassesses Marie's pulse check."
+status = "qa-ready"
+notes = "Gentler' is comparative; Connie does not suddenly call Marie warm."
+
+[[entries]]
+id = "launch-marie-touch-no-malice"
+file = "DISKA/F0001.MES"
+offset = 0x1673
+source_mode = 1
+target_mode = 2
+source = "脈を診てもらうとき、肌が触れたけど、邪心は伝わってこなかった。"
+translation = "Our skin touched when she checked my pulse, but I felt no ill intent from her."
+speaker = "Connie"
+context = "Connie uses touch-empathy to evaluate Marie."
+status = "qa-ready"
+notes = "邪心 is contextualized as harmful intent, not religious evil."
+
+[[entries]]
+id = "launch-hard-to-read-marie"
+file = "DISKA/F0001.MES"
+offset = 0x169c
+source_mode = 1
+target_mode = 2
+source = "もっとも、普段、接触のない人だけに、感情を読み取るのは難しい。"
+translation = "Still, I rarely touch her, so her feelings are hard for me to read."
+speaker = "Connie"
+context = "Connie qualifies the certainty of her empathic reading."
+status = "qa-ready"
+notes = "The limitation keeps her touch-sense from becoming infallible."
+
+[[entries]]
+id = "launch-strong-emotion-readable"
+file = "DISKA/F0001.MES"
+offset = 0x16c7
+source_mode = 1
+target_mode = 2
+source = "感情に起伏があれば、読めないこともないけど。"
+translation = "If her emotions surged, I might be able to read them."
+speaker = "Connie"
+context = "Connie explains the threshold of her touch-empathy."
+status = "qa-ready"
+notes = "Might' preserves the tentative double negative."
+
+[[entries]]
+id = "launch-how-much-longer"
+file = "DISKA/F0001.MES"
+offset = 0x16fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あとどれくらいかなぁ・・・・・・・・・。）"
+translation = "[CONNIE] (How much longer...?)"
+speaker = "コニー"
+context = "Connie returns to waiting for launch."
+status = "qa-ready"
+notes = "The plain impatience resets the scene after her reflection on Marie."
+
+[[entries]]
+id = "launch-after-adjustments"
+file = "DISKA/F0001.MES"
+offset = 0x171e
+source_mode = 1
+target_mode = 2
+source = "マシンの調整が終わり次第、発進だ。"
+translation = "We launch as soon as the machine adjustments are complete."
+speaker = "Connie"
+context = "Connie states the remaining pre-launch condition."
+status = "qa-ready"
+notes = "The collective 'we' refers to the Project D team initiating her departure."
+
+[[entries]]
+id = "launch-afraid-of-unknown"
+file = "DISKA/F0001.MES"
+offset = 0x1743
+source_mode = 1
+target_mode = 2
+source = "【コニー】（確かに・・・、未知の世界へ行く不安はあるわね・・・。）"
+translation = "[CONNIE] (Of course... I am afraid of going into an unknown world...)"
+speaker = "コニー"
+context = "Connie admits the obvious source of her nerves."
+status = "qa-ready"
+notes = "The composed phrasing shows her trying to reason herself calm."
+
+[[entries]]
+id = "launch-believed-kanzaki-mother"
+file = "DISKA/F0001.MES"
+offset = 0x1774
+source_mode = 1
+target_mode = 2
+source = "幼い頃は、神崎博士を母親だと信じていた。"
+translation = "When I was little, I believed Dr. Kanzaki was my mother."
+speaker = "Connie"
+context = "Connie recalls her earliest relationship to her creator."
+status = "qa-ready"
+notes = "Little' describes her developmental stage, not a long chronological childhood."
+
+[[entries]]
+id = "launch-learned-not-mother"
+file = "DISKA/F0001.MES"
+offset = 0x1791
+source_mode = 1
+target_mode = 2
+source = "だけど、ミュータントとヒトとの違いが理解できるようになると、母親じゃないとわかった。"
+translation = "But once I understood the difference between mutants and humans, I knew she wasn't."
+speaker = "Connie"
+context = "Connie learned that being created was not the same as being born."
+status = "qa-ready"
+notes = "The omitted noun after 'wasn't' naturally refers back to mother."
+
+[[entries]]
+id = "launch-cried-all-night"
+file = "DISKA/F0001.MES"
+offset = 0x17c4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あの時は一晩中、泣き続けたっけ・・・。）"
+translation = "[CONNIE] (I cried all night when I found out...)"
+speaker = "コニー"
+context = "Connie remembers the grief of learning her origin."
+status = "qa-ready"
+notes = "When I found out' ties the memory to the preceding realization without merging records."
+
+[[entries]]
+id = "launch-kanzaki-held-her"
+file = "DISKA/F0001.MES"
+offset = 0x17e6
+source_mode = 1
+target_mode = 2
+source = "あたしが自分の生い立ちを理解したとき、神崎博士は泣きじゃくるあたしをずっと抱いてくれた。"
+translation = "When I understood how I came to exist, Dr. Kanzaki held me while I sobbed and never let go."
+speaker = "Connie"
+context = "Kanzaki comforts Connie through the identity crisis."
+status = "qa-ready"
+notes = "How I came to exist' is more precise than 'where I came from' for an engineered person."
+
+[[entries]]
+id = "launch-kanzaki-many-roles"
+file = "DISKA/F0001.MES"
+offset = 0x181d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士は、あたしにとって、姉や母親であり、仕事の上司であり・・・。一番信頼できる人だ。）"
+translation = "[CONNIE] (To me, Dr. Kanzaki is an older sister, a mother, and my superior... the person I trust most.)"
+speaker = "コニー"
+context = "Connie defines her layered attachment to Kanzaki."
+status = "qa-ready"
+notes = "The roles stay cumulative and unresolved; English must not flatten Kanzaki into only one relationship."
+
+[[entries]]
+id = "launch-mutant-growth-varies"
+file = "DISKA/F0001.MES"
+offset = 0x186d
+source_mode = 1
+target_mode = 2
+source = "ミュータントは成長期間が不安定だ。掛け合わせた遺伝子によって違いができる。"
+translation = "Mutant growth is unpredictable. It varies with the genes used to create us."
+speaker = "Connie"
+context = "Connie explains mutant maturation."
+status = "qa-ready"
+notes = "The second sentence keeps the engineered-genetics cause explicit."
+
+[[entries]]
+id = "launch-three-years-to-adolescence"
+file = "DISKA/F0001.MES"
+offset = 0x189c
+source_mode = 1
+target_mode = 2
+source = "あたしやレミアのように、生まれて３年でヒトの第２次成長期まで成長するのもいる。"
+translation = "Some of us, like Remia and me, reach human adolescence only three years after birth."
+speaker = "Connie"
+context = "Connie distinguishes lived age from physical development."
+status = "qa-ready"
+notes = "第2次成長期 is naturalized as adolescence; the three-year interval remains unambiguous."
+
+[[entries]]
+id = "launch-cell-age-seventeen"
+file = "DISKA/F0001.MES"
+offset = 0x18ce
+source_mode = 1
+target_mode = 2
+source = "あたしは細胞年齢だと１７才だけど、造られてからは３年しか経ってない。"
+translation = "My cells are about seventeen years old, but only three years have passed since I was created."
+speaker = "Connie"
+context = "Connie states both her physical and chronological age."
+status = "qa-ready"
+notes = "Both ages are preserved exactly because their contradiction is central to her characterization."
+
+[[entries]]
+id = "launch-growth-now-human-rate"
+file = "DISKA/F0001.MES"
+offset = 0x18ff
+source_mode = 1
+target_mode = 2
+source = "もう成長は緩やかになっていて、あとはヒトの成長速度で成長する。"
+translation = "My growth has slowed now. From here on, I'll age at the same rate as a human."
+speaker = "Connie"
+context = "Connie clarifies that her accelerated maturation has ended."
+status = "qa-ready"
+notes = "Age' is natural English for continued physical growth after the initial acceleration."
+
+[[entries]]
+id = "launch-kanzaki-goggles"
+file = "DISKA/F0001.MES"
+offset = 0x1939
+source_mode = 1
+target_mode = 2
+source = "神崎博士は公害で目を痛めたのか、ゴーグルをよくつけている。"
+translation = "Perhaps pollution damaged Dr. Kanzaki's eyes. She usually wears goggles."
+speaker = "Connie"
+context = "Connie considers Kanzaki's concealed expression."
+status = "qa-ready"
+notes = "Perhaps' preserves Connie's uncertainty about the reason."
+
+[[entries]]
+id = "launch-sees-kanzaki-face"
+file = "DISKA/F0001.MES"
+offset = 0x195f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あの人のお風呂上がりに、あたしが髪の毛をブラッシングしてあげるとき、素顔を見るくらいかな・・・。）"
+translation = "[CONNIE] (I only see her bare face after her bath, when I brush her hair...)"
+speaker = "コニー"
+context = "Connie recalls private domestic life with Kanzaki."
+status = "qa-ready"
+notes = "Bare face' means without the goggles; the bath detail is preserved without embellishment."
+
+[[entries]]
+id = "launch-kanzaki-brushes-connie"
+file = "DISKA/F0001.MES"
+offset = 0x19a5
+source_mode = 1
+target_mode = 2
+source = "あたしは髪の毛を触られるのが好きなので、お風呂上がりには神崎博士にブラッシングしてもらう。"
+translation = "I love having my hair touched, so after my bath I let Dr. Kanzaki brush it."
+speaker = "Connie"
+context = "Connie describes their reciprocal grooming ritual."
+status = "qa-ready"
+notes = "The line is domestic and tactile; no feline language is added beyond the source."
+
+[[entries]]
+id = "launch-connie-brushes-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x19e0
+source_mode = 1
+target_mode = 2
+source = "もちろん、あたしもしてあげている。"
+translation = "Of course, I brush hers too."
+speaker = "Connie"
+context = "Connie completes the reciprocal grooming detail."
+status = "qa-ready"
+notes = "Hers' naturally carries both hair and the repeated action."
+
+[[entries]]
+id = "launch-lived-like-family"
+file = "DISKA/F0001.MES"
+offset = 0x19f7
+source_mode = 1
+target_mode = 2
+source = "あたしたちは家族同様に暮らしていた。"
+translation = "We lived together like a family."
+speaker = "Connie"
+context = "Connie names the domestic bond she and Kanzaki formed."
+status = "qa-ready"
+notes = "Like a family' preserves the important distinction from a literal biological family."
+
+[[entries]]
+id = "launch-content-with-life"
+file = "DISKA/F0001.MES"
+offset = 0x1a12
+source_mode = 1
+target_mode = 2
+source = "神崎博士を姉として母として慕い、あたしは今の生活に満足していた。"
+translation = "I loved Dr. Kanzaki as both sister and mother, and I was happy with our life."
+speaker = "Connie"
+context = "Connie expresses contentment before Project D separates them."
+status = "qa-ready"
+notes = "慕う carries affection and attachment; 'loved' is accurate without assigning a single relationship category."
+
+[[entries]]
+id = "launch-kanzaki-home-and-public"
+file = "DISKA/F0001.MES"
+offset = 0x1a3d
+source_mode = 1
+target_mode = 2
+source = "家に居るとき、あたしが甘えても厳しく言わないけれど、一歩外に出ると神崎博士は別人のように厳しくなる。"
+translation = "At home she lets me be affectionate without scolding me. The moment we step outside, Dr. Kanzaki becomes strict enough to seem like someone else."
+speaker = "Connie"
+context = "Connie contrasts Kanzaki's private and public personas."
+status = "qa-ready"
+notes = "Be affectionate' captures 甘える without forcing childish dependency or sexualizing the line."
+
+[[entries]]
+id = "launch-kanzaki-government-position"
+file = "DISKA/F0001.MES"
+offset = 0x1a79
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士も政府関係者の立場上の問題があるから、しかたないわね・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki has her position with the government to think about. I can't blame her...)"
+speaker = "コニー"
+context = "Connie rationalizes Kanzaki's public distance."
+status = "qa-ready"
+notes = "I can't blame her' conveys しかたない with affectionate acceptance."
+
+[[entries]]
+id = "launch-public-kanzaki-scary"
+file = "DISKA/F0001.MES"
+offset = 0x1ab0
+source_mode = 1
+target_mode = 2
+source = "外の神崎博士はちょっと恐い。厳しさが含まれた恐さだ。"
+translation = "Dr. Kanzaki is a little scary in public. It is the fear that comes with her strictness."
+speaker = "Connie"
+context = "Connie describes the effect of Kanzaki's professional authority."
+status = "qa-ready"
+notes = "The second sentence distinguishes stern intimidation from actual danger."
+
+[[entries]]
+id = "launch-kanzaki-two-faces"
+file = "DISKA/F0001.MES"
+offset = 0x1aec
+source_mode = 1
+target_mode = 2
+source = "あたしでも外と家の中での神崎博士の「顔」のギャップに驚くことがある。"
+translation = "Even I am sometimes startled by the gap between the face she shows outside and the one she wears at home."
+speaker = "Connie"
+context = "Connie reflects on Kanzaki's sharply separated personas."
+status = "qa-ready"
+notes = "Face' retains the source metaphor and foreshadows her later performed cruelty."
+
+[[entries]]
+id = "launch-connie-has-it-easy"
+file = "DISKA/F0001.MES"
+offset = 0x1b19
+source_mode = 1
+target_mode = 2
+source = "その点、あたし自身は気楽でいいと思う。"
+translation = "Compared with that, I have it easy."
+speaker = "Connie"
+context = "Connie compares her role with Kanzaki's political burden."
+status = "qa-ready"
+notes = "The phrase is appreciative rather than self-pitying."
+
+[[entries]]
+id = "launch-kanzaki-handles-difficult-people"
+file = "DISKA/F0001.MES"
+offset = 0x1b35
+source_mode = 1
+target_mode = 2
+source = "気難しい人たちと話すこともない。そういう人とのやりとりは神崎博士が行っている。"
+translation = "I never have to deal with difficult officials. Dr. Kanzaki handles people like that."
+speaker = "Connie"
+context = "Connie describes the protective administrative role Kanzaki plays."
+status = "qa-ready"
+notes = "Officials' is inferred from the government-position context, not a new named institution."
+
+[[entries]]
+id = "launch-before-past-silence"
+file = "DISKA/F0001.MES"
+offset = 0x1b6c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie falls silent as the departure becomes real."
+status = "qa-ready"
+notes = "The pause begins a sequence of increasingly personal thoughts."
+
+[[entries]]
+id = "launch-to-the-past"
+file = "DISKA/F0001.MES"
+offset = 0x1b88
+source_mode = 1
+target_mode = 2
+source = "【コニー】（過去へ・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Into the past...)"
+speaker = "コニー"
+context = "Connie names the destination to herself."
+status = "qa-ready"
+notes = "Into' preserves the directional force of へ."
+
+[[entries]]
+id = "launch-time-to-go-past"
+file = "DISKA/F0001.MES"
+offset = 0x1ba7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・過去へ・・・、行くときが・・・・・・・・・。）"
+translation = "[CONNIE] (...It's almost time... to go into the past...)"
+speaker = "コニー"
+context = "Connie feels departure approaching."
+status = "qa-ready"
+notes = "Almost' supplies the unfinished 時が construction from the immediate launch context."
+
+[[entries]]
+id = "launch-chest-tightens"
+file = "DISKA/F0001.MES"
+offset = 0x1bcc
+source_mode = 1
+target_mode = 2
+source = "あたしの胸が締め付けられるように、きゅん、となる。"
+translation = "My heart gives a painful little squeeze."
+speaker = "Connie"
+context = "Connie's fear and attachment become physical."
+status = "qa-ready"
+notes = "きゅん can be romantic or poignant; 'painful little squeeze' preserves the ambiguous ache."
+
+[[entries]]
+id = "launch-kanzaki-private-thought"
+file = "DISKA/F0001.MES"
+offset = 0x1bee
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie addresses Kanzaki silently before risking the crossing."
+status = "qa-ready"
+notes = "This anchor remains separate from the same words in later contexts."
+
+[[entries]]
+id = "launch-if-warp-fails"
+file = "DISKA/F0001.MES"
+offset = 0x1c0e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・このままタイムワープが失敗しても、あたしは・・・・・・・・・。）"
+translation = "[CONNIE] (...Even if the time warp fails, I...)"
+speaker = "コニー"
+context = "Connie contemplates dying during the crossing."
+status = "qa-ready"
+notes = "The sentence remains incomplete until the next physical record."
+
+[[entries]]
+id = "launch-no-regrets"
+file = "DISKA/F0001.MES"
+offset = 0x1c40
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしは後悔しません・・・・・・・・・。）"
+translation = "[CONNIE] (I won't regret it...)"
+speaker = "コニー"
+context = "Connie completes her vow if the mission kills her."
+status = "qa-ready"
+notes = "The polite Japanese register is directed inward toward Kanzaki; the English stays solemn."
+
+[[entries]]
+id = "launch-life-for-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x1c62
+source_mode = 1
+target_mode = 2
+source = "あなたのためなら、この命、惜しくはないです。"
+translation = "If it is for you, I would gladly give my life."
+speaker = "Connie"
+context = "Connie silently dedicates the risk to Kanzaki."
+status = "qa-ready"
+notes = "The formal ending and direct あなた make this a private vow, not general mission rhetoric."
+
+[[entries]]
+id = "launch-for-you-fragment"
+file = "DISKA/F0001.MES"
+offset = 0x1c7f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あなたの、ためなら・・・あたしは・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (For you... I would...)"
+speaker = "コニー"
+context = "Connie repeats the devotion but cannot finish the thought."
+status = "qa-ready"
+notes = "The broken repetition exposes emotion beneath her earlier resolute phrasing."
+
+[[entries]]
+id = "launch-hunter-life-danger"
+file = "DISKA/F0001.MES"
+offset = 0x1cab
+source_mode = 1
+target_mode = 2
+source = "ミュータントハンターとして生活しているときも、死と隣り合わせの危険があった。"
+translation = "Life as a Mutant Hunter has always kept me close to death."
+speaker = "Connie"
+context = "Connie compares launch risk with her ordinary work."
+status = "qa-ready"
+notes = "The compact English retains the source's constant proximity to danger."
+
+[[entries]]
+id = "launch-injured-without-fear"
+file = "DISKA/F0001.MES"
+offset = 0x1cdc
+source_mode = 1
+target_mode = 2
+source = "他のミュータントを捕獲するときに重傷を負ったりしたが、死への恐怖はなかった。"
+translation = "I've been badly wounded capturing other mutants, but I never feared death."
+speaker = "Connie"
+context = "Connie recalls the hazards of her work."
+status = "qa-ready"
+notes = "The troubling hunter-versus-mutant role is preserved without euphemism."
+
+[[entries]]
+id = "launch-life-given-by-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x1d0f
+source_mode = 1
+target_mode = 2
+source = "あの人にもらった命。あの人のために使えるなら、あたしは満足だった。"
+translation = "She gave me this life. I would be content to spend it for her."
+speaker = "Connie"
+context = "Connie frames her creation as a debt to Kanzaki."
+status = "qa-ready"
+notes = "Spend it' preserves her sincere but unhealthy instrumental view of her own life."
+
+[[entries]]
+id = "launch-but-she-would-grieve"
+file = "DISKA/F0001.MES"
+offset = 0x1d39
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ただ・・・・・・・・・・・・。）"
+translation = "[CONNIE] (But...)"
+speaker = "コニー"
+context = "Connie catches the flaw in her willingness to die."
+status = "qa-ready"
+notes = "The conjunction points forward while remaining its own timed record."
+
+[[entries]]
+id = "launch-must-return-for-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x1d54
+source_mode = 1
+target_mode = 2
+source = "あたしが生きて帰らないと、あの人が悲しむから、あたしは生きて帰る。"
+translation = "If I don't come back alive, she will grieve. So I will come back alive."
+speaker = "Connie"
+context = "Connie turns devotion into a reason to survive."
+status = "qa-ready"
+notes = "The deliberate repetition of 'alive' mirrors her self-command."
+
+[[entries]]
+id = "launch-one-year-ago"
+file = "DISKA/F0001.MES"
+offset = 0x1d7b
+source_mode = 1
+target_mode = 2
+source = "１年前・・・。"
+translation = "One year ago..."
+speaker = "Connie"
+context = "Connie begins a memory of a hunting injury."
+status = "qa-ready"
+notes = "The date remains relative to 2296."
+
+[[entries]]
+id = "launch-kanzaki-rushed-hospital"
+file = "DISKA/F0001.MES"
+offset = 0x1d89
+source_mode = 1
+target_mode = 2
+source = "あたしが重傷を負って入院した時、あの人は仕事を放り出して駆けつけてくれた。"
+translation = "When I was hospitalized with a serious wound, she abandoned her work and rushed to me."
+speaker = "Connie"
+context = "Connie remembers Kanzaki's reaction to nearly losing her."
+status = "qa-ready"
+notes = "Abandoned her work' carries the force of 放り出す and shows how exceptional the response was."
+
+[[entries]]
+id = "launch-never-forgot-hospital"
+file = "DISKA/F0001.MES"
+offset = 0x1db9
+source_mode = 1
+target_mode = 2
+source = "その時のことは今でも忘れない。"
+translation = "I still haven't forgotten that day."
+speaker = "Connie"
+context = "Connie marks the hospital memory as formative."
+status = "qa-ready"
+notes = "Day' is natural English for the whole remembered event."
+
+[[entries]]
+id = "launch-kanzaki-embraced-her"
+file = "DISKA/F0001.MES"
+offset = 0x1dce
+source_mode = 1
+target_mode = 2
+source = "あの人はあたしの病室に駆けつけるなり、あたしを抱き締めてくれた。"
+translation = "The moment she reached my hospital room, she wrapped me in her arms."
+speaker = "Connie"
+context = "Kanzaki embraces the injured Connie."
+status = "qa-ready"
+notes = "Wrapped me in her arms' conveys immediate protective relief."
+
+[[entries]]
+id = "launch-held-against-chest"
+file = "DISKA/F0001.MES"
+offset = 0x1df8
+source_mode = 1
+target_mode = 2
+source = "ほっそりとした腕に抱かれながら、あたしは押し付けられるふくよかな胸を感じていた。"
+translation = "Held by her slender arms, I could feel the softness of her breast pressed against me."
+speaker = "Connie"
+context = "Connie recalls the physical closeness of Kanzaki's frightened embrace."
+status = "qa-ready"
+notes = "The archival translation retains the source's eroticized body detail without adding intensity."
+
+[[entries]]
+id = "launch-felt-kanzaki-worry"
+file = "DISKA/F0001.MES"
+offset = 0x1e2b
+source_mode = 1
+target_mode = 2
+source = "触れた肌から、心配している気持ちが痛いほどに伝わってきたのを覚えている。"
+translation = "Through our touching skin, I felt her worry so sharply that it hurt."
+speaker = "Connie"
+context = "Connie's touch-empathy reveals Kanzaki's fear."
+status = "qa-ready"
+notes = "The emotional pain, not the embrace itself, is the line's culmination."
+
+[[entries]]
+id = "launch-stopped-being-reckless-maybe"
+file = "DISKA/F0001.MES"
+offset = 0x1e59
+source_mode = 1
+target_mode = 2
+source = "あれからあたしは無茶はしなくなった。・・・と思う。"
+translation = "After that, I stopped being reckless... I think."
+speaker = "Connie"
+context = "Connie claims the hospital scare changed her behavior."
+status = "qa-ready"
+notes = "The delayed qualification restores her lively self-deprecating humor."
+
+[[entries]]
+id = "launch-probably-less-reckless"
+file = "DISKA/F0001.MES"
+offset = 0x1e79
+source_mode = 1
+target_mode = 2
+source = "きっと。おそらく。たぶん。・・・・・・・・・・・・前よりは無茶はしてないから、・・・・・・・・・。"
+translation = "Definitely. Probably. Maybe... At least I'm not as reckless as before..."
+speaker = "Connie"
+context = "Connie comically weakens her own claim."
+status = "qa-ready"
+notes = "The descending certainty is preserved exactly as the joke."
+
+[[entries]]
+id = "launch-only-cuts-bruises"
+file = "DISKA/F0001.MES"
+offset = 0x1eb3
+source_mode = 1
+target_mode = 2
+source = "体を切り裂かれる大きな怪我はしないようになったし、せいぜい切傷と打撲くらい。"
+translation = "I avoid wounds that tear my body open now. The worst I get is a cut or a bruise."
+speaker = "Connie"
+context = "Connie offers an alarming standard for improved caution."
+status = "qa-ready"
+notes = "The contrast preserves the dark joke in her mutant-hunter baseline."
+
+[[entries]]
+id = "launch-mutant-healing"
+file = "DISKA/F0001.MES"
+offset = 0x1ee9
+source_mode = 1
+target_mode = 2
+source = "ミュータントのあたしは回復能力は早い。"
+translation = "As a mutant, I heal quickly."
+speaker = "Connie"
+context = "Connie explains why ordinary injuries do not hospitalize her."
+status = "qa-ready"
+notes = "The slight source redundancy becomes compact English."
+
+[[entries]]
+id = "launch-rarely-hospitalized"
+file = "DISKA/F0001.MES"
+offset = 0x1f05
+source_mode = 1
+target_mode = 2
+source = "あたしが入院するのはよっぽどのことだが、退院するのも早い。"
+translation = "It takes something serious to put me in a hospital, and I leave quickly when it does."
+speaker = "Connie"
+context = "Connie qualifies the severity of her remembered injury."
+status = "qa-ready"
+notes = "The parallel admission/discharge idea is retained without awkward repetition."
+
+[[entries]]
+id = "launch-dislikes-hospital-smell"
+file = "DISKA/F0001.MES"
+offset = 0x1f2c
+source_mode = 1
+target_mode = 2
+source = "もっとも、消毒薬臭い部屋に長居をすること自体、あたしの趣味じゃないから。"
+translation = "Then again, lingering in rooms that reek of disinfectant isn't exactly my idea of fun."
+speaker = "Connie"
+context = "Connie jokes about her sensory dislike of hospitals."
+status = "qa-ready"
+notes = "The casual idiom preserves her nose-sensitive humor."
+
+[[entries]]
+id = "launch-catches-herself"
+file = "DISKA/F0001.MES"
+offset = 0x1f60
+source_mode = 1
+target_mode = 2
+source = "・・・っと・・・。"
+translation = "...Wait..."
+speaker = "Connie"
+context = "Connie notices her thoughts have wandered."
+status = "qa-ready"
+notes = "The interjection marks self-interruption rather than physical waiting."
+
+[[entries]]
+id = "launch-lost-focus"
+file = "DISKA/F0001.MES"
+offset = 0x1f6e
+source_mode = 1
+target_mode = 2
+source = "考えが散漫になり、集中することを忘れてた。"
+translation = "My thoughts wandered so far that I forgot to focus."
+speaker = "Connie"
+context = "Connie pulls herself back to the mission."
+status = "qa-ready"
+notes = "The mild redundancy is intentional self-critique."
+
+[[entries]]
+id = "launch-act-dont-worry"
+file = "DISKA/F0001.MES"
+offset = 0x1f8d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・悩むより、まず行動しなきゃ。）"
+translation = "[CONNIE] (...No more worrying. I have to act.)"
+speaker = "コニー"
+context = "Connie resolves to concentrate on launch procedure."
+status = "qa-ready"
+notes = "The decisive two-clause English suits her hunter voice."
+
+[[entries]]
+id = "launch-time-quake-term"
+file = "DISKA/F0001.MES"
+offset = 0x1fbf
+source_mode = 1
+target_mode = 2
+source = "時空震動－－－－－。"
+translation = "A Time Quake."
+speaker = "Connie"
+context = "Connie begins reviewing the phenomenon behind Project D."
+status = "qa-ready"
+notes = "Time Quake is the locked story shorthand for 時空震動."
+
+[[entries]]
+id = "launch-rift-in-time"
+file = "DISKA/F0001.MES"
+offset = 0x1fce
+source_mode = 1
+target_mode = 2
+source = "時間のねじれが引き起こした、時間の裂け目。"
+translation = "A twist in time that tore open a rift."
+speaker = "Connie"
+context = "Connie defines the Time Quake in practical terms."
+status = "qa-ready"
+notes = "The compact image preserves the pseudo-science without inventing rigorous physics."
+
+[[entries]]
+id = "launch-tunnel-three-hundred-years"
+file = "DISKA/F0001.MES"
+offset = 0x1fea
+source_mode = 1
+target_mode = 2
+source = "『時間のひずみ＝タイムトンネル』に飛び込めば、３００年前の世界へ行くことができる。"
+translation = "Dive into that space-time distortion, the time tunnel, and you can reach the world of three hundred years ago."
+speaker = "Connie"
+context = "Connie states the destination relationship."
+status = "qa-ready"
+notes = "The equality sign is naturalized as an apposition; the correct 2296-to-1996 interval is retained."
+
+[[entries]]
+id = "launch-machine-travels-between-worlds"
+file = "DISKA/F0001.MES"
+offset = 0x2021
+source_mode = 1
+target_mode = 2
+source = "その世界とあたしの世界を往復する移動機械が、このタイムマシンだ。"
+translation = "This time machine is the vehicle that travels between that world and mine."
+speaker = "Connie"
+context = "Connie defines the machine's purpose."
+status = "qa-ready"
+notes = "World' preserves Connie's sense that 1996 is an unknown place, not merely a date."
+
+[[entries]]
+id = "launch-vehicle-through-tunnel"
+file = "DISKA/F0001.MES"
+offset = 0x204a
+source_mode = 1
+target_mode = 2
+source = "トンネルを通り抜けて、行き来する乗物。"
+translation = "A vehicle made to pass through the tunnel and back again."
+speaker = "Connie"
+context = "Connie restates the machine's role."
+status = "qa-ready"
+notes = "The repetition reflects her rehearsing what she understands."
+
+[[entries]]
+id = "launch-tunnel-needs-machine"
+file = "DISKA/F0001.MES"
+offset = 0x2064
+source_mode = 1
+target_mode = 2
+source = "【コニー】（タイムトンネルが存在していても、トンネルを移動できるマシンがあってこそだ・・・・・・。）"
+translation = "[CONNIE] (A time tunnel is useless unless you have a machine that can travel through it...)"
+speaker = "コニー"
+context = "Connie reasons through Project D's engineering problem."
+status = "qa-ready"
+notes = "Useless' makes the こそ emphasis natural in her blunt internal voice."
+
+[[entries]]
+id = "launch-machine-withstands-tunnel"
+file = "DISKA/F0001.MES"
+offset = 0x209e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そう。トンネルの圧力に耐えられるマシン。機体を震動させても平気なマシン・・・。）"
+translation = "[CONNIE] (Right. A machine that can withstand the tunnel's pressure... and survive having its whole hull shaken...)"
+speaker = "コニー"
+context = "Connie lists the machine's required properties."
+status = "qa-ready"
+notes = "The halting checklist keeps her limited, operational grasp of the theory."
+
+[[entries]]
+id = "launch-match-natural-frequency"
+file = "DISKA/F0001.MES"
+offset = 0x20d5
+source_mode = 1
+target_mode = 2
+source = "トンネルをくぐるには、トンネルが震動している固有震動数と同じ値をマシンに与えればいい。"
+translation = "To enter the tunnel, we give the machine the same natural frequency as the tunnel's oscillation."
+speaker = "Connie"
+context = "Connie explains the frequency-matching procedure."
+status = "qa-ready"
+notes = "Natural frequency' is the correct technical sense of 固有震動数."
+
+[[entries]]
+id = "launch-match-oscillations"
+file = "DISKA/F0001.MES"
+offset = 0x2109
+source_mode = 1
+target_mode = 2
+source = "つまり、時空震動数と、マシンの震動数を合わせる。"
+translation = "In other words, match the machine's frequency to the space-time oscillation."
+speaker = "Connie"
+context = "Connie reduces the theory to the pilot's key instruction."
+status = "qa-ready"
+notes = "Space-time oscillation is used in this technical register rather than the shorthand Time Quake."
+
+[[entries]]
+id = "launch-enter-and-exit-tunnel"
+file = "DISKA/F0001.MES"
+offset = 0x2126
+source_mode = 1
+target_mode = 2
+source = "そうすれば時空トンネルへ突入できる。トンネルからの脱出は震動を減らしていけばいい。"
+translation = "That lets the machine enter the time tunnel. To emerge, gradually reduce its oscillation."
+speaker = "Connie"
+context = "Connie states the entry and exit controls."
+status = "qa-ready"
+notes = "The English distinguishes the machine's imposed oscillation from the tunnel itself."
+
+[[entries]]
+id = "launch-theory-beyond-connie"
+file = "DISKA/F0001.MES"
+offset = 0x2170
+source_mode = 1
+target_mode = 2
+source = "時空震動理論は、あたしでは理解できそうにない。"
+translation = "The full theory of space-time oscillation is beyond me."
+speaker = "Connie"
+context = "Connie admits the boundary of her understanding."
+status = "qa-ready"
+notes = "This limitation is important to the voice and keeps the exposition from claiming scientific rigor."
+
+[[entries]]
+id = "launch-understands-only-matching"
+file = "DISKA/F0001.MES"
+offset = 0x218e
+source_mode = 1
+target_mode = 2
+source = "神崎博士に理論の説明を受けたが、震動数を合わせる所までしかわからなかった。"
+translation = "Dr. Kanzaki explained it to me, but frequency matching is as far as I could follow."
+speaker = "Connie"
+context = "Connie distinguishes pilot training from theoretical expertise."
+status = "qa-ready"
+notes = "Could follow' sounds natural for an explanation she heard but did not fully grasp."
+
+[[entries]]
+id = "launch-what-kanzaki-meant"
+file = "DISKA/F0001.MES"
+offset = 0x21c6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士は・・・・・・何を言おうとしたんだろう・・・。）"
+translation = "[CONNIE] (What... was Dr. Kanzaki trying to tell me...?)"
+speaker = "コニー"
+context = "Connie returns to Kanzaki's strange behavior."
+status = "qa-ready"
+notes = "The question preserves the foreshadowing without guessing the unsaid confession."
+
+[[entries]]
+id = "launch-cannot-read-kanzaki-expression"
+file = "DISKA/F0001.MES"
+offset = 0x21ef
+source_mode = 1
+target_mode = 2
+source = "神崎博士の表情は読めない。"
+translation = "I can't read Dr. Kanzaki's expression."
+speaker = "Connie"
+context = "Kanzaki's goggles and control conceal her feelings."
+status = "qa-ready"
+notes = "Read' links ordinary observation with Connie's broader empathic habits."
+
+[[entries]]
+id = "launch-oscillation-system-nominal"
+file = "DISKA/F0001.MES"
+offset = 0x221b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空震動システムは順調。）"
+translation = "[CONNIE] (Space-time oscillation system: nominal.)"
+speaker = "コニー"
+context = "Connie checks the technical launch status."
+status = "qa-ready"
+notes = "Nominal' follows the locked terminal register and her checklist voice."
+
+[[entries]]
+id = "launch-prays-it-works"
+file = "DISKA/F0001.MES"
+offset = 0x2237
+source_mode = 1
+target_mode = 2
+source = "【コニー】（このままうまくいきますように・・・・・・・・・。）"
+translation = "[CONNIE] (Please... let everything keep working...)"
+speaker = "コニー"
+context = "Connie quietly hopes the stable readings continue."
+status = "qa-ready"
+notes = "The prayer-like ように becomes a direct plea without naming a deity."
+
+[[entries]]
+id = "launch-kanzaki-rarely-weak"
+file = "DISKA/F0001.MES"
+offset = 0x2264
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士は滅多に弱気になったりしないのに・・・）"
+translation = "[CONNIE] (Dr. Kanzaki almost never loses her nerve...)"
+speaker = "コニー"
+context = "Connie contrasts launch-day Kanzaki with her normal strength."
+status = "qa-ready"
+notes = "Loses her nerve' is situational and avoids calling Kanzaki personally weak."
+
+[[entries]]
+id = "launch-kanzaki-distracted"
+file = "DISKA/F0001.MES"
+offset = 0x228a
+source_mode = 1
+target_mode = 2
+source = "今日の神崎博士は、心ここにあらず、という雰囲気に思える。"
+translation = "Today, Dr. Kanzaki seems as though her mind is somewhere else."
+speaker = "Connie"
+context = "Connie observes Kanzaki's preoccupation."
+status = "qa-ready"
+notes = "The idiom naturally renders 心ここにあらず."
+
+[[entries]]
+id = "launch-chest-aches"
+file = "DISKA/F0001.MES"
+offset = 0x22ae
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・なんだか・・・。胸が苦しい・・・。）"
+translation = "[CONNIE] (...Something feels wrong... My chest hurts...)"
+speaker = "コニー"
+context = "Kanzaki's unease triggers Connie's own foreboding."
+status = "qa-ready"
+notes = "Something feels wrong' connects the physical discomfort to intuition without making it supernatural."
+
+[[entries]]
+id = "launch-bad-feeling"
+file = "DISKA/F0001.MES"
+offset = 0x22d0
+source_mode = 1
+target_mode = 2
+source = "嫌な予感というものだろうか？"
+translation = "Is this what people call a bad feeling?"
+speaker = "Connie"
+context = "Three-year-old Connie names an unfamiliar sense of foreboding."
+status = "qa-ready"
+notes = "The slightly distanced phrasing reflects her limited lived experience."
+
+[[entries]]
+id = "launch-hopes-only-nerves"
+file = "DISKA/F0001.MES"
+offset = 0x22e5
+source_mode = 1
+target_mode = 2
+source = "タイムワープというのは初めてなので、緊張しているだけだと思いたい。"
+translation = "This is my first time warp. I want to believe I'm only nervous."
+speaker = "Connie"
+context = "Connie tries to rationalize the foreboding."
+status = "qa-ready"
+notes = "The simple first sentence keeps her operational, self-calming cadence."
+
+[[entries]]
+id = "launch-kanzaki-showing-weakness"
+file = "DISKA/F0001.MES"
+offset = 0x2326
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士が弱気になるなんて・・・・・・・・・。）"
+translation = "[CONNIE] (For Dr. Kanzaki to lose her nerve...)"
+speaker = "コニー"
+context = "Connie remains disturbed by Kanzaki's expression."
+status = "qa-ready"
+notes = "The unfinished line conveys disbelief rather than a complete judgment."
+
+[[entries]]
+id = "launch-rare-expression"
+file = "DISKA/F0001.MES"
+offset = 0x234a
+source_mode = 1
+target_mode = 2
+source = "あたしには滅多に見せない表情だった。"
+translation = "It is an expression she almost never shows me."
+speaker = "Connie"
+context = "Connie recognizes unusual vulnerability in Kanzaki."
+status = "qa-ready"
+notes = "Shows me' stresses intimacy: Connie knows Kanzaki's usual faces well."
+
+[[entries]]
+id = "launch-expression-worries-her"
+file = "DISKA/F0001.MES"
+offset = 0x2363
+source_mode = 1
+target_mode = 2
+source = "そういう表情をされると、心配になってくる。"
+translation = "Seeing her look like that makes me worry."
+speaker = "Connie"
+context = "Kanzaki's vulnerability unsettles Connie."
+status = "qa-ready"
+notes = "The sentence remains direct and emotionally young."
+
+[[entries]]
+id = "launch-pull-yourself-together"
+file = "DISKA/F0001.MES"
+offset = 0x237e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（いけない・・・・・・・・・。しっかりしなくちゃ。）"
+translation = "[CONNIE] (No... I have to pull myself together.)"
+speaker = "コニー"
+context = "Connie suppresses her fear to perform as pilot."
+status = "qa-ready"
+notes = "Pull myself together' is the natural self-command for しっかりしなくちゃ."
+
+[[entries]]
+id = "launch-shared-anxiety"
+file = "DISKA/F0001.MES"
+offset = 0x23a2
+source_mode = 1
+target_mode = 2
+source = "不安はあたしも神崎博士も同じ。"
+translation = "Dr. Kanzaki and I are both afraid."
+speaker = "Connie"
+context = "Connie reframes Kanzaki's anxiety as shared concern."
+status = "qa-ready"
+notes = "Afraid' is more emotionally honest than the abstract noun 'anxiety.'"
+
+[[entries]]
+id = "launch-pilot-cannot-look-afraid"
+file = "DISKA/F0001.MES"
+offset = 0x23b6
+source_mode = 1
+target_mode = 2
+source = "パイロットのあたしが不安そうにしてちゃいけないんだ。"
+translation = "I'm the pilot. I can't let myself look afraid."
+speaker = "Connie"
+context = "Connie adopts professional composure for the team."
+status = "qa-ready"
+notes = "Look afraid' preserves the concern with outward demeanor."
+
+[[entries]]
+id = "launch-strong-for-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x23de
+source_mode = 1
+target_mode = 2
+source = "【コニー】（しっかりしなくちゃ・・・。あたしを送り出す神崎博士も不安なはずよ・・・。）"
+translation = "[CONNIE] (Stay strong... Dr. Kanzaki must be afraid to send me too...)"
+speaker = "コニー"
+context = "Connie uses concern for Kanzaki to steady herself."
+status = "qa-ready"
+notes = "Stay strong' reads as a terse internal command."
+
+[[entries]]
+id = "launch-mission-intact-genetic-material"
+file = "DISKA/F0001.MES"
+offset = 0x240f
+source_mode = 1
+target_mode = 2
+source = "あたしの任務は、『過去へ行って正常な遺伝子を採取してくる』こと。"
+translation = "My mission is to travel into the past and collect intact genetic material."
+speaker = "Connie"
+context = "Connie restates Project D's primary objective."
+status = "qa-ready"
+notes = "正常な遺伝子 follows the locked 'intact genetic material' policy, avoiding eugenic 'normal genes.'"
+
+[[entries]]
+id = "launch-fixes-purpose-in-heart"
+file = "DISKA/F0001.MES"
+offset = 0x243e
+source_mode = 1
+target_mode = 2
+source = "もう一度、目的を心へ刻み込んだ。"
+translation = "Once more, I carve that purpose into my heart."
+speaker = "Connie"
+context = "Connie turns the mission statement into resolve."
+status = "qa-ready"
+notes = "The source metaphor is retained because it suits the solemn pivot."
+
+[[entries]]
+id = "launch-machine-hums-and-shivers"
+file = "DISKA/F0001.MES"
+offset = 0x2455
+source_mode = 1
+target_mode = 2
+source = "マシンが小さくうなりをあげ、時空震動とシンクロした機体が小刻みに揺れる。"
+translation = "The machine gives a low hum. Synchronized with the space-time oscillation, the hull begins to shiver."
+speaker = "Connie"
+context = "The time machine enters its active launch state."
+status = "qa-ready"
+notes = "Shiver' keeps the small, ominous vibration distinct from the later violent shaking."
+
+[[entries]]
+id = "launch-ka-boom-joke"
+file = "DISKA/F0001.MES"
+offset = 0x2484
+source_mode = 1
+target_mode = 2
+source = "【コニー】（もしここでマシンが、どっかーーん！　なんて爆発したら見納めね・・・。）"
+translation = "[CONNIE] (If the machine suddenly went ka-boom right now, this would be my last view...)"
+speaker = "コニー"
+context = "Connie's nerves produce a darkly comic catastrophic thought."
+status = "qa-ready"
+notes = "Ka-boom' deliberately preserves the childish onomatopoeic joke in her otherwise competent voice."
+
+[[entries]]
+id = "launch-bad-luck-thought"
+file = "DISKA/F0001.MES"
+offset = 0x24ce
+source_mode = 1
+target_mode = 2
+source = "ううう、縁起でもないことを考えてしまった。"
+translation = "Ugh. Why did I have to think of something so unlucky?"
+speaker = "Connie"
+context = "Connie immediately regrets imagining an explosion."
+status = "qa-ready"
+notes = "The rhetorical English keeps her comic superstition."
+
+[[entries]]
+id = "launch-think-positive"
+file = "DISKA/F0001.MES"
+offset = 0x24ea
+source_mode = 1
+target_mode = 2
+source = "【コニー】（今は、前向きな事を考えておこう・・・。）"
+translation = "[CONNIE] (Think positive thoughts for now...)"
+speaker = "コニー"
+context = "Connie deliberately redirects her imagination."
+status = "qa-ready"
+notes = "The imperative captures her self-coaching tone."
+
+[[entries]]
+id = "launch-fear-would-crush-her"
+file = "DISKA/F0001.MES"
+offset = 0x250c
+source_mode = 1
+target_mode = 2
+source = "そうしないと、不安に押し潰されそうになるから。"
+translation = "Otherwise, the fear feels ready to crush me."
+speaker = "Connie"
+context = "Connie admits what the humor is holding back."
+status = "qa-ready"
+notes = "The physical metaphor connects with her earlier sense of pressure."
+
+[[entries]]
+id = "launch-light-dancing"
+file = "DISKA/F0001.MES"
+offset = 0x2533
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まるで、光が踊っているよう・・・。）"
+translation = "[CONNIE] (It looks as though the light itself is dancing...)"
+speaker = "コニー"
+context = "Connie marvels at the time-tunnel view."
+status = "qa-ready"
+notes = "The lyrical image briefly overtakes her technical self-coaching."
+
+[[entries]]
+id = "launch-radio-cut-off"
+file = "DISKA/F0001.MES"
+offset = 0x2552
+source_mode = 1
+target_mode = 2
+source = "もう電波も届かない。あたしの時代へ通信もできない。"
+translation = "Radio waves no longer reach me. I can't communicate with my own time."
+speaker = "Connie"
+context = "Connie passes beyond contact with 2296."
+status = "qa-ready"
+notes = "Own time' is clearer than repeating 'my era' during the crossing."
+
+[[entries]]
+id = "launch-one-signal-from-other-side"
+file = "DISKA/F0001.MES"
+offset = 0x2575
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空震動を発見したときは、向こうの世界から電波が届いたことがあったけど、最初だけだった・・・。）"
+translation = "[CONNIE] (When we discovered the Time Quake, a radio signal reached us from the other world... but only once...)"
+speaker = "コニー"
+context = "Connie recalls the evidence that first proved a world lay beyond the rift."
+status = "qa-ready"
+notes = "The signal is singular in effect and is not expanded into invented contents."
+
+[[entries]]
+id = "launch-alone-decisions"
+file = "DISKA/F0001.MES"
+offset = 0x25b5
+source_mode = 1
+target_mode = 2
+source = "ここからはあたし一人で判断して、行動を決めなければならない。"
+translation = "From here on, every judgment and every move is mine alone."
+speaker = "Connie"
+context = "Connie accepts command responsibility after losing contact."
+status = "qa-ready"
+notes = "The parallel phrasing gives her professional resolve without adding orders."
+
+[[entries]]
+id = "launch-understands-principle"
+file = "DISKA/F0001.MES"
+offset = 0x25db
+source_mode = 1
+target_mode = 2
+source = "【コニー】（時空移動の原理は分かるんだけどなぁ・・・。）"
+translation = "[CONNIE] (I understand the basic principle of time travel, at least...)"
+speaker = "コニー"
+context = "Connie reassures herself with the part of the theory she knows."
+status = "qa-ready"
+notes = "Basic' and 'at least' preserve her modest qualification."
+
+[[entries]]
+id = "launch-matter-vibrates"
+file = "DISKA/F0001.MES"
+offset = 0x2611
+source_mode = 1
+target_mode = 2
+source = "物質は少なからず震動している。"
+translation = "All matter vibrates to some degree."
+speaker = "Connie"
+context = "Connie rehearses the first premise of the mechanism."
+status = "qa-ready"
+notes = "A concise technical statement fits the pseudo-scientific explanation."
+
+[[entries]]
+id = "launch-give-matter-same-frequency"
+file = "DISKA/F0001.MES"
+offset = 0x2627
+source_mode = 1
+target_mode = 2
+source = "時空のひずみに飛び込むには、飛び込む物質に対して、時空震動数と同じ震動数を与えればいい。"
+translation = "To enter a space-time distortion, give the entering matter the same frequency as the space-time oscillation."
+speaker = "Connie"
+context = "Connie restates the matching rule more generally."
+status = "qa-ready"
+notes = "The repetitive logic is preserved but tightened into one readable technical sentence."
+
+[[entries]]
+id = "launch-vibrate-machine-hull"
+file = "DISKA/F0001.MES"
+offset = 0x265e
+source_mode = 1
+target_mode = 2
+source = "あたしが乗っているタイムマシンの外側に震動を与える。時空震動と同じだけの震動数を。"
+translation = "So we vibrate the outer hull of my time machine at exactly that frequency."
+speaker = "Connie"
+context = "Connie applies the general rule to her vehicle."
+status = "qa-ready"
+notes = "The fragment becomes one natural sentence without adding a new physical record."
+
+[[entries]]
+id = "launch-reduce-frequency-to-arrive"
+file = "DISKA/F0001.MES"
+offset = 0x268e
+source_mode = 1
+target_mode = 2
+source = "一度合わせた震動数を、徐々に戻せば向こう側の時間へ到達できる。"
+translation = "Once the frequencies match, gradually return ours to normal and the machine reaches the time on the other side."
+speaker = "Connie"
+context = "Connie explains how to exit at 1996."
+status = "qa-ready"
+notes = "Ours' refers to the machine frequency; 'normal' clarifies 戻す without inventing a numeric baseline."
+
+[[entries]]
+id = "launch-time-to-reduce-frequency"
+file = "DISKA/F0001.MES"
+offset = 0x26c9
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そろそろ震動を戻さなきゃ・・・・・・。）"
+translation = "[CONNIE] (It's almost time to bring the oscillation back down...)"
+speaker = "コニー"
+context = "Connie approaches the manual exit maneuver."
+status = "qa-ready"
+notes = "Back down' makes the control direction clear."
+
+[[entries]]
+id = "launch-manual-exit-timing"
+file = "DISKA/F0001.MES"
+offset = 0x26e8
+source_mode = 1
+target_mode = 2
+source = "戻すタイミングは、確定要素が不安定なので、目標座標を見ながら手動で行う。"
+translation = "The exact timing is too uncertain to automate, so I have to do it manually while watching the target coordinates."
+speaker = "Connie"
+context = "Connie explains the riskiest part of the first crossing."
+status = "qa-ready"
+notes = "The awkward source certainty phrase is naturalized as unreliable calculation, consistent with the manual procedure."
+
+[[entries]]
+id = "launch-reduces-frequency"
+file = "DISKA/F0001.MES"
+offset = 0x2717
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンの震動数を元に戻していった。"
+translation = "I begin lowering the machine's frequency toward normal."
+speaker = "Connie"
+context = "Connie performs the manual exit maneuver."
+status = "qa-ready"
+notes = "Begin' and 'toward' preserve the gradual process."
+
+[[entries]]
+id = "launch-recorder-logs-procedure"
+file = "DISKA/F0001.MES"
+offset = 0x2732
+source_mode = 1
+target_mode = 2
+source = "あたしの手順は、マシンの記録装置に克明に記録されている。"
+translation = "The machine's recorder logs every detail of my procedure."
+speaker = "Connie"
+context = "Unit One gathers telemetry for later crossings."
+status = "qa-ready"
+notes = "Every detail' carries 克明に without cumbersome technical phrasing."
+
+[[entries]]
+id = "launch-data-for-remia"
+file = "DISKA/F0001.MES"
+offset = 0x275c
+source_mode = 1
+target_mode = 2
+source = "手順がうまくいったら、次に来るレミアに伝えるためだ。"
+translation = "If it works, the record will show Remia how to follow me."
+speaker = "Connie"
+context = "Connie states the purpose of the flight recorder."
+status = "qa-ready"
+notes = "The causal link to Remia's second machine is made explicit but not expanded."
+
+[[entries]]
+id = "launch-startled-by-failure"
+file = "DISKA/F0001.MES"
+offset = 0x279c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・！？」"
+translation = "[CONNIE] \"Ah...!?\""
+speaker = "コニー"
+context = "Connie notices the machine destabilizing."
+status = "qa-ready"
+notes = "The brief voiced reaction remains distinct from her internal diagnosis."
+
+[[entries]]
+id = "launch-shaking-grows"
+file = "DISKA/F0001.MES"
+offset = 0x27ae
+source_mode = 1
+target_mode = 2
+source = "マシンの震動が大きくなっていく。"
+translation = "The machine's shaking grows more violent."
+speaker = "Connie"
+context = "The first crossing begins to fail."
+status = "qa-ready"
+notes = "Violent' distinguishes the dangerous motion from the earlier shiver."
+
+[[entries]]
+id = "launch-shaking-is-wrong"
+file = "DISKA/F0001.MES"
+offset = 0x27c4
+source_mode = 1
+target_mode = 2
+source = "【コニー】（どうしたの！？　この震動はおかしい・・・！）"
+translation = "[CONNIE] (What's happening!? This shaking is wrong...!)"
+speaker = "コニー"
+context = "Connie recognizes an abnormal transit response."
+status = "qa-ready"
+notes = "Wrong' sounds immediate and pilot-like without inventing an instrument alarm."
+
+[[entries]]
+id = "launch-maybe-too-early"
+file = "DISKA/F0001.MES"
+offset = 0x27e7
+source_mode = 1
+target_mode = 2
+source = "マシンの震動数を戻すタイミングが早すぎたのかもしれない。"
+translation = "Maybe I started restoring the machine's frequency too early."
+speaker = "Connie"
+context = "Connie diagnoses her possible piloting error."
+status = "qa-ready"
+notes = "The uncertainty is preserved; later work may show the transit is inherently harsh rather than simply her fault."
+
+[[entries]]
+id = "launch-connie-screams"
+file = "DISKA/F0001.MES"
+offset = 0x2829
+source_mode = 1
+target_mode = 2
+source = "【コニー】（きゃあっ！！！）"
+translation = "[CONNIE] (Aah!)"
+speaker = "コニー"
+context = "The violent oscillation overwhelms Connie."
+status = "qa-ready"
+notes = "The scream is compressed but not sanitized."
+
+[[entries]]
+id = "launch-headache-and-nausea"
+file = "DISKA/F0001.MES"
+offset = 0x285b
+source_mode = 1
+target_mode = 2
+source = "あたしは猛烈な頭痛と吐き気に襲われた。"
+translation = "A savage headache and nausea tear through me."
+speaker = "Connie"
+context = "The crossing inflicts the symptoms carried into F0002."
+status = "qa-ready"
+notes = "Tear through me' supplies the sudden violence of 襲われた."
+
+[[entries]]
+id = "launch-blackout-long"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x2879 },
+  { file = "DISKA/F0001.MES", offset = 0x28ca },
+]
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Two byte-identical blackout beats during the failed exit from the tunnel."
+status = "qa-ready"
+notes = "Both physical timing anchors share the same silent rendering."
+
+[[entries]]
+id = "launch-blackout-middle"
+file = "DISKA/F0001.MES"
+offset = 0x2897
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Second physical blackout beat during transit."
+status = "qa-ready"
+notes = "The separate record is retained despite identical English punctuation."
+
+[[entries]]
+id = "launch-blackout-short"
+file = "DISKA/F0001.MES"
+offset = 0x28b2
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Third physical blackout beat during transit."
+status = "qa-ready"
+notes = "Source-specific anchor identity is preserved under the one-record invariant."
+
+[[entries]]
+id = "launch-alone-before-visit"
+file = "DISKA/F0001.MES"
+offset = 0x295b
+source_mode = 1
+target_mode = 2
+source = "今はひとりだ。"
+translation = "Right now, I'm alone."
+speaker = "Connie"
+context = "Earlier launch-room branch before Marie enters."
+status = "qa-ready"
+notes = "Physical file order follows local control-flow blocks, not narrative chronology."
+
+[[entries]]
+id = "launch-answers-intercom"
+file = "DISKA/F0001.MES"
+offset = 0x2971
+source_mode = 1
+target_mode = 2
+source = "あたしはインターフォンに向かって返事をした。"
+translation = "I answer through the intercom."
+speaker = "Connie"
+context = "Connie responds to the knock."
+status = "qa-ready"
+notes = "The intercom explains why she does not open the secure door herself."
+
+[[entries]]
+id = "launch-connie-come-in"
+file = "DISKA/F0001.MES"
+offset = 0x2990
+source_mode = 1
+target_mode = 2
+source = "【コニー】「どうぞ。」"
+translation = "[CONNIE] \"Come in.\""
+speaker = "コニー"
+context = "Connie grants the visitor entry."
+status = "qa-ready"
+notes = "The polite invitation is naturalized as the standard English phrase."
+
+[[entries]]
+id = "launch-microphone-carries-voice"
+file = "DISKA/F0001.MES"
+offset = 0x29a1
+source_mode = 1
+target_mode = 2
+source = "マイクロフォンが、あたしの声を扉の外へ伝える。"
+translation = "The microphone carries my voice beyond the door."
+speaker = "Connie"
+context = "The secure-room intercom relays Connie's reply."
+status = "qa-ready"
+notes = "Beyond the door' avoids repeating 'outside' mechanically."
+
+[[entries]]
+id = "launch-marie-enters"
+file = "DISKA/F0001.MES"
+offset = 0x29c0
+source_mode = 1
+target_mode = 2
+source = "扉が開いて、入ってきたのはマリー博士だった。"
+translation = "The door opens. Dr. Marie steps inside."
+speaker = "Connie"
+context = "Marie arrives to inspect the pilots."
+status = "qa-ready"
+notes = "Two short clauses match the visual reveal."
+
+[[entries]]
+id = "launch-marie-asks-remia"
+file = "DISKA/F0001.MES"
+offset = 0x2ab4
+source_mode = 1
+target_mode = 2
+source = "【マリー】「コニー・・・。あら？　レミアは？」"
+translation = "[MARIE] \"Connie... Hm? Where is Remia?\""
+speaker = "マリー"
+context = "Marie enters the briefing room and finds only Connie."
+status = "qa-ready"
+notes = "Hm?' keeps Marie clipped and observant rather than warmly surprised."
+
+[[entries]]
+id = "launch-remia-second-pilot"
+file = "DISKA/F0001.MES"
+offset = 0x2ad1
+source_mode = 1
+target_mode = 2
+source = "レミアはあたしと同じミュータントで、一緒に過去へ行くパイロットだ。"
+translation = "Remia is a mutant like me, and the pilot who will travel into the past with me."
+speaker = "Connie"
+context = "Connie supplies Remia's role during Marie's visit."
+status = "qa-ready"
+notes = "The apparent repetition is introductory text attached to this interaction branch."
+
+[[entries]]
+id = "launch-remia-former-hunter"
+file = "DISKA/F0001.MES"
+offset = 0x2af8
+source_mode = 1
+target_mode = 2
+source = "パイロットとして選ばれるまでは、やはりあたしと同じミュータント専門のハンターだった。"
+translation = "Before she was chosen as a pilot, she was also a Mutant Hunter like me."
+speaker = "Connie"
+context = "Connie completes Remia's role introduction."
+status = "qa-ready"
+notes = "The occupational title stays consistent with Connie's introduction."
+
+[[entries]]
+id = "launch-connie-remia-coming"
+file = "DISKA/F0001.MES"
+offset = 0x2b2b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「もうすぐ来ると思います。」"
+translation = "[CONNIE] \"I think she'll be here soon.\""
+speaker = "コニー"
+context = "Connie answers Marie about Remia."
+status = "qa-ready"
+notes = "Connie uses polite, restrained English with the senior scientist."
+
+[[entries]]
+id = "launch-marie-acknowledges"
+file = "DISKA/F0001.MES"
+offset = 0x2b43
+source_mode = 1
+target_mode = 2
+source = "【マリー】「・・・そう・・・・・・。」"
+translation = "[MARIE] \"...I see.\""
+speaker = "マリー"
+context = "Marie accepts Connie's answer without warmth."
+status = "qa-ready"
+notes = "The concise form fits Marie's clipped professional armor."
+
+[[entries]]
+id = "launch-marie-show-arm"
+file = "DISKA/F0001.MES"
+offset = 0x2b64
+source_mode = 1
+target_mode = 2
+source = "【マリー】「コニー。腕を見せて。」"
+translation = "[MARIE] \"Connie. Show me your arm.\""
+speaker = "マリー"
+context = "Marie prepares to check Connie's pulse."
+status = "qa-ready"
+notes = "The direct command is clinical, not flirtatious."
+
+[[entries]]
+id = "launch-connie-rolls-sleeve"
+file = "DISKA/F0001.MES"
+offset = 0x2b7b
+source_mode = 1
+target_mode = 2
+source = "あたしは袖を捲って、脈を測りやすいようにした。"
+translation = "I roll up my sleeve so she can take my pulse."
+speaker = "Connie"
+context = "Connie complies with Marie's examination."
+status = "qa-ready"
+notes = "The purpose clause makes the mundane medical action clear."
+
+[[entries]]
+id = "launch-marie-takes-pulse"
+file = "DISKA/F0001.MES"
+offset = 0x2b9b
+source_mode = 1
+target_mode = 2
+source = "マリー博士はあたしの手首を握って脈を診た。"
+translation = "Dr. Marie takes my wrist and checks my pulse."
+speaker = "Connie"
+context = "Marie evaluates Connie's pre-launch calm."
+status = "qa-ready"
+notes = "The touch also enables Connie's later attempt to sense Marie's intent."
+
+[[entries]]
+id = "launch-marie-stay-calm"
+file = "DISKA/F0001.MES"
+offset = 0x2bb9
+source_mode = 1
+target_mode = 2
+source = "【マリー】「ＯＫ。落ち着いているわね。・・・何が起きても冷静に対処するのよ。」"
+translation = "[MARIE] \"Good. You're calm. Whatever happens, respond with a clear head.\""
+speaker = "マリー"
+context = "Marie finishes Connie's pre-launch pulse check."
+status = "qa-ready"
+notes = "Good' naturalizes the source OK; Marie's instruction remains clipped and professional."
+
+[[entries]]
+id = "launch-marie-leaves"
+file = "DISKA/F0001.MES"
+offset = 0x2c57
+source_mode = 1
+target_mode = 2
+source = "そう言って、マリー博士は部屋を出て行った。"
+translation = "With that, Dr. Marie leaves the room."
+speaker = "Connie"
+context = "Marie ends her brief examination."
+status = "qa-ready"
+notes = "The brisk exit matches the impersonal visit."
+
+[[entries]]
+id = "launch-connie-exhales"
+file = "DISKA/F0001.MES"
+offset = 0x2c94
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ふぅ。）"
+translation = "[CONNIE] (Phew.)"
+speaker = "コニー"
+context = "Connie relaxes after Marie leaves."
+status = "qa-ready"
+notes = "The small exhale is both relief and mild comedy."
+
+[[entries]]
+id = "launch-tension-eases"
+file = "DISKA/F0001.MES"
+offset = 0x2ca5
+source_mode = 1
+target_mode = 2
+source = "緊張が和らぐ。"
+translation = "The tension eases."
+speaker = "Connie"
+context = "Marie is no longer in the room."
+status = "qa-ready"
+notes = "The short line mirrors the immediate bodily relief."
+
+[[entries]]
+id = "launch-recognizes-something"
+file = "DISKA/F0001.MES"
+offset = 0x2cbb
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・あ・・。）"
+translation = "[CONNIE] (...Oh.)"
+speaker = "コニー"
+context = "Connie recognizes approaching footsteps."
+status = "qa-ready"
+notes = "The quiet realization precedes identifying Remia."
+
+[[entries]]
+id = "launch-familiar-footsteps"
+file = "DISKA/F0001.MES"
+offset = 0x2cd3
+source_mode = 1
+target_mode = 2
+source = "あたしの知ってる足音が、廊下の方から聞こえる。"
+translation = "A familiar set of footsteps comes down the corridor."
+speaker = "Connie"
+context = "Connie hears Remia approaching."
+status = "qa-ready"
+notes = "The recognition demonstrates her fine auditory memory."
+
+[[entries]]
+id = "launch-door-click"
+file = "DISKA/F0001.MES"
+offset = 0x2cf3
+source_mode = 1
+target_mode = 2
+source = "ぱたん。"
+translation = "Click."
+speaker = "sfx"
+context = "The briefing-room door opens."
+status = "qa-ready"
+notes = "The light door sound is localized separately from the following action."
+
+[[entries]]
+id = "launch-remia-enters"
+file = "DISKA/F0001.MES"
+offset = 0x2cfd
+source_mode = 1
+target_mode = 2
+source = "扉が開いてレミアが入ってきた。"
+translation = "The door opens, and Remia comes in."
+speaker = "Connie"
+context = "Remia joins Connie before launch."
+status = "qa-ready"
+notes = "The simple entrance keeps focus on their conversation."
+
+[[entries]]
+id = "launch-connie-asks-about-marie"
+file = "DISKA/F0001.MES"
+offset = 0x2dd1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「レミア、マリー博士と会わなかった？」"
+translation = "[CONNIE] \"Remia, did you run into Dr. Marie?\""
+speaker = "コニー"
+context = "Connie asks whether Marie examined Remia too."
+status = "qa-ready"
+notes = "Run into' is natural for meeting her in the corridor."
+
+[[entries]]
+id = "launch-remia-pulse-checked"
+file = "DISKA/F0001.MES"
+offset = 0x2def
+source_mode = 1
+target_mode = 2
+source = "【レミア】「そこで会った。・・・『落ち着いてるか』って、脈を診られたけど・・・。」"
+translation = "[REMIA] \"I met her out there. She checked my pulse to see if I was 'calm'...\""
+speaker = "レミア"
+context = "Remia reports receiving the same examination."
+status = "qa-ready"
+notes = "The scare quotes preserve her skeptical imitation of Marie."
+
+[[entries]]
+id = "launch-remia-sticks-out-tongue"
+file = "DISKA/F0001.MES"
+offset = 0x2e24
+source_mode = 1
+target_mode = 2
+source = "レミアは扉の方へ向かって、べーっと舌を出した。"
+translation = "Remia sticks her tongue out at the door."
+speaker = "Connie"
+context = "Remia mocks Marie after she is safely gone."
+status = "qa-ready"
+notes = "The childish gesture reveals the impulsive streak beneath Remia's practical voice."
+
+[[entries]]
+id = "launch-connie-chides-remia"
+file = "DISKA/F0001.MES"
+offset = 0x2e44
+source_mode = 1
+target_mode = 2
+source = "【コニー】「レミア・・・。」"
+translation = "[CONNIE] \"Remia...\""
+speaker = "コニー"
+context = "Connie mildly chides Remia's gesture."
+status = "qa-ready"
+notes = "The name alone carries affectionate disapproval."
+
+[[entries]]
+id = "launch-remia-dislikes-marie"
+file = "DISKA/F0001.MES"
+offset = 0x2e57
+source_mode = 1
+target_mode = 2
+source = "【レミア】「私、あの人、好きじゃないな。・・・。」"
+translation = "[REMIA] \"I just don't like that woman...\""
+speaker = "レミア"
+context = "Remia states her distrust of Marie."
+status = "qa-ready"
+notes = "That woman' carries emotional distance without inventing an insult."
+
+[[entries]]
+id = "launch-remia-comes-close"
+file = "DISKA/F0001.MES"
+offset = 0x2e77
+source_mode = 1
+target_mode = 2
+source = "そう言って、レミアはあたしの側に寄ってきた。"
+translation = "As she says it, Remia moves closer to me."
+speaker = "Connie"
+context = "Remia shifts from mocking Marie to supporting Connie."
+status = "qa-ready"
+notes = "The physical closeness prepares the more vulnerable conversation."
+
+[[entries]]
+id = "launch-remia-almost-time"
+file = "DISKA/F0001.MES"
+offset = 0x2e94
+source_mode = 1
+target_mode = 2
+source = "【レミア】「もうすぐ出発の時間ね。」"
+translation = "[REMIA] \"It's almost time to go.\""
+speaker = "レミア"
+context = "Remia acknowledges the approaching launch."
+status = "qa-ready"
+notes = "The line stays direct and practical."
+
+[[entries]]
+id = "launch-connie-yes"
+file = "DISKA/F0001.MES"
+offset = 0x2eab
+source_mode = 1
+target_mode = 2
+source = "【コニー】「うん・・・。」"
+translation = "[CONNIE] \"Yeah...\""
+speaker = "コニー"
+context = "Connie quietly agrees with Remia."
+status = "qa-ready"
+notes = "Her informal response reflects closeness with her partner."
+
+[[entries]]
+id = "launch-remia-asks-afraid"
+file = "DISKA/F0001.MES"
+offset = 0x2ece
+source_mode = 1
+target_mode = 2
+source = "【レミア】「・・・恐いの？」"
+translation = "[REMIA] \"...Are you scared?\""
+speaker = "レミア"
+context = "Remia directly names Connie's fear."
+status = "qa-ready"
+notes = "The blunt question is softened only by the leading pause."
+
+[[entries]]
+id = "launch-remia-looks-at-connie"
+file = "DISKA/F0001.MES"
+offset = 0x2ee2
+source_mode = 1
+target_mode = 2
+source = "レミアはそう言ってあたしを見る。"
+translation = "Remia looks at me as she asks."
+speaker = "Connie"
+context = "Remia watches Connie's reaction."
+status = "qa-ready"
+notes = "The visual scrutiny makes evasion difficult."
+
+[[entries]]
+id = "launch-connie-little-afraid"
+file = "DISKA/F0001.MES"
+offset = 0x2ef7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・・・・・・・・・・少しだけ・・・。」"
+translation = "[CONNIE] \"...A little.\""
+speaker = "コニー"
+context = "Connie admits fear to Remia."
+status = "qa-ready"
+notes = "The long source pause is compressed, leaving the understated admission."
+
+[[entries]]
+id = "launch-would-lie-not-afraid"
+file = "DISKA/F0001.MES"
+offset = 0x2f1e
+source_mode = 1
+target_mode = 2
+source = "これから始まることを思えば、恐くないといえば嘘になる。"
+translation = "Thinking about what is about to begin, I'd be lying if I said I wasn't scared."
+speaker = "Connie"
+context = "Connie honestly assesses the first human time crossing."
+status = "qa-ready"
+notes = "The natural English idiom preserves her measured admission."
+
+[[entries]]
+id = "launch-curious-to-see-past"
+file = "DISKA/F0001.MES"
+offset = 0x2f41
+source_mode = 1
+target_mode = 2
+source = "過去を見るという興味もあるけど。"
+translation = "But I am curious to see the past."
+speaker = "Connie"
+context = "Curiosity balances Connie's fear."
+status = "qa-ready"
+notes = "The simple contrast keeps her adventurous energy present."
+
+[[entries]]
+id = "launch-machine-by-trusted-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x2f58
+source_mode = 1
+target_mode = 2
+source = "信頼している神崎博士が作ったタイムマシン。"
+translation = "A time machine built by Dr. Kanzaki, whom I trust completely."
+speaker = "Connie"
+context = "Connie grounds her courage in Kanzaki."
+status = "qa-ready"
+notes = "The fragment is retained as a thought rather than merged with the next record."
+
+[[entries]]
+id = "launch-connie-first-to-operate"
+file = "DISKA/F0001.MES"
+offset = 0x2f73
+source_mode = 1
+target_mode = 2
+source = "あたしが初めて動かすことになる。"
+translation = "I will be the first to operate it."
+speaker = "Connie"
+context = "Connie states the unprecedented role she accepted."
+status = "qa-ready"
+notes = "Operate' is pilot-neutral and suits an experimental vehicle."
+
+[[entries]]
+id = "launch-two-machine-order"
+file = "DISKA/F0001.MES"
+offset = 0x2f88
+source_mode = 1
+target_mode = 2
+source = "タイムマシンは２台。あたしが１号機で最初に出発、そして次にレミアが２号機で出発だ。"
+translation = "There are two time machines. I depart first in Unit One, then Remia follows in Unit Two."
+speaker = "Connie"
+context = "Connie explains the launch order."
+status = "qa-ready"
+notes = "Unit labels stay consistent with the earlier mission plan."
+
+[[entries]]
+id = "launch-only-two-built"
+file = "DISKA/F0001.MES"
+offset = 0x2fba
+source_mode = 1
+target_mode = 2
+source = "時空震動をキャッチしてから、早急に作ったので、マシンはまだ２台。"
+translation = "They had to build fast after detecting the Time Quake, so only two machines are ready."
+speaker = "Connie"
+context = "Connie explains Project D's rushed hardware state."
+status = "qa-ready"
+notes = "Ready' distinguishes the two test units from the following unfinished-validation spare."
+
+[[entries]]
+id = "launch-third-unit-awaits-data"
+file = "DISKA/F0001.MES"
+offset = 0x2fe5
+source_mode = 1
+target_mode = 2
+source = "予備の３号機もまったく同じに作っていて動かせるが、先の２台の実験データ待ちだ。"
+translation = "A third identical unit can run as a spare, but it has to wait for test data from the first two."
+speaker = "Connie"
+context = "Connie foreshadows the third machine used later."
+status = "qa-ready"
+notes = "The machine is operable but not cleared; the distinction matters later."
+
+[[entries]]
+id = "launch-three-iron-boxes"
+file = "DISKA/F0001.MES"
+offset = 0x3033
+source_mode = 1
+target_mode = 2
+source = "【コニー】（タイムマシンが３台あっても、動かなければただの鉄の箱・・・。）"
+translation = "[CONNIE] (Three time machines are still just iron boxes if none of them work...)"
+speaker = "コニー"
+context = "Connie undercuts the reassuring machine count."
+status = "qa-ready"
+notes = "The blunt image fits her practical humor."
+
+[[entries]]
+id = "launch-remia-dont-obsess"
+file = "DISKA/F0001.MES"
+offset = 0x3061
+source_mode = 1
+target_mode = 2
+source = "【レミア】「あまり思い詰めない方がいいわ。手の届かない事を思い悩んでもしかたないでしょう？」"
+translation = "[REMIA] \"Don't dwell on it. There's no use worrying about things beyond your control.\""
+speaker = "レミア"
+context = "Remia offers practical reassurance."
+status = "qa-ready"
+notes = "Her advice is direct and unsentimental, consistent with the voice bible."
+
+[[entries]]
+id = "launch-connie-agrees"
+file = "DISKA/F0001.MES"
+offset = 0x3099
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そうね。」"
+translation = "[CONNIE] \"You're right.\""
+speaker = "コニー"
+context = "Connie accepts Remia's advice."
+status = "qa-ready"
+notes = "The idiomatic agreement is warmer than a flat 'yes.'"
+
+[[entries]]
+id = "launch-wry-smile"
+file = "DISKA/F0001.MES"
+offset = 0x30a9
+source_mode = 1
+target_mode = 2
+source = "あたしは苦笑いをする。"
+translation = "I give her a wry smile."
+speaker = "Connie"
+context = "Connie acknowledges that Remia caught her overthinking."
+status = "qa-ready"
+notes = "Wry smile' captures 苦笑 without implying bitterness."
+
+[[entries]]
+id = "launch-remia-offers-switch"
+file = "DISKA/F0001.MES"
+offset = 0x30c4
+source_mode = 1
+target_mode = 2
+source = "【レミア】「・・・代わろうか？　私が最初に出発してもいいんだよ。」"
+translation = "[REMIA] \"...Want to switch? I can go first.\""
+speaker = "レミア"
+context = "Remia offers to take Connie's risk."
+status = "qa-ready"
+notes = "The concise offer reveals concern without making Remia sentimental."
+
+[[entries]]
+id = "launch-remia-worried-look"
+file = "DISKA/F0001.MES"
+offset = 0x30ee
+source_mode = 1
+target_mode = 2
+source = "レミアが心配そうにあたしを見つめている。"
+translation = "Remia watches me with a worried look."
+speaker = "Connie"
+context = "Remia waits for Connie's answer."
+status = "qa-ready"
+notes = "Her visible worry contrasts with her usually detached manner."
+
+[[entries]]
+id = "launch-connie-decision-made"
+file = "DISKA/F0001.MES"
+offset = 0x3108
+source_mode = 1
+target_mode = 2
+source = "【コニー】「大丈夫・・・。もう決めたことだし・・・。」"
+translation = "[CONNIE] \"I'll be fine... I've already made my decision.\""
+speaker = "コニー"
+context = "Connie refuses to transfer the first flight."
+status = "qa-ready"
+notes = "The answer is gentle but final."
+
+[[entries]]
+id = "launch-remia-unusually-kind"
+file = "DISKA/F0001.MES"
+offset = 0x312c
+source_mode = 1
+target_mode = 2
+source = "普段ならそっけない態度をとるレミアも、同じ気持ちなんだろう、今回だけは特に優しい。"
+translation = "Remia is usually aloof, but she must feel the same fear. Just this once, she is especially kind."
+speaker = "Connie"
+context = "Connie interprets Remia's offer."
+status = "qa-ready"
+notes = "The warmth remains exceptional rather than redefining Remia's normal voice."
+
+[[entries]]
+id = "launch-unit-two-cancelled-on-failure"
+file = "DISKA/F0001.MES"
+offset = 0x3160
+source_mode = 1
+target_mode = 2
+source = "当然、最初に出発するあたし－－－１号機がトラブルを起こすと、２号機は出発しない。"
+translation = "Naturally, if Unit One - my machine - runs into trouble, Unit Two will not launch."
+speaker = "Connie"
+context = "Connie explains the safety gate protecting Remia."
+status = "qa-ready"
+notes = "ASCII hyphens preserve the parenthetical machine identification in mode 2."
+
+[[entries]]
+id = "launch-oops-failed-joke"
+file = "DISKA/F0001.MES"
+offset = 0x3193
+source_mode = 1
+target_mode = 2
+source = "いわば、『動かしたけど失敗しちゃった。てへっ。』ということになる可能性だってある。"
+translation = "There is always a chance this ends with, \"We turned it on, but it failed. Oops.\""
+speaker = "Connie"
+context = "Connie mocks how absurdly small a failed Project D might sound."
+status = "qa-ready"
+notes = "Oops' localizes てへっ as deliberately flippant self-mockery."
+
+[[entries]]
+id = "launch-accepted-possibility"
+file = "DISKA/F0001.MES"
+offset = 0x31c8
+source_mode = 1
+target_mode = 2
+source = "あたしはそれを覚悟で引き受けた。"
+translation = "I accepted the mission knowing that."
+speaker = "Connie"
+context = "Connie returns from humor to resolve."
+status = "qa-ready"
+notes = "The compact line preserves the sober pivot."
+
+[[entries]]
+id = "launch-cannot-risk-humans"
+file = "DISKA/F0001.MES"
+offset = 0x31e1
+source_mode = 1
+target_mode = 2
+source = "人口の減ったヒトを、危険なタイムマシンに乗せるわけにはいかない。"
+translation = "With the human population already so small, they cannot risk a human on a dangerous time machine."
+speaker = "Connie"
+context = "Connie explains why mutants were selected as pilots."
+status = "qa-ready"
+notes = "The institutional calculus is preserved rather than endorsed."
+
+[[entries]]
+id = "launch-mutant-pilot-inevitable"
+file = "DISKA/F0001.MES"
+offset = 0x320a
+source_mode = 1
+target_mode = 2
+source = "パイロットにミュータントが選ばれたのは、当然といえば当然だった。"
+translation = "In that sense, choosing mutants as pilots was inevitable."
+speaker = "Connie"
+context = "Connie follows the project's utilitarian logic."
+status = "qa-ready"
+notes = "Inevitable' carries her resigned 当然 without calling the choice ethically right."
+
+[[entries]]
+id = "launch-mutants-would-object"
+file = "DISKA/F0001.MES"
+offset = 0x3234
+source_mode = 1
+target_mode = 2
+source = "理屈では当然だが、このような試験的な行為が明るみに出たら他のミュータントたちが黙ってはいない。"
+translation = "The logic is obvious, but if this experiment became public, other mutants would never accept it quietly."
+speaker = "Connie"
+context = "Connie recognizes the exploitation hidden by Project D."
+status = "qa-ready"
+notes = "Experiment' describes using mutant lives as unproven test pilots."
+
+[[entries]]
+id = "launch-even-so-fragment"
+file = "DISKA/F0001.MES"
+offset = 0x3272
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それでも・・・、）"
+translation = "[CONNIE] (Even so...)"
+speaker = "コニー"
+context = "Connie begins her personal justification."
+status = "qa-ready"
+notes = "The fragment remains separate from the following narration."
+
+[[entries]]
+id = "launch-someone-had-to"
+file = "DISKA/F0001.MES"
+offset = 0x3286
+source_mode = 1
+target_mode = 2
+source = "それでもあたしが引き受けたのは、誰かがしなくてはならないから。"
+translation = "I accepted because someone had to do it."
+speaker = "Connie"
+context = "Connie frames volunteering as necessary service."
+status = "qa-ready"
+notes = "The plain statement avoids heroic embellishment."
+
+[[entries]]
+id = "launch-kanzaki-original-pilot-cancelled"
+file = "DISKA/F0001.MES"
+offset = 0x32ad
+source_mode = 1
+target_mode = 2
+source = "始めは神崎博士が自ら行くことになっていたが、周囲の人間の反対もあったので取り止めになった。"
+translation = "Dr. Kanzaki was originally going herself, but the people around her opposed it, and the plan was cancelled."
+speaker = "Connie"
+context = "Connie revisits the original pilot decision."
+status = "qa-ready"
+notes = "The apparent repetition belongs to another interactive branch and remains independently anchored."
+
+[[entries]]
+id = "launch-volunteered-from-gratitude"
+file = "DISKA/F0001.MES"
+offset = 0x32e7
+source_mode = 1
+target_mode = 2
+source = "あたしが候補に名乗り出たのは、あたしを造ってくれた神崎博士への恩もあった。"
+translation = "Part of why I volunteered was gratitude to Dr. Kanzaki for creating me."
+speaker = "Connie"
+context = "Connie names obligation alongside necessity."
+status = "qa-ready"
+notes = "Gratitude' is faithful while allowing readers to recognize the unequal dependency."
+
+[[entries]]
+id = "launch-kanzaki-educated-her"
+file = "DISKA/F0001.MES"
+offset = 0x3315
+source_mode = 1
+target_mode = 2
+source = "あたしが生まれてから短期間で教育をして、知識を与えてくれて、・・・。"
+translation = "After I was born, she educated me and gave me knowledge in such a short time..."
+speaker = "Connie"
+context = "Connie lists what she believes she owes Kanzaki."
+status = "qa-ready"
+notes = "The trailing record remains open-ended as a knock interrupts her."
+
+[[entries]]
+id = "launch-kanzaki-knock-sound"
+file = "DISKA/F0001.MES"
+offset = 0x3368
+source_mode = 1
+target_mode = 2
+source = "こんこんっ。"
+translation = "Knock, knock."
+speaker = "sfx"
+context = "Kanzaki knocks and interrupts Connie's reflection."
+status = "qa-ready"
+notes = "This similar but source-distinct knock retains its own physical anchor."
+
+[[entries]]
+id = "launch-knock-narrated"
+file = "DISKA/F0001.MES"
+offset = 0x3373
+source_mode = 1
+target_mode = 2
+source = "ノックの音。"
+translation = "A knock at the door."
+speaker = "Connie"
+context = "Connie identifies the interrupting sound."
+status = "qa-ready"
+notes = "The noun-fragment style is preserved."
+
+[[entries]]
+id = "launch-surely-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x337f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（きっと神崎博士だ・・・。）"
+translation = "[CONNIE] (That has to be Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie recognizes Kanzaki's knock."
+status = "qa-ready"
+notes = "Has to be' sounds certain while remaining an inference."
+
+[[entries]]
+id = "launch-remembers-knocks"
+file = "DISKA/F0001.MES"
+offset = 0x3397
+source_mode = 1
+target_mode = 2
+source = "何気ないノックの音でも、あたしの耳は特徴を覚えている。"
+translation = "Even an ordinary knock has a pattern my ears remember."
+speaker = "Connie"
+context = "Connie explains her auditory recognition."
+status = "qa-ready"
+notes = "Pattern' naturalizes the characteristic sound without overexplaining acoustics."
+
+[[entries]]
+id = "launch-connie-invites-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x33bc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はい。どうぞ。」"
+translation = "[CONNIE] \"Yes. Come in.\""
+speaker = "コニー"
+context = "Connie politely admits Kanzaki."
+status = "qa-ready"
+notes = "Yes' reflects the more formal response she gives her superior."
+
+[[entries]]
+id = "launch-kanzaki-enters"
+file = "DISKA/F0001.MES"
+offset = 0x3459
+source_mode = 1
+target_mode = 2
+source = "神崎博士が入ってきた。"
+translation = "Dr. Kanzaki enters."
+speaker = "Connie"
+context = "Kanzaki joins Connie and Remia."
+status = "qa-ready"
+notes = "The terse arrival fits the interactive sequence."
+
+[[entries]]
+id = "launch-kanzaki-time-port"
+file = "DISKA/F0001.MES"
+offset = 0x3469
+source_mode = 1
+target_mode = 2
+source = "【神崎】「そろそろタイムポートへ行く時間よ。」"
+translation = "[KANZAKI] \"It's time to head to the time port.\""
+speaker = "神崎"
+context = "Kanzaki formally begins the launch sequence."
+status = "qa-ready"
+notes = "Her public voice is precise and controlled."
+
+[[entries]]
+id = "launch-remia-stiffens"
+file = "DISKA/F0001.MES"
+offset = 0x3486
+source_mode = 1
+target_mode = 2
+source = "あたしが頷く隣で、レミアが引きつった顔になった。"
+translation = "I nod. Beside me, Remia's face goes stiff."
+speaker = "Connie"
+context = "Remia reacts to Kanzaki's strict presence."
+status = "qa-ready"
+notes = "The two actions are separated for clear staging."
+
+[[entries]]
+id = "launch-kanzaki-strict-in-public"
+file = "DISKA/F0001.MES"
+offset = 0x34a7
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、外では厳しい。"
+translation = "Dr. Kanzaki is strict in public."
+speaker = "Connie"
+context = "Connie explains Remia's reaction."
+status = "qa-ready"
+notes = "The established private/public distinction is repeated concisely."
+
+[[entries]]
+id = "launch-kanzaki-severe-judgment"
+file = "DISKA/F0001.MES"
+offset = 0x34b9
+source_mode = 1
+target_mode = 2
+source = "冷静すぎると言ってもいいくらいの厳しさと判断力を持つ。"
+translation = "Her discipline and judgment are so severe that she can seem almost too calm."
+speaker = "Connie"
+context = "Connie characterizes Kanzaki's professional authority."
+status = "qa-ready"
+notes = "Too calm' foreshadows the emotional control that briefly slips."
+
+[[entries]]
+id = "launch-senses-remia-emotion"
+file = "DISKA/F0001.MES"
+offset = 0x34dd
+source_mode = 1
+target_mode = 2
+source = "あたしは目と耳とで、レミアの感情の変化を捕らえる。"
+translation = "With my eyes and ears, I catch the change in Remia's emotions."
+speaker = "Connie"
+context = "Connie reads Remia without touch."
+status = "qa-ready"
+notes = "The source explicitly grounds this perception in ordinary enhanced senses."
+
+[[entries]]
+id = "launch-remia-tense-duplicate"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x34fd },
+  { file = "DISKA/F0001.MES", offset = 0x3589 },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・レミアも緊張しているみたい・・・・・・。）"
+translation = "[CONNIE] (...Remia looks nervous too...)"
+speaker = "コニー"
+context = "Two byte-identical observations in alternate local paths."
+status = "qa-ready"
+notes = "Both anchors carry the same speaker, visible state, and required English."
+
+[[entries]]
+id = "launch-remia-fears-scolding-comma"
+file = "DISKA/F0001.MES"
+offset = 0x3523
+source_mode = 1
+target_mode = 2
+source = "【コニー】（レミアは、また叱られるんじゃないかと思っているんだ・・・。）"
+translation = "[CONNIE] (She thinks Dr. Kanzaki might scold her again...)"
+speaker = "コニー"
+context = "First near-duplicate branch explaining Remia's tension."
+status = "qa-ready"
+notes = "The referent Dr. Kanzaki is restored for natural English clarity."
+
+[[entries]]
+id = "launch-kanzaki-scolds-only-mistakes"
+anchors = [
+  { file = "DISKA/F0001.MES", offset = 0x354d },
+  { file = "DISKA/F0001.MES", offset = 0x35d8 },
+]
+source_mode = 1
+target_mode = 2
+source = "別にミスとかをしない限り、神崎博士は叱ったりしない。"
+translation = "Dr. Kanzaki never scolds anyone unless they make a mistake."
+speaker = "Connie"
+context = "Two byte-identical reassurances in alternate local paths."
+status = "qa-ready"
+notes = "Both physical anchors share one canonical reading."
+
+[[entries]]
+id = "launch-remia-fears-scolding-no-comma"
+file = "DISKA/F0001.MES"
+offset = 0x35af
+source_mode = 1
+target_mode = 2
+source = "【コニー】（レミアはまた叱られるんじゃないかと思っているんだ・・・。）"
+translation = "[CONNIE] (She thinks Dr. Kanzaki might scold her again...)"
+speaker = "コニー"
+context = "Second source-distinct near-duplicate branch explaining Remia's tension."
+status = "qa-ready"
+notes = "The Japanese differs only by punctuation, but exact-source catalog anchoring requires a separate entry."
+
+[[entries]]
+id = "launch-kanzaki-calls-connie"
+file = "DISKA/F0001.MES"
+offset = 0x3604
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・コニー・・・・・・・・・。」"
+translation = "[KANZAKI] \"...Connie...\""
+speaker = "神崎"
+context = "Kanzaki's public composure briefly falters."
+status = "qa-ready"
+notes = "The name alone carries the emotion she cannot state openly."
+
+[[entries]]
+id = "launch-kanzaki-sad-expression"
+file = "DISKA/F0001.MES"
+offset = 0x361f
+source_mode = 1
+target_mode = 2
+source = "神崎博士の表情が、一瞬悲しそうな、切なそうな表情になった。"
+translation = "For an instant, Dr. Kanzaki's expression turns sad... almost painfully tender."
+speaker = "Connie"
+context = "Connie sees the hidden goodbye on Kanzaki's face."
+status = "qa-ready"
+notes = "切ない combines sorrow, longing, and tenderness; the English avoids reducing it to generic sadness."
+
+[[entries]]
+id = "launch-connie-kanzaki-question"
+file = "DISKA/F0001.MES"
+offset = 0x3644
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・・・・。）"
+translation = "[CONNIE] (Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie silently responds to Kanzaki's expression."
+status = "qa-ready"
+notes = "This context-specific anchor is separate from earlier identical-address thoughts."
+
+[[entries]]
+id = "launch-kanzaki-mask-returns"
+file = "DISKA/F0001.MES"
+offset = 0x365e
+source_mode = 1
+target_mode = 2
+source = "すぐに厳しい表情になった。が、あたしはゴーグル越しに表情が変わったのを見逃さなかった。"
+translation = "Her stern expression returns at once, but even through the goggles, I did not miss the change."
+speaker = "Connie"
+context = "Kanzaki restores her professional mask."
+status = "qa-ready"
+notes = "Mask' is left implicit; the visible expression and goggles carry the motif."
+
+[[entries]]
+id = "launch-kanzaki-afraid-too"
+file = "DISKA/F0001.MES"
+offset = 0x3691
+source_mode = 1
+target_mode = 2
+source = "【コニー】（博士も不安なのかな・・・・・・。）"
+translation = "[CONNIE] (Is she afraid too...?)"
+speaker = "コニー"
+context = "Connie tries to explain Kanzaki's hidden sorrow."
+status = "qa-ready"
+notes = "The pronoun avoids a repetitive title while preserving the immediate referent."
+
+[[entries]]
+id = "launch-uncharted-past"
+file = "DISKA/F0001.MES"
+offset = 0x36ad
+source_mode = 1
+target_mode = 2
+source = "まだ誰も行ったことのない、過去。過去への時空移動。タイムワープ。"
+translation = "The past, where no one has ever gone. Travel through space-time into that past. A time warp."
+speaker = "Connie"
+context = "Connie names the unprecedented operation."
+status = "qa-ready"
+notes = "The source's fragments are retained as an awed, rehearsed sequence."
+
+[[entries]]
+id = "launch-natural-kanzaki-tense"
+file = "DISKA/F0001.MES"
+offset = 0x36d6
+source_mode = 1
+target_mode = 2
+source = "あたしを送り込むということで、緊張するのは仕方のないことなのかもしれない。"
+translation = "Maybe it is only natural for her to be tense about sending me."
+speaker = "Connie"
+context = "Connie offers a rational explanation for Kanzaki's state."
+status = "qa-ready"
+notes = "Only' marks this as the explanation Connie wants to believe."
+
+[[entries]]
+id = "launch-not-ordinary-nerves"
+file = "DISKA/F0001.MES"
+offset = 0x3703
+source_mode = 1
+target_mode = 2
+source = "【コニー】（でも・・・。緊張しての不安じゃない・・・。）"
+translation = "[CONNIE] (But... this isn't ordinary nervousness...)"
+speaker = "コニー"
+context = "Connie's familiarity rejects the easy explanation."
+status = "qa-ready"
+notes = "Ordinary' captures the contrast without claiming she knows the real cause."
+
+[[entries]]
+id = "launch-hears-kanzaki-heartbeat"
+file = "DISKA/F0001.MES"
+offset = 0x3724
+source_mode = 1
+target_mode = 2
+source = "耳を澄ますと神崎博士の胸の鼓動が聞こえる。"
+translation = "When I focus my hearing, I can make out Dr. Kanzaki's heartbeat."
+speaker = "Connie"
+context = "Connie uses enhanced hearing to assess Kanzaki."
+status = "qa-ready"
+notes = "Make out' avoids overstating the distance or exact acoustic setting."
+
+[[entries]]
+id = "launch-kanzaki-different"
+file = "DISKA/F0001.MES"
+offset = 0x3741
+source_mode = 1
+target_mode = 2
+source = "【コニー】（どことなく・・・、神崎博士はいつもと違う・・・。）"
+translation = "[CONNIE] (Somehow... Dr. Kanzaki isn't herself today...)"
+speaker = "コニー"
+context = "Connie recognizes a pattern-level change in Kanzaki."
+status = "qa-ready"
+notes = "Isn't herself' is idiomatic and preserves the vague どことなく."
+
+[[entries]]
+id = "launch-cannot-shake-thought"
+file = "DISKA/F0001.MES"
+offset = 0x3766
+source_mode = 1
+target_mode = 2
+source = "そう思えてしまう。"
+translation = "I can't shake that feeling."
+speaker = "Connie"
+context = "Connie remains convinced something is wrong."
+status = "qa-ready"
+notes = "The English carries the unwanted conclusion implicit in しまう."
+
+[[entries]]
+id = "launch-knows-kanzaki-well"
+file = "DISKA/F0001.MES"
+offset = 0x3774
+source_mode = 1
+target_mode = 2
+source = "あたしだって伊達に神崎博士と暮らしているわけじゃないんだから。"
+translation = "I haven't lived with Dr. Kanzaki all this time without learning to read her."
+speaker = "Connie"
+context = "Connie trusts her domestic familiarity over appearances."
+status = "qa-ready"
+notes = "Learning to read her' supplies the idiomatic point of 伊達に...わけじゃない."
+
+[[entries]]
+id = "launch-kanzaki-orders-stop-reading"
+file = "DISKA/F0001.MES"
+offset = 0x379b
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー。ダメよ。」"
+translation = "[KANZAKI] \"Connie. Stop.\""
+speaker = "神崎"
+context = "Kanzaki notices Connie probing her feelings."
+status = "qa-ready"
+notes = "Stop' is firmer and more contextual than the generic 'no.'"
+
+[[entries]]
+id = "launch-kanzaki-senses-probe"
+file = "DISKA/F0001.MES"
+offset = 0x37b0
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしが心の中を推測しようとしたのを感じとったようだ。"
+translation = "She seems to have noticed me trying to guess what was in her heart."
+speaker = "Connie"
+context = "Kanzaki stops Connie's emotional scrutiny."
+status = "qa-ready"
+notes = "Heart' retains the intimate source metaphor without claiming literal telepathy."
+
+[[entries]]
+id = "launch-connie-obeys-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x37d8
+source_mode = 1
+target_mode = 2
+source = "厳しいけど、きちっとした声だ。あたしは神崎博士の胸の内を探ろうとするのを止めた。"
+translation = "Her voice is strict but composed. I stop trying to search Dr. Kanzaki's heart."
+speaker = "Connie"
+context = "Connie obeys Kanzaki's boundary."
+status = "qa-ready"
+notes = "Composed' preserves the controlled public voice even in emotional distress."
+
+[[entries]]
+id = "launch-what-was-expression"
+file = "DISKA/F0001.MES"
+offset = 0x380a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（悲しそうな・・・切なそうな表情・・・。何だったの？・・・。）"
+translation = "[CONNIE] (That sad... aching expression... What was it...?)"
+speaker = "コニー"
+context = "Connie leaves the mystery unresolved."
+status = "qa-ready"
+notes = "Aching' carries 切ない's emotional pain without overdefining Kanzaki's hidden motive."
+
+[[entries]]
+id = "launch-kanzaki-time-to-go"
+file = "DISKA/F0001.MES"
+offset = 0x3847
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・時間だわ。行きましょう。」"
+translation = "[KANZAKI] \"...It's time. Let's go.\""
+speaker = "神崎"
+context = "Kanzaki closes the conversation and leads the pilots out."
+status = "qa-ready"
+notes = "Her formal brevity restores the public mask."
+
+[[entries]]
+id = "launch-leave-briefing-room"
+file = "DISKA/F0001.MES"
+offset = 0x3862
+source_mode = 1
+target_mode = 2
+source = "神崎博士は先に部屋を出た。あたしとレミアは後に従った。"
+translation = "Dr. Kanzaki leaves first. Remia and I follow."
+speaker = "Connie"
+context = "The group proceeds to the time port."
+status = "qa-ready"
+notes = "The staging reinforces Kanzaki's leadership."
+
+[[entries]]
+id = "launch-kanzaki-addresses-pilots"
+file = "DISKA/F0001.MES"
+offset = 0x3984
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー、レミア、・・・・・・。」"
+translation = "[KANZAKI] \"Connie, Remia...\""
+speaker = "神崎"
+context = "At the time port, Kanzaki tries to address both pilots."
+status = "qa-ready"
+notes = "Her sentence trails off under the weight of the farewell."
+
+[[entries]]
+id = "launch-pilots-watch-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x399e
+source_mode = 1
+target_mode = 2
+source = "あたしたちは黙って神崎博士を見つめた。"
+translation = "We watch Dr. Kanzaki in silence."
+speaker = "Connie"
+context = "Connie and Remia wait for Kanzaki to continue."
+status = "qa-ready"
+notes = "The shared silence gives her room to break professional register."
+
+[[entries]]
+id = "launch-kanzaki-return-safe"
+file = "DISKA/F0001.MES"
+offset = 0x39b7
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・無事に・・・、帰ってきて・・・。」"
+translation = "[KANZAKI] \"...Come back... safely...\""
+speaker = "神崎"
+context = "Kanzaki voices a personal plea to the pilots."
+status = "qa-ready"
+notes = "The vulnerable request contrasts with her public command voice."
+
+[[entries]]
+id = "launch-kanzaki-orders-departure"
+file = "DISKA/F0001.MES"
+offset = 0x39d6
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・準備はできているわ。・・・・・・・・・行きなさい。」"
+translation = "[KANZAKI] \"...Everything is ready. Go.\""
+speaker = "神崎"
+context = "Kanzaki recovers control and gives the launch order."
+status = "qa-ready"
+notes = "The final 'Go' is firm and spare, restoring her professional mask."
+
+[[entries]]
+id = "launch-holds-gaze-then-away"
+file = "DISKA/F0001.MES"
+offset = 0x39ff
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士を見つめ、離す。"
+translation = "I hold Dr. Kanzaki's gaze, then look away."
+speaker = "Connie"
+context = "Connie breaks the farewell gaze to begin launch."
+status = "qa-ready"
+notes = "離す lacks an explicit object; the visual context supports releasing her gaze."
+
+[[entries]]
+id = "launch-connie-goes-first"
+file = "DISKA/F0001.MES"
+offset = 0x3a15
+source_mode = 1
+target_mode = 2
+source = "あたしが先に出発だ。"
+translation = "I depart first."
+speaker = "Connie"
+context = "Unit One begins the test sequence."
+status = "qa-ready"
+notes = "The terse line matches her shift into pilot mode."
+
+[[entries]]
+id = "launch-time-port-cleared"
+file = "DISKA/F0001.MES"
+offset = 0x3a25
+source_mode = 1
+target_mode = 2
+source = "万一のため、神崎博士とレミアがタイムポートから出ていく。"
+translation = "As a precaution, Dr. Kanzaki and Remia leave the time port."
+speaker = "Connie"
+context = "The launch area is cleared in case Unit One fails."
+status = "qa-ready"
+notes = "The safety purpose is explicit in 万一のため."
+
+[[entries]]
+id = "launch-kanzaki-sent-her-into-world"
+file = "DISKA/F0001.MES"
+offset = 0x3a5e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしを造ってこの世に送り出してくれた、神崎博士。）"
+translation = "[CONNIE] (Dr. Kanzaki... who created me and sent me into this world.)"
+speaker = "コニー"
+context = "Connie silently frames this launch as a second birth."
+status = "qa-ready"
+notes = "送り出す echoes both bringing Connie into life and sending her on the mission."
+
+[[entries]]
+id = "launch-last-look-fear"
+file = "DISKA/F0001.MES"
+offset = 0x3a84
+source_mode = 1
+target_mode = 2
+source = "あたしは見納めにならないように、と思いつつも神崎博士を見る。"
+translation = "Telling myself this will not be the last time, I look at Dr. Kanzaki."
+speaker = "Connie"
+context = "Connie gives Kanzaki one final look before boarding."
+status = "qa-ready"
+notes = "The English makes the negated fear in 見納めにならないように explicit."
+
+[[entries]]
+id = "launch-connie-goodbye-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x3aa8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（博士・・・。行ってきます・・・・・・。）"
+translation = "[CONNIE] (Doctor... I'm going now...)"
+speaker = "コニー"
+context = "Connie silently takes leave of Kanzaki."
+status = "qa-ready"
+notes = "行ってきます carries an expectation of return; the surrounding vow supplies that nuance."
+
+[[entries]]
+id = "launch-boards-machine"
+file = "DISKA/F0001.MES"
+offset = 0x3ac7
+source_mode = 1
+target_mode = 2
+source = "ゆっくりとマシンに乗り込む。"
+translation = "Slowly, I climb into the machine."
+speaker = "Connie"
+context = "Connie boards Unit One."
+status = "qa-ready"
+notes = "Slowly' preserves the ceremonial hesitation."
+
+[[entries]]
+id = "launch-hope-it-works"
+file = "DISKA/F0001.MES"
+offset = 0x3b84
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うまくいきますように・・・。）"
+translation = "[CONNIE] (Please let this work...)"
+speaker = "コニー"
+context = "Connie offers a last private hope before startup."
+status = "qa-ready"
+notes = "The prayer-like form remains direct and unadorned."
+
+[[entries]]
+id = "launch-machine-built-by-trusted-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x3b9e
+source_mode = 1
+target_mode = 2
+source = "あたしが全幅の信頼を寄せる神崎博士が作ったタイムマシンだ。"
+translation = "This time machine was built by Dr. Kanzaki, the person I trust without reservation."
+speaker = "Connie"
+context = "Connie anchors her confidence in the machine's creator."
+status = "qa-ready"
+notes = "Without reservation' carries 全幅の信頼 without repeating 'completely.'"
+
+[[entries]]
+id = "launch-boards-in-trust"
+file = "DISKA/F0001.MES"
+offset = 0x3bc3
+source_mode = 1
+target_mode = 2
+source = "信じて乗り込んだ。"
+translation = "I board it in that faith."
+speaker = "Connie"
+context = "Connie commits herself to Kanzaki's work."
+status = "qa-ready"
+notes = "Faith' here is interpersonal trust, not religion."
+
+[[entries]]
+id = "launch-synchronizes-machine"
+file = "DISKA/F0001.MES"
+offset = 0x3bd1
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンを操作し、時空震動に震動数をシンクロさせる。"
+translation = "I work the controls and synchronize the machine's frequency with the space-time oscillation."
+speaker = "Connie"
+context = "Connie initiates the time-tunnel entry procedure."
+status = "qa-ready"
+notes = "Technical terminology follows the locked formal register."
+
+[[entries]]
+id = "launch-checks-panel-meters"
+file = "DISKA/F0001.MES"
+offset = 0x3c15
+source_mode = 1
+target_mode = 2
+source = "あたしは無言で、操縦パネルのメーターを調べる。"
+translation = "Without speaking, I check the meters on the control panel."
+speaker = "Connie"
+context = "Connie concentrates on launch instrumentation."
+status = "qa-ready"
+notes = "The silence underscores her professional focus."
+
+[[entries]]
+id = "launch-kanzaki-radio-check"
+file = "DISKA/F0001.MES"
+offset = 0x3ca6
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー、聞こえる？」"
+translation = "[KANZAKI] \"Connie, can you hear me?\""
+speaker = "神崎"
+context = "Kanzaki performs the communications check."
+status = "qa-ready"
+notes = "The plain question stays professional but personally attentive."
+
+[[entries]]
+id = "launch-connie-comms-normal"
+file = "DISKA/F0001.MES"
+offset = 0x3cba
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はい。通信機能、正常に動作しています。」"
+translation = "[CONNIE] \"Yes. Communications are functioning normally.\""
+speaker = "コニー"
+context = "Connie answers the pre-launch radio check."
+status = "qa-ready"
+notes = "Her formal pilot register contrasts with her internal voice."
+
+[[entries]]
+id = "launch-kanzaki-radio-silence"
+file = "DISKA/F0001.MES"
+offset = 0x3cdd
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・・・・・・・・・・・・・・・・。」"
+translation = "[KANZAKI] \"...\""
+speaker = "神崎"
+context = "Kanzaki falls silent over the radio."
+status = "qa-ready"
+notes = "The distinct voiced-silence record is preserved for the delayed apology."
+
+[[entries]]
+id = "launch-connie-question-mark"
+file = "DISKA/F0001.MES"
+offset = 0x3cfe
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・？）"
+translation = "[CONNIE] (...?)"
+speaker = "コニー"
+context = "Connie notices Kanzaki's unexplained silence."
+status = "qa-ready"
+notes = "The punctuation-only response retains the call's timing."
+
+[[entries]]
+id = "launch-whats-wrong-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x3d14
+source_mode = 1
+target_mode = 2
+source = "【コニー】（どうしたんだろう・・・？　神崎博士・・・？）"
+translation = "[CONNIE] (What's wrong...? Dr. Kanzaki...?)"
+speaker = "コニー"
+context = "Connie waits for Kanzaki to continue."
+status = "qa-ready"
+notes = "The two questions preserve her growing concern."
+
+[[entries]]
+id = "launch-kanzaki-stays-mute"
+file = "DISKA/F0001.MES"
+offset = 0x3d4f
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、押し黙ったままだ。"
+translation = "Dr. Kanzaki remains mute."
+speaker = "Connie"
+context = "The radio silence stretches."
+status = "qa-ready"
+notes = "Mute' gives the deliberate 押し黙る more force than ordinary silence."
+
+[[entries]]
+id = "launch-connie-waits-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x3d65
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・神崎博士・・・。）"
+translation = "[CONNIE] (...Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Connie silently calls to Kanzaki again."
+status = "qa-ready"
+notes = "The long pause is compressed but the separate anchor remains."
+
+[[entries]]
+id = "launch-kanzaki-apology"
+file = "DISKA/F0001.MES"
+offset = 0x3d94
+source_mode = 1
+target_mode = 2
+source = "【神崎】「・・・・・・・・・・・・・・・・・・ごめんね・・・。」"
+translation = "[KANZAKI] \"...I'm sorry...\""
+speaker = "神崎"
+context = "Kanzaki whispers the apology that foreshadows her secret plan."
+status = "qa-ready"
+notes = "The soft private ごめんね briefly replaces her formal public diction."
+
+[[entries]]
+id = "launch-hears-lip-whisper"
+file = "DISKA/F0001.MES"
+offset = 0x3dba
+source_mode = 1
+target_mode = 2
+source = "あたしの耳に、唇が僅かに動くだけの小さなつぶやきが聞こえた。"
+translation = "My ears catch a whisper so faint that her lips barely move."
+speaker = "Connie"
+context = "Only Connie's enhanced hearing catches the apology."
+status = "qa-ready"
+notes = "The sensory construction makes the near-inaudibility concrete."
+
+[[entries]]
+id = "launch-mic-would-miss-whisper"
+file = "DISKA/F0001.MES"
+offset = 0x3de1
+source_mode = 1
+target_mode = 2
+source = "マイクを通しても、たぶん他の人には聞こえないだろう。"
+translation = "Even through the microphone, no one else could have heard it."
+speaker = "Connie"
+context = "Connie judges the apology effectively private."
+status = "qa-ready"
+notes = "Could have' fits her inference about the just-spoken whisper."
+
+[[entries]]
+id = "launch-mutant-hearing-only"
+file = "DISKA/F0001.MES"
+offset = 0x3e03
+source_mode = 1
+target_mode = 2
+source = "あたしのミュータントとしての聴力で、やっと聞き取れる声の大きさだ。"
+translation = "It was barely loud enough even for my mutant hearing."
+speaker = "Connie"
+context = "Connie emphasizes how deliberately quiet Kanzaki was."
+status = "qa-ready"
+notes = "The line confirms the apology was not meant as a public statement."
+
+[[entries]]
+id = "launch-connie-shocked-apology"
+file = "DISKA/F0001.MES"
+offset = 0x3e2d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・！？）"
+translation = "[CONNIE] (...!?)"
+speaker = "コニー"
+context = "Connie reacts to the inexplicable apology."
+status = "qa-ready"
+notes = "The punctuation-only shock remains its own beat."
+
+[[entries]]
+id = "launch-what-happened-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x3e41
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士・・・・・・？　どうしちゃったんだろ？）"
+translation = "[CONNIE] (Dr. Kanzaki...? What's gotten into her?)"
+speaker = "コニー"
+context = "Connie tries to reconcile the apology with Kanzaki's normal behavior."
+status = "qa-ready"
+notes = "The informal second question restores Connie's familiar internal voice."
+
+[[entries]]
+id = "launch-assumes-kanzaki-worried"
+file = "DISKA/F0001.MES"
+offset = 0x3e65
+source_mode = 1
+target_mode = 2
+source = "【コニー】（やっぱりあたしを過去へ送り込むということで、不安になっている・・・？）"
+translation = "[CONNIE] (Is she really that worried about sending me into the past...?)"
+speaker = "コニー"
+context = "Connie reaches for the innocent explanation again."
+status = "qa-ready"
+notes = "The question preserves dramatic irony without revealing Kanzaki's guilt."
+
+[[entries]]
+id = "launch-remia-heard-apology"
+file = "DISKA/F0001.MES"
+offset = 0x3e95
+source_mode = 1
+target_mode = 2
+source = "神崎博士の側に立っているレミアにも聞こえたらしく、いぶかしげな表情になっていた。"
+translation = "Remia, standing beside Dr. Kanzaki, seems to have heard it too. Her face turns puzzled."
+speaker = "Connie"
+context = "Remia's reaction independently confirms the whisper."
+status = "qa-ready"
+notes = "The staging explains why Remia can hear what the microphone barely carries."
+
+[[entries]]
+id = "launch-what-did-apology-mean"
+file = "DISKA/F0001.MES"
+offset = 0x3edf
+source_mode = 1
+target_mode = 2
+source = "【コニー】（今の言葉は・・・・・・・・・？）"
+translation = "[CONNIE] (What did she mean by that...?)"
+speaker = "コニー"
+context = "Connie fixates on Kanzaki's apology."
+status = "qa-ready"
+notes = "The otherwise vague 'those words' is resolved naturally to meaning."
+
+[[entries]]
+id = "launch-kanzaki-never-shows-anxiety"
+file = "DISKA/F0001.MES"
+offset = 0x3efb
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしの前では不安そうにしたりしない。"
+translation = "Dr. Kanzaki never lets herself look anxious in front of me."
+speaker = "Connie"
+context = "Connie recalls Kanzaki's guardian posture."
+status = "qa-ready"
+notes = "Lets herself' emphasizes conscious emotional control."
+
+[[entries]]
+id = "launch-kanzaki-guardian-role"
+file = "DISKA/F0001.MES"
+offset = 0x3f19
+source_mode = 1
+target_mode = 2
+source = "あたしを守る保護者という立場だから、なのかもしれない。"
+translation = "Maybe that is because she sees herself as my guardian and protector."
+speaker = "Connie"
+context = "Connie explains Kanzaki's habitual strength around her."
+status = "qa-ready"
+notes = "Both guardian and protector unpack the protective stance in one natural phrase."
+
+[[entries]]
+id = "launch-kanzaki-clear-voice"
+file = "DISKA/F0001.MES"
+offset = 0x3f48
+source_mode = 1
+target_mode = 2
+source = "あたしが考え込んでいると、神崎博士の澄んだよく通る声が聞こえてきた。"
+translation = "As I brood over it, Dr. Kanzaki's clear, carrying voice returns."
+speaker = "Connie"
+context = "Kanzaki resumes formal launch communication."
+status = "qa-ready"
+notes = "Returns' contrasts the audible professional voice with the private whisper."
+
+[[entries]]
+id = "launch-no-turning-back"
+file = "DISKA/F0001.MES"
+offset = 0x3f73
+source_mode = 1
+target_mode = 2
+source = "【神崎】「時空震動に乗ったら最後、到着するまで引き返せないわ・・・・・・。」"
+translation = "[KANZAKI] \"Once you enter the Time Quake, there is no turning back until you arrive.\""
+speaker = "神崎"
+context = "Kanzaki gives Connie the final irreversible-flight warning."
+status = "qa-ready"
+notes = "Time Quake is appropriate in spoken operational shorthand."
+
+[[entries]]
+id = "launch-connie-im-fine"
+file = "DISKA/F0001.MES"
+offset = 0x3fa4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「大丈夫です・・・。」"
+translation = "[CONNIE] \"I'll be fine.\""
+speaker = "コニー"
+context = "Connie reassures Kanzaki before entry."
+status = "qa-ready"
+notes = "The polite confidence conceals the fear stated in the following narration."
+
+[[entries]]
+id = "launch-hides-fear-cheerful"
+file = "DISKA/F0001.MES"
+offset = 0x3fbc
+source_mode = 1
+target_mode = 2
+source = "あたしは不安な気持ちを心の奥に仕舞って、元気に返事をした。"
+translation = "I bury my fear deep inside and answer as brightly as I can."
+speaker = "Connie"
+context = "Connie performs confidence for Kanzaki."
+status = "qa-ready"
+notes = "Brightly' carries 元気に as deliberate emotional reassurance."
+
+[[entries]]
+id = "launch-kanzaki-nods"
+file = "DISKA/F0001.MES"
+offset = 0x3ffc
+source_mode = 1
+target_mode = 2
+source = "あたしのしっかりした声に、神崎博士も小さく頷いて応じてくれる。"
+translation = "Hearing the resolve in my voice, Dr. Kanzaki answers with a small nod."
+speaker = "Connie"
+context = "Kanzaki accepts Connie's reassurance."
+status = "qa-ready"
+notes = "Resolve' describes the quality of Connie's voice, not objective fearlessness."
+
+[[entries]]
+id = "launch-watches-sync-meter"
+file = "DISKA/F0001.MES"
+offset = 0x402d
+source_mode = 1
+target_mode = 2
+source = "あたしは頷いて、マシンと時空震動のシンクロメーターを見つめる。"
+translation = "I nod and fix my eyes on the synchronization meter for the machine and the Time Quake."
+speaker = "Connie"
+context = "Connie returns attention to the decisive instrument."
+status = "qa-ready"
+notes = "The longer technical label remains readable while preserving what the meter compares."
+
+[[entries]]
+id = "launch-nods-to-kanzaki"
+file = "DISKA/F0001.MES"
+offset = 0x4053
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士を見つめて頷いた。"
+translation = "I meet Dr. Kanzaki's gaze and nod."
+speaker = "Connie"
+context = "Connie gives Kanzaki one last signal of readiness."
+status = "qa-ready"
+notes = "Meet her gaze' makes the mutual farewell more natural."
+
+[[entries]]
+id = "launch-remia-demands-return"
+file = "DISKA/F0001.MES"
+offset = 0x4109
+source_mode = 1
+target_mode = 2
+source = "【レミア】「・・・・・・・・コニー・・、絶対に帰ってくるのよ。」"
+translation = "[REMIA] \"...Connie. You'd better come back. No matter what.\""
+speaker = "レミア"
+context = "Remia's concern breaks through her usual detachment."
+status = "qa-ready"
+notes = "The forceful English suits her direct voice while preserving 絶対に."
+
+[[entries]]
+id = "launch-remia-complicated-expression"
+file = "DISKA/F0001.MES"
+offset = 0x4130
+source_mode = 1
+target_mode = 2
+source = "レミアは複雑な面持ちであたしに言う。"
+translation = "Remia says it with a conflicted expression."
+speaker = "Connie"
+context = "Remia balances fear, duty, and helplessness."
+status = "qa-ready"
+notes = "Conflicted' is more informative than the literal but vague 'complicated.'"
+
+[[entries]]
+id = "launch-connie-promises-return"
+file = "DISKA/F0001.MES"
+offset = 0x4149
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・。きっと帰ってくるわ。・・・・・・・・きっと・・。」"
+translation = "[CONNIE] \"...I'll come back. I promise... I will.\""
+speaker = "コニー"
+context = "Connie answers Remia's demand."
+status = "qa-ready"
+notes = "I promise' naturalizes the repeated きっと as reassurance, not absolute prediction."
+
+[[entries]]
+id = "launch-connie-departs"
+file = "DISKA/F0001.MES"
+offset = 0x4173
+source_mode = 1
+target_mode = 2
+source = "【コニー】「行ってきます、レミア、神崎博士！！」"
+translation = "[CONNIE] \"I'm going now, Remia, Dr. Kanzaki!\""
+speaker = "コニー"
+context = "Connie gives the final voiced farewell."
+status = "qa-ready"
+notes = "行ってきます implies return; her explicit promise in the prior line preserves that force."
+
+[[entries]]
+id = "launch-matches-time-quake"
+file = "DISKA/F0001.MES"
+offset = 0x41f2
+source_mode = 1
+target_mode = 2
+source = "時空震動へ、マシンを合わせる。マシンが震動する。"
+translation = "I bring the machine into alignment with the Time Quake. The hull begins to vibrate."
+speaker = "Connie"
+context = "Unit One commits to tunnel entry."
+status = "qa-ready"
+notes = "Alignment and vibration are separated to preserve the cause-and-effect sequence."
+
+[[entries]]
+id = "launch-focuses-on-controls"
+file = "DISKA/F0001.MES"
+offset = 0x420f
+source_mode = 1
+target_mode = 2
+source = "あたしは時空へ飛び込むという未知の体験の恐さを忘れ、マシンの操作に神経を集中。"
+translation = "I forget the fear of plunging into the unknown and put all my concentration into the controls."
+speaker = "Connie"
+context = "Professional focus overtakes Connie's fear at entry."
+status = "qa-ready"
+notes = "The line preserves her competence without claiming the fear has permanently vanished."
+
+[[entries]]
+id = "launch-enters-time-tunnel"
+file = "DISKA/F0001.MES"
+offset = 0x4244
+source_mode = 1
+target_mode = 2
+source = "そして・・・・・・・・・・・・・・・・、時空トンネルへ、突入した！"
+translation = "And then... I plunge into the time tunnel!"
+speaker = "Connie"
+context = "Unit One crosses the tunnel threshold."
+status = "qa-ready"
+notes = "The exclamation retains the action climax while compressing the pause."
+
+[[entries]]
+id = "launch-between-times"
+file = "DISKA/F0001.MES"
+offset = 0x431a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ここが時空の狭間・・・・・・。）"
+translation = "[CONNIE] (So this is the space between times...)"
+speaker = "コニー"
+context = "Connie sees the interior of the time tunnel."
+status = "qa-ready"
+notes = "The space between times' is evocative without inventing a formal technical term."
+
+[[entries]]
+id = "launch-studies-tunnel-view"
+file = "DISKA/F0001.MES"
+offset = 0x4336
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンの外の景色を、物珍しげに見た。"
+translation = "I study the strange view beyond the machine with open curiosity."
+speaker = "Connie"
+context = "Connie's wonder returns once entry succeeds."
+status = "qa-ready"
+notes = "Open curiosity' captures 物珍しげ without making her sound clinically detached."
+
+[[entries]]
+id = "launch-tunnel-unnatural-quiet"
+file = "DISKA/F0001.MES"
+offset = 0x4355
+source_mode = 1
+target_mode = 2
+source = "【コニー】（静かな・・物音が消されるような・・・・・・・・・・・。）"
+translation = "[CONNIE] (So quiet... as if every sound is being erased...)"
+speaker = "コニー"
+context = "Connie notices the tunnel's sound-damping effect."
+status = "qa-ready"
+notes = "Erased' preserves the uncanny active disappearance of sound."
+
+[[entries]]
+id = "launch-sound-swallowed"
+file = "DISKA/F0001.MES"
+offset = 0x437d
+source_mode = 1
+target_mode = 2
+source = "あたしがカタッと音を立てても、消音壁に音が吸い込まれるように、音が消えていく。"
+translation = "Even when I make a small clatter, the sound vanishes as though soundproof walls swallow it."
+speaker = "Connie"
+context = "Connie tests the tunnel's silence."
+status = "qa-ready"
+notes = "The soundproof-wall comparison is explicitly figurative in the source."
+
+[[entries]]
+id = "launch-world-without-sound"
+file = "DISKA/F0001.MES"
+offset = 0x43af
+source_mode = 1
+target_mode = 2
+source = "【コニー】（何も・・・・・・・・・・・・、聞こえない世界・・・・・・・・・。）"
+translation = "[CONNIE] (A world... where I can't hear anything...)"
+speaker = "コニー"
+context = "The enhanced-hearing mutant confronts absolute silence."
+status = "qa-ready"
+notes = "The sensory deprivation has special weight for Connie and remains fragmentary."
+
+[[entries]]
+id = "launch-can-watch-awhile"
+file = "DISKA/F0001.MES"
+offset = 0x43fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（しばらく・・・・・・・・・見とれてもいいかな？）"
+translation = "[CONNIE] (Can I let myself watch for a little while...?)"
+speaker = "コニー"
+context = "Connie is tempted to linger on the unprecedented view."
+status = "qa-ready"
+notes = "Let myself' conveys the conflict between wonder and pilot duty."
+
+[[entries]]
+id = "launch-watch-time-instead-of-talk"
+file = "DISKA/F0001.MES"
+offset = 0x4420
+source_mode = 1
+target_mode = 2
+source = "独り言を言うよりも、時間という景色をしばらく見つめたいな。"
+translation = "Rather than talk to myself, I want to spend a while watching the landscape of time."
+speaker = "Connie"
+context = "Connie chooses silent wonder inside the tunnel."
+status = "qa-ready"
+notes = "Landscape of time' preserves the source's poetic 時間という景色."
