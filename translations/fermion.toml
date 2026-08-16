@@ -1387,11 +1387,11 @@ offset = 0x1221
 source_mode = 1
 target_mode = 2
 source = "　大気・海・大地の汚染を戻そうにも、１０年や２０年では自然回復さえしなかった。\n"
-translation = "    The poisoned air, sea, and soil did not heal in ten or twenty years.\n"
+translation = " Air, sea, and soil defied cleanup. Decades brought no natural recovery.\n"
 speaker = "narrator"
 context = "Opening premise screen; environmental recovery is too slow to save the population."
 status = "qa-ready"
-notes = "戻そうにも is an attempted reversal, not merely observation. The compact English stays within two 36-character crawl reveals and retains the ten-or-twenty-year scale; singular 'sea' follows 海 and puts the tick boundary after 'soil'."
+notes = "戻そうにも makes reversal or cleanup the obstacle, while 自然回復さえ says that not even natural recovery occurred on the ten-or-twenty-year scale. 'Decades' compresses that scale, and the leading space keeps both 36-character crawl reveals word-safe."
 
 [[entries]]
 id = "opening-exposition-repair-attempt"
@@ -1413,11 +1413,11 @@ offset = 0x127b
 source_mode = 1
 target_mode = 2
 source = "　　　　　　　　　『失われた遺伝子情報』は、復元できなかった。"
-translation = "            but what their genes had lost could not be recovered."
+translation = "     but \"lost genetic information\" could not be reconstructed."
 speaker = "narrator"
 context = "Opening premise screen; conclusion establishing the genetic-data objective of Project D."
 status = "qa-ready"
-notes = "The source emphasizes 'lost genetic information' as a quoted concept. 'What their genes had lost' preserves that meaning while placing the crawl's 36-character reveal boundary between words; English emphasis is carried by the sentence structure rather than decorative quotation marks."
+notes = "The source presents 'lost genetic information' as the quoted technical object that Project D cannot reconstruct from the surviving genome. The locked term and quotation marks remain explicit; 'reconstructed' distinguishes this failed present-day operation from recovering intact genetic information in 1996. The leading spaces place the crawl's 36-character reveal boundary after the quoted term."
 
 [[entries]]
 id = "first-scene-connie-resists"

@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "599830e88d8fa7d2d23c2bb5aa1146af923922a7b137aab79f7f8e897b38ce4c"
+content_sha256 = "5889238d08a9f68cc88e8a4428062aab1485e5147aeed09877eebf1a8ff4fbac"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -154,7 +154,7 @@ sha256 = "694323905fa14fd6ce087cfec45411550ea32f737e00d1016769ef4b241df3b4"
 [[routes.checkpoints]]
 name = "premise-2296"
 frame = 24749
-sha256 = "31f58a592f72cd3eb4e4b42144b41ed9639b909bfed66ad4d8b05f54ebb04f02"
+sha256 = "09604c4ba7362b095375762678a893dde92a394283b3688f5981d6f89496c1e0"
 
 [[routes.checkpoints]]
 name = "first-scene-connie"
