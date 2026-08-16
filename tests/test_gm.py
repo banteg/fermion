@@ -79,6 +79,31 @@ def test_mode_one_text_decodes_pc98_box_drawing_dictionary_entries() -> None:
     assert record.text == "─"
 
 
+def test_recovers_literal_scenario_transitions() -> None:
+    gm = GMFile.from_bytes(
+        gm_file(
+            b"\x6d\x11f0000.mes\x00\x00"
+            b"\x6f\x11name.mes\x00\x00"
+            b"\x00"
+        )
+    )
+
+    assert [
+        (transition.offset, transition.kind, transition.target)
+        for transition in gm.transitions()
+    ] == [
+        (2, "replace", "f0000.mes"),
+        (15, "nested", "name.mes"),
+    ]
+
+
+def test_rejects_computed_scenario_transition_target() -> None:
+    gm = GMFile.from_bytes(gm_file(b"\x6d\x01\x01\x00\x00\x00"))
+
+    with pytest.raises(GMError, match="target is not a literal string"):
+        gm.transitions()
+
+
 def test_attributes_literal_speaker_label() -> None:
     gm = GMFile.from_bytes(gm_file(gm_text("【コニー】「はい。」") + b"\x50\x00"))
 

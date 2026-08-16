@@ -69,11 +69,43 @@ content-deduplicated mode-1 corpus dump is also available for offline review:
 
 ```sh
 uv run fermion gm script working/archives > working/script.md
+uv run fermion gm script working/archives --story > working/story-script.md
 ```
 
 See [`research/gm-speaker-attribution.md`](research/gm-speaker-attribution.md)
 for the recovered bytecode rule, slot roles, native-handler evidence, and
 corpus accounting.
+
+The story view follows literal GM scenario transitions from `FOP.MES`, stops
+when the game returns to `MAIN.MES`, and then emits the reachable files in
+stable scenario-name order. The default dump retains its original physical
+extraction order so existing `script.md` line-number references do not move.
+Inspect the actual branches and nested loads as text, TSV, or Graphviz DOT:
+
+```sh
+uv run fermion gm transitions working/archives
+uv run fermion gm transitions working/archives \
+  --format dot \
+  > working/scenario-graph.dot
+```
+
+Generate a non-authoritative, whole-story work queue without changing the
+catalog under active translation:
+
+```sh
+uv run fermion gm inventory working/archives \
+  --story \
+  > working/story-inventory.tsv
+```
+
+The inventory groups exact `(mode, proven speaker, Japanese)` candidates under
+stable hash IDs, retains every unique-file anchor, and leaves `en` and `context`
+blank. `multi-anchor`, `speaker-variant`, and `unresolved-speaker` flags identify
+groups that need contextual review before they can become canonical catalog
+entries. Use `--duplicates-only`, `--unresolved-only`, or `--format jsonl` for
+focused passes. See
+[`research/gm-scenario-flow.md`](research/gm-scenario-flow.md) for the recovered
+story boundary and corpus totals.
 
 For a same-sized renderer probe, replace one unique compiled MES blob in a
 copied hard-disk image without touching the input image:

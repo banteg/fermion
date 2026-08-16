@@ -40,7 +40,7 @@ from fermion.save_fixtures import (
     write_fixture_hdi,
     write_save_fixture_manifest,
 )
-from fermion.script import collect_mes_files, render_script
+from fermion.script import collect_mes_files, render_script, script_groups, story_mes_files
 from fermion.translation import TranslationCatalog, TranslationError
 
 
@@ -130,10 +130,36 @@ def build_parser() -> argparse.ArgumentParser:
         "--format", choices=("text", "tsv", "jsonl"), default="text"
     )
     gm_speakers.set_defaults(handler=_gm_speakers)
+    gm_transitions = gm_commands.add_parser(
+        "transitions", help="list literal scenario loads and replacements"
+    )
+    gm_transitions.add_argument("source", type=_path)
+    gm_transitions.add_argument(
+        "--format", choices=("text", "tsv", "dot"), default="text"
+    )
+    gm_transitions.set_defaults(handler=_gm_transitions)
+    gm_inventory = gm_commands.add_parser(
+        "inventory", help="group canonical translation candidates across the corpus"
+    )
+    gm_inventory.add_argument("source", type=_path)
+    gm_inventory.add_argument(
+        "--story", action="store_true", help="include only scenarios reachable from FOP.MES"
+    )
+    gm_inventory.add_argument(
+        "--duplicates-only", action="store_true", help="show only multi-anchor groups"
+    )
+    gm_inventory.add_argument(
+        "--unresolved-only", action="store_true", help="show only groups needing a speaker"
+    )
+    gm_inventory.add_argument("--format", choices=("tsv", "jsonl"), default="tsv")
+    gm_inventory.set_defaults(handler=_gm_inventory)
     gm_script = gm_commands.add_parser(
         "script", help="dump the deduplicated scenario script with per-line anchors"
     )
     gm_script.add_argument("source", type=_path)
+    gm_script.add_argument(
+        "--story", action="store_true", help="include only scenarios reachable from FOP.MES"
+    )
     gm_script.set_defaults(handler=_gm_script)
 
     binary = commands.add_parser("binary", help="patch copied binary media conservatively")
@@ -584,10 +610,130 @@ def _gm_speakers(args: argparse.Namespace) -> None:
                 )
 
 
+def _gm_transitions(args: argparse.Namespace) -> None:
+    files = collect_mes_files(args.source)
+    if not files:
+        raise GMError(f"no MES files found under {args.source}")
+    rows = [
+        (path.name.upper(), transition)
+        for path in files
+        for transition in GMFile.from_file(path).transitions()
+    ]
+
+    if args.format == "dot":
+        print("digraph gm_scenarios {")
+        for source, transition in rows:
+            label = f"{transition.kind} @ {transition.offset:04x}"
+            print(
+                f"  {json.dumps(source)} -> {json.dumps(transition.target.upper())} "
+                f"[label={json.dumps(label)}];"
+            )
+        print("}")
+        return
+
+    if args.format == "tsv":
+        writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+        writer.writerow(("source", "offset", "kind", "target"))
+        for source, transition in rows:
+            writer.writerow(
+                (
+                    source,
+                    f"0x{transition.offset:04x}",
+                    transition.kind,
+                    transition.target.upper(),
+                )
+            )
+        return
+
+    for source, transition in rows:
+        print(
+            f"{source}:0x{transition.offset:04x} {transition.kind} "
+            f"-> {transition.target.upper()}"
+        )
+
+
+def _gm_inventory(args: argparse.Namespace) -> None:
+    files = collect_mes_files(args.source)
+    if not files:
+        raise GMError(f"no MES files found under {args.source}")
+    if args.story:
+        files = story_mes_files(files)
+    groups = script_groups(files)
+    if args.duplicates_only:
+        groups = [group for group in groups if len(group.anchors) > 1]
+    if args.unresolved_only:
+        groups = [group for group in groups if group.speaker is None]
+
+    if args.format == "tsv":
+        writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+        writer.writerow(
+            (
+                "id",
+                "anchors",
+                "speaker",
+                "jp",
+                "en",
+                "context",
+                "status",
+                "occurrences",
+                "mode",
+                "attribution",
+                "default_name",
+                "flags",
+            )
+        )
+        for group in groups:
+            writer.writerow(
+                (
+                    group.id,
+                    ";".join(
+                        f"{anchor.file}:0x{anchor.offset:04x}" for anchor in group.anchors
+                    ),
+                    group.speaker or "",
+                    _tsv_text(group.japanese),
+                    "",
+                    "",
+                    group.status,
+                    len(group.anchors),
+                    group.mode,
+                    group.attribution,
+                    group.default_name or "",
+                    ",".join(group.flags),
+                )
+            )
+        return
+
+    for group in groups:
+        print(
+            json.dumps(
+                {
+                    "id": group.id,
+                    "anchors": [
+                        {"file": anchor.file, "offset": anchor.offset}
+                        for anchor in group.anchors
+                    ],
+                    "speaker": group.speaker,
+                    "jp": group.japanese,
+                    "en": "",
+                    "context": "",
+                    "status": group.status,
+                    "occurrences": len(group.anchors),
+                    "mode": group.mode,
+                    "attribution": group.attribution,
+                    "default_name": group.default_name,
+                    "flags": list(group.flags),
+                },
+                ensure_ascii=False,
+            )
+        )
+
+
 def _gm_script(args: argparse.Namespace) -> None:
     files = collect_mes_files(args.source)
     if not files:
         raise GMError(f"no MES files found under {args.source}")
+    if args.story:
+        files = story_mes_files(files)
     print(render_script(files))
 
 

@@ -64,6 +64,17 @@ class GMAttributedText:
 
 
 @dataclass(frozen=True)
+class GMTransition:
+    offset: int
+    opcode: int
+    target: str
+
+    @property
+    def kind(self) -> str:
+        return "replace" if self.opcode == 0x6D else "nested"
+
+
+@dataclass(frozen=True)
 class GMAudit:
     instructions: tuple[GMInstruction, ...]
     relocations: tuple[GMRelocation, ...]
@@ -164,6 +175,18 @@ class GMFile:
 
         return tuple(attributed)
 
+    def transitions(self) -> tuple[GMTransition, ...]:
+        """Return literal scenario loads in bytecode order."""
+        return tuple(
+            GMTransition(
+                instruction.offset,
+                instruction.opcode,
+                _literal_transition_target(self.data, instruction),
+            )
+            for instruction in self.audit().instructions
+            if instruction.opcode in {0x6D, 0x6F}
+        )
+
 
 _INLINE_SPEAKER = re.compile(r"^【([^】]+)】")
 
@@ -217,6 +240,22 @@ def _dynamic_speaker(
         return None
     slot = int.from_bytes(copy_data[6:8], "little")
     return _NAME_SLOT_SPEAKERS.get(slot)
+
+
+def _literal_transition_target(data: bytes, instruction: GMInstruction) -> str:
+    pos = instruction.offset + 1
+    if pos >= instruction.end or data[pos] != 0x11:
+        raise _error(pos, f"opcode 0x{instruction.opcode:02x} target is not a literal string")
+    end = data.find(b"\0", pos + 1, instruction.end)
+    if end < 0:
+        raise _error(pos, f"opcode 0x{instruction.opcode:02x} target is unterminated")
+    try:
+        target = data[pos + 1 : end].decode("ascii")
+    except UnicodeDecodeError as error:
+        raise _error(pos + 1, f"opcode 0x{instruction.opcode:02x} target is not ASCII") from error
+    if not target:
+        raise _error(pos + 1, f"opcode 0x{instruction.opcode:02x} target is empty")
+    return target
 
 
 def _decode_text(mode: int, payload: bytes, dictionary: tuple[bytes, ...]) -> str | None:

@@ -50,6 +50,9 @@ Completed work:
   retains stable offsets, and annotates every proven speaker for holistic plot
   review and translator-note drafting without treating generated output as the
   catalog source of truth.
+- All 168 scenario transfers have literal filenames. A transition graph and
+  `FOP.MES`-rooted story view isolate 72 story scripts, while a stable candidate
+  inventory groups exact speaker/text pairs and flags unsafe contextual merges.
 - A checked-in translation catalog retains stable pristine-source anchors,
   canonical one-to-many translations, original lines, speaker, context,
   wrapping constraints, progress status, and translator notes. The CLI verifies
@@ -439,6 +442,31 @@ unlabelled lines. `fermion translation table` emits `id`, `file`, `offset`,
 byte-level and native evidence is retained in
 `research/gm-speaker-attribution.md`.
 
+## Completed enabling milestone: scenario-aware corpus inventory
+
+Opcodes `0x6d` and `0x6f` expose every scenario replacement and nested load.
+Across the 77 content-unique scripts, all 168 targets are literal filenames;
+there are no computed transition targets in the corpus. `fermion gm
+transitions` exports the exact edges as text, TSV, or Graphviz DOT.
+
+Following those edges from `FOP.MES` and treating `MAIN.MES` as the terminal
+title return selects 72 story scripts. `F_E.MES`, `MONO.MES`, `NAME.MES`, and
+the `SILK.MES` software catalog remain available in the full dump but are
+excluded by `fermion gm script --story`. Story output begins with the prologue
+and then uses stable scenario-name order; the graph, rather than that linear
+view, remains authoritative for branches and cycles.
+
+`fermion gm inventory --story` groups 16,994 decoded records in the unique
+corpus into 12,841 exact `(mode, proven speaker, Japanese)` candidates without
+modifying the translation catalog. It assigns stable content-derived IDs,
+retains every unique-file anchor, and leaves English and context blank. The
+initial queue has 6,625 unresolved-speaker groups, 5,773 unique pending groups,
+and 443 known-speaker groups requiring context review. Multi-anchor and
+speaker-variant flags
+make every proposed canonical merge explicit; identical source never becomes
+one translation merely because the extractor saw it twice. Full evidence and
+commands are retained in `research/gm-scenario-flow.md`.
+
 ## Completed enabling milestone: catalog-driven image builds
 
 ### 9. Remove the same-total-size constraint — complete
@@ -529,7 +557,8 @@ release gate.
 - Work down the 103-line initial coverage backlog, beginning with the contiguous
   `FOP.MES` opening narration. Assign contextual speakers explicitly as each
   scene is reviewed, use one canonical translation only where speaker and
-  context agree, and retain editorial review notes.
+  context agree, retain editorial review notes, and promote reviewed candidates
+  from the story inventory into the catalog.
 - Placeholder/control-token validation and enforced word-boundary wrapping.
 - Continue adding sparse game-native fixtures beyond `F0001.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route
