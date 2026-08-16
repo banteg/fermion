@@ -7956,11 +7956,11 @@ offset = 0x0a20
 source_mode = 1
 target_mode = 2
 source = "ちょっぴりの不安と、見知らぬ世界へ行く好奇心が、今のあたしの心を満たしていた。"
-translation = "A little fear and a lot of curiosity about an unknown world fill my mind."
+translation = "I'm filled with a little anxiety and curiosity about the unknown world ahead."
 speaker = "Connie"
 context = "Connie names her mixed feelings before launch."
 status = "qa-ready"
-notes = "The asymmetry in English gives curiosity the lively emphasis characteristic of Connie."
+notes = "The English keeps the source's modest emotional scale instead of adding extra intensity to Connie's curiosity."
 
 [[entries]]
 id = "launch-alone-in-room"
@@ -7995,11 +7995,11 @@ offset = 0x0aa1
 source_mode = 1
 target_mode = 2
 source = "扉の外に、誰か来ているようだ。"
-translation = "It seems someone has come to the other side of the door."
+translation = "It seems someone's outside the door."
 speaker = "Connie"
 context = "Connie belatedly detects a visitor."
 status = "qa-ready"
-notes = "The spatial wording retains her hunter-like attention to proximity."
+notes = "The concise wording retains ようだ as Connie's inference and the door as the precise boundary."
 
 [[entries]]
 id = "launch-missed-presence"
@@ -8060,11 +8060,11 @@ offset = 0x0b27
 source_mode = 1
 target_mode = 2
 source = "ミュータントの開発が下火になっている今、あたしたちのメンタル的なサポートをしてくれる。"
-translation = "Now that mutant development is winding down, she is supposed to provide our psychological support."
+translation = "Now that mutant development is winding down, she handles our psychological support."
 speaker = "Connie"
 context = "Connie explains Marie's present duties."
 status = "qa-ready"
-notes = "Supposed to' preserves Connie's skepticism toward Marie's actual warmth without overstating hostility."
+notes = "してくれる describes Marie's present supportive duty without adding skepticism before Connie's later unease."
 
 [[entries]]
 id = "launch-mutant-production-stopped"
@@ -8099,11 +8099,11 @@ offset = 0x0bc2
 source_mode = 1
 target_mode = 2
 source = "【コニー】（ヒトはもうひとつの人類を造り出してしまった・・・。）"
-translation = "[CONNIE] (Humans created another human race...)"
+translation = "[CONNIE] (Humans created a second humanity...)"
 speaker = "コニー"
 context = "Connie reflects on mutants as a manufactured people."
 status = "qa-ready"
-notes = "Another human race' carries the social weight of もうひとつの人類 without reducing mutants to a product."
+notes = "A second humanity' preserves the social weight of もうひとつの人類 without importing 'race' into the genetic taxonomy."
 
 [[entries]]
 id = "launch-mutant-human-marriage"
@@ -9442,11 +9442,11 @@ offset = 0x1c62
 source_mode = 1
 target_mode = 2
 source = "あなたのためなら、この命、惜しくはないです。"
-translation = "If it is for you, I would gladly give my life."
+translation = "If it's for you, I would give my life."
 speaker = "Connie"
 context = "Connie silently dedicates the risk to Kanzaki."
 status = "qa-ready"
-notes = "The formal ending and direct あなた make this a private vow, not general mission rhetoric."
+notes = "The formal ending and direct あなた make this a private vow. Removing 'gladly' preserves her willingness to sacrifice herself without making her eager to die."
 
 [[entries]]
 id = "launch-for-you-fragment"
@@ -9585,11 +9585,11 @@ offset = 0x1df8
 source_mode = 1
 target_mode = 2
 source = "ほっそりとした腕に抱かれながら、あたしは押し付けられるふくよかな胸を感じていた。"
-translation = "Held by her slender arms, I could feel the softness of her breast pressed against me."
+translation = "Held in her slender arms, I could feel her full breasts pressed against me."
 speaker = "Connie"
 context = "Connie recalls the physical closeness of Kanzaki's frightened embrace."
 status = "qa-ready"
-notes = "The archival translation retains the source's eroticized body detail without adding intensity."
+notes = "胸 is Kanzaki's chest or breasts collectively, not one breast. The English retains the source's eroticized body detail without adding intensity."
 
 [[entries]]
 id = "launch-felt-kanzaki-worry"
@@ -10417,11 +10417,11 @@ offset = 0x2829
 source_mode = 1
 target_mode = 2
 source = "【コニー】（きゃあっ！！！）"
-translation = "[CONNIE] (Aah!)"
+translation = "[CONNIE] (Eek!)"
 speaker = "コニー"
 context = "The violent oscillation overwhelms Connie."
 status = "qa-ready"
-notes = "The scream is compressed but not sanitized."
+notes = "Eek' preserves きゃあっ as a startled yelp rather than flattening it into a generic moan."
 
 [[entries]]
 id = "launch-headache-and-nausea"
@@ -10430,11 +10430,11 @@ offset = 0x285b
 source_mode = 1
 target_mode = 2
 source = "あたしは猛烈な頭痛と吐き気に襲われた。"
-translation = "A savage headache and nausea tear through me."
+translation = "A fierce headache and nausea hit me."
 speaker = "Connie"
 context = "The crossing inflicts the symptoms carried into F0002."
 status = "qa-ready"
-notes = "Tear through me' supplies the sudden violence of 襲われた."
+notes = "Hit me' carries the sudden onset of 襲われた without pushing Connie's narration into literary violence."
 
 [[entries]]
 id = "launch-blackout-long"
@@ -11225,11 +11225,11 @@ offset = 0x3315
 source_mode = 1
 target_mode = 2
 source = "あたしが生まれてから短期間で教育をして、知識を与えてくれて、・・・。"
-translation = "After I was born, she educated me and gave me knowledge in such a short time..."
+translation = "After I was created, she educated me and gave me knowledge in such a short time..."
 speaker = "Connie"
 context = "Connie lists what she believes she owes Kanzaki."
 status = "qa-ready"
-notes = "The trailing record remains open-ended as a knock interrupts her."
+notes = "Created' keeps Connie's manufactured origin consistent; 生まれて is the ordinary Japanese verb for coming into existence here. The trailing record remains open-ended as a knock interrupts her."
 
 [[entries]]
 id = "launch-kanzaki-knock-sound"
@@ -11788,11 +11788,11 @@ offset = 0x3aa8
 source_mode = 1
 target_mode = 2
 source = "【コニー】（博士・・・。行ってきます・・・・・・。）"
-translation = "[CONNIE] (Doctor... I'm going now...)"
+translation = "[CONNIE] (Doctor... I'm off... I'll be back...)"
 speaker = "コニー"
 context = "Connie silently takes leave of Kanzaki."
 status = "qa-ready"
-notes = "行ってきます carries an expectation of return; the surrounding vow supplies that nuance."
+notes = "The two-part English makes 行ってきます's departure and expected return explicit in Connie's private farewell."
 
 [[entries]]
 id = "launch-boards-machine"
@@ -11840,11 +11840,11 @@ offset = 0x3bc3
 source_mode = 1
 target_mode = 2
 source = "信じて乗り込んだ。"
-translation = "I board it in that faith."
+translation = "Trusting her, I climb aboard."
 speaker = "Connie"
 context = "Connie commits herself to Kanzaki's work."
 status = "qa-ready"
-notes = "Faith' here is interpersonal trust, not religion."
+notes = "The omitted object of 信じて is Kanzaki in the preceding sentence; the natural English keeps that interpersonal trust explicit."
 
 [[entries]]
 id = "launch-synchronizes-machine"
@@ -11944,11 +11944,11 @@ offset = 0x3d4f
 source_mode = 1
 target_mode = 2
 source = "神崎博士は、押し黙ったままだ。"
-translation = "Dr. Kanzaki holds her silence."
+translation = "Dr. Kanzaki stays silent."
 speaker = "Connie"
 context = "The radio silence stretches."
 status = "qa-ready"
-notes = "'Holds her silence' keeps 押し黙る's deliberate suppression before the whispered apology; 'mute' wrongly suggested a silenced mic over the radio, and plain 'silent' was already spent on the comms imagery."
+notes = "Plain 'stays silent' preserves the sustained 押し黙ったまま without overworking Connie's observation or suggesting a silenced microphone."
 
 [[entries]]
 id = "launch-connie-waits-kanzaki"
@@ -12243,11 +12243,11 @@ offset = 0x4173
 source_mode = 1
 target_mode = 2
 source = "【コニー】「行ってきます、レミア、神崎博士！！」"
-translation = "[CONNIE] \"I'm going now, Remia, Dr. Kanzaki!\""
+translation = "[CONNIE] \"I'm off, Remia, Dr. Kanzaki! I'll be back!\""
 speaker = "コニー"
 context = "Connie gives the final voiced farewell."
 status = "qa-ready"
-notes = "行ってきます implies return; her explicit promise in the prior line preserves that force."
+notes = "The two-part English preserves both halves of 行ってきます even after Connie's explicit promise in the prior line."
 
 [[entries]]
 id = "launch-matches-time-quake"
