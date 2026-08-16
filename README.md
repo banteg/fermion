@@ -366,6 +366,23 @@ triggering the menu repeat seen with longer holds. Every route verifies the
 visible `LOAD` operation and the exact scenario marker inside serialized live
 state; the F0001 proof also retains its 640x308 room-only checkpoint before the
 dialogue hashes.
+
+Manual NP2debug `.S00`/`.S01` slots are opaque, exact-image snapshots. Check a
+slot against the image it will resume before loading it:
+
+```sh
+uv run fermion save check-np2debug-state \
+  path/to/np21.S01 \
+  working/emulator/fermion-translation-current.hdi
+```
+
+The check compares the open `DISKA` length cached in the state's DOS system
+file table with `FERM/DISKA` in the HDI. It catches the known seven-byte stale
+state failure, which restored an old file cursor and made a GP4 read begin
+inside its payload. A pass proves only that the lengths match, not that the
+contents do: discard and recreate manual NP2debug slots after every image
+rebuild.
+
 Game-native fixtures are portable across translation rebuilds as long as their
 hash-pinned `REG` banks remain unchanged; libretro states remain the precise,
 core-specific accelerator within one such route. Native loads resume at a

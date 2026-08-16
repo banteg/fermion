@@ -30,6 +30,7 @@ from fermion.fat import FAT12, FATError
 from fermion.gm import GMError, GMFile
 from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mz import MZError, MZImage
+from fermion.np2debug import NP2DebugStateError, verify_np2debug_state_image
 from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest, route_cache_key
 from fermion.save_fixtures import (
@@ -230,6 +231,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="explicit slot offset in the state, in decimal or 0x-prefixed hexadecimal",
     )
     save_capture.set_defaults(handler=_save_capture)
+    save_check_np2debug = save_commands.add_parser(
+        "check-np2debug-state",
+        help="detect a stale NP2debug state from its cached archive size",
+    )
+    save_check_np2debug.add_argument("state", type=_path)
+    save_check_np2debug.add_argument("image", type=_path)
+    save_check_np2debug.add_argument("--archive-path", default="FERM/DISKA")
+    save_check_np2debug.set_defaults(handler=_save_check_np2debug_state)
 
     emulator = commands.add_parser("emulator", help="run headless NP2kai translation tests")
     emulator_commands = emulator.add_subparsers(dest="emulator_command", required=True)
@@ -479,6 +488,21 @@ def _save_capture(args: argparse.Namespace) -> None:
     print(
         f"slot: {capture.fixture.target_path} sha256={capture.fixture.result_sha256}"
     )
+
+
+def _save_check_np2debug_state(args: argparse.Namespace) -> None:
+    check = verify_np2debug_state_image(
+        args.state.read_bytes(),
+        HDIImage.from_file(args.image),
+        archive_path=args.archive_path,
+    )
+    print(f"state: {args.state}")
+    print(f"image: {args.image}")
+    print(f"archive: {check.archive_path}")
+    print(f"sft-offset: 0x{check.state.sft_offset:x}")
+    print(f"position: 0x{check.state.position:x}")
+    print(f"archive-size: 0x{check.image_size:x} (matches cached SFT size)")
+    print("note: a size match does not make an opaque NP2debug state portable")
 
 
 def _gm_audit(args: argparse.Namespace) -> None:
@@ -1165,6 +1189,7 @@ def main() -> None:
         GMError,
         HDIError,
         MZError,
+        NP2DebugStateError,
         OSError,
         SaveFixtureError,
         TranslationError,

@@ -631,28 +631,35 @@ capture a native F0003 fixture for subsequent short automated routes.
 ## QA incident: F0001 post-knock fade
 
 The apparent stall after `F0001.MES:0x3397` ("Even an ordinary knock has a
-pattern my ears remember.") does not reproduce as a translated-script control-
-flow failure. In the current QA build, the translated line begins at relocated
-offset `0x4d03`; the following reply and graphics block execute through to
-"Dr. Kanzaki enters." with the GM interpreter cursor at `0x4dfb`. The serialized
-NP2kai state contains the complete 26,045-byte F0001 payload, and every local
-target in the block remains an instruction boundary.
+pattern my ears remember.") is root-caused to a stale NP2debug save state, not
+translated GM control flow or emulator speed. The supplied page-fault backtrace
+identified NP2debug's word-store path at host `0x41256b`. A conditional runtime
+write tracer then caught guest `REP MOVSW` writing `DX=0x010b` through that path
+to physical `0x2e800`; the malformed GP4 decode had crossed its circular output
+area and begun overwriting the decoder itself.
 
-The same exact-build checkpoint passes under headless NP2kai with both 13 MB and
-1 MB of extended memory. The fade needs between 300 and 600 emulated frames.
-The manual NP2debug run was configured at the expensive x20 CPU multiplier with
-no frame skipping and was already reporting about 10 FPS before the fade; at
-that rate the transition alone takes roughly 30 to 60 seconds, and its graphics
-work can reduce throughput further while starving audio. Treat the observed
-black screen and broken-up music as an NP2debug/CrossOver performance problem
-unless it also reproduces at x4 or x8 with a stable frame rate.
+A guest breakpoint immediately after the eight-byte DOS header read found
+`2f 00 01 61 29 c5 39 35`. The requested file was proven through the PSP and
+DOS system file table to be `DISKA`. `H001.GP4` starts at archive offset
+`0xd38f7` with the valid header `00 08 00 03 01 ff 01 2f`; the stale state read
+from `0xd38fe`, exactly seven bytes into the file. Its restored SFT cached
+`DISKA` at `0x10edb1` bytes, while the current mounted archive is `0x10edaa`
+bytes. Both `np21.S00` and `np21.S01` contain the old length.
+
+A fresh boot of the same HDI reports `0x10edaa` in the live SFT and reaches the
+title normally. The rebuilt archive is therefore sound. Loading an opaque
+NP2debug state from a previous image restored stale DOS file metadata and a
+cursor that no longer addressed the same byte. `fermion save
+check-np2debug-state` now rejects this known size mismatch before manual QA.
+A matching size is not a content fingerprint, so all NP2debug slots must still
+be recreated after any image rebuild. Sparse game-native `REG` fixtures remain
+the portable checkpoint format; exact NP2kai/NP2debug states remain paired with
+their original image. The ignored proof bundle is retained under
+`working/np2debug-fade-diagnosis/`.
 
 NP2debug's generated `Fermion.ini.ini` also drifted to `ExMemory=1` even though
-the intended `Fermion.ini` specifies 13 MB. That mismatch did not reproduce the
-stall, but manual QA should still use 13 MB so it matches the supported profile.
-Exact mid-scene libretro states remain tied to the core, configuration, and
-translated image; only the sparse native scenario-entry fixture is portable
-across translation rebuilds.
+the intended `Fermion.ini` specifies 13 MB. This was not causal, but manual QA
+should still use 13 MB so it matches the supported profile.
 
 ## Locked translation and release contract
 
