@@ -279,6 +279,7 @@ This network is both the story’s emotional structure and the source of many of
 - Preserve her self-corrections and comic overthinking.
 - Use occasional feline phrasing only where the source does; do not insert “meow” into ordinary lines.
 - Her embarrassment should read young and inexperienced, but avoid baby talk.
+- Keep her erotic narration blunt, repetitive, and concrete where the Japanese is blunt, repetitive, and concrete. Do not elevate it into romantic or literary prose.
 - Distinguish **chronological age (three years since creation)** from **physical/cellular age (about seventeen)** every time it matters.
 
 **Forms of address:**
@@ -500,7 +501,6 @@ The archival English build keeps the name system but localizes it as a **tested 
 | コールドスリープ | **cryosleep** in normal dialogue; **suspended animation** in medical exposition | “Cold sleep” is intelligible but dated Engrish. |
 | 一日留学 | **one-day visiting student** / **one-day exchange student** | This is a school visit, not literal international study abroad. |
 | 博士 | **Dr.** | Use **Dr. Kanzaki** and **Dr. Marie**; “Professor” changes the institutional meaning. |
-| 愛液 | For edited/non-explicit script, **bodily fluid/sample**; for an archival adult script, choose one consistent adult term | The main plot only needs the biological sampling function. |
 | エッチ / Ｈ | Contextual: **sex**, **fooling around**, **naughty**, or **intimate** | Translate the function and register rather than forcing one English equivalent everywhere. |
 | `さん` / `ちゃん` / `様` / address-form `先生` | **Do not retain as romanized suffixes** | Express distance, affection, deference, or authority through syntax, names, kinship terms, and ordinary English titles such as **Dr.** |
 

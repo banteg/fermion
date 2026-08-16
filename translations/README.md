@@ -219,8 +219,11 @@ managed as 391 canonical lines; five exact duplicates share wording across
 reconverging menu branches, and two contentless pause records join
 pre-existing canonical entries from later files. None are excluded or pending.
 The slice contains the game's first explicit scene; its translation follows
-the locked English-release policy, and the batch terminology choices (`arousal`
-for 愛液, `sex` for 割れ目) are recorded in the entry notes. A
+the disclosed adult-age release policy. F0000 was retranslated line by line
+after review found euphemized sexual meaning, mechanical terminology, and prose
+that did not match Connie's plain, direct voice. Anatomical wording is now
+chosen by sentence rather than forced through a one-word glossary, and the live
+`term:slot-1` insertion is rendered in English instead of leaking Japanese. A
 `first-scene-save-fixture-proof` route re-pinned to the rebuilt image verifies
 the first scene's framebuffer and scenario register; the full scene still
 needs a human playtest because no later F0000 fixture exists.

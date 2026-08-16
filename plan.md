@@ -82,7 +82,9 @@ Completed work:
   complete departure-eve scene. The `departure-eve-with-kanzaki` ledger is now
   closed: all 398 physical text records in `F0000.MES` are translated as 391
   canonical lines with zero pending, including the explicit launch-eve scene
-  and the Marna rescue flashback, and the `first-scene-save-fixture-proof`
+  and the Marna rescue flashback. A line-by-line editorial redo removed
+  euphemized meaning and out-of-character purple prose, while a composite now
+  keeps the live adult-term insertion in English. The `first-scene-save-fixture-proof`
   route is re-pinned to and green against the rebuilt fixture image. A human
   playtest remains the editorial gate because no later F0000 fixture exists.
 - The second major slice, all of `F0001.MES` and `F0002.MES`, is QA-ready. Its
@@ -385,11 +387,11 @@ opening-warning hash
 opening-request hash
 `16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e`.
 Four further checkpoints verify Connie's first line
-`cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6`,
+`51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0`,
 Kanzaki's reply
-`9e82f1f74ad3ff813585ff64e383e730faa12961fecb58461b41bef6862e95f5`,
+`217d9e55ef2f863cffe9d83326acf5df8ab8ecb6571341c0e9031b45ab1bfcd1`,
 Connie's response
-`ba44453ad344526336e9b161f8c78f93fa48a154dd83d63cc180e3517bfa1f78`,
+`f9f447ca09c1e57cd74382cada87ad6aea9e27045718ee3566ca9e90ae0a4c71`,
 and the three-choice menu
 `1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c`.
 
@@ -553,7 +555,7 @@ hunks, 110 bytes in 35 hunks, and 114 bytes in 40 hunks respectively.
 touching the input. The FOP and F0000 10,500-frame routes reproduce full
 framebuffer hashes
 `980c7d275c55077af9c5c66729e9b4f74dfb0f7547217f9ebeff20c4f2976e4c`
-and `cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6`,
+and `51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0`,
 while the extended 15,300-frame F0001 route retains the 640x308 room hash
 `24f99058f153f312ca3b6fb9a95e77945dae63ded556679b531b488e7f33a9e4`.
 It then pins eight translated dialogue frames.

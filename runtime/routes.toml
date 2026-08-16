@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "bab370803cd7fe8b63251a1cc126d4f5eca37260a7487d53ff38cffd2eec8232"
+content_sha256 = "e8524f0ee4a0ae42f223ac97830a0a811f270d74e68b2361b168cecfc8c1f954"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -154,22 +154,22 @@ sha256 = "694323905fa14fd6ce087cfec45411550ea32f737e00d1016769ef4b241df3b4"
 [[routes.checkpoints]]
 name = "premise-2296"
 frame = 24749
-sha256 = "e0d408536fd3f41386be04db0fab46149c8ea1fd5f125099beee1f0aba20819b"
+sha256 = "31f58a592f72cd3eb4e4b42144b41ed9639b909bfed66ad4d8b05f54ebb04f02"
 
 [[routes.checkpoints]]
 name = "first-scene-connie"
 frame = 25199
-sha256 = "cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6"
+sha256 = "51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0"
 
 [[routes.checkpoints]]
 name = "first-scene-kanzaki"
 frame = 25649
-sha256 = "9e82f1f74ad3ff813585ff64e383e730faa12961fecb58461b41bef6862e95f5"
+sha256 = "217d9e55ef2f863cffe9d83326acf5df8ab8ecb6571341c0e9031b45ab1bfcd1"
 
 [[routes.checkpoints]]
 name = "first-scene-response"
 frame = 26099
-sha256 = "ba44453ad344526336e9b161f8c78f93fa48a154dd83d63cc180e3517bfa1f78"
+sha256 = "f9f447ca09c1e57cd74382cada87ad6aea9e27045718ee3566ca9e90ae0a4c71"
 
 [[routes.checkpoints]]
 name = "first-scene-menu"
@@ -179,7 +179,7 @@ sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"
 [[routes]]
 name = "first-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0000.MES."
-content_sha256 = "bd3997f8d098f19a5cfdaa4871dc67c2a7b6334d5da3b3c98d17da8bb391f90f"
+content_sha256 = "538a69a9b27e6e8cf498465dd3cb3867c0fd4d6e7f338a69325062205b7fdaed"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -203,7 +203,7 @@ sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
 [[routes.checkpoints]]
 name = "loaded-first-scene"
 frame = 10499
-sha256 = "cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6"
+sha256 = "51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0"
 scenario = "f0000.mes"
 state_offset = 0x1c7e0
 

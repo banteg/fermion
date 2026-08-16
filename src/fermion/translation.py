@@ -471,7 +471,13 @@ def build_translation_files(
                 )
             )
         compiled = GMFile.from_file(output_path)
-        _verify_compiled_file(file, original, compiled, entries)
+        _verify_compiled_file(
+            file,
+            original,
+            compiled,
+            entries,
+            token_initializers,
+        )
         output_data = output_path.read_bytes()
         built.append(
             BuiltTranslationFile(
@@ -503,7 +509,10 @@ def _patch_token_initializers(
         instruction.offset: index
         for index, instruction in enumerate(original_instructions)
     }
-    for token, initializer in initializers:
+    for token, initializer in sorted(
+        initializers,
+        key=lambda item: item[1].offset,
+    ):
         _verify_token_initializer_source(original, token, initializer)
         source = _token_initializer_sequence(token, initializer, translated=False)
         translation = _token_initializer_sequence(
@@ -582,6 +591,9 @@ def _verify_compiled_file(
     original: GMFile,
     compiled: GMFile,
     entries: tuple[tuple[int, PhysicalTranslation], ...],
+    token_initializers: tuple[
+        tuple[TranslationToken, TranslationTokenInitializer], ...
+    ] = (),
 ) -> None:
     original_audit = original.audit()
     compiled_audit = compiled.audit()
@@ -591,8 +603,16 @@ def _verify_compiled_file(
         raise TranslationError(
             f"{file.file}: compiled structural audit has {len(compiled_audit.issues)} issue(s)"
         )
+    initializer_padding = _translated_initializer_padding_offsets(
+        compiled,
+        token_initializers,
+    )
     original_opcodes = tuple(instruction.opcode for instruction in original_audit.instructions)
-    compiled_opcodes = tuple(instruction.opcode for instruction in compiled_audit.instructions)
+    compiled_opcodes = tuple(
+        instruction.opcode
+        for instruction in compiled_audit.instructions
+        if instruction.offset not in initializer_padding
+    )
     if original_opcodes != compiled_opcodes:
         raise TranslationError(f"{file.file}: compiled instruction sequence changed")
     if len(original_audit.relocations) != len(compiled_audit.relocations):
@@ -695,18 +715,48 @@ def _token_initializer_sequence(
     *,
     translated: bool,
 ) -> bytes:
-    value = (
-        token.translation.encode("ascii")
-        if translated
-        else token.source.encode("cp932")
-    )
+    source = token.source.encode("cp932")
+    value = token.translation.encode("ascii") if translated else source
+    padding = b"\x00" * (len(source) - len(value)) if translated else b""
     return (
         b"\x45\x0e\xe0\x00\xff\x01"
         + value
-        + b"\x00\x00\x43\x0c"
+        + b"\x00\x00"
+        + padding
+        + b"\x43\x0c"
         + initializer.slot.to_bytes(2, "little")
         + b"\x0e\xe0\x00\x00\x00"
     )
+
+
+def _translated_initializer_padding_offsets(
+    compiled: GMFile,
+    initializers: tuple[
+        tuple[TranslationToken, TranslationTokenInitializer], ...
+    ],
+) -> frozenset[int]:
+    """Return zero-opcode padding used by shorter initialized translations."""
+    offsets: set[int] = set()
+    search_start = 0
+    for token, initializer in sorted(
+        initializers,
+        key=lambda item: item[1].offset,
+    ):
+        source_width = len(token.source.encode("cp932"))
+        translation_width = len(token.translation.encode("ascii"))
+        padding_width = source_width - translation_width
+        if padding_width <= 0:
+            continue
+        sequence = _token_initializer_sequence(token, initializer, translated=True)
+        sequence_start = compiled.data.find(sequence, search_start)
+        if sequence_start < 0:
+            raise TranslationError(
+                f"{token.id}: translated initializer sequence is missing"
+            )
+        padding_start = sequence_start + 6 + translation_width + 2
+        offsets.update(range(padding_start, padding_start + padding_width))
+        search_start = sequence_start + len(sequence)
+    return frozenset(offsets)
 
 
 def _verify_token_initializer_source(
@@ -807,9 +857,9 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         raise TranslationError(
             f"{context} source must be CP932 and translation must be ASCII"
         ) from error
-    if initializers and len(source.encode("cp932")) != len(translation.encode("ascii")):
+    if initializers and len(translation.encode("ascii")) > len(source.encode("cp932")):
         raise TranslationError(
-            f"{context} initialized source and translation must have equal byte lengths"
+            f"{context} initialized translation must not exceed the source byte length"
         )
     return TranslationToken(token_id, source, translation, max_width, initializers)
 

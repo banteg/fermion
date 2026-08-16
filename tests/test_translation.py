@@ -432,6 +432,92 @@ notes = "Keeps the catalog non-empty."
     assert GMFile.from_bytes(patched).audit().issues == ()
 
 
+def test_schema_five_pads_shorter_token_initializer_with_noops(tmp_path) -> None:
+    source_term = "おま○こ".encode("cp932")
+    initializer = b"\x45\x0e\xe0\x00\xff\x01" + source_term + b"\x00\x00"
+    assignment = b"\x43\x0c\x2e\x04\x0e\xe0\x00\x00\x00"
+    text = b"\x4a\x02Original\x00"
+    text_offset = 2 + len(initializer) + len(assignment)
+    source = struct.pack("<H", 2) + initializer + assignment + text + b"\x00"
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = tmp_path / "catalog.toml"
+    catalog_path.write_text(
+        f'''version = 5
+game = "Test"
+
+[[files]]
+file = "DISKA/SCENE.MES"
+source = "disk-a/SCENE.MES"
+sha256 = "{hashlib.sha256(source).hexdigest()}"
+
+[[tokens]]
+id = "term:slot-1"
+source = "おま○こ"
+translation = "pussy"
+max_width = 5
+initializers = [
+  {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x042e }},
+]
+
+[[entries]]
+id = "scene-line"
+file = "DISKA/SCENE.MES"
+offset = 0x{text_offset:04x}
+source_mode = 2
+target_mode = 2
+source = "Original"
+translation = "Original"
+speaker = "narrator"
+context = "Synthetic scene."
+status = "draft"
+'''
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+    catalog.verify_sources(source_dir)
+    [token] = catalog.tokens
+    token_initializers = tuple((token, item) for item in token.initializers)
+    original = GMFile.from_bytes(source)
+    patched = _patch_token_initializers(source, original, token_initializers)
+    compiled = GMFile.from_bytes(patched)
+
+    assert len(patched) == len(source)
+    assert source_term not in patched
+    assert b"pussy\x00\x00\x00\x00\x00\x43\x0c\x2e\x04" in patched
+    assert compiled.audit().issues == ()
+    _verify_compiled_file(
+        catalog.files[0],
+        original,
+        compiled,
+        (),
+        token_initializers,
+    )
+
+
+def test_schema_five_rejects_initializer_translation_longer_than_source(
+    tmp_path,
+) -> None:
+    catalog_path = write_catalog(tmp_path, "0" * 64)
+    text = catalog_path.read_text().replace("version = 4", "version = 5")
+    text += '''
+
+[[tokens]]
+id = "term:slot-1"
+source = "おま○こ"
+translation = "pussycats"
+max_width = 9
+initializers = [
+  { file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x042e },
+]
+'''
+    catalog_path.write_text(text)
+
+    with pytest.raises(TranslationError, match="must not exceed the source byte length"):
+        TranslationCatalog.from_file(catalog_path)
+
+
 def test_schema_five_rejects_initializer_for_the_wrong_token_slot(tmp_path) -> None:
     source = struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00"
     catalog_path = tmp_path / "catalog.toml"
