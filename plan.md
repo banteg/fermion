@@ -127,9 +127,11 @@ Relevant commits:
 - Tokens `0x18..0x7f` address dictionary entries `0..103`.
 - Tokens `0xa0..0xdf` address dictionary entries `104..167`.
 - Mode 2 renders printable single-byte text and is already used by the game for
-  short strings such as `BS`. The same `0x04` newline control works in mode 2;
-  lime-juice now round-trips it and the translated three-line disclaimer proves
-  it in the live renderer.
+  short UI strings. Across the 77 content-unique files there are 16 mode-2
+  records total: ten `BS` backspace labels in `NAME.MES`/`MONO.MES`, four ASCII
+  quotation marks, and two spaces. They are editor surfaces, not gallery noise.
+  The same `0x04` newline control works in mode 2; lime-juice now round-trips it
+  and the translated three-line disclaimer proves it in the live renderer.
 
 ### Scenario/module loading
 
@@ -431,8 +433,13 @@ The five stable roles and defaults are:
 Across 77 content-unique MES files, 5,156 of 17,461 decoded text records inherit
 a literal label, 4,206 inherit a customizable name slot, and 8,099 remain
 contextual. All 2,036 partial opening-bracket records match the complete dynamic
-sequence. `FOP.MES` proves the unresolved case: its opening alternates plain
-`0x4a` messages separated by `0x50` and `0x00`, with no speaker-state opcode.
+sequence. No record contains a literal blank `【】`/`【 】` label. There are 2,037
+records beginning with an orphaned `】`: 2,036 follow a standalone `【`, while
+`F0003:0c1c` embeds the opening bracket in a longer fragment before the same
+name render. The story graph contains 5,124 name renders in all, so the closing-
+bracket census is only a lower bound on messages requiring a composite view.
+`FOP.MES` proves the unresolved case: its opening alternates plain `0x4a`
+messages separated by `0x50` and `0x00`, with no speaker-state opcode.
 
 Catalog schema 4 therefore requires an explicit stable `speaker` and concise
 `context` for every canonical entry. Source verification rejects disagreements
@@ -541,6 +548,30 @@ scenario entry. Libretro states are core/config/content-specific but resume at
 an exact frame within that shorter route. Full end-to-end routes remain the
 release gate.
 
+## Locked translation and release contract
+
+- `translations/fermion.toml` is the only canonical translation source. TSV,
+  JSONL, CSV, SQLite, or other translator databases are generated views with a
+  checked import path; no parallel editorial database is allowed.
+- The working and initial release target is the archival A translation. An
+  edited B layer may be derived as an auditable overlay shortly before release;
+  it is not maintained in parallel. The story-rewrite C route is out of scope.
+- Composite authoring uses non-CP932 metadata tokens such as
+  `⟦name:dear-person⟧` and `⟦term:slot-1⟧`. Schema 5 must retain each physical
+  text anchor and immutable copy/render span, validate the exact token sequence,
+  split merged English deterministically back into the original text records,
+  and reject token leakage before lime-juice.
+- Punctuation can be compressed within a record, but records are never merged
+  or deleted for prose flow. Silent records remain independently anchored
+  because they may carry branch, CG, SFX, or pacing semantics.
+- Honorific suffixes are omitted and expressed through English syntax, titles,
+  and kinship. The opening terminal is naturalized. `F0040.MES:0x40c8` renders
+  the inconsistent “about 280 years” as “nearly three hundred years” and logs
+  that restoration intervention.
+- The archival English build retains the name and adult-term systems as tested
+  preset selectors. It does not accept unrestricted Latin input or remove the
+  features; every preset must pass slot, grammar, gallery/replay, and story QA.
+
 ## Tooling conventions and gates
 
 - Python tooling uses `uv` and the packaged `fermion` entry point.
@@ -554,12 +585,15 @@ release gate.
 
 ## Later work
 
+- Implement catalog schema 5 composite occurrences and generated-view import.
+  Preserve schema-4 simple and multi-anchor entries, add immutable name/term
+  token segments, and make missing/reordered/duplicated tokens a build error.
 - Work down the 103-line initial coverage backlog, beginning with the contiguous
   `FOP.MES` opening narration. Assign contextual speakers explicitly as each
   scene is reviewed, use one canonical translation only where speaker and
   context agree, retain editorial review notes, and promote reviewed candidates
   from the story inventory into the catalog.
-- Placeholder/control-token validation and enforced word-boundary wrapping.
+- Enforced word-boundary wrapping after composite tokens are resolved.
 - Continue adding sparse game-native fixtures beyond `F0001.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route
   and translator-facing checkpoint coverage.

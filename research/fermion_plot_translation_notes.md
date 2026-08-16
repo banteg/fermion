@@ -3,7 +3,7 @@
 **Source:** extracted Japanese script (`script.md`), 77 MES sections / 17,401 mode-1 text records  
 **Purpose:** story bible, terminology guide, voice guide, extraction/engineering notes, and localization-risk register for an English fan translation  
 **Spoilers:** complete, including the central identity reveal and ending  
-**Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. Those issues need an explicit editorial policy before an English release.
+**Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. Section 11 records the project’s archival editorial policy for that material.
 
 ---
 
@@ -57,13 +57,13 @@ A chronically ill high-school-age girl finds her. The girl smells faintly of mil
 
 During a bath, Connie transforms into human form and reveals that she is a mutant from 2296, a police-like hunter searching for genes. The girl accepts the impossible unusually quickly and enthusiastically agrees to help. Connie begins thinking of her as a younger sister. The time machine has materialized in the garden of the **Takano household**, where the girl lives with her mother, father, and older sister.
 
-The girl’s name is not present as ordinary text in the extraction because it is one of five player-renamable variables. The default-name menu strongly implies that this character is **Kanako (加奈子)**, but this mapping should be confirmed by recovering the variable opcodes rather than hardcoding it.
+The girl’s name is not present as ordinary text in the extraction because it is one of five player-renamable variables. The recovered bytecode maps her stable `name-slot:dear-person` role to default **Kanako (加奈子)**. Translation records should use the stable role rather than hardcoding the editable default.
 
 **Source anchors:** F0002–F0005.
 
 ### 3.4 Life with the Takano family and the sample routes
 
-Connie stays in the Takano home, usually concealing herself in Mini form when necessary. The family learns enough of the truth to shelter her. The girl becomes intensely attached to Connie; the mother offers calm warmth and adult acceptance; the older sister is more skeptical and blunt but eventually helps; the largely off-screen father is a practical man who can be persuaded by his family.
+Connie stays in the Takano home, usually concealing herself in Mini form when necessary. The family learns enough of the truth to shelter her. The girl becomes intensely attached to Connie; the mother offers calm warmth and adult acceptance; the older sister is more skeptical and blunt but eventually helps. The largely off-screen father is a doctor employed at the nearby hospital visible from the house. Later references to “father’s hospital” mean the hospital where he works, not necessarily one he owns.
 
 Connie explains the future’s condition more precisely. Calling the target “strong genes” is convenient but scientifically imprecise even within the script. Her ring-like analyzer is actually checking whether a person possesses pieces of genetic information missing from 2296 humans. The real objective is therefore **intact or missing genetic data**, not generic hereditary superiority.
 
@@ -128,7 +128,7 @@ Kanzaki assigns **Marna**, a younger mutant she recently rescued, to care for Co
 
 Connie and Marna form the sisterly bond foreshadowed in the opening. Marna senses that Marie is not simply cruel but profoundly lonely. Connie eventually tells Marna about the escape, arranges evidence that Marna was overpowered, and uses the vent network to locate and free the treated girl. The escape sequence includes inventory/problem-solving elements such as hiding tools and finding liquid hydrogen associated with the time machines—this is the part of the game most likely to require an actual map during play.
 
-Connie transports the girl back through time and takes her to her father’s hospital in 1996. The future surgery has repaired the heart condition.
+Connie transports the girl back through time and takes her to the nearby hospital where her father works in 1996. The future surgery has repaired the heart condition.
 
 **Source anchors:** F0033–F0038, especially the `F003400*` maze nodes.
 
@@ -160,7 +160,7 @@ Her plan served two goals:
 
 She secretly set Connie’s original destination to her childhood home. She did not originally intend to keep the girl as a subject; she intended to return her after treatment. She hid the truth because Project D was already compromised by Marie’s demands and because admitting the personal plan would expose everyone involved.
 
-The script says the sleep lasted “about 280 years,” but 1996 to 2288 is **292 years**. This is a source inconsistency to resolve rather than silently reproduce.
+The script says the sleep lasted “about 280 years,” but 1996 to 2288 is **292 years**. The archival English repairs this to **“nearly three hundred years”** and records the intervention in the restoration log rather than reproducing false arithmetic without comment.
 
 **Source anchors:** F0039–F0040.
 
@@ -259,21 +259,21 @@ The ending lets the saved younger self and the already existing adult Kaori coex
 
 Do not make her apparent-villain dialogue too melodramatic. It should sound deliberately cold, as though she is forcing herself to say lines she despises. Her missed shot and trembling hands are essential signals.
 
-### The sick Takano daughter — default likely Kanako / 加奈子
+### The sick Takano daughter — default Kanako / 加奈子
 
 **Function:** Connie’s rescuer; emotional center of the 1996 household; younger Kaori.  
 **Age/status:** described as around sixteen and in high school; physically frail but curious, affectionate, and eager to be useful.  
 **Voice:** bright, colloquial, somewhat childish in affect but not a small child; frequent elongated vowels and excited questions; fear of loneliness undercuts the cheerfulness.
 
-Because the name is player-configurable, documentation should call her **the younger daughter** or **young Kaori** until the variable mapping is technically confirmed.
+Because the name is player-configurable, source-facing documentation may call her **the younger daughter** or **young Kaori** when identity matters more than the default. Catalog records use the stable `name-slot:dear-person` role; the recovered slot mapping confirms **Kanako** as its reset value.
 
-### Takano mother — default likely Yuki / 由貴
+### Takano mother — default Yuki / 由貴
 
 **Function:** novelist; warm maternal authority; the first person to recognize adult Kaori.  
 **Voice:** calm, elegant, teasing, emotionally perceptive; can become sharply commanding when protecting her children.  
 **Key localization point:** her recognition is not mystical. It is accumulated domestic knowledge—towels, shampoo, scent, habits—and should sound observant rather than supernatural.
 
-### Takano older sister — default likely Ruri / 瑠璃
+### Takano older sister — default Ruri / 瑠璃
 
 **Function:** skeptical/practical older sister; counterweight to the younger daughter’s immediate trust.  
 **Voice:** blunter and more adult; protective; capable of dry humor.  
@@ -307,16 +307,32 @@ Because the name is player-configurable, documentation should call her **the you
 **Function:** Marie’s loved one and research partner, killed after a laboratory accident.  
 **Voice:** no substantial living dialogue in the extracted main script; his importance is retrospective.
 
+### The 1996 duty physician / 医師
+
+**Function:** the on-call emergency physician who examines Kanako after Connie returns her to 1996. He works at the same nearby hospital as Kanako’s father but is not the father.
+
+**Voice:** competent, calm, and professionally curious about the impossibly clean future surgical work.
+
+**Bytecode label:** `【医師】` begins five records in `F0038.MES`.
+
+### The 2288 attending physician / 医者
+
+**Function:** the physician who removes Kanako’s bandages, tells her that the year is 2288, and explains the cryosleep interval.
+
+**Voice:** gentle and hesitant; he delays the revelation to avoid shocking her and uses the editable given name plus `ちゃん`. Render that care through syntax and tone, not a romanized suffix.
+
+**Bytecode label:** `【医者】` begins nine records in `F0040.MES`. This is a different figure from the 1996 `医師` and from the unlabelled doctor in the prologue.
+
 ### Fixed and uncertain secondary names
 
 - `鷹野` → **Takano**.
 - `水無月 良美` → family name **Minazuki**. **Yoshimi** is a plausible reading of 良美, but confirm from manual, package material, voice data, or original promotional text.
 - `七瀬` → **Nanase**. Her given name is one of the runtime variables and is absent from ordinary extracted text.
-- Player-renamable friends likely default to **Yōko/Yoko (陽子)** and **Hiroko (弘子)**.
+- The player-renamable friends reset to **Yoko (陽子)** and **Hiroko (弘子)**.
 
 ---
 
-## 6. The five missing names are variables, not damaged Japanese
+## 6. Interpolated names and composite authoring records
 
 The main menu has a **Name Change** system and resets five names to:
 
@@ -330,47 +346,79 @@ The name editor labels five slots by role, in the same order:
 4. `(お友達１)` — friend 1
 5. `(お友達２)` — friend 2
 
-The strongest working mapping is therefore:
+The editor roles, reset strings, and recovered bytecode slots establish this mapping:
 
-| Slot | Role | Probable default | Suggested romanization |
-|---|---|---|---|
-| 1 | Takano mother | 由貴 | Yuki |
-| 2 | Takano older sister | 瑠璃 | Ruri |
-| 3 | sick younger daughter / young Kaori | 加奈子 | Kanako |
-| 4 | friend 1 | 陽子 | Yoko or Yōko |
-| 5 | friend 2 | 弘子 | Hiroko |
+| Slot address | Stable role | Reset value | Romanization |
+|---:|---|---|---|
+| `0x03e8` | mother | 由貴 | Yuki |
+| `0x03f6` | older sister | 瑠璃 | Ruri |
+| `0x0404` | dear person / young Kaori | 加奈子 | Kanako |
+| `0x0412` | friend 1 | 陽子 | Yoko |
+| `0x0420` | friend 2 | 弘子 | Hiroko |
 
-This is a strong inference from the UI order, **not yet proof of the binary token-to-slot mapping**. In the extracted script, a line such as:
+With reset names, young Kaori’s original 1996 name is therefore **Kanako Takano**. The editable given name changes what the game displays, not the character’s identity or her later legal identity as Kaori Kanzaki.
 
-```text
-【
-】「...」
-```
+### What the dump actually contains
 
-usually means the original MES record inserted one of these name variables between ordinary strings. The same applies when a sentence breaks around a blank name. Do not “repair” these by manually pasting a name into every record before understanding the control code; doing so would destroy the rename feature and may alter buffer lengths or branching behavior.
+There are **no** literal `【】` or `【 】` records in the content-deduplicated dump. The `FOP.MES`-rooted story corpus instead contains:
 
-### Recommended engineering approach
+- 2,036 physical text records whose entire decoded text is `【`;
+- 2,037 physical text records beginning with the orphaned suffix `】`;
+- 5,124 name-slot renders in total, many occurring mid-sentence without brackets; and
+- 12 renders from the two customizable adult-term slots.
 
-1. Recover the five interpolation opcodes from the original MES bytecode.
-2. Emit explicit placeholders in the working script, for example:
-   - `{NAME_MOTHER}`
-   - `{NAME_SISTER}`
-   - `{NAME_BELOVED}`
-   - `{NAME_FRIEND1}`
-   - `{NAME_FRIEND2}`
-3. Make the English renderer handle possessives and vocatives around the token.
-4. Decide whether the name editor will accept Latin characters, retain kana, or be replaced with a simpler fixed/default-name interface.
-5. Test every gallery label as well as story text; the scene gallery also contains these variables.
+Every standalone `【` record participates in the proven `0x4a` text, `0x45` string-copy, `0x4b` indirect-render, `0x4a` text sequence. The extra suffix is not damage: `[F0003:0c1c]` ends a longer sentence fragment with `【`, the name is inserted, and `[F0003:0c4d]` is `】。」`. Thus the 2,037 naked `】` records are only the most visible symptom; a bracket census is a lower bound on interpolated lines.
+
+The compact physical view may consequently show records such as `[F0003:0c4d] 】。」` with no apparent name. A translator-facing view should reconstruct the whole rendered message, while the build must retain every physical record and the intervening opcodes.
+
+### Locked authoring-token grammar
+
+Authoring tokens are UTF-8 catalog metadata, never GM text:
+
+- `⟦name:mother⟧`
+- `⟦name:older-sister⟧`
+- `⟦name:dear-person⟧`
+- `⟦name:friend-1⟧`
+- `⟦name:friend-2⟧`
+- `⟦term:slot-1⟧` and `⟦term:slot-2⟧`
+
+The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. The non-CP932 delimiters are deliberate: accidentally passing a token to lime-juice must fail encoding rather than produce plausible corrupt text. ASCII brace forms such as `{NAME_MOTHER}` are forbidden because they look like compilable dialogue even though mode-1 GM cannot encode them as intended.
+
+### Locked merged-to-physical representation
+
+`translations/fermion.toml` remains the sole canonical source. Catalog schema 5 will add composite entries with one canonical translation and one or more physical occurrences. Each occurrence is an ordered segment list:
+
+1. a **text segment** stores its pristine MES file, text-opcode offset, mode, and exact Japanese;
+2. a **token segment** stores its stable token ID and the exact immutable copy/render instruction span; and
+3. the generated translator view joins those segments into one readable Japanese and English message.
+
+For example, the catalog can display one message containing `⟦name:dear-person⟧` while retaining the three physical components at `F0003:0c1c`, the `0x45`/`0x4b` span, and `F0003:0c4d`.
+
+The import/build rule is deterministic:
+
+1. the English token sequence, order, and multiplicity must exactly match the source composite;
+2. split the English on those immutable tokens;
+3. map the resulting literal chunks back to the corresponding physical text segments in order;
+4. leave every token’s original copy/render bytecode untouched; and
+5. reject missing, reordered, duplicated, unknown, or leaked tokens before invoking lime-juice.
+
+Only records separated by a recognized immutable token may be merged for display. Adjacent narration records remain distinct. This preserves the one-to-one physical text map, source anchors, opcode count, and timing while still letting a translator draft a natural sentence around a variable. Exact duplicate occurrences may share one canonical entry only when speaker, meaning, and context agree; contextual variants remain separate entries.
+
+TSV, JSONL, SQLite, or another ergonomic database may be generated from this catalog and imported back with hash, anchor, and token checks. None is a second source of truth.
 
 ### English grammar problem
 
 Japanese can insert a bare name almost anywhere. English may need:
 
-- `{NAME_MOTHER}'s room`
-- `Hey, {NAME_BELOVED}, ...`
-- `I went with {NAME_SISTER}.`
+- `⟦name:mother⟧'s room`
+- `Hey, ⟦name:dear-person⟧, ...`
+- `I went with ⟦name:older-sister⟧.`
 
 A raw byte substitution cannot automatically supply apostrophes, articles, or comma spacing. The English script should keep punctuation outside the variable and avoid constructions whose grammar depends on the spelling of the chosen name.
+
+### Locked name-editor policy
+
+The archival English build keeps the name system but localizes it as a **tested preset selector**. It does not promise arbitrary Latin input: `0x4b` renders the stored strings through the game’s mode-1 path, and an unrestricted ASCII editor would require a separate engine patch plus exhaustive length and grammar testing. Every shipped preset must be encodable in the existing slot, tested at all five roles, and exercised in story, letter, and replay/gallery surfaces. The feature is preserved rather than removed; free-form Latin entry can be reconsidered only after the renderer and slot limits are proven.
 
 ---
 
@@ -400,6 +448,7 @@ A raw byte substitution cannot automatically supply apostrophes, articles, or co
 | ヘリウム３ | **helium-3** | The pseudo-science links it to measurable oscillation. |
 | コールドスリープ | **cryosleep** in normal dialogue; **suspended animation** in medical exposition | “Cold sleep” is intelligible but dated Engrish. |
 | 愛液 | For edited/non-explicit script, **bodily fluid/sample**; for an archival adult script, choose one consistent adult term | The main plot only needs the biological sampling function. |
+| `さん` / `ちゃん` / `様` / address-form `先生` | **Do not retain as romanized suffixes** | Express distance, affection, deference, or authority through syntax, names, kinship terms, and ordinary English titles such as **Dr.** |
 
 ### “Gene” versus “genetic information”
 
@@ -421,15 +470,19 @@ Japanese character relationships are carried heavily by register:
 
 An English patch should reproduce these shifts through syntax and word choice rather than preserving every honorific.
 
+### Honorifics — locked policy
+
+Do not use systematic romanized suffixes such as `-san`, `-chan`, `-sama`, or `-sensei`. Render their relationship work in English: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, a softened request, a formal sentence, or no overt marker where English naturally leaves one out. A plot-significant title or kinship term remains; a suffix does not survive merely because it is present in Japanese. Apply this policy consistently in dialogue, labels, and translator notes.
+
 ### Ellipses
 
 The script uses very long runs of Japanese full stops as pacing and textbox timing. Do not reproduce every dot one-for-one. Recommended policy:
 
 - `……` or long pauses → `…`
 - emotionally broken speech → `I… I don’t…`
-- silent beat in its own record → keep a short `…` only if the engine needs the pause; otherwise merge with adjacent narration carefully
+- silent beat in its own record → preserve that record and normally render a short `…`
 
-Do not globally strip silent records: some are branch timing, CG pacing, or voice/SFX synchronization points.
+Punctuation may be compressed **within** a record, but records are never merged, deleted, or reassigned to adjacent narration. Some silent records are branch timing, CG pacing, or voice/SFX synchronization points; the one-to-one anchor invariant applies even when two neighboring lines would read more smoothly as one paragraph.
 
 ### Onomatopoeia
 
@@ -456,6 +509,17 @@ The Japanese pseudo-science is repetitive and sometimes internally loose. The tr
 ---
 
 ## 9. Script/route structure for implementation
+
+### Generated route graph is authoritative
+
+The route graph is generated from bytecode, not maintained by hand. Every one of the 168 `0x6d` and `0x6f` scenario transfers in the 77 content-unique MES files has a literal target. Use:
+
+```sh
+uv run fermion gm transitions working/archives --format dot
+uv run fermion gm script --story working/archives
+```
+
+The graph preserves branches, rejoins, cycles, and separately reachable duplicate records. The story view selects the 72 files reachable from `FOP.MES`; its filename order is convenient for reading but is not control flow. See [`gm-scenario-flow.md`](gm-scenario-flow.md) for the recovered topology and exact commands.
 
 ### Physical extraction order is not play order
 
@@ -507,7 +571,7 @@ There are many exact or near-exact repeated blocks. Causes include:
 - separate CG or timing paths;
 - authoring duplication in the original.
 
-Do **not** globally deduplicate the translated text unless the control-flow graph proves the records are identical and safely shareable.
+Do **not** globally deduplicate physical records. A canonical catalog entry may own several anchors only after review proves that speaker, meaning, context, and required English agree. The bytecode graph still retains every separately reachable occurrence; a context-sensitive duplicate gets a separate canonical entry even when its Japanese is identical.
 
 ### Command labels
 
@@ -542,6 +606,10 @@ Suggested English:
 
 The catalog is a period Silky’s product catalog, not part of Fermion’s story.
 
+### Mode-2 editor labels are not gallery noise
+
+The unique corpus contains **16 mode-2 text records total**, not 16 `BS` records: ten `BS`, four ASCII quotation marks, and two spaces. Five `BS` labels occur in `NAME.MES` and five in `MONO.MES`, each beside the character grid and the visible `← / 中止 / 決定` controls. `MAIN.MES` calls those files as the name and term editors; they are not story or gallery records. Treat `BS` as the editor’s visible **Backspace** key and include these surfaces in UI QA.
+
 ### Custom adult-word system
 
 The original lets the player replace two explicit anatomical terms. This is a localization trap:
@@ -551,29 +619,23 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 - A player-entered phrase may overflow a textbox.
 - The feature intersects with any edited/censored release policy.
 
-Best options, in order:
-
-1. implement explicit tokens with strict byte/character limits and write every sentence to be grammatically neutral around them;
-2. replace it with a small list of tested terminology presets;
-3. remove the feature and use fixed translation terms.
-
-Do not leave a Japanese character-grid editor in an otherwise English build without explanation.
+**Locked decision:** retain the system as a small set of tested terminology presets using `⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. Do not ship unrestricted text entry, and do not remove the feature from the archival build. Every preset must fit the proven slot limit and be grammatically valid at all 12 story insertions. The localized editor should expose the preset choices directly rather than leave the Japanese character grid in an otherwise English build.
 
 ---
 
-## 10. Source inconsistencies and open translation decisions
+## 10. Source inconsistencies and restoration decisions
 
 ### Definite or probable source errors
 
 1. **Marie’s surname**
    - introduction: `マリー・プロシオン` → **Marie Procyon**
    - ending: `マリー・プレシオン` → *Marie Presion/Plesion*
-   - Recommendation: use **Procyon** unless official packaging/manual evidence contradicts it.
+   - **Decision:** use **Procyon** throughout unless official packaging/manual evidence contradicts it; retain the ending variant in the restoration log.
 
 2. **Cryosleep duration**
    - 1996 → 2288 is 292 years.
    - Script says “about 280 years.”
-   - Recommendation: either translate literally and note it in restoration documentation, or quietly change to “nearly three hundred years.” The latter preserves dramatic intent without presenting false arithmetic.
+   - **Decision:** translate this as **“nearly three hundred years”** and disclose the repair. This preserves the intended scale without presenting false arithmetic.
 
 3. **`確率された時代`**
    - In the doctor’s explanation, `確率` is almost certainly a typo for `確立`: the era in which the technology was **established/developed**.
@@ -582,7 +644,15 @@ Do not leave a Japanese character-grid editor in an otherwise English build with
    - Keep in the QA database even after choosing a house spelling.
 
 5. **Repeated lines and paragraphs**
-   - Some are authoring duplicates; others are branching copies. Resolve only after control-flow inspection.
+   - Some are authoring duplicates; others are branching copies. The generated control-flow graph proves reachability; canonical sharing still requires speaker and context review.
+
+### Restoration log — locked entries
+
+| Location | Source | Archival English treatment | Reason |
+|---|---|---|---|
+| `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **nearly three hundred years** | The stated dates 1996 and 2288 are 292 years apart. The repair preserves the intended magnitude and is disclosed rather than silent. |
+| Opening terminal sequence | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
+| Ending surname variant | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
 ### Ambiguities to preserve
 
@@ -594,14 +664,13 @@ Do not leave a Japanese character-grid editor in an otherwise English build with
 ### Names requiring external confirmation
 
 - reading of `良美`;
-- exact default slot-to-character mapping, though the menu order is strong evidence;
 - any official Latin spelling for Remia, Marna, Procyon, and Connie.
 
 ---
 
-## 11. Content and editorial policy for an English release
+## 11. Locked content and release policy
 
-A translation decision is required before line editing begins. The source is not merely “old-fashioned.” Some material creates legal, platform, distribution, and ethical problems.
+The canonical project goal is an **archival translation** of the 1995 work. This locks the working catalog to source-faithful route and story preservation so translation choices do not drift between incompatible editorial targets. The source is not merely “old-fashioned”; some material still creates legal, platform, distribution, and ethical problems, so an archival goal does not imply casual distribution.
 
 ### Major issues
 
@@ -620,20 +689,19 @@ A translation decision is required before line editing begins. The source is not
 5. **Abduction, reproductive coercion, lobotomy threat, and experimentation**  
    These are plot-critical villain actions and should remain clearly framed as abuse, not euphemized away.
 
-### Viable release strategies
-
-#### A. Archival translation
-
-Goal: document the 1995 work as accurately as possible.
+### A. Canonical archival translation — accepted
 
 - Preserve the original plot and route structure.
 - Do not embellish explicit content.
 - Add strong upfront content warnings and restoration notes.
+- Keep every physical record and document corrections, normalizations, and technical compromises.
 - Distribution may still be legally or practically impossible in many venues because of character ages.
 
-#### B. Edited commercial-style localization
+All present translation, speaker, context, and restoration work targets this archival layer.
 
-Goal: make a legally safer, more contemporary English version.
+### B. Late edited derivative — optional, not active
+
+An edited commercial-style localization may be prepared **only after** the archival catalog is substantially complete and frozen for release review. It must be a separate, mechanically reviewable overlay or branch derived from A, never mixed into the canonical archival entries.
 
 - Age up every relevant character consistently.
 - Change school status, dates, uniforms/art references, family dialogue, and route setup—not only one number in narration.
@@ -641,23 +709,15 @@ Goal: make a legally safer, more contemporary English version.
 - Remove or restructure scenes that depend on persistent refusal.
 - Keep plot coercion as coercion; do not convert Marie/Kanzaki’s crimes into romance.
 
-#### C. Story-focused edition
+This derivative is a possible release-time editorial pass, not a second draft translators maintain in parallel now.
 
-Goal: preserve the science-fiction plot while minimizing adult-route risk.
+### C. Story-focused rewrite — rejected
 
-- Fade intimate encounters to black.
-- Treat sample collection through blood, cheek swabs, hair follicles, or consensually provided cells.
-- Retain relationship development and the genetic-mission logic.
-- This requires more adaptation but exposes the strongest part of the game—the identity/time-displacement story—to a wider audience.
+The project will not replace sample collection, remove route structure, or rewrite the game into a different story-focused edition. That would be an adaptation rather than preservation and is out of scope.
 
-### Strong recommendation
+### Editorial invariant
 
-Maintain two script layers internally:
-
-- a **close archival draft** for research and source comparison;
-- a **release draft** governed by a written editorial policy.
-
-Do not let ad hoc line-by-line discomfort produce inconsistent censorship.
+Maintain one archival source of truth now. If B is authorized near release, derive it explicitly from A and keep every difference auditable. Do not let ad hoc line-by-line discomfort produce undocumented censorship in either layer.
 
 ---
 
@@ -665,13 +725,13 @@ Do not let ad hoc line-by-line discomfort produce inconsistent censorship.
 
 ### Phase 1 — Reconstruct the executable script model
 
-- Decode variable-name opcodes.
-- Decode the two customizable-term opcodes.
-- Build the scene/choice graph.
+- Keep the recovered five name slots and their `0x45`/`0x4b` interpolation spans under regression test.
+- Finish semantic labels and preset constraints for the two customizable-term slots.
+- Generate the scene/choice graph from bytecode; do not hand-maintain it.
 - Identify textbox limits, encoding, line breaks, control codes, delays, and CG triggers.
 - Confirm which repeated records are separately reachable.
 
-### Phase 2 — Build a canonical Japanese source
+### Phase 2 — Extend the canonical TOML catalog
 
 For every record, preserve:
 
@@ -684,18 +744,17 @@ For every record, preserve:
 - translator note;
 - QA status.
 
-A TSV/CSV or SQLite database will be safer than editing one giant Markdown file.
+Implement the composite-entry and token contract from section 6 in the next catalog schema. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
 
-### Phase 3 — Lock names and glossary
+### Phase 3 — Apply the locked glossary and policies
 
-Before prose translation, decide:
+The following decisions are already locked and should be enforced during review:
 
-- Procyon spelling;
-- Mini form terminology;
-- Time Quake versus space-time oscillation usage;
-- honorific policy;
-- default-name romanization;
-- edited versus archival content policy.
+- **Procyon**, **Mini form**, and the contextual **Time Quake** / **space-time oscillation** split;
+- no romanized honorific suffixes;
+- Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
+- preset-only localized name and adult-term editors; and
+- archival A as the canonical content policy.
 
 ### Phase 4 — Translate the main-story spine first
 
@@ -727,7 +786,7 @@ Test specifically for:
 
 ---
 
-## 13. Suggested corrected opening terminal English
+## 13. Locked naturalized opening terminal English
 
 The source contains period Engrish such as `Target Dimention Space... input.` A naturalized but appropriately terse 1990s-SF terminal version would be:
 
@@ -748,7 +807,7 @@ SYSTEM SHUTDOWN
 End of operations confirmed.
 ```
 
-If the fan patch wants to preserve the original game’s charming Engrish, correct only the typo `Dimention` → `Dimension` and `All system` → `All systems`. Otherwise, the naturalized version above reads much better and still feels period-appropriate.
+Use the naturalized version above. A typo-only Engrish pass is not an active alternative. Preserve the original terminal strings and the naturalization rationale in catalog/restoration notes so the archival intervention remains reviewable.
 
 ---
 
@@ -760,11 +819,9 @@ If the fan patch wants to preserve the original game’s charming Engrish, corre
 
 ## 15. Highest-priority unresolved tasks
 
-1. Recover and label the five name-variable opcodes.
-2. Confirm whether the default third slot is Kanako and whether adult Kaori’s original full name is Takano Kanako.
-3. Confirm the official readings/spellings of 良美, Remia, Marna, and Procyon from non-script materials.
-4. Build the route graph, especially `F0010/22/25/26 L/R` and the `F0034xx` vent maze.
-5. Choose archival, edited, or story-focused release policy before translating adult branches.
-6. Decide how to handle the 2288/“280 years” arithmetic error.
-7. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.
-
+1. Implement catalog schema 5 composite occurrences, immutable authoring tokens, and validated merged-view import without changing the existing simple-entry behavior.
+2. Semantically identify the two adult-term slots (`0x042e` and `0x043e`) and define a small grammatically safe preset set for all 12 story insertions.
+3. Determine encodable, length-safe name presets and exercise every role in story, final-letter, replay, and gallery contexts.
+4. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
+5. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
+6. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.

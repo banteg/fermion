@@ -102,6 +102,20 @@ There are 2,036 partial `【` prefix records in the corpus. Every one matches th
 complete customizable-name sequence above; none is left as an unexplained
 partial prefix.
 
+The inverse shape matters for translator tooling. No decoded record contains a
+literal blank `【】` or `【 】` label, while 2,037 records begin with an orphaned
+`】`. Of those, 2,036 follow the standalone `【` sequence above. The extra case
+is `[F0003:0c1c]`, whose longer text fragment ends in `【` before the same copy
+and render opcodes; `[F0003:0c4d]` then begins `】。」`. A physical-record dump
+therefore exposes naked closing brackets even though the rendered message is
+complete.
+
+That closing-bracket census is only a lower bound. The 72-file story graph has
+5,124 name-slot renders and 12 customizable-term renders in total, including
+many unbracketed mid-sentence insertions. A translator-facing composite view
+must reconstruct those messages without erasing the individual text anchors or
+the intervening bytecode.
+
 Use `fermion gm speakers` to inspect the source evidence. `fermion translation
 table` emits the catalog as the translator-facing `offset, speaker, jp, en,
 context, status` table. Catalog schema 4 requires explicit `speaker` and

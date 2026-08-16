@@ -59,6 +59,36 @@ Do not infer a speaker from `「…」` versus `『…』`. The opening alternat
 styles without any speaker-state opcode. The full evidence and corpus totals
 are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribution.md).
 
+## Composite interpolation contract
+
+Schema 4 deliberately does not pretend that a physical text record containing
+only `】...` is a complete display line. The next schema will represent rendered
+messages as ordered physical text segments separated by immutable interpolation
+segments. The checked-in TOML remains canonical; a merged translator table or
+database is only a generated view with validated import.
+
+Authoring tokens use non-CP932 delimiters so accidental compilation fails:
+
+```text
+⟦name:mother⟧
+⟦name:older-sister⟧
+⟦name:dear-person⟧
+⟦name:friend-1⟧
+⟦name:friend-2⟧
+⟦term:slot-1⟧
+⟦term:slot-2⟧
+```
+
+They are UTF-8 catalog metadata and must never reach lime-juice. Import checks
+that the token sequence, order, and multiplicity match the source composite,
+splits English on those tokens, maps each literal chunk back to its original
+text-opcode anchor, and leaves the copy/render instructions unchanged. Only
+records separated by one of these recognized token spans may be merged for
+display; ordinary adjacent records keep a one-to-one source/target mapping.
+
+The complete design and locked editorial policies are recorded in
+[`../research/fermion_plot_translation_notes.md`](../research/fermion_plot_translation_notes.md).
+
 For holistic plot review or LLM-assisted translator notes, generate the compact
 speaker-annotated corpus under the ignored working directory:
 

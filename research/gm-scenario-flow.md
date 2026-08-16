@@ -29,8 +29,8 @@ Reachability from `FOP.MES`, with `MAIN.MES` treated as a terminal return to the
 title system, selects 72 content-unique story files. The four other unique MES
 files are utility or non-story surfaces:
 
-- `F_E.MES`: ending-to-main helper;
-- `MONO.MES`: monochrome/setup helper;
+- `F_E.MES`: CG-gallery/index surface;
+- `MONO.MES`: customizable adult-term editor;
 - `NAME.MES`: customizable-name editor;
 - `SILK.MES`: Silky's software catalog.
 
