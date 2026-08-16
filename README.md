@@ -71,9 +71,10 @@ uv run fermion binary replace-exact \
 ## Translation catalog
 
 The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
-the source of truth for translated text. Each entry keeps a stable ID, logical
-archive/file path and pristine offset, original Japanese, current English,
-encoding modes, status, wrapping width, and free-form translator notes.
+the source of truth for translated text. Each entry keeps a stable ID, one or
+more logical archive/file anchors, original Japanese, one canonical English
+translation, encoding modes, status, wrapping width, and free-form translator
+notes.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 
@@ -90,6 +91,24 @@ uv run fermion translation check translations/fermion.toml \
 The verbose view includes a word-wrapped preview for dialogue entries. See
 [`translations/README.md`](translations/README.md) for the entry conventions
 and incremental translation workflow.
+
+Audit a checked-in story scope independently from the catalog. The report
+groups identical pending Japanese under one canonical line while retaining all
+physical offsets:
+
+```sh
+uv run fermion translation coverage \
+  translations/fermion.toml \
+  translations/coverage.toml \
+  working/archives \
+  --verbose
+```
+
+The first scope currently tracks 178 anchors as 120 unique lines: 25 anchors
+are covered by 17 canonical translations and 153 anchors remain pending. A
+deliberately untranslated line must be source-anchored in the coverage file
+with a reason; `--require-complete` turns any remaining pending line into an
+error.
 
 Build lime-juice from the conventional sibling checkout without writing build
 artifacts into that repository:
@@ -119,10 +138,11 @@ changed-length `DISKA`, resizes its FAT12 cluster chain if necessary, and
 verifies every layer in the output image. Generated RKT, MES, archive, and JSON
 report files are kept under ignored `working/translation-build/`.
 
-The current 12-entry catalog produces image SHA-256
-`5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d`.
-It includes the translated title menu, opening proof lines, first explicitly
-labelled Connie/Kanzaki exchange, and first three-choice scene menu.
+The current 17-entry, 25-anchor catalog produces image SHA-256
+`0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963`.
+It includes the duplicated setup selector and disclaimer branches, translated
+title menu, opening proof lines, first explicitly labelled Connie/Kanzaki
+exchange, and first three-choice scene menu.
 
 The underlying HDI support is also available directly:
 
@@ -172,10 +192,11 @@ disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
 to the long translated reply. The command reports a SHA-256 over packed RGB
 pixels for stable checkpoint comparisons.
 
-The complete path is checked in as a named 34,200-frame route with seven exact
-framebuffer checkpoints. It continues through the prologue and verifies all
-three labelled dialogue lines plus the translated in-scene menu before selecting
-an option. It also verifies the translated HDI's content hash before booting:
+The complete path is checked in as a named 34,200-frame route with nine exact
+framebuffer checkpoints. It verifies the canonicalized display selector and
+fiction disclaimer, then continues through the prologue and checks all three
+labelled dialogue lines plus the translated in-scene menu. It also verifies the
+translated HDI's content hash before booting:
 
 ```sh
 uv run fermion emulator route \
@@ -187,16 +208,36 @@ uv run fermion emulator route \
 Checkpoint PNGs are written under ignored
 `working/emulator/checkpoints/opening-translation-proof/`.
 
-Save states can turn the expensive boot route into a short checkpoint test:
+Named routes may declare a `cache_frame`. On a cache miss the command performs
+the full route and stores both the libretro state and its matching writable HDI
+snapshot under ignored `working/emulator/state-cache/`. On a hit it restores
+that exact pair and executes only the suffix. The current route resumes at frame
+26,100, reducing the measured run on this Mac from about 49 seconds to 11.7
+seconds while preserving the original ×20 CPU profile and final framebuffer
+hash. The source HDI is always copied before NP2kai mounts it, so emulator writes
+cannot invalidate the hash-pinned build artifact.
+
+The cache is deliberately invalidated by any HDI, core, firmware/config,
+effective-option, or prefix-input change. It accelerates repeated checks of one
+build without claiming that an opaque emulator state is portable across changed
+game data. Later scene-by-scene iteration should use ignored game-native save
+fixtures and short boot/load routes; keep the full route as the release check.
+
+Force the full end-to-end path for release validation with:
 
 ```sh
-uv run fermion emulator run working/emulator/fermion-translation.hdi \
-  --frames 1200 --state-out working/emulator/information.state
-uv run fermion emulator run working/emulator/fermion-translation.hdi \
-  --state-in working/emulator/information.state \
-  --frames 200 --tap 1:return \
-  --capture working/emulator/mode-selector.png
+uv run fermion emulator route \
+  runtime/routes.toml \
+  opening-translation-proof \
+  working/emulator/fermion-translation.hdi \
+  --no-cache
 ```
+
+Changing `np2kai_clk_mult` is a separate machine profile, not a transparent
+speed control. A ×4 experiment completed the same nominal 34,200 frames in
+15.2 seconds, but every existing input landing and checkpoint hash changed.
+Keep ×20 for canonical tests; use lower clocks only in separately recorded
+routes with their own schedules and hashes.
 
 The built-in core options match the Fermion configuration. Use `--options` to
 load a RetroArch `.opt` file or repeat `--option KEY=VALUE` for overrides.

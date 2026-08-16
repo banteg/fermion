@@ -1,4 +1,4 @@
-version = 2
+version = 3
 game = "Fermion: Mirai kara no Houmonsha"
 
 [[files]]
@@ -15,6 +15,92 @@ sha256 = "90062762e0c553222d66adad5668a6c089e7e7104b9f5ed618e3586bdc5b004d"
 file = "DISKA/F0000.MES"
 source = "disk-a/F0000.MES"
 sha256 = "9ad87fb6ef7db90bea1d75ec8e02c1476fd9d5d477ec56ed458951f3facb55cb"
+
+[[entries]]
+id = "main-setup-color-display"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x02d1 },
+  { file = "DISKA/MAIN.MES", offset = 0x0386 },
+]
+source_mode = 1
+target_mode = 2
+source = "カラーディスプレイでプレイする　"
+translation = "PLAY IN COLOR"
+status = "runtime-verified"
+notes = """
+The compiled setup menu contains this exact label twice: once for the normal
+display branch and once after the 2-FDD/1-FDD+RAM configuration choices. Both
+anchors have the same visible meaning and intentionally share this canonical
+translation.
+"""
+
+[[entries]]
+id = "main-setup-monochrome-display"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x02fc },
+  { file = "DISKA/MAIN.MES", offset = 0x03b1 },
+]
+source_mode = 1
+target_mode = 2
+source = "モノクロディスプレイでプレイする"
+translation = "PLAY IN MONOCHROME"
+status = "runtime-verified"
+notes = """
+The same six-item setup structure duplicates the monochrome choice alongside
+the two color anchors. This is one canonical line in two physical code paths.
+"""
+
+[[entries]]
+id = "main-fiction-disclaimer"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x0c70 },
+  { file = "DISKA/MAIN.MES", offset = 0x0dfd },
+  { file = "DISKA/MAIN.MES", offset = 0x0f6d },
+]
+source_mode = 1
+target_mode = 2
+source = "この物語はフィクションです。\n\n"
+translation = "This story is a work of fiction.\n\n"
+status = "runtime-verified"
+notes = """
+The disclaimer is compiled into three separate initialization branches. The
+surrounding setup differs, but the visible three-line disclaimer is byte-for-
+byte identical, so all three anchors use one translation.
+"""
+
+[[entries]]
+id = "main-fiction-names"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x0c83 },
+  { file = "DISKA/MAIN.MES", offset = 0x0e10 },
+  { file = "DISKA/MAIN.MES", offset = 0x0f80 },
+]
+source_mode = 1
+target_mode = 2
+source = "この物語に登場する人物名、団体名は\n\n"
+translation = "Names of people and organizations appearing in it\n\n"
+status = "runtime-verified"
+notes = """
+Second line of the same triplicated disclaimer. It is intentionally phrased to
+continue grammatically into the following catalog entry.
+"""
+
+[[entries]]
+id = "main-fiction-no-connection"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x0c99 },
+  { file = "DISKA/MAIN.MES", offset = 0x0e26 },
+  { file = "DISKA/MAIN.MES", offset = 0x0f96 },
+]
+source_mode = 1
+target_mode = 2
+source = "実在するものとは一切関係ありません。"
+translation = "have no connection whatsoever to real ones."
+status = "runtime-verified"
+notes = """
+Final line of the disclaimer. “Real persons or organizations” is a possible
+standalone alternative if later layout testing favors independent sentences.
+"""
 
 [[entries]]
 id = "main-menu-new-game"

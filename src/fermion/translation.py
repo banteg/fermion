@@ -36,10 +36,15 @@ class TranslationFile:
 
 
 @dataclass(frozen=True)
-class TranslationEntry:
-    id: str
+class TranslationAnchor:
     file: str
     offset: int
+
+
+@dataclass(frozen=True)
+class TranslationEntry:
+    id: str
+    anchors: tuple[TranslationAnchor, ...]
     source_mode: int
     target_mode: int
     source: str
@@ -80,8 +85,8 @@ class TranslationCatalog:
         except (OSError, UnicodeError, tomllib.TOMLDecodeError) as error:
             raise TranslationError(f"cannot read translation catalog {path}: {error}") from error
 
-        if data.get("version") != 2:
-            raise TranslationError("translation catalog version must be 2")
+        if data.get("version") != 3:
+            raise TranslationError("translation catalog version must be 3")
         game = _string(data, "game")
         raw_files = data.get("files")
         raw_entries = data.get("entries")
@@ -114,21 +119,25 @@ class TranslationCatalog:
                 raise TranslationError(f"{file.file}: {error}") from error
 
         for entry in self.entries:
-            records = {record.offset: record for record in by_name[entry.file].text_records()}
-            record = records.get(entry.offset)
-            if record is None:
-                raise TranslationError(
-                    f"{entry.id}: no text record at {entry.file}:0x{entry.offset:04x}"
-                )
-            if record.mode != entry.source_mode:
-                raise TranslationError(
-                    f"{entry.id}: source mode changed at {entry.file}:0x{entry.offset:04x}: "
-                    f"expected {entry.source_mode}, got {record.mode}"
-                )
-            if record.text != entry.source:
-                raise TranslationError(
-                    f"{entry.id}: source text changed at {entry.file}:0x{entry.offset:04x}"
-                )
+            for anchor in entry.anchors:
+                records = {
+                    record.offset: record for record in by_name[anchor.file].text_records()
+                }
+                record = records.get(anchor.offset)
+                location = f"{anchor.file}:0x{anchor.offset:04x}"
+                if record is None:
+                    raise TranslationError(f"{entry.id}: no text record at {location}")
+                if record.mode != entry.source_mode:
+                    raise TranslationError(
+                        f"{entry.id}: source mode changed at {location}: "
+                        f"expected {entry.source_mode}, got {record.mode}"
+                    )
+                if record.text != entry.source:
+                    raise TranslationError(f"{entry.id}: source text changed at {location}")
+
+    @property
+    def anchor_count(self) -> int:
+        return sum(len(entry.anchors) for entry in self.entries)
 
 
 @dataclass(frozen=True)
@@ -152,7 +161,12 @@ def build_translation_files(
     catalog.verify_sources(source_directory)
     executable = _resolve_executable(juice)
     entries_by_file = {
-        file.file: tuple(entry for entry in catalog.entries if entry.file == file.file)
+        file.file: tuple(
+            (anchor.offset, entry)
+            for entry in catalog.entries
+            for anchor in entry.anchors
+            if anchor.file == file.file
+        )
         for file in catalog.files
     }
     built = []
@@ -199,7 +213,7 @@ def build_translation_files(
 def _patch_gm_source(
     source: str,
     original: GMFile,
-    entries: tuple[TranslationEntry, ...],
+    entries: tuple[tuple[int, TranslationEntry], ...],
 ) -> str:
     records = original.text_records()
     matches = list(_GM_TEXT.finditer(source))
@@ -208,7 +222,7 @@ def _patch_gm_source(
             f"lime-juice emitted {len(matches)} editable text nodes for "
             f"{len(records)} decoded records"
         )
-    edits = {entry.offset: entry for entry in entries}
+    edits = dict(entries)
     used: set[int] = set()
     chunks = []
     position = 0
@@ -243,7 +257,7 @@ def _verify_compiled_file(
     file: TranslationFile,
     original: GMFile,
     compiled: GMFile,
-    entries: tuple[TranslationEntry, ...],
+    entries: tuple[tuple[int, TranslationEntry], ...],
 ) -> None:
     original_audit = original.audit()
     compiled_audit = compiled.audit()
@@ -269,7 +283,7 @@ def _verify_compiled_file(
                 f"to 0x{after.target:04x}"
             )
 
-    edits = {entry.offset: entry for entry in entries}
+    edits = dict(entries)
     original_records = original.text_records()
     compiled_records = compiled.text_records()
     if len(original_records) != len(compiled_records):
@@ -379,9 +393,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
     target_mode = _integer(value, "target_mode", context=context)
     if source_mode not in (1, 2) or target_mode not in (1, 2):
         raise TranslationError(f"{context} modes must be 1 or 2")
-    offset = _integer(value, "offset", context=context)
-    if offset < 0:
-        raise TranslationError(f"{context}.offset must not be negative")
+    anchors = _parse_anchors(value, context)
     box_width_value = value.get("box_width")
     if box_width_value is not None and (
         not isinstance(box_width_value, int)
@@ -392,8 +404,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
 
     entry = TranslationEntry(
         id=_string(value, "id", context=context),
-        file=_string(value, "file", context=context),
-        offset=offset,
+        anchors=anchors,
         source_mode=source_mode,
         target_mode=target_mode,
         source=_string(value, "source", context=context),
@@ -411,8 +422,12 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         raise TranslationError(
             f"{entry.id}: translation cannot be encoded in mode {entry.target_mode} ({encoding})"
         ) from error
-    if entry.target_mode == 2 and not all(0x20 <= byte <= 0x7E for byte in encoded_translation):
-        raise TranslationError(f"{entry.id}: mode 2 translation must contain printable ASCII")
+    if entry.target_mode == 2 and not all(
+        byte == 0x0A or 0x20 <= byte <= 0x7E for byte in encoded_translation
+    ):
+        raise TranslationError(
+            f"{entry.id}: mode 2 translation must contain printable ASCII or newlines"
+        )
     if entry.target_mode == 1 and any(
         ord(character) < 0x20 and character != "\n" for character in entry.translation
     ):
@@ -424,6 +439,37 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
                     f"{entry.id}: word longer than box width {entry.box_width}: {line!r}"
                 )
     return entry
+
+
+def _parse_anchors(
+    table: dict[str, object], context: str
+) -> tuple[TranslationAnchor, ...]:
+    raw_anchors = table.get("anchors")
+    has_single = "file" in table or "offset" in table
+    if raw_anchors is not None and has_single:
+        raise TranslationError(
+            f"{context} must use either file/offset or anchors, not both"
+        )
+    if raw_anchors is None:
+        file = _string(table, "file", context=context)
+        offset = _integer(table, "offset", context=context)
+        if offset < 0:
+            raise TranslationError(f"{context}.offset must not be negative")
+        return (TranslationAnchor(file, offset),)
+    if not isinstance(raw_anchors, list) or not raw_anchors:
+        raise TranslationError(f"{context}.anchors must be a non-empty array of tables")
+
+    anchors: list[TranslationAnchor] = []
+    for index, raw_anchor in enumerate(raw_anchors, 1):
+        anchor_context = f"{context}.anchors[{index}]"
+        if not isinstance(raw_anchor, dict):
+            raise TranslationError(f"{anchor_context} must be a table")
+        file = _string(raw_anchor, "file", context=anchor_context)
+        offset = _integer(raw_anchor, "offset", context=anchor_context)
+        if offset < 0:
+            raise TranslationError(f"{anchor_context}.offset must not be negative")
+        anchors.append(TranslationAnchor(file, offset))
+    return tuple(anchors)
 
 
 def _validate_catalog(
@@ -439,14 +485,18 @@ def _validate_catalog(
         if entry.id in ids:
             raise TranslationError(f"duplicate translation ID: {entry.id}")
         ids.add(entry.id)
-        if entry.file not in known_files:
-            raise TranslationError(f"{entry.id}: unknown source file {entry.file}")
-        anchor = (entry.file, entry.offset)
-        if anchor in anchors:
-            raise TranslationError(
-                f"duplicate translation anchor: {entry.file}:0x{entry.offset:04x}"
-            )
-        anchors.add(anchor)
+        for entry_anchor in entry.anchors:
+            if entry_anchor.file not in known_files:
+                raise TranslationError(
+                    f"{entry.id}: unknown source file {entry_anchor.file}"
+                )
+            anchor = (entry_anchor.file, entry_anchor.offset)
+            if anchor in anchors:
+                raise TranslationError(
+                    "duplicate translation anchor: "
+                    f"{entry_anchor.file}:0x{entry_anchor.offset:04x}"
+                )
+            anchors.add(anchor)
 
 
 def _relative_path(value: str, context: str) -> str:

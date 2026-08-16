@@ -129,9 +129,9 @@ class GMFile:
 
 def _decode_text(mode: int, payload: bytes, dictionary: tuple[bytes, ...]) -> str | None:
     if mode == 2:
-        if not all(0x20 <= byte <= 0x7E for byte in payload):
+        if not all(byte == 0x04 or 0x20 <= byte <= 0x7E for byte in payload):
             return None
-        return payload.decode("ascii")
+        return payload.replace(b"\x04", b"\n").decode("ascii")
 
     decoded: list[str] = []
     pos = 0

@@ -107,3 +107,28 @@ def test_captures_several_frames_in_one_run() -> None:
         1: captured,
         3: captured,
     }
+
+
+def test_resumes_at_global_frame_and_calls_after_frame() -> None:
+    seen = []
+
+    class FakeFrontend:
+        def key_down(self, _key: int) -> None:
+            return None
+
+        def key_up(self, _key: int) -> None:
+            return None
+
+        def run_frame(self, *, capture: bool = False) -> Frame | None:
+            return None
+
+    run_checkpoints(
+        FakeFrontend(),
+        5,
+        [],
+        set(),
+        start_frame=3,
+        after_frame=seen.append,
+    )
+
+    assert seen == [3, 4]

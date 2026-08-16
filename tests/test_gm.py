@@ -56,6 +56,17 @@ def test_mode_one_text_decodes_dictionary_tokens_newlines_and_sjis() -> None:
     )
 
 
+def test_mode_two_text_decodes_newline_control() -> None:
+    record = GMFile.from_bytes(gm_file(b"\x4a\x02A\x04B\x00\x00")).text_records()[0]
+
+    assert (record.mode, record.payload, record.text, record.ascii_text) == (
+        2,
+        b"A\x04B",
+        "A\nB",
+        "A\nB",
+    )
+
+
 def test_mode_one_text_decodes_pc98_box_drawing_dictionary_entries() -> None:
     record = GMFile.from_bytes(
         gm_file(b"\x4a\x01\x18\x00\x00", dictionary=b"\x86\xa2")

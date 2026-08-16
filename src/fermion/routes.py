@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import tomllib
 from dataclasses import dataclass
@@ -28,6 +29,7 @@ class EmulatorRoute:
     frames: int
     taps: tuple[KeyTap, ...]
     checkpoints: tuple[RouteCheckpoint, ...]
+    cache_frame: int | None
 
     def verify_content(self, path: Path) -> None:
         actual = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -48,8 +50,8 @@ class RouteManifest:
             data = tomllib.loads(path.read_text())
         except (OSError, UnicodeError, tomllib.TOMLDecodeError) as error:
             raise EmulatorError(f"cannot read route manifest {path}: {error}") from error
-        if data.get("version") != 1:
-            raise EmulatorError("route manifest version must be 1")
+        if data.get("version") != 2:
+            raise EmulatorError("route manifest version must be 2")
         raw_routes = data.get("routes")
         if not isinstance(raw_routes, list) or not raw_routes:
             raise EmulatorError("route manifest must contain at least one [[routes]] table")
@@ -101,7 +103,28 @@ def _parse_route(value: object, index: int) -> EmulatorRoute:
     checkpoint_frames = [checkpoint.frame for checkpoint in checkpoints]
     if len(checkpoint_frames) != len(set(checkpoint_frames)):
         raise EmulatorError(f"{context} contains duplicate checkpoint frames")
-    return EmulatorRoute(name, description, content_sha256, frames, taps, checkpoints)
+
+    cache_frame = value.get("cache_frame")
+    if cache_frame is not None:
+        cache_frame = _integer(value, "cache_frame", context)
+        if not 0 <= cache_frame < frames - 1:
+            raise EmulatorError(f"{context}.cache_frame must leave at least one suffix frame")
+        if not any(checkpoint.frame > cache_frame for checkpoint in checkpoints):
+            raise EmulatorError(f"{context}.cache_frame must precede a checkpoint")
+        for tap in taps:
+            if tap.frame <= cache_frame < tap.frame + tap.hold_frames:
+                raise EmulatorError(
+                    f"{context}.cache_frame crosses held key {tap.name!r}"
+                )
+    return EmulatorRoute(
+        name,
+        description,
+        content_sha256,
+        frames,
+        taps,
+        checkpoints,
+        cache_frame,
+    )
 
 
 def _parse_checkpoint(
@@ -141,3 +164,42 @@ def _hash(table: dict[str, object], key: str, context: str) -> str:
     if len(value) != 64 or any(char not in "0123456789abcdef" for char in value):
         raise EmulatorError(f"{context}.{key} must contain 64 hexadecimal characters")
     return value
+
+
+def route_cache_key(
+    route: EmulatorRoute,
+    core: Path,
+    system_directory: Path,
+    options: dict[str, str],
+) -> str:
+    """Hash every deterministic input needed to resume a route prefix safely."""
+    if route.cache_frame is None:
+        raise EmulatorError(f"route {route.name!r} does not define a cache frame")
+    taps = [
+        [tap.frame, tap.key, tap.hold_frames]
+        for tap in route.taps
+        if tap.frame <= route.cache_frame
+    ]
+    identity = {
+        "content_sha256": route.content_sha256,
+        "cache_frame": route.cache_frame,
+        "taps": taps,
+        "options": options,
+        "core_sha256": hashlib.sha256(core.read_bytes()).hexdigest(),
+        "system_sha256": _system_fingerprint(system_directory),
+    }
+    encoded = json.dumps(identity, sort_keys=True, separators=(",", ":")).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def _system_fingerprint(system_directory: Path) -> str:
+    root = system_directory / "np2kai"
+    digest = hashlib.sha256()
+    for path in sorted(item for item in root.rglob("*") if item.is_file()):
+        relative = path.relative_to(root).as_posix().encode()
+        digest.update(len(relative).to_bytes(4, "little"))
+        digest.update(relative)
+        data = path.read_bytes()
+        digest.update(len(data).to_bytes(8, "little"))
+        digest.update(data)
+    return digest.hexdigest()

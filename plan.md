@@ -44,10 +44,15 @@ Completed work:
   PC-98 box-drawing range. It decodes all 26,323 text records across the 96-file
   corpus and supports direct substring filtering.
 - A checked-in translation catalog retains stable pristine-source anchors,
-  original lines, current translations, wrapping constraints, progress status,
-  and translator notes. The CLI verifies its file hashes and exact text records.
-- Named headless routes can drive one translated HDI, capture several frames in
-  a single run, and reject content or framebuffer hash drift.
+  canonical one-to-many translations, original lines, wrapping constraints,
+  progress status, and translator notes. The CLI verifies its file hashes and
+  every exact physical text record.
+- A checked-in coverage ledger enumerates complete story ranges independently
+  of the translated entries, groups duplicate source lines, and reports every
+  anchor as translated, explicitly excluded, or pending.
+- Named headless routes can drive a writable copy of one translated HDI, capture
+  several frames in a single run, reject content or framebuffer hash drift, and
+  restore hash-keyed prefix state plus its matching disk snapshot.
 - The catalog can now build a fresh translated image end to end: lime-juice
   recompiles changed-length GM files, Silky's archive offsets are repacked, and
   the copied HDI's nested FAT12 file is safely resized and verified.
@@ -65,6 +70,7 @@ Relevant commits:
 - lime-juice `acad05d`: General Message text support, on branch
   `feat/fermion-general-message`.
 - lime-juice `86a0f68`: General Message source-span relocation and backpatching.
+- lime-juice `4b54a8c`: mode-2 GM newline round-trip support.
 
 ## Confirmed General Message format
 
@@ -105,7 +111,9 @@ Relevant commits:
 - Tokens `0x18..0x7f` address dictionary entries `0..103`.
 - Tokens `0xa0..0xdf` address dictionary entries `104..167`.
 - Mode 2 renders printable single-byte text and is already used by the game for
-  short strings such as `BS`.
+  short strings such as `BS`. The same `0x04` newline control works in mode 2;
+  lime-juice now round-trips it and the translated three-line disclaimer proves
+  it in the live renderer.
 
 ### Scenario/module loading
 
@@ -325,8 +333,13 @@ with a narrow local command channel and no-dialog screenshot path; a full native
 port of its Win9x-only debugger UI is not required for the translation pipeline.
 
 The named route in `runtime/routes.toml` now pins the expanded translated HDI
-and drives 34,200 frames through the prologue to the first scene menu. It retains
-the three opening checkpoints: translated-menu hash
+and drives 34,200 frames through the prologue to the first scene menu. Two new
+opening checkpoints verify the canonical duplicate translations: display-mode
+selector hash
+`8c32d32fbcafc99e370b95f24f0749dc151a7aa4b0de9340867344270b4cc8c6`
+and fiction-disclaimer hash
+`ba49984ceeb970c4df38422499d447a02df3e81131e49eb63c867e6076db4da3`.
+It retains the three earlier opening checkpoints: translated-menu hash
 `a736da6478d479150732eae5dcf49481a88d3c99e1bbb0d592590dd5d4b38045`,
 opening-warning hash
 `69c262007b4640fa1898c158de67566a49b8f289d3626ba750b3079e7137ce05`, and
@@ -341,9 +354,48 @@ Connie's response
 and the three-choice menu
 `1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c`.
 
+The route cache boundary is frame 26,099, immediately after the last labelled
+dialogue proof. A cache miss runs and verifies all nine checkpoints, then saves
+both libretro state and the writable HDI at that exact frame. A cache hit starts
+at global frame 26,100 and executes only the final 8,100 frames. On this Mac the
+measured route fell from about 49 seconds to 11.7 seconds and reproduced the
+same final hash. `--no-cache` remains the full end-to-end release gate.
+
+Clock multiplier is part of the emulated machine, not a safe host throttle. A
+×4 trial ran 34,200 frames in 15.2 seconds instead of the ×20 profile's full
+runtime, but all existing checkpoint hashes and several input landing points
+changed. Suppressing rasterization between checkpoints produced no meaningful
+speedup because guest CPU emulation dominates. Canonical routes therefore keep
+×20 and use state prefixes; any lower-clock route needs separate schedules and
+hashes.
+
+## Completed enabling milestone: duplicate-aware coverage
+
+### 8. Track canonical lines and every physical anchor — complete
+
+Catalog schema 3 permits either one compact `file`/`offset` anchor or an
+`anchors` array. One translation, status, and translator note can therefore
+cover repeated bytecode without copy-pasted editorial state. Identical source
+may still be split into multiple entries when scene context truly requires
+different English; the coverage report counts such decisions explicitly.
+
+The setup audit proved that the repeated strings are compiled control-flow, not
+extractor artifacts. Color and monochrome each occur twice inside the same
+six-item machine/disk setup menu. The three disclaimer lines each occur in
+three separate initialization branches. Five canonical entries now cover those
+13 physical anchors and are runtime-verified.
+
+`translations/coverage.toml` defines the initial
+`boot-to-first-scene-menu` range over `MAIN.MES`, `FOP.MES`, and `F0000.MES`.
+It currently contains 178 decoded text anchors grouped into 120 exact source
+lines. Seventeen canonical entries cover 25 anchors; 103 unique lines across
+153 anchors remain pending. Intentional non-translations must be exact,
+source-verified exclusions with reasons, and `--require-complete` can close a
+scope without relying on a manual checklist.
+
 ## Completed enabling milestone: catalog-driven image builds
 
-### 8. Remove the same-total-size constraint — complete
+### 9. Remove the same-total-size constraint — complete
 
 `fermion translation build` now treats `translations/fermion.toml` as the
 build input. For every catalog file it:
@@ -359,13 +411,13 @@ build input. For every catalog file it:
   file's cluster chain, updates both FAT copies and its directory entry, and
   verifies the result without modifying the input image.
 
-The current catalog build grows `MAIN.MES` from 7,310 to 7,318 bytes,
+The current catalog build grows `MAIN.MES` from 7,310 to 7,541 bytes,
 `F0000.MES` from 16,157 to 16,211 bytes, and `DISKA` from 1,090,166 to
-1,090,228 bytes. Starting from pristine image SHA-256
+1,090,451 bytes. Starting from pristine image SHA-256
 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`, it
 produces `fermion-translation.hdi` SHA-256
-`5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d`.
-The named opening route passes all seven framebuffer hashes on that fresh image,
+`0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963`.
+The named opening route passes all nine framebuffer hashes on that fresh image,
 proving that changed-size media reconstruction preserves live control flow and
 rendering across the prologue and into `F0000.MES`.
 
@@ -382,11 +434,15 @@ rendering across the prologue and into `F0000.MES`.
 
 ## Later work
 
-- Expand the checked-in catalog through the rest of the opening, including
-  speaker identity, context, and editorial review notes.
+- Work down the 103-line initial coverage backlog, beginning with the contiguous
+  `FOP.MES` opening narration, while retaining speaker identity, context, and
+  editorial review notes.
 - Placeholder/control-token validation and enforced word-boundary wrapping.
 - Cropped framebuffer checkpoints where full-screen animation makes an exact
   whole-frame hash unnecessarily fragile.
+- Generate ignored game-native save fixtures at scene boundaries and add short
+  boot/load routes. Those can exercise rebuilt later scripts across image
+  changes, while libretro state caches remain exact-build-only accelerators.
 - Graphics inventory and translation through `juice-img` where applicable.
 - Reproducible binary-difference release with exact input hashes and emulator
   instructions.

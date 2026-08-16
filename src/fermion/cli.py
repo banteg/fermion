@@ -4,14 +4,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path, PurePosixPath
 from typing import NoReturn
 
 from fermion.archive import ArchiveError, InstallerArchive
 from fermion.binary import BinaryPatchError, replace_exact
+from fermion.coverage import CoverageManifest, analyze_coverage
 from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
 from fermion.emulator import (
+    FERMION_CORE_OPTIONS,
     EmulatorError,
     LibretroFrontend,
     load_core_options,
@@ -26,7 +29,7 @@ from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
 from fermion.pipeline import build_translation_image
-from fermion.routes import RouteManifest
+from fermion.routes import RouteManifest, route_cache_key
 from fermion.translation import TranslationCatalog, TranslationError
 
 
@@ -208,6 +211,17 @@ def build_parser() -> argparse.ArgumentParser:
     emulator_route.add_argument(
         "--output-dir", type=_path, default=Path("working/emulator/checkpoints")
     )
+    emulator_route.add_argument(
+        "--cache-dir",
+        type=_path,
+        default=Path("working/emulator/state-cache"),
+        help="store deterministic prefix states and matching writable disk snapshots",
+    )
+    emulator_route.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="execute and verify the complete route without reading or writing a prefix cache",
+    )
     emulator_route.set_defaults(handler=_emulator_route)
 
     translation = commands.add_parser(
@@ -225,6 +239,20 @@ def build_parser() -> argparse.ArgumentParser:
     )
     translation_check.add_argument("--verbose", action="store_true")
     translation_check.set_defaults(handler=_translation_check)
+    translation_coverage = translation_commands.add_parser(
+        "coverage", help="report translated, excluded, and pending text in a scope"
+    )
+    translation_coverage.add_argument("catalog", type=_path)
+    translation_coverage.add_argument("manifest", type=_path)
+    translation_coverage.add_argument("source_dir", type=_path)
+    translation_coverage.add_argument("--scope", help="report only one coverage scope")
+    translation_coverage.add_argument("--verbose", action="store_true")
+    translation_coverage.add_argument(
+        "--require-complete",
+        action="store_true",
+        help="fail if any in-scope text anchor is pending",
+    )
+    translation_coverage.set_defaults(handler=_translation_coverage)
     translation_build = translation_commands.add_parser(
         "build", help="build translated MES files, archives, and a bootable copied HDI"
     )
@@ -434,16 +462,81 @@ def _emulator_route(args: argparse.Namespace) -> None:
         options[key] = value
 
     capture_frames = {checkpoint.frame for checkpoint in route.checkpoints}
-    with LibretroFrontend(args.core, args.system_dir, args.image, options) as frontend:
+    effective_options = dict(FERMION_CORE_OPTIONS)
+    effective_options.update(options)
+    use_cache = route.cache_frame is not None and not args.no_cache
+    cache_state: Path | None = None
+    cache_disk: Path | None = None
+    start_frame = 0
+    cache_hit = False
+    if use_cache:
+        cache_key = route_cache_key(
+            route,
+            args.core,
+            args.system_dir,
+            effective_options,
+        )
+        cache_root = args.cache_dir / route.name / cache_key
+        cache_state = cache_root / "prefix.state"
+        cache_disk = cache_root / "prefix.hdi"
+        cache_hit = cache_state.is_file() and cache_disk.is_file()
+        if cache_hit:
+            start_frame = route.cache_frame + 1
+    runtime_image = args.cache_dir / "runtime" / f"{route.name}.hdi"
+    runtime_image.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(cache_disk if cache_hit else args.image, runtime_image)
+
+    with LibretroFrontend(args.core, args.system_dir, runtime_image, options) as frontend:
         print(f"core: {frontend.core_identity}")
-        print(f"route: {route.name} frames={route.frames}")
-        frames = run_checkpoints(frontend, route.frames, list(route.taps), capture_frames)
+        print(
+            f"route: {route.name} frames={route.frames} "
+            f"start={start_frame} executed={route.frames - start_frame}"
+        )
+        if use_cache:
+            state = "hit" if cache_hit else "miss"
+            print(f"cache: {state} frame={route.cache_frame} state={cache_state}")
+        else:
+            print("cache: disabled")
+        if cache_hit:
+            assert cache_state is not None
+            frontend.load_state(cache_state)
+
+        def save_prefix(current: int) -> None:
+            if (
+                not use_cache
+                or cache_hit
+                or current != route.cache_frame
+            ):
+                return
+            assert cache_state is not None and cache_disk is not None
+            cache_state.parent.mkdir(parents=True, exist_ok=True)
+            temporary_state = cache_state.with_suffix(".state.tmp")
+            temporary_disk = cache_disk.with_suffix(".hdi.tmp")
+            frontend.save_state(temporary_state)
+            shutil.copyfile(runtime_image, temporary_disk)
+            temporary_disk.replace(cache_disk)
+            temporary_state.replace(cache_state)
+
+        frames = run_checkpoints(
+            frontend,
+            route.frames,
+            list(route.taps),
+            capture_frames,
+            start_frame=start_frame,
+            after_frame=save_prefix,
+        )
 
     failures: list[str] = []
     output_dir = args.output_dir / route.name
     for checkpoint in route.checkpoints:
         frame = frames.get(checkpoint.frame)
         if frame is None:
+            if checkpoint.frame < start_frame:
+                print(
+                    f"checkpoint: {checkpoint.name} frame={checkpoint.frame} "
+                    "cached-prefix skipped"
+                )
+                continue
             raise EmulatorError(f"route did not capture checkpoint {checkpoint.name!r}")
         output = output_dir / f"{checkpoint.name}.png"
         frame.write_png(output)
@@ -468,12 +561,14 @@ def _translation_check(args: argparse.Namespace) -> None:
         catalog.verify_sources(args.source_dir)
     print(
         f"{args.catalog}: files={len(catalog.files)} entries={len(catalog.entries)} "
+        f"anchors={catalog.anchor_count} "
         f"sources={'verified' if args.source_dir else 'not-checked'}"
     )
     if args.verbose:
         for entry in catalog.entries:
-            anchor = f"{entry.file}:0x{entry.offset:04x}"
-            print(f"{entry.id}: {anchor} {entry.status}")
+            print(f"{entry.id}: anchors={len(entry.anchors)} {entry.status}")
+            for anchor in entry.anchors:
+                print(f"  anchor: {anchor.file}:0x{anchor.offset:04x}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
             if entry.box_width is not None:
@@ -507,6 +602,53 @@ def _translation_build(args: argparse.Namespace) -> None:
     print(f"image: {result.output_path}")
     print(f"sha256: {result.source_sha256} -> {result.output_sha256}")
     print(f"report: {result.report_path}")
+
+
+def _translation_coverage(args: argparse.Namespace) -> None:
+    catalog = TranslationCatalog.from_file(args.catalog)
+    manifest = CoverageManifest.from_file(args.manifest)
+    reports = analyze_coverage(
+        catalog,
+        manifest,
+        args.source_dir,
+        scope_id=args.scope,
+    )
+    incomplete = []
+    for report in reports:
+        print(f"scope: {report.scope.id}")
+        print(f"  description: {report.scope.description}")
+        print(
+            f"  anchors: total={len(report.texts)} "
+            f"translated={len(report.translated_anchors)} "
+            f"excluded={len(report.excluded_anchors)} "
+            f"pending={report.pending_anchor_count}"
+        )
+        print(
+            f"  canonical-lines: total={report.canonical_line_count} "
+            f"managed={report.managed_line_count} "
+            f"pending={len(report.pending_groups)} "
+            f"duplicates={report.duplicate_line_count} "
+            f"context-splits={report.contextual_split_count}"
+        )
+        if report.pending_groups:
+            incomplete.append(report.scope.id)
+        if args.verbose:
+            for group in report.pending_groups:
+                existing = (
+                    f" canonical={','.join(group.translated_ids)}"
+                    if group.translated_ids
+                    else ""
+                )
+                print(
+                    f"  pending: mode={group.source_mode} anchors={len(group.anchors)}"
+                    f"{existing} source={json.dumps(group.source, ensure_ascii=False)}"
+                )
+                for anchor in group.anchors:
+                    print(f"    {anchor.file}:0x{anchor.offset:04x}")
+    if args.require_complete and incomplete:
+        raise TranslationError(
+            "coverage incomplete for " + ", ".join(incomplete)
+        )
 
 
 def _fail(message: str) -> NoReturn:

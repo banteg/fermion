@@ -7,6 +7,7 @@ import ctypes
 import hashlib
 import struct
 import zlib
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Self
@@ -472,10 +473,15 @@ def run_checkpoints(
     frame_count: int,
     taps: list[KeyTap],
     capture_frames: set[int],
+    *,
+    start_frame: int = 0,
+    after_frame: Callable[[int], None] | None = None,
 ) -> dict[int, Frame]:
     """Run scheduled input and retain requested framebuffers by frame index."""
     if frame_count < 1:
         raise EmulatorError("frame count must be at least one")
+    if not 0 <= start_frame < frame_count:
+        raise EmulatorError(f"start frame {start_frame} is outside a {frame_count}-frame run")
     invalid_captures = sorted(frame for frame in capture_frames if not 0 <= frame < frame_count)
     if invalid_captures:
         raise EmulatorError(
@@ -488,11 +494,15 @@ def run_checkpoints(
                 f"tap {tap.name!r} is scheduled at frame {tap.frame}, "
                 f"outside a {frame_count}-frame run"
             )
+        if tap.frame < start_frame < tap.frame + tap.hold_frames:
+            raise EmulatorError(
+                f"cannot resume at frame {start_frame} during held key {tap.name!r}"
+            )
         events.setdefault(tap.frame, []).append((tap.key, True))
         events.setdefault(tap.frame + tap.hold_frames, []).append((tap.key, False))
 
     captured: dict[int, Frame] = {}
-    for current in range(frame_count):
+    for current in range(start_frame, frame_count):
         for key, pressed in events.get(current, []):
             if pressed:
                 frontend.key_down(key)
@@ -501,4 +511,6 @@ def run_checkpoints(
         frame = frontend.run_frame(capture=current in capture_frames)
         if frame is not None:
             captured[current] = frame
+        if after_frame is not None:
+            after_frame(current)
     return captured

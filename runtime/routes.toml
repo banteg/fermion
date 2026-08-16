@@ -1,10 +1,11 @@
-version = 1
+version = 2
 
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the opening and verify the translated title, labelled exchange, and first scene menu."
-content_sha256 = "5cc458d87392c946ec7d1a6529a6a2fa0879025b87746c5366ae5f735fffd56d"
+content_sha256 = "0755e6633e17ace9c9c4a73259d513cd1c517b98dd173e9ff83b601bd54a5963"
 frames = 34200
+cache_frame = 26099
 taps = [
   "1000:return",
   "1300:return",
@@ -79,6 +80,16 @@ taps = [
   "33350:return",
   "33800:return",
 ]
+
+[[routes.checkpoints]]
+name = "display-mode-selector"
+frame = 1299
+sha256 = "8c32d32fbcafc99e370b95f24f0749dc151a7aa4b0de9340867344270b4cc8c6"
+
+[[routes.checkpoints]]
+name = "fiction-disclaimer"
+frame = 1749
+sha256 = "ba49984ceeb970c4df38422499d447a02df3e81131e49eb63c867e6076db4da3"
 
 [[routes.checkpoints]]
 name = "translated-menu"

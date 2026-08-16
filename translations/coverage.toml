@@ -1,0 +1,20 @@
+version = 1
+
+[[scopes]]
+id = "boot-to-first-scene-menu"
+description = "All decoded text encountered from setup through the first F0000 choice menu."
+
+[[scopes.ranges]]
+file = "DISKA/MAIN.MES"
+start = 0x02d1
+end = 0x1bc0
+
+[[scopes.ranges]]
+file = "DISKA/FOP.MES"
+start = 0x016c
+end = 0x127b
+
+[[scopes.ranges]]
+file = "DISKA/F0000.MES"
+start = 0x0554
+end = 0x085b

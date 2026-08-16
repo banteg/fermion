@@ -7,6 +7,7 @@ import pytest
 
 from fermion.gm import GMFile
 from fermion.translation import (
+    TranslationAnchor,
     TranslationCatalog,
     TranslationEntry,
     TranslationError,
@@ -17,7 +18,7 @@ from fermion.translation import (
 def write_catalog(tmp_path, source_hash: str, *, translation: str = "Hello world"):
     catalog = tmp_path / "catalog.toml"
     catalog.write_text(
-        f'''version = 2
+        f'''version = 3
 game = "Test"
 
 [[files]]
@@ -54,6 +55,7 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
     [entry] = catalog.entries
     assert entry.wrapped_translation == ("Hello", "world")
     assert entry.notes == "A useful note."
+    assert entry.anchors == (TranslationAnchor("DISKA/SCENE.MES", 2),)
     [catalog_file] = catalog.files
     assert (catalog_file.archive, catalog_file.name) == ("DISKA", "SCENE.MES")
 
@@ -99,8 +101,7 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
     )
     entry = TranslationEntry(
         id="scene-0001",
-        file="DISKA/SCENE.MES",
-        offset=2,
+        anchors=(TranslationAnchor("DISKA/SCENE.MES", 2),),
         source_mode=2,
         target_mode=2,
         source="Original",
@@ -114,7 +115,50 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
  (raw 0))
 '''
 
-    patched = _patch_gm_source(source, original, (entry,))
+    patched = _patch_gm_source(source, original, ((2, entry),))
 
     assert '(gm-text 2 "He said \\"hello\\"")' in patched
     assert '(gm-text 2 "Other")' in patched
+
+
+def test_one_canonical_entry_can_cover_several_physical_anchors(tmp_path) -> None:
+    source = (
+        struct.pack("<H", 2)
+        + b"\x4a\x02Repeated\x00\x4a\x02Repeated\x00\x00"
+    )
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = tmp_path / "catalog.toml"
+    catalog_path.write_text(
+        f'''version = 3
+game = "Test"
+
+[[files]]
+file = "DISKA/SCENE.MES"
+source = "disk-a/SCENE.MES"
+sha256 = "{hashlib.sha256(source).hexdigest()}"
+
+[[entries]]
+id = "shared-line"
+anchors = [
+  {{ file = "DISKA/SCENE.MES", offset = 0x0002 }},
+  {{ file = "DISKA/SCENE.MES", offset = 0x000d }},
+]
+source_mode = 2
+target_mode = 2
+source = "Repeated"
+translation = "Shared"
+status = "draft"
+notes = "One canonical translation in two contexts."
+'''
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+    catalog.verify_sources(source_dir)
+
+    assert catalog.anchor_count == 2
+    assert catalog.entries[0].anchors == (
+        TranslationAnchor("DISKA/SCENE.MES", 2),
+        TranslationAnchor("DISKA/SCENE.MES", 13),
+    )
