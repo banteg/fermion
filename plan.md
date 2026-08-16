@@ -42,10 +42,19 @@ Completed work:
 - Text extraction expands GM dictionary tokens, raw Shift-JIS, newlines, and the
   PC-98 box-drawing range. It decodes all 26,323 text records across the 96-file
   corpus and supports direct substring filtering.
+- Speaker attribution now recognizes both literal `【name】` labels and the
+  exact `0x45` copy plus `0x4b` render sequence used by all five customizable
+  names. It leaves genuinely unlabelled dialogue unresolved instead of guessing
+  from quote style.
+- A compact full-script export deduplicates identical MES copies by content,
+  retains stable offsets, and annotates every proven speaker for holistic plot
+  review and translator-note drafting without treating generated output as the
+  catalog source of truth.
 - A checked-in translation catalog retains stable pristine-source anchors,
-  canonical one-to-many translations, original lines, wrapping constraints,
-  progress status, and translator notes. The CLI verifies its file hashes and
-  every exact physical text record.
+  canonical one-to-many translations, original lines, speaker, context,
+  wrapping constraints, progress status, and translator notes. The CLI verifies
+  its file hashes, every exact physical text record, and every encoded speaker;
+  it can also emit the original translator-table layout as TSV or JSONL.
 - A checked-in coverage ledger enumerates complete story ranges independently
   of the translated entries, groups duplicate source lines, and reports every
   anchor as translated, explicitly excluded, or pending.
@@ -70,6 +79,7 @@ Relevant commits:
 - Fermion `56e4bf7`: preservation and MES probing tools.
 - Fermion `145ecd1`: MZ load-image extraction.
 - Fermion `4c91a23`: native-derived General Message structural audit.
+- Fermion `1825cd5`: compact, content-deduplicated full-script dump.
 - lime-juice `acad05d`: General Message text support, on branch
   `feat/fermion-general-message`.
 - lime-juice `86a0f68`: General Message source-span relocation and backpatching.
@@ -378,7 +388,7 @@ hashes.
 
 ### 8. Track canonical lines and every physical anchor — complete
 
-Catalog schema 3 permits either one compact `file`/`offset` anchor or an
+Catalog schema 4 retains either one compact `file`/`offset` anchor or an
 `anchors` array. One translation, status, and translator note can therefore
 cover repeated bytecode without copy-pasted editorial state. Identical source
 may still be split into multiple entries when scene context truly requires
@@ -397,6 +407,37 @@ lines. Seventeen canonical entries cover 25 anchors; 103 unique lines across
 153 anchors remain pending. Intentional non-translations must be exact,
 source-verified exclusions with reasons, and `--require-complete` can close a
 scope without relying on a manual checklist.
+
+## Completed enabling milestone: speaker-aware translation records
+
+Static speakers are not stored in a preceding state record: they are literal
+`【name】` prefixes inside opcode `0x4a`. Customizable speakers are assembled as
+an opening-bracket `0x4a`, an opcode `0x45` copy from a persistent name slot to
+scratch reference `0x00e0`, an opcode `0x4b` indirect render, and a closing-
+bracket `0x4a`. Ghidra confirms that the native `0x45` handler copies strings
+and the `0x4b` handler feeds an indirect string into the `0x4a` renderer.
+
+The five stable roles and defaults are:
+
+- `0x03e8`: `name-slot:mother` (`由貴`);
+- `0x03f6`: `name-slot:older-sister` (`瑠璃`);
+- `0x0404`: `name-slot:dear-person` (`加奈子`);
+- `0x0412`: `name-slot:friend-1` (`陽子`);
+- `0x0420`: `name-slot:friend-2` (`弘子`).
+
+Across 77 content-unique MES files, 5,156 of 17,461 decoded text records inherit
+a literal label, 4,206 inherit a customizable name slot, and 8,099 remain
+contextual. All 2,036 partial opening-bracket records match the complete dynamic
+sequence. `FOP.MES` proves the unresolved case: its opening alternates plain
+`0x4a` messages separated by `0x50` and `0x00`, with no speaker-state opcode.
+
+Catalog schema 4 therefore requires an explicit stable `speaker` and concise
+`context` for every canonical entry. Source verification rejects disagreements
+with encoded labels and slots while permitting documented manual roles for
+unlabelled lines. `fermion translation table` emits `id`, `file`, `offset`,
+`speaker`, `jp`, `en`, `context`, and `status` for translator review. The
+byte-level and native evidence is retained in
+`research/gm-speaker-attribution.md`.
 
 ## Completed enabling milestone: catalog-driven image builds
 
@@ -486,8 +527,9 @@ release gate.
 ## Later work
 
 - Work down the 103-line initial coverage backlog, beginning with the contiguous
-  `FOP.MES` opening narration, while retaining speaker identity, context, and
-  editorial review notes.
+  `FOP.MES` opening narration. Assign contextual speakers explicitly as each
+  scene is reviewed, use one canonical translation only where speaker and
+  context agree, and retain editorial review notes.
 - Placeholder/control-token validation and enforced word-boundary wrapping.
 - Continue adding sparse game-native fixtures beyond `F0001.MES` as translation
   reaches later scenario boundaries, pairing each with a short boot/load route

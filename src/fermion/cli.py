@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import shutil
+import sys
 from pathlib import Path, PurePosixPath
 from typing import NoReturn
 
@@ -30,7 +32,6 @@ from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mz import MZError, MZImage
 from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest, route_cache_key
-from fermion.script import collect_mes_files, render_script
 from fermion.save_fixtures import (
     SaveFixtureError,
     SaveFixtureManifest,
@@ -39,6 +40,7 @@ from fermion.save_fixtures import (
     write_fixture_hdi,
     write_save_fixture_manifest,
 )
+from fermion.script import collect_mes_files, render_script
 from fermion.translation import TranslationCatalog, TranslationError
 
 
@@ -51,6 +53,10 @@ def _integer(value: str) -> int:
         return int(value, 0)
     except ValueError as error:
         raise argparse.ArgumentTypeError(f"invalid integer: {value!r}") from error
+
+
+def _tsv_text(value: str) -> str:
+    return value.replace("\\", "\\\\").replace("\r", "\\r").replace("\n", "\\n")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -109,6 +115,21 @@ def build_parser() -> argparse.ArgumentParser:
     gm_texts.add_argument("--mode", type=int, choices=(1, 2))
     gm_texts.add_argument("--contains", help="only show decoded text containing this string")
     gm_texts.set_defaults(handler=_gm_texts)
+    gm_speakers = gm_commands.add_parser(
+        "speakers", help="attribute speaker labels encoded in rendered text streams"
+    )
+    gm_speakers.add_argument("source", type=_path)
+    speaker_filter = gm_speakers.add_mutually_exclusive_group()
+    speaker_filter.add_argument(
+        "--attributed-only", action="store_true", help="omit records without encoded speakers"
+    )
+    speaker_filter.add_argument(
+        "--unresolved-only", action="store_true", help="show only records needing context"
+    )
+    gm_speakers.add_argument(
+        "--format", choices=("text", "tsv", "jsonl"), default="text"
+    )
+    gm_speakers.set_defaults(handler=_gm_speakers)
     gm_script = gm_commands.add_parser(
         "script", help="dump the deduplicated scenario script with per-line anchors"
     )
@@ -284,6 +305,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     translation_check.add_argument("--verbose", action="store_true")
     translation_check.set_defaults(handler=_translation_check)
+    translation_table = translation_commands.add_parser(
+        "table", help="emit the translator table with speaker and context fields"
+    )
+    translation_table.add_argument("catalog", type=_path)
+    translation_table.add_argument(
+        "--source-dir", type=_path, help="verify pristine source anchors before emitting rows"
+    )
+    translation_table.add_argument("--format", choices=("tsv", "jsonl"), default="tsv")
+    translation_table.set_defaults(handler=_translation_table)
     translation_coverage = translation_commands.add_parser(
         "coverage", help="report translated, excluded, and pending text in a scope"
     )
@@ -484,6 +514,76 @@ def _gm_texts(args: argparse.Namespace) -> None:
             )
 
 
+def _gm_speakers(args: argparse.Namespace) -> None:
+    if args.source.is_dir():
+        sources = sorted(path for path in args.source.rglob("*") if path.suffix.upper() == ".MES")
+    else:
+        sources = [args.source]
+    if not sources:
+        raise GMError(f"no MES files found under {args.source}")
+
+    writer = None
+    if args.format == "tsv":
+        writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+        writer.writerow(
+            ("file", "offset", "speaker", "attribution", "default_name", "mode", "japanese")
+        )
+
+    for source in sources:
+        gm = GMFile.from_file(source)
+        for item in gm.attributed_text_records():
+            if args.attributed_only and item.speaker is None:
+                continue
+            if args.unresolved_only and item.speaker is not None:
+                continue
+            record = item.record
+            speaker = item.speaker.id if item.speaker else ""
+            attribution = item.speaker.source if item.speaker else "unresolved"
+            default_name = item.speaker.default_name if item.speaker else ""
+            text_value = record.text if record.text is not None else record.payload.hex()
+            if args.format == "tsv":
+                assert writer is not None
+                writer.writerow(
+                    (
+                        source,
+                        f"0x{record.offset:04x}",
+                        speaker,
+                        attribution,
+                        default_name,
+                        record.mode,
+                        _tsv_text(text_value),
+                    )
+                )
+            elif args.format == "jsonl":
+                print(
+                    json.dumps(
+                        {
+                            "file": str(source),
+                            "offset": record.offset,
+                            "speaker": speaker or None,
+                            "attribution": attribution,
+                            "default_name": default_name or None,
+                            "mode": record.mode,
+                            "japanese": record.text,
+                            "payload_hex": None if record.text is not None else record.payload.hex(),
+                        },
+                        ensure_ascii=False,
+                    )
+                )
+            else:
+                label = f" default={json.dumps(default_name, ensure_ascii=False)}" if default_name else ""
+                payload = (
+                    f"text={json.dumps(record.text, ensure_ascii=False)}"
+                    if record.text is not None
+                    else f"hex={record.payload.hex()}"
+                )
+                print(
+                    f"{source}:0x{record.offset:04x} speaker="
+                    f"{json.dumps(speaker, ensure_ascii=False)} "
+                    f"attribution={attribution}{label} {payload}"
+                )
+
+
 def _gm_script(args: argparse.Namespace) -> None:
     files = collect_mes_files(args.source)
     if not files:
@@ -682,9 +782,13 @@ def _translation_check(args: argparse.Namespace) -> None:
     )
     if args.verbose:
         for entry in catalog.entries:
-            print(f"{entry.id}: anchors={len(entry.anchors)} {entry.status}")
+            print(
+                f"{entry.id}: anchors={len(entry.anchors)} speaker={entry.speaker} "
+                f"status={entry.status}"
+            )
             for anchor in entry.anchors:
                 print(f"  anchor: {anchor.file}:0x{anchor.offset:04x}")
+            print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
             if entry.box_width is not None:
@@ -692,6 +796,59 @@ def _translation_check(args: argparse.Namespace) -> None:
                     print(f"  line {number}/{entry.box_width}: {line}")
             for line in entry.notes.splitlines():
                 print(f"  note: {line}")
+
+
+def _translation_table(args: argparse.Namespace) -> None:
+    catalog = TranslationCatalog.from_file(args.catalog)
+    if args.source_dir:
+        catalog.verify_sources(args.source_dir)
+
+    columns = (
+        "id",
+        "file",
+        "offset",
+        "speaker",
+        "jp",
+        "en",
+        "context",
+        "status",
+    )
+    if args.format == "tsv":
+        writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+        writer.writerow(columns)
+        for entry in catalog.entries:
+            for anchor in entry.anchors:
+                writer.writerow(
+                    (
+                        entry.id,
+                        anchor.file,
+                        f"0x{anchor.offset:04x}",
+                        entry.speaker,
+                        _tsv_text(entry.source),
+                        _tsv_text(entry.translation),
+                        _tsv_text(entry.context),
+                        entry.status,
+                    )
+                )
+        return
+
+    for entry in catalog.entries:
+        for anchor in entry.anchors:
+            print(
+                json.dumps(
+                    {
+                        "id": entry.id,
+                        "file": anchor.file,
+                        "offset": anchor.offset,
+                        "speaker": entry.speaker,
+                        "jp": entry.source,
+                        "en": entry.translation,
+                        "context": entry.context,
+                        "status": entry.status,
+                    },
+                    ensure_ascii=False,
+                )
+            )
 
 
 def _translation_build(args: argparse.Namespace) -> None:

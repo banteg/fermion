@@ -49,6 +49,8 @@ class TranslationEntry:
     target_mode: int
     source: str
     translation: str
+    speaker: str
+    context: str
     status: str
     notes: str
     box_width: int | None = None
@@ -85,8 +87,8 @@ class TranslationCatalog:
         except (OSError, UnicodeError, tomllib.TOMLDecodeError) as error:
             raise TranslationError(f"cannot read translation catalog {path}: {error}") from error
 
-        if data.get("version") != 3:
-            raise TranslationError("translation catalog version must be 3")
+        if data.get("version") != 4:
+            raise TranslationError("translation catalog version must be 4")
         game = _string(data, "game")
         raw_files = data.get("files")
         raw_entries = data.get("entries")
@@ -103,6 +105,7 @@ class TranslationCatalog:
     def verify_sources(self, directory: Path) -> None:
         """Verify file hashes and every entry's original offset, mode, and text."""
         by_name: dict[str, GMFile] = {}
+        speakers_by_name: dict[str, dict[int, str | None]] = {}
         for file in self.files:
             source = directory.joinpath(*PurePosixPath(file.source).parts)
             if not source.is_file():
@@ -117,6 +120,10 @@ class TranslationCatalog:
                 by_name[file.file] = GMFile.from_bytes(data)
             except GMError as error:
                 raise TranslationError(f"{file.file}: {error}") from error
+            speakers_by_name[file.file] = {
+                item.record.offset: item.speaker.id if item.speaker else None
+                for item in by_name[file.file].attributed_text_records()
+            }
 
         for entry in self.entries:
             for anchor in entry.anchors:
@@ -134,6 +141,12 @@ class TranslationCatalog:
                     )
                 if record.text != entry.source:
                     raise TranslationError(f"{entry.id}: source text changed at {location}")
+                encoded_speaker = speakers_by_name[anchor.file].get(anchor.offset)
+                if encoded_speaker is not None and encoded_speaker != entry.speaker:
+                    raise TranslationError(
+                        f"{entry.id}: encoded speaker at {location} is "
+                        f"{encoded_speaker!r}, catalog has {entry.speaker!r}"
+                    )
 
     @property
     def anchor_count(self) -> int:
@@ -409,6 +422,8 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         target_mode=target_mode,
         source=_string(value, "source", context=context),
         translation=_string(value, "translation", context=context),
+        speaker=_string(value, "speaker", context=context),
+        context=_string(value, "context", context=context),
         status=_string(value, "status", context=context),
         notes=_string(value, "notes", context=context),
         box_width=box_width_value,

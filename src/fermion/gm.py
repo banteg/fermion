@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import struct
 from dataclasses import dataclass
 from pathlib import Path
@@ -47,6 +48,19 @@ class GMText:
     @property
     def ascii_text(self) -> str | None:
         return self.text if self.mode == 2 else None
+
+
+@dataclass(frozen=True)
+class GMSpeaker:
+    id: str
+    source: str
+    default_name: str | None = None
+
+
+@dataclass(frozen=True)
+class GMAttributedText:
+    record: GMText
+    speaker: GMSpeaker | None
 
 
 @dataclass(frozen=True)
@@ -125,6 +139,84 @@ class GMFile:
             for instruction in self.audit().instructions
             if instruction.opcode == 0x4A
         )
+
+    def attributed_text_records(self) -> tuple[GMAttributedText, ...]:
+        """Attach only speaker identities encoded in the rendered text stream."""
+        instructions = self.audit().instructions
+        records = {record.offset: record for record in self.text_records()}
+        attributed: list[GMAttributedText] = []
+        active_speaker: GMSpeaker | None = None
+
+        for index, instruction in enumerate(instructions):
+            if instruction.opcode in {0x00, 0x50}:
+                active_speaker = None
+                continue
+            record = records.get(instruction.offset)
+            if record is None:
+                continue
+
+            speaker = _inline_speaker(record.text)
+            if speaker is None:
+                speaker = _dynamic_speaker(self.data, instructions, records, index)
+            if speaker is not None:
+                active_speaker = speaker
+            attributed.append(GMAttributedText(record, speaker or active_speaker))
+
+        return tuple(attributed)
+
+
+_INLINE_SPEAKER = re.compile(r"^【([^】]+)】")
+
+_NAME_SLOT_SPEAKERS = {
+    0x03E8: GMSpeaker("name-slot:mother", "name-slot", "由貴"),
+    0x03F6: GMSpeaker("name-slot:older-sister", "name-slot", "瑠璃"),
+    0x0404: GMSpeaker("name-slot:dear-person", "name-slot", "加奈子"),
+    0x0412: GMSpeaker("name-slot:friend-1", "name-slot", "陽子"),
+    0x0420: GMSpeaker("name-slot:friend-2", "name-slot", "弘子"),
+}
+
+
+def _inline_speaker(text: str | None) -> GMSpeaker | None:
+    if text is None:
+        return None
+    match = _INLINE_SPEAKER.match(text)
+    if match is None:
+        return None
+    speaker = match.group(1)
+    return GMSpeaker(speaker, "inline-label", speaker)
+
+
+def _dynamic_speaker(
+    data: bytes,
+    instructions: tuple[GMInstruction, ...],
+    records: dict[int, GMText],
+    index: int,
+) -> GMSpeaker | None:
+    """Recognize Fermion's rendered `【<custom name>】` prefix sequence."""
+    record = records[instructions[index].offset]
+    if record.text is None or not record.text.startswith("【") or "】" in record.text:
+        return None
+    if index + 3 >= len(instructions):
+        return None
+    copy, render, suffix = instructions[index + 1 : index + 4]
+    if (copy.opcode, render.opcode, suffix.opcode) != (0x45, 0x4B, 0x4A):
+        return None
+
+    copy_data = data[copy.offset : copy.end]
+    render_data = data[render.offset : render.end]
+    suffix_record = records.get(suffix.offset)
+    if (
+        len(copy_data) != 9
+        or copy_data[:6] != b"\x45\x0e\xe0\x00\xff\x0c"
+        or copy_data[8] != 0
+        or render_data != b"\x4b\x0e\xe0\x00\x00\x00"
+        or suffix_record is None
+        or suffix_record.text is None
+        or not suffix_record.text.startswith("】")
+    ):
+        return None
+    slot = int.from_bytes(copy_data[6:8], "little")
+    return _NAME_SLOT_SPEAKERS.get(slot)
 
 
 def _decode_text(mode: int, payload: bytes, dictionary: tuple[bytes, ...]) -> str | None:

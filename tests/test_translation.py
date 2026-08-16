@@ -18,7 +18,7 @@ from fermion.translation import (
 def write_catalog(tmp_path, source_hash: str, *, translation: str = "Hello world"):
     catalog = tmp_path / "catalog.toml"
     catalog.write_text(
-        f'''version = 3
+        f'''version = 4
 game = "Test"
 
 [[files]]
@@ -34,6 +34,8 @@ source_mode = 2
 target_mode = 2
 source = "Original"
 translation = "{translation}"
+speaker = "narrator"
+context = "Synthetic scene."
 status = "draft"
 box_width = 8
 notes = "A useful note."
@@ -55,6 +57,7 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
     [entry] = catalog.entries
     assert entry.wrapped_translation == ("Hello", "world")
     assert entry.notes == "A useful note."
+    assert (entry.speaker, entry.context) == ("narrator", "Synthetic scene.")
     assert entry.anchors == (TranslationAnchor("DISKA/SCENE.MES", 2),)
     [catalog_file] = catalog.files
     assert (catalog_file.archive, catalog_file.name) == ("DISKA", "SCENE.MES")
@@ -68,6 +71,41 @@ def test_rejects_changed_source_anchor(tmp_path) -> None:
     catalog_path = write_catalog(tmp_path, hashlib.sha256(source).hexdigest())
 
     with pytest.raises(TranslationError, match="source text changed"):
+        TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
+
+
+def test_rejects_catalog_speaker_conflicting_with_encoded_label(tmp_path) -> None:
+    japanese = "【コニー】「はい。」"
+    source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = tmp_path / "catalog.toml"
+    catalog_path.write_text(
+        f'''version = 4
+game = "Test"
+
+[[files]]
+file = "DISKA/SCENE.MES"
+source = "disk-a/SCENE.MES"
+sha256 = "{hashlib.sha256(source).hexdigest()}"
+
+[[entries]]
+id = "wrong-speaker"
+file = "DISKA/SCENE.MES"
+offset = 0x0002
+source_mode = 1
+target_mode = 2
+source = "{japanese}"
+translation = "[CONNIE] Yes."
+speaker = "神崎"
+context = "Synthetic dialogue."
+status = "draft"
+notes = "Must agree with an encoded label."
+'''
+    )
+
+    with pytest.raises(TranslationError, match="encoded speaker"):
         TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
 
 
@@ -106,6 +144,8 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
         target_mode=2,
         source="Original",
         translation='He said "hello"',
+        speaker="narrator",
+        context="Synthetic scene.",
         status="draft",
         notes="Test",
     )
@@ -131,7 +171,7 @@ def test_one_canonical_entry_can_cover_several_physical_anchors(tmp_path) -> Non
     (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
     catalog_path = tmp_path / "catalog.toml"
     catalog_path.write_text(
-        f'''version = 3
+        f'''version = 4
 game = "Test"
 
 [[files]]
@@ -149,6 +189,8 @@ source_mode = 2
 target_mode = 2
 source = "Repeated"
 translation = "Shared"
+speaker = "narrator"
+context = "Synthetic repeated line."
 status = "draft"
 notes = "One canonical translation in two contexts."
 '''

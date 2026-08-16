@@ -11,6 +11,7 @@ Each `[[files]]` table identifies one pristine MES file by its logical
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
 - the exact original Japanese and current English translation;
+- an explicit stable `speaker` and short scene `context`;
 - the target encoding mode and optional dialogue-box width;
 - a progress `status` and free-form translator `notes`.
 
@@ -33,12 +34,42 @@ anchors = [
 source_mode = 1
 source = "同じ文"
 translation = "The same line"
+speaker = "narrator"
+context = "The same narration in two equivalent control-flow branches."
+status = "draft"
+notes = "Keep the wording synchronized across both anchors."
 ```
 
 This keeps the English and translator notes in one place while applying them to
 every physical copy. Identical Japanese may still use separate entries when the
 surrounding scene genuinely requires different English; that contextual split
 is explicit and visible to the coverage report.
+
+Catalog schema 4 makes speaker and context mandatory. Source verification
+checks speaker identities that GM encodes directly:
+
+- a literal `【name】` prefix uses that exact name;
+- a dynamic bracket/name/bracket sequence uses one of the stable
+  `name-slot:mother`, `name-slot:older-sister`, `name-slot:dear-person`,
+  `name-slot:friend-1`, or `name-slot:friend-2` roles;
+- text with neither form remains contextual and may receive a documented human
+  attribution such as `prologue-doctor`.
+
+Do not infer a speaker from `「…」` versus `『…』`. The opening alternates those
+styles without any speaker-state opcode. The full evidence and corpus totals
+are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribution.md).
+
+For holistic plot review or LLM-assisted translator notes, generate the compact
+speaker-annotated corpus under the ignored working directory:
+
+```sh
+uv run fermion gm script working/archives > working/script.md
+```
+
+This removes byte-identical MES copies, keeps each source offset, escapes
+embedded newlines, and labels only speakers proven by the bytecode. It is a
+review artifact; canonical English, context, status, and notes still belong in
+`fermion.toml`.
 
 The current statuses are:
 
@@ -100,6 +131,19 @@ uv run fermion translation check translations/fermion.toml \
   --source-dir working/archives \
   --verbose
 ```
+
+Export the reviewable translator table after source verification:
+
+```sh
+uv run fermion translation table translations/fermion.toml \
+  --source-dir working/archives \
+  > working/translation-table.tsv
+```
+
+The TSV columns are `id`, `file`, `offset`, `speaker`, `jp`, `en`, `context`,
+and `status`. It expands canonical multi-anchor entries to one physical row but
+does not duplicate their English or notes in the source catalog. Use
+`--format jsonl` when a structured stream is more convenient.
 
 For an incremental batch:
 

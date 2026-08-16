@@ -25,15 +25,17 @@ def collect_mes_files(source: Path) -> list[Path]:
     return unique
 
 
-def script_lines(path: Path) -> list[tuple[int, str]]:
-    """Return (offset, text) pairs in stream order, skipping non-dialogue records."""
+def script_lines(path: Path) -> list[tuple[int, str | None, str]]:
+    """Return compact attributed mode-1 lines in stream order."""
     gm = GMFile.from_file(path)
     lines = []
-    for record in gm.text_records():
+    for item in gm.attributed_text_records():
+        record = item.record
         if record.mode != 1 or record.text is None or not record.text.strip():
             continue
         escaped = record.text.replace("\\", "\\\\").replace("\n", "\\n")
-        lines.append((record.offset, escaped))
+        speaker = item.speaker.id if item.speaker else None
+        lines.append((record.offset, speaker, escaped))
     return lines
 
 
@@ -46,7 +48,10 @@ def render_script(files: list[Path]) -> str:
         lines = script_lines(path)
         total += len(lines)
         chunks.append(f"## {stem}")
-        chunks.extend(f"[{stem}:{offset:04x}] {text}" for offset, text in lines)
+        chunks.extend(
+            f"[{stem}:{offset:04x}{f' speaker={speaker}' if speaker else ''}] {text}"
+            for offset, speaker, text in lines
+        )
         chunks.append("")
     total_files = len(files)
     header = [

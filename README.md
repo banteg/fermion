@@ -52,6 +52,29 @@ uv run fermion gm texts working/installed --mode 2
 uv run fermion gm texts working/installed --contains '見ない方'
 ```
 
+Recover speaker identities that are encoded in the GM render stream, or list
+the records that still require scene context:
+
+```sh
+uv run fermion gm speakers working/archives --attributed-only
+uv run fermion gm speakers working/archives/disk-a/FOP.MES \
+  --unresolved-only \
+  --format tsv
+```
+
+The command recognizes literal `【name】` labels and the exact `0x45`/`0x4b`
+sequence used for the five customizable name slots. It deliberately does not
+infer speakers from Japanese quote styles. A compact, speaker-annotated,
+content-deduplicated mode-1 corpus dump is also available for offline review:
+
+```sh
+uv run fermion gm script working/archives > working/script.md
+```
+
+See [`research/gm-speaker-attribution.md`](research/gm-speaker-attribution.md)
+for the recovered bytecode rule, slot roles, native-handler evidence, and
+corpus accounting.
+
 For a same-sized renderer probe, replace one unique compiled MES blob in a
 copied hard-disk image without touching the input image:
 
@@ -65,8 +88,8 @@ uv run fermion binary replace-exact \
 The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
-translation, encoding modes, status, wrapping width, and free-form translator
-notes.
+translation, speaker, scene context, encoding modes, status, wrapping width,
+and free-form translator notes.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 
@@ -79,6 +102,19 @@ uv run fermion translation check translations/fermion.toml \
   --source-dir working/archives \
   --verbose
 ```
+
+Export the catalog in the original translator-table shape. One physical anchor
+is emitted per row while canonical duplicates retain one shared catalog entry:
+
+```sh
+uv run fermion translation table translations/fermion.toml \
+  --source-dir working/archives \
+  > working/translation-table.tsv
+```
+
+The columns are `id`, `file`, `offset`, `speaker`, `jp`, `en`, `context`, and
+`status`. Embedded newlines are escaped so the TSV remains one row per anchor;
+`--format jsonl` is available for programmatic use.
 
 The verbose view includes a word-wrapped preview for dialogue entries. See
 [`translations/README.md`](translations/README.md) for the entry conventions

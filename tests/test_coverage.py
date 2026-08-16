@@ -31,7 +31,7 @@ def write_fixture(tmp_path, *, translate_both: bool = False):
     )
     catalog_path = tmp_path / "catalog.toml"
     catalog_path.write_text(
-        f'''version = 3
+        f'''version = 4
 game = "Test"
 
 [[files]]
@@ -46,6 +46,8 @@ source_mode = 2
 target_mode = 2
 source = "Repeated"
 translation = "Shared"
+speaker = "narrator"
+context = "Synthetic repeated line."
 status = "draft"
 notes = "Canonical duplicate."
 '''

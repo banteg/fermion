@@ -17,7 +17,15 @@ def test_script_lines_skip_empty_and_mode_two_records(tmp_path: Path) -> None:
                 dictionary=b"\x82\xa0\x82\xa2")
     )
 
-    assert script_lines(path) == [(2 + 4, "あ\\nい")]
+    assert script_lines(path) == [(2 + 4, None, "あ\\nい")]
+
+
+def test_script_lines_include_encoded_speaker(tmp_path: Path) -> None:
+    path = tmp_path / "F0001.MES"
+    text = "【コニー】「はい。」".encode("cp932")
+    path.write_bytes(gm_file(b"\x4a\x01" + text + b"\x00\x50\x00"))
+
+    assert script_lines(path) == [(2, "コニー", "【コニー】「はい。」")]
 
 
 def test_render_script_anchors_offsets_in_stream_order(tmp_path: Path) -> None:

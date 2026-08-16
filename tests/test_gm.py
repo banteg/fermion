@@ -11,6 +11,10 @@ def gm_file(code: bytes, dictionary: bytes = b"") -> bytes:
     return struct.pack("<H", 2 + len(dictionary)) + dictionary + code
 
 
+def gm_text(text: str) -> bytes:
+    return b"\x4a\x01" + text.encode("cp932") + b"\x00"
+
+
 def test_rejects_invalid_container() -> None:
     with pytest.raises(GMError, match="too small"):
         GMFile.from_bytes(b"")
@@ -73,6 +77,82 @@ def test_mode_one_text_decodes_pc98_box_drawing_dictionary_entries() -> None:
     ).text_records()[0]
 
     assert record.text == "─"
+
+
+def test_attributes_literal_speaker_label() -> None:
+    gm = GMFile.from_bytes(gm_file(gm_text("【コニー】「はい。」") + b"\x50\x00"))
+
+    [attributed] = gm.attributed_text_records()
+
+    assert attributed.record.text == "【コニー】「はい。」"
+    assert attributed.speaker is not None
+    assert (
+        attributed.speaker.id,
+        attributed.speaker.source,
+        attributed.speaker.default_name,
+    ) == ("コニー", "inline-label", "コニー")
+
+
+@pytest.mark.parametrize(
+    ("slot", "speaker", "default_name"),
+    [
+        (0x03E8, "name-slot:mother", "由貴"),
+        (0x03F6, "name-slot:older-sister", "瑠璃"),
+        (0x0404, "name-slot:dear-person", "加奈子"),
+        (0x0412, "name-slot:friend-1", "陽子"),
+        (0x0420, "name-slot:friend-2", "弘子"),
+    ],
+)
+def test_attributes_customizable_speaker_render_sequence(
+    slot: int, speaker: str, default_name: str
+) -> None:
+    copy_name = b"\x45\x0e\xe0\x00\xff\x0c" + struct.pack("<H", slot) + b"\x00"
+    render_name = b"\x4b\x0e\xe0\x00\x00\x00"
+    gm = GMFile.from_bytes(
+        gm_file(
+            gm_text("【")
+            + copy_name
+            + render_name
+            + gm_text("】「はい。」")
+            + b"\x50\x00"
+        )
+    )
+
+    attributed = gm.attributed_text_records()
+
+    assert [item.record.text for item in attributed] == ["【", "】「はい。」"]
+    assert [item.speaker.id if item.speaker else None for item in attributed] == [
+        speaker,
+        speaker,
+    ]
+    assert attributed[0].speaker is not None
+    assert attributed[0].speaker.source == "name-slot"
+    assert attributed[0].speaker.default_name == default_name
+
+
+def test_does_not_guess_speaker_from_quote_style_or_previous_message() -> None:
+    gm = GMFile.from_bytes(
+        gm_file(
+            gm_text("【医師】「こちらです。」")
+            + b"\x50\x00"
+            + gm_text("『わかりました。』")
+            + b"\x50\x00"
+        )
+    )
+
+    attributed = gm.attributed_text_records()
+
+    assert attributed[0].speaker is not None
+    assert attributed[0].speaker.id == "医師"
+    assert attributed[1].speaker is None
+
+
+def test_does_not_attribute_partial_bracket_without_exact_name_sequence() -> None:
+    gm = GMFile.from_bytes(
+        gm_file(gm_text("【") + gm_text("】「はい。」") + b"\x50\x00")
+    )
+
+    assert [item.speaker for item in gm.attributed_text_records()] == [None, None]
 
 
 def test_walks_opcode_44_inline_data_to_its_skip_target() -> None:
