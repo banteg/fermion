@@ -26,12 +26,14 @@ def write_catalog(
     translation: str = "Hello world",
     file_box_width: int | None = None,
     entry_box_width: int | None = 8,
+    notes: str | None = "A useful note.",
 ):
     catalog = tmp_path / "catalog.toml"
     file_width = f"box_width = {file_box_width}\n" if file_box_width is not None else ""
     entry_width = (
         f"box_width = {entry_box_width}\n" if entry_box_width is not None else ""
     )
+    entry_notes = f'notes = "{notes}"\n' if notes is not None else ""
     catalog.write_text(
         f'''version = 4
 game = "Test"
@@ -53,7 +55,7 @@ translation = "{translation}"
 speaker = "narrator"
 context = "Synthetic scene."
 status = "draft"
-{entry_width}notes = "A useful note."
+{entry_width}{entry_notes}
 '''
     )
     return catalog
@@ -76,6 +78,17 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
     assert entry.anchors == (TranslationAnchor("DISKA/SCENE.MES", 2),)
     [catalog_file] = catalog.files
     assert (catalog_file.archive, catalog_file.name) == ("DISKA", "SCENE.MES")
+
+
+def test_notes_may_be_omitted_from_simple_entry(tmp_path) -> None:
+    source = struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00"
+    catalog_path = write_catalog(
+        tmp_path, hashlib.sha256(source).hexdigest(), notes=None
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+
+    assert catalog.entries[0].notes == ""
 
 
 def test_file_width_is_the_compile_default(tmp_path) -> None:
@@ -254,7 +267,6 @@ translation = "Hi ⟦name:dear-person⟧!"
 speaker = "narrator"
 context = "Synthetic composite greeting."
 status = "draft"
-notes = "The token bytecode remains immutable."
 
 [[composites.occurrences]]
 file = "DISKA/SCENE.MES"
@@ -271,6 +283,7 @@ segments = [
 
     assert (catalog.entry_count, catalog.anchor_count) == (1, 2)
     assert catalog.composites[0].translation == "Hi ⟦name:dear-person⟧!"
+    assert catalog.composites[0].notes == ""
     physical = catalog.physical_translations(compiled=True)
     assert [(item.anchor.offset, item.translation) for item in physical] == [
         (2, "Hi\n"),

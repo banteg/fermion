@@ -734,6 +734,19 @@ def _string(table: dict[str, object], key: str, *, context: str = "catalog") -> 
     return value
 
 
+def _optional_string(
+    table: dict[str, object], key: str, *, context: str = "catalog"
+) -> str:
+    value = table.get(key)
+    if value is None:
+        return ""
+    if not isinstance(value, str) or not value:
+        raise TranslationError(
+            f"{context}.{key} must be omitted or a non-empty string"
+        )
+    return value
+
+
 def _integer(table: dict[str, object], key: str, *, context: str) -> int:
     value = table.get(key)
     if not isinstance(value, int) or isinstance(value, bool):
@@ -849,7 +862,7 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
         speaker=_string(value, "speaker", context=context),
         context=_string(value, "context", context=context),
         status=_string(value, "status", context=context),
-        notes=_string(value, "notes", context=context),
+        notes=_optional_string(value, "notes", context=context),
         box_width=box_width_value,
     )
     for field, text in (("source", entry.source), ("translation", entry.translation)):
@@ -955,7 +968,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         speaker=_string(value, "speaker", context=context),
         context=_string(value, "context", context=context),
         status=_string(value, "status", context=context),
-        notes=_string(value, "notes", context=context),
+        notes=_optional_string(value, "notes", context=context),
         box_width=box_width_value,
     )
     if "\x00" in entry.translation:

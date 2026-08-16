@@ -14,12 +14,14 @@ default dialogue `box_width`. Schema 5 retains schema-4 simple records; each
 - the exact original Japanese and current English translation;
 - an explicit stable `speaker` and short scene `context`;
 - the target encoding mode and optional per-entry dialogue-box-width override;
-- a progress `status` and free-form translator `notes`.
+- a progress `status` and optional free-form translator `notes`.
 
 Offsets always refer to the pristine file named by the enclosing catalog, not a
-rebuilt or relocated MES. Notes should retain useful alternatives, speaker and
-scene context, tone decisions, technical compromises, and anything worth
-revisiting. Do not erase an unresolved nuance merely because the current probe
+rebuilt or relocated MES. `notes` are for line-specific alternatives,
+ambiguities, tone decisions, technical compromises, and anything worth
+revisiting. Omit them when the speaker/context fields and the checked-in voice
+brief fully explain the translation; do not repeat a slice-wide voice policy on
+every line. Do not erase an unresolved nuance merely because the current probe
 uses shorter wording.
 
 Draft canonical English by reading the Japanese in scene context and applying
@@ -283,7 +285,8 @@ does not duplicate their English or notes in the source catalog. Use
 For an incremental batch:
 
 1. Add or revise catalog entries while preserving stable IDs.
-2. Record translation alternatives and uncertainties in `notes`.
+2. Record line-specific translation alternatives and uncertainties in `notes`;
+   omit routine voice-policy boilerplate.
 3. Validate against the pristine sources.
 4. Build a fresh image from the pristine copy:
 

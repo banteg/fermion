@@ -7433,6 +7433,11 @@ status = "qa-ready"
 notes = "Landscape of time' preserves the source's poetic 時間という景色."
 
 # F0003: Connie's first encounter with Kanako, through the F0004 handoff.
+# Slice voice policy: Connie's narration stays first-person, direct, warm, and
+# lightly cocky; ornamental pauses may be compressed without flattening scene
+# beats. Kanako remains gentle, earnest, and recognizably young without baby
+# talk. Per-record notes below are reserved for departures, ambiguities, and
+# other line-specific decisions.
 
 [[entries]]
 id = "f0003-04bb-line"
@@ -7445,7 +7450,6 @@ translation = "..."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-04f5-my-chilled-body-begins-to-warm"
@@ -7458,7 +7462,6 @@ translation = "My chilled body begins to warm."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0508-connie-warm"
@@ -7471,7 +7474,6 @@ translation = "[CONNIE] (Warm...)"
 speaker = "コニー"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0523-girl-are-you-okay-kitty"
@@ -7484,7 +7486,6 @@ translation = "[GIRL] \"...Are you okay, kitty...?\""
 speaker = "女の子"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-0542-i-hear-a-voice-its-pronunciation"
@@ -7497,7 +7498,6 @@ translation = "I hear a voice. Its pronunciation is clear."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-055b-warmth-seeps-into-my-body-the"
@@ -7510,7 +7510,6 @@ translation = "Warmth seeps into my body. The rain sounds far away."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0574-connie-am-i-inside-a-room"
@@ -7523,7 +7522,6 @@ translation = "[CONNIE] (...Am I inside a room somewhere...?)"
 speaker = "コニー"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0595-a-blanket-covers-my-body-it"
@@ -7536,7 +7534,6 @@ translation = "A blanket covers my body. It must be what's keeping me warm."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-05bc-when-i-stir-beneath-it-i"
@@ -7549,7 +7546,6 @@ translation = "When I stir beneath it, I hear the girl's delighted voice."
 speaker = "Connie"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-05e2-girl-oh-it-moved-it-moved"
@@ -7562,7 +7558,6 @@ translation = "[GIRL] \"Oh! It moved! It moved!\""
 speaker = "女の子"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-05f8-connie-it-moved-how-rude"
@@ -7575,7 +7570,6 @@ translation = "[CONNIE] (...It moved? How rude...)"
 speaker = "コニー"
 context = "Connie regains consciousness in Kanako's room after the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0643-look"
@@ -7627,7 +7621,6 @@ translation = "Bright light dazzles me when I open my eyes."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-06e3-girl-too-bright-sorry"
@@ -7640,7 +7633,6 @@ translation = "[GIRL] \"Too bright? Sorry!\""
 speaker = "女の子"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-06fb-the-light-grows-dimmer"
@@ -7653,7 +7645,6 @@ translation = "The light grows dimmer."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0723-i-look-around-i-m-lying"
@@ -7666,7 +7657,6 @@ translation = "I look around. I'm lying on a bed in what seems to be someone's r
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-074d-there-s-a-window-rain-is"
@@ -7679,7 +7669,6 @@ translation = "There's a window. Rain is falling outside."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0769-i-feel-eyes-on-me-without"
@@ -7692,7 +7681,6 @@ translation = "I feel eyes on me. Without moving my head, I look up and find a h
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0879-she-is-leaning-over-me-with"
@@ -7705,7 +7693,6 @@ translation = "...She is leaning over me with a cheerful smile."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-089b-the-girl-watches-me-with-kind"
@@ -7718,7 +7705,6 @@ translation = "The girl watches me with kind eyes."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-08b3-connie-a-child"
@@ -7731,7 +7717,6 @@ translation = "[CONNIE] (...A child...)"
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-08d2-she-gives-me-a-bright-smile"
@@ -7744,7 +7729,6 @@ translation = "She gives me a bright smile."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-08e0-i-almost-smile-back-in-spite"
@@ -7757,7 +7741,6 @@ translation = "I almost smile back in spite of myself."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-08fa-connie-whoa-hold-it"
@@ -7770,7 +7753,6 @@ translation = "[CONNIE] (Whoa, hold it...)"
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0914-smiling-would-be-a-bad-idea"
@@ -7783,7 +7765,6 @@ translation = "Smiling would be a bad idea while I'm transformed."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-092b-i-keep-my-face-blank-and"
@@ -7796,7 +7777,6 @@ translation = "I keep my face blank and stare back at the girl."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0963-the-girl-smiles-gently-though-there"
@@ -7809,7 +7789,6 @@ translation = "The girl smiles gently, though there is loneliness in it."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-098a-for-someone-who-says-she-saw"
@@ -7822,7 +7801,6 @@ translation = "For someone who says she saw a strange machine, she speaks with s
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-09ad-connie-maybe-strange-things-don-t"
@@ -7835,7 +7813,6 @@ translation = "[CONNIE] (...Maybe strange things don't faze her anymore.)"
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-09dd-once-i-finish-the-soup-with"
@@ -7848,7 +7825,6 @@ translation = "Once I finish the soup with obvious relish, the girl beams with d
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0a09-connie-she-s-adorable"
@@ -7861,7 +7837,6 @@ translation = "[CONNIE] (...She's adorable.)"
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0a27-she-seems-like-the-kind-of"
@@ -7874,7 +7849,6 @@ translation = "She seems like the kind of sweet girl you can't help wanting to p
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0a53-connie-kids-this-age-are-never-boring"
@@ -7900,7 +7874,6 @@ translation = "She's someone I want to protect."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0a87-that-s-what-i-find-myself"
@@ -7913,7 +7886,6 @@ translation = "That's what I find myself thinking."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0a9a-the-girl-s-eyes-go-wide"
@@ -7926,7 +7898,6 @@ translation = "The girl's eyes go wide."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0aad-but-she-doesn-t-scream"
@@ -7939,7 +7910,6 @@ translation = "But she doesn't scream."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0ac5-connie-maybe-she-s-more-level-headed"
@@ -7965,7 +7935,6 @@ translation = "Or perhaps she's simply too shocked to make a sound..."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0b0e-the-girl-blinks-rapidly-and-stares"
@@ -7978,7 +7947,6 @@ translation = "The girl blinks rapidly and stares at me."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0b3e-she-keeps-staring-long-and-hard"
@@ -7991,7 +7959,6 @@ translation = "She keeps staring, long and hard."
 speaker = "Connie"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0b8a-connie-miss-just-call-me-connie"
@@ -8004,7 +7971,6 @@ translation = "[CONNIE] \"Miss...? Just call me Connie.\""
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0ba7-girl-then-miss-connie"
@@ -8017,7 +7983,6 @@ translation = "[GIRL] \"Then... Miss Connie...\""
 speaker = "女の子"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-0bc1-connie-drop-the-miss"
@@ -8030,7 +7995,6 @@ translation = "[CONNIE] \"Drop the 'Miss.'\""
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0bd5-girl-um-then-big-sis-connie"
@@ -8056,7 +8020,6 @@ translation = "[CONNIE] \"(Twitch.) Fine... What's your name?\""
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0caf-connie-all-right"
@@ -8069,7 +8032,6 @@ translation = "[CONNIE] \"All right.\""
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0d49-connie-maybe-she-s-jealous-because"
@@ -8082,7 +8044,6 @@ translation = "[CONNIE] (Maybe she's jealous because I'm healthy...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0d8f-connie-where-am-i"
@@ -8095,7 +8056,6 @@ translation = "[CONNIE] (Where am I...?)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0da8-my-body-seems-wrapped-in-something"
@@ -8108,7 +8068,6 @@ translation = "My body seems wrapped in something soft and fluffy."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0dd0-there-s-something-ephemeral-almost-fragile"
@@ -8134,7 +8093,6 @@ translation = "Or am I imagining that too?"
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0e04-through-the-blanket-the-girl-gently"
@@ -8147,7 +8105,6 @@ translation = "Through the blanket, the girl gently strokes my back."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0e29-even-her-kindness-feels-as-though"
@@ -8160,7 +8117,6 @@ translation = "Even her kindness feels as though it might fade away."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0e51-connie-what-is-this"
@@ -8173,7 +8129,6 @@ translation = "[CONNIE] (What is this...?)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0e6a-it-smells-like-soup"
@@ -8186,7 +8141,6 @@ translation = "It smells like soup."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0e7a-at-some-point-my-headache-has"
@@ -8199,7 +8153,6 @@ translation = "At some point my headache has faded, and I'm beginning to feel hu
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0eab-connie-surely-she-didn-t-poison"
@@ -8212,7 +8165,6 @@ translation = "[CONNIE] (Surely she didn't poison it...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0eca-still-it-never-hurts-to-be"
@@ -8225,7 +8177,6 @@ translation = "Still, it never hurts to be cautious."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0ee2-after-all-this-food-isn-t"
@@ -8238,7 +8189,6 @@ translation = "After all, this food isn't from my time."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0efb-food-from-this-era-should-agree"
@@ -8251,7 +8201,6 @@ translation = "Food from this era should agree with me, but I keep away from the
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-0f36-connie-delicious"
@@ -8264,7 +8213,6 @@ translation = "[CONNIE] (Delicious...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0f50-maybe-it-s-because-i-m-so-hungry"
@@ -8303,7 +8251,6 @@ translation = "[CONNIE] (A mutant in this shape could approach a human and win t
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-0ffb-connie-i-don-t-like-the"
@@ -8316,7 +8263,6 @@ translation = "[CONNIE] (...I don't like the idea of approaching them as a pet.)
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1028-connie-besides"
@@ -8329,7 +8275,6 @@ translation = "[CONNIE] (Besides...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-103e-i-have-another-mission-a-request"
@@ -8381,7 +8326,6 @@ translation = "With some nourishment in me, I begin to feel a little stronger."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1109-connie-that-was-good"
@@ -8394,7 +8338,6 @@ translation = "[CONNIE] (That was good...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1123-i-lick-the-dish-clean-and"
@@ -8407,7 +8350,6 @@ translation = "I lick the dish clean and finish every drop of soup."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-114e-connie-still-i-can-t-just"
@@ -8420,7 +8362,6 @@ translation = "[CONNIE] (...Still, I can't just spend my time entertaining a chi
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-116e-but-i-m-curious-precisely-because"
@@ -8433,7 +8374,6 @@ translation = "But I'm curious precisely because she's a human child from this e
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1192-in-my-time-a-mutant-almost"
@@ -8446,7 +8386,6 @@ translation = "In my time, a mutant almost never has the chance to interact with
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-11c1-people-in-my-time-make-sure"
@@ -8459,7 +8398,6 @@ translation = "People in my time make sure their children never go near mutants.
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-11ec-i-can-understand-why-but-it"
@@ -8472,7 +8410,6 @@ translation = "I can understand why, but it still leaves me feeling wretched."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1227-connie-i-want-to-know-more"
@@ -8485,7 +8422,6 @@ translation = "[CONNIE] (I want to know more about her...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1247-i-can-feel-myself-being-drawn"
@@ -8498,7 +8434,6 @@ translation = "I can feel myself being drawn to this girl, little by little."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-126f-connie-i-understand-her"
@@ -8511,7 +8446,6 @@ translation = "[CONNIE] (I understand her...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1287-i-ve-known-the-same-loneliness"
@@ -8537,7 +8471,6 @@ translation = "Am I drawn to her because our personalities are alike?"
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-12fb-connie-i-shouldn-t-get-too"
@@ -8550,7 +8483,6 @@ translation = "[CONNIE] (I shouldn't get too involved, but...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1321-or-because-part-of-me-wants"
@@ -8563,7 +8495,6 @@ translation = "Or because part of me wants to protect her?"
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1340-connie-now-even-i-don-t"
@@ -8576,7 +8507,6 @@ translation = "[CONNIE] (...Now even I don't know anymore...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1373-connie-she-really-does-need-someone"
@@ -8589,7 +8519,6 @@ translation = "[CONNIE] (She really does need someone to cling to...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-138e-it-is-a-simple-guileless-wish"
@@ -8602,7 +8531,6 @@ translation = "It is a simple, guileless wish: she wants someone beside her."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-13b3-connie-maybe-i-should-take-a"
@@ -8628,7 +8556,6 @@ translation = "[CONNIE] (Even if she's lonely by nature, her genes may be strong
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1401-connie-she-said-she-was-frail"
@@ -8641,7 +8568,6 @@ translation = "[CONNIE] (She said she was frail...)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1424-a-frail-body-doesn-t-necessarily"
@@ -8654,7 +8580,6 @@ translation = "A frail body doesn't necessarily mean weak genes."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1442-connie-still-i-d-probably-have"
@@ -8680,7 +8605,6 @@ translation = "In any case."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-14a8-i-have-to-examine-genes-from"
@@ -8693,7 +8617,6 @@ translation = "I have to examine genes from this era."
 speaker = "Connie"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-14c5-connie-pull-yourself-together"
@@ -8706,7 +8629,6 @@ translation = "[CONNIE] (Pull yourself together.)"
 speaker = "コニー"
 context = "Connie weighs Kanako's loneliness against the gene-collection mission."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-14e8-without-thinking-i-close-my-eyes"
@@ -8719,7 +8641,6 @@ translation = "...Without thinking, I close my eyes and concentrate."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1506-girl-huh-kitty-did-you-get"
@@ -8732,7 +8653,6 @@ translation = "[GIRL] \"Huh? Kitty, did you get soap in your eyes?\""
 speaker = "女の子"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-152a-ignoring-the-girl-s-voice-light"
@@ -8745,7 +8665,6 @@ translation = "Ignoring the girl's voice, light flares with a whine and my trans
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-15e2-connie-please-don-t-be-afraid"
@@ -8758,7 +8677,6 @@ translation = "[CONNIE] (...Please don't be afraid...)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1601-that-is-all-i-can-think"
@@ -8771,7 +8689,6 @@ translation = "That is all I can think."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1610-my-ears-shift-upward-and-the"
@@ -8784,7 +8701,6 @@ translation = "My ears shift upward and the fur covering my body grows short."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-166b-connie-will-she-be-all-right"
@@ -8797,7 +8713,6 @@ translation = "[CONNIE] (...Will she be all right...?)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-168c-i-just-hope-she-doesn-t"
@@ -8810,7 +8725,6 @@ translation = "I just hope she doesn't scream..."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-16e1-my-tail-retracts-and-my-ears"
@@ -8823,7 +8737,6 @@ translation = "My tail retracts, and my ears slide down to either side of my hea
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1747-a-soft-weightless-feeling-follows-the"
@@ -8836,7 +8749,6 @@ translation = "A soft, weightless feeling follows the transformation."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-175c-connie-somehow-it-feels-good"
@@ -8849,7 +8761,6 @@ translation = "[CONNIE] (Somehow... it feels good.)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-177b-i-ve-transformed-back-into-human"
@@ -8862,7 +8773,6 @@ translation = "I've transformed back into human form."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-17a9-the-girl-s-eyes-are-round"
@@ -8875,7 +8785,6 @@ translation = "The girl's eyes are round."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-17bb-connie-ah"
@@ -8888,7 +8797,6 @@ translation = "[CONNIE] (Ah...)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-17cf-the-moment-i-decide-i-want"
@@ -8901,7 +8809,6 @@ translation = "The moment I decide I want to speak to her, I find myself transfo
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-17ed-bad-if-she-screams-will-the"
@@ -8914,7 +8821,6 @@ translation = "Bad. If she screams, will the other humans come running?"
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-182e-girl-ah"
@@ -8927,7 +8833,6 @@ translation = "[GIRL] \"...Ah...\""
 speaker = "女の子"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-184b-the-girl-stares-at-me-in"
@@ -8940,7 +8845,6 @@ translation = "The girl stares at me in shock."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1869-the-girl-keeps-staring-at-me"
@@ -8953,7 +8857,6 @@ translation = "The girl keeps staring at me."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-187a-the-shock-in-her-eyes-seems"
@@ -8966,7 +8869,6 @@ translation = "The shock in her eyes seems to give way to fascinated curiosity."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-18a9-i-can-see-excitement-creeping-into"
@@ -8979,7 +8881,6 @@ translation = "I can see excitement creeping into her expression."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-18c8-connie-but-the-loneliness-is-still"
@@ -8992,7 +8893,6 @@ translation = "[CONNIE] (But... the loneliness is still there.)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-18e9-my-revealed-form-surprises-her-only"
@@ -9005,7 +8905,6 @@ translation = "My revealed form surprises her only for a moment."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-190b-the-loneliness-never-leaves-her-face"
@@ -9018,7 +8917,6 @@ translation = "The loneliness never leaves her face."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-192f-connie-good-thing-she-s-a"
@@ -9044,7 +8942,6 @@ translation = "[CONNIE] (If she were older, she'd probably be more suspicious...
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-198c-her-youth-makes-her-trusting"
@@ -9070,7 +8967,6 @@ translation = "[CONNIE] (I'm not trying to deceive her, so it's fine. Right?)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-19ce-i-mutter-as-if-trying-to"
@@ -9083,7 +8979,6 @@ translation = "I mutter as if trying to convince myself."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-19f2-connie-though-we-can-t-exactly"
@@ -9096,7 +8991,6 @@ translation = "[CONNIE] (Though we can't exactly take a bath together every day.
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1a1f-connie-well-we-re-both-girls"
@@ -9109,7 +9003,6 @@ translation = "[CONNIE] (...Well, we're both girls, so I suppose it's fine...)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1a41-i-feel-like-a-big-sister"
@@ -9122,7 +9015,6 @@ translation = "I feel like a big sister protecting her little sister. The though
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1a6c-connie-is-this-how-i-d"
@@ -9135,7 +9027,6 @@ translation = "[CONNIE] (Is this how I'd feel if I had a little sister?)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1a97-the-bathtub-at-dr-kanzaki-s"
@@ -9148,7 +9039,6 @@ translation = "The bathtub at Dr. Kanzaki's house, where I live, is large."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1ab9-even-stretched-out-i-can-sink"
@@ -9161,7 +9051,6 @@ translation = "Even stretched out, I can sink to my shoulders. It is simply long
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1ae2-connie-come-to-think-of-it"
@@ -9174,7 +9063,6 @@ translation = "[CONNIE] (Come to think of it... I've only ever used the tub in t
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1b16-even-in-my-hunter-days-i"
@@ -9187,7 +9075,6 @@ translation = "Even in my hunter days, I preferred a shower to soaking in a tub.
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1b41-i-have-few-memories-of-actually"
@@ -9200,7 +9087,6 @@ translation = "I have few memories of actually taking baths."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1b58-with-feline-genes-i-don-t"
@@ -9226,7 +9112,6 @@ translation = "I only need to bathe when I'm in human form."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1ba7-even-as-a-hunter-i-traveled"
@@ -9239,7 +9124,6 @@ translation = "Even as a hunter, I traveled in Mini form, so prowling outside ne
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1bd9-connie-i-like-human-form-but"
@@ -9252,7 +9136,6 @@ translation = "[CONNIE] (I like human form, but it can be inconvenient.)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1c51-that-is-how-strongly-she-strikes"
@@ -9265,7 +9148,6 @@ translation = "That is how strongly she strikes me as a tiny girl who might brea
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1c82-connie-maybe-i-should-make-sure"
@@ -9291,7 +9173,6 @@ translation = "[CONNIE] (She might change her mind and tell her family about me.
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1ccb-connie-she-s-already-this-attached"
@@ -9304,7 +9185,6 @@ translation = "[CONNIE] (...She's already this attached to me. I doubt she would
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1d74-connie-i-ll-press-her-a"
@@ -9317,7 +9197,6 @@ translation = "[CONNIE] (I'll press her a little and see how she reacts...)"
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1e2a-i-ll-hold-off-on-speaking"
@@ -9330,7 +9209,6 @@ translation = "I'll hold off on speaking for now."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1e44-connie-a-still-developing-organism-human"
@@ -9356,7 +9234,6 @@ translation = "Out of long habit, I find myself analyzing her as I always do."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1ea0-it-s-a-habit-born-of"
@@ -9369,7 +9246,6 @@ translation = "It's a habit born of always being on guard around humans."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1ebf-humans-treat-us-mutants-coldly"
@@ -9382,7 +9258,6 @@ translation = "Humans treat us mutants coldly."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1edf-i-have-met-almost-no-humans"
@@ -9395,7 +9270,6 @@ translation = "I have met almost no humans who were kind."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1efd-connie-dr-kanzaki-and-the-others"
@@ -9408,7 +9282,6 @@ translation = "[CONNIE] (Dr. Kanzaki and the others are exceptions...)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1f1d-humans-look-at-us-mutants-with"
@@ -9421,7 +9294,6 @@ translation = "Humans look at us mutants with fear and contempt."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1f43-i-understand-why-since-our-abilities"
@@ -9460,7 +9332,6 @@ translation = "[CONNIE] (What!?)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-1fa5-while-my-thoughts-are-elsewhere-it"
@@ -9473,7 +9344,6 @@ translation = "While my thoughts are elsewhere, it seems the girl has been talki
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-1fd2-girl-i-heard-this-loud-crackling"
@@ -9486,7 +9356,6 @@ translation = "[GIRL] \"...I heard this loud crackling noise, so I looked out in
 speaker = "女の子"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-1ffa-connie"
@@ -9499,7 +9368,6 @@ translation = "[CONNIE] (!?)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2019-the-girl-keeps-talking"
@@ -9512,7 +9380,6 @@ translation = "The girl keeps talking."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2029-girl-and-then-this-strange-machine"
@@ -9525,7 +9392,6 @@ translation = "[GIRL] \"And then this strange machine fell into our yard. I got 
 speaker = "女の子"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-205b-connie-the-time-machine"
@@ -9538,7 +9404,6 @@ translation = "[CONNIE] (!? The time machine!)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2074-connie-damn-so-this-is-the"
@@ -9551,7 +9416,6 @@ translation = "[CONNIE] (Damn... So this is the yard I arrived in...)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-20a5-girl-when-i-looked-again-it"
@@ -9564,7 +9428,6 @@ translation = "[GIRL] \"When I looked again, it was covered with something like 
 speaker = "女の子"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-20d4-connie-it-doesn-t-sound-like"
@@ -9577,7 +9440,6 @@ translation = "[CONNIE] (...It doesn't sound like she saw me...)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2101-girl-i-was-scared-but-i"
@@ -9590,7 +9452,6 @@ translation = "[GIRL] \"I was scared, but I went closer. There wasn't anybody in
 speaker = "女の子"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2137-connie-i-really-messed-up-i"
@@ -9603,7 +9464,6 @@ translation = "[CONNIE] (I really messed up... I appeared in this girl's yard...
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2184-connie"
@@ -9616,7 +9476,6 @@ translation = "[CONNIE] \"...\""
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2196-i-open-my-mouth-to-speak"
@@ -9629,7 +9488,6 @@ translation = "I open my mouth to speak, then hastily stop."
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-21b4-i-still-don-t-know-where"
@@ -9642,7 +9500,6 @@ translation = "I still don't know where I am or why she brought me here. Speakin
 speaker = "Connie"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-21e6-the-girl-sets-a-dish-beside"
@@ -9655,7 +9512,6 @@ translation = "The girl sets a dish beside me."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-21fe-girl-hungry-here-this-is-for"
@@ -9668,7 +9524,6 @@ translation = "[GIRL] \"Hungry? Here, this is for you!\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2219-connie-what-is-this"
@@ -9681,7 +9536,6 @@ translation = "[CONNIE] (What is this...?)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-224b-a-mini-sized-dish-holds-some"
@@ -9694,7 +9548,6 @@ translation = "A Mini-sized dish holds some liquid."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2268-connie-what-is-this"
@@ -9707,7 +9560,6 @@ translation = "[CONNIE] (What is this...?)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-227f-girl-won-t-you-drink-it"
@@ -9720,7 +9572,6 @@ translation = "[GIRL] \"Won't you drink it? I mixed powdered soup with milk. It'
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-22ac-i-look-up-at-the-girl"
@@ -9733,7 +9584,6 @@ translation = "...I look up at the girl."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-22de-girl-see-i-let-it-cool"
@@ -9746,7 +9596,6 @@ translation = "[GIRL] \"See? I let it cool, so it isn't hot.\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2300-the-girl-dips-in-a-finger"
@@ -9759,7 +9608,6 @@ translation = "The girl dips in a finger to prove it isn't hot, then opens her m
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-233b-connie-it-seems-there-really-isn"
@@ -9772,7 +9620,6 @@ translation = "[CONNIE] (...It seems there really isn't any poison in it.)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-235a-girl-you-re-tired-aren-t"
@@ -9785,7 +9632,6 @@ translation = "[GIRL] \"You're tired, aren't you? You won't get your strength ba
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2385-connie-i-don-t-sense-any"
@@ -9798,7 +9644,6 @@ translation = "[CONNIE] (...I don't sense any hostility.)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-23a0-i-put-my-mouth-to-the"
@@ -9811,7 +9656,6 @@ translation = "I put my mouth to the liquid. I detect no taste of poison or seda
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-23e1-girl-woooow"
@@ -9824,7 +9668,6 @@ translation = "[GIRL] \"Woooow!\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-23f3-the-girl-watches-every-little-thing"
@@ -9837,7 +9680,6 @@ translation = "The girl watches every little thing I do."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-240d-connie-am-i-really-that-unusual"
@@ -9850,7 +9692,6 @@ translation = "[CONNIE] (...Am I really that unusual?)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2426-girl-you-don-t-have-to"
@@ -9863,7 +9704,6 @@ translation = "[GIRL] \"You don't have to be scared. We'll take a bath together 
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2453-girl-we-have-to-get-you"
@@ -9876,7 +9716,6 @@ translation = "[GIRL] \"We have to get you clean.\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-246d-she-strokes-my-back-with-her"
@@ -9889,7 +9728,6 @@ translation = "She strokes my back with her hand."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-247f-connie-perfect-my-chance"
@@ -9902,7 +9740,6 @@ translation = "[CONNIE] (Perfect! My chance.)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2497-i-read-the-girl-s-mind"
@@ -9915,7 +9752,6 @@ translation = "I read the girl's mind."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-24ab-if-someone-is-touching-my-skin"
@@ -9941,7 +9777,6 @@ translation = "[GIRL] (Is she still scared...?)"
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-24f3-girl-does-something-hurt-she-still"
@@ -9954,7 +9789,6 @@ translation = "[GIRL] (Does something hurt? She still looks tired...)"
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2516-connie"
@@ -9967,7 +9801,6 @@ translation = "[CONNIE] (...)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-252c-connie-a-civilian-just-an-ordinary"
@@ -9980,7 +9813,6 @@ translation = "[CONNIE] (...A civilian. Just an ordinary child...)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2550-connie-should-i-reveal-myself-what"
@@ -9993,7 +9825,6 @@ translation = "[CONNIE] (Should I reveal myself? ...What do I do...?)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-259a-connie-revealing-myself-here-would-be"
@@ -10006,7 +9837,6 @@ translation = "[CONNIE] (Revealing myself here would be...)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-25ba-connie-too-soon"
@@ -10019,7 +9849,6 @@ translation = "[CONNIE] (...too soon.)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-25d5-i-can-wait-until-i-know"
@@ -10032,7 +9861,6 @@ translation = "I can wait until I know more about her."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-25f3-i-want-to-watch-a-little"
@@ -10045,7 +9873,6 @@ translation = "I want to watch a little longer."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-260d-girl-hey-you-re-dirty-let"
@@ -10058,7 +9885,6 @@ translation = "[GIRL] \"Hey, you're dirty. Let's take a bath!\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-264b-connie-h-hey"
@@ -10071,7 +9897,6 @@ translation = "[CONNIE] (...H-Hey!)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-265f-the-girl-scoops-me-up-in"
@@ -10084,7 +9909,6 @@ translation = "The girl scoops me up in both hands."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-267e-girl-no-don-t-squirm"
@@ -10097,7 +9921,6 @@ translation = "[GIRL] \"No, don't squirm.\""
 speaker = "女の子"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2699-connie-i-ll-wait-for-my"
@@ -10110,7 +9933,6 @@ translation = "[CONNIE] (...I'll wait for my chance. She doesn't seem dangerous.
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-26bd-i-sense-no-hostility-nearby"
@@ -10123,7 +9945,6 @@ translation = "I sense no hostility nearby."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-26fa-i-let-the-girl-pick-me"
@@ -10136,7 +9957,6 @@ translation = "I let the girl pick me up without resisting."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2715-carrying-me-she-leaves-the-room"
@@ -10149,7 +9969,6 @@ translation = "Carrying me, she leaves the room."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2730-she-walks-along-hugging-me-tightly"
@@ -10162,7 +9981,6 @@ translation = "She walks along, hugging me tightly with obvious delight."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2752-connie-i-ll-see-how-this"
@@ -10175,7 +9993,6 @@ translation = "[CONNIE] (...I'll see how this plays out for a while.)"
 speaker = "コニー"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2778-i-decide-to-let-events-take"
@@ -10188,7 +10005,6 @@ translation = "I decide to let events take their course."
 speaker = "Connie"
 context = "Kanako feeds and comforts Mini-form Connie before carrying her to the bath."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2843-girl-don-t-you-like-baths"
@@ -10201,7 +10017,6 @@ translation = "[GIRL] \"Don't you like baths?\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2856-connie-i-prefer-showers"
@@ -10214,7 +10029,6 @@ translation = "[CONNIE] (...I prefer showers.)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2872-i-answer-silently"
@@ -10227,7 +10041,6 @@ translation = "I answer silently."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2884-connie-first-i-need-to-work"
@@ -10240,7 +10053,6 @@ translation = "[CONNIE] (First I need to work out what kind of person she is...)
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-28b3-the-girl-splashes-water-over-me"
@@ -10253,7 +10065,6 @@ translation = "The girl splashes water over me and scrubs."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-28de-i-feel-a-restless-urge-to"
@@ -10266,7 +10077,6 @@ translation = "...I feel a restless urge to drop my transformation."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-28fd-connie-she-s-only-a-child"
@@ -10279,7 +10089,6 @@ translation = "[CONNIE] (...She's only a child. If returning to my true form hel
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2935-connie-if-i-change-back"
@@ -10292,7 +10101,6 @@ translation = "[CONNIE] (If I change back...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2950-turning-from-feline-to-human-form"
@@ -10305,7 +10113,6 @@ translation = "Turning from feline to human form would certainly shock her."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-296d-i-can-t-decide-what-to"
@@ -10318,7 +10125,6 @@ translation = "I can't decide what to do."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2981-girl-i-get-sick-easily-that"
@@ -10331,7 +10137,6 @@ translation = "[GIRL] \"I get sick easily. That's why I stayed home from school 
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-29ac-connie"
@@ -10344,7 +10149,6 @@ translation = "[CONNIE] (...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-29c5-i-look-up-at-the-girl"
@@ -10357,7 +10161,6 @@ translation = "I look up at the girl. She looks a little sad."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-29ea-girl-at-first-i-only-missed"
@@ -10370,7 +10173,6 @@ translation = "[GIRL] \"...At first, I only missed one or two days of school eac
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2a19-girl-now-i-miss-about-five"
@@ -10383,7 +10185,6 @@ translation = "[GIRL] \"Now I miss about five days a month. On good days, I feel
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2a4a-she-smiles-sadly-as-she-says"
@@ -10396,7 +10197,6 @@ translation = "She smiles sadly as she says it."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2a6f-girl-why-don-t-you-live"
@@ -10409,7 +10209,6 @@ translation = "[GIRL] \"Why don't you live with us? Let's do that! I'll ask Mom 
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2aaa-connie"
@@ -10422,7 +10221,6 @@ translation = "[CONNIE] (...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2abd-girl-i-want-you-to-stay"
@@ -10435,7 +10233,6 @@ translation = "[GIRL] \"I want you... to stay with me...\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2ae2-she-rests-a-hand-on-my"
@@ -10448,7 +10245,6 @@ translation = "She rests a hand on my back and gently strokes me."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2afe-if-she-takes-me-in-as"
@@ -10487,7 +10283,6 @@ translation = "[CONNIE] (She's lonely... This girl...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2b5c-her-loneliness-flows-into-me-through"
@@ -10500,7 +10295,6 @@ translation = "Her loneliness flows into me through her touch."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2b82-a-longing-for-someone-she-can"
@@ -10513,7 +10307,6 @@ translation = "A longing for someone she can depend on."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2bb0-girl-ah"
@@ -10526,7 +10319,6 @@ translation = "[GIRL] \"Ah...\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2bc1-the-girl-makes-a-troubled-little"
@@ -10539,7 +10331,6 @@ translation = "The girl makes a troubled little sound."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2bd7-she-feels-along-my-neck-and"
@@ -10552,7 +10343,6 @@ translation = "She feels along my neck and back as if searching, then pets me te
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2c00-girl-you-must-already-have-an"
@@ -10565,7 +10355,6 @@ translation = "[GIRL] \"...You must already have an owner too, kitty...\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2c29-connie-my-collar-of-course-she"
@@ -10578,7 +10367,6 @@ translation = "[CONNIE] (My collar...? Of course. She saw it and thinks I'm some
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2c60-i-want-to-say-something-to"
@@ -10591,7 +10379,6 @@ translation = "I want to say something to comfort her."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2c6f-connie-no-but"
@@ -10604,7 +10391,6 @@ translation = "[CONNIE] (No... But...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2c86-i-give-a-small-shake-of"
@@ -10617,7 +10403,6 @@ translation = "I give a small shake of my head and push the thought away."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2cb0-the-girl-seems-to-collect-herself"
@@ -10630,7 +10415,6 @@ translation = "The girl seems to collect herself."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2cc5-girl-there-there-good-kitty-hold"
@@ -10643,7 +10427,6 @@ translation = "[GIRL] \"There, there. Good kitty. Hold still and I'll wash you.\
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2cf0-looking-pleased-she-puffs-up-with"
@@ -10656,7 +10439,6 @@ translation = "Looking pleased, she puffs up with grown-up pride and washes me w
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2d22-scrub-scrub"
@@ -10671,7 +10453,6 @@ translation = "Scrub, scrub."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2d2c-girl-ooh-kitty-s-paws-are"
@@ -10684,7 +10465,6 @@ translation = "[GIRL] \"Ooh, kitty's paws are so squishy!\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2d49-the-girl-takes-my-paw-and"
@@ -10697,7 +10477,6 @@ translation = "The girl takes my paw and amuses herself by pressing its soft pad
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2d72-connie-that-tickles-you-know"
@@ -10710,7 +10489,6 @@ translation = "[CONNIE] (...That tickles, you know...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2d9a-girl-these-are-your-paw-pads"
@@ -10723,7 +10501,6 @@ translation = "[GIRL] \"These are your paw pads! Oh, I guess you don't understan
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2dc3-connie-i-understand-every-word"
@@ -10736,7 +10513,6 @@ translation = "[CONNIE] (I understand. Every word.)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2dda-the-girl-s-excited-expression-darkens"
@@ -10749,7 +10525,6 @@ translation = "The girl's excited expression darkens."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2df4-girl-mom-is-usually-here-but"
@@ -10762,7 +10537,6 @@ translation = "[GIRL] \"Mom is usually here, but... she went out today.\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2e1f-girl-mom-writes-novels-she-said"
@@ -10775,7 +10549,6 @@ translation = "[GIRL] \"Mom writes novels. She said she had a meeting at the pub
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2e59-scrub-scrub-scrub"
@@ -10788,7 +10561,6 @@ translation = "Scrub, scrub, scrub..."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2e6e-her-hand-goes-still"
@@ -10801,7 +10573,6 @@ translation = "Her hand goes still."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2e7e-again-loneliness-washes-over-me"
@@ -10814,7 +10585,6 @@ translation = "Again, loneliness washes over me."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2eaa-girl-hold-still-okay"
@@ -10827,7 +10597,6 @@ translation = "[GIRL] \"Hold still, okay?\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-2ec7-as-i-sit-still-she-gives"
@@ -10840,7 +10609,6 @@ translation = "As I sit still, she gives me a lonely smile and continues washing
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2ef2-a-smile-suits-her-so-well"
@@ -10853,7 +10621,6 @@ translation = "A smile suits her so well..."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2f0a-a-sharp-pang"
@@ -10866,7 +10633,6 @@ translation = "A sharp pang."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2f15-my-chest-fills-with-aching-sadness"
@@ -10879,7 +10645,6 @@ translation = "My chest fills with aching sadness."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2f37-scrub-scrub-puff"
@@ -10892,7 +10657,6 @@ translation = "Scrub, scrub--puff."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2f45-foam-gets-on-my-face-and"
@@ -10905,7 +10669,6 @@ translation = "Foam gets on my face and clogs my nose. I feel a sneeze coming."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2f75-connie-uh-ah-ah"
@@ -10918,7 +10681,6 @@ translation = "[CONNIE] (Uh... Ah, ah...)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2f91-connie-achoo"
@@ -10931,7 +10693,6 @@ translation = "[CONNIE] \"Achoo!!\""
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-2fa4-the-girl-smiles-at-my-reaction"
@@ -10944,7 +10705,6 @@ translation = "The girl smiles at my reaction. With one little hand, she strokes
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-2fd8-girl-it-s-silly-isn-t"
@@ -10957,7 +10717,6 @@ translation = "[GIRL] \"...It's silly, isn't it? Mom will be back soon, but I st
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3017-girl-i-don-t-want-anyone"
@@ -10970,7 +10729,6 @@ translation = "[GIRL] \"I don't want anyone to leave... I hate being all alone..
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3040-connie-what-makes-her-feel-this"
@@ -10983,7 +10741,6 @@ translation = "[CONNIE] (What makes her feel this way...?)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3061-girl-every-month-i-miss-more"
@@ -11009,7 +10766,6 @@ translation = "The girl's shoulders tremble."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-30b9-a-fierce-loneliness-floods-into-my"
@@ -11024,7 +10780,6 @@ translation = "A fierce loneliness floods into my heart."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-30d4-a-girl-who-carries-the-same"
@@ -11039,7 +10794,6 @@ translation = "A girl who carries the same loneliness I do..."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-30ee-i-want-to-speak-to-her"
@@ -11054,7 +10808,6 @@ translation = "I want to speak to her, to comfort her."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-319b-connie-damn-what-do-i-do"
@@ -11067,7 +10820,6 @@ translation = "[CONNIE] (Damn... What do I do now...?)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-31c1-connie-shh-keep-quiet"
@@ -11080,7 +10832,6 @@ translation = "[CONNIE] \"Shh! Keep quiet!\""
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-31d9-i-clamp-a-hand-over-the"
@@ -11093,7 +10844,6 @@ translation = "I clamp a hand over the girl's mouth."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-31ee-girl-mmmph-mmf-mmf"
@@ -11106,7 +10856,6 @@ translation = "[GIRL] \"Mmmph, mmf mmf...\""
 speaker = "女の子"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-320b-connie-don-t-scream-all-right"
@@ -11119,7 +10868,6 @@ translation = "[CONNIE] \"Don't scream. All right?\""
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3221-the-girl-nods-rapidly-i-take"
@@ -11132,7 +10880,6 @@ translation = "The girl nods rapidly. I take my hand away."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3240-connie-looks-like-she-s-okay"
@@ -11145,7 +10892,6 @@ translation = "[CONNIE] (Looks like she's okay.)"
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3255-when-i-transform-the-soap-suds"
@@ -11158,7 +10904,6 @@ translation = "When I transform, the soap suds covering my body scatter away."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3283-connie-may-i-get-in"
@@ -11171,7 +10916,6 @@ translation = "[CONNIE] \"May I get in?\""
 speaker = "コニー"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-329a-i-gesture-that-i-want-to"
@@ -11184,7 +10928,6 @@ translation = "I gesture that I want to enter the tub, and the girl nods again."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-32c7-i-slip-into-the-tub-with"
@@ -11197,7 +10940,6 @@ translation = "I slip into the tub with a splash."
 speaker = "Connie"
 context = "Kanako confides her illness and loneliness while bathing Mini-form Connie."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-33d4-girl-whew-you-startled-me"
@@ -11210,7 +10952,6 @@ translation = "[GIRL] \"Whew... You startled me.\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-33f5-connie-well-of-course-you-were"
@@ -11249,7 +10990,6 @@ translation = "...She still wears the same shocked look."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-343b-connie-more-importantly-how-many-other"
@@ -11262,7 +11002,6 @@ translation = "[CONNIE] \"More importantly, how many other people live here?\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3459-girl-huh-um-no-one-is"
@@ -11275,7 +11014,6 @@ translation = "[GIRL] \"Huh? Um... No one is here right now, but there's my dad,
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-348e-connie-three-i-hope-this-doesn"
@@ -11288,7 +11026,6 @@ translation = "[CONNIE] \"Three. I hope this doesn't become a problem...\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-34b3-girl-hey-are-you-a-cat"
@@ -11301,7 +11038,6 @@ translation = "[GIRL] \"Hey, are you a cat spirit?\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-34cc-forgetting-her-loneliness-the-girl-looks"
@@ -11314,7 +11050,6 @@ translation = "Forgetting her loneliness, the girl looks at me with wonder and c
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-34f5-connie-for-someone-so-surprised-she"
@@ -11327,7 +11062,6 @@ translation = "[CONNIE] (...For someone so surprised, she asks remarkably calm q
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3521-connie-not-exactly"
@@ -11340,7 +11074,6 @@ translation = "[CONNIE] \"Not exactly.\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3537-girl-then-are-you-a-monster"
@@ -11353,7 +11086,6 @@ translation = "[GIRL] \"Then are you a monster cat?\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-354d-i-search-my-memory-for-the"
@@ -11366,7 +11098,6 @@ translation = "...I search my memory for the meaning of \"monster cat.\""
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-356e-connie-a-monster"
@@ -11379,7 +11110,6 @@ translation = "[CONNIE] (A monster!?)"
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3580-connie-no"
@@ -11392,7 +11122,6 @@ translation = "[CONNIE] \"No!\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3590-connie-i-ll-need-her-cooperation"
@@ -11405,7 +11134,6 @@ translation = "[CONNIE] (I'll need her cooperation eventually anyway... I might 
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-35ce-getting-help-from-a-native-life"
@@ -11444,7 +11172,6 @@ translation = "[GIRL] \"Whaaat!? You're a police officer?\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3664-connie-not-exactly-something-close"
@@ -11470,7 +11197,6 @@ translation = "[GIRL] \"Hmm. It's complicated...\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3699-seen-from-outside-talking-to-a"
@@ -11483,7 +11209,6 @@ translation = "Seen from outside, talking to a native life-form in the bath woul
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-36bf-connie-no-i-shouldn-t-call"
@@ -11509,7 +11234,6 @@ translation = "[CONNIE] \"Will you help me?\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3707-at-those-words-the-girl-s"
@@ -11522,7 +11246,6 @@ translation = "At those words, the girl's eyes light up."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3726-girl-yes"
@@ -11535,7 +11258,6 @@ translation = "[GIRL] \"Yes!\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3736-the-idea-that-someone-needs-her"
@@ -11548,7 +11270,6 @@ translation = "The idea that someone needs her seems to thrill her."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3771-the-girl-s-expression-grows-a"
@@ -11561,7 +11282,6 @@ translation = "The girl's expression grows a little brighter."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3789-connie-so-this-is-what-having"
@@ -11574,7 +11294,6 @@ translation = "[CONNIE] \"So this is what having a little sister feels like...\"
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-37a7-girl-huh"
@@ -11587,7 +11306,6 @@ translation = "[GIRL] \"Huh?\""
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-37b6-connie-uh-nothing"
@@ -11600,7 +11318,6 @@ translation = "[CONNIE] \"Uh--nothing.\""
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-37ce-connie-i-said-it-out-loud"
@@ -11613,7 +11330,6 @@ translation = "[CONNIE] (I said it out loud...)"
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-37ed-i-cover-it-with-an-embarrassed"
@@ -11626,7 +11342,6 @@ translation = "I cover it with an embarrassed laugh."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-380c-connie-helping-means-i-ll-be"
@@ -11639,7 +11354,6 @@ translation = "[CONNIE] \"Helping means I'll be imposing on you for a while. Is 
 speaker = "コニー"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3839-i-can-stay-in-mini-form"
@@ -11652,7 +11366,6 @@ translation = "I can stay in Mini form most of the time."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3856-girl-um-probably-just-turn-into"
@@ -11665,7 +11378,6 @@ translation = "[GIRL] \"Um... probably. Just turn into a cat like before, okay?\
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3881-perfect-i-ll-accept-her-hospitality"
@@ -11678,7 +11390,6 @@ translation = "Perfect. I'll accept her hospitality."
 speaker = "Connie"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3894-girl-then-we-can-take-a"
@@ -11691,7 +11402,6 @@ translation = "[GIRL] \"Then we can take a bath together every day! I'll wash yo
 speaker = "女の子"
 context = "Connie reveals her human form and mission, then asks Kanako for help."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-38c6-the-girl-seems-to-warm-to"
@@ -11704,7 +11414,6 @@ translation = "The girl seems to warm to me, delighted perhaps at escaping her d
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3916-girl-glance"
@@ -11717,7 +11426,6 @@ translation = "[GIRL] \"...(Glance.)\""
 speaker = "女の子"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[entries]]
 id = "f0003-3934-the-girl-looks-at-me-and"
@@ -11743,7 +11451,6 @@ translation = "[CONNIE] (What...? Is she... curious about me?)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3994-i-slosh-around-sending-waves-through"
@@ -11756,7 +11463,6 @@ translation = "I slosh around, sending waves through the water."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-39ae-my-shoulders-stick-out-of-the"
@@ -11769,7 +11475,6 @@ translation = "My shoulders stick out of the tub, but stretching my limbs feels 
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-39d3-the-relief-of-stretching-my-legs"
@@ -11782,7 +11487,6 @@ translation = "The relief of stretching my legs--mmm...--is beyond words."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3a03-connie-it-s-small"
@@ -11808,7 +11512,6 @@ translation = "[CONNIE] (...Oh. She thought I meant her chest.)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3aae-connie-no-i-meant-this-bathroom"
@@ -11821,7 +11524,6 @@ translation = "[CONNIE] \"No. I meant this bathroom.\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3ac7-connie-it-s-cramped-or-is"
@@ -11834,7 +11536,6 @@ translation = "[CONNIE] (...It's cramped. Or is this just how this house's bath 
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3b1a-connie-so-this-is-normal-here"
@@ -11847,7 +11548,6 @@ translation = "[CONNIE] (...So this is normal here. Maybe I said something hurtf
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3b6a-connie-sorry-i-ve-never-used"
@@ -11860,7 +11560,6 @@ translation = "[CONNIE] \"Sorry... I've never used another family's bath before.
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3bbd-but-she-still-seems-self-conscious"
@@ -11873,7 +11572,6 @@ translation = "But she still seems self-conscious about her chest."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3bd1-connie-i-think-she-s-perfectly"
@@ -11886,7 +11584,6 @@ translation = "[CONNIE] (I think she's perfectly cute at that size...)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3bfa-maybe-she-can-t-see-her"
@@ -11899,7 +11596,6 @@ translation = "Maybe she can't see her own appeal objectively."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3c7c-connie-what"
@@ -11912,7 +11608,6 @@ translation = "[CONNIE] \"What?\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3ccb-connie-b-boobs-i-suppose-they"
@@ -11925,7 +11620,6 @@ translation = "[CONNIE] (B-Boobs? I suppose they must look big to her...)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3cfb-not-to-brag-but-i-think"
@@ -11938,7 +11632,6 @@ translation = "Not to brag, but I think my chest and butt are pretty average."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3d20-dr-kanzaki-is-fuller-figured-and"
@@ -11951,7 +11644,6 @@ translation = "Dr. Kanzaki is fuller-figured, and I have always envied her."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3d50-connie-i-see-i-suppose-so"
@@ -11964,7 +11656,6 @@ translation = "[CONNIE] (I see... I suppose so...)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3d97-connie-it-was-made-this-way"
@@ -11990,7 +11681,6 @@ translation = "I scrub my arm and mutter under my breath so she cannot hear."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3e22-connie-you-will-be"
@@ -12003,7 +11693,6 @@ translation = "[CONNIE] \"You will be.\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3eb1-connie-at-this-rate-you-will"
@@ -12016,7 +11705,6 @@ translation = "[CONNIE] \"At this rate, you will.\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-3f34-the-innocent-way-she-blushes-is"
@@ -12029,7 +11717,6 @@ translation = "The innocent way she blushes is endearing."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-3f58-connie-come-on-that-s-enough"
@@ -12042,7 +11729,6 @@ translation = "[CONNIE] \"Come on, that's enough.\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-4045-connie-hee-hee-want-me-to"
@@ -12055,7 +11741,6 @@ translation = "[CONNIE] \"Hee hee... Want me to wash your hair too?\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-4076-i-pick-up-the-shampoo-bottle"
@@ -12068,7 +11753,6 @@ translation = "I pick up the shampoo bottle."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-4090-connie-huh-it-s-empty"
@@ -12081,7 +11765,6 @@ translation = "[CONNIE] (Huh? It's empty...)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-40aa-when-i-shake-the-container-i"
@@ -12094,7 +11777,6 @@ translation = "When I shake the container, I hear a little shampoo sloshing at t
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-40cc-only-the-faintest-sloshing-sound-remains"
@@ -12107,7 +11789,6 @@ translation = "Only the faintest sloshing sound remains."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[entries]]
 id = "f0003-40e7-connie-enough-for-two-or-three"
@@ -12120,7 +11801,6 @@ translation = "[CONNIE] (Enough for two or three more washes, maybe?)"
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[entries]]
 id = "f0003-415d-connie-all-right-then"
@@ -12133,7 +11813,6 @@ translation = "[CONNIE] \"All right, then...\""
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[composites]]
 id = "f0003-0b56-girl-you-look-just-like-my"
@@ -12217,7 +11896,6 @@ translation = "[CONNIE] (So ⟦name:dear-person⟧ is the clingy sort...)"
 speaker = "コニー"
 context = "Connie studies the girl who rescued her and they exchange names."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12252,7 +11930,6 @@ translation = "[CONNIE] (If ⟦name:dear-person⟧ were my little sister, I woul
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12270,7 +11947,6 @@ translation = "[CONNIE] \"⟦name:dear-person⟧, want me to wash you?\""
 speaker = "コニー"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12288,7 +11964,6 @@ translation = "[⟦name:dear-person⟧] \"Oh... no, that's okay...\""
 speaker = "name-slot:dear-person"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12324,7 +11999,6 @@ translation = "⟦name:dear-person⟧ fidgets bashfully."
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12341,7 +12015,6 @@ translation = "Seeing ⟦name:dear-person⟧ like this, I find her even more ado
 speaker = "Connie"
 context = "Connie transforms in the bath and begins treating Kanako like a younger sister."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12359,7 +12032,6 @@ translation = "[⟦name:dear-person⟧] \"What!?\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12377,7 +12049,6 @@ translation = "⟦name:dear-person⟧ hurriedly covers her chest."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12412,7 +12083,6 @@ translation = "[⟦name:dear-person⟧] \"What? It's a normal size.\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12430,7 +12100,6 @@ translation = "⟦name:dear-person⟧ shakes her head and says, \"Don't worry ab
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12447,7 +12116,6 @@ translation = "⟦name:dear-person⟧ openly studies my body."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12464,7 +12132,6 @@ translation = "[⟦name:dear-person⟧] \"Big Sis Connie, you're so lucky...\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12500,7 +12167,6 @@ translation = "⟦name:dear-person⟧ must see my body as attractive."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12517,7 +12183,6 @@ translation = "[⟦name:dear-person⟧] \"I want to be pretty like you, Big Sis 
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12535,7 +12200,6 @@ translation = "[⟦name:dear-person⟧] \"Really? You really think so?\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12553,7 +12217,6 @@ translation = "⟦name:dear-person⟧'s eyes shine."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12570,7 +12233,6 @@ translation = "[CONNIE] (⟦name:dear-person⟧ is still growing, but she'll bec
 speaker = "コニー"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Connie's informal, alert voice and compresses only ornamental pauses."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12588,7 +12250,6 @@ translation = "[⟦name:dear-person⟧] \"Really? Wow!\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12606,7 +12267,6 @@ translation = "[⟦name:dear-person⟧] \"I'm so happy...\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12624,7 +12284,6 @@ translation = "With a splash, I climb out and move behind ⟦name:dear-person⟧
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12642,7 +12301,6 @@ translation = "⟦name:dear-person⟧ stays seated on the stool, head bowed and 
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12659,7 +12317,6 @@ translation = "I pick up the body brush and scrub ⟦name:dear-person⟧'s back.
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12677,7 +12334,6 @@ translation = "[⟦name:dear-person⟧] \"...This is embarrassing...\""
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12695,7 +12351,6 @@ translation = "[⟦name:dear-person⟧] \"...I already washed my hair, so I'm fi
 speaker = "name-slot:dear-person"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Keeps Kanako earnest and young without turning her speech into baby talk."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
@@ -12713,7 +12368,6 @@ translation = "⟦name:dear-person⟧ shakes her head vigorously."
 speaker = "Connie"
 context = "Connie and Kanako relax into an awkward but affectionate older-sister bond."
 status = "qa-ready"
-notes = "Preserves Connie's first-person observation and the source scene beat."
 
 [[composites.occurrences]]
 file = "DISKA/F0003.MES"
