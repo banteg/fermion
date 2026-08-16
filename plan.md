@@ -658,9 +658,12 @@ across translation rebuilds.
   JSONL, CSV, SQLite, or other translator databases are generated views; any
   future import path must validate back into TOML. No parallel editorial
   database is allowed.
-- The working and initial release target is the archival A translation. An
-  edited B layer may be derived as an auditable overlay shortly before release;
-  it is not maintained in parallel. The story-rewrite C route is out of scope.
+- The working and initial release target is a source-faithful English
+  translation with one disclosed editorial change: every character depicted in
+  sexual content is treated as 18 or older. The English release notes state that
+  this changes the localization rather than the original Japanese work. A
+  parallel edited layer is not maintained, and a story-focused rewrite remains
+  out of scope.
 - Composite authoring uses non-CP932 metadata tokens such as
   `⟦name:dear-person⟧` and `⟦term:slot-1⟧`. Schema 5 retains each physical
   text anchor and immutable copy/render span, validates the exact token sequence,

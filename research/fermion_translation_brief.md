@@ -3,7 +3,7 @@
 - **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
 - **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, QA guide, and localization-risk register for the English fan translation
 - **Spoilers:** complete, including the central identity reveal and ending
-**Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. Section 11 records the project’s archival editorial policy for that material.
+**Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. The English version treats every character depicted in sexual content as 18 or older and discloses that change in an editorial note; source ages remain documented here rather than being retroactively attributed to the Japanese work. Section 11 records the release policy.
 
 ---
 
@@ -580,7 +580,7 @@ Kanzaki and Marie may use more exact scientific language, but the translation mu
 
 ### Historical attitudes and negative utterances
 
-The source contains period dialogue that treats same-sex attraction as strange and sexual scenes where narration contradicts spoken refusal. The archival translation preserves characterization and meaning; it does not modernize isolated lines or disguise coercion through inaccurate vocabulary.
+The source contains period dialogue that treats same-sex attraction as strange and sexual scenes where narration contradicts spoken refusal. Apart from the disclosed adult-age framing, the English translation preserves characterization and meaning; it does not modernize isolated lines or disguise coercion through inaccurate vocabulary.
 
 Translate negatives according to syntax and context:
 
@@ -589,7 +589,7 @@ Translate negatives according to syntax and context:
 - `嫌` / `いや` → **No / I don’t want that**, or a non-lexical emotional cry only where the context genuinely supports it;
 - `だめ` → **Don’t / You can’t / I can’t / This is too much**, according to the construction.
 
-If a later edited-B overlay changes consent, it must revise setup and action explicitly and remain mechanically separate from archival A. The archival layer must not manufacture assent line by line.
+The adult-age note must not be used to manufacture assent line by line. Any future consent edit would have to revise setup and action explicitly and remain mechanically separate from the canonical translation.
 
 ---
 
@@ -774,7 +774,7 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 
 ## 11. Locked content and release policy
 
-The canonical project goal is an **archival translation** of the 1995 work. This locks the working catalog to source-faithful route and story preservation so translation choices do not drift between incompatible editorial targets. The source is not merely “old-fashioned”; some material still creates legal, platform, distribution, and ethical problems, so an archival goal does not imply casual distribution.
+The canonical project goal is a source-faithful English translation of the 1995 work with one disclosed editorial change: every character depicted in sexual content is treated as 18 or older in the English version. The original Japanese ages and school status remain part of the archival record and must not be misreported as having changed in the source. Other translation choices remain source-faithful so the project does not drift into an undocumented rewrite.
 
 ### Major issues
 
@@ -798,35 +798,28 @@ The canonical project goal is an **archival translation** of the 1995 work. This
 
    These are plot-critical villain actions and should remain clearly framed as abuse, not euphemized away.
 
-### A. Canonical archival translation — accepted
+### A. Canonical English translation — accepted
 
 - Preserve the original plot and route structure.
+- Treat every character depicted in sexual content as 18 or older in the English version.
+- Disclose the change in the English release notes instead of claiming that the source assigned adult ages.
 - Do not embellish explicit content.
 - Add strong upfront content warnings and restoration notes.
 - Keep every physical record and document corrections, normalizations, and technical compromises.
-- Distribution may still be legally or practically impossible in many venues because of character ages.
 
-All present translation, speaker, context, and restoration work targets this archival layer.
+All present translation, speaker, context, and restoration work targets this English layer. The original Japanese and source-age facts remain intact in source fields, research notes, and restoration records.
 
-### B. Late edited derivative — optional, not active
+The English version must include this note:
 
-An edited commercial-style localization may be prepared **only after** the archival catalog is substantially complete and frozen for release review. It must be a separate, mechanically reviewable overlay or branch derived from A, never mixed into the canonical archival entries.
+> The original Japanese work assigns younger ages or school status to some characters. For this English version, every character depicted in sexual content is treated as 18 or older. This is an editorial change to the English version, not a claim about the original text.
 
-- Age up every relevant character consistently.
-- Change school status, dates, uniforms/art references, family dialogue, and route setup—not only one number in narration.
-- Rewrite consent so participation is explicit before intimate activity.
-- Remove or restructure scenes that depend on persistent refusal.
-- Keep plot coercion as coercion; do not convert Marie/Kanzaki’s crimes into romance.
-
-This derivative is a possible release-time editorial pass, not a second draft translators maintain in parallel now.
-
-### C. Story-focused rewrite — rejected
+### B. Story-focused rewrite — rejected
 
 The project will not replace sample collection, remove route structure, or rewrite the game into a different story-focused edition. That would be an adaptation rather than preservation and is out of scope.
 
 ### Editorial invariant
 
-Maintain one archival source of truth now. If B is authorized near release, derive it explicitly from A and keep every difference auditable. Do not let ad hoc line-by-line discomfort produce undocumented censorship in either layer.
+Maintain one canonical English source of truth. Keep the adult-age policy explicit, preserve source ages in the archival fields and research record, and do not use the note as cover for unrelated or undocumented censorship.
 
 ---
 
@@ -863,7 +856,7 @@ The following decisions are already locked and should be enforced during review:
 - no romanized honorific suffixes;
 - Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
 - preset-only localized name and adult-term editors; and
-- archival A as the canonical content policy.
+- the disclosed adult-age framing as the canonical English content policy.
 
 Voice-calibration examples belong in anchored canonical catalog entries with source, context, and notes. Do not create a second table of free-floating “final” translations inside this brief.
 
@@ -892,7 +885,7 @@ Run distinct passes rather than treating “edited once” as completion:
 1. **Source and linguistic pass:** verify meaning, register, and terminology against the exact anchored Japanese.
 2. **Reveal pass:** make every early clue work retrospectively without letting metadata or wording spoil Kaori’s identity.
 3. **Variable pass:** exercise every name and term preset, including maximum-length values and English punctuation around tokens.
-4. **Editorial pass:** audit content warnings and confirm that archival A contains no undocumented adaptation.
+4. **Editorial pass:** audit content warnings, confirm the adult-age note is present, and verify that no other adaptation is undocumented.
 5. **Playthrough pass:** exercise every branch, the facility graph, replay/gallery surfaces, and the final letter in the emulator.
 
 Test specifically for:
@@ -942,6 +935,11 @@ Use the naturalized version above. A typo-only Engrish pass is not an active alt
 
 > **2296. Humanity is dying from centuries of pollution, and the genetic information it has lost cannot be rebuilt. Connie—a cat-human mutant, hunter, and experimental time-machine pilot—is sent to 1996 to recover intact human genes before a temporary rift in time closes forever. What begins as a strange visit to an ordinary family becomes a confrontation with the woman who created her, a childhood displaced by three centuries, and the cost of rewriting the past.**
 
+**English-version editorial note:** The original Japanese work assigns younger
+ages or school status to some characters. For this English version, every
+character depicted in sexual content is treated as 18 or older. This is an
+editorial change to the English version, not a claim about the original text.
+
 ---
 
 ## 15. Translation QA checklist
@@ -986,10 +984,10 @@ Use the naturalized version above. A typo-only Engrish pass is not an active alt
 
 ### Editorial and release
 
-- [ ] Archival A preserves source meaning without embellishment or undocumented censorship.
+- [ ] The English release includes the locked adult-age editorial note.
+- [ ] Apart from the disclosed adult-age framing, the English translation preserves source meaning without embellishment or undocumented censorship.
 - [ ] Every restoration intervention is logged at its source anchor.
 - [ ] Content warnings cover high-school-age sexual material, coercive consent framing, family/incest-adjacent dynamics, adultery, abduction, reproductive coercion, medical abuse, grief, death, and gun violence.
-- [ ] Any future edited-B change is mechanically separate, internally consistent, and reviewable against archival A.
 - [ ] Distribution and platform review are completed independently of linguistic QA.
 
 ---

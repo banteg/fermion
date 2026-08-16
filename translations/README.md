@@ -4,6 +4,13 @@
 and the reasoning behind it. It intentionally contains text and metadata, not
 compiled MES files or original game media.
 
+The English version carries this editorial note:
+
+> The original Japanese work assigns younger ages or school status to some
+> characters. For this English version, every character depicted in sexual
+> content is treated as 18 or older. This is an editorial change to the English
+> version, not a claim about the original text.
+
 Each `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
 default dialogue `box_width`. Schema 5 retains schema-4 simple records; each
@@ -212,7 +219,7 @@ managed as 391 canonical lines; five exact duplicates share wording across
 reconverging menu branches, and two contentless pause records join
 pre-existing canonical entries from later files. None are excluded or pending.
 The slice contains the game's first explicit scene; its translation follows
-the locked archival-A policy, and the batch terminology choices (`arousal`
+the locked English-release policy, and the batch terminology choices (`arousal`
 for 愛液, `sex` for 割れ目) are recorded in the entry notes. A
 `first-scene-save-fixture-proof` route re-pinned to the rebuilt image verifies
 the first scene's framebuffer and scenario register; the full scene still
