@@ -30,6 +30,9 @@ sha256 = "{"1" * 64}"
 [[routes.checkpoints]]
 name = "dialogue"
 frame = 19
+crop = [1, 2, 3, 4]
+scenario = "scene.mes"
+state_offset = 0x1234
 '''
     )
     return path
@@ -47,10 +50,12 @@ def test_loads_route_and_verifies_content(tmp_path) -> None:
     assert route.cache_frame == 9
     assert [(tap.frame, tap.name) for tap in route.taps] == [(3, "return"), (10, "space")]
     assert [(click.frame, click.name) for click in route.clicks] == [(4, "right")]
-    assert [(item.name, item.frame, item.sha256) for item in route.checkpoints] == [
-        ("menu", 9, "1" * 64),
-        ("dialogue", 19, None),
+    assert [(item.name, item.frame, item.sha256, item.crop) for item in route.checkpoints] == [
+        ("menu", 9, "1" * 64, None),
+        ("dialogue", 19, None, (1, 2, 3, 4)),
     ]
+    assert route.checkpoints[1].scenario == "scene.mes"
+    assert route.checkpoints[1].state_offset == 0x1234
 
 
 def test_rejects_wrong_content(tmp_path) -> None:
@@ -78,6 +83,22 @@ def test_rejects_cache_frame_during_held_key(tmp_path) -> None:
         RouteManifest.from_file(path)
 
 
+def test_rejects_invalid_checkpoint_crop(tmp_path) -> None:
+    path = write_manifest(tmp_path, "0" * 64)
+    path.write_text(path.read_text().replace("crop = [1, 2, 3, 4]", "crop = [1, 2, 0, 4]"))
+
+    with pytest.raises(EmulatorError, match="non-negative origin and positive size"):
+        RouteManifest.from_file(path)
+
+
+def test_rejects_scenario_without_state_offset(tmp_path) -> None:
+    path = write_manifest(tmp_path, "0" * 64)
+    path.write_text(path.read_text().replace("state_offset = 0x1234\n", ""))
+
+    with pytest.raises(EmulatorError, match="must be used together"):
+        RouteManifest.from_file(path)
+
+
 def test_route_cache_key_covers_core_system_and_options(tmp_path) -> None:
     path = write_manifest(tmp_path, "0" * 64)
     route = RouteManifest.from_file(path).route("opening")
@@ -97,3 +118,19 @@ def test_route_cache_key_covers_core_system_and_options(tmp_path) -> None:
     changed_options = route_cache_key(route, core, system.parent, {"clock": "4"})
 
     assert len({original, changed_core, changed_system, changed_options}) == 4
+
+
+def test_route_cache_key_ignores_runtime_mount_paths(tmp_path) -> None:
+    path = write_manifest(tmp_path, "0" * 64)
+    route = RouteManifest.from_file(path).route("opening")
+    core = tmp_path / "core.dylib"
+    core.write_bytes(b"core")
+    system = tmp_path / "system" / "np2kai"
+    system.mkdir(parents=True)
+    config = system / "np2kai.cfg"
+    config.write_text("clk_mult = 20\nHDD1FILE = /first/runtime.hdi\n")
+
+    first = route_cache_key(route, core, system.parent, {})
+    config.write_text("clk_mult = 20\nHDD1FILE = /second/runtime.hdi\n")
+
+    assert route_cache_key(route, core, system.parent, {}) == first

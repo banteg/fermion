@@ -25,6 +25,9 @@ class RouteCheckpoint:
     name: str
     frame: int
     sha256: str | None
+    crop: tuple[int, int, int, int] | None
+    scenario: str | None
+    state_offset: int | None
 
 
 @dataclass(frozen=True)
@@ -160,7 +163,37 @@ def _parse_checkpoint(
     expected = value.get("sha256")
     if expected is not None:
         expected = _hash(value, "sha256", context)
-    return RouteCheckpoint(name, frame, expected)
+    raw_crop = value.get("crop")
+    crop: tuple[int, int, int, int] | None = None
+    if raw_crop is not None:
+        if (
+            not isinstance(raw_crop, list)
+            or len(raw_crop) != 4
+            or not all(isinstance(item, int) and not isinstance(item, bool) for item in raw_crop)
+        ):
+            raise EmulatorError(f"{context}.crop must be [x, y, width, height]")
+        x, y, width, height = raw_crop
+        if x < 0 or y < 0 or width < 1 or height < 1:
+            raise EmulatorError(
+                f"{context}.crop must have a non-negative origin and positive size"
+            )
+        crop = (x, y, width, height)
+    scenario = value.get("scenario")
+    state_offset = value.get("state_offset")
+    if (scenario is None) != (state_offset is None):
+        raise EmulatorError(f"{context}.scenario and state_offset must be used together")
+    if scenario is not None:
+        scenario = _string(value, "scenario", context)
+        try:
+            scenario.encode("ascii")
+        except UnicodeEncodeError as error:
+            raise EmulatorError(f"{context}.scenario must be ASCII") from error
+        if "\0" in scenario:
+            raise EmulatorError(f"{context}.scenario must not contain a zero byte")
+        state_offset = _integer(value, "state_offset", context)
+        if state_offset < 0:
+            raise EmulatorError(f"{context}.state_offset must not be negative")
+    return RouteCheckpoint(name, frame, expected, crop, scenario, state_offset)
 
 
 def _string(table: dict[str, object], key: str, context: str) -> str:
@@ -220,10 +253,37 @@ def _system_fingerprint(system_directory: Path) -> str:
     root = system_directory / "np2kai"
     digest = hashlib.sha256()
     for path in sorted(item for item in root.rglob("*") if item.is_file()):
-        relative = path.relative_to(root).as_posix().encode()
-        digest.update(len(relative).to_bytes(4, "little"))
-        digest.update(relative)
-        data = path.read_bytes()
+        relative = path.relative_to(root).as_posix()
+        encoded_relative = relative.encode()
+        digest.update(len(encoded_relative).to_bytes(4, "little"))
+        digest.update(encoded_relative)
+        data = _system_file_data(relative, path.read_bytes())
         digest.update(len(data).to_bytes(8, "little"))
         digest.update(data)
     return digest.hexdigest()
+
+
+_MUTABLE_CONFIG_PATHS = {
+    "bmap_dir",
+    "fdfolder",
+    "hdd1file",
+    "hdd2file",
+    "hdfolder",
+    "scsihdd0",
+    "scsihdd1",
+    "scsihdd2",
+    "scsihdd3",
+}
+
+
+def _system_file_data(relative: str, data: bytes) -> bytes:
+    """Remove runtime mount paths that NP2kai rewrites after every run."""
+    if relative.casefold() != "np2kai.cfg":
+        return data
+    lines = []
+    for line in data.splitlines():
+        key, separator, _value = line.partition(b"=")
+        if separator and key.strip().decode("ascii", errors="ignore").casefold() in _MUTABLE_CONFIG_PATHS:
+            continue
+        lines.append(line)
+    return b"\n".join(lines) + b"\n"

@@ -34,13 +34,23 @@ from fermion.routes import RouteManifest, route_cache_key
 from fermion.save_fixtures import (
     SaveFixtureError,
     SaveFixtureManifest,
+    capture_save_fixture,
+    verify_state_scenario,
     write_fixture_hdi,
+    write_save_fixture_manifest,
 )
 from fermion.translation import TranslationCatalog, TranslationError
 
 
 def _path(value: str) -> Path:
     return Path(value).expanduser()
+
+
+def _integer(value: str) -> int:
+    try:
+        return int(value, 0)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(f"invalid integer: {value!r}") from error
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -157,6 +167,23 @@ def build_parser() -> argparse.ArgumentParser:
     save_apply.add_argument("image", type=_path)
     save_apply.add_argument("output", type=_path)
     save_apply.set_defaults(handler=_save_apply)
+    save_capture = save_commands.add_parser(
+        "capture", help="recover a sparse fixture from a serialized NP2kai state"
+    )
+    save_capture.add_argument("image", type=_path)
+    save_capture.add_argument("state", type=_path)
+    save_capture.add_argument("output", type=_path)
+    save_capture.add_argument("--name", required=True)
+    save_capture.add_argument("--description", required=True)
+    save_capture.add_argument("--scenario", required=True)
+    save_capture.add_argument("--template-path", default="FERM/REG_00")
+    save_capture.add_argument("--target-path", default="FERM/REG_01")
+    save_capture.add_argument(
+        "--state-offset",
+        type=_integer,
+        help="explicit slot offset in the state, in decimal or 0x-prefixed hexadecimal",
+    )
+    save_capture.set_defaults(handler=_save_capture)
 
     emulator = commands.add_parser("emulator", help="run headless NP2kai translation tests")
     emulator_commands = emulator.add_subparsers(dest="emulator_command", required=True)
@@ -390,6 +417,30 @@ def _save_apply(args: argparse.Namespace) -> None:
     print(f"slot: {fixture.target_path} sha256={fixture.result_sha256}")
 
 
+def _save_capture(args: argparse.Namespace) -> None:
+    capture = capture_save_fixture(
+        HDIImage.from_file(args.image),
+        args.state.read_bytes(),
+        name=args.name,
+        description=args.description,
+        scenario=args.scenario,
+        template_path=args.template_path,
+        target_path=args.target_path,
+        state_offset=args.state_offset,
+    )
+    write_save_fixture_manifest((capture.fixture,), args.output)
+    print(args.output)
+    print(f"fixture: {capture.fixture.name}")
+    print(f"scenario: {capture.fixture.scenario}")
+    print(f"state-offset: 0x{capture.state_offset:x}")
+    print(
+        f"delta: {capture.changed_bytes} bytes in {len(capture.fixture.hunks)} hunks"
+    )
+    print(
+        f"slot: {capture.fixture.target_path} sha256={capture.fixture.result_sha256}"
+    )
+
+
 def _gm_audit(args: argparse.Namespace) -> None:
     if args.source.is_dir():
         sources = sorted(path for path in args.source.rglob("*") if path.suffix.upper() == ".MES")
@@ -508,6 +559,8 @@ def _emulator_route(args: argparse.Namespace) -> None:
     use_cache = route.cache_frame is not None and not args.no_cache
     cache_state: Path | None = None
     cache_disk: Path | None = None
+    staged_cache_state: Path | None = None
+    staged_cache_disk: Path | None = None
     start_frame = 0
     cache_hit = False
     if use_cache:
@@ -527,6 +580,10 @@ def _emulator_route(args: argparse.Namespace) -> None:
     runtime_image.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(cache_disk if cache_hit else args.image, runtime_image)
 
+    checkpoint_states: dict[int, bytes] = {}
+    scenario_frames = {
+        checkpoint.frame for checkpoint in route.checkpoints if checkpoint.scenario is not None
+    }
     with LibretroFrontend(args.core, args.system_dir, runtime_image, options) as frontend:
         print(f"core: {frontend.core_identity}")
         print(
@@ -543,6 +600,9 @@ def _emulator_route(args: argparse.Namespace) -> None:
             frontend.load_state(cache_state)
 
         def save_prefix(current: int) -> None:
+            nonlocal staged_cache_disk, staged_cache_state
+            if current in scenario_frames:
+                checkpoint_states[current] = frontend.serialize()
             if not use_cache or cache_hit or current != route.cache_frame:
                 return
             assert cache_state is not None and cache_disk is not None
@@ -551,8 +611,8 @@ def _emulator_route(args: argparse.Namespace) -> None:
             temporary_disk = cache_disk.with_suffix(".hdi.tmp")
             frontend.save_state(temporary_state)
             shutil.copyfile(runtime_image, temporary_disk)
-            temporary_disk.replace(cache_disk)
-            temporary_state.replace(cache_state)
+            staged_cache_disk = temporary_disk
+            staged_cache_state = temporary_state
 
         frames = run_checkpoints(
             frontend,
@@ -575,21 +635,53 @@ def _emulator_route(args: argparse.Namespace) -> None:
                 )
                 continue
             raise EmulatorError(f"route did not capture checkpoint {checkpoint.name!r}")
+        checked_frame = frame.crop(*checkpoint.crop) if checkpoint.crop else frame
         output = output_dir / f"{checkpoint.name}.png"
-        frame.write_png(output)
+        checked_frame.write_png(output)
         result = "recorded"
         if checkpoint.sha256 is not None:
-            result = "ok" if frame.sha256 == checkpoint.sha256 else "MISMATCH"
+            result = "ok" if checked_frame.sha256 == checkpoint.sha256 else "MISMATCH"
             if result == "MISMATCH":
                 failures.append(checkpoint.name)
+        crop = (
+            f" crop={','.join(str(value) for value in checkpoint.crop)}"
+            if checkpoint.crop
+            else ""
+        )
+        scenario = ""
+        if checkpoint.scenario is not None:
+            assert checkpoint.state_offset is not None
+            state = checkpoint_states.get(checkpoint.frame)
+            if state is None:
+                raise EmulatorError(
+                    f"route did not capture state for checkpoint {checkpoint.name!r}"
+                )
+            try:
+                verify_state_scenario(state, checkpoint.scenario, checkpoint.state_offset)
+            except SaveFixtureError as error:
+                if checkpoint.name not in failures:
+                    failures.append(checkpoint.name)
+                scenario = (
+                    f" scenario={checkpoint.scenario}@0x{checkpoint.state_offset:x}:"
+                    f"MISMATCH({error})"
+                )
+            else:
+                scenario = f" scenario={checkpoint.scenario}@0x{checkpoint.state_offset:x}:ok"
         print(
             f"checkpoint: {checkpoint.name} frame={checkpoint.frame} "
-            f"sha256={frame.sha256} {result} {output}"
+            f"sha256={checked_frame.sha256}{crop}{scenario} {result} {output}"
         )
     if failures:
+        for temporary in (staged_cache_state, staged_cache_disk):
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
         raise EmulatorError(
             f"{len(failures)} route checkpoint(s) mismatched: {', '.join(failures)}"
         )
+    if staged_cache_state is not None and staged_cache_disk is not None:
+        assert cache_state is not None and cache_disk is not None
+        staged_cache_disk.replace(cache_disk)
+        staged_cache_state.replace(cache_state)
 
 
 def _translation_check(args: argparse.Namespace) -> None:

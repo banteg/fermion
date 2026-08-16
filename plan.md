@@ -53,9 +53,10 @@ Completed work:
 - Named headless routes can drive a writable copy of one translated HDI, capture
   several frames in a single run, reject content or framebuffer hash drift, and
   restore hash-keyed prefix state plus its matching disk snapshot.
-- Sparse, checked-in save fixtures can reconstruct a native loadable slot from
-  hash-pinned `REG` banks, allowing short scenario-entry routes across rebuilt
-  translation images without committing complete game state or disk images.
+- Sparse, checked-in save fixtures can be captured from NP2kai states and
+  reconstruct a native loadable slot from hash-pinned `REG` banks, allowing
+  short scenario-entry routes across rebuilt translation images without
+  committing complete game state or disk images.
 - The catalog can now build a fresh translated image end to end: lime-juice
   recompiles changed-length GM files, Silky's archive offsets are repacked, and
   the copied HDI's nested FAT12 file is safely resized and verified.
@@ -437,21 +438,33 @@ current 6,944-byte global segment to the selected slot, while `0x75` reloads a
 slot and restarts the scenario named at offset `0x1b10`. Opcode `0x7e` merges a
 small progress range into `REG_00`; it is not a user save operation.
 
-The first native fixture was recovered from the same global segment inside an
-ignored NP2kai serialized state and validated through the game's actual `LOAD`
-menu. It starts `F0000.MES` at the first translated scene. Relative to the
-hash-pinned `REG_00` template, the loadable snapshot changes 110 bytes in 35
-contiguous hunks. `runtime/save-fixtures.toml` records only those before/after
-bytes and hashes; the complete 6,944-byte slot remains generated and ignored.
+`fermion save capture` now recovers that global segment directly from an ignored
+NP2kai serialized state. It requires the expected scenario name, ranks candidate
+segments by similarity to `REG_00`, rejects embedded unchanged template copies,
+and refuses ambiguity unless an explicit state offset is supplied. It emits a
+standalone sparse TOML fixture while the complete state and 6,944-byte slot
+remain generated and ignored.
+
+Three native fixtures are checked in and validated through the game's actual
+`LOAD` menu. They resume the translated `FOP.MES` opening, the first translated
+`F0000.MES` scene, and the following `F0001.MES` scene. Relative to the
+hash-pinned `REG_00` template, their snapshots change 114 bytes in 40 contiguous
+hunks, 110 bytes in 35 hunks, and 114 bytes in 40 hunks respectively.
+`runtime/save-fixtures.toml` records only those before/after bytes and hashes.
 
 `fermion save apply` verifies the template and empty target slot, reconstructs
-`REG_01`, verifies result SHA-256
-`d53b209b09c42e969156a1a6e5599b2b2898c27bb058a3a55be0f7aa6abb4f24`,
-and writes a new HDI without touching the input. The game-native load route
-reaches the translated opening of `F0000.MES` in 10,500 frames and reproduced
-framebuffer SHA-256
-`f9abdf0e2bc12996538c9fcffea8dabe22965337822124a29673dac70fb047a0`.
-It measured about 15.5 seconds cold and 3.9 seconds from its exact-build
+`REG_01`, verifies the fixture's result hash, and writes a new HDI without
+touching the input. Three 10,500-frame routes reproduce the FOP and F0000 full
+framebuffer hashes
+`980c7d275c55077af9c5c66729e9b4f74dfb0f7547217f9ebeff20c4f2976e4c`
+and `cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6`,
+plus the F0001 640x308 room hash
+`24f99058f153f312ca3b6fb9a95e77945dae63ded556679b531b488e7f33a9e4`.
+Eight-frame keyboard pulses cross the PC-98 scan without the missed input seen
+with two frames or the repeat seen with thirty. Each route also verifies the
+visible load operation and the exact scenario marker at serialized-state offset
+`0x1c7e0`, so a visually similar fallback path cannot pass. A short fixture
+route measured about 15.5 seconds cold and 3.9 seconds from its exact-build
 8,299-frame cache boundary, versus about 49 seconds for the full prologue route.
 
 The two acceleration layers have distinct roles. Native `REG` fixtures survive
@@ -477,11 +490,9 @@ release gate.
   `FOP.MES` opening narration, while retaining speaker identity, context, and
   editorial review notes.
 - Placeholder/control-token validation and enforced word-boundary wrapping.
-- Cropped framebuffer checkpoints where full-screen animation makes an exact
-  whole-frame hash unnecessarily fragile.
-- Add sparse game-native fixtures at later scenario boundaries as translation
-  reaches them, pairing each with a short boot/load route and translator-facing
-  checkpoint coverage.
+- Continue adding sparse game-native fixtures beyond `F0001.MES` as translation
+  reaches later scenario boundaries, pairing each with a short boot/load route
+  and translator-facing checkpoint coverage.
 - Graphics inventory and translation through `juice-img` where applicable.
 - Reproducible binary-difference release with exact input hashes and emulator
   instructions.

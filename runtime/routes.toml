@@ -137,15 +137,85 @@ taps = [
   "1300:return",
   "1750:return",
   "2200:return",
-  "3200:down",
-  "3600:return",
-  "4300:return",
-  "4800:return",
-  "6500:return",
-  "8300:return",
+  "3200:down:8",
+  "3600:return:8",
+  "4300:return:8",
+  "4800:return:8",
+  "6500:return:8",
+  "8300:return:8",
 ]
+
+[[routes.checkpoints]]
+name = "loading-first-scene"
+frame = 6999
+sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
 
 [[routes.checkpoints]]
 name = "loaded-first-scene"
 frame = 10499
-sha256 = "f9abdf0e2bc12996538c9fcffea8dabe22965337822124a29673dac70fb047a0"
+sha256 = "cdabbd064c71d86149a573c1ae5be14e5b6a97698f21224a036193b45d5cbcf6"
+scenario = "f0000.mes"
+state_offset = 0x1c7e0
+
+[[routes]]
+name = "opening-dialogue-save-fixture-proof"
+description = "Load the sparse REG_01 fixture and verify the translated start of FOP.MES."
+content_sha256 = "08e6fcb60147a036bcb31f9ee93470db8c1456e09ad0dbbcaa6f3b8cb3ef9ee9"
+frames = 10500
+cache_frame = 8299
+taps = [
+  "1000:return",
+  "1300:return",
+  "1750:return",
+  "2200:return",
+  "3200:down:8",
+  "3600:return:8",
+  "4300:return:8",
+  "4800:return:8",
+  "6500:return:8",
+  "8300:return:8",
+]
+
+[[routes.checkpoints]]
+name = "loading-opening-dialogue"
+frame = 6999
+sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
+
+[[routes.checkpoints]]
+name = "loaded-opening-dialogue"
+frame = 10499
+sha256 = "980c7d275c55077af9c5c66729e9b4f74dfb0f7547217f9ebeff20c4f2976e4c"
+scenario = "fop.mes"
+state_offset = 0x1c7e0
+
+[[routes]]
+name = "second-scene-save-fixture-proof"
+description = "Load the sparse REG_01 fixture and verify the start of F0001.MES."
+content_sha256 = "437249632a78c3d8f287f57551913cc87543093dbeb050e78257e2cfd5a9050a"
+frames = 10500
+cache_frame = 8299
+taps = [
+  "1000:return",
+  "1300:return",
+  "1750:return",
+  "2200:return",
+  "3200:down:8",
+  "3600:return:8",
+  "4300:return:8",
+  "4800:return:8",
+  "6500:return:8",
+  "8300:return:8",
+]
+
+[[routes.checkpoints]]
+name = "loading-second-scene"
+frame = 6999
+sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
+
+[[routes.checkpoints]]
+name = "loaded-second-scene"
+frame = 10499
+crop = [0, 0, 640, 308]
+sha256 = "24f99058f153f312ca3b6fb9a95e77945dae63ded556679b531b488e7f33a9e4"
+scenario = "f0001.mes"
+state_offset = 0x1c7e0

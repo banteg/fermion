@@ -71,6 +71,23 @@ def test_converts_rgb565_and_writes_png(tmp_path) -> None:
     assert scanlines == b"\x00" + frame.rgb()[:6] + b"\x00" + frame.rgb()[6:]
 
 
+def test_crops_native_framebuffer_before_hashing() -> None:
+    data = struct.pack("<4H", 0xF800, 0x07E0, 0x001F, 0xFFFF)
+    frame = Frame(2, 2, 4, RETRO_PIXEL_FORMAT_RGB565, data)
+
+    crop = frame.crop(1, 0, 1, 2)
+
+    assert (crop.width, crop.height, crop.pitch) == (1, 2, 2)
+    assert crop.rgb() == bytes([0, 255, 0, 255, 255, 255])
+
+
+def test_rejects_framebuffer_crop_outside_visible_area() -> None:
+    frame = Frame(2, 2, 4, RETRO_PIXEL_FORMAT_RGB565, b"\0" * 8)
+
+    with pytest.raises(EmulatorError, match="exceeds"):
+        frame.crop(1, 1, 2, 2)
+
+
 def test_runs_scheduled_key_transitions_and_captures_final_frame() -> None:
     captured = Frame(1, 1, 2, RETRO_PIXEL_FORMAT_RGB565, b"\x00\x00")
 

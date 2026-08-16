@@ -50,3 +50,107 @@ hunks = [
   { offset = 0x19e4, before = "0000", data = "4a01" },
   { offset = 0x1b10, before = "6d61696e2e6d657300", data = "66303030302e6d6573" },
 ]
+
+[[fixtures]]
+name = "opening-dialogue"
+description = "Start FOP.MES at the translated opening dialogue."
+scenario = "fop.mes"
+template_path = "FERM/REG_00"
+template_sha256 = "74b06b199593f7fda7de93648464031530634f313276471c7dcc639b25005332"
+target_path = "FERM/REG_01"
+target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
+result_sha256 = "e75db736a37516c0878f3d3700316f0aad0917fb1321c2125168c694543be1b8"
+hunks = [
+  { offset = 0x0033, before = "0000", data = "0101" },
+  { offset = 0x0bba, before = "0000000000000000", data = "3c03010101040303" },
+  { offset = 0x0bce, before = "00", data = "c8" },
+  { offset = 0x0bd4, before = "000000000000", data = "1a08100f0c1d" },
+  { offset = 0x0bdb, before = "000000000000000000000000", data = "01020102030405060708090a" },
+  { offset = 0x0be8, before = "00", data = "81" },
+  { offset = 0x0c16, before = "00", data = "01" },
+  { offset = 0x0c18, before = "00", data = "01" },
+  { offset = 0x0c1a, before = "00", data = "ff" },
+  { offset = 0x0c1e, before = "00000000", data = "010201ff" },
+  { offset = 0x0c29, before = "00", data = "02" },
+  { offset = 0x0c2b, before = "00", data = "01" },
+  { offset = 0x0c32, before = "00000000", data = "01973214" },
+  { offset = 0x0fa4, before = "00", data = "01" },
+  { offset = 0x0ffe, before = "00aa00", data = "0200ba" },
+  { offset = 0x1002, before = "00", data = "ab" },
+  { offset = 0x1004, before = "00", data = "da" },
+  { offset = 0x1006, before = "00", data = "fa" },
+  { offset = 0x1008, before = "00", data = "eb" },
+  { offset = 0x1012, before = "00", data = "0f" },
+  { offset = 0x101a, before = "00", data = "05" },
+  { offset = 0x101c, before = "00", data = "ff" },
+  { offset = 0x14b8, before = "00", data = "03" },
+  { offset = 0x14ba, before = "000000", data = "4601f2" },
+  { offset = 0x14be, before = "0000", data = "7501" },
+  { offset = 0x14c8, before = "00", data = "03" },
+  { offset = 0x14ca, before = "000000", data = "46013e" },
+  { offset = 0x14ce, before = "0000000000", data = "5501381601" },
+  { offset = 0x14d4, before = "0000000000", data = "9f014e0103" },
+  { offset = 0x14da, before = "0000", data = "4601" },
+  { offset = 0x1526, before = "00", data = "4e" },
+  { offset = 0x1528, before = "0000", data = "8e01" },
+  { offset = 0x15ca, before = "0000000000000000000000000000000000000000", data = "38165516681682169616a916c916e916fe162517" },
+  { offset = 0x16d8, before = "00", data = "01" },
+  { offset = 0x16da, before = "00", data = "01" },
+  { offset = 0x19d8, before = "00", data = "05" },
+  { offset = 0x19dc, before = "00", data = "05" },
+  { offset = 0x19e0, before = "00", data = "03" },
+  { offset = 0x19e4, before = "0000", data = "4a01" },
+  { offset = 0x1b10, before = "6d61696e2e6d6573", data = "666f702e6d657300" },
+]
+
+[[fixtures]]
+name = "second-scene"
+description = "Start F0001.MES at its scenario entry."
+scenario = "f0001.mes"
+template_path = "FERM/REG_00"
+template_sha256 = "74b06b199593f7fda7de93648464031530634f313276471c7dcc639b25005332"
+target_path = "FERM/REG_01"
+target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
+result_sha256 = "a5283b0cc866010742a27403189270281ef5b9adcc476bf6dc2434aebcba5232"
+hunks = [
+  { offset = 0x0001, before = "00", data = "01" },
+  { offset = 0x0033, before = "0000", data = "0601" },
+  { offset = 0x0bba, before = "0000000000000000", data = "3c03010101040303" },
+  { offset = 0x0bce, before = "00", data = "5c" },
+  { offset = 0x0bd4, before = "000000000000", data = "1a08100e1f17" },
+  { offset = 0x0bdb, before = "000000000000000000000000", data = "01020102030405060708090a" },
+  { offset = 0x0be8, before = "00", data = "81" },
+  { offset = 0x0c16, before = "00", data = "14" },
+  { offset = 0x0c18, before = "00", data = "01" },
+  { offset = 0x0c1a, before = "00", data = "ff" },
+  { offset = 0x0c1e, before = "00000000", data = "010201ff" },
+  { offset = 0x0c29, before = "00", data = "02" },
+  { offset = 0x0c2b, before = "00", data = "01" },
+  { offset = 0x0c32, before = "00000000", data = "01973214" },
+  { offset = 0x0fa4, before = "00", data = "01" },
+  { offset = 0x0ffe, before = "00aa00", data = "0200ba" },
+  { offset = 0x1002, before = "00", data = "ab" },
+  { offset = 0x1004, before = "00", data = "da" },
+  { offset = 0x1006, before = "00", data = "fa" },
+  { offset = 0x1008, before = "00", data = "eb" },
+  { offset = 0x1012, before = "00", data = "32" },
+  { offset = 0x101c, before = "00", data = "ff" },
+  { offset = 0x14b8, before = "00", data = "03" },
+  { offset = 0x14ba, before = "000000", data = "4601f2" },
+  { offset = 0x14be, before = "0000", data = "7501" },
+  { offset = 0x14c8, before = "00", data = "03" },
+  { offset = 0x14ca, before = "000000", data = "46013e" },
+  { offset = 0x14ce, before = "0000000000", data = "5501381601" },
+  { offset = 0x14d4, before = "0000000000", data = "9f014e0103" },
+  { offset = 0x14da, before = "0000", data = "4601" },
+  { offset = 0x1526, before = "00", data = "12" },
+  { offset = 0x1528, before = "00", data = "b9" },
+  { offset = 0x15ca, before = "0000000000000000000000000000000000000000", data = "38165516681682169616a916c916e916fe162517" },
+  { offset = 0x16d8, before = "00", data = "26" },
+  { offset = 0x16da, before = "00", data = "25" },
+  { offset = 0x19d8, before = "00", data = "07" },
+  { offset = 0x19dc, before = "00", data = "05" },
+  { offset = 0x19e0, before = "00", data = "03" },
+  { offset = 0x19e4, before = "0000", data = "4a01" },
+  { offset = 0x1b10, before = "6d61696e2e6d657300", data = "66303030312e6d6573" },
+]

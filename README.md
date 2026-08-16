@@ -230,37 +230,77 @@ uv run fermion save apply \
 ```
 
 Application refuses an in-place output, a pre-existing output, a changed
-template bank, or a non-pristine target slot. The first fixture contains 35
-hunks changing 110 bytes relative to `REG_00`; it reconstructs `REG_01`
-SHA-256 `d53b209b09c42e969156a1a6e5599b2b2898c27bb058a3a55be0f7aa6abb4f24`.
-The game accepts that slot through its native `LOAD` flow and starts
-`F0000.MES`, bypassing the long prologue.
+template bank, or a non-pristine target slot. The manifest currently contains
+scenario-entry fixtures for the translated opening in `FOP.MES`, the first
+scene in `F0000.MES`, and the following `F0001.MES` scene. Each targets
+`REG_01`, so apply fixtures to separate generated HDIs rather than stacking
+them into one image.
 
-Verify that path with its short named route:
+Capture a new fixture from an ignored NP2kai state with the same packaged CLI:
 
 ```sh
+uv run fermion save capture \
+  working/emulator/fermion-translation.hdi \
+  working/emulator/checkpoint.state \
+  working/emulator/checkpoint-fixture.toml \
+  --name checkpoint \
+  --description "Start SCENE.MES at its scenario entry." \
+  --scenario scene.mes
+```
+
+The extractor finds the live 6,944-byte global segment by its expected scenario
+name and similarity to `REG_00`, ignores unchanged template copies embedded in
+the state, and refuses equally plausible candidates. It emits a standalone,
+hash-pinned sparse manifest. `--state-offset 0x...` is available when a new core
+layout needs an explicit disambiguation.
+
+The three fixtures contain respectively 114 bytes in 40 hunks, 110 bytes in 35
+hunks, and 114 bytes in 40 hunks. All three were reconstructed into fresh
+translated images and accepted through the game's native `LOAD` flow. Create
+the other two route inputs, then verify the corresponding short paths:
+
+```sh
+uv run fermion save apply runtime/save-fixtures.toml opening-dialogue \
+  working/emulator/fermion-translation.hdi \
+  working/emulator/opening-dialogue.hdi
+uv run fermion save apply runtime/save-fixtures.toml second-scene \
+  working/emulator/fermion-translation.hdi \
+  working/emulator/second-scene.hdi
+uv run fermion emulator route \
+  runtime/routes.toml \
+  opening-dialogue-save-fixture-proof \
+  working/emulator/opening-dialogue.hdi
 uv run fermion emulator route \
   runtime/routes.toml \
   first-scene-save-fixture-proof \
   working/emulator/first-scene.hdi
+uv run fermion emulator route \
+  runtime/routes.toml \
+  second-scene-save-fixture-proof \
+  working/emulator/second-scene.hdi
 ```
 
-The clean route executes 10,500 frames in about 15.5 seconds on this Mac. Its
-exact-build cache resumes at frame 8,300 and executes the final 2,200 frames in
-about 3.9 seconds, compared with roughly 49 seconds for the full opening route.
+Each route executes 10,500 frames in about 15.5 seconds on this Mac and resumes
+from its exact-build cache at frame 8,300. Eight-frame keyboard pulses reliably
+cross the PC-98 scan without triggering the menu repeat seen with longer holds.
+Every route verifies the visible `LOAD` operation and the exact scenario marker
+inside serialized live state; the F0001 proof also hashes only the 640x308 scene
+area so later dialogue translation will not invalidate its room-load assertion.
 Game-native fixtures are portable across translation rebuilds as long as their
 hash-pinned `REG` banks remain unchanged; libretro states remain the precise,
 core-specific accelerator within one such route. Native loads resume at a
 scenario entry rather than an arbitrary dialogue instruction.
 
-Named routes may declare a `cache_frame`. On a cache miss the command performs
-the full route and stores both the libretro state and its matching writable HDI
-snapshot under ignored `working/emulator/state-cache/`. On a hit it restores
-that exact pair and executes only the suffix. The current route resumes at frame
-26,100, reducing the measured run on this Mac from about 49 seconds to 11.7
-seconds while preserving the original ×20 CPU profile and final framebuffer
-hash. The source HDI is always copied before NP2kai mounts it, so emulator writes
-cannot invalidate the hash-pinned build artifact.
+Named routes may declare a `cache_frame`. On a successful cache miss the command
+performs the full route and commits both the libretro state and its matching
+writable HDI snapshot under ignored `working/emulator/state-cache/`; a failed
+route discards the staged prefix. On a hit it restores that exact pair and
+executes only the suffix. NP2kai's rewritten runtime mount path is excluded from
+the otherwise content-sensitive system fingerprint. The current full route
+resumes at frame 26,100, reducing the measured run on this Mac from about 49
+seconds to 11.7 seconds while preserving the original ×20 CPU profile and final
+framebuffer hash. The source HDI is always copied before NP2kai mounts it, so
+emulator writes cannot invalidate the hash-pinned build artifact.
 
 The cache is deliberately invalidated by any HDI, core, firmware/config,
 effective-option, or prefix-input change. It accelerates repeated checks of one

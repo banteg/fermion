@@ -196,6 +196,28 @@ class Frame:
     def sha256(self) -> str:
         return hashlib.sha256(self.rgb()).hexdigest()
 
+    def crop(self, x: int, y: int, width: int, height: int) -> Frame:
+        """Return a tightly packed native-pixel crop of the visible framebuffer."""
+        if x < 0 or y < 0 or width < 1 or height < 1:
+            raise EmulatorError("framebuffer crop must have a non-negative origin and positive size")
+        if x + width > self.width or y + height > self.height:
+            raise EmulatorError(
+                f"framebuffer crop {x},{y},{width},{height} exceeds "
+                f"{self.width}x{self.height}"
+            )
+        bytes_per_pixel = 4 if self.pixel_format == RETRO_PIXEL_FORMAT_XRGB8888 else 2
+        if self.pitch < self.width * bytes_per_pixel:
+            raise EmulatorError("framebuffer pitch is shorter than one visible row")
+        if len(self.data) < self.pitch * self.height:
+            raise EmulatorError("framebuffer data is truncated")
+        row_size = width * bytes_per_pixel
+        start_x = x * bytes_per_pixel
+        data = b"".join(
+            self.data[row * self.pitch + start_x : row * self.pitch + start_x + row_size]
+            for row in range(y, y + height)
+        )
+        return Frame(width, height, row_size, self.pixel_format, data)
+
     def write_png(self, path: Path) -> None:
         """Write the frame as a dependency-free RGB PNG."""
         rgb = self.rgb()
@@ -475,15 +497,19 @@ class LibretroFrontend:
     def mouse_up(self, button: int) -> None:
         self._mouse_buttons.discard(button)
 
-    def save_state(self, path: Path) -> None:
+    def serialize(self) -> bytes:
+        """Serialize the complete core state into an immutable byte string."""
         size = self.core.retro_serialize_size()
         if not size:
             raise EmulatorError("libretro core reported an empty save state")
         buffer = ctypes.create_string_buffer(size)
         if not self.core.retro_serialize(buffer, size):
             raise EmulatorError("libretro core failed to serialize state")
+        return buffer.raw
+
+    def save_state(self, path: Path) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(buffer.raw)
+        path.write_bytes(self.serialize())
 
     def load_state(self, path: Path) -> None:
         state = path.read_bytes()
