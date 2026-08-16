@@ -3,7 +3,7 @@ version = 1
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the title menu and verify the first translated exchange."
-content_sha256 = "000cf754cddcf64f231c56187876e7e0a4b6794910bbe87f9547ce72435ecdfb"
+content_sha256 = "4480860f8a45b7c29a0223fd0e942fb287f111687236528acdd31359db75c25a"
 frames = 4500
 taps = [
   "1000:return",

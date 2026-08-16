@@ -48,6 +48,9 @@ Completed work:
   and translator notes. The CLI verifies its file hashes and exact text records.
 - Named headless routes can drive one translated HDI, capture several frames in
   a single run, and reject content or framebuffer hash drift.
+- The catalog can now build a fresh translated image end to end: lime-juice
+  recompiles changed-length GM files, Silky's archive offsets are repacked, and
+  the copied HDI's nested FAT12 file is safely resized and verified.
 
 The structural audit covers 96 on-disk MES copies representing 77 unique
 SHA-256 hashes: 130,119 instructions and 23,015 address operands when duplicate
@@ -266,8 +269,12 @@ pristine `MAIN.MES` and `FOP.MES` files. This keeps editorial decisions and
 runtime discoveries reviewable while generated MES and HDI artifacts remain
 ignored.
 
-The slice must survive decompile, edit, compile, media replacement, boot, and
-interactive execution before expanding translation scope.
+The current catalog slice now survives catalog validation, decompile, edit,
+compile, archive repacking, filesystem-aware media replacement, unattended
+boot, and exact framebuffer checks. It is safe to expand while keeping wording
+marked as provisional where the notes still identify uncertainty. An explicit
+speaker-labelled exchange and an additional in-scene command menu remain before
+calling the narrative milestone complete.
 
 ## Completed enabling milestone: self-driving runtime tests
 
@@ -319,6 +326,33 @@ opening-warning hash
 opening-request hash
 `16755d4656c6606f82c8ba4fa7c6bffdcd6d1b13765cd5f885a1e602e3e1dc7e`.
 
+## Completed enabling milestone: catalog-driven image builds
+
+### 8. Remove the same-total-size constraint — complete
+
+`fermion translation build` now treats `translations/fermion.toml` as the
+build input. For every catalog file it:
+
+- verifies the pristine extracted MES hash, original offset, mode, and text;
+- decompiles GM through lime-juice and edits the exact text node corresponding
+  to the stable pristine offset;
+- recompiles with local-target relocation, then checks instruction order,
+  unrelated text, external MLL targets, and the complete structural audit;
+- rebuilds the containing Silky's archive in its original file order while
+  preserving its raw filename fields; and
+- locates the PC-98 partition inside the Anex86 HDI, reallocates the nested FAT12
+  file's cluster chain, updates both FAT copies and its directory entry, and
+  verifies the result without modifying the input image.
+
+The first clean catalog build grows `MAIN.MES` from 7,310 to 7,318 bytes and
+`DISKA` from 1,090,166 to 1,090,174 bytes. Starting from pristine image SHA-256
+`533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`, it
+produces `fermion-translation.hdi` SHA-256
+`4480860f8a45b7c29a0223fd0e942fb287f111687236528acdd31359db75c25a`.
+The named opening route passes all three pre-existing framebuffer hashes on
+that fresh image, proving that changed-size media reconstruction preserves live
+control flow and rendering.
+
 ## Tooling conventions and gates
 
 - Python tooling uses `uv` and the packaged `fermion` entry point.
@@ -332,9 +366,6 @@ opening-request hash
 
 ## Later work
 
-- Compile catalog entries into rebuilt GM sources/MES files instead of applying
-  each translation probe manually.
-- Filesystem-aware replacement of translated files when their sizes change.
 - Expand the checked-in catalog through the rest of the opening, including
   speaker identity, context, and editorial review notes.
 - Placeholder/control-token validation and enforced word-boundary wrapping.

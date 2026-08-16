@@ -4,8 +4,9 @@
 and the reasoning behind it. It intentionally contains text and metadata, not
 compiled MES files or original game media.
 
-Each `[[files]]` table identifies one pristine MES file by basename and
-SHA-256. Each `[[entries]]` table records:
+Each `[[files]]` table identifies one pristine MES file by its logical
+`DISKA/FILENAME` archive path, extracted source path, and SHA-256. Each
+`[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - the pristine file, text-opcode offset, and source mode;
@@ -38,7 +39,7 @@ every source offset, mode, and Japanese string:
 
 ```sh
 uv run fermion translation check translations/fermion.toml \
-  --source-dir working/archives/disk-a \
+  --source-dir working/archives \
   --verbose
 ```
 
@@ -47,6 +48,21 @@ For an incremental batch:
 1. Add or revise catalog entries while preserving stable IDs.
 2. Record translation alternatives and uncertainties in `notes`.
 3. Validate against the pristine sources.
-4. Build only into ignored `working/` paths.
+4. Build a fresh image from the pristine copy:
+
+   ```sh
+   uv run fermion translation build \
+     translations/fermion.toml \
+     working/archives \
+     working/emulator/fermion-debug.hdi \
+     working/emulator/fermion-translation.hdi \
+     --juice working/vendor/lime-juice-build/juice
+   ```
+
 5. Add or update a named route in `runtime/routes.toml` when the text is
    reachable automatically, then promote its status after the runtime check.
+
+The build writes only ignored artifacts. It compiles each line through
+lime-juice, verifies unchanged text and external MLL targets, repacks the
+containing installer archive, and updates the copied HDI's FAT filesystem. MES
+and archive files no longer need to preserve their original total sizes.

@@ -37,6 +37,31 @@ def test_extracts_files(tmp_path) -> None:
     assert (tmp_path / "MAIN.MES").read_bytes() == b"main"
 
 
+def test_rebuilds_archive_with_changed_length() -> None:
+    original = make_archive([("MAIN.MES", b"main"), ("TITLE.GP4", b"image")])
+    archive = InstallerArchive(original)
+
+    rebuilt = archive.rebuild({"main.mes": b"translated text"})
+    result = InstallerArchive(rebuilt)
+
+    assert [entry.name for entry in result.entries] == ["MAIN.MES", "TITLE.GP4"]
+    assert result.read(result.entry("MAIN.MES")) == b"translated text"
+    assert result.read(result.entry("TITLE.GP4")) == b"image"
+    assert archive.rebuild({}) == original
+
+
+def test_rejects_unknown_archive_replacement() -> None:
+    archive = InstallerArchive(make_archive([("MAIN.MES", b"main")]))
+
+    with pytest.raises(ArchiveError, match="does not contain"):
+        archive.rebuild({"MISSING.MES": b"translation"})
+
+
+def test_rejects_case_insensitive_duplicate_archive_names() -> None:
+    with pytest.raises(ArchiveError, match="duplicate filename"):
+        InstallerArchive(make_archive([("MAIN.MES", b"one"), ("main.mes", b"two")]))
+
+
 def test_rejects_payload_outside_archive() -> None:
     data = bytearray(make_archive([("MAIN.MES", b"main")]))
     struct.pack_into("<I", data, 2 + 15, len(data) + 1)

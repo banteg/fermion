@@ -1,17 +1,19 @@
-version = 1
+version = 2
 game = "Fermion: Mirai kara no Houmonsha"
 
 [[files]]
-name = "MAIN.MES"
+file = "DISKA/MAIN.MES"
+source = "disk-a/MAIN.MES"
 sha256 = "8182bbd7d4983e8b054cc5ed81d7feadbc1c832d1223a948ed3fe2b94091e703"
 
 [[files]]
-name = "FOP.MES"
+file = "DISKA/FOP.MES"
+source = "disk-a/FOP.MES"
 sha256 = "90062762e0c553222d66adad5668a6c089e7e7104b9f5ed618e3586bdc5b004d"
 
 [[entries]]
 id = "main-menu-new-game"
-file = "MAIN.MES"
+file = "DISKA/MAIN.MES"
 offset = 0x1559
 source_mode = 1
 target_mode = 2
@@ -25,7 +27,7 @@ that lime-juice relocates General Message control targets correctly.
 
 [[entries]]
 id = "main-menu-load"
-file = "MAIN.MES"
+file = "DISKA/MAIN.MES"
 offset = 0x1570
 source_mode = 1
 target_mode = 2
@@ -39,7 +41,7 @@ and leaves comfortable horizontal space.
 
 [[entries]]
 id = "main-menu-change-name"
-file = "MAIN.MES"
+file = "DISKA/MAIN.MES"
 offset = 0x1588
 source_mode = 1
 target_mode = 2
@@ -53,7 +55,7 @@ selection cursor and surrounding geometry remain intact.
 
 [[entries]]
 id = "opening-doctor-warning"
-file = "FOP.MES"
+file = "DISKA/FOP.MES"
 offset = 0x016c
 source_mode = 1
 target_mode = 2
@@ -70,7 +72,7 @@ comma, and periods are all runtime-verified.
 
 [[entries]]
 id = "opening-request-to-see-him"
-file = "FOP.MES"
+file = "DISKA/FOP.MES"
 offset = 0x0193
 source_mode = 1
 target_mode = 2
@@ -88,7 +90,7 @@ The catalog preview word-wraps this sentence without changing the stored line.
 
 [[entries]]
 id = "opening-doctor-this-way"
-file = "FOP.MES"
+file = "DISKA/FOP.MES"
 offset = 0x01bc
 source_mode = 1
 target_mode = 2
@@ -98,7 +100,8 @@ status = "runtime-proof"
 box_width = 61
 notes = """
 The source also says わかりました (“I understand/very well”). It was omitted
-from the first runtime probe to compensate for the preceding line's growth
-while keeping FOP.MES exactly the same size. Restore that nuance once FAT-aware
-file growth removes the temporary same-total-size constraint.
+from the first runtime probe to compensate for the preceding line's growth.
+Catalog builds now support file growth, so the technical constraint is gone;
+restore that nuance during the next editorial pass rather than silently
+changing an already recorded runtime proof.
 """

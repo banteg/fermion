@@ -71,10 +71,11 @@ uv run fermion binary replace-exact \
 ## Translation catalog
 
 The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
-the source of truth for translated text. Each entry keeps a stable ID, pristine
-MES filename and offset, original Japanese, current English, encoding modes,
-status, wrapping width, and free-form translator notes. Generated MES files,
-disk images, and screenshots remain under ignored `working/` paths.
+the source of truth for translated text. Each entry keeps a stable ID, logical
+archive/file path and pristine offset, original Japanese, current English,
+encoding modes, status, wrapping width, and free-form translator notes.
+Generated MES files, disk images, and screenshots remain under ignored
+`working/` paths.
 
 Validate the catalog on its own, or verify every original line against a
 hash-checked pristine extraction:
@@ -82,13 +83,48 @@ hash-checked pristine extraction:
 ```sh
 uv run fermion translation check translations/fermion.toml
 uv run fermion translation check translations/fermion.toml \
-  --source-dir working/archives/disk-a \
+  --source-dir working/archives \
   --verbose
 ```
 
 The verbose view includes a word-wrapped preview for dialogue entries. See
 [`translations/README.md`](translations/README.md) for the entry conventions
 and incremental translation workflow.
+
+Build lime-juice from the conventional sibling checkout without writing build
+artifacts into that repository:
+
+```sh
+cmake -S "$HOME/dev/FuzionCD/lime-juice" \
+  -B working/vendor/lime-juice-build \
+  -DCMAKE_BUILD_TYPE=Release
+cmake --build working/vendor/lime-juice-build --parallel
+```
+
+Then compile every catalog entry and produce a fresh translated HDI from the
+pristine working copy:
+
+```sh
+uv run fermion translation build \
+  translations/fermion.toml \
+  working/archives \
+  working/emulator/fermion-debug.hdi \
+  working/emulator/fermion-translation.hdi \
+  --juice working/vendor/lime-juice-build/juice
+```
+
+The command verifies the pristine hashes and source anchors, decompiles and
+compiles GM through lime-juice, audits the rebuilt control flow, repacks the
+changed-length `DISKA`, resizes its FAT12 cluster chain if necessary, and
+verifies every layer in the output image. Generated RKT, MES, archive, and JSON
+report files are kept under ignored `working/translation-build/`.
+
+The underlying HDI support is also available directly:
+
+```sh
+uv run fermion hdi ls working/emulator/fermion-debug.hdi
+uv run fermion hdi replace-file input.hdi FERM/DISKA rebuilt-DISKA output.hdi
+```
 
 ## Headless runtime tests
 
@@ -115,7 +151,7 @@ Run an exact number of frames, inject one or more key taps, and capture the fina
 640x400 framebuffer. A tap uses `FRAME:KEY[:HOLD_FRAMES]`:
 
 ```sh
-uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+uv run fermion emulator run working/emulator/fermion-translation.hdi \
   --frames 4500 \
   --tap 1000:return \
   --tap 1300:return \
@@ -138,7 +174,7 @@ checkpoints. It also verifies the translated HDI's content hash before booting:
 uv run fermion emulator route \
   runtime/routes.toml \
   opening-translation-proof \
-  working/emulator/fermion-exchange.hdi
+  working/emulator/fermion-translation.hdi
 ```
 
 Checkpoint PNGs are written under ignored
@@ -147,9 +183,9 @@ Checkpoint PNGs are written under ignored
 Save states can turn the expensive boot route into a short checkpoint test:
 
 ```sh
-uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+uv run fermion emulator run working/emulator/fermion-translation.hdi \
   --frames 1200 --state-out working/emulator/information.state
-uv run fermion emulator run working/emulator/fermion-exchange.hdi \
+uv run fermion emulator run working/emulator/fermion-translation.hdi \
   --state-in working/emulator/information.state \
   --frames 200 --tap 1:return \
   --capture working/emulator/mode-selector.png

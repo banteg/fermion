@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import NoReturn
 
 from fermion.archive import ArchiveError, InstallerArchive
@@ -22,8 +22,10 @@ from fermion.emulator import (
 )
 from fermion.fat import FAT12, FATError
 from fermion.gm import GMError, GMFile
+from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mes import MESProbeError, probe_roundtrip
 from fermion.mz import MZError, MZImage
+from fermion.pipeline import build_translation_image
 from fermion.routes import RouteManifest
 from fermion.translation import TranslationCatalog, TranslationError
 
@@ -121,6 +123,20 @@ def build_parser() -> argparse.ArgumentParser:
     load_image.add_argument("destination", type=_path)
     load_image.set_defaults(handler=_mz_extract_load_image)
 
+    hdi = commands.add_parser("hdi", help="inspect and patch Anex86 HDI filesystems")
+    hdi_commands = hdi.add_subparsers(dest="hdi_command", required=True)
+    hdi_list = hdi_commands.add_parser("ls", help="list FAT files in an HDI")
+    hdi_list.add_argument("image", type=_path)
+    hdi_list.set_defaults(handler=_hdi_list)
+    hdi_replace = hdi_commands.add_parser(
+        "replace-file", help="replace one FAT file and safely resize its cluster chain"
+    )
+    hdi_replace.add_argument("image", type=_path)
+    hdi_replace.add_argument("path", help="DOS path inside the HDI, such as FERM/DISKA")
+    hdi_replace.add_argument("replacement", type=_path)
+    hdi_replace.add_argument("output", type=_path)
+    hdi_replace.set_defaults(handler=_hdi_replace_file)
+
     emulator = commands.add_parser("emulator", help="run headless NP2kai translation tests")
     emulator_commands = emulator.add_subparsers(dest="emulator_command", required=True)
     emulator_run = emulator_commands.add_parser(
@@ -209,6 +225,23 @@ def build_parser() -> argparse.ArgumentParser:
     )
     translation_check.add_argument("--verbose", action="store_true")
     translation_check.set_defaults(handler=_translation_check)
+    translation_build = translation_commands.add_parser(
+        "build", help="build translated MES files, archives, and a bootable copied HDI"
+    )
+    translation_build.add_argument("catalog", type=_path)
+    translation_build.add_argument("source_dir", type=_path)
+    translation_build.add_argument("image", type=_path)
+    translation_build.add_argument("output", type=_path)
+    translation_build.add_argument("--juice", type=_path, default=Path("juice"))
+    translation_build.add_argument(
+        "--work-dir", type=_path, default=Path("working/translation-build")
+    )
+    translation_build.add_argument(
+        "--archive-directory",
+        default="FERM",
+        help="DOS directory containing DISKA/DISKB/DISKC/DISKD",
+    )
+    translation_build.set_defaults(handler=_translation_build)
     return parser
 
 
@@ -267,6 +300,24 @@ def _mz_extract_load_image(args: argparse.Namespace) -> None:
     image.extract(args.destination)
     print(args.destination)
     print(f"entry-offset: 0x{image.entry_offset:x}")
+
+
+def _hdi_list(args: argparse.Namespace) -> None:
+    image = HDIImage.from_file(args.image)
+    for partition, entry in image.entries():
+        kind = "d" if entry.is_directory else "f"
+        print(f"{partition.index}:{partition.name} {kind} {entry.size:>8} {entry.path}")
+
+
+def _hdi_replace_file(args: argparse.Namespace) -> None:
+    source = HDIImage.from_file(args.image)
+    before = source.read_file(args.path)
+    replacement = args.replacement.read_bytes()
+    result = write_replaced_hdi(args.image, {args.path: replacement}, args.output)
+    after = result.read_file(args.path)
+    print(args.output)
+    print(f"path: {args.path}")
+    print(f"size: {len(before)} -> {len(after)}")
 
 
 def _gm_audit(args: argparse.Namespace) -> None:
@@ -432,6 +483,32 @@ def _translation_check(args: argparse.Namespace) -> None:
                 print(f"  note: {line}")
 
 
+def _translation_build(args: argparse.Namespace) -> None:
+    catalog = TranslationCatalog.from_file(args.catalog)
+    result = build_translation_image(
+        catalog,
+        args.source_dir,
+        args.image,
+        args.output,
+        args.work_dir,
+        args.juice,
+        archive_directory=PurePosixPath(args.archive_directory),
+    )
+    for built in result.files:
+        print(
+            f"file: {built.catalog_file.file} {built.source_size}->{built.output_size} "
+            f"sha256={built.output_sha256}"
+        )
+    for archive in result.archives:
+        print(
+            f"archive: {archive.image_path} {archive.source_size}->{archive.output_size} "
+            f"sha256={archive.output_sha256}"
+        )
+    print(f"image: {result.output_path}")
+    print(f"sha256: {result.source_sha256} -> {result.output_sha256}")
+    print(f"report: {result.report_path}")
+
+
 def _fail(message: str) -> NoReturn:
     raise SystemExit(f"fermion: error: {message}")
 
@@ -449,6 +526,7 @@ def main() -> None:
         EmulatorError,
         FATError,
         GMError,
+        HDIError,
         MESProbeError,
         MZError,
         OSError,
