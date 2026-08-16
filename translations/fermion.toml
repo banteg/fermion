@@ -6464,11 +6464,11 @@ offset = 0x02ff
 source_mode = 1
 target_mode = 2
 source = "西暦・・・１９９６年へ・・・・・・・・・・・・・・・・・・。"
-translation = "Toward the year... 1996..."
+translation = "To the year 1996..."
 speaker = "system"
 context = "Opening time card for Connie's arrival in 1996."
 status = "qa-ready"
-notes = "The directional へ makes this a journey toward 1996, not merely a date caption."
+notes = "The directional へ makes this a journey to 1996, not merely a date caption."
 
 [[entries]]
 id = "arrival-transition-silence"
@@ -6529,11 +6529,11 @@ offset = 0x039e
 source_mode = 1
 target_mode = 2
 source = "あたしは、ずきずきと痛む頭を抑えながら考えていた。"
-translation = "I tried to think while clutching my throbbing head."
+translation = "I try to think, clutching my throbbing head."
 speaker = "Connie"
 context = "Arrival-site narration as Connie assesses her condition."
 status = "qa-ready"
-notes = "ずきずき establishes the recurring pounding quality of the transit headache."
+notes = "ずきずき establishes the recurring pounding quality of the transit headache; the present tense matches the surrounding arrival narration."
 
 [[entries]]
 id = "exploration-command-look"
@@ -6797,11 +6797,11 @@ offset = 0x06c0
 source_mode = 1
 target_mode = 2
 source = "【コニー】（外の空気が・・・・・・・・、澄んでいる・・・・・・・・。）"
-translation = "[CONNIE] (The air out here... is so clean...)"
+translation = "[CONNIE] (The air out here... is so clear...)"
 speaker = "コニー"
 context = "Connie breathes unpolluted outdoor air for the first time."
 status = "qa-ready"
-notes = "澄んでいる is rendered environmentally as 'clean,' consistent with the premise."
+notes = "Using 'clear' preserves 澄んでいる and leaves 'clean' for 綺麗な空気 in the following line."
 
 [[entries]]
 id = "arrival-not-her-era"
@@ -7161,11 +7161,11 @@ offset = 0x0acf
 source_mode = 1
 target_mode = 2
 source = "【コニー】（この時代の雨は、まだ痛くない・・・・・・・・・。）"
-translation = "[CONNIE] (Rain in this age doesn't burn... not yet...)"
+translation = "[CONNIE] (Rain in this age doesn't hurt... not yet...)"
 speaker = "コニー"
 context = "Connie compares the clean rain with the corrosive rain of 2296."
 status = "qa-ready"
-notes = "痛くない is interpreted through the immediately preceding acid-rain reference; 'not yet' preserves the ominous まだ."
+notes = "Using 'doesn't hurt' translates 痛くない directly; the preceding acid-rain reference supplies the corrosive context, while 'not yet' preserves the ominous まだ."
 
 [[entries]]
 id = "arrival-rain-pelts-her"
@@ -7371,11 +7371,11 @@ offset = 0x0ced
 source_mode = 1
 target_mode = 2
 source = "声を出すのも辛い。"
-translation = "Even making a sound hurts."
+translation = "Even making a sound is hard."
 speaker = "Connie"
 context = "Connie is too weak to call for help."
 status = "qa-ready"
-notes = "Sound' works in Mini form without forcing the audience to decide whether she can produce human speech."
+notes = "辛い describes the effort as hard in Connie's weakened state. 'Sound' works in Mini form without forcing whether she can produce human speech."
 
 [[entries]]
 id = "arrival-panting"
@@ -7436,11 +7436,11 @@ offset = 0x0d87
 source_mode = 1
 target_mode = 2
 source = "あたしの目の前で、気配がすると同時に女の子の声が聞こえた。"
-translation = "Only when she is right in front of me do I sense someone and hear a girl's voice."
+translation = "Right in front of me, I sense someone just as I hear a girl's voice."
 speaker = "Connie"
 context = "Connie realizes how close the stranger came undetected."
 status = "qa-ready"
-notes = "The simultaneity matters: sight, presence, and voice register only at the final moment."
+notes = "The simultaneity matters: the presence and voice register together only once the girl is directly in front of Connie."
 
 [[entries]]
 id = "arrival-a-human"
@@ -7553,11 +7553,11 @@ offset = 0x0ec4
 source_mode = 1
 target_mode = 2
 source = "ぴりぴりと張り詰めた緊張感がほぐれた。"
-translation = "The taut edge of my fear begins to ease."
+translation = "The prickling tension begins to ease."
 speaker = "Connie"
 context = "The girl's gentle scent and manner reduce Connie's threat response."
 status = "qa-ready"
-notes = "ぴりぴり describes a prickling, tightly wound tension; 'taut edge' keeps it embodied."
+notes = "Using 'prickling tension' preserves ぴりぴりと張り詰めた緊張感 without turning Connie's threat assessment into fear."
 
 [[entries]]
 id = "arrival-girl-touches"
