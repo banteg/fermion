@@ -625,6 +625,32 @@ This is a structurally build-verified, QA-ready slice, not a runtime-verified
 one: no trustworthy live F0003 state exists yet. The first human playtest must
 capture a native F0003 fixture for subsequent short automated routes.
 
+## QA incident: F0001 post-knock fade
+
+The apparent stall after `F0001.MES:0x3397` ("Even an ordinary knock has a
+pattern my ears remember.") does not reproduce as a translated-script control-
+flow failure. In the current QA build, the translated line begins at relocated
+offset `0x4d03`; the following reply and graphics block execute through to
+"Dr. Kanzaki enters." with the GM interpreter cursor at `0x4dfb`. The serialized
+NP2kai state contains the complete 26,045-byte F0001 payload, and every local
+target in the block remains an instruction boundary.
+
+The same exact-build checkpoint passes under headless NP2kai with both 13 MB and
+1 MB of extended memory. The fade needs between 300 and 600 emulated frames.
+The manual NP2debug run was configured at the expensive x20 CPU multiplier with
+no frame skipping and was already reporting about 10 FPS before the fade; at
+that rate the transition alone takes roughly 30 to 60 seconds, and its graphics
+work can reduce throughput further while starving audio. Treat the observed
+black screen and broken-up music as an NP2debug/CrossOver performance problem
+unless it also reproduces at x4 or x8 with a stable frame rate.
+
+NP2debug's generated `Fermion.ini.ini` also drifted to `ExMemory=1` even though
+the intended `Fermion.ini` specifies 13 MB. That mismatch did not reproduce the
+stall, but manual QA should still use 13 MB so it matches the supported profile.
+Exact mid-scene libretro states remain tied to the core, configuration, and
+translated image; only the sparse native scenario-entry fixture is portable
+across translation rebuilds.
+
 ## Locked translation and release contract
 
 - `translations/fermion.toml` is the only canonical translation source. TSV,
