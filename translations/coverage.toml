@@ -189,4 +189,3 @@ description = "Every decoded F0008 record from Connie watching Yuki cook through
 file = "DISKB/F0008.MES"
 start = 0x0558
 end = 0x2d44
-
