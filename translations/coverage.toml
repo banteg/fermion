@@ -180,3 +180,13 @@ description = "Every decoded F0007 record from Connie approaching Yuki in the ki
 file = "DISKB/F0007.MES"
 start = 0x04e3
 end = 0x4c26
+
+[[scopes]]
+id = "connie-meets-kanakos-sister"
+description = "Every decoded F0008 record from Connie watching Yuki cook through Ruri's arrival, the genetic-sample argument, and Kanako inviting Connie to her room."
+
+[[scopes.ranges]]
+file = "DISKB/F0008.MES"
+start = 0x0558
+end = 0x2d44
+

@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 2,502 canonical records covering 3,147 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0007.MES`.
+The current catalog contains 2,681 canonical records covering 3,412 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0008.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -271,6 +271,16 @@ translation keeps Yuki's warm adult voice distinct from Connie's blunt hunter
 calculus, preserves every spoken refusal and the source narration around it,
 and carries the Kanzaki scent and reaction clues without resolving them early.
 No trustworthy live F0007 state exists yet, so it remains `qa-ready` pending a
+human playtest and native fixture capture.
+
+The ninth closed scope is `connie-meets-kanakos-sister`: all 265 physical
+text records in `F0008.MES`, from Connie watching Yuki cook through Ruri's
+arrival, the transformation proof, the genetic-sample argument, and Kanako
+inviting Connie to her room. They are managed as 179 catalog entries,
+including 98 composite display messages; all anchors are translated and none
+are excluded or pending. Ruri's blunt skeptic voice is kept distinct from
+Yuki's warm teasing and Connie's polite first-meeting register. No
+trustworthy live F0008 state exists yet, so it remains `qa-ready` pending a
 human playtest and native fixture capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
