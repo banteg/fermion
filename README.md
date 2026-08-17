@@ -222,10 +222,10 @@ anchors in ten MES files. The QA build grows `F0001.MES` from 17,509 to
 26,006 bytes, `F0002.MES` from 4,402 to 5,936 bytes, `F0003.MES` from 16,938
 to 25,234 bytes, `F0004.MES` from 13,672 to 17,949 bytes, and `F0005.MES`
 from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,637
-bytes and `F0007.MES` from 19,560 to 26,119 bytes. Starting from pristine image
+bytes and `F0007.MES` from 19,560 to 26,121 bytes. Starting from pristine image
 SHA-256 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`47a0fdb287b061eb89f9697e2b5129973e326e066125a92fe13973559a0a25c7`.
+`578415dff02591b14c3a5980998457f5a094c18af5aa0ebe8633a3f12e41afdb`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 
