@@ -173,8 +173,9 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 2,813 canonical records covering 3,603 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0009.MES`.
+The current catalog contains 2,970 canonical records covering 3,818 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through the
+`F0010L.MES` route.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -292,6 +293,16 @@ drops Big Sis for bare Connie; the English age lock keeps the sleepy
 observation from saying she looks underage. No trustworthy live F0009 state
 exists yet, so it remains `qa-ready` pending a human playtest and native
 fixture capture.
+
+The eleventh closed scope is `ruri-nighttime-route`: all 215 physical text
+records in `F0010L.MES`, from Kanako falling asleep through Connie reconciling
+with Ruri, demonstrating Mini form, and changing back. They are managed as 157
+catalog entries, including 83 composite display messages; all anchors are
+translated and none are excluded or pending. Connie's player-facing age is
+about eighteen under the disclosed English-release policy, while her three
+years of lived experience remain explicit. No trustworthy live F0010L state
+exists yet, so it remains `qa-ready` pending a human playtest and native fixture
+capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 136 anchors are

@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "f43a3a7e64c4a2aecf7618bc60d9ef72767b22f05e6d5515664f1743e88c812a"
+content_sha256 = "7abcdee2de0f77ade4e9e3bdbadf141ab67d4253986741e1ad9b43c4e209a7a9"
 frames = 34200
 cache_frame = 26099
 taps = [

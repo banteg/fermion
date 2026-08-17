@@ -198,3 +198,12 @@ description = "Every decoded F0009 record from Kanako pulling Connie upstairs th
 file = "DISKB/F0009.MES"
 start = 0x0445
 end = 0x1f3a
+
+[[scopes]]
+id = "ruri-nighttime-route"
+description = "Every decoded F0010L record from Kanako falling asleep through Connie reconciling with Ruri, demonstrating Mini form, and changing back."
+
+[[scopes.ranges]]
+file = "DISKB/F0010L.MES"
+start = 0x051c
+end = 0x2526

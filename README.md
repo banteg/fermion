@@ -174,7 +174,7 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Eight focused story scopes are now closed. `opening-prologue` accounts for all
+Eleven focused story scopes are now closed. `opening-prologue` accounts for all
 118 `FOP.MES` records as 97 translated anchors and 21 explicit title/layout
 exclusions. `project-d-launch-and-first-arrival` accounts for all 462
 `F0001.MES`/`F0002.MES` records as 454 canonical translations, including eight
@@ -184,7 +184,10 @@ context-safe duplicate collapses. `departure-eve-with-kanzaki` covers all 398
 `F0004.MES` records, and `connie-explains-her-mission` covers all 343
 `F0005.MES` records, `connie-meets-kanakos-mother` covers all 337 `F0006.MES`
 records, and `connie-and-yuki-kitchen-encounter` covers all 644 `F0007.MES`
-records. None of those seven story scopes has an excluded or pending anchor. A
+records. `connie-meets-kanakos-sister` covers all 265 `F0008.MES` records,
+`first-night-in-the-takano-house` covers all 191 `F0009.MES` records, and
+`ruri-nighttime-route` covers all 215 `F0010L.MES` records. None of those
+focused story scopes has an excluded or pending anchor. A
 deliberately untranslated line must be source-anchored in the coverage file
 with a reason; `--require-complete` turns any remaining pending line into an
 error.
@@ -217,17 +220,17 @@ changed-length disk archives, resizes their FAT12 cluster chains if necessary,
 and verifies every layer in the output image. Generated RKT, MES, archive, and
 JSON report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 2,813 canonical entries covering 3,603 physical
-anchors in twelve MES files. The QA build grows `F0001.MES` from 17,509 to
+The current catalog contains 2,970 canonical entries covering 3,818 physical
+anchors in thirteen MES files. The QA build grows `F0001.MES` from 17,509 to
 26,006 bytes, `F0002.MES` from 4,402 to 5,936 bytes, `F0003.MES` from 16,938
 to 25,234 bytes, `F0004.MES` from 13,672 to 17,949 bytes, and `F0005.MES`
 from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,637
 bytes, `F0007.MES` from 19,560 to 26,121 bytes, `F0008.MES` from 11,678 to
-15,052 bytes, and `F0009.MES` from 8,065 to 10,635 bytes. Starting from
-pristine image SHA-256
+15,052 bytes, `F0009.MES` from 8,065 to 10,635 bytes, and `F0010L.MES` from
+9,579 to 12,405 bytes. Starting from pristine image SHA-256
 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`f43a3a7e64c4a2aecf7618bc60d9ef72767b22f05e6d5515664f1743e88c812a`.
+`7abcdee2de0f77ade4e9e3bdbadf141ab67d4253986741e1ad9b43c4e209a7a9`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 

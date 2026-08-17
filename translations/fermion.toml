@@ -70,6 +70,12 @@ source = "disk-b/F0009.MES"
 sha256 = "89365f7e0480aab127ceaf7296546423be5c561a69d04acde70f6e611cc2b982"
 box_width = 61
 
+[[files]]
+file = "DISKB/F0010L.MES"
+source = "disk-b/F0010L.MES"
+sha256 = "e4637d4ad0398eace95a43db3ab8cea99bc7808cef56a91dd314eb98aca4e1e0"
+box_width = 61
+
 
 
 [[tokens]]
@@ -39428,4 +39434,2285 @@ segments = [
   { kind = "text", offset = 0x1f20, source_mode = 1, source = "あたしはふらつく" },
   { kind = "token", token = "name:dear-person", start = 0x1f2b, end = 0x1f3a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x1f3a, source_mode = 1, source = "を抱え、部屋に寝かせに行くことにした。" }
+]
+
+
+[[composites]]
+id = "f0010l-051c-mmm-connie-stay-with-me"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うぅーん・・・コニー・・・・・・、一緒に・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mmm... Connie... stay with me...\""
+speaker = "name-slot:dear-person"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x051c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0520, end = 0x052f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x052f, source_mode = 1, source = "】「うぅーん・・・コニー・・・・・・、一緒に・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-0552-i-lift-name-into-my-arms-and-carry-her-to-her-room"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧を抱き上げて、部屋まで連れて行った。"
+translation = "I lift ⟦name:dear-person⟧ into my arms and carry her to her room."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0552, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0559, end = 0x0568, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0568, source_mode = 1, source = "を抱き上げて、部屋まで連れて行った。" }
+]
+
+[[composites]]
+id = "f0010l-0580-then-name-follows-behind-me"
+target_mode = 2
+source = "　⟦name:mother⟧が後ろからついてきた。"
+translation = "Then ⟦name:mother⟧ follows behind me."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0580, source_mode = 1, source = "　" },
+  { kind = "token", token = "name:mother", start = 0x0584, end = 0x0593, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0593, source_mode = 1, source = "が後ろからついてきた。" }
+]
+
+[[composites]]
+id = "f0010l-05a3-sorry-connie-she-can-be-awfully-clingy"
+target_mode = 2
+source = "【⟦name:mother⟧】「ごめんなさいね、コニー。この子、甘えん坊だから・・・。」"
+translation = "[⟦name:mother⟧] \"Sorry, Connie. She can be awfully clingy...\""
+speaker = "name-slot:mother"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x05a3, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x05a7, end = 0x05b6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x05b6, source_mode = 1, source = "】「ごめんなさいね、コニー。この子、甘えん坊だから・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-05ea-name-looks-a-little-lonely"
+target_mode = 2
+source = "⟦name:mother⟧の表情は、やや寂しげだ。"
+translation = "⟦name:mother⟧ looks a little lonely."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x05db, end = 0x05ea, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x05ea, source_mode = 1, source = "の表情は、やや寂しげだ。" }
+]
+
+[[composites]]
+id = "f0010l-05fd-mmm-mrmrm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「はふぅ、むにゃむにゃ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mmm... mrmrm...\""
+speaker = "name-slot:dear-person"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x05fd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0601, end = 0x0610, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0610, source_mode = 1, source = "】「はふぅ、むにゃむにゃ・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-0635-name-dozes-in-my-arms-her-sleeping-face-adorable"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの腕の中で、うと、うと、とかわいい寝顔を見せている。"
+translation = "⟦name:dear-person⟧ dozes in my arms, her sleeping face adorable."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0626, end = 0x0635, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0635, source_mode = 1, source = "はあたしの腕の中で、うと、うと、とかわいい寝顔を見せている。" }
+]
+
+[[entries]]
+id = "f0010l-0659-ohhh-i-want-to-squish-those-cheeks"
+file = "DISKB/F0010L.MES"
+offset = 0x0659
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ををっ、ほっぺをぷにぷにしたいッ！！！）"
+translation = "[CONNIE] (Ohhh, I want to squish those cheeks!!!)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-067a-seeing-her-sleep-so-innocently-and-sweetly-makes-the-urge"
+file = "DISKB/F0010L.MES"
+offset = 0x067a
+source_mode = 1
+target_mode = 2
+source = "無邪気に眠るそのかわいらしさに、つい、うずうずとなる。"
+translation = "Seeing her sleep so innocently and sweetly makes the urge come back."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-069c-nnngh"
+file = "DISKB/F0010L.MES"
+offset = 0x069c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うーっ・・・。）"
+translation = "[CONNIE] (Nnngh...)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-06af-i-m-itching-to-do-it"
+file = "DISKB/F0010L.MES"
+offset = 0x06af
+source_mode = 1
+target_mode = 2
+source = "うずうず。"
+translation = "I'm itching to do it."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-06b9-but-i-might-wake-her-hold-back-hold-back"
+file = "DISKB/F0010L.MES"
+offset = 0x06b9
+source_mode = 1
+target_mode = 2
+source = "だけど、起こすといけないので我慢、我慢・・・。"
+translation = "But I might wake her. Hold back, hold back..."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-07e5-in-name-s-room-name-gets-out-fresh-sheets-for-us"
+target_mode = 2
+source = "⟦name:dear-person⟧の部屋では、⟦name:mother⟧が新しいシーツを出してくれた。"
+translation = "⟦name:dear-person⟧'s room: ⟦name:mother⟧ gets out fresh sheets for us."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x07d6, end = 0x07e5, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x07e5, source_mode = 1, source = "の部屋では、" },
+  { kind = "token", token = "name:mother", start = 0x07ee, end = 0x07fd, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x07fd, source_mode = 1, source = "が新しいシーツを出してくれた。" }
+]
+
+[[composites]]
+id = "f0010l-0813-i-lay-name-on-the-bed"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧をベッドに横たえる。"
+translation = "I lay ⟦name:dear-person⟧ on the bed."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0813, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x081a, end = 0x0829, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0829, source_mode = 1, source = "をベッドに横たえる。" }
+]
+
+[[composites]]
+id = "f0010l-0839-mmm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あふぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mmm...\""
+speaker = "name-slot:dear-person"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0839, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x083d, end = 0x084c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x084c, source_mode = 1, source = "】「あふぅ・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-086a-name-looks-at-me-through-sleepy-eyes"
+target_mode = 2
+source = "⟦name:dear-person⟧が眠そうなまま、あたしを見る。"
+translation = "⟦name:dear-person⟧ looks at me through sleepy eyes."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x085b, end = 0x086a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x086a, source_mode = 1, source = "が眠そうなまま、あたしを見る。" }
+]
+
+[[composites]]
+id = "f0010l-087e-aww-connie-come-sleep-with-me"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あ～ん、コニー・・・一緒に寝ようよぉ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Aww, Connie... come sleep with me...\""
+speaker = "name-slot:dear-person"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x087e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0882, end = 0x0891, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0891, source_mode = 1, source = "】「あ～ん、コニー・・・一緒に寝ようよぉ・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-08be-name-says-half-asleep"
+target_mode = 2
+source = "⟦name:dear-person⟧は寝惚けながら言う。"
+translation = "⟦name:dear-person⟧ says, half asleep."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x08af, end = 0x08be, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x08be, source_mode = 1, source = "は寝惚けながら言う。" }
+]
+
+[[entries]]
+id = "f0010l-08cd-half-asleep-or-not-she-has-a-firm-grip-on-my-clothes-and-s"
+file = "DISKB/F0010L.MES"
+offset = 0x08cd
+source_mode = 1
+target_mode = 2
+source = "寝惚けている割には、服をしっかりと握って離しそうにない。"
+translation = "Half asleep or not, she has a firm grip on my clothes and shows no sign of letting go."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-091b-look"
+file = "DISKB/F0010L.MES"
+offset = 0x091b
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-092c-think"
+file = "DISKB/F0010L.MES"
+offset = 0x092c
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-093f-talk"
+file = "DISKB/F0010L.MES"
+offset = 0x093f
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-098a-name-is-fast-asleep-breathing-softly"
+target_mode = 2
+source = "⟦name:dear-person⟧は、すうすう、と眠りこけている。"
+translation = "⟦name:dear-person⟧ is fast asleep, breathing softly."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x097b, end = 0x098a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x098a, source_mode = 1, source = "は、すうすう、と眠りこけている。" }
+]
+
+[[entries]]
+id = "f0010l-099f-oh-she-s-awake"
+file = "DISKB/F0010L.MES"
+offset = 0x099f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あ。起きた。）"
+translation = "[CONNIE] (Oh. She's awake.)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-09b1-her-eyes-flutter"
+file = "DISKB/F0010L.MES"
+offset = 0x09b1
+source_mode = 1
+target_mode = 2
+source = "うとうと。"
+translation = "Her eyes flutter."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-09bb-mm-mm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「すう・・・すう・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mm... mm...\""
+speaker = "name-slot:dear-person"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x09bb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x09bf, end = 0x09ce, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x09ce, source_mode = 1, source = "】「すう・・・すう・・・。」" }
+]
+
+[[entries]]
+id = "f0010l-09e1-just-when-i-think-she-s-awake-she-drifts-off-again"
+file = "DISKB/F0010L.MES"
+offset = 0x09e1
+source_mode = 1
+target_mode = 2
+source = "目を覚ましたかと思うと、うつらうつらしている。"
+translation = "Just when I think she's awake, she drifts off again."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-09fd-her-grip-on-my-arm-has-gone-slack"
+file = "DISKB/F0010L.MES"
+offset = 0x09fd
+source_mode = 1
+target_mode = 2
+source = "あたしの腕を握る力も、もう弱い。"
+translation = "Her grip on my arm has gone slack."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0a15-i-gently-loosen-name-s-soft-hand-from-my-arm"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の柔らかな手をそっと離す。"
+translation = "I gently ease ⟦name:dear-person⟧'s soft hand off my arm."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0a15, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0a1c, end = 0x0a2b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a2b, source_mode = 1, source = "の柔らかな手をそっと離す。" }
+]
+
+[[composites]]
+id = "f0010l-0a56-name-s-breathing-settles-into-a-steady-rhythm"
+target_mode = 2
+source = "⟦name:dear-person⟧は規則正しい寝息をたてている。"
+translation = "⟦name:dear-person⟧'s breathing settles into a steady rhythm."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0a47, end = 0x0a56, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0a56, source_mode = 1, source = "は規則正しい寝息をたてている。" }
+]
+
+[[entries]]
+id = "f0010l-0a6c-i-wish-i-had-a-little-sister-like-her"
+file = "DISKB/F0010L.MES"
+offset = 0x0a6c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こういう妹だったら、欲しいなあ・・・。）"
+translation = "[CONNIE] (I wish I had a little sister like her...)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0a96-the-hallway-is-dim"
+file = "DISKB/F0010L.MES"
+offset = 0x0a96
+source_mode = 1
+target_mode = 2
+source = "廊下は薄暗い。"
+translation = "The hallway is dim."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0aa4-dim-to-me-anyway"
+file = "DISKB/F0010L.MES"
+offset = 0x0aa4
+source_mode = 1
+target_mode = 2
+source = "あたしにとって。"
+translation = "Dim to me, anyway."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0ab1-a-normal-human-probably-couldn-t-see-a-thing"
+file = "DISKB/F0010L.MES"
+offset = 0x0ab1
+source_mode = 1
+target_mode = 2
+source = "普通のヒトだったら見えないだろう。"
+translation = "A normal human probably couldn't see a thing."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0ac7-times-like-this-make-me-glad-i-m-a-mutant"
+file = "DISKB/F0010L.MES"
+offset = 0x0ac7
+source_mode = 1
+target_mode = 2
+source = "こういう時は、ミュータントでよかったと思う。"
+translation = "Times like this make me glad I'm a mutant."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0afa-name-watches-me-with-a-calm-look-in-her-eyes"
+target_mode = 2
+source = "⟦name:older-sister⟧は、穏やかな目であたしを見ている"
+translation = "⟦name:older-sister⟧ watches me with a calm look in her eyes."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0aeb, end = 0x0afa, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0afa, source_mode = 1, source = "は、穏やかな目であたしを見ている" }
+]
+
+[[entries]]
+id = "f0010l-0b10-this-is-a-little-embarrassing"
+file = "DISKB/F0010L.MES"
+offset = 0x0b10
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ちょっとくすぐったい・・・。）"
+translation = "[CONNIE] (This is a little embarrassing...)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0b45-looking-at-her-now-she-seems-like-an-ordinary-young-woman"
+file = "DISKB/F0010L.MES"
+offset = 0x0b45
+source_mode = 1
+target_mode = 2
+source = "こうして見ると、普通の女の子なんだけどな・・・。"
+translation = "Looking at her now, she seems like an ordinary young woman..."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0b62-i-think-as-i-watch-name-sleep"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧の寝顔を見ながら考えた。"
+translation = "I think as I watch ⟦name:dear-person⟧ sleep."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0b62, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x0b69, end = 0x0b78, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0b78, source_mode = 1, source = "の寝顔を見ながら考えた。" }
+]
+
+[[entries]]
+id = "f0010l-0bab-she-is-hard-to-leave-alone-though"
+file = "DISKB/F0010L.MES"
+offset = 0x0bab
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ほうっておけない女の子ではあるけど・・・・・・。）"
+translation = "[CONNIE] (She is hard to leave alone, though...)"
+speaker = "コニー"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0bdf-name-is-the-kind-of-young-woman-i-want-to-protect"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしにとって、守ってあげたいタイプの女の子だ。"
+translation = "⟦name:dear-person⟧ is the kind of young woman I want to protect."
+speaker = "Connie"
+context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0bd0, end = 0x0bdf, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0bdf, source_mode = 1, source = "はあたしにとって、守ってあげたいタイプの女の子だ。" }
+]
+
+[[entries]]
+id = "f0010l-0c09-maybe-being-around-such-a-warm-family-has-gotten-to-me"
+file = "DISKB/F0010L.MES"
+offset = 0x0c09
+source_mode = 1
+target_mode = 2
+source = "暖かな家族に触れたせいだろうか？"
+translation = "Maybe being around such a warm family has gotten to me."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0c21-a-sound-almost-too-quiet-to-hear-keeps-me-from-sleeping"
+file = "DISKB/F0010L.MES"
+offset = 0x0c21
+source_mode = 1
+target_mode = 2
+source = "静かすぎる『音』が、あたしの睡眠を妨げていた。"
+translation = "The \"sound\" of such deep silence keeps me from sleeping."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0c40-line"
+file = "DISKB/F0010L.MES"
+offset = 0x0c40
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0c6a-line"
+file = "DISKB/F0010L.MES"
+offset = 0x0c6a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（！）"
+translation = "[CONNIE] (!)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0c77-did-i-hear-something"
+file = "DISKB/F0010L.MES"
+offset = 0x0c77
+source_mode = 1
+target_mode = 2
+source = "何か・・・音が聞こえた？"
+translation = "Did I hear something...?"
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0c9a-what-is-that"
+file = "DISKB/F0010L.MES"
+offset = 0x0c9a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんだろう？）"
+translation = "[CONNIE] (What is that?)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0cac-a-faint-sound-name-s-house-is-solidly-built-but-my-ears-pi"
+target_mode = 2
+source = "かすかに音がする。⟦name:dear-person⟧の家はしっかりした造りだが、あたしの耳には、はっきりと聞こえた。"
+translation = "A faint sound. ⟦name:dear-person⟧'s house is solidly built, but my ears pick it up clearly."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0cac, source_mode = 1, source = "かすかに音がする。" },
+  { kind = "token", token = "name:dear-person", start = 0x0cb8, end = 0x0cc7, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0cc7, source_mode = 1, source = "の家はしっかりした造りだが、あたしの耳には、はっきりと聞こえた。" }
+]
+
+[[entries]]
+id = "f0010l-0cfe-a-chair-creaking"
+file = "DISKB/F0010L.MES"
+offset = 0x0cfe
+source_mode = 1
+target_mode = 2
+source = "椅子のきしむ音。"
+translation = "A chair creaking."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0d0c-name-must-still-be-up-studying"
+target_mode = 2
+source = "【コニー】（⟦name:older-sister⟧が、まだ起きて勉強しているんだろう・・・。）"
+translation = "[CONNIE] (⟦name:older-sister⟧ must still be up studying...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0d0c, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:older-sister", start = 0x0d15, end = 0x0d24, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0d24, source_mode = 1, source = "が、まだ起きて勉強しているんだろう・・・。）" }
+]
+
+[[composites]]
+id = "f0010l-0d4e-i-hardly-got-to-talk-with-name-and-now-i-want-to-try-again"
+target_mode = 2
+source = "⟦name:older-sister⟧とはあまり話せなかったので、また話してみたくなった。"
+translation = "⟦name:older-sister⟧ and I hardly got to talk, so now I want to try again."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0d3f, end = 0x0d4e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0d4e, source_mode = 1, source = "とはあまり話せなかったので、また話してみたくなった。" }
+]
+
+[[entries]]
+id = "f0010l-0d6d-i-sit-up-on-the-futon"
+file = "DISKB/F0010L.MES"
+offset = 0x0d6d
+source_mode = 1
+target_mode = 2
+source = "布団から、身体を起こす。"
+translation = "I sit up on the futon."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0d7e-quietly-quietly"
+file = "DISKB/F0010L.MES"
+offset = 0x0d7e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（そおっと・・・、そおっと・・・。）"
+translation = "[CONNIE] (Quietly... quietly...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0da9-i-slip-into-the-hall-without-waking-name"
+target_mode = 2
+source = "⟦name:dear-person⟧を起こさないように、そおっと廊下に出る。"
+translation = "⟦name:dear-person⟧ stays asleep as I slip quietly into the hall."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0d9a, end = 0x0da9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0da9, source_mode = 1, source = "を起こさないように、そおっと廊下に出る。" }
+]
+
+[[composites]]
+id = "f0010l-0df2-name-is-sound-asleep-now-her-soft-sweet-breathing-has-not"
+target_mode = 2
+source = "⟦name:dear-person⟧はもうぐっすりと寝ている。すやすやと、かわいい寝息は変わらない。"
+translation = "⟦name:dear-person⟧ is sound asleep now. Her soft, sweet breathing has not changed."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0de3, end = 0x0df2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0df2, source_mode = 1, source = "はもうぐっすりと寝ている。すやすやと、かわいい寝息は変わらない。" }
+]
+
+[[composites]]
+id = "f0010l-0e26-next-to-name-s-room-is-name-s"
+target_mode = 2
+source = "⟦name:dear-person⟧の部屋の隣が、⟦name:older-sister⟧の部屋だ。"
+translation = "⟦name:dear-person⟧'s room is next to ⟦name:older-sister⟧'s."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0e17, end = 0x0e26, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0e26, source_mode = 1, source = "の部屋の隣が、" },
+  { kind = "token", token = "name:older-sister", start = 0x0e31, end = 0x0e40, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0e40, source_mode = 1, source = "の部屋だ。" }
+]
+
+[[composites]]
+id = "f0010l-0e4a-i-step-into-the-hall-and-stop-outside-name-s-room"
+target_mode = 2
+source = "あたしは廊下に出て、⟦name:older-sister⟧の部屋の前に立った。"
+translation = "I step into the hall and stop outside ⟦name:older-sister⟧'s room."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0e4a, source_mode = 1, source = "あたしは廊下に出て、" },
+  { kind = "token", token = "name:older-sister", start = 0x0e57, end = 0x0e66, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0e66, source_mode = 1, source = "の部屋の前に立った。" }
+]
+
+[[entries]]
+id = "f0010l-0e87-i-knock-softly"
+file = "DISKB/F0010L.MES"
+offset = 0x0e87
+source_mode = 1
+target_mode = 2
+source = "そおっと戸をノックする。"
+translation = "I knock softly."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0e9b-knock-knock"
+file = "DISKB/F0010L.MES"
+offset = 0x0e9b
+source_mode = 1
+target_mode = 2
+source = "コン、コン。"
+translation = "Knock, knock."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0ea6-name-are-you-awake"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・・・・？　起きてるの？」"
+translation = "[CONNIE] \"⟦name:older-sister⟧...? Are you awake?\""
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0ea6, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x0eaf, end = 0x0ebe, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0ebe, source_mode = 1, source = "・・・・・・？　起きてるの？」" }
+]
+
+[[composites]]
+id = "f0010l-0ee1-i-don-t-hear-name-sleeping-so-i-know-she-s-awake-i-ask-any"
+target_mode = 2
+source = "⟦name:older-sister⟧の寝息が聞こえなかったので、起きていることはわかったが、一応、聞いてみる。"
+translation = "⟦name:older-sister⟧ isn't breathing like she's asleep, so I know she's awake. I ask anyway."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0ed2, end = 0x0ee1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0ee1, source_mode = 1, source = "の寝息が聞こえなかったので、起きていることはわかったが、一応、聞いてみる。" }
+]
+
+[[entries]]
+id = "f0010l-0f25-i-hope-i-m-not-interrupting-her-studying"
+file = "DISKB/F0010L.MES"
+offset = 0x0f25
+source_mode = 1
+target_mode = 2
+source = "【コニー】（勉強中だったら悪いかな・・・。）"
+translation = "[CONNIE] (I hope I'm not interrupting her studying...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0f58-the-light-in-name-s-room-dazzles-me"
+target_mode = 2
+source = "⟦name:older-sister⟧の部屋の明るさがまぶしい。"
+translation = "⟦name:older-sister⟧'s room is dazzlingly bright."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0f49, end = 0x0f58, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0f58, source_mode = 1, source = "の部屋の明るさがまぶしい。" }
+]
+
+[[entries]]
+id = "f0010l-0f6b-my-eyes-adjust-right-away"
+file = "DISKB/F0010L.MES"
+offset = 0x0f6b
+source_mode = 1
+target_mode = 2
+source = "・・・すぐに慣れた。"
+translation = "...My eyes adjust right away."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-0f7b-looks-like-she-was-studying"
+file = "DISKB/F0010L.MES"
+offset = 0x0f7b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（勉強中だったみたいね・・・。）"
+translation = "[CONNIE] (Looks like she was studying...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-0fb0-connie-mmm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニー・・・・・・、うーん、むにゃ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Connie... mmm...\""
+speaker = "name-slot:dear-person"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0fb0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x0fb4, end = 0x0fc3, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0fc3, source_mode = 1, source = "】「コニー・・・・・・、うーん、むにゃ・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-0fe0-name-must-think-i-m-still-beside-her"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧はあたしがいると思って寝ているんだろうな・・・。）"
+translation = "[CONNIE] (⟦name:dear-person⟧ must think I'm still beside her...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x0fe0, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0fe9, end = 0x0ff8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0ff8, source_mode = 1, source = "はあたしがいると思って寝ているんだろうな・・・。）" }
+]
+
+[[entries]]
+id = "f0010l-101f-this-is-a-problem"
+file = "DISKB/F0010L.MES"
+offset = 0x101f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（弱った・・・。）"
+translation = "[CONNIE] (This is a problem...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1033-i-promised-name-we-d-talk-after-this"
+target_mode = 2
+source = "【コニー】（この後に⟦name:mother⟧との約束があるんだけど・・・。）"
+translation = "[CONNIE] (I promised ⟦name:mother⟧ we'd talk after this...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1033, source_mode = 1, source = "【コニー】（この後に" },
+  { kind = "token", token = "name:mother", start = 0x1040, end = 0x104f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x104f, source_mode = 1, source = "との約束があるんだけど・・・。）" }
+]
+
+[[composites]]
+id = "f0010l-1064-unsure-what-to-do-i-look-at-name"
+target_mode = 2
+source = "あたしは困って⟦name:mother⟧を見る。"
+translation = "Unsure what to do, I look at ⟦name:mother⟧."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1064, source_mode = 1, source = "あたしは困って" },
+  { kind = "token", token = "name:mother", start = 0x106f, end = 0x107e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x107e, source_mode = 1, source = "を見る。" }
+]
+
+[[composites]]
+id = "f0010l-1087-it-s-all-right-connie-stay-with-name-and-thank-you-for-tel"
+target_mode = 2
+source = "【⟦name:mother⟧】「いいわ、コニー。⟦name:dear-person⟧の側に居てあげて。ありがとう、いろいろ聞かせてくれて・・・。」"
+translation = "[⟦name:mother⟧] \"It's all right, Connie. Stay with ⟦name:dear-person⟧. And thank you for telling me so much...\""
+speaker = "name-slot:mother"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1087, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x108b, end = 0x109a, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x109a, source_mode = 1, source = "】「いいわ、コニー。" },
+  { kind = "token", token = "name:dear-person", start = 0x10a7, end = 0x10b6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x10b6, source_mode = 1, source = "の側に居てあげて。ありがとう、いろいろ聞かせてくれて・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-10eb-name-wants-me-to-share-her-bed-but-i-have-a-futon-laid-out"
+target_mode = 2
+source = "⟦name:dear-person⟧と一緒のベッドに寝るように勧められたが、あたしは床に布団を敷いてもらった。"
+translation = "⟦name:dear-person⟧ and I are offered the same bed, but I have a futon laid out on the floor."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x10dc, end = 0x10eb, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x10eb, source_mode = 1, source = "と一緒のベッドに寝るように勧められたが、あたしは床に布団を敷いてもらった。" }
+]
+
+[[composites]]
+id = "f0010l-1118-name-i-m-sorry-about-what-we-promised-this-afternoon"
+target_mode = 2
+source = "【コニー】「⟦name:mother⟧・・・ごめんなさい。昼間の約束・・・。」"
+translation = "[CONNIE] \"⟦name:mother⟧... I'm sorry. About what we promised this afternoon...\""
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1118, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:mother", start = 0x1121, end = 0x1130, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1130, source_mode = 1, source = "・・・ごめんなさい。昼間の約束・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-1159-name-smiles-with-a-soft-mhmhm"
+target_mode = 2
+source = "⟦name:mother⟧は『うふふっ。』と微笑む。"
+translation = "⟦name:mother⟧ smiles with a soft \"Mhmhm.\""
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x114a, end = 0x1159, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1159, source_mode = 1, source = "は『うふふっ。』と微笑む。" }
+]
+
+[[composites]]
+id = "f0010l-116c-it-s-all-right-another-time-i-m-tired-from-earlier-too-so"
+target_mode = 2
+source = "【⟦name:mother⟧】「いいわ。また今度、ね。私も昼間のアレで疲れちゃったから、寝ます。」"
+translation = "[⟦name:mother⟧] \"It's all right. Another time. I'm tired from earlier too, so I'm going to bed.\""
+speaker = "name-slot:mother"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x116c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1170, end = 0x117f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x117f, source_mode = 1, source = "】「いいわ。また今度、ね。私も昼間のアレで疲れちゃったから、寝ます。」" }
+]
+
+[[composites]]
+id = "f0010l-11ba-name-gives-me-a-bright-smile-and-leaves-the-room"
+target_mode = 2
+source = "⟦name:mother⟧はニコッと笑って部屋を出て行った。"
+translation = "⟦name:mother⟧ gives me a bright smile and leaves the room."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x11ab, end = 0x11ba, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x11ba, source_mode = 1, source = "はニコッと笑って部屋を出て行った。" }
+]
+
+[[entries]]
+id = "f0010l-12b4-tomorrow-morning-i-have-to-return-to-my-own-time-for-a-whi"
+file = "DISKB/F0010L.MES"
+offset = 0x12b4
+source_mode = 1
+target_mode = 2
+source = "明日の朝には、一旦、あたしの時代へ帰らなくてはならない。"
+translation = "Tomorrow morning, I have to return to my own time for a while."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-12da-i-need-to-get-to-sleep"
+file = "DISKB/F0010L.MES"
+offset = 0x12da
+source_mode = 1
+target_mode = 2
+source = "【コニー】（早く寝なきゃ・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (I need to get to sleep...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-12fd-line"
+file = "DISKB/F0010L.MES"
+offset = 0x12fd
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1319-line"
+file = "DISKB/F0010L.MES"
+offset = 0x1319
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-132e-i-can-t-sleep"
+file = "DISKB/F0010L.MES"
+offset = 0x132e
+source_mode = 1
+target_mode = 2
+source = "眠れない・・・・・・。"
+translation = "I can't sleep..."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1366-maybe-counting-name-s-breaths-will-put-me-to-sleep"
+target_mode = 2
+source = "⟦name:dear-person⟧の寝息を数えよう。眠れるかもしれない。"
+translation = "⟦name:dear-person⟧'s breaths. Maybe counting them will put me to sleep."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1357, end = 0x1366, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1366, source_mode = 1, source = "の寝息を数えよう。眠れるかもしれない。" }
+]
+
+[[composites]]
+id = "f0010l-137f-mm-mm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「すう・・・、すぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mm... mm...\""
+speaker = "name-slot:dear-person"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x137f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1383, end = 0x1392, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1392, source_mode = 1, source = "】「すう・・・、すぅ・・・。」" }
+]
+
+[[entries]]
+id = "f0010l-13a6-line"
+file = "DISKB/F0010L.MES"
+offset = 0x13a6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-13bf-mm-mm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「すう・・・、すぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mm... mm...\""
+speaker = "name-slot:dear-person"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x13bf, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x13c3, end = 0x13d2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x13d2, source_mode = 1, source = "】「すう・・・、すぅ・・・。」" }
+]
+
+[[entries]]
+id = "f0010l-13e6-line"
+file = "DISKB/F0010L.MES"
+offset = 0x13e6
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-13fc-line"
+file = "DISKB/F0010L.MES"
+offset = 0x13fc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-140f-mrmrm-mm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「むにゃむにゃ・・・、すぅ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Mrmrm... mm...\""
+speaker = "name-slot:dear-person"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x140f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1413, end = 0x1422, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1422, source_mode = 1, source = "】「むにゃむにゃ・・・、すぅ・・・。」" }
+]
+
+[[entries]]
+id = "f0010l-143a-ngh-she-s-cute"
+file = "DISKB/F0010L.MES"
+offset = 0x143a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（うっ、かわいい・・・。）"
+translation = "[CONNIE] (Ngh, she's cute...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1451-what-no-i-can-t-get-lost-listening-to-her"
+file = "DISKB/F0010L.MES"
+offset = 0x1451
+source_mode = 1
+target_mode = 2
+source = "【コニー】（はっ！？　だ、だめ。聞き惚れてしまう・・・。）"
+translation = "[CONNIE] (What!? No. I can't let myself get spellbound listening to her...)"
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-147c-everything-is-silent"
+file = "DISKB/F0010L.MES"
+offset = 0x147c
+source_mode = 1
+target_mode = 2
+source = "あたりは静まり返っている。"
+translation = "Everything is silent."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-148f-every-so-often-i-hear-a-car-in-the-distance-that-s-all"
+file = "DISKB/F0010L.MES"
+offset = 0x148f
+source_mode = 1
+target_mode = 2
+source = "時々、遠くに車の音がする。それくらいだ。"
+translation = "Every so often I hear a car in the distance. That's all."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-14b4-who-s-there-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・誰・・・！？　・・・コニー！？！？！」"
+translation = "[⟦name:older-sister⟧] \"...Who's there!? ...Connie!?\""
+speaker = "name-slot:older-sister"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x14b4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x14b8, end = 0x14c7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x14c7, source_mode = 1, source = "】「・・・・・・誰・・・！？　・・・コニー！？！？！」" }
+]
+
+[[entries]]
+id = "f0010l-14e8-can-we-talk-for-a-minute"
+file = "DISKB/F0010L.MES"
+offset = 0x14e8
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・少し、お話、してもいいかな？」"
+translation = "[CONNIE] \"...Can we talk for a minute?\""
+speaker = "コニー"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1508-i-ask-timidly"
+file = "DISKB/F0010L.MES"
+offset = 0x1508
+source_mode = 1
+target_mode = 2
+source = "あたしは恐る恐る聞いてみた。"
+translation = "I ask timidly."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-151d-all-right"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・いいわ。」"
+translation = "[⟦name:older-sister⟧] \"...All right.\""
+speaker = "name-slot:older-sister"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x151d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1521, end = 0x1530, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1530, source_mode = 1, source = "】「・・・・・・いいわ。」" }
+]
+
+[[entries]]
+id = "f0010l-1542-i-hear-a-clatter-and-rustle-as-she-puts-things-away"
+file = "DISKB/F0010L.MES"
+offset = 0x1542
+source_mode = 1
+target_mode = 2
+source = "がたがた、がさがさ、と、ものをかたづける音がしている。"
+translation = "I hear a clatter and rustle as she puts things away."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1563-i-ease-the-door-open"
+file = "DISKB/F0010L.MES"
+offset = 0x1563
+source_mode = 1
+target_mode = 2
+source = "あたしはドアをそぉーっと開けた。"
+translation = "I ease the door open."
+speaker = "Connie"
+context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-168b-w-what-do-you-want"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・な、なんの用？」"
+translation = "[⟦name:older-sister⟧] \"...W-what do you want?\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x168b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x168f, end = 0x169e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x169e, source_mode = 1, source = "】「・・・・・・な、なんの用？」" }
+]
+
+[[composites]]
+id = "f0010l-16c3-name-looks-startled"
+target_mode = 2
+source = "⟦name:older-sister⟧は、驚いたような顔をした。"
+translation = "⟦name:older-sister⟧ looks startled."
+speaker = "Connie"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x16b4, end = 0x16c3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x16c3, source_mode = 1, source = "は、驚いたような顔をした。" }
+]
+
+[[composites]]
+id = "f0010l-16d6-tomorrow-i-m-going-back-to-my-time-for-a-while-before-i-go"
+target_mode = 2
+source = "【コニー】「・・・、明日、一度、あたしの時代に帰ります。・・・その前に、⟦name:older-sister⟧、あなたと仲たがいしたまま離れたくなかったから・・・、話しに来たの。」"
+translation = "[CONNIE] \"...Tomorrow I'm going back to my time for a while. Before I go, ⟦name:older-sister⟧, I didn't want to leave with us still at odds... so I came to talk.\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x16d6, source_mode = 1, source = "【コニー】「・・・、明日、一度、あたしの時代に帰ります。・・・その前に、" },
+  { kind = "token", token = "name:older-sister", start = 0x16ff, end = 0x170e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x170e, source_mode = 1, source = "、あなたと仲たがいしたまま離れたくなかったから・・・、話しに来たの。」" }
+]
+
+[[composites]]
+id = "f0010l-1746-name-blinks-then-gives-a-small-laugh"
+target_mode = 2
+source = "⟦name:older-sister⟧は、きょとん、として小さく笑った。"
+translation = "⟦name:older-sister⟧ blinks, then gives a small laugh."
+speaker = "Connie"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1737, end = 0x1746, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1746, source_mode = 1, source = "は、きょとん、として小さく笑った。" }
+]
+
+[[composites]]
+id = "f0010l-175c-i-m-not-holding-it-against-you-i-was-only-shocked-that-som"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「気にしてないわ・・・、私。あなたという存在にびっくりしただけよ・・・・・・・・。ホントに。」"
+translation = "[⟦name:older-sister⟧] \"I'm not holding it against you... I was only shocked that someone like you exists... Really.\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x175c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1760, end = 0x176f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x176f, source_mode = 1, source = "】「気にしてないわ・・・、私。あなたという存在にびっくりしただけよ・・・・・・・・。ホントに。」" }
+]
+
+[[entries]]
+id = "f0010l-17a7-that-s-a-relief"
+file = "DISKB/F0010L.MES"
+offset = 0x17a7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・よかった。」"
+translation = "[CONNIE] \"...That's a relief.\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-17cf-is-everyone-in-the-future-as-considerate-as-you"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「未来の人は、みんなあなたみたいな気を遣う人だらけなの？」"
+translation = "[⟦name:older-sister⟧] \"Is everyone in the future as considerate as you?\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x17cf, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x17d3, end = 0x17e2, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x17e2, source_mode = 1, source = "】「未来の人は、みんなあなたみたいな気を遣う人だらけなの？」" }
+]
+
+[[entries]]
+id = "f0010l-1809-everyone-has-their-own-personality"
+file = "DISKB/F0010L.MES"
+offset = 0x1809
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・性格は、それぞれ・・・だけど・・・。」"
+translation = "[CONNIE] \"...Everyone has their own personality...\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1833-honestly-i-still-can-t-believe-it-a-young-woman-from-the-f"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「正直言うとね、私、まだ信じられないんだ・・・。未来から来たという、猫に変身できる女の子・・・・・・。あなたを目の前にしていても。」"
+translation = "[⟦name:older-sister⟧] \"Honestly, I still can't believe it... A young woman from the future who can turn into a cat... Even with you right in front of me.\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1833, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1837, end = 0x1846, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1846, source_mode = 1, source = "】「正直言うとね、私、まだ信じられないんだ・・・。未来から来たという、猫に変身できる女の子・・・・・・。あなたを目の前にしていても。」" }
+]
+
+[[entries]]
+id = "f0010l-1891-yeah-i-don-t-think-most-people-would-believe-me"
+file = "DISKB/F0010L.MES"
+offset = 0x1891
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・うん。普通は信じてくれないと思う・・・。」"
+translation = "[CONNIE] \"...Yeah. I don't think most people would believe me...\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-18b5-even-when-you-tell-me-the-big-machine-in-our-yard-is-a-tim"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「家の庭にある大きな機械がタイムマシンだ、って言われてもぴーんとこないの。時を越えるなんて小説とかマンガの話だけと思っていたから。」"
+translation = "[⟦name:older-sister⟧] \"Even when you tell me the big machine in our yard is a time machine, it doesn't really sink in. I thought traveling through time only happened in novels and manga.\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x18b5, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x18b9, end = 0x18c8, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x18c8, source_mode = 1, source = "】「家の庭にある大きな機械がタイムマシンだ、って言われてもぴーんとこないの。時を越えるなんて小説とかマンガの話だけと思っていたから。」" }
+]
+
+[[entries]]
+id = "f0010l-191c-line"
+file = "DISKB/F0010L.MES"
+offset = 0x191c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1940-the-reason-i-barely-spoke-over-dinner-was-that-i-was-liste"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「食事のときも、あたしがあまり喋らなかったのは、あなたの話を聞いていたからなの。」"
+translation = "[⟦name:older-sister⟧] \"The reason I barely spoke over dinner was that I was listening to you.\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1940, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1944, end = 0x1953, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1953, source_mode = 1, source = "】「食事のときも、あたしがあまり喋らなかったのは、あなたの話を聞いていたからなの。」" }
+]
+
+[[composites]]
+id = "f0010l-1985-i-let-mom-and-name-ask-all-the-questions"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「途中で口を挟むのは、お母さんと⟦name:dear-person⟧に任せたわ。」"
+translation = "[⟦name:older-sister⟧] \"I let Mom and ⟦name:dear-person⟧ do the interrupting.\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1985, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1989, end = 0x1998, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1998, source_mode = 1, source = "】「途中で口を挟むのは、お母さんと" },
+  { kind = "token", token = "name:dear-person", start = 0x19b0, end = 0x19bf, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x19bf, source_mode = 1, source = "に任せたわ。」" }
+]
+
+[[composites]]
+id = "f0010l-19cc-name"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・。」"
+translation = "[CONNIE] \"⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x19cc, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x19d5, end = 0x19e4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x19e4, source_mode = 1, source = "・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-19ff-hey-can-i-ask-you-a-favor"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ねえ、お願い、してもいい？」"
+translation = "[⟦name:older-sister⟧] \"Hey... can I ask you a favor?\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x19ff, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1a03, end = 0x1a12, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a12, source_mode = 1, source = "】「ねえ、お願い、してもいい？」" }
+]
+
+[[composites]]
+id = "f0010l-1a28-i-m-surprised-having-name-ask-me-for-something-makes-me-fe"
+target_mode = 2
+source = "あたしはびっくりした。⟦name:older-sister⟧からお願い、なんて言われると頼りにされているようでくすぐったい。"
+translation = "I'm surprised. Having ⟦name:older-sister⟧ ask me for something makes me feel trusted. It's almost embarrassing."
+speaker = "Connie"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1a28, source_mode = 1, source = "あたしはびっくりした。" },
+  { kind = "token", token = "name:older-sister", start = 0x1a36, end = 0x1a45, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a45, source_mode = 1, source = "からお願い、なんて言われると頼りにされているようでくすぐったい。" }
+]
+
+[[composites]]
+id = "f0010l-1a6c-um-could-you-turn-into-a-cat-for-me"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あのね・・・・・・・・・。猫に変身してみてくれない？」"
+translation = "[⟦name:older-sister⟧] \"Um... could you turn into a cat for me?\""
+speaker = "name-slot:older-sister"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1a6c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1a70, end = 0x1a7f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a7f, source_mode = 1, source = "】「あのね・・・・・・・・・。猫に変身してみてくれない？」" }
+]
+
+[[composites]]
+id = "f0010l-1ab0-it-s-the-first-time-i-ve-seen-name-look-shy-then-again-tod"
+target_mode = 2
+source = "⟦name:older-sister⟧が照れている顔を初めて見た。もっともあたしは今日、初めて⟦name:older-sister⟧に会った訳だけど。"
+translation = "⟦name:older-sister⟧ looks shy for the first time. Then again, today is the first time I've met ⟦name:older-sister⟧ at all."
+speaker = "Connie"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1aa1, end = 0x1ab0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1ab0, source_mode = 1, source = "が照れている顔を初めて見た。もっともあたしは今日、初めて" },
+  { kind = "token", token = "name:older-sister", start = 0x1ad0, end = 0x1adf, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1adf, source_mode = 1, source = "に会った訳だけど。" }
+]
+
+[[entries]]
+id = "f0010l-1aef-i-nod-and-close-my-eyes"
+file = "DISKB/F0010L.MES"
+offset = 0x1aef
+source_mode = 1
+target_mode = 2
+source = "あたしは頷いて、目を閉じた。"
+translation = "I nod and close my eyes."
+speaker = "Connie"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1ca5-line"
+file = "DISKB/F0010L.MES"
+offset = 0x1ca5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1d55-w-wow"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・ぅわぁ・・・っ・・・。」"
+translation = "[⟦name:older-sister⟧] \"W-wow...\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1d55, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1d59, end = 0x1d68, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1d68, source_mode = 1, source = "】「・・・ぅわぁ・・・っ・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-1d8d-name-lets-out-a-delighted-gasp-keeping-it-quiet-because-it"
+target_mode = 2
+source = "⟦name:older-sister⟧は嬉しそうな声をあげる。それでも夜中だから小さい声で。"
+translation = "⟦name:older-sister⟧ lets out a delighted gasp, keeping it quiet because it's the middle of the night."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1d7e, end = 0x1d8d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1d8d, source_mode = 1, source = "は嬉しそうな声をあげる。それでも夜中だから小さい声で。" }
+]
+
+[[composites]]
+id = "f0010l-1e00-name-scoops-me-up-and-settles-me-on-her-lap"
+target_mode = 2
+source = "⟦name:older-sister⟧は、ひょいとあたしを持ち上げ膝の上に抱えた。"
+translation = "⟦name:older-sister⟧ scoops me up and settles me on her lap."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1df1, end = 0x1e00, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1e00, source_mode = 1, source = "は、ひょいとあたしを持ち上げ膝の上に抱えた。" }
+]
+
+[[composites]]
+id = "f0010l-1e1d-of-course-my-clothes-come-off-i-get-tangled-in-them-and-na"
+target_mode = 2
+source = "もちろん服は脱げてしまい、あたしが服に絡まっているのを、⟦name:older-sister⟧が持ち上げてくれた。"
+translation = "Of course, my clothes come off. I get tangled in them, and ⟦name:older-sister⟧ lifts me free."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1e1d, source_mode = 1, source = "もちろん服は脱げてしまい、あたしが服に絡まっているのを、" },
+  { kind = "token", token = "name:older-sister", start = 0x1e3e, end = 0x1e4d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1e4d, source_mode = 1, source = "が持ち上げてくれた。" }
+]
+
+[[composites]]
+id = "f0010l-1e6e-can-you-talk-in-mini-form"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「猫の状態で、喋ることができるの・・・・・・？」"
+translation = "[⟦name:older-sister⟧] \"Can you talk in Mini form...?\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1e6e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1e72, end = 0x1e81, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1e81, source_mode = 1, source = "】「猫の状態で、喋ることができるの・・・・・・？」" }
+]
+
+[[entries]]
+id = "f0010l-1ea2-only-a-little-my-vocal-cords-are-different-so-it-s-hard"
+file = "DISKB/F0010L.MES"
+offset = 0x1ea2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・少しだけ。声帯が違うから難しいの。」"
+translation = "[CONNIE] \"...Only a little. My vocal cords are different, so it's hard.\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1ec8-amaaaazing"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・・・・すごぉい・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...Amaaaazing...\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1ec8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1ecc, end = 0x1edb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1edb, source_mode = 1, source = "】「・・・・・・・・・すごぉい・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-1f06-name-hugs-me-against-her-chest"
+target_mode = 2
+source = "⟦name:older-sister⟧は、あたしを胸に抱き締めた。"
+translation = "⟦name:older-sister⟧ hugs me against her chest."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1ef7, end = 0x1f06, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1f06, source_mode = 1, source = "は、あたしを胸に抱き締めた。" }
+]
+
+[[entries]]
+id = "f0010l-1f1b-i-half-expect-her-to-blurt-i-knew-it-i-hate-cats-so-i-ask"
+file = "DISKB/F0010L.MES"
+offset = 0x1f1b
+source_mode = 1
+target_mode = 2
+source = "いきなり『やっぱり猫は嫌ぁい！』と言われるかと思い、あたしは聞いてみる。"
+translation = "I half expect her to blurt, \"I knew it, I hate cats!\" so I ask."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-1f45-i-thought-you-hated-cats"
+file = "DISKB/F0010L.MES"
+offset = 0x1f45
+source_mode = 1
+target_mode = 2
+source = "【コニー】「猫嫌い・・・じゃなかったの？」"
+translation = "[CONNIE] \"I thought you hated cats...?\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1f5f-i-hate-cats-i-don-t-know-they-might-scratch-me-but-it-s-di"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・知らない猫は嫌い。ひっかかれそうだから。だけど知っているなら別よ。」"
+translation = "[⟦name:older-sister⟧] \"...I don't like strange cats. They might scratch me. But I know you, so you're different.\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1f5f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1f63, end = 0x1f72, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1f72, source_mode = 1, source = "】「・・・・・・知らない猫は嫌い。ひっかかれそうだから。だけど知っているなら別よ。」" }
+]
+
+[[entries]]
+id = "f0010l-1fa4-she-buries-her-face-in-my-soft-fur"
+file = "DISKB/F0010L.MES"
+offset = 0x1fa4
+source_mode = 1
+target_mode = 2
+source = "そう言って、あたしのふわふわとした毛に頬を埋める。"
+translation = "She buries her face in my soft fur."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-1fd6-hey-connie-how-old-are-you"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ねえ、コニーって・・・・・・いくつ？」"
+translation = "[⟦name:older-sister⟧] \"Hey, Connie... how old are you?\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x1fd6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1fda, end = 0x1fe9, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1fe9, source_mode = 1, source = "】「ねえ、コニーって・・・・・・いくつ？」" }
+]
+
+[[entries]]
+id = "f0010l-2003-my-age"
+file = "DISKB/F0010L.MES"
+offset = 0x2003
+source_mode = 1
+target_mode = 2
+source = "【コニー】「年齢？」"
+translation = "[CONNIE] \"My age?\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-2013-yeah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「そう。」"
+translation = "[⟦name:older-sister⟧] \"Yeah.\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x2013, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2017, end = 0x2026, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2026, source_mode = 1, source = "】「そう。」" }
+]
+
+[[entries]]
+id = "f0010l-2031-in-human-terms-about-eighteen-but-i-m-a-mutant-so-i-ve-onl"
+file = "DISKB/F0010L.MES"
+offset = 0x2031
+source_mode = 1
+target_mode = 2
+source = "【コニー】「実年齢は、１７才くらいかな。あたしはミュータントだから生まれてまだ３年だけど。」"
+translation = "[CONNIE] \"In human terms, about eighteen. But I'm a mutant, so I've only been alive for three years.\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+notes = "The source says Connie is about seventeen. The player-facing number follows the disclosed English-release policy that every character depicted in sexual content is treated as 18 or older; her three years of lived experience remain explicit."
+
+[[composites]]
+id = "f0010l-206b-really"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「えーっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Really...?\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x206b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x206f, end = 0x207e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x207e, source_mode = 1, source = "】「えーっ・・・。」" }
+]
+
+[[entries]]
+id = "f0010l-208d-but-my-growth-rate-is-the-same-as-a-human-s-now-the-rapid"
+file = "DISKB/F0010L.MES"
+offset = 0x208d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「でもね、成長速度はもうヒトと同じだよ。急に成長するのは１～２年の間だけ。」"
+translation = "[CONNIE] \"But my growth rate is the same as a human's now. The rapid growth only lasts a year or two.\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-20c4-and-in-such-a-short-time-you-became-a-mutant-hunter"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「そんな短い時間で、ミュータントハンターとか・・・するの・・・。」"
+translation = "[⟦name:older-sister⟧] \"And in such a short time, you became a mutant hunter...?\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x20c4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x20c8, end = 0x20d7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x20d7, source_mode = 1, source = "】「そんな短い時間で、ミュータントハンターとか・・・するの・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-210f-name-listens-impressed-by-my-story"
+target_mode = 2
+source = "⟦name:older-sister⟧は感心してあたしの話を聞いている。"
+translation = "⟦name:older-sister⟧ listens, impressed by my story."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2100, end = 0x210f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x210f, source_mode = 1, source = "は感心してあたしの話を聞いている。" }
+]
+
+[[entries]]
+id = "f0010l-2127-her-interest-makes-me-a-little-shy"
+file = "DISKB/F0010L.MES"
+offset = 0x2127
+source_mode = 1
+target_mode = 2
+source = "興味をもたれて、あたしは少し照れた。"
+translation = "Her interest makes me a little shy."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-2141-you-re-so-fluffy"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ふわふわしてるぅ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"You're so fluffy...\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x2141, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2145, end = 0x2154, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2154, source_mode = 1, source = "】「ふわふわしてるぅ・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0010l-217a-name-plays-with-my-hand-which-is-a-paw-right-now-squeezing"
+target_mode = 2
+source = "⟦name:older-sister⟧は、あたしの手（今は猫の手になっている）を握ったり離したりして遊んでいる。"
+translation = "⟦name:older-sister⟧ plays with my hand, a paw right now, squeezing and releasing it."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x216b, end = 0x217a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x217a, source_mode = 1, source = "は、あたしの手（今は猫の手になっている）を握ったり離したりして遊んでいる。" }
+]
+
+[[composites]]
+id = "f0010l-21b3-when-name-squeezes-my-paw-my-claws-slide-out-on-their-own"
+target_mode = 2
+source = "⟦name:older-sister⟧があたしの手のひらをきゅっ、と握ると勝手に爪がむにゅっと押し出される。"
+translation = "⟦name:older-sister⟧ squeezes my paw, and my claws slide out on their own."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x21a4, end = 0x21b3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x21b3, source_mode = 1, source = "があたしの手のひらをきゅっ、と握ると勝手に爪がむにゅっと押し出される。" }
+]
+
+[[composites]]
+id = "f0010l-21e0-wow-wow"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「わぁ～、わぁ～。」"
+translation = "[⟦name:older-sister⟧] \"Wow... wow...\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x21e0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x21e4, end = 0x21f3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x21f3, source_mode = 1, source = "】「わぁ～、わぁ～。」" }
+]
+
+[[entries]]
+id = "f0010l-2203-we-both-keep-our-voices-low-so-we-don-t-wake-anyone"
+file = "DISKB/F0010L.MES"
+offset = 0x2203
+source_mode = 1
+target_mode = 2
+source = "大声で騒げないので、お互い、小声で会話している。"
+translation = "We both keep our voices low so we don't wake anyone."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-2224-um-i-m-glad-you-re-having-fun-but"
+file = "DISKB/F0010L.MES"
+offset = 0x2224
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あの・・・・・・。遊んでくれて嬉しいんだけど・・・。」"
+translation = "[CONNIE] \"...Um... I'm glad you're having fun, but...\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-225c-i-don-t-want-to-keep-name-up-late-because-of-me"
+target_mode = 2
+source = "⟦name:older-sister⟧を巻き込んで夜更かしするのはまずいと思って聞いた。"
+translation = "⟦name:older-sister⟧ shouldn't lose sleep because of me, so I speak up."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x224d, end = 0x225c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x225c, source_mode = 1, source = "を巻き込んで夜更かしするのはまずいと思って聞いた。" }
+]
+
+[[composites]]
+id = "f0010l-227e-sorry-you-re-so-cute-i-got-carried-away"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ごめーん。かわいくて、つい、遊んじゃった。」"
+translation = "[⟦name:older-sister⟧] \"Sorry. You're so cute, I got carried away.\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x227e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2282, end = 0x2291, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2291, source_mode = 1, source = "】「ごめーん。かわいくて、つい、遊んじゃった。」" }
+]
+
+[[entries]]
+id = "f0010l-22ae-okay-i-m-changing-back"
+file = "DISKB/F0010L.MES"
+offset = 0x22ae
+source_mode = 1
+target_mode = 2
+source = "【コニー】「じゃ、戻るわね・・・。」"
+translation = "[CONNIE] \"Okay, I'm changing back...\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-22e7-name-sets-me-on-the-bed-and-i-change-back-to-human-form"
+target_mode = 2
+source = "⟦name:older-sister⟧があたしをベッドの上に置いてくれた。あたしは変身を解く。"
+translation = "⟦name:older-sister⟧ sets me on the bed, and I change back to human form."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x22d8, end = 0x22e7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x22e7, source_mode = 1, source = "があたしをベッドの上に置いてくれた。あたしは変身を解く。" }
+]
+
+[[entries]]
+id = "f0010l-235e-my-ears-shift-upward-and-the-fur-on-my-body-shortens-to-hu"
+file = "DISKB/F0010L.MES"
+offset = 0x235e
+source_mode = 1
+target_mode = 2
+source = "耳が上に移動、身体の体毛がヒトの長さになる。"
+translation = "My ears shift upward, and the fur on my body shortens to human length."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-23bc-it-feels-good-when-someone-is-happy-to-see-me-transform"
+file = "DISKB/F0010L.MES"
+offset = 0x23bc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・変身して嬉しいって思われるのはいいなあ・・・・・。）"
+translation = "[CONNIE] (It feels good when someone is happy to see me transform...)"
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-2427-my-tail-shrinks-away-and-my-ears-slide-down-to-either-side"
+file = "DISKB/F0010L.MES"
+offset = 0x2427
+source_mode = 1
+target_mode = 2
+source = "しっぽが縮んで引っ込み、耳が頭の両側へと下がる。"
+translation = "My tail shrinks away, and my ears slide down to either side of my head."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-248c-that-soft-floaty-feeling-after-i-transform"
+file = "DISKB/F0010L.MES"
+offset = 0x248c
+source_mode = 1
+target_mode = 2
+source = "ふんわりとした変身後の感覚。"
+translation = "That soft, floaty feeling after I transform."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[entries]]
+id = "f0010l-24b6-eek"
+file = "DISKB/F0010L.MES"
+offset = 0x24b6
+source_mode = 1
+target_mode = 2
+source = "【コニー】「きゃっ！」"
+translation = "[CONNIE] \"Eek!\""
+speaker = "コニー"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites]]
+id = "f0010l-24c6-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ぁっ！」"
+translation = "[⟦name:older-sister⟧] \"Ah!\""
+speaker = "name-slot:older-sister"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x24c6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x24ca, end = 0x24d9, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x24d9, source_mode = 1, source = "】「ぁっ！」" }
+]
+
+[[composites]]
+id = "f0010l-24e4-as-my-limbs-lengthen-and-i-return-to-human-form-i-lose-my"
+target_mode = 2
+source = "四肢が伸びてヒト型になると、ベッドの上だったので運悪くバランスを崩してしまい、⟦name:older-sister⟧にもたれかかる形になってしまった。"
+translation = "As my limbs lengthen and I return to human form, I lose my balance on the bed and fall against ⟦name:older-sister⟧."
+speaker = "Connie"
+context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0010L.MES"
+segments = [
+  { kind = "text", offset = 0x24e4, source_mode = 1, source = "四肢が伸びてヒト型になると、ベッドの上だったので運悪くバランスを崩してしまい、" },
+  { kind = "token", token = "name:older-sister", start = 0x2517, end = 0x2526, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2526, source_mode = 1, source = "にもたれかかる形になってしまった。" }
 ]
