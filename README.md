@@ -228,11 +228,11 @@ to 25,234 bytes, `F0004.MES` from 13,672 to 17,949 bytes, and `F0005.MES`
 from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,637
 bytes, `F0007.MES` from 19,560 to 26,121 bytes, `F0008.MES` from 11,678 to
 15,052 bytes, `F0009.MES` from 8,065 to 10,635 bytes, `F0010L.MES` from
-9,579 to 12,401 bytes, and `F0010R.MES` from 18,807 to 25,104 bytes. Starting
+9,579 to 12,401 bytes, and `F0010R.MES` from 18,807 to 25,083 bytes. Starting
 from pristine image SHA-256
 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`ab2e7ec5941cc5d8386ef9c40106f9cee086a9f937d4e32f77341d8999b79887`.
+`3a473f24ca59447e9aa33c839ab3246bdc03a3a28a3599ee74d6ab96a8392dd1`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 
