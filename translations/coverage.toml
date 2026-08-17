@@ -171,3 +171,12 @@ description = "Every decoded F0006 record from Kanako's mother returning home th
 file = "DISKB/F0006.MES"
 start = 0x03b3
 end = 0x2fe2
+
+[[scopes]]
+id = "connie-and-yuki-kitchen-encounter"
+description = "Every decoded F0007 record from Connie approaching Yuki in the kitchen through the genetic-sample and alternate ear-teasing branches."
+
+[[scopes.ranges]]
+file = "DISKB/F0007.MES"
+start = 0x04e3
+end = 0x4c26

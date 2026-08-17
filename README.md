@@ -174,7 +174,7 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Seven focused story scopes are now closed. `opening-prologue` accounts for all
+Eight focused story scopes are now closed. `opening-prologue` accounts for all
 118 `FOP.MES` records as 97 translated anchors and 21 explicit title/layout
 exclusions. `project-d-launch-and-first-arrival` accounts for all 462
 `F0001.MES`/`F0002.MES` records as 454 canonical translations, including eight
@@ -182,11 +182,12 @@ context-safe duplicate collapses. `departure-eve-with-kanzaki` covers all 398
 `F0000.MES` records. `connie-and-kanako-first-encounter` covers all 426
 `F0003.MES` records, `connie-and-kanako-first-intimacy` covers all 424
 `F0004.MES` records, and `connie-explains-her-mission` covers all 343
-`F0005.MES` records, and `connie-meets-kanakos-mother` covers all 337
-`F0006.MES` records. None of those six story scopes has an excluded or pending
-anchor. A deliberately untranslated line must be source-anchored in the
-coverage file with a reason; `--require-complete` turns any remaining pending
-line into an error.
+`F0005.MES` records, `connie-meets-kanakos-mother` covers all 337 `F0006.MES`
+records, and `connie-and-yuki-kitchen-encounter` covers all 644 `F0007.MES`
+records. None of those seven story scopes has an excluded or pending anchor. A
+deliberately untranslated line must be source-anchored in the coverage file
+with a reason; `--require-complete` turns any remaining pending line into an
+error.
 
 Build lime-juice from the conventional sibling checkout without writing build
 artifacts into that repository:
@@ -216,15 +217,15 @@ changed-length disk archives, resizes their FAT12 cluster chains if necessary,
 and verifies every layer in the output image. Generated RKT, MES, archive, and
 JSON report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 2,076 canonical entries covering 2,503 physical
-anchors in nine MES files. The QA build grows `F0001.MES` from 17,509 to
+The current catalog contains 2,502 canonical entries covering 3,147 physical
+anchors in ten MES files. The QA build grows `F0001.MES` from 17,509 to
 26,006 bytes, `F0002.MES` from 4,402 to 5,936 bytes, `F0003.MES` from 16,938
 to 25,234 bytes, `F0004.MES` from 13,672 to 17,949 bytes, and `F0005.MES`
 from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,637
-bytes. Starting from pristine image
+bytes and `F0007.MES` from 19,560 to 26,119 bytes. Starting from pristine image
 SHA-256 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`4139179ce28eaffdf8b6381751e1f6b7a8e6d3c489992178b5d1d1301733a8d3`.
+`47a0fdb287b061eb89f9697e2b5129973e326e066125a92fe13973559a0a25c7`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 
