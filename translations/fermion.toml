@@ -39531,7 +39531,7 @@ segments = [
 id = "f0010l-05fd-mmm-mrmrm"
 target_mode = 2
 source = "【⟦name:dear-person⟧】「はふぅ、むにゃむにゃ・・・。」"
-translation = "[⟦name:dear-person⟧] \"Mmm... mrmrm...\""
+translation = "[⟦name:dear-person⟧] \"Mmm... mmf...\""
 speaker = "name-slot:dear-person"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
@@ -39692,7 +39692,7 @@ segments = [
 id = "f0010l-087e-aww-connie-come-sleep-with-me"
 target_mode = 2
 source = "【⟦name:dear-person⟧】「あ～ん、コニー・・・一緒に寝ようよぉ・・・。」"
-translation = "[⟦name:dear-person⟧] \"Aww, Connie... come sleep with me...\""
+translation = "[⟦name:dear-person⟧] \"Nnh, Connie... come sleep with me...\""
 speaker = "name-slot:dear-person"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
@@ -39741,7 +39741,7 @@ source_mode = 1
 target_mode = 2
 source = "見る"
 translation = "LOOK"
-speaker = "Connie"
+speaker = "ui"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
 
@@ -39753,7 +39753,7 @@ source_mode = 1
 target_mode = 2
 source = "考える"
 translation = "THINK"
-speaker = "Connie"
+speaker = "ui"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
 
@@ -39765,7 +39765,7 @@ source_mode = 1
 target_mode = 2
 source = "話す"
 translation = "TALK"
-speaker = "Connie"
+speaker = "ui"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
 
@@ -39978,7 +39978,7 @@ offset = 0x0b45
 source_mode = 1
 target_mode = 2
 source = "こうして見ると、普通の女の子なんだけどな・・・。"
-translation = "Looking at her now, she seems like an ordinary young woman..."
+translation = "Looking at her now, she seems like an ordinary girl..."
 speaker = "Connie"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
@@ -40016,7 +40016,7 @@ status = "qa-ready"
 id = "f0010l-0bdf-name-is-the-kind-of-young-woman-i-want-to-protect"
 target_mode = 2
 source = "⟦name:dear-person⟧はあたしにとって、守ってあげたいタイプの女の子だ。"
-translation = "⟦name:dear-person⟧ is the kind of young woman I want to protect."
+translation = "⟦name:dear-person⟧ is the kind of girl I want to protect."
 speaker = "Connie"
 context = "Kanako clings to Connie at bedtime; Yuki gives up their planned talk and Connie settles beside Kanako on a floor futon."
 status = "qa-ready"
@@ -40368,7 +40368,7 @@ target_mode = 2
 source = "【⟦name:dear-person⟧】「コニー・・・・・・、うーん、むにゃ・・・。」"
 translation = "[⟦name:dear-person⟧] \"Connie... mmm...\""
 speaker = "name-slot:dear-person"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40385,7 +40385,7 @@ target_mode = 2
 source = "【コニー】（⟦name:dear-person⟧はあたしがいると思って寝ているんだろうな・・・。）"
 translation = "[CONNIE] (⟦name:dear-person⟧ must think I'm still beside her...)"
 speaker = "コニー"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40405,7 +40405,7 @@ target_mode = 2
 source = "【コニー】（弱った・・・。）"
 translation = "[CONNIE] (This is a problem...)"
 speaker = "コニー"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites]]
@@ -40414,7 +40414,7 @@ target_mode = 2
 source = "【コニー】（この後に⟦name:mother⟧との約束があるんだけど・・・。）"
 translation = "[CONNIE] (I promised ⟦name:mother⟧ we'd talk after this...)"
 speaker = "コニー"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40431,7 +40431,7 @@ target_mode = 2
 source = "あたしは困って⟦name:mother⟧を見る。"
 translation = "Unsure what to do, I look at ⟦name:mother⟧."
 speaker = "Connie"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40448,7 +40448,7 @@ target_mode = 2
 source = "【⟦name:mother⟧】「いいわ、コニー。⟦name:dear-person⟧の側に居てあげて。ありがとう、いろいろ聞かせてくれて・・・。」"
 translation = "[⟦name:mother⟧] \"It's all right, Connie. Stay with ⟦name:dear-person⟧. And thank you for telling me so much...\""
 speaker = "name-slot:mother"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40467,7 +40467,7 @@ target_mode = 2
 source = "⟦name:dear-person⟧と一緒のベッドに寝るように勧められたが、あたしは床に布団を敷いてもらった。"
 translation = "⟦name:dear-person⟧ and I are offered the same bed, but I have a futon laid out on the floor."
 speaker = "Connie"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40483,7 +40483,7 @@ target_mode = 2
 source = "【コニー】「⟦name:mother⟧・・・ごめんなさい。昼間の約束・・・。」"
 translation = "[CONNIE] \"⟦name:mother⟧... I'm sorry. About what we promised this afternoon...\""
 speaker = "コニー"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40500,7 +40500,7 @@ target_mode = 2
 source = "⟦name:mother⟧は『うふふっ。』と微笑む。"
 translation = "⟦name:mother⟧ smiles with a soft \"Mhmhm.\""
 speaker = "Connie"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40514,9 +40514,9 @@ segments = [
 id = "f0010l-116c-it-s-all-right-another-time-i-m-tired-from-earlier-too-so"
 target_mode = 2
 source = "【⟦name:mother⟧】「いいわ。また今度、ね。私も昼間のアレで疲れちゃったから、寝ます。」"
-translation = "[⟦name:mother⟧] \"It's all right. Another time. I'm tired from earlier too, so I'm going to bed.\""
+translation = "[⟦name:mother⟧] \"It's all right. Another time. I'm tired from this afternoon too, so I'm going to bed.\""
 speaker = "name-slot:mother"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40533,7 +40533,7 @@ target_mode = 2
 source = "⟦name:mother⟧はニコッと笑って部屋を出て行った。"
 translation = "⟦name:mother⟧ gives me a bright smile and leaves the room."
 speaker = "Connie"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[composites.occurrences]]
@@ -40552,7 +40552,7 @@ target_mode = 2
 source = "明日の朝には、一旦、あたしの時代へ帰らなくてはならない。"
 translation = "Tomorrow morning, I have to return to my own time for a while."
 speaker = "Connie"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[entries]]
@@ -40564,7 +40564,7 @@ target_mode = 2
 source = "【コニー】（早く寝なきゃ・・・・・・・・・・・・・・・。）"
 translation = "[CONNIE] (I need to get to sleep...)"
 speaker = "コニー"
-context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
+context = "Kanako dozes nearby while Connie and Yuki abandon their planned talk; Connie settles onto a floor futon and tries to sleep."
 status = "qa-ready"
 
 [[entries]]
@@ -40607,7 +40607,7 @@ status = "qa-ready"
 id = "f0010l-1366-maybe-counting-name-s-breaths-will-put-me-to-sleep"
 target_mode = 2
 source = "⟦name:dear-person⟧の寝息を数えよう。眠れるかもしれない。"
-translation = "⟦name:dear-person⟧'s breaths. Maybe counting them will put me to sleep."
+translation = "⟦name:dear-person⟧'s breaths might put me to sleep if I count them."
 speaker = "Connie"
 context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
 status = "qa-ready"
@@ -40693,7 +40693,7 @@ status = "qa-ready"
 id = "f0010l-140f-mrmrm-mm"
 target_mode = 2
 source = "【⟦name:dear-person⟧】「むにゃむにゃ・・・、すぅ・・・。」"
-translation = "[⟦name:dear-person⟧] \"Mrmrm... mm...\""
+translation = "[⟦name:dear-person⟧] \"Mmf... mm...\""
 speaker = "name-slot:dear-person"
 context = "Unable to sleep, Connie hears Ruri studying and quietly leaves Kanako's room to speak with her."
 status = "qa-ready"
@@ -40964,7 +40964,7 @@ status = "qa-ready"
 id = "f0010l-1833-honestly-i-still-can-t-believe-it-a-young-woman-from-the-f"
 target_mode = 2
 source = "【⟦name:older-sister⟧】「正直言うとね、私、まだ信じられないんだ・・・。未来から来たという、猫に変身できる女の子・・・・・・。あなたを目の前にしていても。」"
-translation = "[⟦name:older-sister⟧] \"Honestly, I still can't believe it... A young woman from the future who can turn into a cat... Even with you right in front of me.\""
+translation = "[⟦name:older-sister⟧] \"Honestly, I still can't believe it... A girl from the future who can turn into a cat... Even with you right in front of me.\""
 speaker = "name-slot:older-sister"
 context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
 status = "qa-ready"
@@ -41039,7 +41039,7 @@ segments = [
 id = "f0010l-1985-i-let-mom-and-name-ask-all-the-questions"
 target_mode = 2
 source = "【⟦name:older-sister⟧】「途中で口を挟むのは、お母さんと⟦name:dear-person⟧に任せたわ。」"
-translation = "[⟦name:older-sister⟧] \"I let Mom and ⟦name:dear-person⟧ do the interrupting.\""
+translation = "[⟦name:older-sister⟧] \"I left it to Mom and ⟦name:dear-person⟧ to chime in along the way.\""
 speaker = "name-slot:older-sister"
 context = "Connie and Ruri reconcile; Ruri asks about the future and requests a demonstration of Connie's Mini form."
 status = "qa-ready"
@@ -41320,7 +41320,7 @@ status = "qa-ready"
 id = "f0010l-1f5f-i-hate-cats-i-don-t-know-they-might-scratch-me-but-it-s-di"
 target_mode = 2
 source = "【⟦name:older-sister⟧】「・・・・・・知らない猫は嫌い。ひっかかれそうだから。だけど知っているなら別よ。」"
-translation = "[⟦name:older-sister⟧] \"...I don't like strange cats. They might scratch me. But I know you, so you're different.\""
+translation = "[⟦name:older-sister⟧] \"...I don't like cats I don't know. They might scratch me. But I know you, so you're different.\""
 speaker = "name-slot:older-sister"
 context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
 status = "qa-ready"
