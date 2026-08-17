@@ -64,6 +64,13 @@ source = "disk-b/F0008.MES"
 sha256 = "62ec0e2c266369b70dcc3a31e88ac13f50b389e3490624ae35b3c3cc8eb4f9bc"
 box_width = 61
 
+[[files]]
+file = "DISKB/F0009.MES"
+source = "disk-b/F0009.MES"
+sha256 = "89365f7e0480aab127ceaf7296546423be5c561a69d04acde70f6e611cc2b982"
+box_width = 61
+
+
 
 [[tokens]]
 id = "name:mother"
@@ -37479,4 +37486,1945 @@ segments = [
   { kind = "text", offset = 0x2d31, source_mode = 1, source = "【" },
   { kind = "token", token = "name:dear-person", start = 0x2d35, end = 0x2d44, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x2d44, source_mode = 1, source = "】「コニーおねえちゃん、私の部屋に来て！　ご飯まで時間あるから、ねっ！」" }
+]
+
+[[composites]]
+id = "f0009-0436-name-takes-my-hand-and-pulls"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの手を握って引っ張る。"
+translation = "⟦name:dear-person⟧ takes my hand and pulls."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x436, end = 0x445, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x445, source_mode = 1, source = "はあたしの手を握って引っ張る。" }
+]
+
+[[entries]]
+id = "f0009-045b-she-really-is-clingy"
+file = "DISKB/F0009.MES"
+offset = 0x45b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（本当に・・・、甘えん坊だなぁ・・・・・・。）"
+translation = "[CONNIE] (She really is clingy...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-047f-i-smile-wryly-and-follow-name-upstairs"
+target_mode = 2
+source = "あたしは苦笑いをして、⟦name:dear-person⟧に続いて２階に上がる。"
+translation = "I smile wryly and follow ⟦name:dear-person⟧ upstairs."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x47f, source_mode = 1, source = "あたしは苦笑いをして、" },
+  { kind = "token", token = "name:dear-person", start = 0x48d, end = 0x49c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x49c, source_mode = 1, source = "に続いて２階に上がる。" }
+]
+
+[[entries]]
+id = "f0009-05e1-look"
+file = "DISKB/F0009.MES"
+offset = 0x5e1
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-05fe-think"
+file = "DISKB/F0009.MES"
+offset = 0x5fe
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-061c-talk"
+file = "DISKB/F0009.MES"
+offset = 0x61c
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0639-name-sleep-together"
+target_mode = 2
+source = "⟦name:dear-person⟧と一緒に寝る"
+translation = "⟦name:dear-person⟧: Sleep together"
+speaker = "ui"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x639, end = 0x648, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x648, source_mode = 1, source = "と一緒に寝る" }
+]
+
+[[composites]]
+id = "f0009-0669-talk-with-name-a-little-longer"
+target_mode = 2
+source = "もう少し⟦name:mother⟧と話す"
+translation = "Talk with ⟦name:mother⟧ a little longer"
+speaker = "ui"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x669, source_mode = 1, source = "もう少し" },
+  { kind = "token", token = "name:mother", start = 0x670, end = 0x67f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x67f, source_mode = 1, source = "と話す" }
+]
+
+[[entries]]
+id = "f0009-06bc-line"
+file = "DISKB/F0009.MES"
+offset = 0x6bc
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・、・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-06d9-i-linger-taking-in-name-s-room"
+target_mode = 2
+source = "あたしは、しばらく⟦name:dear-person⟧の部屋に見とれていた。"
+translation = "I linger, taking in ⟦name:dear-person⟧'s room."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x6d9, source_mode = 1, source = "あたしは、しばらく" },
+  { kind = "token", token = "name:dear-person", start = 0x6e5, end = 0x6f4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x6f4, source_mode = 1, source = "の部屋に見とれていた。" }
+]
+
+[[entries]]
+id = "f0009-0704-when-i-first-woke-up-in-this-room-i-didn-t-have-time-to"
+file = "DISKB/F0009.MES"
+offset = 0x704
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この部屋で初めて目覚めたときは、ゆっくり見ている暇がなかったな。）"
+translation = "[CONNIE] (When I first woke up in this room, I didn't have time to look around.)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0732-name-took-me-straight-to-the-bath-too"
+target_mode = 2
+source = "⟦name:dear-person⟧があたしをすぐにお風呂に連れて行ったし。"
+translation = "⟦name:dear-person⟧ took me straight to the bath, too."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x732, end = 0x741, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x741, source_mode = 1, source = "があたしをすぐにお風呂に連れて行ったし。" }
+]
+
+[[entries]]
+id = "f0009-0775-it-feels-strangely-nostalgic"
+file = "DISKB/F0009.MES"
+offset = 0x775
+source_mode = 1
+target_mode = 2
+source = "なんだか懐かしさを覚える。"
+translation = "It feels strangely nostalgic."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0788-this-is-the-room-where-i-first-met-name-in-this-era"
+target_mode = 2
+source = "あたしが、こっちの時代で⟦name:dear-person⟧と初めて出会った部屋だから。"
+translation = "This is the room where I first met ⟦name:dear-person⟧ in this era."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x788, source_mode = 1, source = "あたしが、こっちの時代で" },
+  { kind = "token", token = "name:dear-person", start = 0x797, end = 0x7a6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x7a6, source_mode = 1, source = "と初めて出会った部屋だから。" }
+]
+
+[[entries]]
+id = "f0009-07c3-maybe-this-is-the-kind-of-life-i-d-always-wanted"
+file = "DISKB/F0009.MES"
+offset = 0x7c3
+source_mode = 1
+target_mode = 2
+source = "あたしはこういう生活に憧れていたのかもしれない。"
+translation = "Maybe this is the kind of life I'd always wanted."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-07e1-not-that-i-have-any-complaints-about-living-with-dr-kanz"
+file = "DISKB/F0009.MES"
+offset = 0x7e1
+source_mode = 1
+target_mode = 2
+source = "もちろん、神崎博士との生活に不服がある訳じゃなくて。"
+translation = "Not that I have any complaints about living with Dr. Kanzaki."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0803-i-love-the-sweet-tightly-ordered-life-i-have-with-dr-kan"
+file = "DISKB/F0009.MES"
+offset = 0x803
+source_mode = 1
+target_mode = 2
+source = "神崎博士との甘美な、でもきっちりとした生活も好きだ。"
+translation = "I love the sweet, tightly ordered life I have with Dr. Kanzaki too."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-083f-is-this-what-they-call-a-girl-s-room"
+file = "DISKB/F0009.MES"
+offset = 0x83f
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こういうのを・・・、女の子らしい部屋、って言うのかな・・・。）"
+translation = "[CONNIE] (Is this what they call a girl's room...?)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0872-my-room-i-have-a-bed-and-a-table-but"
+file = "DISKB/F0009.MES"
+offset = 0x872
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしの部屋・・・。ベッドとテーブルはあるけど・・・。）"
+translation = "[CONNIE] (My room... I have a bed and a table, but...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-089e-my-room-is-pretty-bare-nothing-in-it-just-what-i-need-to"
+file = "DISKB/F0009.MES"
+offset = 0x89e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしの部屋は、殺風景だよ・・・。何も置いてないし・・・。寝泊まりするのに必要なものがあるだけなんだ・・・。」"
+translation = "[CONNIE] \"My room is pretty bare... Nothing in it... Just what I need to sleep and live...\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-08e6-huh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ふうーん。」"
+translation = "[⟦name:dear-person⟧] \"Huh...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x8e6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x8ea, end = 0x8f9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x8f9, source_mode = 1, source = "】「ふうーん。」" }
+]
+
+[[composites]]
+id = "f0009-0906-name-is-listening-with-her-whole-attention-nodding-along"
+target_mode = 2
+source = "⟦name:dear-person⟧は、ふんふん、と興味全開っ、という状態で耳を傾けている。"
+translation = "⟦name:dear-person⟧ is listening with her whole attention, nodding along."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x906, end = 0x915, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x915, source_mode = 1, source = "は、ふんふん、と興味全開っ、という状態で耳を傾けている。" }
+]
+
+[[entries]]
+id = "f0009-093c-it-s-not-that-i-dislike-this-kind-of-atmosphere"
+file = "DISKB/F0009.MES"
+offset = 0x93c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こういう雰囲気は嫌いじゃないけど・・・。）"
+translation = "[CONNIE] (It's not that I dislike this kind of atmosphere...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-095e-i-ve-been-a-hunter-too-long-i-don-t-keep-accessories-or"
+file = "DISKB/F0009.MES"
+offset = 0x95e
+source_mode = 1
+target_mode = 2
+source = "ハンター生活が長かったので、アクセサリーやぬいぐるみとか、女の子らしいものは置いてない。"
+translation = "I've been a hunter too long. I don't keep accessories or stuffed animals or anything girlish."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-09af-i-might-still-have-a-toy-i-was-bought-as-a-little-kid-tw"
+file = "DISKB/F0009.MES"
+offset = 0x9af
+source_mode = 1
+target_mode = 2
+source = "小さい頃に（２年前だけど）買ってもらったおもちゃがあるかな。"
+translation = "I might still have a toy I was bought as a little kid (two years ago)."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-09d5-you-wouldn-t-call-that-girlish-though"
+file = "DISKB/F0009.MES"
+offset = 0x9d5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（それは女の子らしい、って言わないのよね・・・。）"
+translation = "[CONNIE] (You wouldn't call that girlish, though...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0a01-line"
+file = "DISKB/F0009.MES"
+offset = 0xa01
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0a23-ah-dinner-smells-good"
+file = "DISKB/F0009.MES"
+offset = 0xa23
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あっ・・・。・・・・・・ご飯のいい匂いがする。）"
+translation = "[CONNIE] (Ah... Dinner smells good.)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0a46-a-good-smell-hits-my-nose"
+file = "DISKB/F0009.MES"
+offset = 0xa46
+source_mode = 1
+target_mode = 2
+source = "あたしの鼻腔に、いい匂いが飛び込んできた。"
+translation = "A good smell hits my nose."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0a64-name-name-connie-dinner-s-ready"
+target_mode = 2
+source = "【⟦name:mother⟧】「⟦name:older-sister⟧ー！　⟦name:dear-person⟧ー！　コニー！　ご飯、できたわよーーー！」"
+translation = "[⟦name:mother⟧] \"⟦name:older-sister⟧! ⟦name:dear-person⟧! Connie! Dinner's ready!\""
+speaker = "name-slot:mother"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xa64, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0xa68, end = 0xa77, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0xa77, source_mode = 1, source = "】「" },
+  { kind = "token", token = "name:older-sister", start = 0xa7c, end = 0xa8b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0xa8b, source_mode = 1, source = "ー！　" },
+  { kind = "token", token = "name:dear-person", start = 0xa91, end = 0xaa0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xaa0, source_mode = 1, source = "ー！　コニー！　ご飯、できたわよーーー！」" }
+]
+
+[[composites]]
+id = "f0009-0aba-name-s-voice-calling-us-reaches-me"
+target_mode = 2
+source = "⟦name:mother⟧の、あたしたちを呼ぶ声が聞こえる。"
+translation = "⟦name:mother⟧'s voice calling us reaches me."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0xaba, end = 0xac9, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0xac9, source_mode = 1, source = "の、あたしたちを呼ぶ声が聞こえる。" }
+]
+
+[[entries]]
+id = "f0009-0adf-it-makes-me-happy-somehow"
+file = "DISKB/F0009.MES"
+offset = 0xadf
+source_mode = 1
+target_mode = 2
+source = "あたしはなんだか嬉しく感じた。"
+translation = "It makes me happy, somehow."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0af3-name-called-me-like-one-of-the-family-that-s-why-i-think"
+target_mode = 2
+source = "⟦name:mother⟧が、あたしも家族の一員として呼んでくれたからだと思う。"
+translation = "⟦name:mother⟧ called me like one of the family. That's why, I think."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0xaf3, end = 0xb02, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0xb02, source_mode = 1, source = "が、あたしも家族の一員として呼んでくれたからだと思う。" }
+]
+
+[[composites]]
+id = "f0009-0b23-comiiing-let-s-go-co-connie"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「はぁーーーい！　行こっ、・・・・・・、・・・、・・・、コ・・・、コニー。」"
+translation = "[⟦name:dear-person⟧] \"Comiiing! Let's go... ... ... Co... Connie.\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xb23, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xb27, end = 0xb36, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xb36, source_mode = 1, source = "】「はぁーーーい！　行こっ、・・・・・・、・・・、・・・、コ・・・、コニー。」" }
+]
+
+[[composites]]
+id = "f0009-0b62-name-says-it-embarrassed"
+target_mode = 2
+source = "⟦name:dear-person⟧は照れながら言った。"
+translation = "⟦name:dear-person⟧ says it, embarrassed."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xb62, end = 0xb71, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xb71, source_mode = 1, source = "は照れながら言った。" }
+]
+
+[[composites]]
+id = "f0009-0ba1-name-s-side-feels-warm"
+target_mode = 2
+source = "⟦name:dear-person⟧の側にいると、暖かく感じる。"
+translation = "⟦name:dear-person⟧'s side feels warm."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xba1, end = 0xbb0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xbb0, source_mode = 1, source = "の側にいると、暖かく感じる。" }
+]
+
+[[composites]]
+id = "f0009-0bc3-name-s-gentle-air-and-that-i-want-to-cling-feeling-might"
+target_mode = 2
+source = "⟦name:dear-person⟧の穏やかな雰囲気と、甘えたーい、という感じがそうさせるのかもしれない。"
+translation = "⟦name:dear-person⟧'s gentle air, and that I-want-to-cling feeling, might be why."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xbc3, end = 0xbd2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xbd2, source_mode = 1, source = "の穏やかな雰囲気と、甘えたーい、という感じがそうさせるのかもしれない。" }
+]
+
+[[composites]]
+id = "f0009-0c17-hehe"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「えへへ・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Hehe...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xc17, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xc1b, end = 0xc2a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xc2a, source_mode = 1, source = "】「えへへ・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0009-0c3c-as-i-look-around-i-hear-name-s-embarrassed-voice"
+target_mode = 2
+source = "あたしが見回していると、⟦name:dear-person⟧の照れた声が聞こえる。"
+translation = "As I look around, I hear ⟦name:dear-person⟧'s embarrassed voice."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xc3c, source_mode = 1, source = "あたしが見回していると、" },
+  { kind = "token", token = "name:dear-person", start = 0xc4c, end = 0xc5b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xc5b, source_mode = 1, source = "の照れた声が聞こえる。" }
+]
+
+[[composites]]
+id = "f0009-0c74-this-is-a-little-embarrassing"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ちょっぴり、恥ずかしいな・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"This is a little embarrassing...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xc74, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xc78, end = 0xc87, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xc87, source_mode = 1, source = "】「ちょっぴり、恥ずかしいな・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0009-0ca5-when-i-start-peering-around-name-gets-embarrassed"
+target_mode = 2
+source = "あたしがキョロキョロしていると、⟦name:dear-person⟧が照れた。"
+translation = "When I start peering around, ⟦name:dear-person⟧ gets embarrassed."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xca5, source_mode = 1, source = "あたしがキョロキョロしていると、" },
+  { kind = "token", token = "name:dear-person", start = 0xcbe, end = 0xccd, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xccd, source_mode = 1, source = "が照れた。" }
+]
+
+[[entries]]
+id = "f0009-0cd7-so-this-is-a-girl-s-room"
+file = "DISKB/F0009.MES"
+offset = 0xcd7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・これが、女の子の部屋なんだ・・・。」"
+translation = "[CONNIE] \"...So this is a girl's room...\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0cfd-i-take-another-long-look"
+file = "DISKB/F0009.MES"
+offset = 0xcfd
+source_mode = 1
+target_mode = 2
+source = "改めてまじまじと見る。"
+translation = "I take another long look."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0d0e-hey-what-s-big-sis-connie-s-room-like-tell-me"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ねえ、コニーおねえちゃんの部屋は？　どんなの？　聞かせて！！」"
+translation = "[⟦name:dear-person⟧] \"Hey, what's Big Sis Connie's room like? Tell me!!\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xd0e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xd12, end = 0xd21, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xd21, source_mode = 1, source = "】「ねえ、コニーおねえちゃんの部屋は？　どんなの？　聞かせて！！」" }
+]
+
+[[entries]]
+id = "f0009-0d47-my-room-is"
+file = "DISKB/F0009.MES"
+offset = 0xd47
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしの部屋は・・・・・・。」"
+translation = "[CONNIE] \"My room is...\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0d61-i-suddenly-feel-embarrassed"
+file = "DISKB/F0009.MES"
+offset = 0xd61
+source_mode = 1
+target_mode = 2
+source = "あたしは急に恥ずかしくなった。"
+translation = "I suddenly feel embarrassed."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0d90-my-room-isn-t-something-i-can-really-tell-people-about"
+file = "DISKB/F0009.MES"
+offset = 0xd90
+source_mode = 1
+target_mode = 2
+source = "あたしの部屋は・・・、あまり人に言えるものじゃない。"
+translation = "My room... isn't something I can really tell people about."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0daf-i-hesitate-and-name-smiles-thinking-i-m-just-shy"
+target_mode = 2
+source = "あたしが口篭っていると、照れてると思ったのか、⟦name:dear-person⟧がニコニコと微笑みを見せてくれる。"
+translation = "I hesitate, and ⟦name:dear-person⟧ smiles, thinking I'm just shy."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xdaf, source_mode = 1, source = "あたしが口篭っていると、照れてると思ったのか、" },
+  { kind = "token", token = "name:dear-person", start = 0xdca, end = 0xdd9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xdd9, source_mode = 1, source = "がニコニコと微笑みを見せてくれる。" }
+]
+
+[[entries]]
+id = "f0009-0df0-that-s-not-it"
+file = "DISKB/F0009.MES"
+offset = 0xdf0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（照れているんじゃないんだ・・・。）"
+translation = "[CONNIE] (That's not it...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-0e0c-i-just-don-t-have-anything-worth-talking-about"
+file = "DISKB/F0009.MES"
+offset = 0xe0c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（人に言えるほどのものはないから、言えないだけ・・・・・・。）"
+translation = "[CONNIE] (I just don't have anything worth talking about...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0e3e-big-sis-connie-you-ve-had-it-hard"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・、コニーおねえちゃん、苦労してるんだ・・・。」"
+translation = "[⟦name:dear-person⟧] \"...Big Sis Connie, you've had it hard...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xe3e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xe42, end = 0xe51, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xe51, source_mode = 1, source = "】「・・・・・・、コニーおねえちゃん、苦労してるんだ・・・。」" }
+]
+
+[[entries]]
+id = "f0009-0e76-just-connie-is-fine-being-called-big-sis-is-kind-of-tick"
+file = "DISKB/F0009.MES"
+offset = 0xe76
+source_mode = 1
+target_mode = 2
+source = "【コニー】「コニー、だけでいいよ、呼ぶときは・・・。おねえちゃん、なんて呼ばれるとくすぐったいな。」"
+translation = "[CONNIE] \"Just Connie is fine... Being called Big Sis is kind of ticklish.\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0ead-nnnh-co-connie"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ぅ～～～ん・・・、コ、コニー・・・・・・・。」"
+translation = "[⟦name:dear-person⟧] \"Nnnh... Co-Connie...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xead, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xeb1, end = 0xec0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xec0, source_mode = 1, source = "】「ぅ～～～ん・・・、コ、コニー・・・・・・・。」" }
+]
+
+[[composites]]
+id = "f0009-0edf-name-says-it-bright-red"
+target_mode = 2
+source = "⟦name:dear-person⟧は顔を真っ赤にして言った。"
+translation = "⟦name:dear-person⟧ says it, bright red."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xedf, end = 0xeee, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xeee, source_mode = 1, source = "は顔を真っ赤にして言った。" }
+]
+
+[[entries]]
+id = "f0009-0f03-yes-that-s-good"
+file = "DISKB/F0009.MES"
+offset = 0xf03
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そう、それでいい・・・。」"
+translation = "[CONNIE] \"Yes. That's good...\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0f1b-honestly-name-she-looks-like-a-doll-about-to-break"
+target_mode = 2
+source = "【コニー】（ほんっと、⟦name:dear-person⟧って・・・、壊れそうな人形みたい・・・。）"
+translation = "[CONNIE] (Honestly, ⟦name:dear-person⟧... she looks like a doll about to break...)"
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xf1b, source_mode = 1, source = "【コニー】（ほんっと、" },
+  { kind = "token", token = "name:dear-person", start = 0xf29, end = 0xf38, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xf38, source_mode = 1, source = "って・・・、壊れそうな人形みたい・・・。）" }
+]
+
+[[composites]]
+id = "f0009-0f54-it-s-like-i-got-a-different-kind-of-big-sister"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「・・・・・・違うタイプのおねえちゃんができたみたぁい・・・。」"
+translation = "[⟦name:dear-person⟧] \"...It's like I got a different kind of big sister...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xf54, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xf58, end = 0xf67, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xf67, source_mode = 1, source = "】「・・・・・・違うタイプのおねえちゃんができたみたぁい・・・。」" }
+]
+
+[[composites]]
+id = "f0009-0f90-name-says-it-in-a-rambling-way"
+target_mode = 2
+source = "⟦name:dear-person⟧は、つらつらと言う。"
+translation = "⟦name:dear-person⟧ says it in a rambling way."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xf90, end = 0xf9f, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xf9f, source_mode = 1, source = "は、つらつらと言う。" }
+]
+
+[[entries]]
+id = "f0009-0fae-family-the-more-people-the-livelier-it-gets"
+file = "DISKB/F0009.MES"
+offset = 0xfae
+source_mode = 1
+target_mode = 2
+source = "【コニー】「家族は・・・多いほどにぎやかになるからな。」"
+translation = "[CONNIE] \"Family... the more people, the livelier it gets.\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-0fd0-name-takes-my-hand-and-presses-it-to-her-cheek"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしの手を握り、ほっぺたに当てる。"
+translation = "⟦name:dear-person⟧ takes my hand and presses it to her cheek."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0xfd0, end = 0xfdf, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0xfdf, source_mode = 1, source = "はあたしの手を握り、ほっぺたに当てる。" }
+]
+
+[[composites]]
+id = "f0009-0ff9-it-s-so-warm"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「あったかーい・・・。」"
+translation = "[⟦name:dear-person⟧] \"It's so warm...\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0xff9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0xffd, end = 0x100c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x100c, source_mode = 1, source = "】「あったかーい・・・。」" }
+]
+
+[[composites]]
+id = "f0009-101e-i-rub-name-s-cheek"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧のほっぺをすりすりと撫でる。"
+translation = "I rub ⟦name:dear-person⟧'s cheek."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x101e, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1025, end = 0x1034, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1034, source_mode = 1, source = "のほっぺをすりすりと撫でる。" }
+]
+
+[[entries]]
+id = "f0009-1049-a-soft-fluffy-feeling-comes-through-my-hand"
+file = "DISKB/F0009.MES"
+offset = 0x1049
+source_mode = 1
+target_mode = 2
+source = "ぽわぽわとした感触があたしの手に伝わってくる。"
+translation = "A soft, fluffy feeling comes through my hand."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-1069-people-with-warm-hands-have-cold-hearts-is-that-how-it-g"
+file = "DISKB/F0009.MES"
+offset = 0x1069
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あったかい手の人は心が冷たい・・・だっけ？」"
+translation = "[CONNIE] \"...People with warm hands have cold hearts... is that how it goes?\""
+speaker = "コニー"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-108e-i-ve-heard-an-old-saying-like-that"
+file = "DISKB/F0009.MES"
+offset = 0x108e
+source_mode = 1
+target_mode = 2
+source = "昔の言葉で、そう聞いたことがある。"
+translation = "I've heard an old saying like that."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-10a6-nuh-uh-you-re-warm-both-ways"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「ううん。コニーはどっちも暖かいもん。」"
+translation = "[⟦name:dear-person⟧] \"Nuh-uh. You're warm both ways.\""
+speaker = "name-slot:dear-person"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x10a6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x10aa, end = 0x10b9, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x10b9, source_mode = 1, source = "】「ううん。コニーはどっちも暖かいもん。」" }
+]
+
+[[composites]]
+id = "f0009-10d3-name-used-just-my-name-then-catches-herself"
+target_mode = 2
+source = "⟦name:dear-person⟧は、あたしを呼び捨てにして、ハッと気がついた。"
+translation = "⟦name:dear-person⟧ used just my name, then catches herself."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x10d3, end = 0x10e2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x10e2, source_mode = 1, source = "は、あたしを呼び捨てにして、ハッと気がついた。" }
+]
+
+[[composites]]
+id = "f0009-1100-i-stroke-name-s-head-like-i-m-saying-it-s-all-right-it-s"
+target_mode = 2
+source = "あたしは、『いいのいいの』というように⟦name:dear-person⟧の頭をなでなでとする。"
+translation = "I stroke ⟦name:dear-person⟧'s head like I'm saying it's all right, it's all right."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1100, source_mode = 1, source = "あたしは、『いいのいいの』というように" },
+  { kind = "token", token = "name:dear-person", start = 0x1116, end = 0x1125, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1125, source_mode = 1, source = "の頭をなでなでとする。" }
+]
+
+[[composites]]
+id = "f0009-1136-name-tips-her-face-up-with-her-eyes-a-little-closed-the"
+target_mode = 2
+source = "⟦name:dear-person⟧はやや目を閉じて上向き、猫が甘えるような仕草をする。"
+translation = "⟦name:dear-person⟧ tips her face up with her eyes a little closed, the way a cat leans in."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1136, end = 0x1145, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1145, source_mode = 1, source = "はやや目を閉じて上向き、猫が甘えるような仕草をする。" }
+]
+
+[[composites]]
+id = "f0009-1183-name-s-clinging-gesture-teases-my-instincts"
+target_mode = 2
+source = "⟦name:dear-person⟧の甘える仕草は、あたしの本能をくすぐる。"
+translation = "⟦name:dear-person⟧'s clinging gesture teases my instincts."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1183, end = 0x1192, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1192, source_mode = 1, source = "の甘える仕草は、あたしの本能をくすぐる。" }
+]
+
+[[entries]]
+id = "f0009-11af-she-s-cute-enough-to-tuck-in-a-pocket-and-take-home"
+file = "DISKB/F0009.MES"
+offset = 0x11af
+source_mode = 1
+target_mode = 2
+source = "ポケットに入れて、連れて帰りたいくらいにかわいい。"
+translation = "She's cute enough to tuck in a pocket and take home."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-11d1-if-i-told-name-come-with-me-name-would-follow-without-a"
+target_mode = 2
+source = "あたしが『一緒に来て』と⟦name:dear-person⟧に言ったら、⟦name:dear-person⟧はためらわずについてくるだろう。"
+translation = "If I told ⟦name:dear-person⟧ 'come with me,' ⟦name:dear-person⟧ would follow without a second thought."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x11d1, source_mode = 1, source = "あたしが『一緒に来て』と" },
+  { kind = "token", token = "name:dear-person", start = 0x11e0, end = 0x11ef, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x11ef, source_mode = 1, source = "に言ったら、" },
+  { kind = "token", token = "name:dear-person", start = 0x11f8, end = 0x1207, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1207, source_mode = 1, source = "はためらわずについてくるだろう。" }
+]
+
+[[entries]]
+id = "f0009-121c-it-makes-me-happy-but-thinking-about-going-back-to-my-er"
+file = "DISKB/F0009.MES"
+offset = 0x121c
+source_mode = 1
+target_mode = 2
+source = "嬉しく思う反面、あたしの時代へ帰ることを考えると気が重くなってしまう。"
+translation = "It makes me happy, but thinking about going back to my era weighs on me."
+speaker = "Connie"
+context = "Kanako pulls Connie upstairs; Connie looks around the girl's room, compares it with her own, and asks to be called just Connie."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-1265-we-go-downstairs"
+file = "DISKB/F0009.MES"
+offset = 0x1265
+source_mode = 1
+target_mode = 2
+source = "あたしたちは１階に降りた。"
+translation = "We go downstairs."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-127a-dinner-was-fun-the-food-was-good-but-more-than-that-it-w"
+file = "DISKB/F0009.MES"
+offset = 0x127a
+source_mode = 1
+target_mode = 2
+source = "食事は、楽しかった。料理の味もそうだが、賑やかに食事ができて楽しかった、と思う。"
+translation = "Dinner was fun. The food was good, but more than that, it was fun eating around a noisy table."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-12aa-when-i-eat-with-dr-kanzaki-we-only-talk-a-little"
+file = "DISKB/F0009.MES"
+offset = 0x12aa
+source_mode = 1
+target_mode = 2
+source = "神崎博士と一緒に食事をするときは、軽く話をするくらいだった。"
+translation = "When I eat with Dr. Kanzaki, we only talk a little."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-12ce-then-again-in-my-era-almost-no-one-cooks-from-ingredient"
+file = "DISKB/F0009.MES"
+offset = 0x12ce
+source_mode = 1
+target_mode = 2
+source = "もっとも、あたしの時代には材料から作るということは滅多にない。"
+translation = "Then again, in my era almost no one cooks from ingredients."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-12f7-it-s-like-eating-with-dr-kanzaki"
+file = "DISKB/F0009.MES"
+offset = 0x12f7
+source_mode = 1
+target_mode = 2
+source = "【コニー】（神崎博士と一緒に食事をしているときみたいだ・・・。）"
+translation = "[CONNIE] (It's like eating with Dr. Kanzaki...)"
+speaker = "コニー"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-131c-warm-and-kind"
+file = "DISKB/F0009.MES"
+offset = 0x131c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あったかくて・・・・・・、優しくて・・・・・・・・・・・・・・・・。）"
+translation = "[CONNIE] (Warm... and kind...)"
+speaker = "コニー"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-134b-a-happy-meal"
+file = "DISKB/F0009.MES"
+offset = 0x134b
+source_mode = 1
+target_mode = 2
+source = "楽しい食事。"
+translation = "A happy meal."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-1356-there-s-a-warmth-to-it-and-i-fit-into-this-family-right"
+file = "DISKB/F0009.MES"
+offset = 0x1356
+source_mode = 1
+target_mode = 2
+source = "暖かみがあって、あたしはすぐにこの家族に馴染めた。"
+translation = "There's a warmth to it, and I fit into this family right away."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1375-name-and-the-others-taking-me-in-is-part-of-why-i-think"
+target_mode = 2
+source = "⟦name:dear-person⟧たちが、あたしを受け入れてくれたという事も、馴染めた要因だろうと思う。"
+translation = "⟦name:dear-person⟧ and the others taking me in is part of why, I think."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1375, end = 0x1384, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1384, source_mode = 1, source = "たちが、あたしを受け入れてくれたという事も、馴染めた要因だろうと思う。" }
+]
+
+[[composites]]
+id = "f0009-14cc-connie-sleep-in-my-room-tonight"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニー、今夜はあたしの部屋で寝ようよ～～～。」"
+translation = "[⟦name:dear-person⟧] \"Connie, sleep in my room tonight!\""
+speaker = "name-slot:dear-person"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x14cc, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x14d0, end = 0x14df, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x14df, source_mode = 1, source = "】「コニー、今夜はあたしの部屋で寝ようよ～～～。」" }
+]
+
+[[composites]]
+id = "f0009-14ff-name-rubs-up-against-me"
+target_mode = 2
+source = "⟦name:dear-person⟧はすりすりと擦り寄ってくる。"
+translation = "⟦name:dear-person⟧ rubs up against me."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x14ff, end = 0x150e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x150e, source_mode = 1, source = "はすりすりと擦り寄ってくる。" }
+]
+
+[[composites]]
+id = "f0009-1523-name-had-already-gone-back-to-her-room-i-have-homework"
+target_mode = 2
+source = "⟦name:older-sister⟧は『宿題があるから』と、部屋に戻っていた。"
+translation = "⟦name:older-sister⟧ had already gone back to her room. 'I have homework.'"
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1523, end = 0x1532, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1532, source_mode = 1, source = "は『宿題があるから』と、部屋に戻っていた。" }
+]
+
+[[composites]]
+id = "f0009-154f-oh-my"
+target_mode = 2
+source = "【⟦name:mother⟧】「あらあら。」"
+translation = "[⟦name:mother⟧] \"Oh my.\""
+speaker = "name-slot:mother"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x154f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1553, end = 0x1562, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1562, source_mode = 1, source = "】「あらあら。」" }
+]
+
+[[composites]]
+id = "f0009-156f-name-has-taken-to-me-completely-and-name-smiles-at-the-s"
+target_mode = 2
+source = "⟦name:dear-person⟧にすっかり気に入られたあたしを見て、⟦name:mother⟧が微笑む。"
+translation = "⟦name:dear-person⟧ has taken to me completely, and ⟦name:mother⟧ smiles at the sight."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x156f, end = 0x157e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x157e, source_mode = 1, source = "にすっかり気に入られたあたしを見て、" },
+  { kind = "token", token = "name:mother", start = 0x1593, end = 0x15a2, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x15a2, source_mode = 1, source = "が微笑む。" }
+]
+
+[[composites]]
+id = "f0009-15be-hmm-is-name-spoiling-name-too-much"
+target_mode = 2
+source = "【コニー】（う～～～ん・・・。⟦name:mother⟧は⟦name:dear-person⟧を甘やかしすぎなのかな？）"
+translation = "[CONNIE] (Hmm... Is ⟦name:mother⟧ spoiling ⟦name:dear-person⟧ too much?)"
+speaker = "コニー"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x15be, source_mode = 1, source = "【コニー】（う～～～ん・・・。" },
+  { kind = "token", token = "name:mother", start = 0x15d0, end = 0x15df, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x15df, source_mode = 1, source = "は" },
+  { kind = "token", token = "name:dear-person", start = 0x15e3, end = 0x15f2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x15f2, source_mode = 1, source = "を甘やかしすぎなのかな？）" }
+]
+
+[[composites]]
+id = "f0009-1604-i-wonder-but-name-s-sister-name-is-properly-brought-up"
+target_mode = 2
+source = "どうかなと思う。・・・だが⟦name:dear-person⟧の姉、⟦name:older-sister⟧はきちっとしつけられている。"
+translation = "I wonder. ...But ⟦name:dear-person⟧'s sister, ⟦name:older-sister⟧, is properly brought up."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1604, source_mode = 1, source = "どうかなと思う。・・・だが" },
+  { kind = "token", token = "name:dear-person", start = 0x1614, end = 0x1623, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1623, source_mode = 1, source = "の姉、" },
+  { kind = "token", token = "name:older-sister", start = 0x162a, end = 0x1639, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1639, source_mode = 1, source = "はきちっとしつけられている。" }
+]
+
+[[composites]]
+id = "f0009-164c-is-name-the-special-one"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧は、特別なんだろうか・・・・・・・・・？）"
+translation = "[CONNIE] (Is ⟦name:dear-person⟧ the special one...?)"
+speaker = "コニー"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x164c, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x1655, end = 0x1664, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1664, source_mode = 1, source = "は、特別なんだろうか・・・・・・・・・？）" }
+]
+
+[[composites]]
+id = "f0009-1680-it-isn-t-as-if-name-isn-t-spoiling-her-daughter-a-little"
+target_mode = 2
+source = "いささか、⟦name:mother⟧が娘を甘やかしすぎ・・・という事がないでもない。"
+translation = "It isn't as if ⟦name:mother⟧ isn't spoiling her daughter a little too much."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1680, source_mode = 1, source = "いささか、" },
+  { kind = "token", token = "name:mother", start = 0x1688, end = 0x1697, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1697, source_mode = 1, source = "が娘を甘やかしすぎ・・・という事がないでもない。" }
+]
+
+[[entries]]
+id = "f0009-16b5-wanting-to-cling-to-a-stranger-at-her-age-makes-me-happy"
+file = "DISKB/F0009.MES"
+offset = 0x16b5
+source_mode = 1
+target_mode = 2
+source = "あの年齢で、他人に甘えたがるのは、あたしにとって嬉しい反面、自立できるのかと心配してしまう。"
+translation = "Wanting to cling to a stranger at her age makes me happy, but I also worry whether she can stand on her own."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-16ee-connie-tell-me-the-rest"
+target_mode = 2
+source = "【⟦name:mother⟧】「コニー、話の続き、聞かせて。」"
+translation = "[⟦name:mother⟧] \"Connie, tell me the rest.\""
+speaker = "name-slot:mother"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x16ee, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x16f2, end = 0x1701, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1701, source_mode = 1, source = "】「コニー、話の続き、聞かせて。」" }
+]
+
+[[composites]]
+id = "f0009-1717-while-name-is-clinging-to-me-name-speaks-up"
+target_mode = 2
+source = "あたしに⟦name:dear-person⟧が甘えていると、⟦name:mother⟧が話しかけてきた。"
+translation = "While ⟦name:dear-person⟧ is clinging to me, ⟦name:mother⟧ speaks up."
+speaker = "Connie"
+context = "Yuki calls everyone to dinner; after the meal Kanako asks Connie to sleep in her room, and Connie wonders whether Yuki spoils her."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1717, source_mode = 1, source = "あたしに" },
+  { kind = "token", token = "name:dear-person", start = 0x171e, end = 0x172d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x172d, source_mode = 1, source = "が甘えていると、" },
+  { kind = "token", token = "name:mother", start = 0x1738, end = 0x1747, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1747, source_mode = 1, source = "が話しかけてきた。" }
+]
+
+[[entries]]
+id = "f0009-1766-i-pick-up-from-dinner-how-mutants-were-made-the-pollutio"
+file = "DISKB/F0009.MES"
+offset = 0x1766
+source_mode = 1
+target_mode = 2
+source = "あたしは食事の時の話の続き、ミュータントが造られたこと、公害のこと、人口が少なくなったこと・・・などを話した。"
+translation = "I pick up from dinner: how mutants were made, the pollution, how the population shrank..."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-17a7-i-couldn-t-talk-about-factory-waste-and-appetite-killing"
+file = "DISKB/F0009.MES"
+offset = 0x17a7
+source_mode = 1
+target_mode = 2
+source = "さすがに食事中には工場の廃液の話とか、食欲を減退させる話はできないから。"
+translation = "I couldn't talk about factory waste and appetite-killing things at the table."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-17d4-so-the-future-turns-out-like-that"
+target_mode = 2
+source = "【⟦name:mother⟧】「未来は・・・・・・・・・、そんなふうになってしまうのね・・・。」"
+translation = "[⟦name:mother⟧] \"So the future... turns out like that...\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x17d4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x17d8, end = 0x17e7, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x17e7, source_mode = 1, source = "】「未来は・・・・・・・・・、そんなふうになってしまうのね・・・。」" }
+]
+
+[[composites]]
+id = "f0009-180e-after-hearing-me-out-name-says-it-in-a-quiet-voice"
+target_mode = 2
+source = "あたしの話を聞いた⟦name:mother⟧は、しんみりとした口調で言う。"
+translation = "After hearing me out, ⟦name:mother⟧ says it in a quiet voice."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x180e, source_mode = 1, source = "あたしの話を聞いた" },
+  { kind = "token", token = "name:mother", start = 0x181a, end = 0x1829, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1829, source_mode = 1, source = "は、しんみりとした口調で言う。" }
+]
+
+[[entries]]
+id = "f0009-184f-dr-kanzaki-said-this-when-she-sent-me-into-the-past"
+file = "DISKB/F0009.MES"
+offset = 0x184f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・あたしを過去に送り出した神崎博士は言ってました。」"
+translation = "[CONNIE] \"...Dr. Kanzaki said this when she sent me into the past.\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-187a-i-want-you-to-tell-the-people-of-the-past-what-caused-th"
+file = "DISKB/F0009.MES"
+offset = 0x187a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・『過去の人たちに、汚染の原因となる事を伝えて欲しい。』と。」"
+translation = "[CONNIE] \"...'I want you to tell the people of the past what caused the pollution.'\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-18a6-the-cause"
+target_mode = 2
+source = "【⟦name:mother⟧】「原因・・・？」"
+translation = "[⟦name:mother⟧] \"The cause...?\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x18a6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x18aa, end = 0x18b9, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x18b9, source_mode = 1, source = "】「原因・・・？」" }
+]
+
+[[entries]]
+id = "f0009-18c7-the-acts-that-polluted-the-air-and-the-sea-are-recorded"
+file = "DISKB/F0009.MES"
+offset = 0x18c7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「大気や海を汚す原因となった『行為』が克明に記録されています。後で発覚したものも含めて。そのデータを過去の人間に渡すように、と・・・。」"
+translation = "[CONNIE] \"The 'acts' that polluted the air and the sea are recorded in detail. Including things discovered later. She said to give that data to the people of the past...\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-1920-i-take-a-disk-and-a-player-out-of-the-backpack-i-brought"
+file = "DISKB/F0009.MES"
+offset = 0x1920
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンから持ってきたバックパックから、ディスクと再生装置を取り出した。"
+translation = "I take a disk and a player out of the backpack I brought from the machine."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1955-with-that-we-can-stop-the-pollution"
+target_mode = 2
+source = "【⟦name:mother⟧】「それがあれば汚染を防ぐことができるのね？」"
+translation = "[⟦name:mother⟧] \"With that, we can stop the pollution?\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1955, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1959, end = 0x1968, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1968, source_mode = 1, source = "】「それがあれば汚染を防ぐことができるのね？」" }
+]
+
+[[entries]]
+id = "f0009-1984-there-s-a-factory-tank-of-waste-that-s-cracked-the-waste"
+file = "DISKB/F0009.MES"
+offset = 0x1984
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ある工場の、廃液の入ったタンクがひび割れていて、もうすぐ廃液が染み出ます。このデータでわかります。」"
+translation = "[CONNIE] \"There's a factory tank of waste that's cracked. The waste is about to leak. This data shows it.\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-19c5-if-you-find-that-tank-you-can-stop-the-leak-i-want-you-t"
+file = "DISKB/F0009.MES"
+offset = 0x19c5
+source_mode = 1
+target_mode = 2
+source = "【コニー】「そのタンクを見つけて、廃液の漏れを防ぐことができます。同じように原因となる出来事の前に、防いで欲しいのです・・・。」"
+translation = "[CONNIE] \"If you find that tank, you can stop the leak. I want you to stop the other causes the same way, before they happen...\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1a0c-are-you-sure-that-means-changing-the-future"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・・・・いいの？　・・・・・・未来を変えることになるのよ。」"
+translation = "[⟦name:mother⟧] \"...Are you sure? ...That means changing the future.\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1a0c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1a10, end = 0x1a1f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1a1f, source_mode = 1, source = "】「・・・・・・いいの？　・・・・・・未来を変えることになるのよ。」" }
+]
+
+[[entries]]
+id = "f0009-1a47-yes-it-isn-t-only-dr-kanzaki-the-government-in-the-futur"
+file = "DISKB/F0009.MES"
+offset = 0x1a47
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・・・・はい。これは神崎博士だけでなく、未来の政府も承知しています。・・・。」"
+translation = "[CONNIE] \"...Yes. It isn't only Dr. Kanzaki. The government in the future knows too...\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[entries]]
+id = "f0009-1a96-this-is-a-past-i-want-changed-so-people-like-us-mutants"
+file = "DISKB/F0009.MES"
+offset = 0x1a96
+source_mode = 1
+target_mode = 2
+source = "あたしたちのようなミュータントを生み出さないためにも、これは変えて欲しい過去だ。"
+translation = "This is a past I want changed, so people like us mutants are never created."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1ac6-i-might-hide-this-data-you-know"
+target_mode = 2
+source = "【⟦name:mother⟧】「私がこのデータを隠匿するかもしれないわよ？」"
+translation = "[⟦name:mother⟧] \"I might hide this data, you know?\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1ac6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1aca, end = 0x1ad9, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1ad9, source_mode = 1, source = "】「私がこのデータを隠匿するかもしれないわよ？」" }
+]
+
+[[composites]]
+id = "f0009-1af9-even-so-name-s-eyes-are-kind"
+target_mode = 2
+source = "そう言っても⟦name:mother⟧の目は優しかった。"
+translation = "Even so, ⟦name:mother⟧'s eyes are kind."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1af9, source_mode = 1, source = "そう言っても" },
+  { kind = "token", token = "name:mother", start = 0x1b02, end = 0x1b11, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1b11, source_mode = 1, source = "の目は優しかった。" }
+]
+
+[[entries]]
+id = "f0009-1b20-i-ll-be-all-right-i-like-to-think-i-can-read-people"
+file = "DISKB/F0009.MES"
+offset = 0x1b20
+source_mode = 1
+target_mode = 2
+source = "【コニー】「大丈夫です。あたしは人を見る目を持っているつもりですから。」"
+translation = "[CONNIE] \"I'll be all right. I like to think I can read people.\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1b4b-i-ll-talk-to-someone-at-the-publisher"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・・・・出版社の人に相談してみるわ・・・。」"
+translation = "[⟦name:mother⟧] \"...I'll talk to someone at the publisher...\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1b4b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1b4f, end = 0x1b5e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1b5e, source_mode = 1, source = "】「・・・・・・出版社の人に相談してみるわ・・・。」" }
+]
+
+[[entries]]
+id = "f0009-1b81-if-you-can-i-d-like-you-to-reach-someone-with-the-power"
+file = "DISKB/F0009.MES"
+offset = 0x1b81
+source_mode = 1
+target_mode = 2
+source = "【コニー】「できれば実行能力の大きい人に接触して欲しいんです・・・。」"
+translation = "[CONNIE] \"If you can, I'd like you to reach someone with the power to act...\""
+speaker = "コニー"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1bae-name-nods"
+target_mode = 2
+source = "⟦name:mother⟧は頷く。"
+translation = "⟦name:mother⟧ nods."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x1bae, end = 0x1bbd, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1bbd, source_mode = 1, source = "は頷く。" }
+]
+
+[[composites]]
+id = "f0009-1bc7-i-ll-ask-my-husband-too-we-know-when-the-accident-happen"
+target_mode = 2
+source = "【⟦name:mother⟧】「夫にも頼んでみる。・・・事故がいつ起きるかわかるんですもの。対応はできるはずよ。」"
+translation = "[⟦name:mother⟧] \"I'll ask my husband too. ...We know when the accident happens. We should be able to handle it.\""
+speaker = "name-slot:mother"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1bc7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1bcb, end = 0x1bda, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1bda, source_mode = 1, source = "】「夫にも頼んでみる。・・・事故がいつ起きるかわかるんですもの。対応はできるはずよ。」" }
+]
+
+[[composites]]
+id = "f0009-1c10-for-just-this-moment-easygoing-name-looks-solid"
+target_mode = 2
+source = "おっとりしている⟦name:mother⟧の、この時だけはしっかりとした性格が見えた。"
+translation = "For just this moment, easygoing ⟦name:mother⟧ looks solid."
+speaker = "Connie"
+context = "Connie explains mutants, pollution, and the factory-waste data; Yuki agrees to take it to her publisher and her husband."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1c10, source_mode = 1, source = "おっとりしている" },
+  { kind = "token", token = "name:mother", start = 0x1c1b, end = 0x1c2a, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1c2a, source_mode = 1, source = "の、この時だけはしっかりとした性格が見えた。" }
+]
+
+[[entries]]
+id = "f0009-1c76-after-that"
+file = "DISKB/F0009.MES"
+offset = 0x1c76
+source_mode = 1
+target_mode = 2
+source = "それから・・・。"
+translation = "After that..."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1c83-i-keep-talking-and-name-listens-closely"
+target_mode = 2
+source = "あたしは話を続け、⟦name:mother⟧は熱心に聞いていた。"
+translation = "I keep talking, and ⟦name:mother⟧ listens closely."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1c83, source_mode = 1, source = "あたしは話を続け、" },
+  { kind = "token", token = "name:mother", start = 0x1c8f, end = 0x1c9e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1c9e, source_mode = 1, source = "は熱心に聞いていた。" }
+]
+
+[[composites]]
+id = "f0009-1cae-we-break-when-name-takes-a-bath-but-the-talk-goes-on-unt"
+target_mode = 2
+source = "途中、⟦name:mother⟧がお風呂に入るとき中断したが、話は夜中まで続いた。"
+translation = "We break when ⟦name:mother⟧ takes a bath, but the talk goes on until late."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1cae, source_mode = 1, source = "途中、" },
+  { kind = "token", token = "name:mother", start = 0x1cb5, end = 0x1cc4, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1cc4, source_mode = 1, source = "がお風呂に入るとき中断したが、話は夜中まで続いた。" }
+]
+
+[[composites]]
+id = "f0009-1ce5-name-listened-from-beside-us-too-but-after-ten-name-star"
+target_mode = 2
+source = "⟦name:dear-person⟧も側で聞いていたが、１０時過ぎには、⟦name:dear-person⟧はうとうとしはじめた。"
+translation = "⟦name:dear-person⟧ listened from beside us too, but after ten, ⟦name:dear-person⟧ starts to nod off."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1ce5, end = 0x1cf4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1cf4, source_mode = 1, source = "も側で聞いていたが、１０時過ぎには、" },
+  { kind = "token", token = "name:dear-person", start = 0x1d0b, end = 0x1d1a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d1a, source_mode = 1, source = "はうとうとしはじめた。" }
+]
+
+[[composites]]
+id = "f0009-1d2a-name-time-for-bed"
+target_mode = 2
+source = "【⟦name:mother⟧】「⟦name:dear-person⟧、もう寝なさい。」"
+translation = "[⟦name:mother⟧] \"⟦name:dear-person⟧, time for bed.\""
+speaker = "name-slot:mother"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1d2a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1d2e, end = 0x1d3d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1d3d, source_mode = 1, source = "】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1d42, end = 0x1d51, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d51, source_mode = 1, source = "、もう寝なさい。」" }
+]
+
+[[composites]]
+id = "f0009-1d5f-name-shakes-name-awake"
+target_mode = 2
+source = "⟦name:mother⟧が⟦name:dear-person⟧を揺り起こす。"
+translation = "⟦name:mother⟧ shakes ⟦name:dear-person⟧ awake."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x1d5f, end = 0x1d6e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1d6e, source_mode = 1, source = "が" },
+  { kind = "token", token = "name:dear-person", start = 0x1d72, end = 0x1d81, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1d81, source_mode = 1, source = "を揺り起こす。" }
+]
+
+[[composites]]
+id = "f0009-1d8f-nnnh-mmf-okay"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「うん～・・・むにゃむにゃ・・・。はーい・・・。」"
+translation = "[⟦name:dear-person⟧] \"Nnnh... mmf... Okay...\""
+speaker = "name-slot:dear-person"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1d8f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1d93, end = 0x1da2, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1da2, source_mode = 1, source = "】「うん～・・・むにゃむにゃ・・・。はーい・・・。」" }
+]
+
+[[entries]]
+id = "f0009-1dc1-looking-at-her-like-this-she-still-looks-so-young"
+file = "DISKB/F0009.MES"
+offset = 0x1dc1
+source_mode = 1
+target_mode = 2
+source = "こうして見ると、やっぱり年齢未満に見えちゃう・・・。"
+translation = "Looking at her like this, she still looks so young..."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1e15-connie-ahh"
+target_mode = 2
+source = "【⟦name:dear-person⟧】「コニー、あふ・・・。」"
+translation = "[⟦name:dear-person⟧] \"Connie, ahh...\""
+speaker = "name-slot:dear-person"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1e15, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:dear-person", start = 0x1e19, end = 0x1e28, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e28, source_mode = 1, source = "】「コニー、あふ・・・。」" }
+]
+
+[[composites]]
+id = "f0009-1e3a-name-tries-to-say-something-to-me-then-she-s-out"
+target_mode = 2
+source = "⟦name:dear-person⟧はあたしに何か話そうとしたが、ぐー、と寝てしまう。"
+translation = "⟦name:dear-person⟧ tries to say something to me, then she's out."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x1e3a, end = 0x1e49, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e49, source_mode = 1, source = "はあたしに何か話そうとしたが、ぐー、と寝てしまう。" }
+]
+
+[[composites]]
+id = "f0009-1e68-name"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧・・・。」"
+translation = "[CONNIE] \"⟦name:dear-person⟧...\""
+speaker = "コニー"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1e68, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x1e71, end = 0x1e80, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1e80, source_mode = 1, source = "・・・。」" }
+]
+
+[[composites]]
+id = "f0009-1e8a-i-scoop-name-up"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧をひょい、と抱えた。"
+translation = "I scoop ⟦name:dear-person⟧ up."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1e8a, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x1e91, end = 0x1ea0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1ea0, source_mode = 1, source = "をひょい、と抱えた。" }
+]
+
+[[composites]]
+id = "f0009-1edb-i-want-to-talk-with-name-a-little-longer"
+target_mode = 2
+source = "【コニー】（もう少し⟦name:mother⟧と話を続けたいな・・・。）"
+translation = "[CONNIE] (I want to talk with ⟦name:mother⟧ a little longer...)"
+speaker = "コニー"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1edb, source_mode = 1, source = "【コニー】（もう少し" },
+  { kind = "token", token = "name:mother", start = 0x1ee8, end = 0x1ef7, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1ef7, source_mode = 1, source = "と話を続けたいな・・・。）" }
+]
+
+[[entries]]
+id = "f0009-1f09-i-don-t-want-to-break-off-the-conversation"
+file = "DISKB/F0009.MES"
+offset = 0x1f09
+source_mode = 1
+target_mode = 2
+source = "話を中断したくない気持ちがあった。"
+translation = "I don't want to break off the conversation."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites]]
+id = "f0009-1f20-i-decide-to-carry-wobbly-name-to-her-room-and-put-her-to"
+target_mode = 2
+source = "あたしはふらつく⟦name:dear-person⟧を抱え、部屋に寝かせに行くことにした。"
+translation = "I decide to carry wobbly ⟦name:dear-person⟧ to her room and put her to bed."
+speaker = "Connie"
+context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0009.MES"
+segments = [
+  { kind = "text", offset = 0x1f20, source_mode = 1, source = "あたしはふらつく" },
+  { kind = "token", token = "name:dear-person", start = 0x1f2b, end = 0x1f3a, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x1f3a, source_mode = 1, source = "を抱え、部屋に寝かせに行くことにした。" }
 ]

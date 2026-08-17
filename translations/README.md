@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 2,681 canonical records covering 3,412 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0008.MES`.
+The current catalog contains 2,813 canonical records covering 3,603 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0009.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -282,6 +282,16 @@ are excluded or pending. Ruri's blunt skeptic voice is kept distinct from
 Yuki's warm teasing and Connie's polite first-meeting register. No
 trustworthy live F0008 state exists yet, so it remains `qa-ready` pending a
 human playtest and native fixture capture.
+
+The tenth closed scope is `first-night-in-the-takano-house`: all 191 physical
+text records in `F0009.MES`, from Kanako pulling Connie upstairs through the
+room talk, dinner, the pollution briefing, and Connie carrying Kanako to bed.
+They are managed as 132 catalog entries, including 72 composite display
+messages; all anchors are translated and none are excluded or pending. Kanako
+drops Big Sis for bare Connie; the English age lock keeps the sleepy
+observation from saying she looks underage. No trustworthy live F0009 state
+exists yet, so it remains `qa-ready` pending a human playtest and native
+fixture capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 136 anchors are

@@ -189,3 +189,12 @@ description = "Every decoded F0008 record from Connie watching Yuki cook through
 file = "DISKB/F0008.MES"
 start = 0x0558
 end = 0x2d44
+
+[[scopes]]
+id = "first-night-in-the-takano-house"
+description = "Every decoded F0009 record from Kanako pulling Connie upstairs through dinner, the pollution briefing, and Connie carrying Kanako to bed."
+
+[[scopes.ranges]]
+file = "DISKB/F0009.MES"
+start = 0x0445
+end = 0x1f3a
