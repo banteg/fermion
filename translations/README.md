@@ -173,9 +173,9 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 2,970 canonical records covering 3,818 physical
+The current catalog contains 3,368 canonical records covering 4,360 physical
 anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through the
-`F0010L.MES` route.
+two `F0010` routes.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -303,6 +303,15 @@ about eighteen under the disclosed English-release policy, while her three
 years of lived experience remain explicit. No trustworthy live F0010L state
 exists yet, so it remains `qa-ready` pending a human playtest and native fixture
 capture.
+
+The twelfth closed scope is `yuki-nighttime-route`: all 542 physical text
+records in `F0010R.MES`, from Connie returning to the living room through Yuki
+taking the lead, their shared-toy scene, and the afterglow. They are managed as
+398 catalog entries, including 210 composite display messages; all anchors are
+translated and none are excluded or pending. Every spoken refusal, stop, and
+limit remains explicit, as do the source's statements about when Connie resists
+or gives herself over. No trustworthy live F0010R state exists yet, so it
+remains `qa-ready` pending a human playtest and native fixture capture.
 
 The older `boot-to-first-scene-menu` scope remains deliberately broader. It
 contains 178 physical anchors and 120 canonical source lines; 136 anchors are
