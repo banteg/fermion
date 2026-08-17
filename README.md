@@ -220,11 +220,11 @@ The current catalog contains 2,076 canonical entries covering 2,503 physical
 anchors in nine MES files. The QA build grows `F0001.MES` from 17,509 to
 26,006 bytes, `F0002.MES` from 4,402 to 5,936 bytes, `F0003.MES` from 16,938
 to 25,234 bytes, `F0004.MES` from 13,672 to 17,949 bytes, and `F0005.MES`
-from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,629
+from 12,060 to 17,353 bytes. It also grows `F0006.MES` from 12,320 to 16,637
 bytes. Starting from pristine image
 SHA-256 `533a12e3e160af21a376de9eadde505a2d945d0069543a81131b564df7ddd4d8`,
 it produces SHA-256
-`bb0c9f168b8bd6d6a9a56d0749bfb22982b86d225ba9450990a2113d2fe72ea9`.
+`4139179ce28eaffdf8b6381751e1f6b7a8e6d3c489992178b5d1d1301733a8d3`.
 Generated filenames are intentionally not release interfaces; rebuild from the
 hash-pinned pristine input before testing.
 
