@@ -694,6 +694,8 @@ Use short labels; the original UI is designed around compact fixed-width text.
 
 Suggested English:
 
+- ２ＦＤドライブでプレイする → **Play with 2 Floppy Drives**
+- １ＦＤ＋ＲＡＭディスクでプレイする → **Play with 1 Floppy Drive + RAM Disk**
 - 最初から始める → **New Game**
 - 続きから始める → **Continue**
 - 名前変更 → **Change Names**

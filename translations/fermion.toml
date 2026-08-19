@@ -168,6 +168,32 @@ the two color anchors. This is one canonical line in two physical code paths.
 """
 
 [[entries]]
+id = "main-setup-two-floppy-drives"
+file = "DISKA/MAIN.MES"
+offset = 0x0327
+source_mode = 1
+target_mode = 2
+source = "２ＦＤドライブでプレイする　　　"
+translation = "PLAY WITH 2 FLOPPY DRIVES"
+speaker = "ui"
+context = "Initial storage-mode selector."
+status = "qa-ready"
+notes = "Selects the two-drive configuration before the display-mode choice."
+
+[[entries]]
+id = "main-setup-one-floppy-ram-disk"
+file = "DISKA/MAIN.MES"
+offset = 0x0355
+source_mode = 1
+target_mode = 2
+source = "１ＦＤ＋ＲＡＭディスクでプレイする"
+translation = "PLAY WITH 1 FLOPPY DRIVE + RAM DISK"
+speaker = "ui"
+context = "Initial storage-mode selector."
+status = "qa-ready"
+notes = "Selects the one-drive plus RAM-disk configuration before the display-mode choice."
+
+[[entries]]
 id = "main-fiction-disclaimer"
 anchors = [
   { file = "DISKA/MAIN.MES", offset = 0x0c70 },
@@ -272,6 +298,157 @@ notes = """
 Opens the protagonist-name editor. Verified in the live highlighted menu; the
 selection cursor and surrounding geometry remain intact.
 """
+
+[[entries]]
+id = "main-menu-reset-names"
+file = "DISKA/MAIN.MES"
+offset = 0x159b
+source_mode = 1
+target_mode = 2
+source = "名前初期化"
+translation = "RESET NAMES"
+speaker = "ui"
+context = "Title-menu action restoring all five player-editable names."
+status = "qa-ready"
+
+[[entries]]
+id = "main-menu-change-terms"
+file = "DISKA/MAIN.MES"
+offset = 0x15af
+source_mode = 1
+target_mode = 2
+source = "単語変更"
+translation = "CHANGE TERMS"
+speaker = "ui"
+context = "Title-menu action opening the two custom-term controls."
+status = "qa-ready"
+
+[[entries]]
+id = "main-menu-reset-terms"
+file = "DISKA/MAIN.MES"
+offset = 0x15c2
+source_mode = 1
+target_mode = 2
+source = "単語初期化"
+translation = "RESET TERMS"
+speaker = "ui"
+context = "Title-menu action restoring both custom terms."
+status = "qa-ready"
+
+[[entries]]
+id = "main-menu-cg-gallery"
+file = "DISKA/MAIN.MES"
+offset = 0x15e2
+source_mode = 1
+target_mode = 2
+source = "絵を見る"
+translation = "CG GALLERY"
+speaker = "ui"
+context = "Title-menu action opening the unlocked illustration gallery."
+status = "qa-ready"
+
+[[entries]]
+id = "main-menu-scene-replay"
+file = "DISKA/MAIN.MES"
+offset = 0x1602
+source_mode = 1
+target_mode = 2
+source = "シーンを見る"
+translation = "SCENE REPLAY"
+speaker = "ui"
+context = "Title-menu action opening the unlocked scene replay list."
+status = "qa-ready"
+
+[[entries]]
+id = "main-menu-catalog"
+file = "DISKA/MAIN.MES"
+offset = 0x1617
+source_mode = 1
+target_mode = 2
+source = "カタログを見る"
+translation = "CATALOG"
+speaker = "ui"
+context = "Title-menu action opening the period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "main-reset-names-confirm"
+file = "DISKA/MAIN.MES"
+offset = 0x182b
+source_mode = 1
+target_mode = 2
+source = "登録した名前を下記の名前に戻しますか？"
+translation = "Reset names to the defaults below?"
+speaker = "system"
+context = "Confirmation prompt before restoring the five default character names."
+status = "qa-ready"
+
+[[entries]]
+id = "main-reset-name-defaults"
+file = "DISKA/MAIN.MES"
+offset = 0x1850
+source_mode = 1
+target_mode = 2
+source = "　　　由貴・瑠璃・加奈子・陽子・弘子"
+translation = "   Yuki / Ruri / Kanako / Yoko / Hiroko"
+speaker = "system"
+context = "Default values shown by the five-name reset confirmation."
+status = "qa-ready"
+notes = "The names follow the bytecode-proven slot order documented in the translation brief."
+
+[[entries]]
+id = "main-reset-confirm-controls"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x187c },
+  { file = "DISKA/MAIN.MES", offset = 0x1af3 },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　はい：決定キー　いいえ：キャンセルキー"
+translation = "   Yes: Confirm key   No: Cancel key"
+speaker = "system"
+context = "Shared controls on the name-reset and term-reset confirmation screens."
+status = "qa-ready"
+
+[[entries]]
+id = "main-reset-complete"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x1980 },
+  { file = "DISKA/MAIN.MES", offset = 0x1bc0 },
+]
+source_mode = 1
+target_mode = 2
+source = "初期化しました"
+translation = "Defaults restored."
+speaker = "system"
+context = "Shared success message after resetting names or custom terms."
+status = "qa-ready"
+
+[[entries]]
+id = "main-reset-terms-confirm"
+file = "DISKA/MAIN.MES"
+offset = 0x1aae
+source_mode = 1
+target_mode = 2
+source = "登録した単語を下記の名前に戻しますか？"
+translation = "Reset terms to the defaults below?"
+speaker = "system"
+context = "Confirmation prompt before restoring the two default custom terms."
+status = "qa-ready"
+notes = "The source literally says 'names below'; the English states the function of the listed defaults."
+
+[[entries]]
+id = "main-reset-term-defaults"
+file = "DISKA/MAIN.MES"
+offset = 0x1ad3
+source_mode = 1
+target_mode = 2
+source = "　　　おま○こ・お○んち○"
+translation = "   pussy / penis"
+speaker = "system"
+context = "Default values shown by the two-term reset confirmation."
+status = "qa-ready"
+notes = "Matches the locked English defaults for the two custom-term slots."
 
 [[entries]]
 id = "opening-doctor-warning"

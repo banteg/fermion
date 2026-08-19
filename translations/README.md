@@ -173,7 +173,7 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 3,368 canonical records covering 4,360 physical
+The current catalog contains 3,382 canonical records covering 4,376 physical
 anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through the
 two `F0010` routes.
 The setup selector pair, three-copy fiction disclaimer,
@@ -313,15 +313,13 @@ limit remains explicit, as do the source's statements about when Connie resists
 or gives herself over. No trustworthy live F0010R state exists yet, so it
 remains `qa-ready` pending a human playtest and native fixture capture.
 
-The older `boot-to-first-scene-menu` scope remains deliberately broader. It
-contains 178 physical anchors and 120 canonical source lines; 136 anchors are
-translated and 42 remain pending across setup UI and unchanged layout records,
-now that the `F0000.MES` opening is closed by the departure-eve scope.
-Exclusions are scope-local, so closing the focused
-FOP scope does not silently classify records in this broader work queue. Use
-`--require-complete` only for a scope expected to be closed; deliberate
-non-translations belong in `[[scopes.exclusions]]` with exact source anchors and
-a non-empty reason.
+The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
+physical anchors and 120 canonical source lines: 152 anchors are translated,
+and 26 already-final FERMION/DOS glyphs or terminal-layout records are
+explicitly excluded. Exclusions are scope-local, so the FOP title and layout
+records are anchored independently in this scope and in `opening-prologue`.
+Use `--require-complete` for closed scopes; deliberate non-translations belong
+in `[[scopes.exclusions]]` with exact source anchors and a non-empty reason.
 
 The prologue release gate is:
 

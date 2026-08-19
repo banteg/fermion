@@ -19,6 +19,125 @@ file = "DISKA/F0000.MES"
 start = 0x0554
 end = 0x085b
 
+[[scopes.exclusions]]
+id = "fop-fermion-title-f"
+file = "DISKA/FOP.MES"
+offset = 0x06a5
+source_mode = 1
+source = "Ｆ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-e"
+file = "DISKA/FOP.MES"
+offset = 0x06b0
+source_mode = 1
+source = "Ｅ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-r"
+file = "DISKA/FOP.MES"
+offset = 0x06bb
+source_mode = 1
+source = "Ｒ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-m"
+file = "DISKA/FOP.MES"
+offset = 0x06c6
+source_mode = 1
+source = "Ｍ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-i"
+file = "DISKA/FOP.MES"
+offset = 0x06d1
+source_mode = 1
+source = "Ｉ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-o"
+file = "DISKA/FOP.MES"
+offset = 0x06dc
+source_mode = 1
+source = "Ｏ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-fermion-title-n"
+file = "DISKA/FOP.MES"
+offset = 0x06e6
+source_mode = 1
+source = "Ｎ"
+reason = "The proper-name title FERMION is already final Roman text; preserve its timed full-width glyph."
+
+[[scopes.exclusions]]
+id = "fop-terminal-layout-spaces"
+file = "DISKA/FOP.MES"
+offset = 0x0ca5
+source_mode = 1
+source = "　"
+reason = "These records are deliberate terminal layout cells, not linguistic content."
+
+[[scopes.exclusions]]
+id = "fop-terminal-status-dots"
+anchors = [
+  { file = "DISKA/FOP.MES", offset = 0x06fb },
+  { file = "DISKA/FOP.MES", offset = 0x0705 },
+  { file = "DISKA/FOP.MES", offset = 0x070f },
+  { file = "DISKA/FOP.MES", offset = 0x0719 },
+  { file = "DISKA/FOP.MES", offset = 0x0723 },
+  { file = "DISKA/FOP.MES", offset = 0x08ec },
+  { file = "DISKA/FOP.MES", offset = 0x08f6 },
+  { file = "DISKA/FOP.MES", offset = 0x0900 },
+  { file = "DISKA/FOP.MES", offset = 0x090a },
+  { file = "DISKA/FOP.MES", offset = 0x0ca9 },
+  { file = "DISKA/FOP.MES", offset = 0x0cb3 },
+  { file = "DISKA/FOP.MES", offset = 0x0cbd },
+  { file = "DISKA/FOP.MES", offset = 0x0cc7 },
+]
+source_mode = 1
+source = "・"
+reason = "These timed dot records are terminal animation/layout punctuation and remain byte-for-byte unchanged."
+
+[[scopes.exclusions]]
+id = "main-menu-dos-d"
+file = "DISKA/MAIN.MES"
+offset = 0x163e
+source_mode = 1
+source = "Ｄ"
+reason = "The spaced DOS title-menu label is already final Roman text; preserve its full-width glyph."
+
+[[scopes.exclusions]]
+id = "main-menu-dos-o"
+file = "DISKA/MAIN.MES"
+offset = 0x1646
+source_mode = 1
+source = "Ｏ"
+reason = "The spaced DOS title-menu label is already final Roman text; preserve its full-width glyph."
+
+[[scopes.exclusions]]
+id = "main-menu-dos-s"
+file = "DISKA/MAIN.MES"
+offset = 0x164f
+source_mode = 1
+source = "Ｓ"
+reason = "The spaced DOS title-menu label is already final Roman text; preserve its full-width glyph."
+
+[[scopes.exclusions]]
+id = "main-menu-dos-spaces"
+anchors = [
+  { file = "DISKA/MAIN.MES", offset = 0x1642 },
+  { file = "DISKA/MAIN.MES", offset = 0x164b },
+]
+source_mode = 2
+source = " "
+reason = "These spaces are deliberate cells in the already-final spaced DOS label."
+
 [[scopes]]
 id = "departure-eve-with-kanzaki"
 description = "Every decoded F0000 record from Connie's departure-eve scene with Dr. Kanzaki through the next-day handoff to F0001."
