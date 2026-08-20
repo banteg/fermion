@@ -494,13 +494,13 @@ unchanged.
 | 時空震動数 | **Time Quake frequency** for Connie; **space-time oscillation frequency** in formal scientific exposition | Keep distinct from the machine or hull’s ordinary vibration frequency. |
 | マシン震動 / マシン震動数 | **machine/hull vibration** / **machine vibration frequency** | Hardware vibration in F0015 is not another name for the Time Quake. |
 | 時空のひずみ／歪み | **space-time distortion** | Sometimes “rift” is smoother in dialogue. |
-| 時空トンネル | **time tunnel** / **space-time tunnel** | Pick one as the formal term; “time tunnel” is more natural in Connie’s speech. |
+| 時空トンネル | **time tunnel** | The catalog already uses the natural pulp term consistently; do not reopen **space-time tunnel** as a parallel formal variant. |
 | 時空移動マシン | **time-transfer machine** in formal explanation; **time machine** in ordinary dialogue | Preserve Connie’s occasional distinction without forcing the formal compound into every line. |
 | Ｄ計画（時空計画） | **Project D (the Space-Time Project)** | The script never explains what D stands for. Do not invent “Dimension.” |
 | ミュータント | **mutant** | In-world social class: engineered animal-human posthumans, not random comic-book mutation. |
 | ミュータントハンター | **Mutant Hunter** | A formal occupational title is defensible. |
-| タイムパトロール | **Time Patrol** / **Temporal Patrol** | Use **Temporal Patrol** if aiming for less pulp; menu/genre tone supports **Time Patrol**. |
-| 時空監察官 | **temporal inspector** / **time-patrol officer** | Keep distinct from hunter role where possible. |
+| タイムパトロール | **Time Patrol** | The source itself chooses the pulp katakana title. Do not polish it into **Temporal Patrol**. |
+| 時空監察官 | **temporal inspector** | The formal kanji title is distinct from both **Mutant Hunter** and the katakana **Time Patrol**. |
 | ミニマム | **Mini form** | More natural than “Minimum.” Capitalize if treated as a formal transformation state. |
 | 遺伝子 | **genes** in ordinary speech; **genetic samples** when collected or transported; **genetic material** only where the register is genuinely technical | Do not make Connie sound like a grant abstract merely because a biologically smoother mass noun is available. |
 | 遺伝子を採取する / もらう | **collect/get a sample**, **collect genes** | Choose the concrete mission or bodily-sample sense; do not default every occurrence to “collect genetic material.” |
@@ -513,8 +513,9 @@ unchanged.
 | ヒト | **human(s)** | Katakana marks humans as a biological species from Connie’s perspective. Occasionally “the human species” helps. |
 | 獣の遺伝子 | **animal genes** | “Beast genes” is too fantasy-coded for the scientific register. |
 | 実験体 | **test subject**; occasionally **specimen** in deliberately dehumanizing speech | Marie and false-villain Kaori must sound abusive without the translation endorsing their framing. |
-| パラサイト銃 | provisionally **capture gun** or **tranquilizer gun** | Literal “Parasite Gun” is suspicious. Verify art/manual before treating it as a proper noun. |
-| 対ミュータント用捕獲薬 | **anti-mutant capture drug** / **mutant tranquilizer** | Choose based on scene register. |
+| パラサイト銃 | **capture gun** | The sole script occurrence explicitly identifies Connie's mutant-hunting weapon. Keep this functional rendering unless external art or documentation proves a proper product name. |
+| 麻酔銃 | **tranquilizer gun** | A separate ordinary term used when a human target is threatened or drugged; do not merge it backward into `パラサイト銃`. |
+| 対ミュータント用捕獲薬 | **anti-mutant capture drug** | The technical drug name at Connie's altered return point. |
 | 電磁首輪 | **electromagnetic restraint collar** | Later revealed to be fake. |
 | 前頭葉の手術 / ロボトミー | **frontal-lobe surgery / lobotomy** | The staged threat is meant to be horrifying; do not euphemize it. |
 | フェルミ粒子 | **fermions** | `フェルミ粒子` is awkward Japanese scientific shorthand. |
@@ -566,7 +567,7 @@ Use this relationship matrix for recurring plot-bearing forms:
 | Kanako `レミアおねえちゃん` | **Big Sis Remia** | Extends the same sister network to Remia; do not drop the kinship term. |
 | Marna `コニーおねえさん` | **Big Sis Connie** / **Connie, my big sister** | Polite, tentative sisterhood growing into trust. |
 | Marna `コニーおねえさま` in sleep-talk or heightened address | **Connie... my big sister** / **Big Sister Connie** | A more reverent or emotionally heightened rung than casual `おねえさん`; do not flatten both forms automatically. |
-| Yoko `先輩……お姉さま` | **my senior... no, my big sister** | The self-correction is a character joke and relationship reveal; preserve both sides rather than choosing one generic address. |
+| Yoko `先輩……お姉さま` | **my senior... no, my big sister** | The self-correction is a character joke and relationship reveal; preserve both sides rather than choosing one generic address. The swimming-club setting alone does not establish **Captain**. |
 | Adult Kaori `おねえちゃん` at farewell | **Sis** / the already-established older-sister form | Her professional control has collapsed back into family speech. |
 
 ### Ellipses
@@ -631,9 +632,17 @@ Within all three levels, Connie calls `時空震動` the **Time Quake** and `時
 
 Kanzaki and Marie may use more exact scientific language, but the translation must not repair the source’s fictional physics by adding unsupported explanations.
 
-### Historical attitudes and negative utterances
+### Refusal, narrator claims, and historical attitudes
 
 The source contains period dialogue that treats same-sex attraction as strange and sexual scenes where narration contradicts spoken refusal. Apart from the disclosed adult-age framing, the English translation preserves characterization and meaning; it does not modernize isolated lines or disguise coercion through inaccurate vocabulary.
+
+Keep three evidence levels distinct throughout the canonical catalog:
+
+1. A character's spoken refusal remains a refusal, even when later dialogue or narration conflicts with it.
+2. Observable action may show participation, resistance, stillness, or a later change of mind; translate only the action actually stated.
+3. A narrator's claim about pleasure, desire, or hidden intent remains a narrator claim. Do not promote it into objective assent or rewrite the preceding speech to make the claim true.
+
+Catalog context and notes should identify those conflicts when they affect interpretation. They must not resolve them on the character's behalf.
 
 Translate negatives according to syntax and context:
 
@@ -782,6 +791,8 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 
 ## 10. Source inconsistencies and restoration decisions
 
+Repair only a demonstrable text-level error whose intended reading is independently recoverable, such as a clear kanji typo or an isolated spelling drift contradicted by the rest of the work. Preserve character claims, inconsistent arithmetic, compressed chronology, and inferred implausibilities when the source supplies no corrected wording. In both cases, record the evidence and treatment at the exact source anchor rather than silently improving the story.
+
 ### Definite or probable source errors
 
 1. **Marie’s surname**
@@ -808,8 +819,9 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 | Location | Source | Archival English treatment | Reason |
 |---|---|---|---|
 | `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **about 280 years** | The stated dates 1996 and 2288 are 292 years apart. Preserve the source figure and disclose the contradiction rather than repairing character dialogue. |
-| Opening terminal sequence | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
-| Ending surname variant | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
+| `F0040.MES:0x4093` | `確率された時代` (“an era whose probability was...”) | **an era whose technology could perform your operation** | Read `確率` as the contextually recoverable typo `確立` (“established”). Preserve the exact typo in source and notes. |
+| `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
+| `F0042.MES:0x1bf7` | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
 ### Ambiguities to preserve
 
@@ -832,7 +844,9 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 
 The canonical project goal is a source-faithful English translation of the 1995 work with one disclosed editorial change: every character depicted in sexual content is treated as 18 or older in the English version. The original Japanese ages and school status remain part of the archival record and must not be misreported as having changed in the source. Other translation choices remain source-faithful so the project does not drift into an undocumented rewrite.
 
-The age treatment is narrowly scoped to player-facing age statements and sexual framing where an age implication must change. It does **not** erase school status or automatically replace ordinary `女の子`, `先輩`, `留学生`, `一日留学`, or Connie’s biological/hunter diction such as `牝`. Do not insert **woman**, **young woman**, or other age-marking language where the Japanese is making a social, school, or animal-register distinction rather than stating age.
+The age treatment is narrowly scoped to player-facing age statements and sexual framing where an age implication must change. It does **not** erase school status or automatically replace ordinary `女の子`, `先輩`, `留学生`, `一日留学`, or Connie's biological/hunter diction such as `牝`. Do not insert **woman**, **young woman**, or other age-marking language where the Japanese is making a social, school, or animal-register distinction rather than stating age.
+
+Catalog `context` and `notes` are archival metadata, not another player-facing localization layer. Describe the source scene neutrally there; do not prefix characters with **adult** or **adult-aged** merely to restate the release policy. Use adulthood language only where the story itself needs the distinction, such as adult Kaori versus her younger self. The single release note above remains the authoritative disclosure.
 
 ### Major issues
 
@@ -910,7 +924,9 @@ Keep enforcing the implemented schema-5 composite-entry and token contract from 
 
 The following decisions are already locked and should be enforced during review:
 
-- **Procyon**, **Mini form**, and the speaker-scoped **Time Quake** / **space-time oscillation** split;
+- **Procyon**, **Mini form**, **Time Patrol**, **temporal inspector**, and the speaker-scoped **Time Quake** / **space-time oscillation** split;
+- **capture gun** for `パラサイト銃`, **tranquilizer gun** for `麻酔銃`, and **anti-mutant capture drug** for `対ミュータント用捕獲薬`;
+- **cryosleep** for `コールドスリープ`, with **suspended animation** only where `冷凍睡眠` supplies the explanatory gloss;
 - no romanized honorific suffixes;
 - Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
 - preset-only localized name and adult-term editors; and
@@ -935,6 +951,14 @@ Recommended order:
 This keeps the canonical catalog contiguous from New Game across every
 reachable branch. Do not skip an earlier scenario merely because a later file
 is easier to draft or automate.
+
+For each slice, “done” requires all of the following:
+
+1. Every covered record is translated or explicitly excluded, and every changed line has been checked against its anchored Japanese and scene context.
+2. Locked-term and forbidden-variant searches are clean, including split or punctuated forms such as `コールド・・・スリープ`.
+3. A register pass samples every speaking character and compares basic diagnostics such as contractions, sentence openings, and repeated stock phrasing with adjacent finished slices. These are drift detectors, not quotas.
+4. Context and notes remain source-facing, and every refusal, observed action, and narrator interpretation stays at its own evidence level.
+5. Catalog validation, complete coverage, the policy regression tests, and a fresh-image build all pass before the slice is committed.
 
 ### Phase 5 — Review passes and in-engine QA
 
@@ -1026,9 +1050,11 @@ editorial change to the English version, not a claim about the original text.
 - [ ] Connie consistently uses **Time Quake** and **Time Quake frequency**; scientists’ formal **space-time oscillation** terminology and the machine’s ordinary hull vibration remain distinct.
 - [ ] Genetic exposition distinguishes missing information from simplistic “normal” or “superior” genes.
 - [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 280/292-year contradiction remain consistent.
+- [ ] **Time Patrol**, **temporal inspector**, **capture gun**, **tranquilizer gun**, and **anti-mutant capture drug** follow their locked source distinctions.
 - [ ] Connie sounds procedurally competent without becoming a theoretical physicist or a generic catgirl.
 - [ ] Kaori’s public/private/reveal registers, Marie’s grief, Remia’s peer voice, and Marna’s sincere deference remain distinct.
 - [ ] Refusal and negative utterances are translated accurately rather than softened into manufactured assent.
+- [ ] Spoken refusal, observed action, and narrator interpretation remain distinct evidence levels.
 
 ### Engine and presentation
 
@@ -1044,7 +1070,9 @@ editorial change to the English version, not a claim about the original text.
 
 - [ ] The English release includes the locked adult-age editorial note.
 - [ ] Apart from the disclosed adult-age framing, the English translation preserves source meaning without embellishment or undocumented censorship.
+- [ ] Catalog context and notes do not distribute the adult-age framing as character labels.
 - [ ] Every restoration intervention is logged at its source anchor.
+- [ ] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
 - [ ] Content warnings cover high-school-age sexual material, coercive consent framing, family/incest-adjacent dynamics, adultery, abduction, reproductive coercion, medical abuse, grief, death, and gun violence.
 - [ ] Distribution and platform review are completed independently of linguistic QA.
 
@@ -1055,7 +1083,7 @@ editorial change to the English version, not a claim about the original text.
 ### Questions requiring executable, visual, or external evidence
 
 1. What official Latin spellings, if any, exist for Connie, Remia, Marna, Procyon, and the reading of 良美?
-2. Is `パラサイト銃` visibly named in art, packaging, or a manual, or should the provisional **capture gun / tranquilizer gun** remain?
+2. Is `パラサイト銃` visibly named in art, packaging, or a manual? Until such evidence appears, the functional script reading remains locked as **capture gun**.
 3. Do condition flags expose a bad ending, game-over exit, or prerequisite not captured by the recovered inter-MES transition graph?
 4. What are the effective line and column limits for message surfaces beyond the proven 61-column F0001/F0002 dialogue windows?
 5. Does original documentation explain the intended time-travel model or the in-world meaning of **FERMION**?
@@ -1065,6 +1093,6 @@ editorial change to the English version, not a claim about the original text.
 1. Exercise every shipped name and adult-term preset in story, final-letter,
    unlocked replay, and gallery contexts during the human playtest.
 2. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
-3. Check manuals, packaging, and art for evidence about `パラサイト銃` before replacing the provisional functional translation.
+3. Check manuals, packaging, and art for evidence about `パラサイト銃`; revise the locked functional translation only if that evidence proves a proper name.
 4. Measure and visually verify message-window limits beyond the proven 61-column F0001/F0002 dialogue surfaces.
 5. Complete final in-engine route QA and reconcile every logged restoration or ambiguity with the release notes.

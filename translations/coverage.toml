@@ -496,7 +496,7 @@ end = 0x17fb
 
 [[scopes]]
 id = "facility-scouting-and-escape"
-description = "Every decoded text record in the F0034 facility graph through F0038, covering Connie's vent scouting, adult Marna branches, the fake collar, fuel and wheelchair preparations, the midnight escape, and the return to the past."
+description = "Every decoded text record in the F0034 facility graph through F0038, covering Connie's vent scouting, Marna branches, the fake collar, fuel and wheelchair preparations, the midnight escape, and the return to the past."
 
 [[scopes.ranges]]
 file = "DISKD/F003400.MES"

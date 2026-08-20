@@ -31,6 +31,11 @@ brief fully explain the translation; do not repeat a slice-wide voice policy on
 every line. Do not erase an unresolved nuance merely because the current probe
 uses shorter wording.
 
+`context` and `notes` describe the Japanese source scene rather than restating
+the English release's adult-age framing on every record. Use **adult** only
+where the plot itself requires the distinction, such as adult Kaori versus her
+younger self; the single editorial note above is the authoritative disclosure.
+
 Draft canonical English by reading the Japanese in scene context and applying
 the checked-in plot, voice, and terminology notes. Automated tools may expose
 anchors, duplicates, speakers, length problems, and runtime regressions; they
@@ -374,7 +379,7 @@ The seventeenth closed scope is `nanase-recruitment-and-genetic-sample`: all
 arrival through Connie's recruitment request, the genetic-sample encounter,
 and its aftermath. Its 678 canonical source lines are all managed; all anchors
 are translated and none are excluded or pending. The English preserves the
-adult women's affirmative participation separately from every refusal and
+women's affirmative participation separately from every refusal and
 physical resistance. No trustworthy live F0018-F0020 state exists yet, so the
 scope remains `qa-ready` pending a human playtest and native fixture capture.
 
@@ -411,9 +416,9 @@ pending. The catalog contributes 2,033 records after context-safe duplicate
 consolidation. `F0034.MES` and `F0037.MES` themselves contain control flow but
 no text records, so the scope names their text-bearing descendants explicitly.
 The translation preserves the fake-collar clues, fuel and wheelchair planning,
-the threatened lobotomy and reproductive exploitation, the adult patient's
+the threatened lobotomy and reproductive exploitation, the patient's
 drugged abduction, and the medical confirmation after the escape. Across the
-adult Marna branches, every spoken refusal, request not to continue, head
+Marna branches, every spoken refusal, request not to continue, head
 shake, physical withdrawal, and restraint remains distinct from later assent
 or participation. No trustworthy live facility state exists yet, so the scope
 remains `qa-ready` pending a human playtest and native fixture capture.
@@ -423,8 +428,8 @@ physical text records in `F0039.MES` through `F0042.MES`. They contain 978
 managed canonical source lines; all anchors are translated and none are
 excluded or pending. The catalog contributes 935 records after context-safe
 duplicate consolidation. The slice preserves the four-hour time-slip clue,
-the reveal that Dr. Kanzaki is the adult patient's future self, the concealed
-cryosleep chronology, Dr. Marie's coercion and reproductive threat, adult
+the reveal that Dr. Kanzaki is the patient's future self, the concealed
+cryosleep chronology, Dr. Marie's coercion and reproductive threat,
 Marna's intervention, and the choice to disclose both doctors' conduct after
 returning to 2296. The final departure, genetic-repair epilogue, and
 undeliverable letter remain one continuous ending. No trustworthy live ending
