@@ -577,9 +577,15 @@ Use this relationship matrix for recurring plot-bearing forms:
 
 The script uses very long runs of Japanese full stops as pacing and textbox timing. Do not reproduce every dot one-for-one. Recommended policy:
 
-- `……` or long pauses → `…`
-- emotionally broken speech → `I… I don’t…`
-- silent beat in its own record → preserve that record and normally render a short `…`
+- `……` or long pauses → ASCII `...` in the mode-2 English script
+- emotionally broken speech → `I... I don't...`
+- a source record consisting only of `・` followed by `。` → preserve the
+  physical record but render the fixed short `...`, regardless of the Japanese
+  dot count
+
+The one-glyph `・` records in the opening terminal are timed progress animation,
+not story silence, and remain outside that normalization. Unicode `…` is not an
+authoring option for mode 2.
 
 Punctuation may be compressed **within** a record, but records are never merged, deleted, or reassigned to adjacent narration. Some silent records are branch timing, CG pacing, or voice/SFX synchronization points; the one-to-one anchor invariant applies even when two neighboring lines would read more smoothly as one paragraph.
 

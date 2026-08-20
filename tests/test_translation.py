@@ -148,6 +148,7 @@ def write_catalog(
     tmp_path,
     source_hash: str,
     *,
+    source: str = "Original",
     translation: str = "Hello world",
     status: str = "draft",
     file_box_width: int | None = None,
@@ -174,7 +175,7 @@ file = "DISKA/SCENE.MES"
 offset = 0x0002
 source_mode = 2
 target_mode = 2
-source = "Original"
+source = "{source}"
 translation = "{translation}"
 speaker = "narrator"
 context = "Synthetic scene."
@@ -230,6 +231,39 @@ def test_rejects_ambiguous_legacy_translation_status(tmp_path) -> None:
 
     with pytest.raises(TranslationError, match="status must be one of"):
         TranslationCatalog.from_file(catalog_path)
+
+
+def test_pure_silence_uses_fixed_ascii_ellipsis(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        source="・・・・・・・・。",
+        translation="...",
+    )
+
+    [entry] = TranslationCatalog.from_file(catalog_path).entries
+
+    assert entry.translation == "..."
+
+
+def test_rejects_variable_length_pure_silence(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        source="・・・・・・・・。",
+        translation="........",
+    )
+
+    with pytest.raises(TranslationError, match=r"pure silent beat as '\.\.\.'"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_terminal_progress_glyph_is_not_treated_as_story_silence(tmp_path) -> None:
+    catalog_path = write_catalog(tmp_path, "0" * 64, source="・", translation=".")
+
+    [entry] = TranslationCatalog.from_file(catalog_path).entries
+
+    assert entry.translation == "."
 
 
 def test_opening_exposition_reveal_ticks_do_not_split_words() -> None:

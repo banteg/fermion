@@ -48,6 +48,12 @@ width inserts newlines only at word boundaries, preserving explicit authoring
 newlines; a narrower entry override wins when a specific display requires it.
 Validation rejects an unbreakable word longer than its effective width.
 
+A story record whose source is only a run of `・` followed by `。` is a pure
+silent beat and always translates to the fixed mode-2 ASCII `...`. Catalog
+validation rejects variable-length dot runs and parenthesized variants. The
+opening terminal's single-glyph progress records are timed UI animation and are
+intentionally exempt.
+
 A line with one physical occurrence may use the compact `file` and `offset`
 fields. Exact duplicates use one canonical entry with an `anchors` array:
 

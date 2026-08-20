@@ -23,6 +23,7 @@ _GM_TEXT = re.compile(
 )
 _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
+_PURE_SILENCE = re.compile(r"^・+。$")
 _TRANSLATION_STATUSES = frozenset(
     {"draft", "translated", "reviewed", "runtime-verified"}
 )
@@ -1044,6 +1045,13 @@ def _translation_status(table: dict[str, object], *, context: str) -> str:
     return status
 
 
+def _validate_silence_translation(source: str, translation: str, *, context: str) -> None:
+    if _PURE_SILENCE.fullmatch(source) and translation != "...":
+        raise TranslationError(
+            f"{context}.translation must render a pure silent beat as '...'"
+        )
+
+
 def _integer(table: dict[str, object], key: str, *, context: str) -> int:
     value = table.get(key)
     if not isinstance(value, int) or isinstance(value, bool):
@@ -1174,6 +1182,7 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
             _composite_parts(text)
         except TranslationError as error:
             raise TranslationError(f"{context}.{field}: {error}") from error
+    _validate_silence_translation(entry.source, entry.translation, context=context)
     return entry
 
 
@@ -1290,6 +1299,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         ord(character) < 0x20 and character != "\n" for character in entry.translation
     ):
         raise TranslationError(f"{entry.id}: mode 1 translation contains an unsupported control")
+    _validate_silence_translation(entry.source, entry.translation, context=context)
     if entry.box_width is not None:
         for line in entry.wrapped_translation:
             if len(line) > entry.box_width:
