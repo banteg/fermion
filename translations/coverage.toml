@@ -367,3 +367,22 @@ end = 0x1b3a
 file = "DISKB/F0014.MES"
 start = 0x0639
 end = 0x1509
+
+[[scopes]]
+id = "second-expedition-and-route-reunion"
+description = "Every decoded F0015, F0016, and F0017 text record from the attempted two-machine departure through Connie's second arrival, Takano-family recruitment plan, and route-dependent reunion."
+
+[[scopes.ranges]]
+file = "DISKB/F0015.MES"
+start = 0x08ae
+end = 0x331e
+
+[[scopes.ranges]]
+file = "DISKB/F0016.MES"
+start = 0x05c3
+end = 0x257a
+
+[[scopes.ranges]]
+file = "DISKB/F0017.MES"
+start = 0x0672
+end = 0x360b

@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 4,322 canonical records covering 5,707 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0014.MES`.
+The current catalog contains 5,003 canonical records covering 6,624 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0017.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -345,6 +345,19 @@ while the reunion shifts Dr. Kanzaki from unguarded private concern back to
 professional control as the staff arrives. No trustworthy live F0013/F0014
 state exists yet, so the scope remains `qa-ready` pending a human playtest and
 native fixture capture.
+
+The sixteenth closed scope is `second-expedition-and-route-reunion`: all 917
+physical text records in `F0015.MES` through `F0017.MES`, from Connie and
+Remia's attempted two-machine departure through Connie's second arrival, the
+Takano family's recruitment plan, and the route-dependent reunion. They are
+managed as 681 canonical records, including 287 composite display messages and
+13 context-safe duplicate pairs shared across equivalent branches; all anchors
+are translated and none are excluded or pending. The launch sequence keeps
+machine vibration hardware distinct from the surrounding space-time
+oscillation. The reunion keeps the loved one's initiation and later assent
+separate from every spoken refusal and head-shake, including the places where
+Connie continues. No trustworthy live F0015-F0017 state exists yet, so the
+scope remains `qa-ready` pending a human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,
