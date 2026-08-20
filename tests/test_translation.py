@@ -149,6 +149,7 @@ def write_catalog(
     source_hash: str,
     *,
     translation: str = "Hello world",
+    status: str = "draft",
     file_box_width: int | None = None,
     entry_box_width: int | None = 8,
     notes: str | None = "A useful note.",
@@ -177,7 +178,7 @@ source = "Original"
 translation = "{translation}"
 speaker = "narrator"
 context = "Synthetic scene."
-status = "draft"
+status = "{status}"
 {entry_width}{entry_notes}
 '''
     )
@@ -210,6 +211,25 @@ def test_notes_may_be_omitted_from_simple_entry(tmp_path) -> None:
     catalog = TranslationCatalog.from_file(catalog_path)
 
     assert catalog.entries[0].notes == ""
+
+
+@pytest.mark.parametrize(
+    "status",
+    ("draft", "translated", "reviewed", "runtime-verified"),
+)
+def test_accepts_defined_translation_statuses(tmp_path, status: str) -> None:
+    catalog_path = write_catalog(tmp_path, "0" * 64, status=status)
+
+    [entry] = TranslationCatalog.from_file(catalog_path).entries
+
+    assert entry.status == status
+
+
+def test_rejects_ambiguous_legacy_translation_status(tmp_path) -> None:
+    catalog_path = write_catalog(tmp_path, "0" * 64, status="qa-ready")
+
+    with pytest.raises(TranslationError, match="status must be one of"):
+        TranslationCatalog.from_file(catalog_path)
 
 
 def test_opening_exposition_reveal_ticks_do_not_split_words() -> None:

@@ -179,15 +179,20 @@ review artifact; canonical English, context, status, and notes still belong in
 
 The current statuses are:
 
-- `draft`: recorded but not yet exercised in the game;
-- `runtime-proof`: renderer or control-flow proof whose wording is still
-  provisional;
-- `qa-ready`: source and context review are complete and the story slice builds
-  into a fresh, structurally audited image. A representative automated route is
-  required once a valid scenario fixture exists; a human playtest still
-  exercises every line and can send it back for editorial revision;
+- `draft`: recorded, but its source meaning, context, or English is still
+  incomplete;
+- `translated`: source-anchored English exists and passes catalog, source, and
+  structural build checks. This does not claim a dedicated linguistic review or
+  in-game execution of the individual record;
+- `reviewed`: the exact Japanese, scene context, and English wording have received
+  a dedicated linguistic review, but the record is not necessarily exercised in
+  the game;
 - `runtime-verified`: the current wording and layout have been exercised in the
-  game. This is not necessarily final editorial approval.
+  game. This is runtime evidence, not a claim of final editorial approval.
+
+At this checkpoint, 12,989 records are `translated` and 14 are
+`runtime-verified`; none are bulk-labeled `reviewed`. A record moves to
+`reviewed` only when that dedicated source-and-context pass is actually logged.
 
 The current catalog contains 13,003 canonical records covering 17,680 physical
 anchors across 76 MES files: `MAIN.MES`, `FOP.MES`, the translated story
@@ -267,7 +272,7 @@ genetic analysis and the plan to meet Kanako's family. They are managed as 225
 catalog entries, including 124 composite display messages; all anchors are
 translated and none are excluded or pending. The file is stored in `DISKB`,
 and the rebuilt image audits both changed archives. No trustworthy live F0005
-state exists yet, so this slice remains `qa-ready` pending a human playtest and
+state exists yet, so this slice remains `translated` pending a human playtest and
 native fixture capture.
 
 The seventh closed scope is `connie-meets-kanakos-mother`: all 337 physical
@@ -277,7 +282,7 @@ invitation. They are managed as 231 catalog entries, including 96 composite
 display messages; all anchors are translated and none are excluded or pending.
 This slice activates the live `name:mother` token and reorders the fixed Takano
 surname around the editable given name for natural English. No trustworthy live
-F0006 state exists yet, so it remains `qa-ready` pending a human playtest and
+F0006 state exists yet, so it remains `translated` pending a human playtest and
 native fixture capture.
 
 The eighth closed scope is `connie-and-yuki-kitchen-encounter`: all 644
@@ -288,7 +293,7 @@ messages; all anchors are translated and none are excluded or pending. The
 translation keeps Yuki's warm adult voice distinct from Connie's blunt hunter
 calculus, preserves every spoken refusal and the source narration around it,
 and carries the Kanzaki scent and reaction clues without resolving them early.
-No trustworthy live F0007 state exists yet, so it remains `qa-ready` pending a
+No trustworthy live F0007 state exists yet, so it remains `translated` pending a
 human playtest and native fixture capture.
 
 The ninth closed scope is `connie-meets-kanakos-sister`: all 265 physical
@@ -298,7 +303,7 @@ inviting Connie to her room. They are managed as 179 catalog entries,
 including 98 composite display messages; all anchors are translated and none
 are excluded or pending. Ruri's blunt skeptic voice is kept distinct from
 Yuki's warm teasing and Connie's polite first-meeting register. No
-trustworthy live F0008 state exists yet, so it remains `qa-ready` pending a
+trustworthy live F0008 state exists yet, so it remains `translated` pending a
 human playtest and native fixture capture.
 
 The tenth closed scope is `first-night-in-the-takano-house`: all 191 physical
@@ -308,7 +313,7 @@ They are managed as 132 catalog entries, including 72 composite display
 messages; all anchors are translated and none are excluded or pending. Kanako
 drops Big Sis for bare Connie, and the sleepy observation preserves the source
 claim that she looks younger than her age. No trustworthy live F0009 state
-exists yet, so it remains `qa-ready` pending a human playtest and native fixture
+exists yet, so it remains `translated` pending a human playtest and native fixture
 capture.
 
 The eleventh closed scope is `ruri-nighttime-route`: all 215 physical text
@@ -317,7 +322,7 @@ with Ruri, demonstrating Mini form, and changing back. They are managed as 157
 catalog entries, including 83 composite display messages; all anchors are
 translated and none are excluded or pending. Connie's human-equivalent age is
 about seventeen, while her three years of lived experience remain explicit. No
-trustworthy live F0010L state exists yet, so it remains `qa-ready` pending a
+trustworthy live F0010L state exists yet, so it remains `translated` pending a
 human playtest and native fixture capture.
 
 The twelfth closed scope is `yuki-nighttime-route`: all 542 physical text
@@ -327,7 +332,7 @@ taking the lead, their shared-toy scene, and the afterglow. They are managed as
 translated and none are excluded or pending. Every spoken refusal, stop, and
 limit remains explicit, as do the source's statements about when Connie resists
 or gives herself over. No trustworthy live F0010R state exists yet, so it
-remains `qa-ready` pending a human playtest and native fixture capture.
+remains `translated` pending a human playtest and native fixture capture.
 
 The thirteenth closed scope is `ruri-genetic-sample-route`: all 464 physical
 text records in `F0011L.MES`, covering the assertive, slow, and talk-first
@@ -336,7 +341,7 @@ entries, including 203 composite display messages; all anchors are translated
 and none are excluded or pending. Ruri's blunt voice remains distinct from
 Connie's teasing, while every spoken refusal and attempted resistance remains
 explicit even where Connie's narration interprets it differently. No
-trustworthy live F0011L state exists yet, so it remains `qa-ready` pending a
+trustworthy live F0011L state exists yet, so it remains `translated` pending a
 human playtest and native fixture capture.
 
 The fourteenth closed scope is `yuki-after-ruri-route`: all 614 physical text
@@ -348,7 +353,7 @@ warm, observant voice and the early clue that her gestures and scent resemble
 Dr. Kanzaki, without resolving that clue. Every request to be put down,
 refusal, withdrawal, and act of resistance remains explicit, including where
 Connie overrides it; Yuki's later request and assent remain separate records.
-No trustworthy live F0012L state exists yet, so it remains `qa-ready` pending
+No trustworthy live F0012L state exists yet, so it remains `translated` pending
 a human playtest and native fixture capture.
 
 The fifteenth closed scope is `first-return-to-2296`: all 253 physical text
@@ -360,7 +365,7 @@ anchors are translated and none are excluded or pending. Connie's clean-air,
 school, and conservation reflections retain her direct, slightly comic voice,
 while the reunion shifts Dr. Kanzaki from unguarded private concern back to
 professional control as the staff arrives. No trustworthy live F0013/F0014
-state exists yet, so the scope remains `qa-ready` pending a human playtest and
+state exists yet, so the scope remains `translated` pending a human playtest and
 native fixture capture.
 
 The sixteenth closed scope is `second-expedition-and-route-reunion`: all 917
@@ -374,7 +379,7 @@ machine vibration hardware distinct from the surrounding space-time
 oscillation. The reunion keeps the loved one's initiation and later assent
 separate from every spoken refusal and head-shake, including the places where
 Connie continues. No trustworthy live F0015-F0017 state exists yet, so the
-scope remains `qa-ready` pending a human playtest and native fixture capture.
+scope remains `translated` pending a human playtest and native fixture capture.
 
 The seventeenth closed scope is `nanase-recruitment-and-genetic-sample`: all
 922 physical text records in `F0018.MES` through `F0020.MES`, from Nanase's
@@ -383,7 +388,7 @@ and its aftermath. Its 678 canonical source lines are all managed; all anchors
 are translated and none are excluded or pending. The English preserves the
 women's affirmative participation separately from every refusal and
 physical resistance. No trustworthy live F0018-F0020 state exists yet, so the
-scope remains `qa-ready` pending a human playtest and native fixture capture.
+scope remains `translated` pending a human playtest and native fixture capture.
 
 The eighteenth closed scope is `school-visit-and-student-routes`: all 3,982
 physical text records in `F0021.MES` through both `F0026L/R.MES` branches. They
@@ -393,7 +398,7 @@ one-day school visit, Yoshimi's confession route, and Yoko's swimming-club
 route. Every spoken refusal, request to stop or let go, attempt to withdraw,
 physical restraint, and unconsented sample collection remains explicit. The
 canonical English preserves the source's stated ages and school status. No
-trustworthy live F0021-F0026 state exists yet, so the scope remains `qa-ready`
+trustworthy live F0021-F0026 state exists yet, so the scope remains `translated`
 pending a human playtest and native fixture capture.
 
 The nineteenth closed scope is `kanzaki-homecoming-and-apparent-betrayal`: all
@@ -406,7 +411,7 @@ records after context-safe duplicate consolidation. Reveal clues remain
 unexplained at first presentation,
 while the abduction, capture drug, reproductive-experiment threat, and lobotomy
 threat stay explicit. No trustworthy live F0027-F0033 state exists yet, so the
-scope remains `qa-ready` pending a human playtest and native fixture capture.
+scope remains `translated` pending a human playtest and native fixture capture.
 
 The twentieth closed scope is `facility-scouting-and-escape`: all 2,367
 physical text records in the 26 text-bearing files reached through the F0034
@@ -421,7 +426,7 @@ drugged abduction, and the medical confirmation after the escape. Across the
 Marna branches, every spoken refusal, request not to continue, head
 shake, physical withdrawal, and restraint remains distinct from later assent
 or participation. No trustworthy live facility state exists yet, so the scope
-remains `qa-ready` pending a human playtest and native fixture capture.
+remains `translated` pending a human playtest and native fixture capture.
 
 The twenty-first closed scope is `future-self-reveal-and-farewell`: all 1,287
 physical text records in `F0039.MES` through `F0042.MES`. They contain 978
@@ -433,7 +438,7 @@ cryosleep chronology, Dr. Marie's coercion and reproductive threat,
 Marna's intervention, and the choice to disclose both doctors' conduct after
 returning to 2296. The final departure, genetic-repair epilogue, and
 undeliverable letter remain one continuous ending. No trustworthy live ending
-state exists yet, so the scope remains `qa-ready` pending a human playtest and
+state exists yet, so the scope remains `translated` pending a human playtest and
 native fixture capture.
 
 The final closed scope is `replay-editors-and-period-catalog`: all 716 physical

@@ -23,6 +23,9 @@ _GM_TEXT = re.compile(
 )
 _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
+_TRANSLATION_STATUSES = frozenset(
+    {"draft", "translated", "reviewed", "runtime-verified"}
+)
 
 
 class TranslationError(ValueError):
@@ -1033,6 +1036,14 @@ def _optional_string(table: dict[str, object], key: str, *, context: str = "cata
     return value
 
 
+def _translation_status(table: dict[str, object], *, context: str) -> str:
+    status = _string(table, "status", context=context)
+    if status not in _TRANSLATION_STATUSES:
+        choices = ", ".join(sorted(_TRANSLATION_STATUSES))
+        raise TranslationError(f"{context}.status must be one of: {choices}")
+    return status
+
+
 def _integer(table: dict[str, object], key: str, *, context: str) -> int:
     value = table.get(key)
     if not isinstance(value, int) or isinstance(value, bool):
@@ -1154,7 +1165,7 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
         translation=_string(value, "translation", context=context),
         speaker=_string(value, "speaker", context=context),
         context=_string(value, "context", context=context),
-        status=_string(value, "status", context=context),
+        status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
         box_width=box_width_value,
     )
@@ -1256,7 +1267,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         translation=_string(value, "translation", context=context),
         speaker=_string(value, "speaker", context=context),
         context=_string(value, "context", context=context),
-        status=_string(value, "status", context=context),
+        status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
         box_width=box_width_value,
     )

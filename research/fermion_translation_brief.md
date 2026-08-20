@@ -944,10 +944,10 @@ Voice-calibration examples belong in anchored canonical catalog entries with sou
 
 Recommended order:
 
-1. FOP — **complete and QA-ready; focused coverage and end-to-end route are green**
-2. F0000 — **complete and QA-ready; 398 physical records / 391 canonical lines,
+1. FOP — **translated and built; focused coverage and end-to-end route are green**
+2. F0000 — **translated and built; 398 physical records / 391 canonical lines,
    human playtest pending**
-3. F0001–F0002 — **complete and QA-ready; 462 physical records / 454 canonical translations**
+3. F0001–F0002 — **translated and built; 462 physical records / 454 canonical translations**
 4. F0003 — **translation and structural build complete; human playtest and native fixture pending**
 5. F0004–F0016
 6. F0027–F0042
