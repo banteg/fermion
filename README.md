@@ -378,6 +378,18 @@ visible `LOAD` operation and the exact scenario marker inside serialized live
 state; the F0001 proof also retains its 640x308 room-only checkpoint before the
 dialogue hashes.
 
+The separate `second-scene-three-row-proof` route follows the stateful
+LOOK/THINK/TALK sequence to `launch-humans-ended-mutants` and pins a framebuffer
+where its 61-column translation occupies all three dialogue rows. This is the
+runtime basis for the catalog's conservative three-row envelope:
+
+```sh
+uv run fermion emulator route \
+  runtime/routes.toml \
+  second-scene-three-row-proof \
+  working/emulator/second-scene.hdi
+```
+
 Manual NP2debug `.S00`/`.S01` slots are opaque, exact-image snapshots. Check a
 slot against the image it will resume before loading it:
 

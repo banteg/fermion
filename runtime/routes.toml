@@ -317,3 +317,74 @@ sha256 = "99a812f1916d4cae6d9f626d212d24bb1b117193699bbff2d9cefcf70e22c72b"
 name = "second-scene-kanzaki-created-connie"
 frame = 15299
 sha256 = "07d943658a87caf19a5b6897baa7073c3abdb12c9bbc433cba414274c5ed8e9b"
+
+[[routes]]
+name = "second-scene-three-row-proof"
+description = "Reach a translated F0001 record that visibly occupies all three dialogue rows."
+content_sha256 = "0ffb0b591b04b62acf8869336a27619dae2ad81adcd94ace93278cf0664841ad"
+frames = 38500
+cache_frame = 24999
+taps = [
+  "1000:return",
+  "1300:return",
+  "1750:return",
+  "2200:return",
+  "3200:down:8",
+  "3600:return:8",
+  "4300:return:8",
+  "4800:return:8",
+  "6500:return:8",
+  "8300:return:8",
+  "10600:return:8",
+  "11200:return:8",
+  "11800:return:8",
+  "12400:return:8",
+  "13050:return:8",
+  "13650:return:8",
+  "14250:return:8",
+  "14850:return:8",
+  "15450:return:8",
+  "16050:return:8",
+  "16650:return:8",
+  "17250:return:8",
+  "18100:return:8",
+  "18700:return:8",
+  "19300:return:8",
+  "19900:return:8",
+  "20500:return:8",
+  "21100:return:8",
+  "21700:return:8",
+  "22300:return:8",
+  "22900:return:8",
+  "23500:return:8",
+  "24100:return:8",
+  "25100:down:8",
+  "25300:return:8",
+  "25900:return:8",
+  "26500:return:8",
+  "27100:return:8",
+  "27700:return:8",
+  "28300:return:8",
+  "28900:return:8",
+  "29500:return:8",
+  "30100:return:8",
+  "30700:return:8",
+  "31300:down:8",
+  "31500:return:8",
+  "32100:return:8",
+  "32700:return:8",
+  "33300:return:8",
+  "33900:return:8",
+  "34900:up:8",
+  "35100:up:8",
+  "35300:return:8",
+  "35900:return:8",
+  "36500:return:8",
+  "37100:return:8",
+  "37700:return:8",
+]
+
+[[routes.checkpoints]]
+name = "second-scene-three-dialogue-rows"
+frame = 38199
+sha256 = "134085ec15e3cb90739ff300727bb04efa8f11b4b4b2e5e730ecb21f1a3774ca"

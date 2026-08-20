@@ -146,3 +146,31 @@ def test_locked_translation_policy_contracts() -> None:
 
         token_initial_dash = re.match(r"^⟦[^⟧]+⟧[^\n]*--I\b", item.translation)
         assert token_initial_dash is None, f"{item.id}: token-initial dash workaround"
+
+
+def test_catalog_stays_within_proven_three_row_envelope() -> None:
+    catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
+    catalog = TranslationCatalog.from_file(catalog_path)
+    files = {item.file: item for item in catalog.files}
+    tokens = {item.id: item for item in catalog.tokens}
+
+    for entry in catalog.entries:
+        widths = {
+            entry.box_width if entry.box_width is not None else files[anchor.file].box_width
+            for anchor in entry.anchors
+        }
+        for width in widths:
+            rows = entry.wrapped_translation_for(width)
+            assert len(rows) <= 3, f"{entry.id}: {len(rows)} rows"
+
+    for entry in catalog.composites:
+        widths = {
+            entry.box_width
+            if entry.box_width is not None
+            else files[occurrence.file].box_width
+            for occurrence in entry.occurrences
+        }
+        for width in widths:
+            wrapped = entry.compiled_translation(width, tokens)
+            rows = wrapped.splitlines() or [""]
+            assert len(rows) <= 3, f"{entry.id}: {len(rows)} rows"

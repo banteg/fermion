@@ -924,6 +924,13 @@ Maintain one canonical source-faithful English catalog. Keep any distribution ad
 - Identify textbox limits, encoding, line breaks, control codes, delays, and CG triggers.
 - Confirm which repeated records are separately reachable.
 
+The 61-column F0001 story window has direct framebuffer proof for a three-row
+message (`launch-humans-ended-mutants`). The catalog therefore uses three rows
+as a conservative upper envelope and contains no four-row record. This does not
+prove that every later, terminal, editor, or card surface accepts three rows;
+surface-specific route QA remains required, especially to find any two-row
+window.
+
 ### Phase 2 — Extend the canonical TOML catalog
 
 For every record, preserve:
@@ -1116,7 +1123,7 @@ and otherwise sensitive material described in this brief.
 1. What official Latin spellings, if any, exist for Connie, Remia, Marna, Procyon, and the reading of 良美?
 2. Is `パラサイト銃` visibly named in art, packaging, or a manual? Until such evidence appears, the functional script reading remains locked as **capture gun**.
 3. Do condition flags expose a bad ending, game-over exit, or prerequisite not captured by the recovered inter-MES transition graph?
-4. What are the effective line and column limits for message surfaces beyond the proven 61-column F0001/F0002 dialogue windows?
+4. Which message surfaces differ from the proven 61-column, three-row F0001 dialogue window, especially by accepting fewer than three rows?
 5. Does original documentation explain the intended time-travel model or the in-world meaning of **FERMION**?
 
 ### Highest-priority implementation and research tasks
@@ -1125,5 +1132,5 @@ and otherwise sensitive material described in this brief.
    unlocked replay, and gallery contexts during the human playtest.
 2. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
 3. Check manuals, packaging, and art for evidence about `パラサイト銃`; revise the locked functional translation only if that evidence proves a proper name.
-4. Measure and visually verify message-window limits beyond the proven 61-column F0001/F0002 dialogue surfaces.
+4. Measure and visually verify message-window limits beyond the proven 61-column, three-row F0001 dialogue surface.
 5. Complete final in-engine route QA and reconcile every logged restoration or ambiguity with the release notes.

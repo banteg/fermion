@@ -48,6 +48,14 @@ width inserts newlines only at word boundaries, preserving explicit authoring
 newlines; a narrower entry override wins when a specific display requires it.
 Validation rejects an unbreakable word longer than its effective width.
 
+The current catalog also stays inside a conservative three-row envelope. A
+save-fixture emulator route directly exercises all three rows of
+`launch-humans-ended-mutants` in the 61-column F0001 dialogue window. That is
+positive evidence for this one story surface, not proof that every UI or later
+message surface has the same capacity; final route QA must still detect any
+surface that allows fewer rows. No catalog record is allowed to assume a fourth
+row merely because the engine can relocate longer bytecode.
+
 A story record whose source is only a run of `・` followed by `。` is a pure
 silent beat and always translates to the fixed mode-2 ASCII `...`. Catalog
 validation rejects variable-length dot runs and parenthesized variants. The
