@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 3,694 canonical records covering 4,840 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0011L.MES`.
+The current catalog contains 4,103 canonical records covering 5,454 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0012L.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -321,6 +321,18 @@ Connie's teasing, while every spoken refusal and attempted resistance remains
 explicit even where Connie's narration interprets it differently. No
 trustworthy live F0011L state exists yet, so it remains `qa-ready` pending a
 human playtest and native fixture capture.
+
+The fourteenth closed scope is `yuki-after-ruri-route`: all 614 physical text
+records in `F0012L.MES`, covering Connie's six late-night approaches to Yuki
+after the Ruri route and her eventual return to bed. They are managed as 409
+catalog entries, including 249 composite display messages; all anchors are
+translated and none are excluded or pending. The translation preserves Yuki's
+warm, observant voice and the early clue that her gestures and scent resemble
+Dr. Kanzaki, without resolving that clue. Every request to be put down,
+refusal, withdrawal, and act of resistance remains explicit, including where
+Connie overrides it; Yuki's later request and assent remain separate records.
+No trustworthy live F0012L state exists yet, so it remains `qa-ready` pending
+a human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

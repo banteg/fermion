@@ -344,3 +344,12 @@ description = "Every decoded F0011L record across Connie's assertive, slow, and 
 file = "DISKB/F0011L.MES"
 start = 0x04e3
 end = 0x3968
+
+[[scopes]]
+id = "yuki-after-ruri-route"
+description = "Every decoded F0012L record across Connie's six late-night approaches to Yuki after the Ruri route, through Connie's return to bed."
+
+[[scopes.ranges]]
+file = "DISKB/F0012L.MES"
+start = 0x048f
+end = 0x485c
