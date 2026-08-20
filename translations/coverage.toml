@@ -630,7 +630,7 @@ end = 0x12d3
 
 [[scopes]]
 id = "future-self-reveal-and-farewell"
-description = "Every decoded F0039 through F0042 text record covering Dr. Kanzaki's identity reveal and cold-sleep history, Dr. Marie's confrontation, Marna's intervention, the return to 2296, and the final letter."
+description = "Every decoded F0039 through F0042 text record covering Dr. Kanzaki's identity reveal and cryosleep history, Dr. Marie's confrontation, Marna's intervention, the return to 2296, and the final letter."
 
 [[scopes.ranges]]
 file = "DISKD/F0039.MES"

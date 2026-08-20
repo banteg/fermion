@@ -108,7 +108,7 @@ Kanzaki’s expressed reason for returning is concern for Connie. Her hidden rea
 
 After Kanzaki departs, the sick girl vanishes from her room. Connie detects traces of an anesthetic or mutant-capture drug and suspects that she was sedated and carried into Kanzaki’s machine.
 
-At this point the girl’s mother reveals the truth about the planned 1996 operation. Contemporary medicine cannot save her. The “operation” was going to be staged in the hope that believing herself cured would restore her will to live. The parents had also considered an experimental cold-sleep procedure that might preserve her until medicine advanced enough to treat her.
+At this point the girl’s mother reveals the truth about the planned 1996 operation. Contemporary medicine cannot save her. The “operation” was going to be staged in the hope that believing herself cured would restore her will to live. The parents had also considered an experimental cryosleep procedure that might preserve her until medicine advanced enough to treat her.
 
 Connie immediately follows. Her return coordinates have been altered. Instead of the ordinary time port, she emerges at an unfamiliar hospital/research facility in 2296 beside Kanzaki’s machine. A trap incapacitates her with an anti-mutant capture drug.
 
@@ -149,7 +149,7 @@ Kanzaki breaks down. She is the adult future version of the sick girl, living un
 
 ### 3.11 Kaori Kanzaki’s original history
 
-In the original timeline, the girl entered cold sleep in 1996. She woke in **2288**, after medicine had developed a successful operation. To her, only days had passed; in the outside world nearly three centuries had elapsed. Her parents, sister, and everyone she knew were dead.
+In the original timeline, the girl entered cryosleep in 1996. She woke in **2288**, after medicine had developed a successful operation. To her, only days had passed; in the outside world nearly three centuries had elapsed. Her parents, sister, and everyone she knew were dead.
 
 A nurse named **Miki Kanzaki** helped her face the truth. She was taken in by the Kanzaki family—descendants connected with the preservation of the Takano home—and given a new legal identity: **Kaori Kanzaki**. Miki became her adoptive older sister.
 
@@ -162,7 +162,7 @@ Her plan served two goals:
 
 She secretly set Connie’s original destination to her childhood home. She did not originally intend to keep the girl as a subject; she intended to return her after treatment. She hid the truth because Project D was already compromised by Marie’s demands and because admitting the personal plan would expose everyone involved.
 
-The script says the sleep lasted “about 280 years,” but 1996 to 2288 is **292 years**. The archival English repairs this to **“nearly three hundred years”** and records the intervention in the restoration log rather than reproducing false arithmetic without comment.
+The script says the sleep lasted **“about 280 years,”** although 1996 to 2288 is **292 years**. The archival English preserves the doctor’s stated figure and records the contradiction in the restoration log. Translation does not silently make a character more accurate than the source.
 
 **Source anchors:** F0039–F0040.
 
@@ -402,6 +402,10 @@ The `name-slot:dear-person` value is also adult Kaori’s original given name. W
 
 The final letter and every replay/gallery surface that displays the younger daughter’s name are part of the same regression surface. A name preset is not complete merely because ordinary dialogue renders correctly.
 
+### Connie Kanzaki — locked ending-only form
+
+`コニー・カンザキ様` appears only as an addressee in the younger daughter’s final letter. Render it as **Dear Connie Kanzaki** there, but do not infer that Connie legally adopted the surname, expose it in menus, or normalize it backward into earlier dialogue. For this project it is an ending-only familial form of address, not a legal name.
+
 ### What the dump actually contains
 
 There are **no** literal `【】` or `【 】` records in the content-deduplicated dump. The `FOP.MES`-rooted story corpus instead contains:
@@ -486,8 +490,9 @@ unchanged.
 | Japanese | Recommended English | Notes |
 |---|---|---|
 | フェルミオン / ＦＥＲＭＩＯＮ | **FERMION** | Keep the logo/title capitalization; use *Fermion* in prose if desired. |
-| 時空震動 | **Time Quake** in UI/story shorthand; **space-time oscillation** in technical exposition | The original opening already displays “Time Quake.” `震動` is marked terminology, not merely ordinary `振動`. |
-| 時空震動数 | **space-time oscillation frequency** | Avoid “time-quake number.” |
+| 時空震動 | **Time Quake** in Connie’s speech, thought, pilot narration, and story/UI shorthand; **space-time oscillation** in scientists’ technical exposition | The original opening already displays “Time Quake.” Let Connie use the in-world operational name rather than making her sound like a theorist. `震動` is marked terminology, not merely ordinary `振動`. |
+| 時空震動数 | **Time Quake frequency** for Connie; **space-time oscillation frequency** in formal scientific exposition | Keep distinct from the machine or hull’s ordinary vibration frequency. |
+| マシン震動 / マシン震動数 | **machine/hull vibration** / **machine vibration frequency** | Hardware vibration in F0015 is not another name for the Time Quake. |
 | 時空のひずみ／歪み | **space-time distortion** | Sometimes “rift” is smoother in dialogue. |
 | 時空トンネル | **time tunnel** / **space-time tunnel** | Pick one as the formal term; “time tunnel” is more natural in Connie’s speech. |
 | 時空移動マシン | **time-transfer machine** in formal explanation; **time machine** in ordinary dialogue | Preserve Connie’s occasional distinction without forcing the formal compound into every line. |
@@ -497,8 +502,11 @@ unchanged.
 | タイムパトロール | **Time Patrol** / **Temporal Patrol** | Use **Temporal Patrol** if aiming for less pulp; menu/genre tone supports **Time Patrol**. |
 | 時空監察官 | **temporal inspector** / **time-patrol officer** | Keep distinct from hunter role where possible. |
 | ミニマム | **Mini form** | More natural than “Minimum.” Capitalize if treated as a formal transformation state. |
-| 正常な遺伝子 | **intact genetic material** / **undamaged genetic data** | “Normal genes” carries modern eugenic implications and is less accurate to the script’s own clarification. |
+| 遺伝子 | **genes** in ordinary speech; **genetic samples** when collected or transported; **genetic material** only where the register is genuinely technical | Do not make Connie sound like a grant abstract merely because a biologically smoother mass noun is available. |
+| 遺伝子を採取する / もらう | **collect/get a sample**, **collect genes** | Choose the concrete mission or bodily-sample sense; do not default every occurrence to “collect genetic material.” |
+| 正常な遺伝子 | **intact genes** / **intact genetic material** / **undamaged genetic data** | Use the more technical forms in precise explanation. Avoid a translator-endorsed “superior genes” reading. |
 | 強い遺伝子 | **robust genes** only when characters use the shorthand | Narration explicitly says this is imprecise. |
+| 純粋な遺伝子 | **pure human genes** | Preserve the source’s uncomfortable eugenic shorthand where characters use it; do not silently rewrite it as missing-information terminology. |
 | 失われた／欠落した遺伝子情報 | **lost/missing genetic information** | Central scientific term. |
 | 遺伝子劣化 | **genetic degradation** | Environmental decline across generations. |
 | 遺伝子崩壊 | **genetic collapse** | Stronger term used in the Marie/Akira exposition; do not flatten every occurrence into “degradation.” |
@@ -511,15 +519,16 @@ unchanged.
 | 前頭葉の手術 / ロボトミー | **frontal-lobe surgery / lobotomy** | The staged threat is meant to be horrifying; do not euphemize it. |
 | フェルミ粒子 | **fermions** | `フェルミ粒子` is awkward Japanese scientific shorthand. |
 | ヘリウム３ | **helium-3** | The pseudo-science links it to measurable oscillation. |
-| コールドスリープ | **cryosleep** in normal dialogue; **suspended animation** in medical exposition | “Cold sleep” is intelligible but dated Engrish. |
-| 一日留学 | **one-day visiting student** / **one-day exchange student** | This is a school visit, not literal international study abroad. |
+| コールドスリープ | **cryosleep** in normal dialogue; **suspended animation** for the explanatory `冷凍睡眠` gloss | This is lexicalized Japanese science-fiction vocabulary, not source-origin English UI. Translate it to the idiomatic English equivalent rather than calquing the katakana. |
+| 留学生 / 外国からの留学生 | **exchange student** / **exchange student from abroad** | This is the Takano family’s cover story in F0024 and the term used by the teacher. |
+| 一日留学 | **one-day visit** / **here for a one-day visit** | This is Connie’s description of the visit in F0026L, not a second occurrence of 留学生 and not “one-day exchange student.” |
 | 博士 | **Dr.** | Use **Dr. Kanzaki** and **Dr. Marie**; “Professor” changes the institutional meaning. |
 | エッチ / Ｈ | Contextual: **sex**, **fooling around**, **naughty**, or **intimate** | Translate the function and register rather than forcing one English equivalent everywhere. |
 | `さん` / `ちゃん` / `様` / address-form `先生` | **Do not retain as romanized suffixes** | Express distance, affection, deference, or authority through syntax, names, kinship terms, and ordinary English titles such as **Dr.** |
 
 ### “Gene” versus “genetic information”
 
-This distinction matters. The premise is not that people in 1996 possess a mystical “superior gene.” The analyzer looks for sequences/information absent in 2296. Translate explanatory passages with **data**, **sequence**, **information**, **missing segments**, and **intact material**. Reserve “strong genes” for Connie’s own acknowledged shorthand.
+This distinction matters, but it is register-sensitive. The premise is not that people in 1996 possess a mystical “superior gene”: precise explanatory passages should use **data**, **sequence**, **information**, **missing segments**, and **intact material**. Ordinary `遺伝子`, however, remains **genes** or **samples** in Connie’s dialogue and narration. Reserve **strong genes** and **pure human genes** for the characters’ own acknowledged or unsettling shorthand rather than silently correcting their worldview.
 
 ---
 
@@ -537,11 +546,28 @@ Japanese character relationships are carried heavily by register:
 
 An English patch should reproduce these shifts through syntax and word choice rather than preserving every honorific.
 
+### Naturalization and source-origin English
+
+Naturalize fluent Japanese speech into fluent character English. A katakana loanword is part of the Japanese sentence and should be translated by meaning and register: `コールドスリープ` becomes **cryosleep**, while **kotatsu** may remain because it names a culturally specific object already established in English. Do not preserve an awkward English calque merely because the Japanese happens to be written in katakana.
+
+English already printed by the original game is a different evidence class. Preserve its period computer flavor by default, including terseness and odd phrasing, and make any correction a source-anchored, logged intervention. The naturalized opening terminal in section 13 is the project’s already-approved exception; it is not precedent for silently polishing every source-origin English string.
+
 ### Honorifics — locked policy
 
 Do not use systematic romanized suffixes such as `-san`, `-chan`, `-sama`, or `-sensei`. Render their relationship work in English: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, a softened request, a formal sentence, or no overt marker where English naturally leaves one out. A plot-significant title or kinship term remains; a suffix does not survive merely because it is present in Japanese. Apply this policy consistently in dialogue, labels, and translator notes.
 
 Kinship terms carry plot information. At the reveal, `おかあさん` should be **Mom**, not formal “Mother.” `コニーおねえちゃん` can begin as **Big Sis Connie** and become less marked as intimacy grows. Adult Kaori’s farewell to `おねえちゃん` should use the form already established for her older sister. Marna’s changing address to Connie should likewise register growing trust without importing a romanized suffix.
+
+Use this relationship matrix for recurring plot-bearing forms:
+
+| Speaker / source form | English treatment | Function to preserve |
+|---|---|---|
+| Kanako `コニーおねえちゃん` | **Big Sis Connie** / **Connie, my big sis** | Her eager adoption of Connie as family. |
+| Kanako `レミアおねえちゃん` | **Big Sis Remia** | Extends the same sister network to Remia; do not drop the kinship term. |
+| Marna `コニーおねえさん` | **Big Sis Connie** / **Connie, my big sister** | Polite, tentative sisterhood growing into trust. |
+| Marna `コニーおねえさま` in sleep-talk or heightened address | **Connie... my big sister** / **Big Sister Connie** | A more reverent or emotionally heightened rung than casual `おねえさん`; do not flatten both forms automatically. |
+| Yoko `先輩……お姉さま` | **my senior... no, my big sister** | The self-correction is a character joke and relationship reveal; preserve both sides rather than choosing one generic address. |
+| Adult Kaori `おねえちゃん` at farewell | **Sis** / the already-established older-sister form | Her professional control has collapsed back into family speech. |
 
 ### Ellipses
 
@@ -571,6 +597,18 @@ The source is saturated with sound-symbolic prose. Use three categories:
 
 Connie’s feline comedy deserves selective preservation—ear twitches, purring thoughts, kotatsu enthusiasm, and occasional catlike diction are character beats.
 
+### Erotic narration and `攻める`
+
+The adult command-label mapping in section 9 does not supply a prose gloss. In narration, `攻める` marks sustained, forceful, or targeted action; choose a concrete verb from the described body part and motion rather than defaulting to abstract **tease**, **pleasure**, or euphemistic “intimate flesh.” Those words remain available when they are genuinely the best local reading, but they are not a house translation.
+
+Use the revised F0000 opening as calibration:
+
+- `F0000.MES:0x2416` — **goes after one weak spot after another**;
+- `F0000.MES:0x2953` — **keeps pressing me, trying to make me cry out**;
+- `F0000.MES:0x318b` — **works a sensitive spot inside my slit**.
+
+Preserve the source’s force and agency. If the sentence supplies fingers, tongue, pressure, rubbing, or a target, name that action rather than translating only its intended result.
+
 ### “Native organism” joke
 
 Connie initially thinks of the 1996 girl as `原住生物`, literally a native/local organism. A natural rendering is:
@@ -589,6 +627,8 @@ Use a three-level register for Connie:
 2. **General explanation:** accessible and slightly textbook-like.
 3. **Underlying theory:** hesitant, memorized, or openly incomplete.
 
+Within all three levels, Connie calls `時空震動` the **Time Quake** and `時空震動数` the **Time Quake frequency**. Scientists may use **space-time oscillation** in formal explanation. Keep `マシン震動` as ordinary machine or hull vibration so the F0015 hardware failure remains distinct.
+
 Kanzaki and Marie may use more exact scientific language, but the translation must not repair the source’s fictional physics by adding unsupported explanations.
 
 ### Historical attitudes and negative utterances
@@ -600,6 +640,7 @@ Translate negatives according to syntax and context:
 - `恥ずかしい` → **I’m embarrassed / This is embarrassing**;
 - `やめて` → **Stop**;
 - `嫌` / `いや` → **No / I don’t want that**, or a non-lexical emotional cry only where the context genuinely supports it;
+- `やん` → decide locally: it can be a coy protest, a shortened negative, or an erotic vocalization. Do not lock it globally to either **No** or a moan. Surrounding syntax, physical resistance, and adjacent explicit `嫌` / `だめ` / `やめて` determine whether it carries lexical refusal;
 - `だめ` → **Don’t / You can’t / I can’t / This is too much**, according to the construction.
 
 The adult-age note must not be used to manufacture assent line by line. Any future consent edit would have to revise setup and action explicitly and remain mechanically separate from the canonical translation.
@@ -751,7 +792,7 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 2. **Cryosleep duration**
    - 1996 → 2288 is 292 years.
    - Script says “about 280 years.”
-   - **Decision:** translate this as **“nearly three hundred years”** and disclose the repair. This preserves the intended scale without presenting false arithmetic.
+   - **Decision:** preserve **“about 280 years”** and disclose the contradiction. The archival translation records authorial arithmetic rather than silently making the physician more accurate.
 
 3. **`確率された時代`**
    - In the doctor’s explanation, `確率` is almost certainly a typo for `確立`: the era in which the technology was **established/developed**.
@@ -766,7 +807,7 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 
 | Location | Source | Archival English treatment | Reason |
 |---|---|---|---|
-| `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **nearly three hundred years** | The stated dates 1996 and 2288 are 292 years apart. The repair preserves the intended magnitude and is disclosed rather than silent. |
+| `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **about 280 years** | The stated dates 1996 and 2288 are 292 years apart. Preserve the source figure and disclose the contradiction rather than repairing character dialogue. |
 | Opening terminal sequence | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
 | Ending surname variant | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
@@ -775,8 +816,8 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 - Adult Kaori’s continued existence after younger Kaori is saved.
 - The environmental warnings given to the Takano family should alter the ruined future, yet the epilogue still describes Kaori and Marie repairing the 2296 genome. The source does not say whether prevention is gradual, creates a branch, or changes a later future.
 - Only eight years separate Kaori’s 2288 awakening from the 2296 mission. In that interval she recovers, enters university, studies medicine and genetics, joins the project, creates three-year-old Connie, and becomes project head. The chronology is implausibly compressed, but no alternate date is established.
+- The 1996→2288 interval is 292 years, while the attending physician says “about 280 years.” Both dates and the approximate duration remain in the archival English; the restoration log identifies the inconsistency.
 - `F0040.MES:0x49cf` says that the Kanzaki couple who adopt Kaori are **her descendants** and caretakers of the old house. A childless sixteen-year-old entering cryosleep cannot have literal direct descendants; wider-family or older-sister descendants are plausible, but the source does not clarify.
-- Whether final “Connie Kanzaki” is a legal surname, an affectionate family claim, or symbolic address.
 - Exact expansion of the “D” in Project D.
 - Whether `パラサイト銃` is a proper product name or an extraction/authorial oddity.
 
@@ -790,6 +831,8 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 ## 11. Locked content and release policy
 
 The canonical project goal is a source-faithful English translation of the 1995 work with one disclosed editorial change: every character depicted in sexual content is treated as 18 or older in the English version. The original Japanese ages and school status remain part of the archival record and must not be misreported as having changed in the source. Other translation choices remain source-faithful so the project does not drift into an undocumented rewrite.
+
+The age treatment is narrowly scoped to player-facing age statements and sexual framing where an age implication must change. It does **not** erase school status or automatically replace ordinary `女の子`, `先輩`, `留学生`, `一日留学`, or Connie’s biological/hunter diction such as `牝`. Do not insert **woman**, **young woman**, or other age-marking language where the Japanese is making a social, school, or animal-register distinction rather than stating age.
 
 ### Major issues
 
@@ -861,13 +904,13 @@ For every record, preserve:
 - translator note;
 - QA status.
 
-Implement the composite-entry and token contract from section 6 in the next catalog schema. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
+Keep enforcing the implemented schema-5 composite-entry and token contract from section 6. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
 
 ### Phase 3 — Apply the locked glossary and policies
 
 The following decisions are already locked and should be enforced during review:
 
-- **Procyon**, **Mini form**, and the contextual **Time Quake** / **space-time oscillation** split;
+- **Procyon**, **Mini form**, and the speaker-scoped **Time Quake** / **space-time oscillation** split;
 - no romanized honorific suffixes;
 - Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
 - preset-only localized name and adult-term editors; and
@@ -980,9 +1023,9 @@ editorial change to the English version, not a claim about the original text.
 
 ### Terminology and voice
 
-- [ ] **Project D**, **Space-Time Project**, **Time Quake**, **space-time oscillation**, and **time tunnel** do not drift between equivalent contexts.
+- [ ] Connie consistently uses **Time Quake** and **Time Quake frequency**; scientists’ formal **space-time oscillation** terminology and the machine’s ordinary hull vibration remain distinct.
 - [ ] Genetic exposition distinguishes missing information from simplistic “normal” or “superior” genes.
-- [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 292-year restoration remain consistent.
+- [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 280/292-year contradiction remain consistent.
 - [ ] Connie sounds procedurally competent without becoming a theoretical physicist or a generic catgirl.
 - [ ] Kaori’s public/private/reveal registers, Marie’s grief, Remia’s peer voice, and Marna’s sincere deference remain distinct.
 - [ ] Refusal and negative utterances are translated accurately rather than softened into manufactured assent.
@@ -1016,14 +1059,12 @@ editorial change to the English version, not a claim about the original text.
 3. Do condition flags expose a bad ending, game-over exit, or prerequisite not captured by the recovered inter-MES transition graph?
 4. What are the effective line and column limits for message surfaces beyond the proven 61-column F0001/F0002 dialogue windows?
 5. Does original documentation explain the intended time-travel model or the in-world meaning of **FERMION**?
-6. Is **Connie Kanzaki** official nomenclature or only the younger daughter’s familial sign-off?
 
 ### Highest-priority implementation and research tasks
 
-1. Implement catalog schema 5 composite occurrences, immutable authoring tokens, and validated merged-view import without changing the existing simple-entry behavior.
-2. Prove a reversible strategy for English full-name order around the existing name-token spans, or define the smallest renderer change that can do so without creating parallel variables.
-3. Exercise every shipped name and adult-term preset in story, final-letter,
+1. Exercise every shipped name and adult-term preset in story, final-letter,
    unlocked replay, and gallery contexts during the human playtest.
-4. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
-5. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
-6. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.
+2. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
+3. Check manuals, packaging, and art for evidence about `パラサイト銃` before replacing the provisional functional translation.
+4. Measure and visually verify message-window limits beyond the proven 61-column F0001/F0002 dialogue surfaces.
+5. Complete final in-engine route QA and reconcile every logged restoration or ambiguity with the release notes.

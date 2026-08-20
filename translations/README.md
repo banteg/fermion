@@ -424,7 +424,7 @@ managed canonical source lines; all anchors are translated and none are
 excluded or pending. The catalog contributes 935 records after context-safe
 duplicate consolidation. The slice preserves the four-hour time-slip clue,
 the reveal that Dr. Kanzaki is the adult patient's future self, the concealed
-cold-sleep chronology, Dr. Marie's coercion and reproductive threat, adult
+cryosleep chronology, Dr. Marie's coercion and reproductive threat, adult
 Marna's intervention, and the choice to disclose both doctors' conduct after
 returning to 2296. The final departure, genetic-repair epilogue, and
 undeliverable letter remain one continuous ending. No trustworthy live ending
