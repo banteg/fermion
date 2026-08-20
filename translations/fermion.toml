@@ -96,6 +96,18 @@ source = "disk-b/F0012L.MES"
 sha256 = "12b35b4e6d7f68f79b9d33c98525a487fd2fe0b51e8834ba1674ee19df7343f0"
 box_width = 61
 
+[[files]]
+file = "DISKB/F0013.MES"
+source = "disk-b/F0013.MES"
+sha256 = "1d0c2d7f9e9d533a42c4c1040551434251fefe68fa4f0e994737fe0b6d044a73"
+box_width = 61
+
+[[files]]
+file = "DISKB/F0014.MES"
+source = "disk-b/F0014.MES"
+sha256 = "b73137660e09cc2a7a54bb8d70f315fe002e02559a16e9c1891377cd9ef60757"
+box_width = 61
+
 [[tokens]]
 id = "name:mother"
 source = "由貴"
@@ -58545,3 +58557,2778 @@ segments = [
   { kind = "token", token = "name:mother", start = 0x484d, end = 0x485c, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x485c, source_mode = 1, source = "。" },
 ]
+
+[[entries]]
+id = "f0013-050d-i-suddenly-wake-up"
+file = "DISKB/F0013.MES"
+offset = 0x050d
+source_mode = 1
+target_mode = 2
+source = "ふと、目が覚めた。"
+translation = "I suddenly wake up."
+speaker = "Connie"
+context = "Connie wakes before dawn without disturbing Kanako and steps into the Takano garden."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-051e-my-internal-clock-keeps-perfect-time"
+file = "DISKB/F0013.MES"
+offset = 0x051e
+source_mode = 1
+target_mode = 2
+source = "あたしの体内時計は、正確に時を刻んでいる。"
+translation = "My internal clock keeps perfect time."
+speaker = "Connie"
+context = "Connie wakes before dawn without disturbing Kanako and steps into the Takano garden."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-053a-it-s-five-minutes-before-my-scheduled-wake"
+file = "DISKB/F0013.MES"
+offset = 0x053a
+source_mode = 1
+target_mode = 2
+source = "起床予定の７時の・・・５分前だ。"
+translation = "It's... five minutes before my scheduled wake-up at seven."
+speaker = "Connie"
+context = "Connie wakes before dawn without disturbing Kanako and steps into the Takano garden."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-0555-careful-not-to-wake-name-dear-person-i"
+target_mode = 2
+source = "あたしは⟦name:dear-person⟧を起こさないよう、そぉーっと起き出して庭に出た。"
+translation = "Careful not to wake ⟦name:dear-person⟧, I quietly get up and go into the garden."
+speaker = "Connie"
+context = "Connie wakes before dawn without disturbing Kanako and steps into the Takano garden."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x0555, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x055c, end = 0x056b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x056b, source_mode = 1, source = "を起こさないよう、そぉーっと起き出して庭に出た。" },
+]
+
+[[entries]]
+id = "f0013-066b-look"
+file = "DISKB/F0013.MES"
+offset = 0x066b
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-067c-think"
+file = "DISKB/F0013.MES"
+offset = 0x067c
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-068e-talk"
+file = "DISKB/F0013.MES"
+offset = 0x068e
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-06ca-i-fill-my-lungs-with-air"
+file = "DISKB/F0013.MES"
+offset = 0x06ca
+source_mode = 1
+target_mode = 2
+source = "あたしは空気を思いっきり吸い込んだ。"
+translation = "I fill my lungs with air."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-06e1-connie-the-air-is-so-clear"
+file = "DISKB/F0013.MES"
+offset = 0x06e1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（空気が・・・・・・・・・、澄んでいる・・・・・・。）"
+translation = "[CONNIE] (The air... is so clear...)"
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0707-no-polluting-machinery-is-nearby-i-can-smell"
+file = "DISKB/F0013.MES"
+offset = 0x0707
+source_mode = 1
+target_mode = 2
+source = "近辺に、汚染をする機械などはない。遠くに排気ガスの汚れた臭いを感じるが、わずかだ。"
+translation = "No polluting machinery is nearby. I can smell distant exhaust, but only faintly."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-073d-connie-there-really-was-an-age-when-the"
+file = "DISKB/F0013.MES"
+offset = 0x073d
+source_mode = 1
+target_mode = 2
+source = "【コニー】（まだ・・・・・・空気が汚れていない、こんな時代があったのね・・・。）"
+translation = "[CONNIE] (There really was an age when the air wasn't polluted yet...)"
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-076a-breathing-freely-makes-me-happy-but-also-reminds"
+file = "DISKB/F0013.MES"
+offset = 0x076a
+source_mode = 1
+target_mode = 2
+source = "思いっきり吸える空気に、嬉しさを感じながら、あたしたちの時代の悲しさが浮かんできた。"
+translation = "Breathing freely makes me happy, but also reminds me how tragic our era is."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-07b4-the-air-is-so-clear-that-i-can"
+file = "DISKB/F0013.MES"
+offset = 0x07b4
+source_mode = 1
+target_mode = 2
+source = "空気の透明度が高く、遠くまで見える。"
+translation = "The air is so clear that I can see far into the distance."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-07ce-in-my-time-air-this-clear-only-exists"
+file = "DISKB/F0013.MES"
+offset = 0x07ce
+source_mode = 1
+target_mode = 2
+source = "あたしの時代でこんなに透明な空気があるのは、山の方だけだ。"
+translation = "In my time, air this clear only exists near the mountains."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-07fb-name-mother-looks-a-little-lonely"
+target_mode = 2
+source = "⟦name:mother⟧は、少し寂しそうだ。"
+translation = "⟦name:mother⟧ looks a little lonely."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x07fb, end = 0x080a, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x080a, source_mode = 1, source = "は、少し寂しそうだ。" },
+]
+
+[[entries]]
+id = "f0013-081b-connie-i-ll-be-back-here-soon"
+file = "DISKB/F0013.MES"
+offset = 0x081b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「すぐに・・・またここに来ます。」"
+translation = "[CONNIE] \"I'll be back here soon...\""
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0836-words-that-raise-her-hopes-slip-from-my"
+file = "DISKB/F0013.MES"
+offset = 0x0836
+source_mode = 1
+target_mode = 2
+source = "あたしの口から、期待させる言葉が出てしまった。"
+translation = "Words that raise her hopes slip from my mouth."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0854-saying-that-alone-proves-i-m-already-too"
+file = "DISKB/F0013.MES"
+offset = 0x0854
+source_mode = 1
+target_mode = 2
+source = "それだけで、もう深入りしている証拠なのに。"
+translation = "Saying that alone proves I'm already too involved."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-087a-connie-i-ll-be-back-soon"
+file = "DISKB/F0013.MES"
+offset = 0x087a
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・すぐに戻ってくるから。）"
+translation = "[CONNIE] (I'll be back soon.)"
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0894-my-eyes-refuse-to-leave-the-scenery-so"
+file = "DISKB/F0013.MES"
+offset = 0x0894
+source_mode = 1
+target_mode = 2
+source = "自分の目が、外の景色から離れないので、無理に計器板に戻す。"
+translation = "My eyes refuse to leave the scenery, so I force them back to the instrument panel."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-08d5-connie-next-time-i-ll-see-this-view"
+file = "DISKB/F0013.MES"
+offset = 0x08d5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（今度は、レミアと一緒にこの景色を見ることになるわ・・・。）"
+translation = "[CONNIE] (Next time, I'll see this view with Remia...)"
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-08ff-once-i-return-remia-will-come-here-next"
+file = "DISKB/F0013.MES"
+offset = 0x08ff
+source_mode = 1
+target_mode = 2
+source = "あたしが帰ったら、次はレミアもここへ来る。"
+translation = "Once I return, Remia will come here next."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-091a-and-so-will-i"
+file = "DISKB/F0013.MES"
+offset = 0x091a
+source_mode = 1
+target_mode = 2
+source = "そしてあたしも。"
+translation = "And so will I."
+speaker = "Connie"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0930-connie-this-view-won-t-change-will-it"
+file = "DISKB/F0013.MES"
+offset = 0x0930
+source_mode = 1
+target_mode = 2
+source = "【コニー】（この景色は変わらないわね・・・。）"
+translation = "[CONNIE] (This view won't change, will it...?)"
+speaker = "コニー"
+context = "Connie takes in the clean 1996 air and promises Yuki she will return soon."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-094c-is-it-even-a-view"
+file = "DISKB/F0013.MES"
+offset = 0x094c
+source_mode = 1
+target_mode = 2
+source = "景色だろうか。"
+translation = "Is it even a view?"
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0958-the-machine-travels-through-a-storm-of-light"
+file = "DISKB/F0013.MES"
+offset = 0x0958
+source_mode = 1
+target_mode = 2
+source = "光が飛び交う中、マシンは進んでいる。"
+translation = "The machine travels through a storm of light."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-098b-a-space-i-can-see-but-never-touch"
+file = "DISKB/F0013.MES"
+offset = 0x098b
+source_mode = 1
+target_mode = 2
+source = "見るだけで、触れることのできない空間。"
+translation = "A space I can see but never touch."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-09a4-i-wonder-what-lies-outside"
+file = "DISKB/F0013.MES"
+offset = 0x09a4
+source_mode = 1
+target_mode = 2
+source = "外はどうなっているのだろうか。"
+translation = "I wonder what lies outside."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-09b8-or-whether-outside-even-exists-here"
+file = "DISKB/F0013.MES"
+offset = 0x09b8
+source_mode = 1
+target_mode = 2
+source = "それともここに『外』はあるのだろうか。"
+translation = "Or whether \"outside\" even exists here."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-09d0-connie-sitting-still-makes-me-think-strange-things"
+file = "DISKB/F0013.MES"
+offset = 0x09d0
+source_mode = 1
+target_mode = 2
+source = "【コニー】（じっとしてると変なコト、考えちゃう・・・。）"
+translation = "[CONNIE] (Sitting still makes me think strange things...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0a0c-connie-i-ended-up-staying-a-whole-night"
+file = "DISKB/F0013.MES"
+offset = 0x0a0c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ひと晩、こっちの時代に泊まっちゃった・・・。）"
+translation = "[CONNIE] (I ended up staying a whole night in this era...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0a30-connie-they-must-be-worried-back-home"
+file = "DISKB/F0013.MES"
+offset = 0x0a30
+source_mode = 1
+target_mode = 2
+source = "【コニー】（向こうでは心配してるだろうな・・・。）"
+translation = "[CONNIE] (They must be worried back home...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0a73-connie-i-should-apologize-to-dr-kanzaki-when"
+file = "DISKB/F0013.MES"
+offset = 0x0a73
+source_mode = 1
+target_mode = 2
+source = "【コニー】（帰ったら神崎博士に謝っておこう・・・。）"
+translation = "[CONNIE] (I should apologize to Dr. Kanzaki when I get back...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0a93-maybe-it-was-wrong-not-to-return-immediately"
+file = "DISKB/F0013.MES"
+offset = 0x0a93
+source_mode = 1
+target_mode = 2
+source = "すぐに帰らなかったのは、まずいかなと思うけど・・・。"
+translation = "Maybe it was wrong not to return immediately, but..."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0ab2-i-m-trusted-to-make-some-decisions-for"
+file = "DISKB/F0013.MES"
+offset = 0x0ab2
+source_mode = 1
+target_mode = 2
+source = "ある程度の判断は、あたしに委ねられているし。"
+translation = "I'm trusted to make some decisions for myself."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0ace-coming-to-this-era-only-to-turn-straight"
+file = "DISKB/F0013.MES"
+offset = 0x0ace
+source_mode = 1
+target_mode = 2
+source = "こっちの時代へ来て、すぐにあたしの時代へとんぼ返りをするのは、あまりにも芸がなさすぎる。"
+translation = "Coming to this era only to turn straight around would have been far too unimaginative."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b03-silence"
+file = "DISKB/F0013.MES"
+offset = 0x0b03
+source_mode = 1
+target_mode = 2
+source = "・・・・・・・・・・・・・・・。"
+translation = "..."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b18-it-s-fine-i-made-the-call-and"
+file = "DISKB/F0013.MES"
+offset = 0x0b18
+source_mode = 1
+target_mode = 2
+source = "いいのっ。あたしがそう判断したんだから。・・・・・・。"
+translation = "It's fine! I made the call, and that's that."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b41-connie-once-i-get-back"
+file = "DISKB/F0013.MES"
+offset = 0x0b41
+source_mode = 1
+target_mode = 2
+source = "【コニー】（これから戻って・・・、・・・。）"
+translation = "[CONNIE] (Once I get back...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b5c-i-ll-report-to-dr-kanzaki-then-remia"
+file = "DISKB/F0013.MES"
+offset = 0x0b5c
+source_mode = 1
+target_mode = 2
+source = "神崎博士に報告。そしてレミアのマシン調整が行われる。"
+translation = "I'll report to Dr. Kanzaki, then Remia's machine will be adjusted."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b7d-the-maintenance-crew-can-probably-adjust-remia-s"
+file = "DISKB/F0013.MES"
+offset = 0x0b7d
+source_mode = 1
+target_mode = 2
+source = "レミアのマシンは、整備の人が調整してくれるか。"
+translation = "The maintenance crew can probably adjust Remia's machine."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0b9a-connie-even-after-i-get-back"
+file = "DISKB/F0013.MES"
+offset = 0x0b9a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしが帰っても、・・・・・・・・・。」"
+translation = "[CONNIE] \"Even after I get back...\""
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0bb9-all-i-ll-have-to-do-is-rest"
+file = "DISKB/F0013.MES"
+offset = 0x0bb9
+source_mode = 1
+target_mode = 2
+source = "することは身体を休めること・・・かな。"
+translation = "All I'll have to do is rest... I suppose."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0bd2-connie-that-s-right"
+file = "DISKB/F0013.MES"
+offset = 0x0bd2
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・そうだ。）"
+translation = "[CONNIE] (...That's right.)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0be5-i-wonder-if-i-can-ask-about-it"
+file = "DISKB/F0013.MES"
+offset = 0x0be5
+source_mode = 1
+target_mode = 2
+source = "聞いてもいいかな。"
+translation = "I wonder if I can ask about it."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0bf3-school"
+file = "DISKB/F0013.MES"
+offset = 0x0bf3
+source_mode = 1
+target_mode = 2
+source = "学校のこと。"
+translation = "School."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0bfe-in-the-past-there-were-places-where-more"
+file = "DISKB/F0013.MES"
+offset = 0x0bfe
+source_mode = 1
+target_mode = 2
+source = "過去には、１００人以上も収容して勉強を教えていた場所がある。"
+translation = "In the past, there were places where more than a hundred people gathered to study."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-0c29-name-dear-person-and-name-older-sister-should"
+target_mode = 2
+source = "⟦name:dear-person⟧も⟦name:older-sister⟧も、そこへ通っているはずだ。"
+translation = "⟦name:dear-person⟧ and ⟦name:older-sister⟧ should both attend one."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x0c29, end = 0x0c38, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0c38, source_mode = 1, source = "も" },
+  { kind = "token", token = "name:older-sister", start = 0x0c3c, end = 0x0c4b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0c4b, source_mode = 1, source = "も、そこへ通っているはずだ。" },
+]
+
+[[entries]]
+id = "f0013-0c78-schools-are-crowded-so-i-must-keep-anyone"
+file = "DISKB/F0013.MES"
+offset = 0x0c78
+source_mode = 1
+target_mode = 2
+source = "学校には大勢の人がいるから、あたしが変身できることがばれないようにしなくちゃ。"
+translation = "Schools are crowded, so I must keep anyone from discovering that I can transform."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0ca5-and-how-would-i-obtain-genetic-material-there"
+file = "DISKB/F0013.MES"
+offset = 0x0ca5
+source_mode = 1
+target_mode = 2
+source = "その中で、どうやって遺伝子をもらうか・・・。"
+translation = "And how would I obtain genetic material there...?"
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-0cc0-connie-i-may-need-help-from-either-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧か⟦name:older-sister⟧の協力がないとだめかもしれない・・・。）"
+translation = "[CONNIE] (I may need help from either ⟦name:dear-person⟧ or ⟦name:older-sister⟧...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x0cc0, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x0cc9, end = 0x0cd8, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0cd8, source_mode = 1, source = "か" },
+  { kind = "token", token = "name:older-sister", start = 0x0cdc, end = 0x0ceb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0ceb, source_mode = 1, source = "の協力がないとだめかもしれない・・・。）" },
+]
+
+[[entries]]
+id = "f0013-0d0f-there-s-nothing-in-particular-to-do-during"
+file = "DISKB/F0013.MES"
+offset = 0x0d0f
+source_mode = 1
+target_mode = 2
+source = "空間移動中は、特にすることはない。"
+translation = "There's nothing in particular to do during the transfer."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0d27-the-computer-is-monitoring-the-machine-for-any"
+file = "DISKB/F0013.MES"
+offset = 0x0d27
+source_mode = 1
+target_mode = 2
+source = "マシンが正常かどうかは、コンピューターが診てくれているからだ。"
+translation = "The computer is monitoring the machine for any problems."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0d73-connie-please-let-me-get-home-safely"
+file = "DISKB/F0013.MES"
+offset = 0x0d73
+source_mode = 1
+target_mode = 2
+source = "【コニー】（無事に帰れますように・・・。）"
+translation = "[CONNIE] (Please let me get home safely...)"
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0d8d-i-d-feel-better-if-wishing-could-guarantee"
+file = "DISKB/F0013.MES"
+offset = 0x0d8d
+source_mode = 1
+target_mode = 2
+source = "願って無事に到着できるなら、安心だけど。"
+translation = "I'd feel better if wishing could guarantee a safe arrival."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0daa-the-return-launch-relied-entirely-on-the-machine"
+file = "DISKB/F0013.MES"
+offset = 0x0daa
+source_mode = 1
+target_mode = 2
+source = "帰り道は、マシンの自己調整だけで出発だから、やや不安だ。"
+translation = "The return launch relied entirely on the machine's automatic adjustments, which makes me uneasy."
+speaker = "Connie"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0deb-connie"
+file = "DISKB/F0013.MES"
+offset = 0x0deb
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・・・・・・・。」"
+translation = "[CONNIE] \"...\""
+speaker = "コニー"
+context = "During the return transfer, Connie reflects on Project D, the school visit, and whether the machine will bring her home safely."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e01-a-butterfly-flutters-through-the-garden"
+file = "DISKB/F0013.MES"
+offset = 0x0e01
+source_mode = 1
+target_mode = 2
+source = "庭に、蝶が飛んでいた。"
+translation = "A butterfly flutters through the garden."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e11-connie-hello-you-re-lucky-to-have-been"
+file = "DISKB/F0013.MES"
+offset = 0x0e11
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・こんにちわ！　いい時代に生まれてよかったね！！」"
+translation = "[CONNIE] \"Hello! You're lucky to have been born in such a wonderful age!\""
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e39-butterfly"
+file = "DISKB/F0013.MES"
+offset = 0x0e39
+source_mode = 1
+target_mode = 2
+source = "【蝶】「・・・。」"
+translation = "[BUTTERFLY] \"...\""
+speaker = "蝶"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e47-it-flutters-away-as-if-terribly-busy"
+file = "DISKB/F0013.MES"
+offset = 0x0e47
+source_mode = 1
+target_mode = 2
+source = "忙しそうに飛んで行っちゃった。"
+translation = "It flutters away as if terribly busy."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e5c-connie-sweat-i-i-shouldn-t-do-things"
+file = "DISKB/F0013.MES"
+offset = 0x0e5c
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・（汗）・・が、・・・がらにもないこと、するんじゃないわね・・・。）"
+translation = "[CONNIE] (...Sweat. I-I shouldn't do things that are so unlike me...)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e8c-i-m-glad-nobody-saw-that"
+file = "DISKB/F0013.MES"
+offset = 0x0e8c
+source_mode = 1
+target_mode = 2
+source = "人に見られなくてよかった。"
+translation = "I'm glad nobody saw that."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0e9e-connie-if-i-took-butterfly-eggs-from-this"
+file = "DISKB/F0013.MES"
+offset = 0x0e9e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・この時代の蝶の卵を持って帰って、あたしの時代で繁殖させれば・・・。）"
+translation = "[CONNIE] (If I took butterfly eggs from this era and raised them in mine...)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0ed5-no-that-would-be-cruel-to-the-butterflies"
+file = "DISKB/F0013.MES"
+offset = 0x0ed5
+source_mode = 1
+target_mode = 2
+source = "それじゃ、蝶が可哀想。"
+translation = "No. That would be cruel to the butterflies."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0ee8-the-air-in-my-time-wouldn-t-suit"
+file = "DISKB/F0013.MES"
+offset = 0x0ee8
+source_mode = 1
+target_mode = 2
+source = "あたしの時代の空気は、彼らに適してないもの。"
+translation = "The air in my time wouldn't suit them."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f05-they-re-better-off-never-knowing-my-era"
+file = "DISKB/F0013.MES"
+offset = 0x0f05
+source_mode = 1
+target_mode = 2
+source = "・・・あたしの時代なんて知らない方がいい。"
+translation = "...They're better off never knowing my era."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f20-creatures-born-in-this-age-should-live-out"
+file = "DISKB/F0013.MES"
+offset = 0x0f20
+source_mode = 1
+target_mode = 2
+source = "この時代に住んでいる生物は、この時代で命をまっとうすべきだ。"
+translation = "Creatures born in this age should live out their lives in this age."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f47-at-the-edge-of-the-garden-that-butterfly"
+file = "DISKB/F0013.MES"
+offset = 0x0f47
+source_mode = 1
+target_mode = 2
+source = "庭の端の方で、さっきの蝶と別の蝶がたわむれている。"
+translation = "At the edge of the garden, that butterfly frolics with another one."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f67-connie-a-male-and-a-female"
+file = "DISKB/F0013.MES"
+offset = 0x0f67
+source_mode = 1
+target_mode = 2
+source = "【コニー】（雄と雌かな？）"
+translation = "[CONNIE] (A male and a female?)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f7b-one-has-large-wings-and-the-other-s"
+file = "DISKB/F0013.MES"
+offset = 0x0f7b
+source_mode = 1
+target_mode = 2
+source = "大きな羽の蝶と、やや小降りの羽の蝶。"
+translation = "One has large wings, and the other's are slightly smaller."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0f94-as-i-watch-they-land-together-on-a"
+file = "DISKB/F0013.MES"
+offset = 0x0f94
+source_mode = 1
+target_mode = 2
+source = "見てると木の枝に止まって、重なった。"
+translation = "As I watch, they land together on a branch and overlap."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0fae-connie-wow-wow"
+file = "DISKB/F0013.MES"
+offset = 0x0fae
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・わー・・・わー・・・。）"
+translation = "[CONNIE] (...Wow... wow...)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0fcb-it-s-only-butterflies-mating-but-my-face"
+file = "DISKB/F0013.MES"
+offset = 0x0fcb
+source_mode = 1
+target_mode = 2
+source = "蝶の交尾を見ただけなのに、あたしは顔が熱くなった。"
+translation = "It's only butterflies mating, but my face grows hot."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-0fec-connie-lucky-they-re-lovers"
+file = "DISKB/F0013.MES"
+offset = 0x0fec
+source_mode = 1
+target_mode = 2
+source = "【コニー】「いいなー・・・、恋人どうしなんだ。」"
+translation = "[CONNIE] \"Lucky... They're lovers.\""
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-100a-though-i-don-t-know-whether-butterflies-even"
+file = "DISKB/F0013.MES"
+offset = 0x100a
+source_mode = 1
+target_mode = 2
+source = "蝶に恋人という概念があるかわからないけど・・・。"
+translation = "Though I don't know whether butterflies even have a concept of lovers..."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-102a-before-long-they-flutter-their-wings-and-separate"
+file = "DISKB/F0013.MES"
+offset = 0x102a
+source_mode = 1
+target_mode = 2
+source = "やがて蝶は、ひらひらと羽を動かして離れた。"
+translation = "Before long, they flutter their wings and separate."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1045-connie-a-man-huh"
+file = "DISKB/F0013.MES"
+offset = 0x1045
+source_mode = 1
+target_mode = 2
+source = "【コニー】「オトコかー・・・・・・。」"
+translation = "[CONNIE] \"A man, huh...\""
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-105e-i-said-it-aloud"
+file = "DISKB/F0013.MES"
+offset = 0x105e
+source_mode = 1
+target_mode = 2
+source = "声に出してしまった・・・。"
+translation = "I said it aloud..."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1071-connie-i-it-s-not-as-if-i"
+file = "DISKB/F0013.MES"
+offset = 0x1071
+source_mode = 1
+target_mode = 2
+source = "【コニー】（べ、別に蝶を羨ましいと思ったんじゃないからね。）"
+translation = "[CONNIE] (I-it's not as if I'm jealous of butterflies.)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-10a6-there-are-men-in-my-era-too-but"
+file = "DISKB/F0013.MES"
+offset = 0x10a6
+source_mode = 1
+target_mode = 2
+source = "あたしの時代でも・・・、男はいるけど・・・。"
+translation = "There are men in my era too, but..."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-10c1-being-a-mutant-hunter-doesn-t-exactly-make"
+file = "DISKB/F0013.MES"
+offset = 0x10c1
+source_mode = 1
+target_mode = 2
+source = "ミュータントハンターなんてコトをやってると、オトコはなかなか近寄ってくれない。"
+translation = "Being a Mutant Hunter doesn't exactly make men eager to approach me."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-10f0-besides-i-m-not-human-i-m-a"
+file = "DISKB/F0013.MES"
+offset = 0x10f0
+source_mode = 1
+target_mode = 2
+source = "それに、あたしはヒトじゃない。ミュータントだ。"
+translation = "Besides, I'm not human. I'm a mutant."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-110c-male-mutants-are-rare-too-no-that-s"
+file = "DISKB/F0013.MES"
+offset = 0x110c
+source_mode = 1
+target_mode = 2
+source = "男のミュータントは少ないし。・・・じゃなくって。"
+translation = "Male mutants are rare too. ...No, that's not the point."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-112a-some-human-men-at-the-laboratory-and-police"
+file = "DISKB/F0013.MES"
+offset = 0x112a
+source_mode = 1
+target_mode = 2
+source = "同じ研究所や、警察署内で気さくに話しかけてくれるヒトもいる。"
+translation = "Some human men at the laboratory and police station talk to me casually."
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1153-but-those-relationships-never-go-beyond-coworkers"
+file = "DISKB/F0013.MES"
+offset = 0x1153
+source_mode = 1
+target_mode = 2
+source = "だけど、それは『仕事仲間』というつきあいだった。"
+translation = "But those relationships never go beyond \"coworkers.\""
+speaker = "Connie"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1173-connie-a-human-man-wouldn-t-be-so"
+file = "DISKB/F0013.MES"
+offset = 0x1173
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・ヒトの男でも・・・悪くないんだけど・・・。）"
+translation = "[CONNIE] (...A human man wouldn't be so bad either...)"
+speaker = "コニー"
+context = "In the garden, butterflies lead Connie from environmental grief into awkward thoughts about romance."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-11bd-name-mother-connie"
+target_mode = 2
+source = "【⟦name:mother⟧】「コニー。」"
+translation = "[⟦name:mother⟧] \"Connie.\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x11bd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x11c1, end = 0x11d0, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x11d0, source_mode = 1, source = "】「コニー。」" },
+]
+
+[[composites]]
+id = "f0013-11dc-while-i-m-taking-deep-breaths-in-the"
+target_mode = 2
+source = "あたしが庭で息をすうはあしていると、⟦name:mother⟧がやってきた。"
+translation = "While I'm taking deep breaths in the garden, ⟦name:mother⟧ comes outside."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x11dc, source_mode = 1, source = "あたしが庭で息をすうはあしていると、" },
+  { kind = "token", token = "name:mother", start = 0x11f2, end = 0x1201, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1201, source_mode = 1, source = "がやってきた。" },
+]
+
+[[composites]]
+id = "f0013-130a-name-mother-you-ll-be-back-soon-won"
+target_mode = 2
+source = "【⟦name:mother⟧】「すぐに戻ってくるんでしょう？」"
+translation = "[⟦name:mother⟧] \"You'll be back soon, won't you?\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x130a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x130e, end = 0x131d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x131d, source_mode = 1, source = "】「すぐに戻ってくるんでしょう？」" },
+]
+
+[[entries]]
+id = "f0013-1334-connie-i-ll-complete-the-formalities-in-my"
+file = "DISKB/F0013.MES"
+offset = 0x1334
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・あたしの時代で手続きを済ませて、すぐに来ます・・・。」"
+translation = "[CONNIE] \"I'll complete the formalities in my era and come right back...\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-135f-name-mother-i-ll-be-waiting-connie-we"
+target_mode = 2
+source = "【⟦name:mother⟧】「待ってるわ、コニー。せっかく仲よくなれたんですもの。」"
+translation = "[⟦name:mother⟧] \"I'll be waiting, Connie. We only just became close.\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x135f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1363, end = 0x1372, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1372, source_mode = 1, source = "】「待ってるわ、コニー。せっかく仲よくなれたんですもの。」" },
+]
+
+[[composites]]
+id = "f0013-1395-name-mother-s-cheeks-turn-red"
+target_mode = 2
+source = "⟦name:mother⟧の頬が赤くなっている。"
+translation = "⟦name:mother⟧'s cheeks turn red."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x1395, end = 0x13a4, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x13a4, source_mode = 1, source = "の頬が赤くなっている。" },
+]
+
+[[composites]]
+id = "f0013-13d7-name-mother-was-it-another-ten-days-that"
+target_mode = 2
+source = "【⟦name:mother⟧】「あと１０日・・・だったかしら？　ここに居られるのは。」"
+translation = "[⟦name:mother⟧] \"Was it... another ten days that you can stay here?\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x13d7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x13db, end = 0x13ea, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x13ea, source_mode = 1, source = "】「あと１０日・・・だったかしら？　ここに居られるのは。」" },
+]
+
+[[entries]]
+id = "f0013-140f-i-nod"
+file = "DISKB/F0013.MES"
+offset = 0x140f
+source_mode = 1
+target_mode = 2
+source = "あたしは頷いた。"
+translation = "I nod."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-141d-name-mother-saying-goodbye-may-become-difficult"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・別れ辛くなりそうね・・・・・・。」"
+translation = "[⟦name:mother⟧] \"...Saying goodbye may become difficult...\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x141d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1421, end = 0x1430, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1430, source_mode = 1, source = "】「・・・別れ辛くなりそうね・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0013-144c-name-mother-murmurs-it-quietly"
+target_mode = 2
+source = "⟦name:mother⟧がぽつりと言う。"
+translation = "⟦name:mother⟧ murmurs it quietly."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x144c, end = 0x145b, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x145b, source_mode = 1, source = "がぽつりと言う。" },
+]
+
+[[composites]]
+id = "f0013-146a-name-mother-is-thinking-about-the-parting-that"
+target_mode = 2
+source = "⟦name:mother⟧も、来るべき別れを思っているんだ。"
+translation = "⟦name:mother⟧ is thinking about the parting that must eventually come too."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x146a, end = 0x1479, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1479, source_mode = 1, source = "も、来るべき別れを思っているんだ。" },
+]
+
+[[composites]]
+id = "f0013-1498-connie-what-about-name-dear-person-and-name"
+target_mode = 2
+source = "【コニー】「⟦name:dear-person⟧と・・・⟦name:older-sister⟧は・・・？」"
+translation = "[CONNIE] \"What about ⟦name:dear-person⟧ and... ⟦name:older-sister⟧?\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1498, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:dear-person", start = 0x14a1, end = 0x14b0, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x14b0, source_mode = 1, source = "と・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x14b7, end = 0x14c6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x14c6, source_mode = 1, source = "は・・・？」" },
+]
+
+[[entries]]
+id = "f0013-14d1-they-should-still-be-sleeping-but-i-ask"
+file = "DISKB/F0013.MES"
+offset = 0x14d1
+source_mode = 1
+target_mode = 2
+source = "まだ寝ているはずだが聞いてみた。"
+translation = "They should still be sleeping, but I ask anyway."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-14e7-if-either-were-awake-i-d-sense-them"
+file = "DISKB/F0013.MES"
+offset = 0x14e7
+source_mode = 1
+target_mode = 2
+source = "起きているなら２人の気配を感じるが、その様子はない。まだ部屋にいるようだ。"
+translation = "If either were awake, I'd sense them. I don't, so they must still be in their rooms."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-1515-name-mother-they-re-still-asleep"
+target_mode = 2
+source = "【⟦name:mother⟧】「まだ寝てるわ。・・・。」"
+translation = "[⟦name:mother⟧] \"They're still asleep...\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1515, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1519, end = 0x1528, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1528, source_mode = 1, source = "】「まだ寝てるわ。・・・。」" },
+]
+
+[[entries]]
+id = "f0013-153c-i-decide-to-mention-the-favor-i-wanted"
+file = "DISKB/F0013.MES"
+offset = 0x153c
+source_mode = 1
+target_mode = 2
+source = "あたしは、頼みたかったことを言ってみる。"
+translation = "I decide to mention the favor I wanted to ask."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-1556-connie-name-mother-may-i-ask-a-favor"
+target_mode = 2
+source = "【コニー】「・・・⟦name:mother⟧、お願い、していい？」"
+translation = "[CONNIE] \"⟦name:mother⟧... May I ask a favor?\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1556, source_mode = 1, source = "【コニー】「・・・" },
+  { kind = "token", token = "name:mother", start = 0x1562, end = 0x1571, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1571, source_mode = 1, source = "、お願い、していい？」" },
+]
+
+[[composites]]
+id = "f0013-1582-name-mother-of-course-what-is-it"
+target_mode = 2
+source = "【⟦name:mother⟧】「ええ。なあに？」"
+translation = "[⟦name:mother⟧] \"Of course. What is it?\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1582, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x1586, end = 0x1595, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1595, source_mode = 1, source = "】「ええ。なあに？」" },
+]
+
+[[entries]]
+id = "f0013-15a4-connie-i-d-like-to-see-a-school"
+file = "DISKB/F0013.MES"
+offset = 0x15a4
+source_mode = 1
+target_mode = 2
+source = "【コニー】「学校を・・・見てみたいんです。遺伝子も多いだろうし・・・。」"
+translation = "[CONNIE] \"I'd like to see a school. There should be lots of genetic material there too...\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-15ce-connie-though-lots-of-genetic-material-is-a"
+file = "DISKB/F0013.MES"
+offset = 0x15ce
+source_mode = 1
+target_mode = 2
+source = "【コニー】（遺伝子が多い、というのもヘンな言い方なんだけど・・・・・・。）"
+translation = "[CONNIE] (Though \"lots of genetic material\" is a strange way to put it...)"
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-160b-connie-school"
+file = "DISKB/F0013.MES"
+offset = 0x160b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（学校か・・・。）"
+translation = "[CONNIE] (School...)"
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-161e-the-mission-is-one-reason-but-my-curiosity"
+file = "DISKB/F0013.MES"
+offset = 0x161e
+source_mode = 1
+target_mode = 2
+source = "本当は、任務もあったけど、どんな所か見てみたいという欲求の方が強かった。"
+translation = "The mission is one reason, but my curiosity about the place is even stronger."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-164d-connie-while-i-m-away-could-you-arrange"
+file = "DISKB/F0013.MES"
+offset = 0x164d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あたしが帰っている間に、中に入る手続きとか、できますか？」"
+translation = "[CONNIE] \"While I'm away, could you arrange for me to go inside?\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-1676-name-mother-let-s-see-perhaps-i-can"
+target_mode = 2
+source = "【⟦name:mother⟧】「・・・・・・そうね。私の親戚が学校を見学したがっている、という事にして聞いてみようかしら・・・。」"
+translation = "[⟦name:mother⟧] \"Let's see... Perhaps I can say a relative of mine wants to tour the school and ask them...\""
+speaker = "name-slot:mother"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1676, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x167a, end = 0x1689, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1689, source_mode = 1, source = "】「・・・・・・そうね。私の親戚が学校を見学したがっている、という事にして聞いてみようかしら・・・。」" },
+]
+
+[[composites]]
+id = "f0013-16c4-connie-thank-you-name-mother-i-ll-leave"
+target_mode = 2
+source = "【コニー】「ありがとう、⟦name:mother⟧。・・・任せます。」"
+translation = "[CONNIE] \"Thank you, ⟦name:mother⟧. I'll leave it to you.\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x16c4, source_mode = 1, source = "【コニー】「ありがとう、" },
+  { kind = "token", token = "name:mother", start = 0x16d3, end = 0x16e2, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x16e2, source_mode = 1, source = "。・・・任せます。」" },
+]
+
+[[composites]]
+id = "f0013-1708-with-name-mother-seeing-me-off-i-climb"
+target_mode = 2
+source = "あたしは⟦name:mother⟧が見送る中、マシンに乗り込んだ。"
+translation = "With ⟦name:mother⟧ seeing me off, I climb into the machine."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1708, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:mother", start = 0x170f, end = 0x171e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x171e, source_mode = 1, source = "が見送る中、マシンに乗り込んだ。" },
+]
+
+[[composites]]
+id = "f0013-17de-connie-i-don-t-need-to-wake-name"
+target_mode = 2
+source = "【コニー】（⟦name:dear-person⟧たちは起こさなくても・・・。いいかな。）"
+translation = "[CONNIE] (I don't need to wake ⟦name:dear-person⟧ and the others... do I?)"
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x17de, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x17e7, end = 0x17f6, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x17f6, source_mode = 1, source = "たちは起こさなくても・・・。いいかな。）" },
+]
+
+[[entries]]
+id = "f0013-180f-i-ll-be-back-soon"
+file = "DISKB/F0013.MES"
+offset = 0x180f
+source_mode = 1
+target_mode = 2
+source = "すぐに戻ってくるんだし。"
+translation = "I'll be back soon."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-1820-outside-name-mother-waves-to-me"
+target_mode = 2
+source = "外で⟦name:mother⟧が手を振ってくれた。"
+translation = "Outside, ⟦name:mother⟧ waves to me."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x1820, source_mode = 1, source = "外で" },
+  { kind = "token", token = "name:mother", start = 0x1825, end = 0x1834, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1834, source_mode = 1, source = "が手を振ってくれた。" },
+]
+
+[[entries]]
+id = "f0013-185d-the-cabin-is-soundproof-so-i-can-t"
+file = "DISKB/F0013.MES"
+offset = 0x185d
+source_mode = 1
+target_mode = 2
+source = "この中は防音なので、外の音は聞こえない。"
+translation = "The cabin is soundproof, so I can't hear anything outside."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1882-i-start-the-machine-s-engine-and-let"
+file = "DISKB/F0013.MES"
+offset = 0x1882
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンのエンジンを始動、アイドリングさせる。"
+translation = "I start the machine's engine and let it idle."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-18a8-before-long-it-enters-standby"
+file = "DISKB/F0013.MES"
+offset = 0x18a8
+source_mode = 1
+target_mode = 2
+source = "程無く、スタンバイ状態になる。"
+translation = "Before long, it enters standby."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites]]
+id = "f0013-18c0-i-wave-to-name-mother-signaling-her-to"
+target_mode = 2
+source = "あたしは⟦name:mother⟧に向かって『下がって。』と手を振る。"
+translation = "I wave to ⟦name:mother⟧, signaling her to move back."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "text", offset = 0x18c0, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:mother", start = 0x18c7, end = 0x18d6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x18d6, source_mode = 1, source = "に向かって『下がって。』と手を振る。" },
+]
+
+[[composites]]
+id = "f0013-18ef-name-mother-retreats-to-the-veranda-i-lift"
+target_mode = 2
+source = "⟦name:mother⟧がベランダまで下がるのを見て、マシンを浮上、震動させる。"
+translation = "⟦name:mother⟧ retreats to the veranda. I lift the machine and begin the oscillation."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0013.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x18ef, end = 0x18fe, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x18fe, source_mode = 1, source = "がベランダまで下がるのを見て、マシンを浮上、震動させる。" },
+]
+
+[[entries]]
+id = "f0013-1923-connie-aligning-oscillation-frequency-with-the-time-quake"
+file = "DISKB/F0013.MES"
+offset = 0x1923
+source_mode = 1
+target_mode = 2
+source = "【コニー】「時空震動へ・・・震動数、合わせ・・・・・・。」"
+translation = "[CONNIE] \"Aligning oscillation frequency... with the Time Quake...\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1946-the-machine-s-outer-shell-vibrates-rapidly"
+file = "DISKB/F0013.MES"
+offset = 0x1946
+source_mode = 1
+target_mode = 2
+source = "マシンの外壁が細かく震える。"
+translation = "The machine's outer shell vibrates rapidly."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-195b-connie-frequency-synchronization-started-entering-time-tunnel"
+file = "DISKB/F0013.MES"
+offset = 0x195b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「震動数シンクロ開始、時空トンネルへ突入！！」"
+translation = "[CONNIE] \"Frequency synchronization started. Entering time tunnel!!\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1a53-connie"
+file = "DISKB/F0013.MES"
+offset = 0x1a53
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・・・・・。）"
+translation = "[CONNIE] (...)"
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1a69-connie-space-time-oscillation-frequency-stable-automatic-tracking"
+file = "DISKB/F0013.MES"
+offset = 0x1a69
+source_mode = 1
+target_mode = 2
+source = "【コニー】「時空震動数、変化無し。震動数、自動追尾。」"
+translation = "[CONNIE] \"Space-time oscillation frequency stable. Automatic tracking engaged.\""
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1a8b-the-machine-is-operating-normally"
+file = "DISKB/F0013.MES"
+offset = 0x1a8b
+source_mode = 1
+target_mode = 2
+source = "マシンは正常だ。"
+translation = "The machine is operating normally."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1abe-i-ll-be-alone-until-i-reach-my"
+file = "DISKB/F0013.MES"
+offset = 0x1abe
+source_mode = 1
+target_mode = 2
+source = "あたしの時代へ到着するまで、誰も居ないわ。"
+translation = "I'll be alone until I reach my era."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1adc-i-only-have-to-endure-it-a-little"
+file = "DISKB/F0013.MES"
+offset = 0x1adc
+source_mode = 1
+target_mode = 2
+source = "しばらくの辛抱よ。"
+translation = "I only have to endure it a little longer."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1afd-it-must-be-almost-time"
+file = "DISKB/F0013.MES"
+offset = 0x1afd
+source_mode = 1
+target_mode = 2
+source = "・・・そろそろか。"
+translation = "...It must be almost time."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1b0b-the-machine-gradually-reduces-its-oscillation-frequency"
+file = "DISKB/F0013.MES"
+offset = 0x1b0b
+source_mode = 1
+target_mode = 2
+source = "マシンが震動数を徐々に減らしていく。"
+translation = "The machine gradually reduces its oscillation frequency."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1b25-connie-almost-there"
+file = "DISKB/F0013.MES"
+offset = 0x1b25
+source_mode = 1
+target_mode = 2
+source = "【コニー】（もうすぐだ・・・。）"
+translation = "[CONNIE] (Almost there...)"
+speaker = "コニー"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+[[entries]]
+id = "f0013-1b3a-then-the-view-changes-completely"
+file = "DISKB/F0013.MES"
+offset = 0x1b3a
+source_mode = 1
+target_mode = 2
+source = "そして、景色が一変した。"
+translation = "Then the view changes completely."
+speaker = "Connie"
+context = "Connie asks Yuki to arrange a school visit, says goodbye, and launches back toward 2296."
+status = "qa-ready"
+
+
+[[entries]]
+id = "f0014-0639-i-return-to-the-time-port"
+file = "DISKB/F0014.MES"
+offset = 0x0639
+source_mode = 1
+target_mode = 2
+source = "あたしはタイムポートへ戻ってきた。"
+translation = "I return to the time port."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-064f-the-return-trip-ends-almost-too-easily"
+file = "DISKB/F0014.MES"
+offset = 0x064f
+source_mode = 1
+target_mode = 2
+source = "帰りは、あまりにもあっけなく到着してしまった。"
+translation = "The return trip ends almost too easily."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-066b-it-s-hard-to-believe-how-violently-the"
+file = "DISKB/F0014.MES"
+offset = 0x066b
+source_mode = 1
+target_mode = 2
+source = "行く時の震動の凄さが嘘のようだ。"
+translation = "It's hard to believe how violently the machine shook on the outbound trip."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0681-the-computer-adjusted-its-oscillation-using-the-data"
+file = "DISKB/F0014.MES"
+offset = 0x0681
+source_mode = 1
+target_mode = 2
+source = "行く時のデータに基づいて、マシンのコンピューターが震動を調整したからだ。"
+translation = "The computer adjusted its oscillation using the data recorded on that journey."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-06b0-looking-around-i-feel-both-nostalgia-and-the"
+file = "DISKB/F0014.MES"
+offset = 0x06b0
+source_mode = 1
+target_mode = 2
+source = "あたしは周りを見て、懐かしさと、まだ任務の途中だという責任を感じていた。"
+translation = "Looking around, I feel both nostalgia and the responsibility of a mission still unfinished."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-070b-look"
+file = "DISKB/F0014.MES"
+offset = 0x070b
+source_mode = 1
+target_mode = 2
+source = "見る"
+translation = "LOOK"
+speaker = "ui"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-071c-think"
+file = "DISKB/F0014.MES"
+offset = 0x071c
+source_mode = 1
+target_mode = 2
+source = "考える"
+translation = "THINK"
+speaker = "ui"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-072e-talk"
+file = "DISKB/F0014.MES"
+offset = 0x072e
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-076a-the-time-port"
+file = "DISKB/F0014.MES"
+offset = 0x076a
+source_mode = 1
+target_mode = 2
+source = "タイムポート。"
+translation = "The time port."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0776-nothing-has-changed-since-my-departure"
+file = "DISKB/F0014.MES"
+offset = 0x0776
+source_mode = 1
+target_mode = 2
+source = "あたしが出発したときと、何ら変わりはない。"
+translation = "Nothing has changed since my departure."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0790-i-look-around"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0790 },
+  { file = "DISKB/F0014.MES", offset = 0x0820 },
+]
+source_mode = 1
+target_mode = 2
+source = "周りを見渡す。"
+translation = "I look around."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-079c-connie-it-feels-as-if-going-to-the"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x079c },
+  { file = "DISKB/F0014.MES", offset = 0x082c },
+]
+source_mode = 1
+target_mode = 2
+source = "【コニー】（過去に行ってきたことが嘘みたい・・・。）"
+translation = "[CONNIE] (It feels as if going to the past never happened...)"
+speaker = "コニー"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-07bb-now-that-i-m-back-in-my-era"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x07bb },
+  { file = "DISKB/F0014.MES", offset = 0x084b },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしの時代へ戻ってきて、はっきりそう思う。"
+translation = "Now that I'm back in my era, the feeling is unmistakable."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-07d6-but-i-brought-genetic-material-from-the-past"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x07d6 },
+  { file = "DISKB/F0014.MES", offset = 0x0866 },
+]
+source_mode = 1
+target_mode = 2
+source = "でも、あたしは過去の遺伝子を持ってきた。"
+translation = "But I brought genetic material from the past."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-07ef-definite-proof-that-i-went-there"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x07ef },
+  { file = "DISKB/F0014.MES", offset = 0x087f },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしが過去へ行った確かな証拠だ。"
+translation = "Definite proof that I went there."
+speaker = "Connie"
+context = "Connie arrives back at the 2296 time port and confirms that her samples prove the journey was real."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08a0-twitch"
+file = "DISKB/F0014.MES"
+offset = 0x08a0
+source_mode = 1
+target_mode = 2
+source = "ぴくっ。"
+translation = "Twitch."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08aa-my-ears-move"
+file = "DISKB/F0014.MES"
+offset = 0x08aa
+source_mode = 1
+target_mode = 2
+source = "あたしの耳が動く。"
+translation = "My ears move."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08b8-connie-nyu"
+file = "DISKB/F0014.MES"
+offset = 0x08b8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（・・・・・にゅ？）"
+translation = "[CONNIE] (...Nyu?)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08cd-i-hear-footsteps"
+file = "DISKB/F0014.MES"
+offset = 0x08cd
+source_mode = 1
+target_mode = 2
+source = "足音がする。"
+translation = "I hear footsteps."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08d8-a-familiar-sound"
+file = "DISKB/F0014.MES"
+offset = 0x08d8
+source_mode = 1
+target_mode = 2
+source = "懐かしい音が。"
+translation = "A familiar sound."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-08fd-even-before-i-can-see-anyone-while-the"
+file = "DISKB/F0014.MES"
+offset = 0x08fd
+source_mode = 1
+target_mode = 2
+source = "姿が見えなくても、まだ遠い足音でも、あたしには、はっきりと聞こえた。"
+translation = "Even before I can see anyone, while the footsteps are still distant, I hear them clearly."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-092f-the-time-machine-stands-here"
+file = "DISKB/F0014.MES"
+offset = 0x092f
+source_mode = 1
+target_mode = 2
+source = "タイムマシンがある。"
+translation = "The time machine stands here."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-093e-the-warmth-of-its-engine-is-gradually-fading"
+file = "DISKB/F0014.MES"
+offset = 0x093e
+source_mode = 1
+target_mode = 2
+source = "エンジンの温もりが徐々に冷え始めている。"
+translation = "The warmth of its engine is gradually fading."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0977-connie-it-s-almost-the-same-time-before"
+file = "DISKB/F0014.MES"
+offset = 0x0977
+source_mode = 1
+target_mode = 2
+source = "【コニー】（こっちも、ほぼ同じ明け方の時間だ・・・。）"
+translation = "[CONNIE] (It's almost the same time before dawn here...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-099a-i-left-the-past-at-daybreak-in-that"
+file = "DISKB/F0014.MES"
+offset = 0x099a
+source_mode = 1
+target_mode = 2
+source = "過去を出発したのが、向こうの時間の明け方だった。"
+translation = "I left the past at daybreak in that era."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-09b7-dawn-is-breaking-here-too"
+file = "DISKB/F0014.MES"
+offset = 0x09b7
+source_mode = 1
+target_mode = 2
+source = "こっちも夜明けだ。"
+translation = "Dawn is breaking here too."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-09c6-the-temporal-transfer-must-have-taken-less-than"
+file = "DISKB/F0014.MES"
+offset = 0x09c6
+source_mode = 1
+target_mode = 2
+source = "時空移動は３０分とかからないと考えていいだろう。"
+translation = "The temporal transfer must have taken less than thirty minutes."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-09e5-connie-i-m-feeling-sleepy"
+file = "DISKB/F0014.MES"
+offset = 0x09e5
+source_mode = 1
+target_mode = 2
+source = "【コニー】（なんだか眠い・・・。）"
+translation = "[CONNIE] (I'm feeling sleepy...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-09fc-perhaps-the-sex-in-the-past-and-being"
+file = "DISKB/F0014.MES"
+offset = 0x09fc
+source_mode = 1
+target_mode = 2
+source = "過去でえっちしてきた事と、タイムマシンに揺られたことが身体に影響を与えているのだろうか。"
+translation = "Perhaps the sex in the past and being shaken by the time machine are taking a toll on me."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0a56-connie-waiting-here-alone-is-lonely"
+file = "DISKB/F0014.MES"
+offset = 0x0a56
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ここでひとり待つのは寂しいな・・・。）"
+translation = "[CONNIE] (Waiting here alone is lonely...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0a76-standing-around-in-a-daze-only-makes-me"
+file = "DISKB/F0014.MES"
+offset = 0x0a76
+source_mode = 1
+target_mode = 2
+source = "呆然と立っていると、眠くなってしまう。"
+translation = "Standing around in a daze only makes me sleepier."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0a9b-connie-i-know-those-footsteps"
+file = "DISKB/F0014.MES"
+offset = 0x0a9b
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしの知っている足音だ・・・。）"
+translation = "[CONNIE] (I know those footsteps...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ab7-the-footsteps-of-someone-i-know-very-well"
+file = "DISKB/F0014.MES"
+offset = 0x0ab7
+source_mode = 1
+target_mode = 2
+source = "よく知っている人の足音。"
+translation = "The footsteps of someone I know very well."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ae1-connie-we-ve-only-been-apart-for-a"
+file = "DISKB/F0014.MES"
+offset = 0x0ae1
+source_mode = 1
+target_mode = 2
+source = "【コニー】（たった１日しか離れてないのに・・・。）"
+translation = "[CONNIE] (We've only been apart for a day...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0aff-yet-they-already-sound-nostalgic"
+file = "DISKB/F0014.MES"
+offset = 0x0aff
+source_mode = 1
+target_mode = 2
+source = "懐かしく思えてしまうなんて。"
+translation = "Yet they already sound nostalgic."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0b2d-nobody-else-is-nearby"
+file = "DISKB/F0014.MES"
+offset = 0x0b2d
+source_mode = 1
+target_mode = 2
+source = "周りは誰も居ないよ。"
+translation = "Nobody else is nearby."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0b3c-only-the-duty-operator-is-in-the-control"
+file = "DISKB/F0014.MES"
+offset = 0x0b3c
+source_mode = 1
+target_mode = 2
+source = "当直の係員がコントロールに居るだけ。"
+translation = "Only the duty operator is in the control room."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0b79-i-report-my-arrival-to-the-duty-operator"
+file = "DISKB/F0014.MES"
+offset = 0x0b79
+source_mode = 1
+target_mode = 2
+source = "当直の係員へ到着を告げる。"
+translation = "I report my arrival to the duty operator."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0b8d-operator-acknowledged-please-wait-where-you-are-in"
+file = "DISKB/F0014.MES"
+offset = 0x0b8d
+source_mode = 1
+target_mode = 2
+source = "【係員】「了解しました。タイムポートでそのままお待ちください。」"
+translation = "[OPERATOR] \"Acknowledged. Please wait where you are in the time port.\""
+speaker = "係員"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0bb4-i-inspect-the-machine-s-outer-shell"
+file = "DISKB/F0014.MES"
+offset = 0x0bb4
+source_mode = 1
+target_mode = 2
+source = "あたしはマシンの外壁を点検する。"
+translation = "I inspect the machine's outer shell."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0bcd-the-smell-of-machinery-the-presence-of-people"
+file = "DISKB/F0014.MES"
+offset = 0x0bcd
+source_mode = 1
+target_mode = 2
+source = "機械の臭い。人の気配。"
+translation = "The smell of machinery. The presence of people."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0bdf-i-was-gone-only-one-day-and-this"
+file = "DISKB/F0014.MES"
+offset = 0x0bdf
+source_mode = 1
+target_mode = 2
+source = "１日離れていただけなのに、住みにくい世界なのに、懐かしい・・・そんな気持ちを不思議に思っていた。"
+translation = "I was gone only one day, and this world is hard to live in, yet it feels nostalgic. The feeling puzzles me."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0c18-the-time-port-is-bitterly-cold"
+file = "DISKB/F0014.MES"
+offset = 0x0c18
+source_mode = 1
+target_mode = 2
+source = "タイムポートは冷え冷えとしている。"
+translation = "The time port is bitterly cold."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0c2e-connie-it-s-a-little-chilly"
+file = "DISKB/F0014.MES"
+offset = 0x0c2e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ちょっと寒いかな・・・。）"
+translation = "[CONNIE] (It's a little chilly...)"
+speaker = "コニー"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0c46-being-feline-i-m-somewhat-weak-against-the"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0c46 },
+  { file = "DISKB/F0014.MES", offset = 0x0d60 },
+]
+source_mode = 1
+target_mode = 2
+source = "猫科のあたしはやや寒さに弱い。ちょっとだけ、だけど・・・。"
+translation = "Being feline, I'm somewhat weak against the cold. Only a little, though..."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0c68-that-s-why-the-kotatsu-is-so-important"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0c68 },
+  { file = "DISKB/F0014.MES", offset = 0x0d82 },
+]
+source_mode = 1
+target_mode = 2
+source = "だからコタツは重要だ。"
+translation = "That's why the kotatsu is so important."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0c78-people-long-ago-invented-the-kotatsu-a-heater"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0c78 },
+  { file = "DISKB/F0014.MES", offset = 0x0d92 },
+]
+source_mode = 1
+target_mode = 2
+source = "昔の人は「炬燵（コタツ）」という人・猫兼用の暖房機具を発明してくれた。"
+translation = "People long ago invented the kotatsu, a heater shared by humans and cats."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ca4-i-have-one-in-my-room-too"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0ca4 },
+  { file = "DISKB/F0014.MES", offset = 0x0dbe },
+]
+source_mode = 1
+target_mode = 2
+source = "あたしの部屋にもある。"
+translation = "I have one in my room too."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0cb4-i-asked-dr-kanzaki-to-obtain-it-for"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0cb4 },
+  { file = "DISKB/F0014.MES", offset = 0x0dce },
+]
+source_mode = 1
+target_mode = 2
+source = "神崎博士に頼んで取り寄せてもらったものだ。"
+translation = "I asked Dr. Kanzaki to obtain it for me."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ccf-when-it-s-cold-i-often-curl-up"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0ccf },
+  { file = "DISKB/F0014.MES", offset = 0x0de9 },
+]
+source_mode = 1
+target_mode = 2
+source = "寒いときには、あたしはよくコタツの中に入って丸くなっている。"
+translation = "When it's cold, I often curl up inside it."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0cf3-human-form-is-cramped-of-course-so-i"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0cf3 },
+  { file = "DISKB/F0014.MES", offset = 0x0e0d },
+]
+source_mode = 1
+target_mode = 2
+source = "もちろんヒト型では窮屈なので、ミニマムに変身してからコタツに入る。"
+translation = "Human form is cramped, of course, so I enter Mini form before climbing in."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0d1d-that-cozy-warmth-hahhh-it-s-the-height"
+anchors = [
+  { file = "DISKB/F0014.MES", offset = 0x0d1d },
+  { file = "DISKB/F0014.MES", offset = 0x0e37 },
+]
+source_mode = 1
+target_mode = 2
+source = "そのぽかぽかとした温もりと言ったらもお、はふぅ、幸せの極致だ。"
+translation = "That cozy warmth... Hahhh. It's the height of happiness."
+speaker = "Connie"
+context = "Connie waits alone before dawn, recognizes familiar footsteps, and distracts herself with thoughts of her kotatsu."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0eb6-kanzaki-connie"
+file = "DISKB/F0014.MES"
+offset = 0x0eb6
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー！！！」"
+translation = "[KANZAKI] \"Connie!!!\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ec7-the-port-door-opens-and-dr-kanzaki-rushes"
+file = "DISKB/F0014.MES"
+offset = 0x0ec7
+source_mode = 1
+target_mode = 2
+source = "ポートの扉が開いて、神崎博士が駆け寄ってきた。"
+translation = "The port door opens and Dr. Kanzaki rushes toward me."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ee6-without-caring-who-might-see-she-throws-her"
+file = "DISKB/F0014.MES"
+offset = 0x0ee6
+source_mode = 1
+target_mode = 2
+source = "人目もはばからず、あたしに抱き付く。"
+translation = "Without caring who might see, she throws her arms around me."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0f02-kanzaki-connie-connie"
+file = "DISKB/F0014.MES"
+offset = 0x0f02
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー・・・、コニー・・・。」"
+translation = "[KANZAKI] \"Connie... Connie...\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0f1b-connie-dr-kanzaki"
+file = "DISKB/F0014.MES"
+offset = 0x0f1b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「神崎博士・・・。」"
+translation = "[CONNIE] \"Dr. Kanzaki...\""
+speaker = "コニー"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0f2f-kanzaki-i-was-worried-why-didn-t-you"
+file = "DISKB/F0014.MES"
+offset = 0x0f2f
+source_mode = 1
+target_mode = 2
+source = "【神崎】「心配したのよ・・・。なんですぐに帰ってこなかったの！？」"
+translation = "[KANZAKI] \"I was worried... Why didn't you come straight back!?\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0f56-dr-kanzaki-asks-anxiously"
+file = "DISKB/F0014.MES"
+offset = 0x0f56
+source_mode = 1
+target_mode = 2
+source = "神崎博士は心配そうに聞く。"
+translation = "Dr. Kanzaki asks anxiously."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0f81-she-tells-me-my-return-was-so-late"
+file = "DISKB/F0014.MES"
+offset = 0x0f81
+source_mode = 1
+target_mode = 2
+source = "話を聞くと、あたしの帰りが遅いので、今日にも２号機を発進させる予定だったそうだ。"
+translation = "She tells me my return was so late that they planned to launch the second machine today."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0fb5-dr-kanzaki-stayed-here-overnight-waiting-for-me"
+file = "DISKB/F0014.MES"
+offset = 0x0fb5
+source_mode = 1
+target_mode = 2
+source = "神崎博士は泊り込こんで、あたしの帰りを待っていた。"
+translation = "Dr. Kanzaki stayed here overnight, waiting for me to return."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0fd5-it-makes-me-happy-that-she-came-to"
+file = "DISKB/F0014.MES"
+offset = 0x0fd5
+source_mode = 1
+target_mode = 2
+source = "嬉しかった。誰よりも早くあたしに会いに来てくれたことが。"
+translation = "It makes me happy that she came to see me before anyone else."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-0ff9-connie-i-m-sorry"
+file = "DISKB/F0014.MES"
+offset = 0x0ff9
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ごめんなさい・・・。」"
+translation = "[CONNIE] \"I'm sorry...\""
+speaker = "コニー"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1010-kanzaki-connie"
+file = "DISKB/F0014.MES"
+offset = 0x1010
+source_mode = 1
+target_mode = 2
+source = "【神崎】「コニー。」"
+translation = "[KANZAKI] \"Connie.\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-101f-dr-kanzaki-gently-releases-me"
+file = "DISKB/F0014.MES"
+offset = 0x101f
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、あたしをそおっと離す。"
+translation = "Dr. Kanzaki gently releases me."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1035-kanzaki-you-re-going-to-tell-me-everything"
+file = "DISKB/F0014.MES"
+offset = 0x1035
+source_mode = 1
+target_mode = 2
+source = "【神崎】「聞かせてくれるわね。」"
+translation = "[KANZAKI] \"You're going to tell me everything.\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-104a-i-explain-why-i-was-late-i-knew"
+file = "DISKB/F0014.MES"
+offset = 0x104a
+source_mode = 1
+target_mode = 2
+source = "あたしは遅くなった訳を話した。神崎博士なら、女の子とエッチした事も話せる、そう考えたからだ。"
+translation = "I explain why I was late. I knew I could even tell Dr. Kanzaki that I'd had sex with a woman."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1084-my-story-surprises-her-but-she-quickly-regains"
+file = "DISKB/F0014.MES"
+offset = 0x1084
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしの話に驚いていたが、すぐにいつもの冷静さを取り戻した。"
+translation = "My story surprises her, but she quickly regains her usual composure."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-10af-kanzaki-honestly-you-had-me-worried"
+file = "DISKB/F0014.MES"
+offset = 0x10af
+source_mode = 1
+target_mode = 2
+source = "【神崎】「もう、・・・心配かけて・・・。」"
+translation = "[KANZAKI] \"Honestly... You had me worried...\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-10f8-dr-kanzaki-embraces-me-again-and-again"
+file = "DISKB/F0014.MES"
+offset = 0x10f8
+source_mode = 1
+target_mode = 2
+source = "神崎博士はあたしを何度も何度も抱き締めた。"
+translation = "Dr. Kanzaki embraces me again and again."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1114-the-duty-operator-is-gone-now-too"
+file = "DISKB/F0014.MES"
+offset = 0x1114
+source_mode = 1
+target_mode = 2
+source = "当直の係員も、今はいない。"
+translation = "The duty operator is gone now too."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1127-probably-off-telling-the-others-that-i-arrived"
+file = "DISKB/F0014.MES"
+offset = 0x1127
+source_mode = 1
+target_mode = 2
+source = "おそらくあたしの到着を他の人へ知らせにいっているのだろう。"
+translation = "Probably off telling the others that I arrived."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-114a-connie-doctor-people-will-be-here-soon"
+file = "DISKB/F0014.MES"
+offset = 0x114a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「博士・・・、そろそろ人が来ます。」"
+translation = "[CONNIE] \"Doctor... People will be here soon.\""
+speaker = "コニー"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1166-my-ears-catch-footsteps-running-down-the-hall"
+file = "DISKB/F0014.MES"
+offset = 0x1166
+source_mode = 1
+target_mode = 2
+source = "あたしの耳に、廊下を駆けてくる足音が聞こえた。"
+translation = "My ears catch footsteps running down the hall."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1185-dr-kanzaki-gazes-at-me-reluctantly-then-lets"
+file = "DISKB/F0014.MES"
+offset = 0x1185
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、名残惜しそうにあたしを見つめ、あたしから離れた。"
+translation = "Dr. Kanzaki gazes at me reluctantly, then lets me go."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-12c1-her-usual-calm-expression-returns"
+file = "DISKB/F0014.MES"
+offset = 0x12c1
+source_mode = 1
+target_mode = 2
+source = "そしていつもの冷静な顔に戻る。"
+translation = "Her usual calm expression returns."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-12d7-kanzaki-we-re-going-to-decide-what-comes"
+file = "DISKB/F0014.MES"
+offset = 0x12d7
+source_mode = 1
+target_mode = 2
+source = "【神崎】「これからの方針を決めるわ。一緒に来る？」"
+translation = "[KANZAKI] \"We're going to decide what comes next. Will you join us?\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-12f9-i-shake-my-head-this-was-my-second"
+file = "DISKB/F0014.MES"
+offset = 0x12f9
+source_mode = 1
+target_mode = 2
+source = "あたしは首を横に振った。時空震動は２度目で、いくぶんか慣れたとはいえ、まだまだ体へ与える疲労が大きい。"
+translation = "I shake my head. This was my second Time Quake and I was more accustomed to it, but it still exhausted my body."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-133b-i-want-to-rest-even-if-only-for"
+file = "DISKB/F0014.MES"
+offset = 0x133b
+source_mode = 1
+target_mode = 2
+source = "１０分でも休みたかった。"
+translation = "I want to rest, even if only for ten minutes."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-134e-kanzaki-all-right-wait-in-the-meeting-room"
+file = "DISKB/F0014.MES"
+offset = 0x134e
+source_mode = 1
+target_mode = 2
+source = "【神崎】「そう。ミーティングルームで待ってなさい。」"
+translation = "[KANZAKI] \"All right. Wait in the meeting room.\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1370-i-nod-and-hand-her-the-disk-containing"
+file = "DISKB/F0014.MES"
+offset = 0x1370
+source_mode = 1
+target_mode = 2
+source = "あたしは頷き、マシンのトレースデータを収録したディスクを手渡した。"
+translation = "I nod and hand her the disk containing the machine's trace data."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-139d-connie-this-is-the-trace-data-from-the"
+file = "DISKB/F0014.MES"
+offset = 0x139d
+source_mode = 1
+target_mode = 2
+source = "【コニー】「時空移動に成功した時の、トレースデータです。」"
+translation = "[CONNIE] \"This is the trace data from the successful temporal transfer.\""
+speaker = "コニー"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-13c2-kanzaki-understood"
+file = "DISKB/F0014.MES"
+offset = 0x13c2
+source_mode = 1
+target_mode = 2
+source = "【神崎】「わかったわ。」"
+translation = "[KANZAKI] \"Understood.\""
+speaker = "神崎"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-13d3-i-also-give-her-the-genetic-samples-analyzing"
+file = "DISKB/F0014.MES"
+offset = 0x13d3
+source_mode = 1
+target_mode = 2
+source = "それと、遺伝子サンプルを渡した。遺伝子を調べるのは神崎博士の領分だ。"
+translation = "I also give her the genetic samples. Analyzing genes is Dr. Kanzaki's field."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-14e5-dr-kanzaki-heads-to-the-conference-room-with"
+file = "DISKB/F0014.MES"
+offset = 0x14e5
+source_mode = 1
+target_mode = 2
+source = "神崎博士は、入ってきた人たちと一緒に会議室へ向かった。"
+translation = "Dr. Kanzaki heads to the conference room with the people who have arrived."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"
+
+[[entries]]
+id = "f0014-1509-after-seeing-her-off-i-drag-my-exhausted"
+file = "DISKB/F0014.MES"
+offset = 0x1509
+source_mode = 1
+target_mode = 2
+source = "あたしは神崎博士を見送ると、疲れの残る体を引きずるように部屋へと向かうことにした。"
+translation = "After seeing her off, I drag my exhausted body toward the room."
+speaker = "Connie"
+context = "Dr. Kanzaki abandons her public reserve to welcome Connie home, then returns to project business as others arrive."
+status = "qa-ready"

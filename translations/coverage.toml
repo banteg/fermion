@@ -353,3 +353,17 @@ description = "Every decoded F0012L record across Connie's six late-night approa
 file = "DISKB/F0012L.MES"
 start = 0x048f
 end = 0x485c
+
+[[scopes]]
+id = "first-return-to-2296"
+description = "Every decoded F0013 and F0014 record from Connie's first-stay departure through her return to Dr. Kanzaki at the 2296 time port."
+
+[[scopes.ranges]]
+file = "DISKB/F0013.MES"
+start = 0x050d
+end = 0x1b3a
+
+[[scopes.ranges]]
+file = "DISKB/F0014.MES"
+start = 0x0639
+end = 0x1509

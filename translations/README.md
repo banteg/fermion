@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 4,103 canonical records covering 5,454 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0012L.MES`.
+The current catalog contains 4,322 canonical records covering 5,707 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0014.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -333,6 +333,18 @@ refusal, withdrawal, and act of resistance remains explicit, including where
 Connie overrides it; Yuki's later request and assent remain separate records.
 No trustworthy live F0012L state exists yet, so it remains `qa-ready` pending
 a human playtest and native fixture capture.
+
+The fifteenth closed scope is `first-return-to-2296`: all 253 physical text
+records in `F0013.MES` and `F0014.MES`, from Connie's first-stay departure
+through her reunion with Dr. Kanzaki at the 2296 time port. They are managed as
+219 catalog entries, including 24 composite display messages and 13
+context-safe duplicate pairs shared across equivalent menu branches; all
+anchors are translated and none are excluded or pending. Connie's clean-air,
+school, and conservation reflections retain her direct, slightly comic voice,
+while the reunion shifts Dr. Kanzaki from unguarded private concern back to
+professional control as the staff arrives. No trustworthy live F0013/F0014
+state exists yet, so the scope remains `qa-ready` pending a human playtest and
+native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,
