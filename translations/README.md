@@ -173,9 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 3,382 canonical records covering 4,376 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through the
-two `F0010` routes.
+The current catalog contains 3,694 canonical records covering 4,840 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0011L.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -312,6 +311,16 @@ translated and none are excluded or pending. Every spoken refusal, stop, and
 limit remains explicit, as do the source's statements about when Connie resists
 or gives herself over. No trustworthy live F0010R state exists yet, so it
 remains `qa-ready` pending a human playtest and native fixture capture.
+
+The thirteenth closed scope is `ruri-genetic-sample-route`: all 464 physical
+text records in `F0011L.MES`, covering the assertive, slow, and talk-first
+approaches to Ruri's genetic-sample route. They are managed as 312 catalog
+entries, including 203 composite display messages; all anchors are translated
+and none are excluded or pending. Ruri's blunt voice remains distinct from
+Connie's teasing, while every spoken refusal and attempted resistance remains
+explicit even where Connie's narration interprets it differently. No
+trustworthy live F0011L state exists yet, so it remains `qa-ready` pending a
+human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

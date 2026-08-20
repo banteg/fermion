@@ -84,6 +84,12 @@ box_width = 61
 
 
 
+[[files]]
+file = "DISKB/F0011L.MES"
+source = "disk-b/F0011L.MES"
+sha256 = "55027f31e60d1b820d688f51cb2149b937bdfcd170a794c943e46f47aa57f438"
+box_width = 61
+
 [[tokens]]
 id = "name:mother"
 source = "由貴"
@@ -47673,4 +47679,4724 @@ file = "DISKB/F0010R.MES"
 segments = [
   { kind = "token", token = "name:mother", start = 0x48a7, end = 0x48b6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x48b6, source_mode = 1, source = "の、今までの欲求不満を解消できたような満足な表情を見て、あたしも幸せな気分に浸っていた。" }
+]
+
+[[composites]]
+id = "f0011l-04e3-connie-i-m-sorry-name-older-sister"
+target_mode = 2
+source = "【コニー】「ごめんなさい・・・⟦name:older-sister⟧・・・。」"
+translation = "[CONNIE] \"I'm sorry... ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x04e3, source_mode = 1, source = "【コニー】「ごめんなさい・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x04f5, end = 0x0504, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0504, source_mode = 1, source = "・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-050e-name-older-sister-is-beneath-me-as-i"
+target_mode = 2
+source = "⟦name:older-sister⟧の上から体を退けようとしたあたしを、⟦name:older-sister⟧が引き留めた。"
+translation = "⟦name:older-sister⟧ is beneath me as I try to pull away, but ⟦name:older-sister⟧ holds me back."
+speaker = "Connie"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x050e, end = 0x051d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x051d, source_mode = 1, source = "の上から体を退けようとしたあたしを、" },
+  { kind = "token", token = "name:older-sister", start = 0x0533, end = 0x0542, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0542, source_mode = 1, source = "が引き留めた。" },
+]
+
+[[composites]]
+id = "f0011l-054f-name-older-sister"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...\""
+speaker = "name-slot:older-sister"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x054f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0553, end = 0x0562, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0562, source_mode = 1, source = "】「・・・・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0577-name-older-sister-s-heart-is-beating-faster"
+target_mode = 2
+source = "⟦name:older-sister⟧の心臓の鼓動が早くなっている。"
+translation = "⟦name:older-sister⟧'s heart is beating faster."
+speaker = "Connie"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0577, end = 0x0586, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0586, source_mode = 1, source = "の心臓の鼓動が早くなっている。" },
+]
+
+[[composites]]
+id = "f0011l-059e-i-bring-my-face-close-to-name-older"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧に顔を近付けた。⟦name:older-sister⟧は逃げなかった。"
+translation = "I bring my face close to ⟦name:older-sister⟧. ⟦name:older-sister⟧ doesn't pull away."
+speaker = "Connie"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x059e, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x05a5, end = 0x05b4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x05b4, source_mode = 1, source = "に顔を近付けた。" },
+  { kind = "token", token = "name:older-sister", start = 0x05c1, end = 0x05d0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x05d0, source_mode = 1, source = "は逃げなかった。" },
+]
+
+[[composites]]
+id = "f0011l-05fc-name-older-sister-nnh-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・んっ・・・ふうっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"...Nnh... hah...\""
+speaker = "name-slot:older-sister"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x05fc, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0600, end = 0x060f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x060f, source_mode = 1, source = "】「・・・・・・んっ・・・ふうっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0629-connie-name-older-sister"
+target_mode = 2
+source = "【コニー】（⟦name:older-sister⟧・・・・・・・・・。）"
+translation = "[CONNIE] (⟦name:older-sister⟧...)"
+speaker = "コニー"
+context = "Ruri stops Connie from pulling away and lets her draw close."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0629, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:older-sister", start = 0x0632, end = 0x0641, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0641, source_mode = 1, source = "・・・・・・・・・。）" },
+]
+
+[[entries]]
+id = "f0011l-071e-take-the-lead"
+file = "DISKB/F0011L.MES"
+offset = 0x071e
+source_mode = 1
+target_mode = 2
+source = "積極的に"
+translation = "TAKE THE LEAD"
+speaker = "ui"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-0734-go-slowly"
+file = "DISKB/F0011L.MES"
+offset = 0x0734
+source_mode = 1
+target_mode = 2
+source = "ゆっくりと"
+translation = "GO SLOWLY"
+speaker = "ui"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-0748-talk"
+file = "DISKB/F0011L.MES"
+offset = 0x0748
+source_mode = 1
+target_mode = 2
+source = "話す"
+translation = "TALK"
+speaker = "ui"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0785-i-press-myself-between-name-older-sister-s"
+target_mode = 2
+source = "あたしは股間を⟦name:older-sister⟧の股間に押し当てた。"
+translation = "I press myself between ⟦name:older-sister⟧'s legs."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0785, source_mode = 1, source = "あたしは股間を" },
+  { kind = "token", token = "name:older-sister", start = 0x078f, end = 0x079e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x079e, source_mode = 1, source = "の股間に押し当てた。" },
+]
+
+[[composites]]
+id = "f0011l-07ae-name-older-sister-ah-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっ・・・・・・・・・、ダメ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... no...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+notes = "Ruri's refusal remains literal; the following narration reports her quiet delivery rather than turning it into consent."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x07ae, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x07b2, end = 0x07c1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x07c1, source_mode = 1, source = "】「あっ・・・・・・・・・、ダメ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-07de-trying-not-to-make-a-sound-name-older"
+target_mode = 2
+source = "声をたてないよう、小さく拒否をする⟦name:older-sister⟧。"
+translation = "Trying not to make a sound, ⟦name:older-sister⟧ objects quietly."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x07de, source_mode = 1, source = "声をたてないよう、小さく拒否をする" },
+  { kind = "token", token = "name:older-sister", start = 0x07f4, end = 0x0803, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0803, source_mode = 1, source = "。" },
+]
+
+[[composites]]
+id = "f0011l-0809-name-older-sister-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニー・・・。」"
+translation = "[⟦name:older-sister⟧] \"Connie...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0809, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x080d, end = 0x081c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x081c, source_mode = 1, source = "】「コニー・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-082b-name-older-sister-grips-my-arm-tightly"
+target_mode = 2
+source = "⟦name:older-sister⟧があたしの腕をぎゅっと握る。"
+translation = "⟦name:older-sister⟧ grips my arm tightly."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x082b, end = 0x083a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x083a, source_mode = 1, source = "があたしの腕をぎゅっと握る。" },
+]
+
+[[composites]]
+id = "f0011l-084e-name-older-sister-is-the-future-really-hopeless"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「未来は本当に絶望的なの？　勉強をしてても、その事を考えてしまって・・・、辛いの・・・。」"
+translation = "[⟦name:older-sister⟧] \"Is the future really hopeless? Even when I'm studying, I keep thinking about it... It hurts...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x084e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0852, end = 0x0861, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0861, source_mode = 1, source = "】「未来は本当に絶望的なの？　勉強をしてても、その事を考えてしまって・・・、辛いの・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-089d-name-older-sister-is-trembling-with-fear"
+target_mode = 2
+source = "⟦name:older-sister⟧は不安に怯えていた。"
+translation = "⟦name:older-sister⟧ is trembling with fear."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x089d, end = 0x08ac, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x08ac, source_mode = 1, source = "は不安に怯えていた。" },
+]
+
+[[composites]]
+id = "f0011l-08df-as-if-i-could-kiss-her-fear-away"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の不安を取り除くかのように、キス。"
+translation = "As if I could kiss her fear away, I press my lips to ⟦name:older-sister⟧'s."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x08df, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x08e6, end = 0x08f5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x08f5, source_mode = 1, source = "の不安を取り除くかのように、キス。" },
+]
+
+[[composites]]
+id = "f0011l-090e-name-older-sister-ah-nnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっ・・・・・・んっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... nnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x090e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0912, end = 0x0921, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0921, source_mode = 1, source = "】「あっ・・・・・・んっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0940-name-older-sister-s-breast-meets-my-lips"
+target_mode = 2
+source = "⟦name:older-sister⟧の胸に、ちゅぱっ、と吸い付く。"
+translation = "⟦name:older-sister⟧'s breast meets my lips with a wet suck."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0940, end = 0x094f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x094f, source_mode = 1, source = "の胸に、ちゅぱっ、と吸い付く。" },
+]
+
+[[composites]]
+id = "f0011l-0963-name-older-sister-aah-nnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あー・・・んんっ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Aah... nnnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0963, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0967, end = 0x0976, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0976, source_mode = 1, source = "】「あー・・・んんっ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-098d-name-older-sister-s-body-shudders-with-pleasure"
+target_mode = 2
+source = "⟦name:older-sister⟧の身体が悦びで、びくびくぅっ、と震える。"
+translation = "⟦name:older-sister⟧'s body shudders with pleasure."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x098d, end = 0x099c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x099c, source_mode = 1, source = "の身体が悦びで、びくびくぅっ、と震える。" },
+]
+
+[[entries]]
+id = "f0011l-09b6-connie-does-this-feel-good"
+file = "DISKB/F0011L.MES"
+offset = 0x09b6
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ここ・・・感じる？」"
+translation = "[CONNIE] \"Does this feel good?\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-09cb-name-older-sister-yeah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「うん・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Yeah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x09cb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x09cf, end = 0x09de, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x09de, source_mode = 1, source = "】「うん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-09ef-usually-so-energetic-name-older-sister-is-docile"
+target_mode = 2
+source = "活発な⟦name:older-sister⟧が、今はおとなしい。"
+translation = "Usually so energetic, ⟦name:older-sister⟧ is docile now."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x09ef, source_mode = 1, source = "活発な" },
+  { kind = "token", token = "name:older-sister", start = 0x09f7, end = 0x0a06, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0a06, source_mode = 1, source = "が、今はおとなしい。" },
+]
+
+[[entries]]
+id = "f0011l-0a16-i-knead-her-breast"
+file = "DISKB/F0011L.MES"
+offset = 0x0a16
+source_mode = 1
+target_mode = 2
+source = "むにむに、と胸を揉む。"
+translation = "I knead her breast."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0a27-name-older-sister-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「っふぅ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0a27, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0a2b, end = 0x0a3a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0a3a, source_mode = 1, source = "】「っふぅ・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-0a4c-the-soft-flesh-yielding-under-my-palm-feels"
+file = "DISKB/F0011L.MES"
+offset = 0x0a4c
+source_mode = 1
+target_mode = 2
+source = "にゅっにゅっとする感触が、あたしの手のひらに気持ちいい。"
+translation = "The soft flesh yielding under my palm feels good."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0a6d-name-older-sister-nnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「やぁぁん・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0a6d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0a71, end = 0x0a80, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0a80, source_mode = 1, source = "】「やぁぁん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0aa4-i-slide-lower-and-lick-along-name-older"
+target_mode = 2
+source = "あたしは身体を下へずらし、⟦name:older-sister⟧の割れ目を舐める。"
+translation = "I slide lower and lick along ⟦name:older-sister⟧'s slit."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0aa4, source_mode = 1, source = "あたしは身体を下へずらし、" },
+  { kind = "token", token = "name:older-sister", start = 0x0ab5, end = 0x0ac4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0ac4, source_mode = 1, source = "の割れ目を舐める。" },
+]
+
+[[entries]]
+id = "f0011l-0ad2-lick"
+file = "DISKB/F0011L.MES"
+offset = 0x0ad2
+source_mode = 1
+target_mode = 2
+source = "ぺろり。"
+translation = "Lick."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0adb-name-older-sister-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あン！」"
+translation = "[⟦name:older-sister⟧] \"Ah!\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0adb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0adf, end = 0x0aee, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0aee, source_mode = 1, source = "】「あン！」" },
+]
+
+[[entries]]
+id = "f0011l-0af9-she-jerks"
+file = "DISKB/F0011L.MES"
+offset = 0x0af9
+source_mode = 1
+target_mode = 2
+source = "びくっ。"
+translation = "She jerks."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0b02-name-older-sister-trembles-and-i-eagerly-keep"
+target_mode = 2
+source = "⟦name:older-sister⟧の身体の震えを嬉しく感じながら、舌を動かす。"
+translation = "⟦name:older-sister⟧ trembles, and I eagerly keep moving my tongue."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0b02, end = 0x0b11, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0b11, source_mode = 1, source = "の身体の震えを嬉しく感じながら、舌を動かす。" },
+]
+
+[[entries]]
+id = "f0011l-0b2c-connie-mmph-nnnnh"
+file = "DISKB/F0011L.MES"
+offset = 0x0b2c
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あむっ、んんんん・・・っ・・・。」"
+translation = "[CONNIE] \"Mmph... nnnnh...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0b48-name-older-sister-ahh-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ひゃぁ・・・嫌・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ahh... no...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0b48, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0b4c, end = 0x0b5b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0b5b, source_mode = 1, source = "】「ひゃぁ・・・嫌・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-0b6e-i-reach-up-and-pinch-her-taut-nipple"
+file = "DISKB/F0011L.MES"
+offset = 0x0b6e
+source_mode = 1
+target_mode = 2
+source = "きゅっと息衝く乳首を、手を伸ばしてつまむ。"
+translation = "I reach up and pinch her taut nipple."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0b8c-name-older-sister-ah-ah-aah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・、あ・・・、あぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... ah... aah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0b8c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0b90, end = 0x0b9f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0b9f, source_mode = 1, source = "】「あ・・・、あ・・・、あぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0bb7-with-a-deep-sigh-name-older-sister-trembles"
+target_mode = 2
+source = "深いため息と共に、⟦name:older-sister⟧は震える。"
+translation = "With a deep sigh, ⟦name:older-sister⟧ trembles."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0bb7, source_mode = 1, source = "深いため息と共に、" },
+  { kind = "token", token = "name:older-sister", start = 0x0bc6, end = 0x0bd5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0bd5, source_mode = 1, source = "は震える。" },
+]
+
+[[composites]]
+id = "f0011l-0bdf-name-older-sister-connie-your-tongue-is-rough"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニー・・・、舌がざらざら・・・してる・・・。」"
+translation = "[⟦name:older-sister⟧] \"Connie... your tongue is rough...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0bdf, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0be3, end = 0x0bf2, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0bf2, source_mode = 1, source = "】「コニー・・・、舌がざらざら・・・してる・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0c11-name-older-sister-says-it-as-she-gives"
+target_mode = 2
+source = "⟦name:older-sister⟧は快楽に身を委ねながら言う。"
+translation = "⟦name:older-sister⟧ says it as she gives herself over to the pleasure."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0c11, end = 0x0c20, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0c20, source_mode = 1, source = "は快楽に身を委ねながら言う。" },
+]
+
+[[entries]]
+id = "f0011l-0c36-connie-does-it-feel-good"
+file = "DISKB/F0011L.MES"
+offset = 0x0c36
+source_mode = 1
+target_mode = 2
+source = "【コニー】「気持ちいい？」"
+translation = "[CONNIE] \"Does it feel good?\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0c48-name-older-sister-mhm-you-re-good-at"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ん・・・。・・・・・・上手・・・。」"
+translation = "[⟦name:older-sister⟧] \"Mhm... You're... good at this...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0c48, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0c4c, end = 0x0c5b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0c5b, source_mode = 1, source = "】「ん・・・。・・・・・・上手・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-0c8d-slurp"
+file = "DISKB/F0011L.MES"
+offset = 0x0c8d
+source_mode = 1
+target_mode = 2
+source = "ちゅく・・・。"
+translation = "Slurp..."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0c99-name-older-sister-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・ぁ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...Ah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0c99, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0c9d, end = 0x0cac, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0cac, source_mode = 1, source = "】「・・・ぁ・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-0cbf-i-spread-her-slit-a-little-and-push"
+file = "DISKB/F0011L.MES"
+offset = 0x0cbf
+source_mode = 1
+target_mode = 2
+source = "割れ目をちょっと広げて、舌を差し込む。"
+translation = "I spread her slit a little and push my tongue inside."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0cda-name-older-sister-nnnh-nnnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「んうぅ・・・、んぅぅぅ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnnh... nnnnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0cda, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0cde, end = 0x0ced, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0ced, source_mode = 1, source = "】「んうぅ・・・、んぅぅぅ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0d04-name-older-sister-thrashes-her-head-from-side"
+target_mode = 2
+source = "⟦name:older-sister⟧は頭を激しく左右に振る。"
+translation = "⟦name:older-sister⟧ thrashes her head from side to side."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0d04, end = 0x0d13, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0d13, source_mode = 1, source = "は頭を激しく左右に振る。" },
+]
+
+[[composites]]
+id = "f0011l-0d31-connie-maybe-this-is-one-of-name-older"
+target_mode = 2
+source = "【コニー】（⟦name:older-sister⟧って・・・、ここ、弱いかな・・・。）"
+translation = "[CONNIE] (Maybe this is one of ⟦name:older-sister⟧'s weak spots...)"
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0d31, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:older-sister", start = 0x0d3a, end = 0x0d49, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0d49, source_mode = 1, source = "って・・・、ここ、弱いかな・・・。）" },
+]
+
+[[composites]]
+id = "f0011l-0d60-name-mother-was-weak-around-the-ears-too"
+target_mode = 2
+source = "⟦name:mother⟧が弱かった耳のあたり。"
+translation = "⟦name:mother⟧ was weak around the ears too."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0d60, end = 0x0d6f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0d6f, source_mode = 1, source = "が弱かった耳のあたり。" },
+]
+
+[[composites]]
+id = "f0011l-0d7f-i-cover-name-older-sister-with-my-body"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧に覆い被さるとうなじを舐める。"
+translation = "I cover ⟦name:older-sister⟧ with my body and lick the nape of her neck."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0d7f, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x0d86, end = 0x0d95, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0d95, source_mode = 1, source = "に覆い被さるとうなじを舐める。" },
+]
+
+[[composites]]
+id = "f0011l-0dab-name-older-sister-aah-nnnhhh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あーん・・・んふぅぅぅぅん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Aah... nnnhhh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0dab, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0daf, end = 0x0dbe, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0dbe, source_mode = 1, source = "】「あーん・・・んふぅぅぅぅん・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0dd7-name-older-sister-twitches-and-shudders"
+target_mode = 2
+source = "⟦name:older-sister⟧はぴくぴくとけいれんする。"
+translation = "⟦name:older-sister⟧ twitches and shudders."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0dd7, end = 0x0de6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0de6, source_mode = 1, source = "はぴくぴくとけいれんする。" },
+]
+
+[[composites]]
+id = "f0011l-0df8-name-older-sister-no-it-s-rough"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「いやぁ・・・ん・・・、ざらざら・・・。」"
+translation = "[⟦name:older-sister⟧] \"No... it's rough...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0df8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0dfc, end = 0x0e0b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0e0b, source_mode = 1, source = "】「いやぁ・・・ん・・・、ざらざら・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-0e26-she-says-no-though-she-doesn-t-push"
+file = "DISKB/F0011L.MES"
+offset = 0x0e26
+source_mode = 1
+target_mode = 2
+source = "そう言いながらも、拒絶はしてない。"
+translation = "She says no, though she doesn't push me away."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+notes = "This is Connie's interpretation of Ruri's behavior after a spoken no, not an objective consent statement."
+
+[[composites]]
+id = "f0011l-0e3e-i-kiss-name-older-sister-covering-her-gasping"
+target_mode = 2
+source = "喘ぐ⟦name:older-sister⟧の口を塞ぐようにキス。"
+translation = "I kiss ⟦name:older-sister⟧, covering her gasping mouth."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0e3e, source_mode = 1, source = "喘ぐ" },
+  { kind = "token", token = "name:older-sister", start = 0x0e43, end = 0x0e52, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0e52, source_mode = 1, source = "の口を塞ぐようにキス。" },
+]
+
+[[entries]]
+id = "f0011l-0e63-connie-mmm"
+file = "DISKB/F0011L.MES"
+offset = 0x0e63
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっ・・・。」"
+translation = "[CONNIE] \"Mmm...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0e75-name-older-sister-nnnh-mmph-mmm"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あんんっ・・・、んんむっ・・・、ん・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnnh... mmph... mmm...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0e75, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0e79, end = 0x0e88, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0e88, source_mode = 1, source = "】「あんんっ・・・、んんむっ・・・、ん・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0ea8-name-older-sister-is-dazed-at-the-mercy"
+target_mode = 2
+source = "⟦name:older-sister⟧はもうろうとして、舌を出すあたしに翻弄されている。"
+translation = "⟦name:older-sister⟧ is dazed, at the mercy of my searching tongue."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0ea8, end = 0x0eb7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0eb7, source_mode = 1, source = "はもうろうとして、舌を出すあたしに翻弄されている。" },
+]
+
+[[entries]]
+id = "f0011l-0ed7-connie-mmm-nnh"
+file = "DISKB/F0011L.MES"
+offset = 0x0ed7
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっん・・・、ん・・・。」"
+translation = "[CONNIE] \"Mmm... nnh...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0eef-name-older-sister-s-sweet-saliva-touches-the"
+target_mode = 2
+source = "⟦name:older-sister⟧の甘い唾液が舌先に触れる。"
+translation = "⟦name:older-sister⟧'s sweet saliva touches the tip of my tongue."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0eef, end = 0x0efe, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0efe, source_mode = 1, source = "の甘い唾液が舌先に触れる。" },
+]
+
+[[entries]]
+id = "f0011l-0f11-when-our-tongues-meet-she-moves-hers-just"
+file = "DISKB/F0011L.MES"
+offset = 0x0f11
+source_mode = 1
+target_mode = 2
+source = "舌を絡めると、少しだけ動かす。それ以上は興奮が強すぎて動かせないみたい。"
+translation = "When our tongues meet, she moves hers just a little. Any more seems too intense for her."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-0f3e-name-older-sister-nnnnh-hahhh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「んんんっ・・・、はふーーーっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnnnh... hahhh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0f3e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0f42, end = 0x0f51, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0f51, source_mode = 1, source = "】「んんんっ・・・、はふーーーっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0f6b-connie-your-kisses-taste-sweet-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧のキス・・・甘い・・・ね・・・。」"
+translation = "[CONNIE] \"Your kisses taste sweet, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0f6b, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x0f74, end = 0x0f83, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0f83, source_mode = 1, source = "のキス・・・甘い・・・ね・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0f99-name-older-sister-hah-your-tongue-feels-so"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・はふぅ・・・。コニーの舌・・・すっごく・・・感じちゃう・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah... Your tongue... feels so good, Connie...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x0f99, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0f9d, end = 0x0fac, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0fac, source_mode = 1, source = "】「・・・はふぅ・・・。コニーの舌・・・すっごく・・・感じちゃう・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-0fd6-name-older-sister-answers-haltingly"
+target_mode = 2
+source = "⟦name:older-sister⟧はしどろもどろになって答える。"
+translation = "⟦name:older-sister⟧ answers haltingly."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x0fd6, end = 0x0fe5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0fe5, source_mode = 1, source = "はしどろもどろになって答える。" },
+]
+
+[[composites]]
+id = "f0011l-1012-name-older-sister-s-ear-gets-a-kiss"
+target_mode = 2
+source = "⟦name:older-sister⟧の耳にキス。"
+translation = "⟦name:older-sister⟧'s ear gets a kiss."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1012, end = 0x1021, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1021, source_mode = 1, source = "の耳にキス。" },
+]
+
+[[entries]]
+id = "f0011l-102c-that-alone-makes-her-twitch"
+file = "DISKB/F0011L.MES"
+offset = 0x102c
+source_mode = 1
+target_mode = 2
+source = "それだけでぴくっと震える。"
+translation = "That alone makes her twitch."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-103e-connie-you-re-cute-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧ってかわいい・・・。」"
+translation = "[CONNIE] \"You're cute, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x103e, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x1047, end = 0x1056, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1056, source_mode = 1, source = "ってかわいい・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1066-name-older-sister-nnh-don-t-tease-someone"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あん・・・、年上を・・・からかわないの・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnh... Don't tease someone older than you...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1066, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x106a, end = 0x1079, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1079, source_mode = 1, source = "】「あん・・・、年上を・・・からかわないの・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1099-connie-you-re-only-a-little-older"
+file = "DISKB/F0011L.MES"
+offset = 0x1099
+source_mode = 1
+target_mode = 2
+source = "【コニー】「少ししか違わないじゃない。」"
+translation = "[CONNIE] \"You're only a little older.\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-10b3-the-moment-i-think-about-biting-her-ear"
+file = "DISKB/F0011L.MES"
+offset = 0x10b3
+source_mode = 1
+target_mode = 2
+source = "耳を噛んじゃうぞ、と思ったら噛んでいた。"
+translation = "The moment I think about biting her ear, I do it."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-10cd-name-older-sister-ah-eek-aaah-nnnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっ、ひぁっ・・・あぁ・・・んんんっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah! Eek... aaah... nnnnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x10cd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x10d1, end = 0x10e0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x10e0, source_mode = 1, source = "】「あっ、ひぁっ・・・あぁ・・・んんんっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-10fe-name-older-sister-silently-endures-it-even-that"
+target_mode = 2
+source = "⟦name:older-sister⟧はじっと耐えている。そんなしぐさも可愛いと思う。"
+translation = "⟦name:older-sister⟧ silently endures it. Even that looks cute to me."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x10fe, end = 0x110d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x110d, source_mode = 1, source = "はじっと耐えている。そんなしぐさも可愛いと思う。" },
+]
+
+[[composites]]
+id = "f0011l-1135-name-older-sister-begins-pressing-her-hips-insistently"
+target_mode = 2
+source = "⟦name:older-sister⟧は、ぐいぐいと股間を押し付ける。"
+translation = "⟦name:older-sister⟧ begins pressing her hips insistently against me."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1135, end = 0x1144, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1144, source_mode = 1, source = "は、ぐいぐいと股間を押し付ける。" },
+]
+
+[[entries]]
+id = "f0011l-1159-our-wetness-spills-between-us-slick-against-our"
+file = "DISKB/F0011L.MES"
+offset = 0x1159
+source_mode = 1
+target_mode = 2
+source = "お互いのぬめっとした液が、溢れ、べちゃべちゃと割れ目から溢れでる。"
+translation = "Our wetness spills between us, slick against our joined bodies."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1183-name-older-sister-haaah-haaah-hah-hah-nnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁーーーん、はぁーん、はぁっ、はぁっ・・・、っぅ・・・はぁーん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Haaah, haaah, hah, hah... nnnh... aaah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1183, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1187, end = 0x1196, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1196, source_mode = 1, source = "】「はぁーーーん、はぁーん、はぁっ、はぁっ・・・、っぅ・・・はぁーん・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-11c2-connie-ah-ah-name-older-sister-this-feels"
+target_mode = 2
+source = "【コニー】「あっ、あっ、⟦name:older-sister⟧・・・すご、すごく・・・・・・いぃ・・・。」"
+translation = "[CONNIE] \"Ah, ah, ⟦name:older-sister⟧... This... feels so good...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x11c2, source_mode = 1, source = "【コニー】「あっ、あっ、" },
+  { kind = "token", token = "name:older-sister", start = 0x11d1, end = 0x11e0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x11e0, source_mode = 1, source = "・・・すご、すごく・・・・・・いぃ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-11fc-name-older-sister-connie-connie-hah-hah-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニー・・・、コニー・・・はぁはぁはぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Connie... Connie... hah, hah, hah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x11fc, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1200, end = 0x120f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x120f, source_mode = 1, source = "】「コニー・・・、コニー・・・はぁはぁはぁ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-123f-i-grind-against-her-too-savoring-the-pleasure"
+file = "DISKB/F0011L.MES"
+offset = 0x123f
+source_mode = 1
+target_mode = 2
+source = "あたしもぐいぐいと割れ目を擦りつけ、気持ちよさを味わう。"
+translation = "I grind against her too, savoring the pleasure."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1261-connie-ah-hahhh"
+file = "DISKB/F0011L.MES"
+offset = 0x1261
+source_mode = 1
+target_mode = 2
+source = "【コニー】「かぁ・・・ふぅぅっ・・・。」"
+translation = "[CONNIE] \"Ah... hahhh...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-127a-name-older-sister-s-pubic-hair-wet-with"
+target_mode = 2
+source = "⟦name:older-sister⟧の恥毛が愛液で湿り、あたしの股間にざらざらとした感触を伝えてくる。"
+translation = "⟦name:older-sister⟧'s pubic hair, wet with arousal, brushes roughly against me."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x127a, end = 0x1289, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1289, source_mode = 1, source = "の恥毛が愛液で湿り、あたしの股間にざらざらとした感触を伝えてくる。" },
+]
+
+[[composites]]
+id = "f0011l-12b1-name-older-sister-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「や・・・。」"
+translation = "[⟦name:older-sister⟧] \"No...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x12b1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x12b5, end = 0x12c4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x12c4, source_mode = 1, source = "】「や・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-12d1-her-labia-protrude-slightly-from-her-slit-and"
+file = "DISKB/F0011L.MES"
+offset = 0x12d1
+source_mode = 1
+target_mode = 2
+source = "割れ目から秘唇が少しはみだして引っ張られる。"
+translation = "Her labia protrude slightly from her slit and tug against mine."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-12ec-i-keep-my-hips-trembling-in-tiny-motions"
+file = "DISKB/F0011L.MES"
+offset = 0x12ec
+source_mode = 1
+target_mode = 2
+source = "あたしは腰を小刻みに震えさせて、小さく刺激を与え続ける。"
+translation = "I keep my hips trembling in tiny motions, giving her a steady, delicate stimulation."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1310-name-older-sister-aah-i-ah-hah-aaaaaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はあうっ！　・・・いっ・・・、あッ　はっ・・・。あ～～～～～～ッ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Aah! I... ah! Hah... Aaaaaah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1310, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1314, end = 0x1323, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1323, source_mode = 1, source = "】「はあうっ！　・・・いっ・・・、あッ　はっ・・・。あ～～～～～～ッ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1352-name-older-sister-suddenly-stops-moving-as-if"
+target_mode = 2
+source = "⟦name:older-sister⟧はがっくりと力が抜けたように、動きを止める。"
+translation = "⟦name:older-sister⟧ suddenly stops moving, as if all her strength has left her."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1352, end = 0x1361, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1361, source_mode = 1, source = "はがっくりと力が抜けたように、動きを止める。" },
+]
+
+[[composites]]
+id = "f0011l-137f-name-older-sister-ah-hah-connie-that-was"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・はぁ・・・、コニー・・・、いい・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... hah... Connie... that was good...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x137f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1383, end = 0x1392, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1392, source_mode = 1, source = "】「あ・・・はぁ・・・、コニー・・・、いい・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-13b1-name-older-sister-soon-starts-rolling-her-hips"
+target_mode = 2
+source = "⟦name:older-sister⟧は、すぐにうねうねと腰を動かす。"
+translation = "⟦name:older-sister⟧ soon starts rolling her hips again."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x13b1, end = 0x13c0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x13c0, source_mode = 1, source = "は、すぐにうねうねと腰を動かす。" },
+]
+
+[[entries]]
+id = "f0011l-13ee-connie-nnnh"
+file = "DISKB/F0011L.MES"
+offset = 0x13ee
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・ぅあん・・・。」"
+translation = "[CONNIE] \"...Nnnh...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1404-name-older-sister-s-wetness-runs-from-her"
+target_mode = 2
+source = "⟦name:older-sister⟧の割れ目から愛液が流れる。"
+translation = "⟦name:older-sister⟧'s wetness runs from her slit."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1404, end = 0x1413, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1413, source_mode = 1, source = "の割れ目から愛液が流れる。" },
+]
+
+[[entries]]
+id = "f0011l-1426-it-makes-a-slick-sound-against-me-as"
+file = "DISKB/F0011L.MES"
+offset = 0x1426
+source_mode = 1
+target_mode = 2
+source = "腰を動かすあたしの股間に愛液がくちゅっと音を立てて、気持ちよさを刺激する。"
+translation = "It makes a slick sound against me as I move, sharpening the pleasure."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-145b-name-older-sister-ah-aaah-haaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっ・・・あぁぁ、はぁぁーーん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... aaah... haaah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x145b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x145f, end = 0x146e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x146e, source_mode = 1, source = "】「あっ・・・あぁぁ、はぁぁーーん・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1489-name-older-sister-s-toes-twitch"
+target_mode = 2
+source = "⟦name:older-sister⟧は足先をピクッピクッ、と震わせる。"
+translation = "⟦name:older-sister⟧'s toes twitch."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1489, end = 0x1498, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1498, source_mode = 1, source = "は足先をピクッピクッ、と震わせる。" },
+]
+
+[[composites]]
+id = "f0011l-14af-name-older-sister-i-m-almost"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「私・・・、もぅ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"I'm... almost...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x14af, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x14b3, end = 0x14c2, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x14c2, source_mode = 1, source = "】「私・・・、もぅ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-14d9-connie-aah-harder-name-older-sister"
+target_mode = 2
+source = "【コニー】「あぁん・・・⟦name:older-sister⟧・・・強く・・・・・・。」"
+translation = "[CONNIE] \"Aah... Harder, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x14d9, source_mode = 1, source = "【コニー】「あぁん・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x14e8, end = 0x14f7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x14f7, source_mode = 1, source = "・・・強く・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1509-we-move-our-hips-with-abandon"
+file = "DISKB/F0011L.MES"
+offset = 0x1509
+source_mode = 1
+target_mode = 2
+source = "あたしたちは夢中で腰を使った。"
+translation = "We move our hips with abandon."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-151f-name-older-sister-hah-hah-hah-hah-haaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はっ、はあっ、はっ、はぁっ、はあっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah, hah, hah, hah, haaah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x151f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1523, end = 0x1532, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1532, source_mode = 1, source = "】「はっ、はあっ、はっ、はぁっ、はあっ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-154f-connie-ah-ah-aah-aah"
+file = "DISKB/F0011L.MES"
+offset = 0x154f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あーっ、あーっ・・・あぁ、あぁ、・・・。」"
+translation = "[CONNIE] \"Ah, ah... aah, aah...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-156f-at-the-very-edge-of-climax-name-older"
+target_mode = 2
+source = "あたしも⟦name:older-sister⟧も昇り詰める寸前、ぎりぎりまで耐えていた。"
+translation = "At the very edge of climax, ⟦name:older-sister⟧ and I both hold on."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x156f, source_mode = 1, source = "あたしも" },
+  { kind = "token", token = "name:older-sister", start = 0x1576, end = 0x1585, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1585, source_mode = 1, source = "も昇り詰める寸前、ぎりぎりまで耐えていた。" },
+]
+
+[[composites]]
+id = "f0011l-15a4-name-older-sister-ah-connie-let-me-come"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あぁ・・・コニー・・・、いかせ・・・て・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... Connie... let me... come...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x15a4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x15a8, end = 0x15b7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x15b7, source_mode = 1, source = "】「あぁ・・・コニー・・・、いかせ・・・て・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-15d9-connie-i-will-name-older-sister-hah-ah"
+target_mode = 2
+source = "【コニー】「る・・・⟦name:older-sister⟧・・・、はっ、あっ、あーっ、あっ・・・・・・んっ、んっ・・・。」"
+translation = "[CONNIE] \"I will... ⟦name:older-sister⟧... hah, ah, aaah... nnh, nnh...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x15d9, source_mode = 1, source = "【コニー】「る・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x15e6, end = 0x15f5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x15f5, source_mode = 1, source = "・・・、はっ、あっ、あーっ、あっ・・・・・・んっ、んっ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-161a-our-cries-overlap-as-our-hips-buck-harder"
+file = "DISKB/F0011L.MES"
+offset = 0x161a
+source_mode = 1
+target_mode = 2
+source = "あたしたちの喘ぎ声が重なり、腰が大きく動く。"
+translation = "Our cries overlap as our hips buck harder."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1636-name-older-sister-is-about-to-burst-and"
+target_mode = 2
+source = "⟦name:older-sister⟧の、弾けそうになる感覚を受けたとき、あたしも歯止めがきかなくなった。"
+translation = "⟦name:older-sister⟧ is about to burst, and the moment I feel it, I lose control too."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1636, end = 0x1645, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1645, source_mode = 1, source = "の、弾けそうになる感覚を受けたとき、あたしも歯止めがきかなくなった。" },
+]
+
+[[entries]]
+id = "f0011l-1671-connie-ah-no-i-m-i-m-coming"
+file = "DISKB/F0011L.MES"
+offset = 0x1671
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、ダメッ、いッ、・・・ちゃ・・・う、あぁぁぁぁぁ！！！！」"
+translation = "[CONNIE] \"Ah, no, I'm... I'm coming... Aaaaaah!!\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-169b-name-older-sister-ah-ah-aah-aaah-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あぁ、あぁ、あぁぁ、あぁん、あぁぁぁぁぁ、コニー・・・・・・・・・！！！！！！」"
+translation = "[⟦name:older-sister⟧] \"Ah, ah, aah, aaah, Connie...!!!!\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x169b, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x169f, end = 0x16ae, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x16ae, source_mode = 1, source = "】「あぁ、あぁ、あぁぁ、あぁん、あぁぁぁぁぁ、コニー・・・・・・・・・！！！！！！」" },
+]
+
+[[entries]]
+id = "f0011l-16ef-i-jerk-again-and-again-grinding-myself-against"
+file = "DISKB/F0011L.MES"
+offset = 0x16ef
+source_mode = 1
+target_mode = 2
+source = "びくっ、びくっ、びくっ、とあたしは跳ねて腰を何度もすり付ける。"
+translation = "I jerk again and again, grinding myself against her."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1728-name-older-sister-no-no-no-i-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「嫌、嫌、いや・・・、い・・・いや・・・・・・ぁぁぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"No, no, no... I... no... aaah...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+notes = "The repeated negative at climax remains explicit rather than being converted into a non-lexical cry."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1728, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x172c, end = 0x173b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x173b, source_mode = 1, source = "】「嫌、嫌、いや・・・、い・・・いや・・・・・・ぁぁぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1760-name-older-sister-s-hips-shake-violently"
+target_mode = 2
+source = "⟦name:older-sister⟧の腰が、がくがくがくっ、と大きく震える。"
+translation = "⟦name:older-sister⟧'s hips shake violently."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1760, end = 0x176f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x176f, source_mode = 1, source = "の腰が、がくがくがくっ、と大きく震える。" },
+]
+
+[[entries]]
+id = "f0011l-17c8-connie-ah-ah-haaah-haah-haaaaaah"
+file = "DISKB/F0011L.MES"
+offset = 0x17c8
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あっ、あっ、はぁーーーーっ、はぁーっ、はぁぁぁーーーーーーーっ・・・。」"
+translation = "[CONNIE] \"Ah, ah, haaah, haah, haaaaaah...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-17f7-name-older-sister-haaah-hahhh-nnnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁーっ、ふぅーーーーっ、ふぅぅぅんんんっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Haaah... hahhh... nnnnh...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x17f7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x17fb, end = 0x180a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x180a, source_mode = 1, source = "】「はぁーっ、ふぅーーーーっ、ふぅぅぅんんんっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-182b-name-older-sister-and-i-use-our-hands"
+target_mode = 2
+source = "⟦name:older-sister⟧とあたしはお互いの股間を手で擦り合わせ、余韻を愉しむ。"
+translation = "⟦name:older-sister⟧ and I use our hands to rub our crotches together, enjoying the afterglow."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x182b, end = 0x183a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x183a, source_mode = 1, source = "とあたしはお互いの股間を手で擦り合わせ、余韻を愉しむ。" },
+]
+
+[[entries]]
+id = "f0011l-185f-only-now-does-the-exhaustion-from-moving-my"
+file = "DISKB/F0011L.MES"
+offset = 0x185f
+source_mode = 1
+target_mode = 2
+source = "あたしの方は、今頃になって腰の動きの疲れがどっと襲ってきた。"
+translation = "Only now does the exhaustion from moving my hips hit me all at once."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1887-connie-oh-right"
+file = "DISKB/F0011L.MES"
+offset = 0x1887
+source_mode = 1
+target_mode = 2
+source = "【コニー】（いけない、いけない・・・。）"
+translation = "[CONNIE] (Oh, right...)"
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-18a0-name-older-sister-did-we-get-the-sample"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・・・・、これで・・・・・・採れたの・・・？　コニー。」"
+translation = "[⟦name:older-sister⟧] \"...Did we... get the sample, Connie?\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x18a0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x18a4, end = 0x18b3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x18b3, source_mode = 1, source = "】「・・・・・・・・・、これで・・・・・・採れたの・・・？　コニー。」" },
+]
+
+[[entries]]
+id = "f0011l-18dc-connie-yeah-i-ll-analyze-it"
+file = "DISKB/F0011L.MES"
+offset = 0x18dc
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・うん。調べてみるね・・・。」"
+translation = "[CONNIE] \"...Yeah. I'll analyze it...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-18f9-still-pressed-together-we-wait-quietly-for-the"
+file = "DISKB/F0011L.MES"
+offset = 0x18f9
+source_mode = 1
+target_mode = 2
+source = "あたしたちは体を寄り添わせたまま、結果が出るのをじっと待っていた。"
+translation = "Still pressed together, we wait quietly for the result."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1924-connie-oh-the-result-s-in"
+file = "DISKB/F0011L.MES"
+offset = 0x1924
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ、結果・・・出たよ。」"
+translation = "[CONNIE] \"Oh, the result's in.\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-193d-i-read-the-tiny-display-on-my-ring"
+file = "DISKB/F0011L.MES"
+offset = 0x193d
+source_mode = 1
+target_mode = 2
+source = "あたしは指輪に表示される小さな情報を読み取った。"
+translation = "I read the tiny display on my ring."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1960-connie-your-genes-are-healthy-name-older-sister"
+target_mode = 2
+source = "【コニー】「健康よ。⟦name:older-sister⟧の遺伝子は。強い遺伝子ね。」"
+translation = "[CONNIE] \"Your genes are healthy, ⟦name:older-sister⟧. They're robust.\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1960, source_mode = 1, source = "【コニー】「健康よ。" },
+  { kind = "token", token = "name:older-sister", start = 0x196f, end = 0x197e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x197e, source_mode = 1, source = "の遺伝子は。強い遺伝子ね。」" },
+]
+
+[[composites]]
+id = "f0011l-1991-name-older-sister-i-m-glad-i-can"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「よかった・・・。コニーの役に立てるのね・・・。」"
+translation = "[⟦name:older-sister⟧] \"I'm glad... I can help you, Connie...\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1991, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1995, end = 0x19a4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x19a4, source_mode = 1, source = "】「よかった・・・。コニーの役に立てるのね・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-19c5-name-older-sister-sighs-with-relief"
+target_mode = 2
+source = "⟦name:older-sister⟧はホッと胸を撫で下ろした。"
+translation = "⟦name:older-sister⟧ sighs with relief."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x19c5, end = 0x19d4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x19d4, source_mode = 1, source = "はホッと胸を撫で下ろした。" },
+]
+
+[[entries]]
+id = "f0011l-19e8-connie-i-should-get-back-soon"
+file = "DISKB/F0011L.MES"
+offset = 0x19e8
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・そろそろ戻らないと・・・。」"
+translation = "[CONNIE] \"...I should get back soon...\""
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1a05-i-climb-off-the-bed-and-get-dressed"
+file = "DISKB/F0011L.MES"
+offset = 0x1a05
+source_mode = 1
+target_mode = 2
+source = "あたしはベッドから降りて服を着た。"
+translation = "I climb off the bed and get dressed."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1a1e-name-older-sister-hee-hee-i-m-happy"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「うふふふ・・・。コニーと秘密を持てたなんて・・・、なんだか嬉しい。」"
+translation = "[⟦name:older-sister⟧] \"Hee-hee... I'm happy that you and I have a secret now, Connie.\""
+speaker = "name-slot:older-sister"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1a1e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1a22, end = 0x1a31, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a31, source_mode = 1, source = "】「うふふふ・・・。コニーと秘密を持てたなんて・・・、なんだか嬉しい。」" },
+]
+
+[[composites]]
+id = "f0011l-1a5b-name-older-sister-says-it-happily"
+target_mode = 2
+source = "⟦name:older-sister⟧は嬉しそうに言う。"
+translation = "⟦name:older-sister⟧ says it happily."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1a5b, end = 0x1a6a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a6a, source_mode = 1, source = "は嬉しそうに言う。" },
+]
+
+[[composites]]
+id = "f0011l-1a78-name-older-sister-s-laugh-sounds-like-name"
+target_mode = 2
+source = "⟦name:older-sister⟧の笑い声は⟦name:mother⟧に似ている。"
+translation = "⟦name:older-sister⟧'s laugh sounds like ⟦name:mother⟧'s."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1a78, end = 0x1a87, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1a87, source_mode = 1, source = "の笑い声は" },
+  { kind = "token", token = "name:mother", start = 0x1a90, end = 0x1a9f, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1a9f, source_mode = 1, source = "に似ている。" },
+]
+
+[[entries]]
+id = "f0011l-1aab-connie-they-really-are-mother-and-daughter-if"
+file = "DISKB/F0011L.MES"
+offset = 0x1aab
+source_mode = 1
+target_mode = 2
+source = "【コニー】（親子なんだなぁ・・・。あたしも母親から産まれていれば・・・・・・・・・。）"
+translation = "[CONNIE] (They really are mother and daughter... If only I'd been born from a mother too...)"
+speaker = "コニー"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1b1f-envious-of-name-mother-and-name-older-sister"
+target_mode = 2
+source = "あたしは⟦name:mother⟧と⟦name:older-sister⟧を羨ましく思いながら部屋を後にした。"
+translation = "Envious of ⟦name:mother⟧ and ⟦name:older-sister⟧, I leave the room."
+speaker = "Connie"
+context = "Assertive branch: Connie takes the lead, Ruri voices limits, and they collect and analyze Ruri's genetic sample."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1b1f, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:mother", start = 0x1b26, end = 0x1b35, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1b35, source_mode = 1, source = "と" },
+  { kind = "token", token = "name:older-sister", start = 0x1b39, end = 0x1b48, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1b48, source_mode = 1, source = "を羨ましく思いながら部屋を後にした。" },
+]
+
+[[composites]]
+id = "f0011l-1be9-i-nuzzle-against-name-older-sister-s-breast"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の胸にほおずりをする。"
+translation = "I nuzzle against ⟦name:older-sister⟧'s breast."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1be9, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x1bf0, end = 0x1bff, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1bff, source_mode = 1, source = "の胸にほおずりをする。" },
+]
+
+[[composites]]
+id = "f0011l-1c10-name-older-sister-ah-nnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・ぁん・・・ん。」"
+translation = "[⟦name:older-sister⟧] \"...Ah... nnh.\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1c10, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1c14, end = 0x1c23, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1c23, source_mode = 1, source = "】「・・・ぁん・・・ん。」" },
+]
+
+[[composites]]
+id = "f0011l-1c35-name-older-sister-squirms-as-if-it-tickles"
+target_mode = 2
+source = "⟦name:older-sister⟧はくすぐったそうにする。"
+translation = "⟦name:older-sister⟧ squirms as if it tickles."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1c35, end = 0x1c44, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1c44, source_mode = 1, source = "はくすぐったそうにする。" },
+]
+
+[[entries]]
+id = "f0011l-1c5e-connie-you-smell-nice"
+file = "DISKB/F0011L.MES"
+offset = 0x1c5e
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・いい匂いがするね。」"
+translation = "[CONNIE] \"...You smell nice.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1c77-when-i-undress-name-older-sister-the-scent"
+target_mode = 2
+source = "服を脱がせると、⟦name:older-sister⟧の身体から石鹸と、コロンの混ざった匂いが拡がる。"
+translation = "When I undress ⟦name:older-sister⟧, the scent of soap and cologne rises from her body."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1c77, source_mode = 1, source = "服を脱がせると、" },
+  { kind = "token", token = "name:older-sister", start = 0x1c82, end = 0x1c91, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1c91, source_mode = 1, source = "の身体から石鹸と、コロンの混ざった匂いが拡がる。" },
+]
+
+[[composites]]
+id = "f0011l-1cb4-name-older-sister"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1cb4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1cb8, end = 0x1cc7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1cc7, source_mode = 1, source = "】「・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1cd6-name-older-sister-blushes-as-if-eagerly-waiting"
+target_mode = 2
+source = "⟦name:older-sister⟧はあたしの次の行動を待ち望んでいるかのように、ほっぺを赤くする。"
+translation = "⟦name:older-sister⟧ blushes, as if eagerly waiting to see what I'll do next."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1cd6, end = 0x1ce5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1ce5, source_mode = 1, source = "はあたしの次の行動を待ち望んでいるかのように、ほっぺを赤くする。" },
+]
+
+[[composites]]
+id = "f0011l-1d19-name-older-sister-s-breasts"
+target_mode = 2
+source = "⟦name:older-sister⟧の胸・・・。"
+translation = "⟦name:older-sister⟧'s breasts..."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1d19, end = 0x1d28, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1d28, source_mode = 1, source = "の胸・・・。" },
+]
+
+[[entries]]
+id = "f0011l-1d33-connie-they-smell-a-little-like-milk"
+file = "DISKB/F0011L.MES"
+offset = 0x1d33
+source_mode = 1
+target_mode = 2
+source = "【コニー】（ミルクの匂いが少し・・・。）"
+translation = "[CONNIE] (They smell a little like milk...)"
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1d4f-i-knead-one-slowly-then-kiss-it"
+file = "DISKB/F0011L.MES"
+offset = 0x1d4f
+source_mode = 1
+target_mode = 2
+source = "ゆっくりと揉む。そして胸にキス。"
+translation = "I knead one slowly, then kiss it."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1d65-name-older-sister-nnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あんっ。」"
+translation = "[⟦name:older-sister⟧] \"Nnh.\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1d65, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1d69, end = 0x1d78, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1d78, source_mode = 1, source = "】「あんっ。」" },
+]
+
+[[composites]]
+id = "f0011l-1d84-name-older-sister-s-breast-makes-wet-sounds"
+target_mode = 2
+source = "⟦name:older-sister⟧の胸をちゅぱっちゅぱっと吸う。"
+translation = "⟦name:older-sister⟧'s breast makes wet sounds under my lips."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1d84, end = 0x1d93, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1d93, source_mode = 1, source = "の胸をちゅぱっちゅぱっと吸う。" },
+]
+
+[[entries]]
+id = "f0011l-1da7-she-twitches"
+file = "DISKB/F0011L.MES"
+offset = 0x1da7
+source_mode = 1
+target_mode = 2
+source = "ぴくっ。"
+translation = "She twitches."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1db0-name-older-sister-ah-there-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・そこ・・・・・・、いや・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... there... no...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1db0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1db4, end = 0x1dc3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1dc3, source_mode = 1, source = "】「あ・・・そこ・・・・・・、いや・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1de1-connie-mmm-you-re-getting-hard"
+file = "DISKB/F0011L.MES"
+offset = 0x1de1
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んふ・・・。固くなってるよ・・・。」"
+translation = "[CONNIE] \"Mmm... You're getting hard...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1dff-name-older-sister-no-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「いやいや・・・。」"
+translation = "[⟦name:older-sister⟧] \"No, no...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1dff, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1e03, end = 0x1e12, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1e12, source_mode = 1, source = "】「いやいや・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1e22-did-she-inherit-this-lustrous-skin-from-name"
+target_mode = 2
+source = "艶やかな肌は、⟦name:mother⟧ゆずりか。"
+translation = "Did she inherit this lustrous skin from ⟦name:mother⟧?"
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1e22, source_mode = 1, source = "艶やかな肌は、" },
+  { kind = "token", token = "name:mother", start = 0x1e2e, end = 0x1e3d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1e3d, source_mode = 1, source = "ゆずりか。" },
+]
+
+[[entries]]
+id = "f0011l-1e47-her-firm-breast-bounces-beautifully-when-i-lick"
+file = "DISKB/F0011L.MES"
+offset = 0x1e47
+source_mode = 1
+target_mode = 2
+source = "張りのある胸は、あたしが舐めると気持ち良さそうに揺れる。"
+translation = "Her firm breast bounces beautifully when I lick it."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1e83-connie-what-about-her-navel"
+file = "DISKB/F0011L.MES"
+offset = 0x1e83
+source_mode = 1
+target_mode = 2
+source = "【コニー】（へそはどうかな・・・。）"
+translation = "[CONNIE] (What about her navel...?)"
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1e9a-i-put-my-mouth-to-the-neat-hollow"
+file = "DISKB/F0011L.MES"
+offset = 0x1e9a
+source_mode = 1
+target_mode = 2
+source = "きれいにへこんだへその部分に口をつける。"
+translation = "I put my mouth to the neat hollow of her navel."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1eb4-name-older-sister-ah-it-tickles"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・ン、くすぐ・・・ったぃ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... It tickles...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1eb4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1eb8, end = 0x1ec7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1ec7, source_mode = 1, source = "】「あ・・・ン、くすぐ・・・ったぃ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1ee3-she-says-that-but-doesn-t-seem-entirely"
+file = "DISKB/F0011L.MES"
+offset = 0x1ee3
+source_mode = 1
+target_mode = 2
+source = "そう言いながら、まんざらでもなさそうだ。"
+translation = "She says that, but doesn't seem entirely displeased."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1efc-her-navel-seems-to-be-another-weak-spot"
+file = "DISKB/F0011L.MES"
+offset = 0x1efc
+source_mode = 1
+target_mode = 2
+source = "へその周辺が弱いみたい。"
+translation = "Her navel seems to be another weak spot."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-1f0f-lick"
+file = "DISKB/F0011L.MES"
+offset = 0x1f0f
+source_mode = 1
+target_mode = 2
+source = "ぺろ。"
+translation = "Lick."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1f17-name-older-sister-eek-hee-hee-aah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「きゃん！　ぅふふ・・・あぁん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Eek! Hee-hee... aah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1f17, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1f1b, end = 0x1f2a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1f2a, source_mode = 1, source = "】「きゃん！　ぅふふ・・・あぁん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1f44-i-trace-my-tongue-down-to-her-pubic"
+file = "DISKB/F0011L.MES"
+offset = 0x1f44
+source_mode = 1
+target_mode = 2
+source = "そのまま恥毛まで舌でなぞる。"
+translation = "I trace my tongue down to her pubic hair."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1f59-name-older-sister-ah-aaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あぁっ・・・ぁぁんんん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... aaah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1f59, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1f5d, end = 0x1f6c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1f6c, source_mode = 1, source = "】「あぁっ・・・ぁぁんんん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-1f83-i-deliberately-lick-around-her-slit-without-touching"
+file = "DISKB/F0011L.MES"
+offset = 0x1f83
+source_mode = 1
+target_mode = 2
+source = "あえて割れ目を外して周りを舐める。焦らすために。"
+translation = "I deliberately lick around her slit without touching it, making her wait."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-1fa3-name-older-sister-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・ふぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"...Hah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1fa3, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1fa7, end = 0x1fb6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1fb6, source_mode = 1, source = "】「・・・ふぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-1fc7-name-older-sister-twists-her-hips-and-lets"
+target_mode = 2
+source = "⟦name:older-sister⟧の腰がうねっ、とひねって甘い声が聞こえる。"
+translation = "⟦name:older-sister⟧ twists her hips and lets out a sweet cry."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x1fc7, end = 0x1fd6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1fd6, source_mode = 1, source = "の腰がうねっ、とひねって甘い声が聞こえる。" },
+]
+
+[[composites]]
+id = "f0011l-1ff1-name-older-sister-hah-aaah-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はっ・・・あぁぁん・・・、コニー・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah... aaah... Connie...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x1ff1, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x1ff5, end = 0x2004, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2004, source_mode = 1, source = "】「はっ・・・あぁぁん・・・、コニー・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-202c-i-keep-kissing-name-older-sister-as-i"
+target_mode = 2
+source = "キスをしながら下半身を攻めた。あたしの指は⟦name:older-sister⟧の割れ目を撫でる。"
+translation = "I keep kissing ⟦name:older-sister⟧ as I tease her lower body, stroking her slit with my fingers."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x202c, source_mode = 1, source = "キスをしながら下半身を攻めた。あたしの指は" },
+  { kind = "token", token = "name:older-sister", start = 0x2047, end = 0x2056, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2056, source_mode = 1, source = "の割れ目を撫でる。" },
+]
+
+[[composites]]
+id = "f0011l-2064-name-older-sister-ah-nnh-nnnnnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・んっ、んんんんんんっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... nnh, nnnnnnh...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2064, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2068, end = 0x2077, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2077, source_mode = 1, source = "】「あ・・・んっ、んんんんんんっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2091-name-older-sister-tries-to-resist-but-can"
+target_mode = 2
+source = "⟦name:older-sister⟧は抵抗しようとしたが、思うように腕を動かせないようだ。"
+translation = "⟦name:older-sister⟧ tries to resist, but can't seem to move her arms properly."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+notes = "The source says Ruri tries to resist and cannot move her arms as intended; the English preserves that action without euphemism."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2091, end = 0x20a0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x20a0, source_mode = 1, source = "は抵抗しようとしたが、思うように腕を動かせないようだ。" },
+]
+
+[[composites]]
+id = "f0011l-20c2-i-suck-on-name-older-sister-s-tongue"
+target_mode = 2
+source = "喘ぐ⟦name:older-sister⟧の舌をキスで吸う。"
+translation = "I suck on ⟦name:older-sister⟧'s tongue as she gasps."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x20c2, source_mode = 1, source = "喘ぐ" },
+  { kind = "token", token = "name:older-sister", start = 0x20c7, end = 0x20d6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x20d6, source_mode = 1, source = "の舌をキスで吸う。" },
+]
+
+[[composites]]
+id = "f0011l-20e4-name-older-sister-mmph-nnnnh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あんむ・・・・・・んんんんっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Mmph... nnnnh...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x20e4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x20e8, end = 0x20f7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x20f7, source_mode = 1, source = "】「あんむ・・・・・・んんんんっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2111-i-suck-name-older-sister-s-tongue-tug"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の舌を吸って引っ張り、噛む。"
+translation = "I suck ⟦name:older-sister⟧'s tongue, tug it between my lips, and bite it."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2111, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x2118, end = 0x2127, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2127, source_mode = 1, source = "の舌を吸って引っ張り、噛む。" },
+]
+
+[[composites]]
+id = "f0011l-213a-name-older-sister-nnnh-mmph"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「んうぅん・・・、んんんく・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnnh... mmph...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x213a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x213e, end = 0x214d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x214d, source_mode = 1, source = "】「んうぅん・・・、んんんく・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-2165-connie-mmm-hah"
+file = "DISKB/F0011L.MES"
+offset = 0x2165
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ん・・・・・・はふ・・・。」"
+translation = "[CONNIE] \"Mmm... hah...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-217e-name-older-sister-nnh-nnh-mmm"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「んっ・・・、んっ・・・ん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnh... nnh... mmm...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x217e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2182, end = 0x2191, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2191, source_mode = 1, source = "】「んっ・・・、んっ・・・ん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-21a9-connie-ah-mmm"
+file = "DISKB/F0011L.MES"
+offset = 0x21a9
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あ・・・んんっ・・・。」"
+translation = "[CONNIE] \"Ah... mmm...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-21c0-name-older-sister-haaah-aah-incredible"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁぁぁぁ・・・、あぁん・・・凄い・・・。」"
+translation = "[⟦name:older-sister⟧] \"Haaah... aah... incredible...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x21c0, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x21c4, end = 0x21d3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x21d3, source_mode = 1, source = "】「はぁぁぁぁ・・・、あぁん・・・凄い・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-21f1-name-older-sister-says-it-with-a-satisfied"
+target_mode = 2
+source = "⟦name:older-sister⟧は満足そうに言う。"
+translation = "⟦name:older-sister⟧ says it with a satisfied look."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x21f1, end = 0x2200, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2200, source_mode = 1, source = "は満足そうに言う。" },
+]
+
+[[composites]]
+id = "f0011l-2229-name-older-sister-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニー・・・。」"
+translation = "[⟦name:older-sister⟧] \"Connie...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2229, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x222d, end = 0x223c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x223c, source_mode = 1, source = "】「コニー・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-224b-name-older-sister-goes-limp-worn-out-from"
+target_mode = 2
+source = "⟦name:older-sister⟧は２箇所を攻められて、ぐったりとなった。"
+translation = "⟦name:older-sister⟧ goes limp, worn out from being teased in two places at once."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x224b, end = 0x225a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x225a, source_mode = 1, source = "は２箇所を攻められて、ぐったりとなった。" },
+]
+
+[[entries]]
+id = "f0011l-2277-her-slit-is-damp-from-all-my-touching"
+file = "DISKB/F0011L.MES"
+offset = 0x2277
+source_mode = 1
+target_mode = 2
+source = "割れ目はいじっていたせいか、しっとりと濡れている。"
+translation = "Her slit is damp from all my touching."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-229f-as-i-lick-name-older-sister-s-breast"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の乳房を舐めながら、乳房から脇へ、肩へと指を這わせる。"
+translation = "As I lick ⟦name:older-sister⟧'s breast, I trail my fingers from it to her underarm and shoulder."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x229f, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x22a6, end = 0x22b5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x22b5, source_mode = 1, source = "の乳房を舐めながら、乳房から脇へ、肩へと指を這わせる。" },
+]
+
+[[composites]]
+id = "f0011l-22d8-name-older-sister-ah-nnnh-hahhh"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あぅ・・・ぅーん・・・。んふぅー・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... nnnh... hahhh...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x22d8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x22dc, end = 0x22eb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x22eb, source_mode = 1, source = "】「あぅ・・・ぅーん・・・。んふぅー・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2307-name-older-sister-twitches-unconsciously-plainly-feeling-everything"
+target_mode = 2
+source = "⟦name:older-sister⟧はピクピクと無意識に身体を動かし、感じてくれている。"
+translation = "⟦name:older-sister⟧ twitches unconsciously, plainly feeling everything I do."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2307, end = 0x2316, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2316, source_mode = 1, source = "はピクピクと無意識に身体を動かし、感じてくれている。" },
+]
+
+[[entries]]
+id = "f0011l-2338-connie-breasts-spilling-out-of-your-clothes-look"
+file = "DISKB/F0011L.MES"
+offset = 0x2338
+source_mode = 1
+target_mode = 2
+source = "【コニー】「服からはみ出るおっぱいってエッチだよね。」"
+translation = "[CONNIE] \"Breasts spilling out of your clothes look so naughty.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-235a-i-toy-with-name-older-sister-s-half"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の脱ぎかけの上着を玩びながら言う。"
+translation = "I toy with ⟦name:older-sister⟧'s half-removed top as I say it."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x235a, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x2361, end = 0x2370, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2370, source_mode = 1, source = "の脱ぎかけの上着を玩びながら言う。" },
+]
+
+[[entries]]
+id = "f0011l-2388-i-deliberately-left-her-shirt-on-because-it"
+file = "DISKB/F0011L.MES"
+offset = 0x2388
+source_mode = 1
+target_mode = 2
+source = "こういうスタイルがエッチそうだから、わざとシャツを残しておいた。"
+translation = "I deliberately left her shirt on because it makes her look even sexier."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-23b6-name-older-sister-ah-take-all-of-it"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「は・・・あ・・・んん、全部・・・脱が・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... Take... all of it... off...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x23b6, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x23ba, end = 0x23c9, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x23c9, source_mode = 1, source = "】「は・・・あ・・・んん、全部・・・脱が・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-23ea-connie-huh-what-was-that-i-can-t"
+file = "DISKB/F0011L.MES"
+offset = 0x23ea
+source_mode = 1
+target_mode = 2
+source = "【コニー】「え。何？　聞こえないよぉ？」"
+translation = "[CONNIE] \"Huh? What was that? I can't hear you.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2406-i-answer-while-sucking-on-her-exposed-breast"
+file = "DISKB/F0011L.MES"
+offset = 0x2406
+source_mode = 1
+target_mode = 2
+source = "ぺろん、とはみ出た乳房をしゃぶりながら答える。"
+translation = "I answer while sucking on her exposed breast."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2423-name-older-sister-nnh-ah-aah-hah-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「んっ、あっ、あん！　あふっ・・・ふぅぅん、だめえ・・・っ。」"
+translation = "[⟦name:older-sister⟧] \"Nnh, ah, aah! Hah... no...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2423, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2427, end = 0x2436, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2436, source_mode = 1, source = "】「んっ、あっ、あん！　あふっ・・・ふぅぅん、だめえ・・・っ。」" },
+]
+
+[[entries]]
+id = "f0011l-245b-connie-hee-hee-squish-squish"
+file = "DISKB/F0011L.MES"
+offset = 0x245b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「うふうふ、むにむにっ！」"
+translation = "[CONNIE] \"Hee-hee, squish, squish!\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2472-i-squeeze-her-breast-between-my-fingers-pressing"
+file = "DISKB/F0011L.MES"
+offset = 0x2472
+source_mode = 1
+target_mode = 2
+source = "乳房を指で挟んで揉む。横を押すので乳房は縦に膨らむ。"
+translation = "I squeeze her breast between my fingers, pressing from the sides until it bulges upward."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2496-name-older-sister-ah-aaah-i-ve-never"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・あぁぁ・・・ぁぁぁぁ・・・、こんな気持ち初め・・・て。・・・ああっ。」"
+translation = "[⟦name:older-sister⟧] \"Ah... aaah... I've never felt anything like this... Ah!\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2496, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x249a, end = 0x24a9, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x24a9, source_mode = 1, source = "】「あ・・・あぁぁ・・・ぁぁぁぁ・・・、こんな気持ち初め・・・て。・・・ああっ。」" },
+]
+
+[[composites]]
+id = "f0011l-24d7-name-older-sister-twitches-and-gasps-with-pleasure"
+target_mode = 2
+source = "⟦name:older-sister⟧は快感にぴくぴくと喘ぐ。"
+translation = "⟦name:older-sister⟧ twitches and gasps with pleasure."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x24d7, end = 0x24e6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x24e6, source_mode = 1, source = "は快感にぴくぴくと喘ぐ。" },
+]
+
+[[entries]]
+id = "f0011l-24f8-connie-i-want-to-feel-good-soon-too"
+file = "DISKB/F0011L.MES"
+offset = 0x24f8
+source_mode = 1
+target_mode = 2
+source = "【コニー】（あたしもそろそろ感じたいな・・・。）"
+translation = "[CONNIE] (I want to feel good soon too...)"
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2515-connie-i-ll-take-that-off-for-you"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・脱がせてあげ・・・る・・・。」"
+translation = "[CONNIE] \"I'll take that off for you, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2515, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x251e, end = 0x252d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x252d, source_mode = 1, source = "・・・脱がせてあげ・・・る・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-255a-i-pop-open-the-last-button"
+file = "DISKB/F0011L.MES"
+offset = 0x255a
+source_mode = 1
+target_mode = 2
+source = "ぷちっ、と残ったボタンを外す。"
+translation = "I pop open the last button."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2572-connie-hee-hee-arms-up-name-older-sister"
+target_mode = 2
+source = "【コニー】「うふふー。⟦name:older-sister⟧、腕を上げて～、ばんざーいするの。」"
+translation = "[CONNIE] \"Hee-hee. Arms up, ⟦name:older-sister⟧. Reach for the sky.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2572, source_mode = 1, source = "【コニー】「うふふー。" },
+  { kind = "token", token = "name:older-sister", start = 0x2580, end = 0x258f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x258f, source_mode = 1, source = "、腕を上げて～、ばんざーいするの。」" },
+]
+
+[[entries]]
+id = "f0011l-25a6-i-repeat-what-dr-kanzaki-used-to-say"
+file = "DISKB/F0011L.MES"
+offset = 0x25a6
+source_mode = 1
+target_mode = 2
+source = "あたしが子供の頃、神崎博士に言われた同じ事を言ってみる。"
+translation = "I repeat what Dr. Kanzaki used to say to me when I was little."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-25ce-name-older-sister-connie"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニー・・・。」"
+translation = "[⟦name:older-sister⟧] \"Connie...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x25ce, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x25d2, end = 0x25e1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x25e1, source_mode = 1, source = "】「コニー・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-25f0-name-older-sister-obediently-raises-her-arms"
+target_mode = 2
+source = "⟦name:older-sister⟧は素直に腕を上げる。"
+translation = "⟦name:older-sister⟧ obediently raises her arms."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x25f0, end = 0x25ff, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x25ff, source_mode = 1, source = "は素直に腕を上げる。" },
+]
+
+[[entries]]
+id = "f0011l-2610-connie-there-we-go-good-girl"
+file = "DISKB/F0011L.MES"
+offset = 0x2610
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・よいしょっ。・・・はい、よくできました。」"
+translation = "[CONNIE] \"...There we go. Good girl.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2633-name-older-sister-looks-dreamy-waiting-for-what"
+target_mode = 2
+source = "⟦name:older-sister⟧は次を期待して、うっとりとしている。"
+translation = "⟦name:older-sister⟧ looks dreamy, waiting for what comes next."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2633, end = 0x2642, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2642, source_mode = 1, source = "は次を期待して、うっとりとしている。" },
+]
+
+[[entries]]
+id = "f0011l-265b-connie-now-then"
+file = "DISKB/F0011L.MES"
+offset = 0x265b
+source_mode = 1
+target_mode = 2
+source = "【コニー】「それじゃあ・・・。」"
+translation = "[CONNIE] \"Now then...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2670-name-older-sister-s-legs-part-under-my"
+target_mode = 2
+source = "⟦name:older-sister⟧の脚を開かせる。"
+translation = "⟦name:older-sister⟧'s legs part under my hands."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2670, end = 0x267f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x267f, source_mode = 1, source = "の脚を開かせる。" },
+]
+
+[[composites]]
+id = "f0011l-268d-name-older-sister-ah-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あッ！　嫌ぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah! No...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x268d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2691, end = 0x26a0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x26a0, source_mode = 1, source = "】「あッ！　嫌ぁ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-26b2-connie-hey-hold-still"
+file = "DISKB/F0011L.MES"
+offset = 0x26b2
+source_mode = 1
+target_mode = 2
+source = "【コニー】「こら、おとなしくしなさい！」"
+translation = "[CONNIE] \"Hey, hold still!\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-26cb-i-rub-myself-against-name-older-sister"
+target_mode = 2
+source = "あたしの股間を⟦name:older-sister⟧の股間に擦り付けた。"
+translation = "I rub myself against ⟦name:older-sister⟧."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x26cb, source_mode = 1, source = "あたしの股間を" },
+  { kind = "token", token = "name:older-sister", start = 0x26d5, end = 0x26e4, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x26e4, source_mode = 1, source = "の股間に擦り付けた。" },
+]
+
+[[composites]]
+id = "f0011l-279c-name-older-sister-ah-aaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・あぁぁぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... aaah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x279c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x27a0, end = 0x27af, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x27af, source_mode = 1, source = "】「あ・・・あぁぁぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-27c3-connie-mmm-press-against-me-name-older-sister"
+target_mode = 2
+source = "【コニー】「んっ・・・。押し付けて・・・⟦name:older-sister⟧。」"
+translation = "[CONNIE] \"Mmm... Press against me, ⟦name:older-sister⟧.\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x27c3, source_mode = 1, source = "【コニー】「んっ・・・。押し付けて・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x27da, end = 0x27e9, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x27e9, source_mode = 1, source = "。」" },
+]
+
+[[composites]]
+id = "f0011l-27f0-name-older-sister-hesitantly-presses-back"
+target_mode = 2
+source = "⟦name:older-sister⟧もためらいがちに押し付けてくる。"
+translation = "⟦name:older-sister⟧ hesitantly presses back."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x27f0, end = 0x27ff, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x27ff, source_mode = 1, source = "もためらいがちに押し付けてくる。" },
+]
+
+[[composites]]
+id = "f0011l-2814-name-older-sister-n-no-aaah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「い・・・ぁ・・・・・・、あぁぁぁ・・・。」"
+translation = "[⟦name:older-sister⟧] \"N-no... aaah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2814, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2818, end = 0x2827, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2827, source_mode = 1, source = "】「い・・・ぁ・・・・・・、あぁぁぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2843-once-she-finds-the-rhythm-name-older-sister"
+target_mode = 2
+source = "動くコツがわかったのか、⟦name:older-sister⟧はすりすりと絶妙な動かし方をする。"
+translation = "Once she finds the rhythm, ⟦name:older-sister⟧ rubs against me with exquisite precision."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2843, source_mode = 1, source = "動くコツがわかったのか、" },
+  { kind = "token", token = "name:older-sister", start = 0x2853, end = 0x2862, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2862, source_mode = 1, source = "はすりすりと絶妙な動かし方をする。" },
+]
+
+[[composites]]
+id = "f0011l-287b-connie-aah-yes-like-that-name-older-sister"
+target_mode = 2
+source = "【コニー】「ぁー、はあぁーーぁぁ・・・、そう・・・⟦name:older-sister⟧・・・。」"
+translation = "[CONNIE] \"Aah... yes... like that, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x287b, source_mode = 1, source = "【コニー】「ぁー、はあぁーーぁぁ・・・、そう・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x2897, end = 0x28a6, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x28a6, source_mode = 1, source = "・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-28b0-when-i-bring-name-older-sister-over-my"
+target_mode = 2
+source = "あたしの左脚に、⟦name:older-sister⟧が乗るようにすると強い刺激が来た。"
+translation = "When I bring ⟦name:older-sister⟧ over my left thigh, the stimulation grows stronger."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x28b0, source_mode = 1, source = "あたしの左脚に、" },
+  { kind = "token", token = "name:older-sister", start = 0x28bd, end = 0x28cc, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x28cc, source_mode = 1, source = "が乗るようにすると強い刺激が来た。" },
+]
+
+[[composites]]
+id = "f0011l-28e3-more-of-our-bodies-meet-and-name-older"
+target_mode = 2
+source = "くっついてる面積が大きくなり、⟦name:older-sister⟧の秘唇があたしのと重なる。"
+translation = "More of our bodies meet, and ⟦name:older-sister⟧'s labia press against mine."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x28e3, source_mode = 1, source = "くっついてる面積が大きくなり、" },
+  { kind = "token", token = "name:older-sister", start = 0x28f6, end = 0x2905, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2905, source_mode = 1, source = "の秘唇があたしのと重なる。" },
+]
+
+[[entries]]
+id = "f0011l-2918-connie-aaaah-hah-ah"
+file = "DISKB/F0011L.MES"
+offset = 0x2918
+source_mode = 1
+target_mode = 2
+source = "【コニー】「はああんんんっ・・・、くふぅ・・・ああ・・・ぁ・・・。"
+translation = "[CONNIE] \"Aaaah... hah... ah...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-293e-name-older-sister-ah-ah-so-hot"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あんあん・・・、熱ぅい・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah, ah... so hot...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x293e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2942, end = 0x2951, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2951, source_mode = 1, source = "】「あんあん・・・、熱ぅい・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-296c-our-wetness-makes-slick-sounds-as-we-rub"
+file = "DISKB/F0011L.MES"
+offset = 0x296c
+source_mode = 1
+target_mode = 2
+source = "くちゅくちゅと擦れると、愛液が音をたてる。"
+translation = "Our wetness makes slick sounds as we rub together."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2987-name-older-sister-s-wetness-mixes-with-mine"
+target_mode = 2
+source = "⟦name:older-sister⟧の愛液があたしの愛液と混ざってる。"
+translation = "⟦name:older-sister⟧'s wetness mixes with mine."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2987, end = 0x2996, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2996, source_mode = 1, source = "の愛液があたしの愛液と混ざってる。" },
+]
+
+[[composites]]
+id = "f0011l-29ce-name-older-sister-circles-her-hips"
+target_mode = 2
+source = "⟦name:older-sister⟧がぐるっと腰を回す。"
+translation = "⟦name:older-sister⟧ circles her hips."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x29ce, end = 0x29dd, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x29dd, source_mode = 1, source = "がぐるっと腰を回す。" },
+]
+
+[[entries]]
+id = "f0011l-29ed-connie-ah-haaah"
+file = "DISKB/F0011L.MES"
+offset = 0x29ed
+source_mode = 1
+target_mode = 2
+source = "【コニー】「ぁッ・・・かはぁっ・・・。」"
+translation = "[CONNIE] \"Ah... haaah...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2a06-name-older-sister-s-slit-presses-against-me"
+target_mode = 2
+source = "⟦name:older-sister⟧の割れ目に押されて、あたしの秘唇が引っ張られ、割れ目が拡がるような感じ。"
+translation = "⟦name:older-sister⟧'s slit presses against me, tugging my labia and making me feel spread open."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2a06, end = 0x2a15, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2a15, source_mode = 1, source = "の割れ目に押されて、あたしの秘唇が引っ張られ、割れ目が拡がるような感じ。" },
+]
+
+[[composites]]
+id = "f0011l-2a3f-name-older-sister-ah-hah-hah-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・はぁっはぁっ、はぁっ、はぁっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... hah, hah, hah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2a3f, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2a43, end = 0x2a52, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2a52, source_mode = 1, source = "】「あ・・・はぁっはぁっ、はぁっ、はぁっ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-2a70-connie-aaaah-aaah"
+file = "DISKB/F0011L.MES"
+offset = 0x2a70
+source_mode = 1
+target_mode = 2
+source = "【コニー】「あぁぁぁ・・・、あぁーーー・・・。」"
+translation = "[CONNIE] \"Aaaah... aaah...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2a8d-losing-myself-i-grind-against-her"
+file = "DISKB/F0011L.MES"
+offset = 0x2a8d
+source_mode = 1
+target_mode = 2
+source = "我を忘れて、あたしは腰を擦りつける。"
+translation = "Losing myself, I grind against her."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2aaf-i-move-my-hips-in-slow-broad-circles"
+file = "DISKB/F0011L.MES"
+offset = 0x2aaf
+source_mode = 1
+target_mode = 2
+source = "ゆっくりと大きく腰を動かす。"
+translation = "I move my hips in slow, broad circles."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2ac2-name-older-sister-aah-hah-hah-hah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あぁ・・・、はあ、はあ、はあ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Aah... hah, hah, hah...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2ac2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2ac6, end = 0x2ad5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2ad5, source_mode = 1, source = "】「あぁ・・・、はあ、はあ、はあ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2aef-connie-nnh-name-older-sister-feel-it-more"
+target_mode = 2
+source = "【コニー】「んんっ、⟦name:older-sister⟧・・・、もっと・・・感じ・・・て・・・。」"
+translation = "[CONNIE] \"Nnh, ⟦name:older-sister⟧... Feel it... more...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2aef, source_mode = 1, source = "【コニー】「んんっ、" },
+  { kind = "token", token = "name:older-sister", start = 0x2afc, end = 0x2b0b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2b0b, source_mode = 1, source = "・・・、もっと・・・感じ・・・て・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-2b25-i-thrust-my-hips-against-her-again-and"
+file = "DISKB/F0011L.MES"
+offset = 0x2b25
+source_mode = 1
+target_mode = 2
+source = "ぐいっぐいっ、と腰を突き出す。"
+translation = "I thrust my hips against her again and again."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2b3a-name-older-sister-ah-i-can-t-take"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ひっ・・・。・・・も・・・う・・・・・・ダメ・・・。私・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... I... can't take any more...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2b3a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2b3e, end = 0x2b4d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2b4d, source_mode = 1, source = "】「ひっ・・・。・・・も・・・う・・・・・・ダメ・・・。私・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2b75-connie-no-not-yet-name-older-sister"
+target_mode = 2
+source = "【コニー】「やあっ、まだ、だめ～・・・⟦name:older-sister⟧・・・ぁ・・・。」"
+translation = "[CONNIE] \"No, not yet, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2b75, source_mode = 1, source = "【コニー】「やあっ、まだ、だめ～・・・" },
+  { kind = "token", token = "name:older-sister", start = 0x2b8b, end = 0x2b9a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2b9a, source_mode = 1, source = "・・・ぁ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2ba8-as-i-slow-my-hips-name-older-sister"
+target_mode = 2
+source = "あたしが腰をゆっくりと動かすと、⟦name:older-sister⟧は昇り詰めようと、しゅっしゅっと動かす。"
+translation = "As I slow my hips, ⟦name:older-sister⟧ moves faster, trying to reach the peak."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2ba8, source_mode = 1, source = "あたしが腰をゆっくりと動かすと、" },
+  { kind = "token", token = "name:older-sister", start = 0x2bbb, end = 0x2bca, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2bca, source_mode = 1, source = "は昇り詰めようと、しゅっしゅっと動かす。" },
+]
+
+[[composites]]
+id = "f0011l-2be5-name-older-sister-aah-i-m-losing-my"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・あぁはぁぁ・・・、おかしくなっちゃう・・・。」"
+translation = "[⟦name:older-sister⟧] \"Aah... I'm losing my mind...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2be5, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2be9, end = 0x2bf8, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2bf8, source_mode = 1, source = "】「・・・あぁはぁぁ・・・、おかしくなっちゃう・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2c19-suddenly-name-older-sister-s-clit-touches-mine"
+target_mode = 2
+source = "ふいに、⟦name:older-sister⟧のクリトリスがあたしの突起に触れる。"
+translation = "Suddenly, ⟦name:older-sister⟧'s clit touches mine."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2c19, source_mode = 1, source = "ふいに、" },
+  { kind = "token", token = "name:older-sister", start = 0x2c20, end = 0x2c2f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2c2f, source_mode = 1, source = "のクリトリスがあたしの突起に触れる。" },
+]
+
+[[entries]]
+id = "f0011l-2c49-connie-eek"
+file = "DISKB/F0011L.MES"
+offset = 0x2c49
+source_mode = 1
+target_mode = 2
+source = "【コニー】「きゃう！」"
+translation = "[CONNIE] \"Eek!\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2c59-name-older-sister-aah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あはあッ！」"
+translation = "[⟦name:older-sister⟧] \"Aah!\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2c59, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2c5d, end = 0x2c6c, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2c6c, source_mode = 1, source = "】「あはあッ！」" },
+]
+
+[[entries]]
+id = "f0011l-2c79-neither-of-us-can-stop-moving-now"
+file = "DISKB/F0011L.MES"
+offset = 0x2c79
+source_mode = 1
+target_mode = 2
+source = "腰のうねりはもう止められない。"
+translation = "Neither of us can stop moving now."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2ca7-i-draw-back-slightly"
+file = "DISKB/F0011L.MES"
+offset = 0x2ca7
+source_mode = 1
+target_mode = 2
+source = "少し股間を離す。"
+translation = "I draw back slightly."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2cb5-then-i-grind-along-her-slit-and-press"
+file = "DISKB/F0011L.MES"
+offset = 0x2cb5
+source_mode = 1
+target_mode = 2
+source = "そして割れ目を擦るように腰をグラインドさせ、密着させる。"
+translation = "Then I grind along her slit and press close again."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2cdb-name-older-sister-hah-nnnh-mmm"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁっ、うぅーん、ん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah... nnnh... mmm...\""
+speaker = "name-slot:older-sister"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2cdb, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2cdf, end = 0x2cee, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2cee, source_mode = 1, source = "】「はぁっ、うぅーん、ん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-2d04-connie-ah-incredible-i-ve-never-felt-this"
+file = "DISKB/F0011L.MES"
+offset = 0x2d04
+source_mode = 1
+target_mode = 2
+source = "【コニー】「うっ・・・はうっ、すご・・・ぃ・・・、こんな・・・の・・・初めて・・・。あぁあっ・・・。」"
+translation = "[CONNIE] \"Ah... incredible... I've never... felt this... aaah...\""
+speaker = "コニー"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2d3d-i-grind-in-broad-strokes-moving-my-hips"
+file = "DISKB/F0011L.MES"
+offset = 0x2d3d
+source_mode = 1
+target_mode = 2
+source = "まるで男のヒトが腰を使うように、大きく腰をグラインドさせる。"
+translation = "I grind in broad strokes, moving my hips like a man thrusting."
+speaker = "Connie"
+context = "Slow branch: Connie explores Ruri's reactions before they begin mutually grinding."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2d81-connie-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・・・・。」"
+translation = "[CONNIE] \"⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2d81, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x2d8a, end = 0x2d99, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2d99, source_mode = 1, source = "・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2da6-name-older-sister-looks-worried"
+target_mode = 2
+source = "⟦name:older-sister⟧は不安そうにしている。"
+translation = "⟦name:older-sister⟧ looks worried."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2da6, end = 0x2db5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2db5, source_mode = 1, source = "は不安そうにしている。" },
+]
+
+[[entries]]
+id = "f0011l-2dd0-connie-it-s-okay-this-won-t-happen"
+file = "DISKB/F0011L.MES"
+offset = 0x2dd0
+source_mode = 1
+target_mode = 2
+source = "【コニー】「大丈夫よ。まだ３００年も先のことだから・・・。」"
+translation = "[CONNIE] \"It's okay. This won't happen for another three hundred years...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+notes = "The source says three hundred years; retain the round figure here because this is not the contradictory 1996-to-2288 duration repaired in F0040."
+
+[[entries]]
+id = "f0011l-2df9-i-came-to-the-past-to-prevent-the"
+file = "DISKB/F0011L.MES"
+offset = 0x2df9
+source_mode = 1
+target_mode = 2
+source = "あたしが過去へ来た理由。世界が汚染される事を防ぐこと。"
+translation = "I came to the past to prevent the world from being polluted."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-2e22-and-to-collect-intact-genetic-material"
+file = "DISKB/F0011L.MES"
+offset = 0x2e22
+source_mode = 1
+target_mode = 2
+source = "そして、正常な遺伝子を採取すること。"
+translation = "And to collect intact genetic material."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-2e3c-name-older-sister-connie-you-can-take-a"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・コニー、私の・・・遺伝子、採っても・・・いいよ・・・。」"
+translation = "[⟦name:older-sister⟧] \"...Connie, you can... take a sample of my genes...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2e3c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x2e40, end = 0x2e4f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2e4f, source_mode = 1, source = "】「・・・コニー、私の・・・遺伝子、採っても・・・いいよ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2f20-connie-name-older-sister-thank-you"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・・・・、ありがと・・・。」"
+translation = "[CONNIE] \"⟦name:older-sister⟧... Thank you...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2f20, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x2f29, end = 0x2f38, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2f38, source_mode = 1, source = "・・・・・・、ありがと・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-2f4d-i-undress-name-older-sister"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の服を脱がせる。"
+translation = "I undress ⟦name:older-sister⟧."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2f4d, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x2f54, end = 0x2f63, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2f63, source_mode = 1, source = "の服を脱がせる。" },
+]
+
+[[composites]]
+id = "f0011l-2f89-i-take-name-older-sister-s-clothes-off"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の服を脱がせる。"
+translation = "I take ⟦name:older-sister⟧'s clothes off."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x2f89, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x2f90, end = 0x2f9f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2f9f, source_mode = 1, source = "の服を脱がせる。" },
+]
+
+[[composites]]
+id = "f0011l-2fac-name-older-sister-lifts-her-body-and-lets"
+target_mode = 2
+source = "⟦name:older-sister⟧は身体を浮かせて、あたしにされるがままになっている。"
+translation = "⟦name:older-sister⟧ lifts her body and lets me do as I please."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2fac, end = 0x2fbb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2fbb, source_mode = 1, source = "は身体を浮かせて、あたしにされるがままになっている。" },
+]
+
+[[composites]]
+id = "f0011l-2fe4-name-older-sister-s-breast-feels-wonderful-as"
+target_mode = 2
+source = "⟦name:older-sister⟧の胸の感触を愉しみながら、話しかける。"
+translation = "⟦name:older-sister⟧'s breast feels wonderful as I speak to her."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x2fe4, end = 0x2ff3, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x2ff3, source_mode = 1, source = "の胸の感触を愉しみながら、話しかける。" },
+]
+
+[[composites]]
+id = "f0011l-300d-connie-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・、・・・。」"
+translation = "[CONNIE] \"⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x300d, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x3016, end = 0x3025, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3025, source_mode = 1, source = "・・・、・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3033-at-my-voice-she-opens-her-eyes-a"
+file = "DISKB/F0011L.MES"
+offset = 0x3033
+source_mode = 1
+target_mode = 2
+source = "あたしの呼び掛けに、うっすらと目を開ける。"
+translation = "At my voice, she opens her eyes a little."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-304f-name-older-sister-s-cheeks-are-hot"
+target_mode = 2
+source = "⟦name:older-sister⟧のほっぺたは、熱い。"
+translation = "⟦name:older-sister⟧'s cheeks are hot."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x304f, end = 0x305e, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x305e, source_mode = 1, source = "のほっぺたは、熱い。" },
+]
+
+[[composites]]
+id = "f0011l-306f-connie-i-thought-you-d-be-a-lot"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧って、もっときつい性格かと思ってた・・・。」"
+translation = "[CONNIE] \"I thought you'd be a lot harsher, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x306f, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x3078, end = 0x3087, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3087, source_mode = 1, source = "って、もっときつい性格かと思ってた・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-30a4-name-older-sister-mmm-i-find-talking-to"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「ん・・・、人と話すのが面倒だから・・・、そう思われ・・・ちゃうのかな・・・。」"
+translation = "[⟦name:older-sister⟧] \"Mmm... I find talking to people tiring... Maybe that's why they think so...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x30a4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x30a8, end = 0x30b7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x30b7, source_mode = 1, source = "】「ん・・・、人と話すのが面倒だから・・・、そう思われ・・・ちゃうのかな・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-30e8-connie-for-someone-who-says-that-you-re"
+target_mode = 2
+source = "【コニー】「・・・に、しては、⟦name:older-sister⟧っておしゃべりが上手みたい。」"
+translation = "[CONNIE] \"For someone who says that, you're pretty good at conversation, ⟦name:older-sister⟧.\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x30e8, source_mode = 1, source = "【コニー】「・・・に、しては、" },
+  { kind = "token", token = "name:older-sister", start = 0x30fa, end = 0x3109, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3109, source_mode = 1, source = "っておしゃべりが上手みたい。」" },
+]
+
+[[composites]]
+id = "f0011l-311d-name-older-sister-am-i-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「そう？　あンッ！」"
+translation = "[⟦name:older-sister⟧] \"Am I? Ah!\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x311d, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3121, end = 0x3130, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3130, source_mode = 1, source = "】「そう？　あンッ！」" },
+]
+
+[[composites]]
+id = "f0011l-3140-i-prod-one-of-name-older-sister-s"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の弱い部分をつついた。"
+translation = "I prod one of ⟦name:older-sister⟧'s sensitive spots."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3140, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x3147, end = 0x3156, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3156, source_mode = 1, source = "の弱い部分をつついた。" },
+]
+
+[[composites]]
+id = "f0011l-3167-name-older-sister-don-t"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「だめ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Don't...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3167, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x316b, end = 0x317a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x317a, source_mode = 1, source = "】「だめ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3188-her-slit-has-grown-glossy-with-wetness"
+file = "DISKB/F0011L.MES"
+offset = 0x3188
+source_mode = 1
+target_mode = 2
+source = "割れ目はいつの間にか、愛液でてらてらと光っていた。"
+translation = "Her slit has grown glossy with wetness."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-31a7-checking-how-wet-name-older-sister-is-i"
+target_mode = 2
+source = "あたしは⟦name:older-sister⟧の濡れ具合を確認しながら、そろりそろりと指を入れる。"
+translation = "Checking how wet ⟦name:older-sister⟧ is, I slowly ease a finger inside."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x31a7, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:older-sister", start = 0x31ae, end = 0x31bd, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x31bd, source_mode = 1, source = "の濡れ具合を確認しながら、そろりそろりと指を入れる。" },
+]
+
+[[composites]]
+id = "f0011l-31e2-name-older-sister-no-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「嫌・・・！　あ・・・。」"
+translation = "[⟦name:older-sister⟧] \"No...! Ah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+notes = "Ruri's refusal during penetration remains literal, as does Connie's follow-up question and Ruri's silence."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x31e2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x31e6, end = 0x31f5, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x31f5, source_mode = 1, source = "】「嫌・・・！　あ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3208-connie-can-t-i-touch-you"
+file = "DISKB/F0011L.MES"
+offset = 0x3208
+source_mode = 1
+target_mode = 2
+source = "【コニー】「触っちゃ・・・ダメ？」"
+translation = "[CONNIE] \"Can't I touch you...?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-321e-name-older-sister"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x321e, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3222, end = 0x3231, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3231, source_mode = 1, source = "】「・・・・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3243-name-older-sister-doesn-t-answer"
+target_mode = 2
+source = "⟦name:older-sister⟧は答えなかった。"
+translation = "⟦name:older-sister⟧ doesn't answer."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x3243, end = 0x3252, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3252, source_mode = 1, source = "は答えなかった。" },
+]
+
+[[entries]]
+id = "f0011l-325f-i-flick-her-slit-with-my-fingertip"
+file = "DISKB/F0011L.MES"
+offset = 0x325f
+source_mode = 1
+target_mode = 2
+source = "指で割れ目をぴんっ、と弾く。"
+translation = "I flick her slit with my fingertip."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-3273-name-older-sister-eek-connie-ah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「きゃ！！　コニー、あっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Eek!! Connie, ah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3273, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3277, end = 0x3286, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3286, source_mode = 1, source = "】「きゃ！！　コニー、あっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-329d-name-older-sister-s-body-trembles"
+target_mode = 2
+source = "⟦name:older-sister⟧の身体が震える。"
+translation = "⟦name:older-sister⟧'s body trembles."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x329d, end = 0x32ac, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x32ac, source_mode = 1, source = "の身体が震える。" },
+]
+
+[[entries]]
+id = "f0011l-32b9-connie-a-strong-touch-on-the-clit-feels"
+file = "DISKB/F0011L.MES"
+offset = 0x32b9
+source_mode = 1
+target_mode = 2
+source = "【コニー】「クリトリスに強い刺激を与えるのもいいでしょ？」"
+translation = "[CONNIE] \"A strong touch on the clit feels good too, doesn't it?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-32dd-name-older-sister-geez-you-re-so-naughty"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「もぉ・・・・・・、えっち・・・。」"
+translation = "[⟦name:older-sister⟧] \"Geez... you're so naughty...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x32dd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x32e1, end = 0x32f0, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x32f0, source_mode = 1, source = "】「もぉ・・・・・・、えっち・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3309-connie-so-are-you-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧だって。」"
+translation = "[CONNIE] \"So are you, ⟦name:older-sister⟧.\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3309, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x3312, end = 0x3321, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3321, source_mode = 1, source = "だって。」" },
+]
+
+[[composites]]
+id = "f0011l-332b-name-older-sister-s-nipple-slips-into-my"
+target_mode = 2
+source = "⟦name:older-sister⟧の乳首を口に含む。"
+translation = "⟦name:older-sister⟧'s nipple slips into my mouth."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x332b, end = 0x333a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x333a, source_mode = 1, source = "の乳首を口に含む。" },
+]
+
+[[composites]]
+id = "f0011l-334a-name-older-sister-nnh-there-it-tingles"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「やん・・・、そこ・・・、痺れ・・・るの・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Nnh... there... it tingles...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x334a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x334e, end = 0x335d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x335d, source_mode = 1, source = "】「やん・・・、そこ・・・、痺れ・・・るの・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3380-i-bite-it-anyway"
+file = "DISKB/F0011L.MES"
+offset = 0x3380
+source_mode = 1
+target_mode = 2
+source = "かまわず噛んじゃう。"
+translation = "I bite it anyway."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-338f-connie-mmm-mmm-nibble"
+file = "DISKB/F0011L.MES"
+offset = 0x338f
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっ、んっ・・・、はむっ。」"
+translation = "[CONNIE] \"Mmm, mmm... nibble.\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-33a8-name-older-sister-ah-ah-aah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっ、あんっあんっ！」"
+translation = "[⟦name:older-sister⟧] \"Ah, ah, aah!\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x33a8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x33ac, end = 0x33bb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x33bb, source_mode = 1, source = "】「あっ、あんっあんっ！」" },
+]
+
+[[composites]]
+id = "f0011l-33cd-name-older-sister-arches-her-chest-and-bucks"
+target_mode = 2
+source = "⟦name:older-sister⟧は胸を大きく反らし、ベッドの上で跳ねる。"
+translation = "⟦name:older-sister⟧ arches her chest and bucks on the bed."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x33cd, end = 0x33dc, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x33dc, source_mode = 1, source = "は胸を大きく反らし、ベッドの上で跳ねる。" },
+]
+
+[[composites]]
+id = "f0011l-33f8-name-older-sister-hah-haaah-haah-haah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁっ、はぁん、はぁーっ、はぁーっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah, haaah, haah, haah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x33f8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x33fc, end = 0x340b, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x340b, source_mode = 1, source = "】「はぁっ、はぁん、はぁーっ、はぁーっ・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3428-connie-you-re-sensitive"
+file = "DISKB/F0011L.MES"
+offset = 0x3428
+source_mode = 1
+target_mode = 2
+source = "【コニー】「敏感ね・・・。」"
+translation = "[CONNIE] \"You're sensitive...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-343c-name-older-sister-you-re-hah-hah-good"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「コニーが・・・はあっはあっ、んっ、上手・・・なのよ・・・ぁはあっはぁっ・・・。」"
+translation = "[⟦name:older-sister⟧] \"You're... hah, hah... good at this, Connie...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x343c, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3440, end = 0x344f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x344f, source_mode = 1, source = "】「コニーが・・・はあっはあっ、んっ、上手・・・なのよ・・・ぁはあっはぁっ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3497-connie-you-ve-got-a-great-figure-name"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧ってプロポーションいいんだ～・・・。」"
+translation = "[CONNIE] \"You've got a great figure, ⟦name:older-sister⟧...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3497, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x34a0, end = 0x34af, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x34af, source_mode = 1, source = "ってプロポーションいいんだ～・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-34cc-name-older-sister-ah-hah-yeah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・はぁ、はぁ・・・、うん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... hah... yeah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x34cc, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x34d0, end = 0x34df, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x34df, source_mode = 1, source = "】「あ・・・はぁ、はぁ・・・、うん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-34fa-she-has-the-firm-toned-body-of-someone"
+file = "DISKB/F0011L.MES"
+offset = 0x34fa
+source_mode = 1
+target_mode = 2
+source = "何か運動をしていて、引き締まったような身体だ。"
+translation = "She has the firm, toned body of someone who exercises."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-3519-both-the-feel-of-her-skin-and-the"
+file = "DISKB/F0011L.MES"
+offset = 0x3519
+source_mode = 1
+target_mode = 2
+source = "肌触りも筋肉のつき方も。"
+translation = "Both the feel of her skin and the shape of her muscles say so."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-352e-connie-and-everything-in-this-room-makes-it"
+file = "DISKB/F0011L.MES"
+offset = 0x352e
+source_mode = 1
+target_mode = 2
+source = "【コニー】（部屋に置いてある物からして、運動大好きって感じだし・・・。）"
+translation = "[CONNIE] (And everything in this room makes it obvious she loves sports...)"
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-3565-connie-hey-name-older-sister-what-do-you"
+target_mode = 2
+source = "【コニー】「ねえ⟦name:older-sister⟧・・・、ひとりでいじる時って・・・どんなの？」"
+translation = "[CONNIE] \"Hey, ⟦name:older-sister⟧... What do you do when you touch yourself?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3565, source_mode = 1, source = "【コニー】「ねえ" },
+  { kind = "token", token = "name:older-sister", start = 0x3570, end = 0x357f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x357f, source_mode = 1, source = "・・・、ひとりでいじる時って・・・どんなの？」" },
+]
+
+[[entries]]
+id = "f0011l-359c-i-ask-while-playing-with-her-slit-making"
+file = "DISKB/F0011L.MES"
+offset = 0x359c
+source_mode = 1
+target_mode = 2
+source = "くちゅくちゅと、割れ目をいじりながら聞く。"
+translation = "I ask while playing with her slit, making wet sounds."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-35b7-name-older-sister-no-don-t-ask-me"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「嫌ぁ・・・、そんな事・・・。」"
+translation = "[⟦name:older-sister⟧] \"No... Don't ask me that...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x35b7, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x35bb, end = 0x35ca, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x35ca, source_mode = 1, source = "】「嫌ぁ・・・、そんな事・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-35e0-connie-mmm-maybe-i-ll-spread-you-open"
+file = "DISKB/F0011L.MES"
+offset = 0x35e0
+source_mode = 1
+target_mode = 2
+source = "【コニー】「むー。指でここを広げちゃうよ・・・。」"
+translation = "[CONNIE] \"Mmm. Maybe I'll spread you open with my fingers...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-35ff-i-part-her-labia"
+file = "DISKB/F0011L.MES"
+offset = 0x35ff
+source_mode = 1
+target_mode = 2
+source = "むにっ、と秘唇を開く。"
+translation = "I part her labia."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-360f-sticky-wetness-stretches-between-them-as-they-open"
+file = "DISKB/F0011L.MES"
+offset = 0x360f
+source_mode = 1
+target_mode = 2
+source = "ぬちゃっと愛液がねばつき、少し開く。"
+translation = "Sticky wetness stretches between them as they open slightly."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-3627-name-older-sister-no-don-t-sometimes-a"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「やん、だめ・・・。・・・・・・・・・。少し・・・してる・・・。」"
+translation = "[⟦name:older-sister⟧] \"No, don't... ...Sometimes... a little...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3627, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x362b, end = 0x363a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x363a, source_mode = 1, source = "】「やん、だめ・・・。・・・・・・・・・。少し・・・してる・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3661-connie-with-your-fingers"
+file = "DISKB/F0011L.MES"
+offset = 0x3661
+source_mode = 1
+target_mode = 2
+source = "【コニー】「指を使うの？」"
+translation = "[CONNIE] \"With your fingers?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-3673-name-older-sister-yeah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「うん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Yeah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3673, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3677, end = 0x3686, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3686, source_mode = 1, source = "】「うん・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3694-connie-like-this"
+file = "DISKB/F0011L.MES"
+offset = 0x3694
+source_mode = 1
+target_mode = 2
+source = "【コニー】「・・・こういうふうに？」"
+translation = "[CONNIE] \"...Like this?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-36ab-each-movement-of-my-fingers-draws-out-more"
+file = "DISKB/F0011L.MES"
+offset = 0x36ab
+source_mode = 1
+target_mode = 2
+source = "ちゅっく、ちゅっく、と指の動きで愛液が出てくる。"
+translation = "Each movement of my fingers draws out more wetness."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-36c8-name-older-sister-ah-it"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あ・・・い・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... it...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+notes = "The isolated い trails off before forming a complete word; the English preserves an unfinished response rather than inventing explicit assent."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x36c8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x36cc, end = 0x36db, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x36db, source_mode = 1, source = "】「あ・・・い・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-36ef-name-older-sister-cries-out-then-blushes-with"
+target_mode = 2
+source = "⟦name:older-sister⟧は声を出して、恥ずかしそうに赤くなる。"
+translation = "⟦name:older-sister⟧ cries out, then blushes with embarrassment."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x36ef, end = 0x36fe, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x36fe, source_mode = 1, source = "は声を出して、恥ずかしそうに赤くなる。" },
+]
+
+[[entries]]
+id = "f0011l-3717-i-keep-caressing-her-with-my-fingers"
+file = "DISKB/F0011L.MES"
+offset = 0x3717
+source_mode = 1
+target_mode = 2
+source = "あたしは指で愛撫を続ける。"
+translation = "I keep caressing her with my fingers."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-372a-connie-so-soft-and-slippery"
+file = "DISKB/F0011L.MES"
+offset = 0x372a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「柔らかくて・・・ぬめってる。」"
+translation = "[CONNIE] \"So soft... and slippery.\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-3746-name-older-sister-no"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「・・・嫌・・・ぁ・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"...No...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3746, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x374a, end = 0x3759, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3759, source_mode = 1, source = "】「・・・嫌・・・ぁ・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3789-connie-does-it-feel-good-name-older-sister"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・、気持ちいい？」"
+translation = "[CONNIE] \"Does it feel good, ⟦name:older-sister⟧?\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3789, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x3792, end = 0x37a1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x37a1, source_mode = 1, source = "・・・、気持ちいい？」" },
+]
+
+[[composites]]
+id = "f0011l-37b1-my-fingers-stroke-inside-name-older-sister-s"
+target_mode = 2
+source = "あたしの指は、⟦name:older-sister⟧の秘唇の中、そして割れ目の上の突起を撫でる。"
+translation = "My fingers stroke inside ⟦name:older-sister⟧'s labia, then over her clit."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+notes = "The source describes the projection above the slit; the English renders the unambiguous anatomy directly and does not substitute the configurable term slot."
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x37b1, source_mode = 1, source = "あたしの指は、" },
+  { kind = "token", token = "name:older-sister", start = 0x37bb, end = 0x37ca, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x37ca, source_mode = 1, source = "の秘唇の中、そして割れ目の上の突起を撫でる。" },
+]
+
+[[composites]]
+id = "f0011l-37e8-name-older-sister-ah-yeah"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「あっん・・・、・・・・・・・・・うん・・・。」"
+translation = "[⟦name:older-sister⟧] \"Ah... ...Yeah...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x37e8, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x37ec, end = 0x37fb, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x37fb, source_mode = 1, source = "】「あっん・・・、・・・・・・・・・うん・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3819-with-a-shy-look-name-older-sister-nods"
+target_mode = 2
+source = "恥ずかしげに頷く⟦name:older-sister⟧。"
+translation = "With a shy look, ⟦name:older-sister⟧ nods."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3819, source_mode = 1, source = "恥ずかしげに頷く" },
+  { kind = "token", token = "name:older-sister", start = 0x3825, end = 0x3834, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3834, source_mode = 1, source = "。" },
+]
+
+[[entries]]
+id = "f0011l-383a-connie-mmm"
+file = "DISKB/F0011L.MES"
+offset = 0x383a
+source_mode = 1
+target_mode = 2
+source = "【コニー】「んっ・・・。」"
+translation = "[CONNIE] \"Mmm...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[entries]]
+id = "f0011l-384c-she-answered-my-embarrassing-question-so-i-reward"
+file = "DISKB/F0011L.MES"
+offset = 0x384c
+source_mode = 1
+target_mode = 2
+source = "恥ずかしいことに答えてくれたので、キスのお返し。"
+translation = "She answered my embarrassing question, so I reward her with a kiss."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-386a-name-older-sister-hah-mmm"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁ・・・むっ・・・・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah... mmm...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x386a, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x386e, end = 0x387d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x387d, source_mode = 1, source = "】「はぁ・・・むっ・・・・・・・・・。」" },
+]
+
+[[entries]]
+id = "f0011l-3896-we-share-a-long-hot-kiss-that-sends"
+file = "DISKB/F0011L.MES"
+offset = 0x3896
+source_mode = 1
+target_mode = 2
+source = "あたしたちは、長く熱く、気分が高揚するキスを交わしていた。"
+translation = "We share a long, hot kiss that sends our excitement higher."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites]]
+id = "f0011l-38c7-connie-name-older-sister-if-you-move-that"
+target_mode = 2
+source = "【コニー】「⟦name:older-sister⟧・・・そんなに激しくちゃ・・・。」"
+translation = "[CONNIE] \"⟦name:older-sister⟧... If you move that hard...\""
+speaker = "コニー"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x38c7, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:older-sister", start = 0x38d0, end = 0x38df, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x38df, source_mode = 1, source = "・・・そんなに激しくちゃ・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-38f5-slick-sounds-rise-as-name-older-sister-moves"
+target_mode = 2
+source = "じゅぷじゅぷじゅぷと、⟦name:older-sister⟧の動きで愛液が擦れる。"
+translation = "Slick sounds rise as ⟦name:older-sister⟧ moves against me."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x38f5, source_mode = 1, source = "じゅぷじゅぷじゅぷと、" },
+  { kind = "token", token = "name:older-sister", start = 0x3903, end = 0x3912, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3912, source_mode = 1, source = "の動きで愛液が擦れる。" },
+]
+
+[[composites]]
+id = "f0011l-3922-name-older-sister-hah-but-but-it-feels"
+target_mode = 2
+source = "【⟦name:older-sister⟧】「はぁん、だって・・・だって・・・、こんなに・・・・・・。」"
+translation = "[⟦name:older-sister⟧] \"Hah... But... but it feels so...\""
+speaker = "name-slot:older-sister"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x3922, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x3926, end = 0x3935, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3935, source_mode = 1, source = "】「はぁん、だって・・・だって・・・、こんなに・・・・・・。」" },
+]
+
+[[composites]]
+id = "f0011l-3959-name-older-sister-moves-her-hips-eagerly-lost"
+target_mode = 2
+source = "⟦name:older-sister⟧は夢中で腰を使っている。"
+translation = "⟦name:older-sister⟧ moves her hips eagerly, lost in the feeling."
+speaker = "Connie"
+context = "Talk-first branch: Ruri confronts the ruined future, offers a genetic sample, and Connie gradually escalates the encounter."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x3959, end = 0x3968, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x3968, source_mode = 1, source = "は夢中で腰を使っている。" },
 ]

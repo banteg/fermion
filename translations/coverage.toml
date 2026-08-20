@@ -335,3 +335,12 @@ description = "Every decoded F0010R record from Connie returning to the living r
 file = "DISKB/F0010R.MES"
 start = 0x04f8
 end = 0x48b6
+
+[[scopes]]
+id = "ruri-genetic-sample-route"
+description = "Every decoded F0011L record across Connie's assertive, slow, and talk-first approaches to collecting Ruri's genetic sample."
+
+[[scopes.ranges]]
+file = "DISKB/F0011L.MES"
+start = 0x04e3
+end = 0x3968
