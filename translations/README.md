@@ -183,6 +183,20 @@ embedded newlines, and labels only speakers proven by the bytecode. It is a
 review artifact; canonical English, context, status, and notes still belong in
 `fermion.toml`.
 
+Before a register pass, generate the deterministic drift report:
+
+```sh
+uv run fermion translation drift translations/fermion.toml --only-flagged
+```
+
+The report groups canonical prose once per file and speaker, ignores records
+without English words, and measures contractions, stiff forms, sentence length,
+and repeated two-word openings. Flags compare a group with that exact speaker's
+other files when at least three qualifying groups exist, otherwise with the
+whole corpus. Catalog speaker evidence is not silently normalized, so contextual
+`Connie` and bytecode-proven `コニー` remain distinct rows. Treat every flag as a
+line-review lead, never as a target rate.
+
 The current statuses are:
 
 - `draft`: recorded, but its source meaning, context, or English is still

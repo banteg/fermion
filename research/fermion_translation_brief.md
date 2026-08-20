@@ -972,6 +972,17 @@ For each slice, “done” requires all of the following:
 4. Context and notes remain source-facing, and every refusal, observed action, and narrator interpretation stays at its own evidence level.
 5. Catalog validation, complete coverage, the policy regression tests, and a fresh-image build all pass before the slice is committed.
 
+Generate the register leads with:
+
+```sh
+fermion translation drift translations/fermion.toml --only-flagged
+```
+
+Its same-speaker medians expose cross-file drift while preserving the catalog's
+distinction between contextual and bytecode-proven speaker attribution. Read
+every flagged line in Japanese and scene context before changing it; a formal
+character can be a legitimate outlier.
+
 ### Phase 5 — Review passes and in-engine QA
 
 Run distinct passes rather than treating “edited once” as completion:

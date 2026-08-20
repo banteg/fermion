@@ -15,6 +15,7 @@ from fermion.binary import BinaryPatchError, replace_exact
 from fermion.coverage import CoverageManifest, analyze_coverage
 from fermion.d88 import D88Error, convert_file
 from fermion.disks import DiskVerificationError, materialize
+from fermion.drift import analyze_translation_drift
 from fermion.emulator import (
     FERMION_CORE_OPTIONS,
     EmulatorError,
@@ -353,6 +354,28 @@ def build_parser() -> argparse.ArgumentParser:
     )
     translation_table.add_argument("--format", choices=("tsv", "jsonl"), default="tsv")
     translation_table.set_defaults(handler=_translation_table)
+    translation_drift = translation_commands.add_parser(
+        "drift", help="report per-file and per-speaker English register diagnostics"
+    )
+    translation_drift.add_argument("catalog", type=_path)
+    translation_drift.add_argument(
+        "--min-records",
+        type=int,
+        default=10,
+        help="minimum analyzable records required for output and outlier baselines",
+    )
+    translation_drift.add_argument(
+        "--file",
+        action="append",
+        default=[],
+        help="include one exact ARCHIVE/FILENAME path; may be repeated",
+    )
+    translation_drift.add_argument(
+        "--speaker", action="append", default=[], help="include one exact speaker; may be repeated"
+    )
+    translation_drift.add_argument("--only-flagged", action="store_true")
+    translation_drift.add_argument("--format", choices=("tsv", "jsonl"), default="tsv")
+    translation_drift.set_defaults(handler=_translation_drift)
     translation_coverage = translation_commands.add_parser(
         "coverage", help="report translated, excluded, and pending text in a scope"
     )
@@ -1058,6 +1081,79 @@ def _translation_table(args: argparse.Namespace) -> None:
                     "en": row[5],
                     "context": row[6],
                     "status": row[7],
+                },
+                ensure_ascii=False,
+            )
+        )
+
+
+def _translation_drift(args: argparse.Namespace) -> None:
+    catalog = TranslationCatalog.from_file(args.catalog)
+    try:
+        rows = analyze_translation_drift(catalog, min_records=args.min_records)
+    except ValueError as error:
+        raise TranslationError(str(error)) from error
+    files = set(args.file)
+    speakers = set(args.speaker)
+    rows = tuple(
+        row
+        for row in rows
+        if row.records >= args.min_records
+        and (not files or row.file in files)
+        and (not speakers or row.speaker in speakers)
+        and (not args.only_flagged or row.flags)
+    )
+    columns = (
+        "file",
+        "speaker",
+        "records",
+        "sentences",
+        "contractions_per_100",
+        "stiff_forms_per_100",
+        "mean_sentence_words",
+        "repeated_opening_percent",
+        "flags",
+        "top_openings",
+    )
+    if args.format == "tsv":
+        writer = csv.writer(sys.stdout, delimiter="\t", lineterminator="\n")
+        writer.writerow(columns)
+        for row in rows:
+            writer.writerow(
+                (
+                    row.file,
+                    row.speaker,
+                    row.records,
+                    row.sentences,
+                    f"{row.contraction_rate:.1f}",
+                    f"{row.stiff_form_rate:.1f}",
+                    f"{row.mean_sentence_words:.1f}",
+                    f"{row.repeated_opening_rate:.1f}",
+                    ",".join(row.flags),
+                    "; ".join(
+                        f"{opening} ({count})" for opening, count in row.top_openings
+                    ),
+                )
+            )
+        return
+
+    for row in rows:
+        print(
+            json.dumps(
+                {
+                    "file": row.file,
+                    "speaker": row.speaker,
+                    "records": row.records,
+                    "sentences": row.sentences,
+                    "contractions_per_100": round(row.contraction_rate, 1),
+                    "stiff_forms_per_100": round(row.stiff_form_rate, 1),
+                    "mean_sentence_words": round(row.mean_sentence_words, 1),
+                    "repeated_opening_percent": round(row.repeated_opening_rate, 1),
+                    "flags": row.flags,
+                    "top_openings": [
+                        {"opening": opening, "count": count}
+                        for opening, count in row.top_openings
+                    ],
                 },
                 ensure_ascii=False,
             )

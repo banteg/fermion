@@ -158,6 +158,18 @@ The columns are `id`, `file`, `offset`, `speaker`, `jp`, `en`, `context`, and
 `status`. Embedded newlines are escaped so the TSV remains one row per anchor;
 `--format jsonl` is available for programmatic use.
 
+Run the corpus drift report before a register pass:
+
+```sh
+uv run fermion translation drift translations/fermion.toml --only-flagged
+```
+
+It reports contraction and stiff-form counts per 100 sentences, mean sentence
+length, and repeated two-word openings for each file/speaker group. Outliers use
+a robust same-speaker median when enough file groups exist. The measurements are
+review leads, not prose quotas; `--file`, `--speaker`, `--min-records`, and
+`--format jsonl` narrow or automate the report.
+
 The verbose view includes a word-wrapped preview for dialogue entries. See
 [`translations/README.md`](translations/README.md) for the entry conventions
 and incremental translation workflow.
