@@ -15,7 +15,7 @@ from fermion.translation import (
     TranslationError,
     TranslationFile,
     _patch_gm_source,
-    _patch_token_initializers,
+    _patch_token_initializer_source,
     _verify_compiled_file,
 )
 
@@ -31,9 +31,7 @@ def write_catalog(
 ):
     catalog = tmp_path / "catalog.toml"
     file_width = f"box_width = {file_box_width}\n" if file_box_width is not None else ""
-    entry_width = (
-        f"box_width = {entry_box_width}\n" if entry_box_width is not None else ""
-    )
+    entry_width = f"box_width = {entry_box_width}\n" if entry_box_width is not None else ""
     entry_notes = f'notes = "{notes}"\n' if notes is not None else ""
     catalog.write_text(
         f'''version = 4
@@ -83,9 +81,7 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
 
 def test_notes_may_be_omitted_from_simple_entry(tmp_path) -> None:
     source = struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00"
-    catalog_path = write_catalog(
-        tmp_path, hashlib.sha256(source).hexdigest(), notes=None
-    )
+    catalog_path = write_catalog(tmp_path, hashlib.sha256(source).hexdigest(), notes=None)
 
     catalog = TranslationCatalog.from_file(catalog_path)
 
@@ -95,11 +91,7 @@ def test_notes_may_be_omitted_from_simple_entry(tmp_path) -> None:
 def test_opening_exposition_reveal_ticks_do_not_split_words() -> None:
     catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
     catalog = TranslationCatalog.from_file(catalog_path)
-    crawl = [
-        entry
-        for entry in catalog.entries
-        if entry.id.startswith("opening-exposition-")
-    ]
+    crawl = [entry for entry in catalog.entries if entry.id.startswith("opening-exposition-")]
 
     assert crawl
     for entry in crawl:
@@ -188,13 +180,13 @@ def test_rejects_case_insensitive_duplicate_catalog_files(tmp_path) -> None:
     catalog_path = write_catalog(tmp_path, "0" * 64)
     catalog_path.write_text(
         catalog_path.read_text()
-        + '''
+        + """
 
 [[files]]
 file = "diska/scene.mes"
 source = "disk-a/other.mes"
 sha256 = "0000000000000000000000000000000000000000000000000000000000000000"
-'''
+"""
     )
 
     with pytest.raises(TranslationError, match="duplicate file names"):
@@ -217,11 +209,11 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
         status="draft",
         notes="Test",
     )
-    source = '''(mes
+    source = """(mes
  (gm-text 2 "Original")
  (gm-text 2 "Other")
  (raw 0))
-'''
+"""
 
     patched = _patch_gm_source(source, original, ((2, entry),))
 
@@ -239,10 +231,10 @@ def test_patch_uses_precompiled_physical_translation() -> None:
         source="Original",
         translation="Hello world\nagain",
     )
-    source = '''(mes
+    source = """(mes
  (gm-text 2 "Original")
  (raw 0))
-'''
+"""
 
     patched = _patch_gm_source(source, original, ((2, entry),))
 
@@ -310,25 +302,25 @@ segments = [
         (suffix_offset, "!"),
     ]
 
-    rkt = f'''(mes
+    rkt = f"""(mes
  (gm-text 2 "Hello ")
  (raw {" ".join(str(byte) for byte in copy_name + render_name)})
  (gm-text 2 "!")
  (raw 0))
-'''
+"""
     patched = _patch_gm_source(
         rkt,
         GMFile.from_bytes(source),
         tuple((item.anchor.offset, item) for item in physical),
     )
     assert '(gm-text 2 "Hi\\n")' in patched
-    assert f'(raw {" ".join(str(byte) for byte in copy_name + render_name)})' in patched
+    assert f"(raw {' '.join(str(byte) for byte in copy_name + render_name)})" in patched
 
 
 def test_schema_five_rejects_missing_translation_token(tmp_path) -> None:
     catalog_path = write_catalog(tmp_path, "0" * 64)
     text = catalog_path.read_text().replace("version = 4", "version = 5")
-    text += '''
+    text += """
 
 [[tokens]]
 id = "name:dear-person"
@@ -353,7 +345,7 @@ segments = [
   { kind = "token", token = "name:dear-person", start = 0x0020, end = 0x002f, sha256 = "0000000000000000000000000000000000000000000000000000000000000000" },
   { kind = "text", offset = 0x0030, source_mode = 2, source = "!" },
 ]
-'''
+"""
     catalog_path.write_text(text)
 
     with pytest.raises(TranslationError, match="must contain at least one authoring token"):
@@ -366,15 +358,8 @@ def test_schema_five_verifies_and_patches_same_size_token_initializer(tmp_path) 
     assignment = b"\x43\x0c\x04\x04\x0e\xe0\x00\x00\x00"
     text = b"\x4a\x02Original\x00"
     source = (
-        struct.pack("<H", 2)
-        + initializer
-        + assignment
-        + text
-        + initializer
-        + assignment
-        + b"\x00"
+        struct.pack("<H", 2) + initializer + assignment + text + initializer + assignment + b"\x00"
     )
-    compiled = source.replace(text, b"\x4a\x02A longer translation\x00")
     text_offset = 2 + len(initializer) + len(assignment)
     second_initializer_offset = text_offset + len(text)
     source_dir = tmp_path / "source"
@@ -419,20 +404,23 @@ notes = "Keeps the catalog non-empty."
     catalog.verify_sources(source_dir)
     [token] = catalog.tokens
     token_initializers = tuple((token, item) for item in token.initializers)
+    source_values = " ".join(str(byte) for byte in source_name)
+    rkt = f"""(mes
+ (string-copy (ref 14 224) (inline-source 0 255 1 {source_values}))
+ (assign (ref 12 1028) (string-value (ref 14 224)))
+ (text #:mode 2 "Original")
+ (string-copy (ref 14 224) (inline-source 0 255 1 {source_values}))
+ (assign (ref 12 1028) (string-value (ref 14 224)))
+ (end))
+"""
+    patched = _patch_token_initializer_source(rkt, GMFile.from_bytes(source), token_initializers)
 
-    patched = _patch_token_initializers(
-        compiled,
-        GMFile.from_bytes(source),
-        token_initializers,
-    )
-
-    assert len(patched) == len(compiled)
-    assert source_name not in patched
-    assert patched.count(b"Kanako") == 2
-    assert GMFile.from_bytes(patched).audit().issues == ()
+    translated_values = " ".join(str(byte) for byte in b"Kanako")
+    assert source_values not in patched
+    assert patched.count(f"(inline-source 0 255 1 {translated_values})") == 2
 
 
-def test_schema_five_pads_shorter_token_initializer_with_noops(tmp_path) -> None:
+def test_schema_five_relocates_shorter_token_initializer(tmp_path) -> None:
     source_term = "おま○こ".encode("cp932")
     initializer = b"\x45\x0e\xe0\x00\xff\x01" + source_term + b"\x00\x00"
     assignment = b"\x43\x0c\x2e\x04\x0e\xe0\x00\x00\x00"
@@ -480,12 +468,14 @@ status = "draft"
     [token] = catalog.tokens
     token_initializers = tuple((token, item) for item in token.initializers)
     original = GMFile.from_bytes(source)
-    patched = _patch_token_initializers(source, original, token_initializers)
-    compiled = GMFile.from_bytes(patched)
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01pussy\x00\x00"
+    compiled = GMFile.from_bytes(
+        struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
+    )
 
-    assert len(patched) == len(source)
-    assert source_term not in patched
-    assert b"pussy\x00\x00\x00\x00\x00\x43\x0c\x2e\x04" in patched
+    assert len(compiled.data) < len(source)
+    assert source_term not in compiled.data
+    assert b"pussy\x00\x00\x43\x0c\x2e\x04" in compiled.data
     assert compiled.audit().issues == ()
     _verify_compiled_file(
         catalog.files[0],
@@ -496,26 +486,70 @@ status = "draft"
     )
 
 
-def test_schema_five_rejects_initializer_translation_longer_than_source(
+def test_schema_five_relocates_initializer_translation_longer_than_source(
     tmp_path,
 ) -> None:
-    catalog_path = write_catalog(tmp_path, "0" * 64)
-    text = catalog_path.read_text().replace("version = 4", "version = 5")
-    text += '''
+    source_name = "弘子".encode("cp932")
+    initializer = b"\x45\x0e\xe0\x00\xff\x01" + source_name + b"\x00\x00"
+    assignment = b"\x43\x0c\x20\x04\x0e\xe0\x00\x00\x00"
+    text = b"\x4a\x02Original\x00"
+    text_offset = 2 + len(initializer) + len(assignment)
+    source = struct.pack("<H", 2) + initializer + assignment + text + b"\x00"
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = tmp_path / "catalog.toml"
+    catalog_path.write_text(
+        f'''version = 5
+game = "Test"
+
+[[files]]
+file = "DISKA/SCENE.MES"
+source = "disk-a/SCENE.MES"
+sha256 = "{hashlib.sha256(source).hexdigest()}"
 
 [[tokens]]
-id = "term:slot-1"
-source = "おま○こ"
-translation = "pussycats"
-max_width = 9
+id = "name:friend-2"
+source = "弘子"
+translation = "Hiroko"
+max_width = 6
 initializers = [
-  { file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x042e },
+  {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x0420 }},
 ]
-'''
-    catalog_path.write_text(text)
 
-    with pytest.raises(TranslationError, match="must not exceed the source byte length"):
-        TranslationCatalog.from_file(catalog_path)
+[[entries]]
+id = "scene-line"
+file = "DISKA/SCENE.MES"
+offset = 0x{text_offset:04x}
+source_mode = 2
+target_mode = 2
+source = "Original"
+translation = "Original"
+speaker = "narrator"
+context = "Synthetic scene."
+status = "draft"
+'''
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+    catalog.verify_sources(source_dir)
+    [token] = catalog.tokens
+    token_initializers = tuple((token, item) for item in token.initializers)
+    original = GMFile.from_bytes(source)
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01Hiroko\x00\x00"
+    compiled = GMFile.from_bytes(
+        struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
+    )
+
+    assert len(compiled.data) > len(source)
+    assert b"Hiroko\x00\x00\x43\x0c\x20\x04" in compiled.data
+    _verify_compiled_file(
+        catalog.files[0],
+        original,
+        compiled,
+        (),
+        token_initializers,
+    )
 
 
 def test_schema_five_rejects_initializer_for_the_wrong_token_slot(tmp_path) -> None:
@@ -561,12 +595,8 @@ notes = "Keeps the catalog non-empty."
 def test_compiled_file_rejects_changed_interpolation_slot() -> None:
     prefix = b"\x45\x0e\xe0\x00\xff\x0c"
     suffix = b"\x00\x4b\x0e\xe0\x00\x00\x00\x00"
-    original = GMFile.from_bytes(
-        struct.pack("<H", 2) + prefix + b"\x04\x04" + suffix
-    )
-    compiled = GMFile.from_bytes(
-        struct.pack("<H", 2) + prefix + b"\xf6\x03" + suffix
-    )
+    original = GMFile.from_bytes(struct.pack("<H", 2) + prefix + b"\x04\x04" + suffix)
+    compiled = GMFile.from_bytes(struct.pack("<H", 2) + prefix + b"\xf6\x03" + suffix)
     catalog_file = TranslationFile(
         "DISKA/SCENE.MES",
         "disk-a/SCENE.MES",
@@ -578,10 +608,7 @@ def test_compiled_file_rejects_changed_interpolation_slot() -> None:
 
 
 def test_one_canonical_entry_can_cover_several_physical_anchors(tmp_path) -> None:
-    source = (
-        struct.pack("<H", 2)
-        + b"\x4a\x02Repeated\x00\x4a\x02Repeated\x00\x00"
-    )
+    source = struct.pack("<H", 2) + b"\x4a\x02Repeated\x00\x4a\x02Repeated\x00\x00"
     source_dir = tmp_path / "source"
     (source_dir / "disk-a").mkdir(parents=True)
     (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)

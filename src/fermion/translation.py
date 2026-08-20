@@ -14,7 +14,12 @@ from pathlib import Path, PurePosixPath
 
 from fermion.gm import GMError, GMFile, interpolation_token_for_slot
 
-_GM_TEXT = re.compile(r'\(gm-text\s+([12])\s+"((?:\\.|[^"\\])*)"\)', re.DOTALL)
+_GM_TEXT = re.compile(
+    r"\((?:gm-text\s+(?P<legacy_mode>[12])|"
+    r"text(?P<semantic_mode>\s+#:mode\s+[12])?)\s+"
+    r'"(?P<text>(?:\\.|[^"\\])*)"\)',
+    re.DOTALL,
+)
 _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
 
@@ -83,9 +88,7 @@ class TranslationEntry:
     def wrapped_translation(self) -> tuple[str, ...]:
         return self.wrapped_translation_for()
 
-    def wrapped_translation_for(
-        self, default_box_width: int | None = None
-    ) -> tuple[str, ...]:
+    def wrapped_translation_for(self, default_box_width: int | None = None) -> tuple[str, ...]:
         box_width = self.box_width if self.box_width is not None else default_box_width
         if box_width is None:
             return (self.translation,)
@@ -128,9 +131,7 @@ class CompositeOccurrence:
     @property
     def anchors(self) -> tuple[TranslationAnchor, ...]:
         return tuple(
-            segment.anchor
-            for segment in self.segments
-            if isinstance(segment, CompositeTextSegment)
+            segment.anchor for segment in self.segments if isinstance(segment, CompositeTextSegment)
         )
 
 
@@ -215,8 +216,7 @@ class TranslationCatalog:
         tokens = tuple(_parse_token(item, index) for index, item in enumerate(raw_tokens, 1))
         entries = tuple(_parse_entry(item, index) for index, item in enumerate(raw_entries, 1))
         composites = tuple(
-            _parse_composite(item, index)
-            for index, item in enumerate(raw_composites, 1)
+            _parse_composite(item, index) for index, item in enumerate(raw_composites, 1)
         )
         _validate_catalog(files, tokens, entries, composites)
         return cls(version, game, files, tokens, entries, composites)
@@ -250,15 +250,11 @@ class TranslationCatalog:
 
         for token in self.tokens:
             for initializer in token.initializers:
-                _verify_token_initializer_source(
-                    by_name[initializer.file], token, initializer
-                )
+                _verify_token_initializer_source(by_name[initializer.file], token, initializer)
 
         for entry in self.entries:
             for anchor in entry.anchors:
-                records = {
-                    record.offset: record for record in by_name[anchor.file].text_records()
-                }
+                records = {record.offset: record for record in by_name[anchor.file].text_records()}
                 record = records.get(anchor.offset)
                 location = f"{anchor.file}:0x{anchor.offset:04x}"
                 if record is None:
@@ -280,8 +276,7 @@ class TranslationCatalog:
         for composite in self.composites:
             for occurrence in composite.occurrences:
                 records = {
-                    record.offset: record
-                    for record in by_name[occurrence.file].text_records()
+                    record.offset: record for record in by_name[occurrence.file].text_records()
                 }
                 resolved_spans: list[tuple[int, int]] = []
                 for segment in occurrence.segments:
@@ -289,9 +284,7 @@ class TranslationCatalog:
                         record = records.get(segment.anchor.offset)
                         location = f"{occurrence.file}:0x{segment.anchor.offset:04x}"
                         if record is None:
-                            raise TranslationError(
-                                f"{composite.id}: no text record at {location}"
-                            )
+                            raise TranslationError(f"{composite.id}: no text record at {location}")
                         if record.mode != segment.source_mode:
                             raise TranslationError(
                                 f"{composite.id}: source mode changed at {location}: "
@@ -305,10 +298,7 @@ class TranslationCatalog:
                         encoded_speaker = speakers_by_name[occurrence.file].get(
                             segment.anchor.offset
                         )
-                        if (
-                            encoded_speaker is not None
-                            and encoded_speaker != composite.speaker
-                        ):
+                        if encoded_speaker is not None and encoded_speaker != composite.speaker:
                             raise TranslationError(
                                 f"{composite.id}: encoded speaker at {location} is "
                                 f"{encoded_speaker!r}, catalog has {composite.speaker!r}"
@@ -317,9 +307,7 @@ class TranslationCatalog:
                     interpolation = interpolations_by_name[occurrence.file].get(
                         (segment.start, segment.end)
                     )
-                    location = (
-                        f"{occurrence.file}:0x{segment.start:04x}-0x{segment.end:04x}"
-                    )
+                    location = f"{occurrence.file}:0x{segment.start:04x}-0x{segment.end:04x}"
                     if interpolation is None or interpolation.token != segment.token:
                         raise TranslationError(
                             f"{composite.id}: interpolation changed at {location}"
@@ -349,9 +337,7 @@ class TranslationCatalog:
     def entry_count(self) -> int:
         return len(self.entries) + len(self.composites)
 
-    def physical_translations(
-        self, *, compiled: bool = False
-    ) -> tuple[PhysicalTranslation, ...]:
+    def physical_translations(self, *, compiled: bool = False) -> tuple[PhysicalTranslation, ...]:
         files = {file.file: file for file in self.files}
         tokens = {token.id: token for token in self.tokens}
         physical = []
@@ -379,9 +365,7 @@ class TranslationCatalog:
                     tokens,
                 )
                 translation_parts = _composite_parts(translation)
-                text_chunks = [
-                    value for kind, value in translation_parts if kind == "text"
-                ]
+                text_chunks = [value for kind, value in translation_parts if kind == "text"]
                 text_segments = [
                     segment
                     for segment in occurrence.segments
@@ -458,18 +442,14 @@ def build_translation_files(
         )
         original = GMFile.from_file(source_path)
         edited = _patch_gm_source(rkt_path.read_text(), original, entries)
+        if token_initializers:
+            edited = _patch_token_initializer_source(edited, original, token_initializers)
         rkt_path.write_text(edited)
         _run_juice(
             executable,
             ["-c", "-f", "-o", str(output_path), str(rkt_path)],
             output_path,
         )
-        if token_initializers:
-            output_path.write_bytes(
-                _patch_token_initializers(
-                    output_path.read_bytes(), original, token_initializers
-                )
-            )
         compiled = GMFile.from_file(output_path)
         _verify_compiled_file(
             file,
@@ -493,54 +473,109 @@ def build_translation_files(
     return tuple(built)
 
 
-def _patch_token_initializers(
-    data: bytes,
+def _patch_token_initializer_source(
+    source: str,
     original: GMFile,
-    initializers: tuple[
-        tuple[TranslationToken, TranslationTokenInitializer], ...
-    ],
-) -> bytes:
-    patched = data
-    original_instructions = original.audit().instructions
-    compiled_instructions = GMFile.from_bytes(data).audit().instructions
-    if len(original_instructions) != len(compiled_instructions):
-        raise TranslationError("compiled instruction sequence changed before initializer patch")
-    original_instruction_indexes = {
-        instruction.offset: index
-        for index, instruction in enumerate(original_instructions)
+    initializers: tuple[tuple[TranslationToken, TranslationTokenInitializer], ...],
+) -> str:
+    """Edit semantic string-copy nodes so Lime Juice can relocate the result."""
+    string_copy_instructions = tuple(
+        instruction for instruction in original.audit().instructions if instruction.opcode == 0x45
+    )
+    forms = _rkt_list_spans(source, "string-copy")
+    if len(forms) != len(string_copy_instructions):
+        raise TranslationError(
+            "lime-juice string-copy node count diverged from the original bytecode"
+        )
+    form_by_offset = {
+        instruction.offset: form
+        for instruction, form in zip(string_copy_instructions, forms, strict=True)
     }
+    edits: list[tuple[int, int, str]] = []
     for token, initializer in sorted(
         initializers,
         key=lambda item: item[1].offset,
     ):
         _verify_token_initializer_source(original, token, initializer)
-        source = _token_initializer_sequence(token, initializer, translated=False)
-        translation = _token_initializer_sequence(
-            token, initializer, translated=True
+        form = form_by_offset.get(initializer.offset)
+        if form is None:
+            raise TranslationError(
+                f"{token.id}: lime-juice omitted initializer at 0x{initializer.offset:04x}"
+            )
+        start, end, text = form
+        match = re.fullmatch(
+            r"\(string-copy\s+\(ref\s+(\d+)\s+(\d+)\)\s+"
+            r"\(inline-source\s+(\d+)((?:\s+\d+)+)\)\)",
+            text,
+            re.DOTALL,
         )
-        if len(source) != len(translation):
+        if match is None:
             raise TranslationError(
-                f"{token.id}: initialized source and translation byte lengths differ"
+                f"{token.id}: initializer is not a semantic inline string-copy node"
             )
-        instruction_index = original_instruction_indexes[initializer.offset]
-        compiled_offset = compiled_instructions[instruction_index].offset
-        actual = patched[compiled_offset : compiled_offset + len(source)]
-        if actual != source:
+        reference_token = int(match.group(1))
+        reference_slot = int(match.group(2))
+        trailing = int(match.group(3))
+        payload = tuple(int(value) for value in match.group(4).split())
+        expected = (14, 224, 0, 255, 1, *token.source.encode("cp932"))
+        actual = (reference_token, reference_slot, trailing, *payload)
+        if actual != expected:
             raise TranslationError(
-                f"{token.id}: compiled initializer changed at instruction "
-                f"{instruction_index} (0x{compiled_offset:04x})"
+                f"{token.id}: lime-juice initializer source changed at 0x{initializer.offset:04x}"
             )
-        patched = (
-            patched[:compiled_offset]
-            + translation
-            + patched[compiled_offset + len(source) :]
+        translated_payload = (255, 1, *token.translation.encode("ascii"))
+        replacement = (
+            f"(string-copy (ref {reference_token} {reference_slot}) "
+            f"(inline-source {trailing} "
+            + " ".join(str(value) for value in translated_payload)
+            + "))"
         )
-        if patched[compiled_offset : compiled_offset + len(translation)] != translation:
-            raise TranslationError(
-                f"{token.id}: translated initializer patch failed at "
-                f"0x{compiled_offset:04x}"
-            )
+        edits.append((start, end, replacement))
+    patched = source
+    for start, end, replacement in reversed(edits):
+        patched = patched[:start] + replacement + patched[end:]
     return patched
+
+
+def _rkt_list_spans(source: str, tag: str) -> tuple[tuple[int, int, str], ...]:
+    """Return balanced list spans beginning with the requested tag."""
+    needle = f"({tag}"
+    spans = []
+    position = 0
+    while True:
+        start = source.find(needle, position)
+        if start < 0:
+            break
+        after_tag = start + len(needle)
+        if after_tag < len(source) and not source[after_tag].isspace():
+            position = after_tag
+            continue
+        depth = 0
+        in_string = False
+        escaped = False
+        for end in range(start, len(source)):
+            character = source[end]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif character == "\\":
+                    escaped = True
+                elif character == '"':
+                    in_string = False
+                continue
+            if character == '"':
+                in_string = True
+            elif character == "(":
+                depth += 1
+            elif character == ")":
+                depth -= 1
+                if depth == 0:
+                    spans.append((start, end + 1, source[start : end + 1]))
+                    position = end + 1
+                    break
+        else:
+            raise TranslationError(f"unterminated ({tag} ...) node in lime-juice source")
+    return tuple(spans)
 
 
 def _patch_gm_source(
@@ -561,8 +596,14 @@ def _patch_gm_source(
     position = 0
     for match, record in zip(matches, records, strict=True):
         chunks.append(source[position : match.start()])
-        mode = int(match.group(1))
-        text = _unescape_rkt_string(match.group(2))
+        mode = (
+            int(match.group("legacy_mode"))
+            if match.group("legacy_mode") is not None
+            else int(match.group("semantic_mode").split()[-1])
+            if match.group("semantic_mode") is not None
+            else 1
+        )
+        text = _unescape_rkt_string(match.group("text"))
         if mode != record.mode or text != record.text:
             raise TranslationError(
                 f"lime-juice text order diverged at source offset 0x{record.offset:04x}"
@@ -571,9 +612,13 @@ def _patch_gm_source(
         if entry is None:
             chunks.append(match.group(0))
         else:
-            chunks.append(
-                f'(gm-text {entry.target_mode} "{_escape_rkt_string(entry.translation)}")'
-            )
+            escaped = _escape_rkt_string(entry.translation)
+            if match.group("legacy_mode") is not None:
+                chunks.append(f'(gm-text {entry.target_mode} "{escaped}")')
+            elif entry.target_mode == 1:
+                chunks.append(f'(text "{escaped}")')
+            else:
+                chunks.append(f'(text #:mode {entry.target_mode} "{escaped}")')
             used.add(record.offset)
         position = match.end()
     chunks.append(source[position:])
@@ -591,9 +636,7 @@ def _verify_compiled_file(
     original: GMFile,
     compiled: GMFile,
     entries: tuple[tuple[int, PhysicalTranslation], ...],
-    token_initializers: tuple[
-        tuple[TranslationToken, TranslationTokenInitializer], ...
-    ] = (),
+    token_initializers: tuple[tuple[TranslationToken, TranslationTokenInitializer], ...] = (),
 ) -> None:
     original_audit = original.audit()
     compiled_audit = compiled.audit()
@@ -603,35 +646,22 @@ def _verify_compiled_file(
         raise TranslationError(
             f"{file.file}: compiled structural audit has {len(compiled_audit.issues)} issue(s)"
         )
-    initializer_padding = _translated_initializer_padding_offsets(
-        compiled,
-        token_initializers,
-    )
     original_opcodes = tuple(instruction.opcode for instruction in original_audit.instructions)
-    compiled_opcodes = tuple(
-        instruction.opcode
-        for instruction in compiled_audit.instructions
-        if instruction.offset not in initializer_padding
-    )
+    compiled_opcodes = tuple(instruction.opcode for instruction in compiled_audit.instructions)
     if original_opcodes != compiled_opcodes:
         raise TranslationError(f"{file.file}: compiled instruction sequence changed")
+    _verify_translated_token_initializers(original, compiled, token_initializers)
     if len(original_audit.relocations) != len(compiled_audit.relocations):
         raise TranslationError(f"{file.file}: compiled relocation count changed")
-    for before, after in zip(
-        original_audit.relocations, compiled_audit.relocations, strict=True
-    ):
+    for before, after in zip(original_audit.relocations, compiled_audit.relocations, strict=True):
         external = not original.code_start <= before.target < len(original.data)
         if external and after.target != before.target:
             raise TranslationError(
                 f"{file.file}: external target changed from 0x{before.target:04x} "
                 f"to 0x{after.target:04x}"
             )
-    original_interpolations = tuple(
-        (item.token, item.slot) for item in original.interpolations()
-    )
-    compiled_interpolations = tuple(
-        (item.token, item.slot) for item in compiled.interpolations()
-    )
+    original_interpolations = tuple((item.token, item.slot) for item in original.interpolations())
+    compiled_interpolations = tuple((item.token, item.slot) for item in compiled.interpolations())
     if compiled_interpolations != original_interpolations:
         raise TranslationError(f"{file.file}: compiled interpolation sequence changed")
 
@@ -717,46 +747,38 @@ def _token_initializer_sequence(
 ) -> bytes:
     source = token.source.encode("cp932")
     value = token.translation.encode("ascii") if translated else source
-    padding = b"\x00" * (len(source) - len(value)) if translated else b""
     return (
         b"\x45\x0e\xe0\x00\xff\x01"
         + value
         + b"\x00\x00"
-        + padding
         + b"\x43\x0c"
         + initializer.slot.to_bytes(2, "little")
         + b"\x0e\xe0\x00\x00\x00"
     )
 
 
-def _translated_initializer_padding_offsets(
+def _verify_translated_token_initializers(
+    original: GMFile,
     compiled: GMFile,
-    initializers: tuple[
-        tuple[TranslationToken, TranslationTokenInitializer], ...
-    ],
-) -> frozenset[int]:
-    """Return zero-opcode padding used by shorter initialized translations."""
-    offsets: set[int] = set()
-    search_start = 0
+    initializers: tuple[tuple[TranslationToken, TranslationTokenInitializer], ...],
+) -> None:
+    original_instruction_indexes = {
+        instruction.offset: index for index, instruction in enumerate(original.audit().instructions)
+    }
+    compiled_instructions = compiled.audit().instructions
     for token, initializer in sorted(
         initializers,
         key=lambda item: item[1].offset,
     ):
-        source_width = len(token.source.encode("cp932"))
-        translation_width = len(token.translation.encode("ascii"))
-        padding_width = source_width - translation_width
-        if padding_width <= 0:
-            continue
+        instruction_index = original_instruction_indexes[initializer.offset]
+        compiled_offset = compiled_instructions[instruction_index].offset
         sequence = _token_initializer_sequence(token, initializer, translated=True)
-        sequence_start = compiled.data.find(sequence, search_start)
-        if sequence_start < 0:
+        actual = compiled.data[compiled_offset : compiled_offset + len(sequence)]
+        if actual != sequence:
             raise TranslationError(
-                f"{token.id}: translated initializer sequence is missing"
+                f"{token.id}: compiled initializer mismatch at instruction "
+                f"{instruction_index} (0x{compiled_offset:04x})"
             )
-        padding_start = sequence_start + 6 + translation_width + 2
-        offsets.update(range(padding_start, padding_start + padding_width))
-        search_start = sequence_start + len(sequence)
-    return frozenset(offsets)
 
 
 def _verify_token_initializer_source(
@@ -767,12 +789,8 @@ def _verify_token_initializer_source(
     expected = _token_initializer_sequence(token, initializer, translated=False)
     actual = gm.data[initializer.offset : initializer.offset + len(expected)]
     location = f"{initializer.file}:0x{initializer.offset:04x}"
-    if initializer.offset not in {
-        instruction.offset for instruction in gm.audit().instructions
-    }:
-        raise TranslationError(
-            f"{token.id}: token initializer is not an instruction at {location}"
-        )
+    if initializer.offset not in {instruction.offset for instruction in gm.audit().instructions}:
+        raise TranslationError(f"{token.id}: token initializer is not an instruction at {location}")
     if actual != expected:
         raise TranslationError(f"{token.id}: token initializer changed at {location}")
 
@@ -784,16 +802,12 @@ def _string(table: dict[str, object], key: str, *, context: str = "catalog") -> 
     return value
 
 
-def _optional_string(
-    table: dict[str, object], key: str, *, context: str = "catalog"
-) -> str:
+def _optional_string(table: dict[str, object], key: str, *, context: str = "catalog") -> str:
     value = table.get(key)
     if value is None:
         return ""
     if not isinstance(value, str) or not value:
-        raise TranslationError(
-            f"{context}.{key} must be omitted or a non-empty string"
-        )
+        raise TranslationError(f"{context}.{key} must be omitted or a non-empty string")
     return value
 
 
@@ -843,9 +857,7 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         for item_index, item in enumerate(raw_initializers, 1)
     )
     if max_width < 1 or max_width < len(translation):
-        raise TranslationError(
-            f"{context}.max_width must fit the default translation"
-        )
+        raise TranslationError(f"{context}.max_width must fit the default translation")
     if any(character in source + translation for character in "⟦⟧\n\x00"):
         raise TranslationError(
             f"{context} source and translation must be single-line literal values"
@@ -857,10 +869,6 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         raise TranslationError(
             f"{context} source must be CP932 and translation must be ASCII"
         ) from error
-    if initializers and len(translation.encode("ascii")) > len(source.encode("cp932")):
-        raise TranslationError(
-            f"{context} initialized translation must not exceed the source byte length"
-        )
     return TranslationToken(token_id, source, translation, max_width, initializers)
 
 
@@ -981,12 +989,8 @@ def _parse_composite_segment(
         if start < 0 or end <= start:
             raise TranslationError(f"{context} token span must be non-empty")
         sha256 = _string(value, "sha256", context=context).lower()
-        if len(sha256) != 64 or any(
-            character not in "0123456789abcdef" for character in sha256
-        ):
-            raise TranslationError(
-                f"{context}.sha256 must contain 64 hexadecimal characters"
-            )
+        if len(sha256) != 64 or any(character not in "0123456789abcdef" for character in sha256):
+            raise TranslationError(f"{context}.sha256 must contain 64 hexadecimal characters")
         return CompositeTokenSegment(token, start, end, sha256)
     raise TranslationError(f"{context}.kind must be 'text' or 'token'")
 
@@ -1049,15 +1053,11 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
     return entry
 
 
-def _parse_anchors(
-    table: dict[str, object], context: str
-) -> tuple[TranslationAnchor, ...]:
+def _parse_anchors(table: dict[str, object], context: str) -> tuple[TranslationAnchor, ...]:
     raw_anchors = table.get("anchors")
     has_single = "file" in table or "offset" in table
     if raw_anchors is not None and has_single:
-        raise TranslationError(
-            f"{context} must use either file/offset or anchors, not both"
-        )
+        raise TranslationError(f"{context} must use either file/offset or anchors, not both")
     if raw_anchors is None:
         file = _string(table, "file", context=context)
         offset = _integer(table, "offset", context=context)
@@ -1144,9 +1144,7 @@ def _wrap_composite(
     return wrapped
 
 
-def _composite_visual_length(
-    value: str, tokens: dict[str, TranslationToken]
-) -> int:
+def _composite_visual_length(value: str, tokens: dict[str, TranslationToken]) -> int:
     return len(
         _TOKEN_MARKER.sub(
             lambda match: "x" * tokens[match.group(1)].max_width,
@@ -1180,14 +1178,11 @@ def _validate_catalog(
                     f"renders {slot_token or 'no known token'}"
                 )
             if initializer.file not in known_files:
-                raise TranslationError(
-                    f"{token.id}: unknown initializer file {initializer.file}"
-                )
+                raise TranslationError(f"{token.id}: unknown initializer file {initializer.file}")
             anchor = (initializer.file, initializer.offset)
             if anchor in initializer_anchors:
                 raise TranslationError(
-                    "duplicate token initializer: "
-                    f"{initializer.file}:0x{initializer.offset:04x}"
+                    f"duplicate token initializer: {initializer.file}:0x{initializer.offset:04x}"
                 )
             initializer_anchors.add(anchor)
     ids: set[str] = set()
@@ -1198,14 +1193,11 @@ def _validate_catalog(
         ids.add(entry.id)
         for entry_anchor in entry.anchors:
             if entry_anchor.file not in known_files:
-                raise TranslationError(
-                    f"{entry.id}: unknown source file {entry_anchor.file}"
-                )
+                raise TranslationError(f"{entry.id}: unknown source file {entry_anchor.file}")
             anchor = (entry_anchor.file, entry_anchor.offset)
             if anchor in anchors:
                 raise TranslationError(
-                    "duplicate translation anchor: "
-                    f"{entry_anchor.file}:0x{entry_anchor.offset:04x}"
+                    f"duplicate translation anchor: {entry_anchor.file}:0x{entry_anchor.offset:04x}"
                 )
             anchors.add(anchor)
         effective_widths = {
@@ -1256,8 +1248,7 @@ def _validate_catalog(
                     f"{entry.id}: mode 2 translation must contain printable ASCII or newlines"
                 )
             if entry.target_mode == 1 and any(
-                ord(character) < 0x20 and character != "\n"
-                for character in value
+                ord(character) < 0x20 and character != "\n" for character in value
             ):
                 raise TranslationError(
                     f"{entry.id}: mode 1 translation contains an unsupported control"
@@ -1265,9 +1256,7 @@ def _validate_catalog(
 
         for occurrence in entry.occurrences:
             if occurrence.file not in known_files:
-                raise TranslationError(
-                    f"{entry.id}: unknown source file {occurrence.file}"
-                )
+                raise TranslationError(f"{entry.id}: unknown source file {occurrence.file}")
             occurrence_parts = tuple(
                 ("text", segment.source)
                 if isinstance(segment, CompositeTextSegment)
@@ -1279,9 +1268,7 @@ def _validate_catalog(
                     f"{entry.id}: occurrence structure differs from canonical source"
                 )
             if occurrence_parts != source_parts:
-                raise TranslationError(
-                    f"{entry.id}: occurrence text differs from canonical source"
-                )
+                raise TranslationError(f"{entry.id}: occurrence text differs from canonical source")
             for segment in occurrence.segments:
                 if isinstance(segment, CompositeTextSegment):
                     anchor = (segment.anchor.file, segment.anchor.offset)
@@ -1293,9 +1280,7 @@ def _validate_catalog(
                     anchors.add(anchor)
                     continue
                 if segment.token not in tokens_by_id:
-                    raise TranslationError(
-                        f"{entry.id}: unknown authoring token {segment.token!r}"
-                    )
+                    raise TranslationError(f"{entry.id}: unknown authoring token {segment.token!r}")
                 span = (occurrence.file, segment.start, segment.end)
                 if span in interpolation_spans:
                     raise TranslationError(

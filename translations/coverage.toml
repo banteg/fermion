@@ -386,3 +386,22 @@ end = 0x257a
 file = "DISKB/F0017.MES"
 start = 0x0672
 end = 0x360b
+
+[[scopes]]
+id = "nanase-recruitment-and-genetic-sample"
+description = "Every decoded F0018, F0019, and F0020 text record from Nanase's arrival through Connie's recruitment request, the genetic-sample encounter, and its aftermath."
+
+[[scopes.ranges]]
+file = "DISKB/F0018.MES"
+start = 0x0431
+end = 0x145d
+
+[[scopes.ranges]]
+file = "DISKB/F0019.MES"
+start = 0x05e7
+end = 0x20e2
+
+[[scopes.ranges]]
+file = "DISKC/F0020.MES"
+start = 0x043a
+end = 0x4b8e
