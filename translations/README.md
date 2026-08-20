@@ -173,9 +173,9 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 11,638 canonical records covering 15,677 physical
+The current catalog contains 12,573 canonical records covering 16,964 physical
 anchors across `MAIN.MES`, `FOP.MES`, and the translated story through the
-`F0038.MES` facility escape.
+`F0042.MES` ending.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -408,6 +408,19 @@ adult Marna branches, every spoken refusal, request not to continue, head
 shake, physical withdrawal, and restraint remains distinct from later assent
 or participation. No trustworthy live facility state exists yet, so the scope
 remains `qa-ready` pending a human playtest and native fixture capture.
+
+The twenty-first closed scope is `future-self-reveal-and-farewell`: all 1,287
+physical text records in `F0039.MES` through `F0042.MES`. They contain 978
+managed canonical source lines; all anchors are translated and none are
+excluded or pending. The catalog contributes 935 records after context-safe
+duplicate consolidation. The slice preserves the four-hour time-slip clue,
+the reveal that Dr. Kanzaki is the adult patient's future self, the concealed
+cold-sleep chronology, Dr. Marie's coercion and reproductive threat, adult
+Marna's intervention, and the choice to disclose both doctors' conduct after
+returning to 2296. The final departure, genetic-repair epilogue, and
+undeliverable letter remain one continuous ending. No trustworthy live ending
+state exists yet, so the scope remains `qa-ready` pending a human playtest and
+native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

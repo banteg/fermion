@@ -627,3 +627,27 @@ end = 0x0ee7
 file = "DISKD/F0038.MES"
 start = 0x044f
 end = 0x12d3
+
+[[scopes]]
+id = "future-self-reveal-and-farewell"
+description = "Every decoded F0039 through F0042 text record covering Dr. Kanzaki's identity reveal and cold-sleep history, Dr. Marie's confrontation, Marna's intervention, the return to 2296, and the final letter."
+
+[[scopes.ranges]]
+file = "DISKD/F0039.MES"
+start = 0x073e
+end = 0x2e4d
+
+[[scopes.ranges]]
+file = "DISKD/F0040.MES"
+start = 0x07b9
+end = 0x572d
+
+[[scopes.ranges]]
+file = "DISKD/F0041.MES"
+start = 0x0af5
+end = 0x3778
+
+[[scopes.ranges]]
+file = "DISKD/F0042.MES"
+start = 0x0438
+end = 0x1f4a
