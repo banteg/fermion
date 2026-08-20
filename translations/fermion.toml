@@ -8724,7 +8724,7 @@ source = "ヒトを越える生物を造り出してしまった人間は、ミ�
 translation = "Humans had created beings who surpassed them, so they apparently ended production before mutants could turn against humanity."
 speaker = "Connie"
 context = "Connie summarizes why mutant creation was halted."
-status = "translated"
+status = "runtime-verified"
 notes = "The source shifts 人間 and ヒト; English uses humans/humanity to preserve the species framing."
 
 [[entries]]

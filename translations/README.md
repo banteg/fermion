@@ -225,7 +225,7 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is runtime evidence, not a claim of final editorial approval.
 
-At this checkpoint, 12,736 records are `translated`, 253 are `reviewed`, and 14
+At this checkpoint, 12,735 records are `translated`, 253 are `reviewed`, and 15
 are `runtime-verified`. The reviewed set is limited to records whose wording
 changed during the dedicated Opus source-and-context passes over F0039-F0042
 and the token-initial prose audit; unchanged neighboring records were not

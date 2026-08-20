@@ -973,7 +973,7 @@ checkpoint:
    surfaces, and the period Silky's catalog are represented in the canonical
    catalog or explicitly source-anchored coverage exclusions.
 3. The catalog contains 13,003 canonical records over 17,680 physical anchors
-   in 76 MES files: 12,736 `translated`, 253 `reviewed`, and 14
+   in 76 MES files: 12,735 `translated`, 253 `reviewed`, and 15
    `runtime-verified`.
 4. The remaining work is dedicated linguistic review of the still-translated
    records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,
