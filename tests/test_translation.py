@@ -33,7 +33,13 @@ def test_editor_preset_patch_uses_mode_one_safe_fullwidth_strings() -> None:
         "name:friend-2": ("Hiroko", "Hina", "Erika", "Mia"),
     }
     tokens = tuple(
-        TranslationToken(token_id, "source", choices[0], 12, choices)
+        TranslationToken(
+            token_id,
+            "source",
+            choices[0],
+            max(len(_runtime_token_bytes(choice)) for choice in choices),
+            choices,
+        )
         for token_id, choices in presets.items()
     )
     source = """prefix
@@ -55,6 +61,83 @@ suffix
 
 def test_runtime_token_bytes_are_fullwidth_cp932() -> None:
     assert _runtime_token_bytes("Hiroko") == "Ｈｉｒｏｋｏ".encode("cp932")
+
+
+def write_token_catalog(
+    tmp_path,
+    *,
+    token_id: str = "name:mother",
+    translation: str = "Yuki",
+    presets: tuple[str, ...] = (),
+):
+    preset_line = ""
+    if presets:
+        encoded = ", ".join(f'"{preset}"' for preset in presets)
+        preset_line = f"presets = [{encoded}]\n"
+    catalog_path = tmp_path / "token-catalog.toml"
+    catalog_path.write_text(
+        f'''version = 5
+game = "Test"
+
+[[files]]
+file = "DISKA/SCENE.MES"
+source = "disk-a/SCENE.MES"
+sha256 = "{'0' * 64}"
+
+[[tokens]]
+id = "{token_id}"
+source = "由貴"
+translation = "{translation}"
+{preset_line}
+[[entries]]
+id = "scene-line"
+file = "DISKA/SCENE.MES"
+offset = 0x0002
+source_mode = 2
+target_mode = 2
+source = "Original"
+translation = "Translated"
+speaker = "narrator"
+context = "Synthetic scene."
+status = "draft"
+'''
+    )
+    return catalog_path
+
+
+def test_catalog_derives_token_display_width_from_runtime_encoding(tmp_path) -> None:
+    catalog_path = write_token_catalog(
+        tmp_path,
+        presets=("Yuki", "May", "Helen", "Olivia"),
+    )
+
+    [token] = TranslationCatalog.from_file(catalog_path).tokens
+
+    assert token.max_width == 12
+
+
+def test_catalog_rejects_token_default_exceeding_runtime_slot(tmp_path) -> None:
+    catalog_path = write_token_catalog(tmp_path, translation="Bartholomew")
+
+    with pytest.raises(TranslationError, match="exceeds the 14-byte runtime slot"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_catalog_rejects_token_preset_exceeding_runtime_slot(tmp_path) -> None:
+    catalog_path = write_token_catalog(
+        tmp_path,
+        presets=("Yuki", "Bartholomew"),
+    )
+
+    with pytest.raises(TranslationError, match="exceeds the 14-byte runtime slot"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_catalog_rejects_duplicate_token_presets(tmp_path) -> None:
+    catalog_path = write_token_catalog(tmp_path, presets=("Yuki", "Yuki"))
+
+    with pytest.raises(TranslationError, match="presets must be distinct"):
+        TranslationCatalog.from_file(catalog_path)
 
 
 def test_wrap_text_preserves_whitespace_only_layout_records() -> None:
@@ -304,13 +387,12 @@ game = "Test"
 file = "DISKA/SCENE.MES"
 source = "disk-a/SCENE.MES"
 sha256 = "{hashlib.sha256(source).hexdigest()}"
-box_width = 8
+box_width = 14
 
 [[tokens]]
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
 
 [[composites]]
 id = "scene-greeting"
@@ -367,7 +449,6 @@ def test_schema_five_rejects_missing_translation_token(tmp_path) -> None:
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
 
 [[composites]]
 id = "broken"
@@ -420,7 +501,6 @@ sha256 = "{hashlib.sha256(source).hexdigest()}"
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
 initializers = [
   {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x0404 }},
   {{ file = "DISKA/SCENE.MES", offset = 0x{second_initializer_offset:04x}, slot = 0x0404 }},
@@ -485,7 +565,6 @@ sha256 = "{hashlib.sha256(source).hexdigest()}"
 id = "term:slot-1"
 source = "おま○こ"
 translation = "cat"
-max_width = 3
 initializers = [
   {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x042e }},
 ]
@@ -554,7 +633,6 @@ sha256 = "{hashlib.sha256(source).hexdigest()}"
 id = "name:friend-2"
 source = "弘子"
 translation = "Hiroko"
-max_width = 6
 initializers = [
   {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x0420 }},
 ]
@@ -611,7 +689,6 @@ sha256 = "{hashlib.sha256(source).hexdigest()}"
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
 initializers = [
   {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x03f6 }},
 ]

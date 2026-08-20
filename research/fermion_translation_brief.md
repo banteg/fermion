@@ -481,7 +481,10 @@ term buffers are 16 bytes, allowing seven full-width characters plus the
 terminator. Both mirrored editors replace the legacy character grid with four
 cataloged presets and copy the selected value into the original runtime slot;
 the slots, interpolation opcodes, and external control-flow targets remain
-unchanged.
+unchanged. Catalog loading derives capacity from those adjacent slot addresses,
+checks the reset value and every distinct preset including its terminator, and
+derives the wrapping width from the encoded choices rather than trusting a
+second hand-maintained width field.
 
 ---
 

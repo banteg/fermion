@@ -500,6 +500,7 @@ def _patch_token_initializer_source(
         initializers,
         key=lambda item: item[1].offset,
     ):
+        _validate_runtime_token(token)
         _verify_token_initializer_source(original, token, initializer)
         form = form_by_offset.get(initializer.offset)
         if form is None:
@@ -547,7 +548,6 @@ _EDITOR_PRESET_LAYOUTS = {
         "start_label": 2531,
         "end_label": 2723,
         "menu_ref": 2002,
-        "capacity": 14,
         "destinations": (
             ("name:mother", 1000),
             ("name:older-sister", 1014),
@@ -555,19 +555,39 @@ _EDITOR_PRESET_LAYOUTS = {
             ("name:friend-1", 1042),
             ("name:friend-2", 1056),
         ),
+        "slot_end": 1070,
     },
     "MONO.MES": {
         "token_prefix": "term:",
         "start_label": 1890,
         "end_label": 2082,
         "menu_ref": 2002,
-        "capacity": 16,
         "destinations": (
             ("term:slot-1", 1070),
             ("term:slot-2", 1086),
         ),
+        "slot_end": 1102,
     },
 }
+
+
+def _runtime_token_capacities() -> dict[str, int]:
+    """Derive each fixed string buffer's capacity from adjacent slot addresses."""
+    capacities: dict[str, int] = {}
+    for layout in _EDITOR_PRESET_LAYOUTS.values():
+        destinations = tuple(layout["destinations"])
+        boundaries = (*destinations[1:], (None, int(layout["slot_end"])))
+        for (token_id, start), (_next_token_id, end) in zip(
+            destinations, boundaries, strict=True
+        ):
+            capacity = int(end) - int(start)
+            if capacity < 2 or token_id in capacities:
+                raise AssertionError(f"invalid runtime token layout for {token_id}")
+            capacities[str(token_id)] = capacity
+    return capacities
+
+
+_RUNTIME_TOKEN_CAPACITIES = _runtime_token_capacities()
 
 
 def _runtime_token_bytes(value: str) -> bytes:
@@ -584,6 +604,28 @@ def _runtime_token_bytes(value: str) -> bytes:
                 f"runtime token preset contains unsupported character {character!r}"
             )
     return "".join(converted).encode("cp932")
+
+
+def _validate_runtime_token(token: TranslationToken) -> None:
+    """Validate a catalog token against its fixed runtime buffer."""
+    capacity = _RUNTIME_TOKEN_CAPACITIES.get(token.id)
+    if capacity is None:
+        raise TranslationError(f"{token.id}: no fixed runtime slot is defined")
+    values = (token.translation, *token.presets)
+    payloads = tuple(_runtime_token_bytes(value) for value in values)
+    derived_width = max(len(payload) for payload in payloads)
+    if token.max_width != derived_width:
+        raise TranslationError(
+            f"{token.id}: display width must be derived as {derived_width}, "
+            f"not {token.max_width}"
+        )
+    if len(token.presets) != len(set(token.presets)):
+        raise TranslationError(f"{token.id}: presets must be distinct")
+    for value, payload in zip(values, payloads, strict=True):
+        if len(payload) + 1 > capacity:
+            raise TranslationError(
+                f"{token.id}: {value!r} exceeds the {capacity}-byte runtime slot"
+            )
 
 
 def _preset_string_copy(value: str, destination: int) -> list[str]:
@@ -615,11 +657,7 @@ def _patch_editor_preset_source(
     for token in editor_tokens.values():
         if len(token.presets) != 4:
             raise TranslationError(f"{token.id}: editor token must define four presets")
-        for preset in token.presets:
-            if len(_runtime_token_bytes(preset)) + 1 > int(layout["capacity"]):
-                raise TranslationError(
-                    f"{token.id}: preset {preset!r} exceeds the runtime slot"
-                )
+        _validate_runtime_token(token)
 
     start_label = int(layout["start_label"])
     end_label = int(layout["end_label"])
@@ -1032,7 +1070,8 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         raise TranslationError(f"{context}.id has invalid token grammar")
     source = _string(value, "source", context=context)
     translation = _string(value, "translation", context=context)
-    max_width = _integer(value, "max_width", context=context)
+    if "max_width" in value:
+        raise TranslationError(f"{context}.max_width is derived from the encoded choices")
     raw_presets = value.get("presets", [])
     if not isinstance(raw_presets, list):
         raise TranslationError(f"{context}.presets must be an array of strings")
@@ -1047,8 +1086,6 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         _parse_token_initializer(item, item_index, context)
         for item_index, item in enumerate(raw_initializers, 1)
     )
-    if max_width < 1 or any(len(item) > max_width for item in (translation, *presets)):
-        raise TranslationError(f"{context}.max_width must fit the default and every preset")
     if presets and presets[0] != translation:
         raise TranslationError(f"{context}.presets must begin with the default translation")
     if any(character in source + translation + "".join(presets) for character in "⟦⟧\n\x00"):
@@ -1064,7 +1101,10 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         raise TranslationError(
             f"{context} source must be CP932 and translation/presets must be ASCII"
         ) from error
-    return TranslationToken(token_id, source, translation, max_width, presets, initializers)
+    max_width = max(len(_runtime_token_bytes(item)) for item in (translation, *presets))
+    token = TranslationToken(token_id, source, translation, max_width, presets, initializers)
+    _validate_runtime_token(token)
+    return token
 
 
 def _parse_token_initializer(

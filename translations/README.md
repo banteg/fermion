@@ -112,15 +112,17 @@ text-opcode anchor, and leaves the copy/render instructions unchanged. Only
 records separated by one of these recognized token spans may be merged for
 display; ordinary adjacent records keep a one-to-one source/target mapping.
 
-`[[tokens]]` records the Japanese default, ASCII authoring default, maximum
-display width, four tested editor presets, and any reset initializer to patch
-after decompilation. Runtime name and term slots are rendered by GM's mode-1
-indirect-text opcode, so the builder stores the ASCII choices as full-width
-CP932 glyphs while leaving their catalog spelling readable. Name slots are 14
-bytes and therefore fit at most six such characters plus a terminator; Lime
-Juice can relocate a longer initializer instruction, but it does not enlarge
-the fixed runtime slot. `max_width` counts the resulting display columns, not
-ASCII bytes.
+`[[tokens]]` records the Japanese default, ASCII authoring default, four tested
+editor presets, and any reset initializer to patch after decompilation. Runtime
+name and term slots are rendered by GM's mode-1 indirect-text opcode, so the
+builder stores the ASCII choices as full-width CP932 glyphs while leaving their
+catalog spelling readable. It derives both the fixed byte capacity from the
+adjacent runtime slot addresses and the wrapping width from the encoded shipped
+choices. Name slots are 14 bytes and therefore fit at most six such characters
+plus a terminator; Lime Juice can relocate a longer initializer instruction,
+but it does not enlarge the fixed runtime slot. Term slots are 16 bytes and fit
+at most seven characters. The default and all presets are capacity-checked and
+must be distinct.
 An initializer's persistent slot must map to the same authoring token. Each
 `[[composites]]` table then stores one merged source/translation pair and one or
 more physical occurrences. Text segments retain their pristine opcode offset,
@@ -133,7 +135,6 @@ rejects missing, reordered, duplicated, unknown, or leaked tokens.
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 12
 presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },

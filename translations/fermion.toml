@@ -460,7 +460,6 @@ box_width = 61
 id = "name:mother"
 source = "由貴"
 translation = "Yuki"
-max_width = 12
 presets = ["Yuki", "May", "Helen", "Olivia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18c0, slot = 0x03e8 },
@@ -470,7 +469,6 @@ initializers = [
 id = "name:older-sister"
 source = "瑠璃"
 translation = "Ruri"
-max_width = 12
 presets = ["Ruri", "Ruby", "Alice", "Chloe"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18d5, slot = 0x03f6 },
@@ -480,7 +478,6 @@ initializers = [
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 12
 presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
@@ -490,7 +487,6 @@ initializers = [
 id = "name:friend-1"
 source = "陽子"
 translation = "Yoko"
-max_width = 12
 presets = ["Yoko", "Yuna", "Maria", "Ava"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1901, slot = 0x0412 },
@@ -500,7 +496,6 @@ initializers = [
 id = "name:friend-2"
 source = "弘子"
 translation = "Hiroko"
-max_width = 12
 presets = ["Hiroko", "Hina", "Erika", "Mia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1916, slot = 0x0420 },
@@ -510,7 +505,6 @@ initializers = [
 id = "term:slot-1"
 source = "おま○こ"
 translation = "pussy"
-max_width = 12
 presets = ["pussy", "vagina", "cunt", "vulva"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b37, slot = 0x042e },
@@ -520,8 +514,7 @@ initializers = [
 id = "term:slot-2"
 source = "お○んち○"
 translation = "penis"
-max_width = 14
-presets = ["penis", "penis", "cock", "phallus"]
+presets = ["penis", "dick", "cock", "phallus"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b50, slot = 0x043e },
 ]
