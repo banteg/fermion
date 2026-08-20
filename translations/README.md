@@ -120,6 +120,13 @@ text-opcode anchor, and leaves the copy/render instructions unchanged. Only
 records separated by one of these recognized token spans may be merged for
 display; ordinary adjacent records keep a one-to-one source/target mapping.
 
+The physical segment pattern can force a source-initial token to remain first
+in English. Do not disguise that constraint with a `NAME--I ...` construction.
+Write a grammatical token-led clause (`NAME gets ...`, `NAME's ... is ...`) or,
+when the source itself breaks off, a genuine thought pause. Moving a token by
+inserting new text opcodes remains out of scope until that renderer change has
+its own proven and logged compatibility contract.
+
 `[[tokens]]` records the Japanese default, ASCII authoring default, four tested
 editor presets, and any reset initializer to patch after decompilation. Runtime
 name and term slots are rendered by GM's mode-1 indirect-text opcode, so the

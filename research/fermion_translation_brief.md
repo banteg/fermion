@@ -464,6 +464,13 @@ Japanese can insert a bare name almost anywhere. English may need:
 
 A raw byte substitution cannot automatically supply apostrophes, articles, or comma spacing. The English script should keep punctuation outside the variable and avoid constructions whose grammar depends on the spelling of the chosen name.
 
+The preserved physical segment pattern can require a source-initial token to
+remain first in English. Do not paper over that constraint with `NAME--I ...`.
+Use a grammatical token-led clause such as `NAME gets ...` or `NAME's ... is
+...`; reserve an ellipsis for a real hesitation or fragment in the source. Do
+not insert new text opcodes merely to move a token unless that renderer change
+is separately designed, compatibility-tested, and logged per affected anchor.
+
 Fixed Japanese surnames also precede editable given-name tokens where English normally reverses them. Treat forms such as `鷹野 + ⟦name:dear-person⟧`, `七瀬 + ⟦name:friend-2⟧`, and `速水 + ⟦name:friend-1⟧` as explicit schema-5 grammar and design tests. Preserve the existing runtime tokens; before claiming natural English order, prove a reversible segment mapping or an intentionally scoped renderer patch. Do not invent parallel preassembled variables or accept Japanese order silently.
 
 ### Locked name-editor policy

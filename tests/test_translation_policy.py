@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from fermion.translation import TranslationCatalog
@@ -142,3 +143,6 @@ def test_locked_translation_policy_contracts() -> None:
         metadata = f"{item.context}\n{item.notes}".lower()
         for phrase in forbidden_metadata:
             assert phrase not in metadata, f"{item.id}: {phrase}"
+
+        token_initial_dash = re.match(r"^⟦[^⟧]+⟧[^\n]*--I\b", item.translation)
+        assert token_initial_dash is None, f"{item.id}: token-initial dash workaround"
