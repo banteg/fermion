@@ -454,3 +454,42 @@ end = 0x4a9d
 file = "DISKC/F0026R.MES"
 start = 0x04e3
 end = 0x5627
+
+[[scopes]]
+id = "kanzaki-homecoming-and-apparent-betrayal"
+description = "Every decoded F0027 through F0033 text record from Dr. Kanzaki's arrival at the Takano home through the disappearance, capture, apparent betrayal, and Connie's first duct-escape plan."
+
+[[scopes.ranges]]
+file = "DISKC/F0027.MES"
+start = 0x053b
+end = 0x31ed
+
+[[scopes.ranges]]
+file = "DISKC/F0028.MES"
+start = 0x040a
+end = 0x272f
+
+[[scopes.ranges]]
+file = "DISKC/F0029.MES"
+start = 0x05af
+end = 0x470f
+
+[[scopes.ranges]]
+file = "DISKC/F0030.MES"
+start = 0x0544
+end = 0x1d16
+
+[[scopes.ranges]]
+file = "DISKC/F0031.MES"
+start = 0x0256
+end = 0x0aa6
+
+[[scopes.ranges]]
+file = "DISKC/F0032.MES"
+start = 0x0789
+end = 0x31a2
+
+[[scopes.ranges]]
+file = "DISKC/F0033.MES"
+start = 0x051a
+end = 0x17fb

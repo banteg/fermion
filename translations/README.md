@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 8,268 canonical records covering 11,528 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0026L/R.MES`.
+The current catalog contains 9,605 canonical records covering 13,310 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0033.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -379,6 +379,19 @@ disclosed adult-age policy applies to every character depicted sexually, while
 the archival context continues to document the source's school status. No
 trustworthy live F0021-F0026 state exists yet, so the scope remains `qa-ready`
 pending a human playtest and native fixture capture.
+
+The nineteenth closed scope is `kanzaki-homecoming-and-apparent-betrayal`: all
+1,782 physical text records in `F0027.MES` through `F0033.MES`, from Dr.
+Kanzaki's arrival at the Takano home through the disappearance, altered return
+coordinates, Connie's capture, the apparent betrayal, and the first duct-escape
+plan. They contain 1,409 managed canonical source lines; all anchors are
+translated and none are excluded or pending. The catalog contributes 1,337
+records after context-safe duplicate consolidation. Reveal clues remain
+unexplained at first presentation,
+while the abduction, capture drug, reproductive-experiment threat, and lobotomy
+threat stay explicit. The disclosed adult-age policy applies to all sexual
+material. No trustworthy live F0027-F0033 state exists yet, so the scope
+remains `qa-ready` pending a human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,
