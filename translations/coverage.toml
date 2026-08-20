@@ -493,3 +493,137 @@ end = 0x31a2
 file = "DISKC/F0033.MES"
 start = 0x051a
 end = 0x17fb
+
+[[scopes]]
+id = "facility-scouting-and-escape"
+description = "Every decoded text record in the F0034 facility graph through F0038, covering Connie's vent scouting, adult Marna branches, the fake collar, fuel and wheelchair preparations, the midnight escape, and the return to the past."
+
+[[scopes.ranges]]
+file = "DISKD/F003400.MES"
+start = 0x05bc
+end = 0x2539
+
+[[scopes.ranges]]
+file = "DISKD/F0034001.MES"
+start = 0x081b
+end = 0x0f26
+
+[[scopes.ranges]]
+file = "DISKD/F0034002.MES"
+start = 0x0a7c
+end = 0x3b77
+
+[[scopes.ranges]]
+file = "DISKD/F0034003.MES"
+start = 0x0913
+end = 0x2dfb
+
+[[scopes.ranges]]
+file = "DISKD/F003401.MES"
+start = 0x02ba
+end = 0x03cc
+
+[[scopes.ranges]]
+file = "DISKD/F003402.MES"
+start = 0x02bc
+end = 0x0864
+
+[[scopes.ranges]]
+file = "DISKD/F003403.MES"
+start = 0x040b
+end = 0x12bd
+
+[[scopes.ranges]]
+file = "DISKD/F003404.MES"
+start = 0x0513
+end = 0x1119
+
+[[scopes.ranges]]
+file = "DISKD/F003405.MES"
+start = 0x0256
+end = 0x03c7
+
+[[scopes.ranges]]
+file = "DISKD/F003406.MES"
+start = 0x01e2
+end = 0x031f
+
+[[scopes.ranges]]
+file = "DISKD/F003407.MES"
+start = 0x0252
+end = 0x040d
+
+[[scopes.ranges]]
+file = "DISKD/F003408.MES"
+start = 0x047f
+end = 0x0f09
+
+[[scopes.ranges]]
+file = "DISKD/F003409.MES"
+start = 0x01d4
+end = 0x03ae
+
+[[scopes.ranges]]
+file = "DISKD/F003410.MES"
+start = 0x06d6
+end = 0x170f
+
+[[scopes.ranges]]
+file = "DISKD/F0034101.MES"
+start = 0x07a8
+end = 0x2c67
+
+[[scopes.ranges]]
+file = "DISKD/F003411.MES"
+start = 0x01de
+end = 0x039c
+
+[[scopes.ranges]]
+file = "DISKD/F003412.MES"
+start = 0x01e0
+end = 0x0453
+
+[[scopes.ranges]]
+file = "DISKD/F003413.MES"
+start = 0x01ca
+end = 0x039c
+
+[[scopes.ranges]]
+file = "DISKD/F003414.MES"
+start = 0x01da
+end = 0x0388
+
+[[scopes.ranges]]
+file = "DISKD/F003415.MES"
+start = 0x0264
+end = 0x03f4
+
+[[scopes.ranges]]
+file = "DISKD/F003416.MES"
+start = 0x01d8
+end = 0x0353
+
+[[scopes.ranges]]
+file = "DISKD/F003417.MES"
+start = 0x01e0
+end = 0x0349
+
+[[scopes.ranges]]
+file = "DISKD/F0035.MES"
+start = 0x0454
+end = 0x3e4c
+
+[[scopes.ranges]]
+file = "DISKD/F0036.MES"
+start = 0x0532
+end = 0x0c91
+
+[[scopes.ranges]]
+file = "DISKD/F003701.MES"
+start = 0x0403
+end = 0x0ee7
+
+[[scopes.ranges]]
+file = "DISKD/F0038.MES"
+start = 0x044f
+end = 0x12d3

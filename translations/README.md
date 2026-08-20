@@ -173,8 +173,9 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 9,605 canonical records covering 13,310 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0033.MES`.
+The current catalog contains 11,638 canonical records covering 15,677 physical
+anchors across `MAIN.MES`, `FOP.MES`, and the translated story through the
+`F0038.MES` facility escape.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -391,6 +392,21 @@ unexplained at first presentation,
 while the abduction, capture drug, reproductive-experiment threat, and lobotomy
 threat stay explicit. The disclosed adult-age policy applies to all sexual
 material. No trustworthy live F0027-F0033 state exists yet, so the scope
+remains `qa-ready` pending a human playtest and native fixture capture.
+
+The twentieth closed scope is `facility-scouting-and-escape`: all 2,367
+physical text records in the 26 text-bearing files reached through the F0034
+facility graph and the return in `F0038.MES`. They contain 1,956 managed
+canonical source lines; all anchors are translated and none are excluded or
+pending. The catalog contributes 2,033 records after context-safe duplicate
+consolidation. `F0034.MES` and `F0037.MES` themselves contain control flow but
+no text records, so the scope names their text-bearing descendants explicitly.
+The translation preserves the fake-collar clues, fuel and wheelchair planning,
+the threatened lobotomy and reproductive exploitation, the adult patient's
+drugged abduction, and the medical confirmation after the escape. Across the
+adult Marna branches, every spoken refusal, request not to continue, head
+shake, physical withdrawal, and restraint remains distinct from later assent
+or participation. No trustworthy live facility state exists yet, so the scope
 remains `qa-ready` pending a human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
