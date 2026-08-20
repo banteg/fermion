@@ -173,8 +173,8 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 5,003 canonical records covering 6,624 physical
-anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0017.MES`.
+The current catalog contains 8,268 canonical records covering 11,528 physical
+anchors across `MAIN.MES`, `FOP.MES`, and `F0000.MES` through `F0026L/R.MES`.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -358,6 +358,27 @@ oscillation. The reunion keeps the loved one's initiation and later assent
 separate from every spoken refusal and head-shake, including the places where
 Connie continues. No trustworthy live F0015-F0017 state exists yet, so the
 scope remains `qa-ready` pending a human playtest and native fixture capture.
+
+The seventeenth closed scope is `nanase-recruitment-and-genetic-sample`: all
+922 physical text records in `F0018.MES` through `F0020.MES`, from Nanase's
+arrival through Connie's recruitment request, the genetic-sample encounter,
+and its aftermath. Its 678 canonical source lines are all managed; all anchors
+are translated and none are excluded or pending. The English preserves the
+adult women's affirmative participation separately from every refusal and
+physical resistance. No trustworthy live F0018-F0020 state exists yet, so the
+scope remains `qa-ready` pending a human playtest and native fixture capture.
+
+The eighteenth closed scope is `school-visit-and-student-routes`: all 3,982
+physical text records in `F0021.MES` through both `F0026L/R.MES` branches. They
+contain 2,858 managed canonical source lines; all anchors are translated and
+none are excluded or pending. The slice covers the family bath branches, the
+one-day school visit, Yoshimi's confession route, and Yoko's swimming-club
+route. Every spoken refusal, request to stop or let go, attempt to withdraw,
+physical restraint, and unconsented sample collection remains explicit. The
+disclosed adult-age policy applies to every character depicted sexually, while
+the archival context continues to document the source's school status. No
+trustworthy live F0021-F0026 state exists yet, so the scope remains `qa-ready`
+pending a human playtest and native fixture capture.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

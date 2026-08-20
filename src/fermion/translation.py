@@ -642,10 +642,6 @@ def _verify_compiled_file(
     compiled_audit = compiled.audit()
     if original_audit.issues:
         raise TranslationError(f"{file.file}: pristine structural audit failed")
-    if compiled_audit.issues:
-        raise TranslationError(
-            f"{file.file}: compiled structural audit has {len(compiled_audit.issues)} issue(s)"
-        )
     original_opcodes = tuple(instruction.opcode for instruction in original_audit.instructions)
     compiled_opcodes = tuple(instruction.opcode for instruction in compiled_audit.instructions)
     if original_opcodes != compiled_opcodes:
@@ -653,6 +649,20 @@ def _verify_compiled_file(
     _verify_translated_token_initializers(original, compiled, token_initializers)
     if len(original_audit.relocations) != len(compiled_audit.relocations):
         raise TranslationError(f"{file.file}: compiled relocation count changed")
+    known_external_fields = {
+        after.field_offset
+        for before, after in zip(
+            original_audit.relocations,
+            compiled_audit.relocations,
+            strict=True,
+        )
+        if not original.code_start <= before.target < len(original.data)
+    }
+    compiled_audit = compiled.audit(known_external_fields=known_external_fields)
+    if compiled_audit.issues:
+        raise TranslationError(
+            f"{file.file}: compiled structural audit has {len(compiled_audit.issues)} issue(s)"
+        )
     for before, after in zip(original_audit.relocations, compiled_audit.relocations, strict=True):
         external = not original.code_start <= before.target < len(original.data)
         if external and after.target != before.target:

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 import struct
+from collections.abc import Set as AbstractSet
 from dataclasses import dataclass
 from itertools import pairwise
 from pathlib import Path
@@ -116,7 +117,11 @@ class GMFile:
     def from_file(cls, path: Path) -> GMFile:
         return cls.from_bytes(path.read_bytes())
 
-    def audit(self) -> GMAudit:
+    def audit(
+        self,
+        *,
+        known_external_fields: AbstractSet[int] = frozenset(),
+    ) -> GMAudit:
         instructions: list[GMInstruction] = []
         pos = self.code_start
         while pos < len(self.data):
@@ -134,7 +139,10 @@ class GMFile:
         )
         issues: list[str] = []
         for relocation in relocations:
-            is_local = self.code_start <= relocation.target < len(self.data)
+            is_local = (
+                relocation.field_offset not in known_external_fields
+                and self.code_start <= relocation.target < len(self.data)
+            )
             if relocation.required_local and not is_local:
                 issues.append(
                     f"0x{relocation.field_offset:04x}: {relocation.purpose} target "

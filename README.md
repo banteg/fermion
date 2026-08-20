@@ -174,27 +174,16 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Twelve focused story scopes are now closed. `opening-prologue` accounts for all
-118 `FOP.MES` records as 97 translated anchors and 21 explicit title/layout
-exclusions. `project-d-launch-and-first-arrival` accounts for all 462
-`F0001.MES`/`F0002.MES` records as 454 canonical translations, including eight
-context-safe duplicate collapses. `departure-eve-with-kanzaki` covers all 398
-`F0000.MES` records. `connie-and-kanako-first-encounter` covers all 426
-`F0003.MES` records, `connie-and-kanako-first-intimacy` covers all 424
-`F0004.MES` records, and `connie-explains-her-mission` covers all 343
-`F0005.MES` records, `connie-meets-kanakos-mother` covers all 337 `F0006.MES`
-records, and `connie-and-yuki-kitchen-encounter` covers all 644 `F0007.MES`
-records. `connie-meets-kanakos-sister` covers all 265 `F0008.MES` records,
-`first-night-in-the-takano-house` covers all 191 `F0009.MES` records, and
-`ruri-nighttime-route` covers all 215 `F0010L.MES` records, and
-`yuki-nighttime-route` covers all 542 `F0010R.MES` records. None of those
-focused story scopes has an excluded or pending anchor. The broader
+Eighteen focused story scopes are now closed, covering every decoded text
+record in `FOP.MES` and `F0000.MES` through both `F0026L/R.MES` branches.
+Per-scope counts and editorial notes are maintained in
+[`translations/README.md`](translations/README.md); none of the focused story
+scopes has an excluded or pending anchor. The broader
 `boot-to-first-scene-menu` scope is also closed: 152 of its 178 physical
 anchors are translated, while 26 already-final title and layout records are
-explicitly excluded. A
-deliberately untranslated line must be source-anchored in the coverage file
-with a reason; `--require-complete` turns any remaining pending line into an
-error.
+explicitly excluded. A deliberately untranslated line must be source-anchored
+in the coverage file with a reason; `--require-complete` turns any remaining
+pending line into an error.
 
 Build lime-juice from the conventional sibling checkout without writing build
 artifacts into that repository:
@@ -224,8 +213,8 @@ changed-length disk archives, resizes their FAT12 cluster chains if necessary,
 and verifies every layer in the output image. Generated RKT, MES, archive, and
 JSON report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 5,601 canonical entries covering 7,546 physical
-anchors in 24 MES files. Exact per-file sizes and hashes are recorded in the
+The current catalog contains 8,268 canonical entries covering 11,528 physical
+anchors in 33 MES files. Exact per-file sizes and hashes are recorded in the
 generated build report. Generated filenames and output hashes are intentionally
 not release interfaces; rebuild from the hash-pinned pristine input before
 testing.

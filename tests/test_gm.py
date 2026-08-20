@@ -47,6 +47,20 @@ def test_walks_fixed_targets_and_text() -> None:
     ] == [(8, 12, 2, b"A", "A")]
 
 
+def test_known_external_target_may_fall_inside_grown_file() -> None:
+    data = gm_file(
+        b"\x40\x08\x00\x10\x00\x00"
+        b"\x4a\x02ABCDEFGHIJ\x00"
+        b"\x00"
+    )
+    gm = GMFile.from_bytes(data)
+
+    assert gm.audit().issues == (
+        "0x0005: call target target 0x0010 is not an instruction boundary",
+    )
+    assert gm.audit(known_external_fields={5}).issues == ()
+
+
 def test_mode_one_text_decodes_dictionary_tokens_newlines_and_sjis() -> None:
     record = GMFile.from_bytes(
         gm_file(b"\x4a\x01\x18\x04\x82\xa2\x00\x00", dictionary=b"\x82\xa0")

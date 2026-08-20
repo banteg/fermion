@@ -405,3 +405,52 @@ end = 0x20e2
 file = "DISKC/F0020.MES"
 start = 0x043a
 end = 0x4b8e
+
+[[scopes]]
+id = "school-visit-and-student-routes"
+description = "Every decoded F0021 through F0026L/R text record from the Takano family's school-visit plan through both school branches, Yoshimi's route, and Yoko's route."
+
+[[scopes.ranges]]
+file = "DISKC/F0021.MES"
+start = 0x0990
+end = 0x31cc
+
+[[scopes.ranges]]
+file = "DISKC/F0022L.MES"
+start = 0x03c4
+end = 0x4b34
+
+[[scopes.ranges]]
+file = "DISKC/F0022R.MES"
+start = 0x0538
+end = 0x6885
+
+[[scopes.ranges]]
+file = "DISKC/F0023L.MES"
+start = 0x0440
+end = 0x4fbe
+
+[[scopes.ranges]]
+file = "DISKC/F0024.MES"
+start = 0x0329
+end = 0x12fe
+
+[[scopes.ranges]]
+file = "DISKC/F0025L.MES"
+start = 0x04f1
+end = 0x20f0
+
+[[scopes.ranges]]
+file = "DISKC/F0025R.MES"
+start = 0x04b7
+end = 0x1674
+
+[[scopes.ranges]]
+file = "DISKC/F0026L.MES"
+start = 0x047e
+end = 0x4a9d
+
+[[scopes.ranges]]
+file = "DISKC/F0026R.MES"
+start = 0x04e3
+end = 0x5627
