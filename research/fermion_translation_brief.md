@@ -434,7 +434,7 @@ The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. The non-CP932 delim
 
 ### Locked merged-to-physical representation
 
-`translations/fermion.toml` remains the sole canonical source. Catalog schema 5 will add composite entries with one canonical translation and one or more physical occurrences. Each occurrence is an ordered segment list:
+`translations/fermion.toml` remains the sole canonical source. Catalog schema 5 stores composite entries with one canonical translation and one or more physical occurrences. Each occurrence is an ordered segment list:
 
 1. a **text segment** stores its pristine MES file, text-opcode offset, mode, and exact Japanese;
 2. a **token segment** stores its stable token ID and the exact immutable copy/render instruction span; and
@@ -960,23 +960,29 @@ The following decisions are already locked and should be enforced during review:
 
 Voice-calibration examples belong in anchored canonical catalog entries with source, context, and notes. Do not create a second table of free-floating “final” translations inside this brief.
 
-### Phase 4 — Translate the main-story spine first
+### Phase 4 — Main-story spine status
 
-Recommended order:
+The original authoring order was FOP, F0000, F0001-F0003, the remaining early
+branches, the facility and ending, and finally the extra UI/catalog surfaces.
+That sequence is historical guidance, not the current work queue. At this
+checkpoint:
 
-1. FOP — **translated and built; focused coverage and end-to-end route are green**
-2. F0000 — **translated and built; 398 physical records / 391 canonical lines,
-   human playtest pending**
-3. F0001–F0002 — **translated and built; 462 physical records / 454 canonical translations**
-4. F0003 — **translation and structural build complete; human playtest and native fixture pending**
-5. F0004–F0016
-6. F0027–F0042
-7. Later route branches and scene replay labels
-8. Menus, name editor, term editor, and catalog last
+1. FOP through the F0042 ending are translated and structurally built. All 21
+   focused story scopes are closed with no pending or excluded story anchors.
+2. Scene replay, both mirrored name and adult-term editors, the title/menu
+   surfaces, and the period Silky's catalog are represented in the canonical
+   catalog or explicitly source-anchored coverage exclusions.
+3. The catalog contains 13,003 canonical records over 17,680 physical anchors
+   in 76 MES files: 12,736 `translated`, 253 `reviewed`, and 14
+   `runtime-verified`.
+4. The remaining work is dedicated linguistic review of the still-translated
+   records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,
+   including all shipped name and adult-term presets. Structural completion is
+   not a substitute for either pass.
 
-This keeps the canonical catalog contiguous from New Game across every
-reachable branch. Do not skip an earlier scenario merely because a later file
-is easier to draft or automate.
+Continue to work in source-order slices when practical so adjacent voices and
+route state remain visible, but do not describe already covered files as
+untranslated.
 
 For each slice, “done” requires all of the following:
 
