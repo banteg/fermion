@@ -420,11 +420,48 @@ source = "disk-d/F0042.MES"
 sha256 = "dc5433fe224a8fcac041af26530ba15d30a3cb64b73d5b4ec7aacc6a24481d19"
 box_width = 61
 
+[[files]]
+file = "DISKA/F_SHENE.MES"
+source = "disk-a/F_SHENE.MES"
+sha256 = "c1a1926b13a2de4b6d9ef4726ff33ae45fc5f22cc2addc50bcc20841453772c7"
+box_width = 61
+
+[[files]]
+file = "DISKA/NAME.MES"
+source = "disk-a/NAME.MES"
+sha256 = "6eb1444cb354fc6ad87e31838852cd4360208286437c2816df521f40977e4e04"
+box_width = 61
+
+[[files]]
+file = "DISKB/NAME.MES"
+source = "disk-b/NAME.MES"
+sha256 = "6eb1444cb354fc6ad87e31838852cd4360208286437c2816df521f40977e4e04"
+box_width = 61
+
+[[files]]
+file = "DISKA/MONO.MES"
+source = "disk-a/MONO.MES"
+sha256 = "3a526b4ae4bac0a8beea02dd5b0c5686a96507a2fa5ea39c4a727dbe4d2a9245"
+box_width = 61
+
+[[files]]
+file = "DISKB/MONO.MES"
+source = "disk-b/MONO.MES"
+sha256 = "3a526b4ae4bac0a8beea02dd5b0c5686a96507a2fa5ea39c4a727dbe4d2a9245"
+box_width = 61
+
+[[files]]
+file = "DISKA/SILK.MES"
+source = "disk-a/SILK.MES"
+sha256 = "b13bc3034634a0411d570aec344bae753deef143c4fd263e1c40791d9736a384"
+box_width = 61
+
 [[tokens]]
 id = "name:mother"
 source = "由貴"
 translation = "Yuki"
-max_width = 4
+max_width = 12
+presets = ["Yuki", "May", "Helen", "Olivia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18c0, slot = 0x03e8 },
 ]
@@ -433,7 +470,8 @@ initializers = [
 id = "name:older-sister"
 source = "瑠璃"
 translation = "Ruri"
-max_width = 4
+max_width = 12
+presets = ["Ruri", "Ruby", "Alice", "Chloe"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18d5, slot = 0x03f6 },
 ]
@@ -442,7 +480,8 @@ initializers = [
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
+max_width = 12
+presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
 ]
@@ -451,7 +490,8 @@ initializers = [
 id = "name:friend-1"
 source = "陽子"
 translation = "Yoko"
-max_width = 4
+max_width = 12
+presets = ["Yoko", "Yuna", "Maria", "Ava"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1901, slot = 0x0412 },
 ]
@@ -460,7 +500,8 @@ initializers = [
 id = "name:friend-2"
 source = "弘子"
 translation = "Hiroko"
-max_width = 6
+max_width = 12
+presets = ["Hiroko", "Hina", "Erika", "Mia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1916, slot = 0x0420 },
 ]
@@ -469,7 +510,8 @@ initializers = [
 id = "term:slot-1"
 source = "おま○こ"
 translation = "pussy"
-max_width = 5
+max_width = 12
+presets = ["pussy", "vagina", "cunt", "vulva"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b37, slot = 0x042e },
 ]
@@ -478,7 +520,8 @@ initializers = [
 id = "term:slot-2"
 source = "お○んち○"
 translation = "penis"
-max_width = 5
+max_width = 14
+presets = ["penis", "penis", "cock", "phallus"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b50, slot = 0x043e },
 ]
@@ -177017,4 +177060,5630 @@ source = "　　　（Ｃ）Ｓｉｌｋｙ’ｓ　Ｄｅｃｅｍｂｅｒ／�
 translation = "       (C) Silky's December/22/1995"
 speaker = "Connie"
 context = "The ending records restored human genes in 2296 and the adult patient's undeliverable letter to Connie and her future self."
+status = "qa-ready"
+
+[[entries]]
+id = "f-shene-021b-sex-connie-and-dr-kanzaki"
+file = "DISKA/F_SHENE.MES"
+offset = 0x021b
+source_mode = 1
+target_mode = 2
+source = "神崎博士とコニーのエッチシーン"
+translation = "Sex: Connie and Dr. Kanzaki"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[entries]]
+id = "f-shene-025f-connie-and-remia-at-the-meeting"
+file = "DISKA/F_SHENE.MES"
+offset = 0x025f
+source_mode = 1
+target_mode = 2
+source = "レミア・コニー、ミーティングで"
+translation = "Connie and Remia at the meeting"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites]]
+id = "f-shene-02af-name-dear-person-and-connie-have-sex"
+target_mode = 2
+source = "⟦name:dear-person⟧とコニーのエッチシーン　"
+translation = "⟦name:dear-person⟧ and Connie have sex"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x02af, end = 0x02be, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x02be, source_mode = 1, source = "とコニーのエッチシーン　" },
+]
+
+[[composites]]
+id = "f-shene-02fb-nighttime-sex-in-name-older-sister-s-room"
+target_mode = 2
+source = "夜、⟦name:older-sister⟧の部屋でエッチ　　　　"
+translation = "Nighttime sex in ⟦name:older-sister⟧'s room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "text", offset = 0x02fb, source_mode = 1, source = "夜、" },
+  { kind = "token", token = "name:older-sister", start = 0x0300, end = 0x030f, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x030f, source_mode = 1, source = "の部屋でエッチ　　　　" },
+]
+
+[[composites]]
+id = "f-shene-034b-name-older-sister-name-dear-person-and-connie"
+target_mode = 2
+source = "⟦name:older-sister⟧・⟦name:dear-person⟧・コニーお風呂で　"
+translation = "⟦name:older-sister⟧, ⟦name:dear-person⟧, and Connie in the bath"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:older-sister", start = 0x034b, end = 0x035a, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x035a, source_mode = 1, source = "・" },
+  { kind = "token", token = "name:dear-person", start = 0x035e, end = 0x036d, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x036d, source_mode = 1, source = "・コニーお風呂で　" },
+]
+
+[[composites]]
+id = "f-shene-03b7-name-mother-and-connie-have-sex"
+target_mode = 2
+source = "⟦name:mother⟧とコニーのエッチシーン　　"
+translation = "⟦name:mother⟧ and Connie have sex"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x03b7, end = 0x03c6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x03c6, source_mode = 1, source = "とコニーのエッチシーン　　" },
+]
+
+[[entries]]
+id = "f-shene-0404-sex-with-yoshimi-in-the-home-economics-room"
+file = "DISKA/F_SHENE.MES"
+offset = 0x0404
+source_mode = 1
+target_mode = 2
+source = "家庭科教室で良美ちゃんとエッチ"
+translation = "Sex with Yoshimi in the home economics room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites]]
+id = "f-shene-044d-swim-club-name-older-sister-name-friend-1"
+target_mode = 2
+source = "水泳部、⟦name:older-sister⟧・⟦name:friend-1⟧・コニー　　"
+translation = "Swim club: ⟦name:older-sister⟧, ⟦name:friend-1⟧, and Connie"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "text", offset = 0x044d, source_mode = 1, source = "水泳部、" },
+  { kind = "token", token = "name:older-sister", start = 0x0456, end = 0x0465, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0465, source_mode = 1, source = "・" },
+  { kind = "token", token = "name:friend-1", start = 0x0469, end = 0x0478, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x0478, source_mode = 1, source = "・コニー　　" },
+]
+
+[[entries]]
+id = "f-shene-04b3-sex-with-marna"
+file = "DISKA/F_SHENE.MES"
+offset = 0x04b3
+source_mode = 1
+target_mode = 2
+source = "マーナとのエッチシーン　　　　"
+translation = "Sex with Marna"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites]]
+id = "f-shene-04f3-name-dear-person-and-connie-have-sex-in"
+target_mode = 2
+source = "⟦name:dear-person⟧とコニー、お風呂でエッチ"
+translation = "⟦name:dear-person⟧ and Connie have sex in the bath"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x04f3, end = 0x0502, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x0502, source_mode = 1, source = "とコニー、お風呂でエッチ" },
+]
+
+[[composites]]
+id = "f-shene-053f-name-dear-person-s-room-before-her-upperclassman"
+target_mode = 2
+source = "⟦name:dear-person⟧の部屋で先輩が来る前に　"
+translation = "⟦name:dear-person⟧'s room before her upperclassman arrives"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x053f, end = 0x054e, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x054e, source_mode = 1, source = "の部屋で先輩が来る前に　" },
+]
+
+[[composites]]
+id = "f-shene-058d-name-dear-person-s-room-threesome-with-her"
+target_mode = 2
+source = "⟦name:dear-person⟧の部屋で先輩と３Ｐ　　　"
+translation = "⟦name:dear-person⟧'s room: threesome with her upperclassman"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:dear-person", start = 0x058d, end = 0x059c, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x059c, source_mode = 1, source = "の部屋で先輩と３Ｐ　　　" },
+]
+
+[[composites]]
+id = "f-shene-05db-sex-before-bed-in-name-dear-person-s"
+target_mode = 2
+source = "夜、寝る前に⟦name:dear-person⟧の部屋でＨ　"
+translation = "Sex before bed in ⟦name:dear-person⟧'s room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "text", offset = 0x05db, source_mode = 1, source = "夜、寝る前に" },
+  { kind = "token", token = "name:dear-person", start = 0x05e5, end = 0x05f4, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x05f4, source_mode = 1, source = "の部屋でＨ　" },
+]
+
+[[entries]]
+id = "f-shene-061b-back-to-previous-selection"
+anchors = [
+  { file = "DISKA/F_SHENE.MES", offset = 0x061b },
+  { file = "DISKA/F_SHENE.MES", offset = 0x07cc },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0877 },
+]
+source_mode = 1
+target_mode = 2
+source = "前の選択に戻る　　　　　　　　"
+translation = "Back to previous selection"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites]]
+id = "f-shene-0656-name-mother-and-connie-have-sex-in-the"
+target_mode = 2
+source = "⟦name:mother⟧とコニー、台所でエッチ　　"
+translation = "⟦name:mother⟧ and Connie have sex in the kitchen"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0656, end = 0x0665, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0665, source_mode = 1, source = "とコニー、台所でエッチ　　" },
+]
+
+[[composites]]
+id = "f-shene-06a5-name-mother-and-connie-have-sex-in-the"
+target_mode = 2
+source = "⟦name:mother⟧とコニー、リビングでエッチ"
+translation = "⟦name:mother⟧ and Connie have sex in the living room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x06a5, end = 0x06b4, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x06b4, source_mode = 1, source = "とコニー、リビングでエッチ" },
+]
+
+[[composites]]
+id = "f-shene-06f2-name-mother-and-connie-at-midnight-in-the"
+target_mode = 2
+source = "⟦name:mother⟧とコニー、夜中のリビングで"
+translation = "⟦name:mother⟧ and Connie at midnight in the living room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x06f2, end = 0x0701, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0701, source_mode = 1, source = "とコニー、夜中のリビングで" },
+]
+
+[[composites]]
+id = "f-shene-073f-name-mother-and-connie-fool-around-in-the"
+target_mode = 2
+source = "⟦name:mother⟧とお風呂でたわむれ　　　　"
+translation = "⟦name:mother⟧ and Connie fool around in the bath"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x073f, end = 0x074e, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x074e, source_mode = 1, source = "とお風呂でたわむれ　　　　" },
+]
+
+[[composites]]
+id = "f-shene-078d-midnight-sex-in-name-mother-s-room"
+target_mode = 2
+source = "夜中に、⟦name:mother⟧の部屋でエッチ　　"
+translation = "Midnight sex in ⟦name:mother⟧'s room"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[composites.occurrences]]
+file = "DISKA/F_SHENE.MES"
+segments = [
+  { kind = "text", offset = 0x078d, source_mode = 1, source = "夜中に、" },
+  { kind = "token", token = "name:mother", start = 0x0794, end = 0x07a3, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x07a3, source_mode = 1, source = "の部屋でエッチ　　" },
+]
+
+[[entries]]
+id = "f-shene-0807-sex-with-marna-in-the-cell"
+file = "DISKA/F_SHENE.MES"
+offset = 0x0807
+source_mode = 1
+target_mode = 2
+source = "囚われた部屋でマーナとエッチ　"
+translation = "Sex with Marna in the cell"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[entries]]
+id = "f-shene-0847-sex-with-marna-in-the-cell-2"
+file = "DISKA/F_SHENE.MES"
+offset = 0x0847
+source_mode = 1
+target_mode = 2
+source = "囚われた部屋でマーナとエッチ２"
+translation = "Sex with Marna in the cell 2"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[entries]]
+id = "f-shene-0895-return-to-main-menu"
+file = "DISKA/F_SHENE.MES"
+offset = 0x0895
+source_mode = 1
+target_mode = 2
+source = "ＭＡＩＮメニューに戻る　　　　"
+translation = "Return to main menu"
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[entries]]
+id = "f-shene-08ea-not-viewed-yet"
+anchors = [
+  { file = "DISKA/F_SHENE.MES", offset = 0x08ea },
+  { file = "DISKA/F_SHENE.MES", offset = 0x09b7 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0a90 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0acf },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0b9d },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0c7b },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0cba },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0d88 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0e5a },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0e99 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x0f78 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1057 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1136 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1215 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x12f4 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x13d4 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x14b4 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1594 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1674 },
+  { file = "DISKA/F_SHENE.MES", offset = 0x1753 },
+]
+source_mode = 1
+target_mode = 2
+source = "まだ見ていません。"
+translation = "Not viewed yet."
+speaker = "ui"
+context = "The scene-replay menu, whose labels must remain spoiler-safe before their scenes unlock."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-01db-change"
+file = "DISKA/NAME.MES"
+offset = 0x01db
+source_mode = 1
+target_mode = 2
+source = "名前を変更"
+translation = "CHANGE"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-01ee-names"
+file = "DISKA/NAME.MES"
+offset = 0x01ee
+source_mode = 1
+target_mode = 2
+source = "します"
+translation = "NAMES"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0253-original"
+file = "DISKA/NAME.MES"
+offset = 0x0253
+source_mode = 1
+target_mode = 2
+source = "ひらがな"
+translation = "ORIGINAL"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0265-short"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0265 },
+  { file = "DISKA/NAME.MES", offset = 0x09ab },
+]
+source_mode = 1
+target_mode = 2
+source = "　カタカナ"
+translation = "  SHORT"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0278-classic"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0278 },
+  { file = "DISKA/NAME.MES", offset = 0x09bf },
+]
+source_mode = 1
+target_mode = 2
+source = "　漢　　字"
+translation = "  CLASSIC"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-028b-modern"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x028b },
+  { file = "DISKA/NAME.MES", offset = 0x09d3 },
+]
+source_mode = 1
+target_mode = 2
+source = "　第二水準"
+translation = "  MODERN"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-05bc-confirm"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x05bc },
+  { file = "DISKA/NAME.MES", offset = 0x0933 },
+  { file = "DISKA/NAME.MES", offset = 0x0aec },
+  { file = "DISKA/NAME.MES", offset = 0x0e87 },
+  { file = "DISKA/NAME.MES", offset = 0x464e },
+]
+source_mode = 1
+target_mode = 2
+source = "決定キー："
+translation = "Confirm:"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-05d0-select-name"
+file = "DISKA/NAME.MES"
+offset = 0x05d0
+source_mode = 1
+target_mode = 2
+source = "　名前選択"
+translation = "Select name"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-05e4-cancel"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x05e4 },
+  { file = "DISKA/NAME.MES", offset = 0x095d },
+  { file = "DISKA/NAME.MES", offset = 0x0b14 },
+  { file = "DISKA/NAME.MES", offset = 0x0eb2 },
+  { file = "DISKA/NAME.MES", offset = 0x4676 },
+]
+source_mode = 1
+target_mode = 2
+source = "キャンセルキー："
+translation = "Cancel:"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-05fb-review-changes"
+file = "DISKA/NAME.MES"
+offset = 0x05fb
+source_mode = 1
+target_mode = 2
+source = "　名前登録へ"
+translation = "Review changes"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-062a-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x062a },
+  { file = "DISKA/NAME.MES", offset = 0x0667 },
+  { file = "DISKA/NAME.MES", offset = 0x06a4 },
+  { file = "DISKA/NAME.MES", offset = 0x06e1 },
+  { file = "DISKA/NAME.MES", offset = 0x071e },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = "  "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-063d-mother"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x063d },
+  { file = "DISKA/NAME.MES", offset = 0x0f17 },
+]
+source_mode = 1
+target_mode = 2
+source = "（お母さん）　　　　"
+translation = "(Mother)"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-067a-older-sister"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x067a },
+  { file = "DISKA/NAME.MES", offset = 0x0f3f },
+]
+source_mode = 1
+target_mode = 2
+source = "（お姉さん）　　　　"
+translation = "(Older sister)"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-06b7-dear-person"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x06b7 },
+  { file = "DISKA/NAME.MES", offset = 0x0f67 },
+]
+source_mode = 1
+target_mode = 2
+source = "（あたしの大切な人）"
+translation = "(Dear person)"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-06f4-friend-1"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x06f4 },
+  { file = "DISKA/NAME.MES", offset = 0x0f8f },
+]
+source_mode = 1
+target_mode = 2
+source = "（お友達１）　　　　"
+translation = "(Friend 1)"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0731-friend-2"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0731 },
+  { file = "DISKA/NAME.MES", offset = 0x0fb9 },
+]
+source_mode = 1
+target_mode = 2
+source = "（お友達２）　　　　"
+translation = "(Friend 2)"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0947-select-preset"
+file = "DISKA/NAME.MES"
+offset = 0x0947
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択"
+translation = "Select preset"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0974-name-list"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0974 },
+  { file = "DISKA/NAME.MES", offset = 0x0ec9 },
+]
+source_mode = 1
+target_mode = 2
+source = "　名前選択へ"
+translation = "Name list"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0997-original"
+file = "DISKA/NAME.MES"
+offset = 0x0997
+source_mode = 1
+target_mode = 2
+source = "　ひらがな"
+translation = "  ORIGINAL"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0b00-enter-character"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0b00 },
+  { file = "DISKA/NAME.MES", offset = 0x4662 },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字選択"
+translation = "Enter character"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0b2b-keyboard-list"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x0b2b },
+  { file = "DISKA/NAME.MES", offset = 0x468d },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択へ"
+translation = "Keyboard list"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0e9b-select-action"
+file = "DISKA/NAME.MES"
+offset = 0x0e9b
+source_mode = 1
+target_mode = 2
+source = "　登録・終了選択"
+translation = "Select action"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0fe0-save-changes"
+file = "DISKA/NAME.MES"
+offset = 0x0fe0
+source_mode = 1
+target_mode = 2
+source = "登録しますか？"
+translation = "Save changes?"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-0ff8-save"
+file = "DISKA/NAME.MES"
+offset = 0x0ff8
+source_mode = 1
+target_mode = 2
+source = "登録"
+translation = "Save"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-100b-discard"
+file = "DISKA/NAME.MES"
+offset = 0x100b
+source_mode = 1
+target_mode = 2
+source = "未登録"
+translation = "Discard"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-102c-finish-editing"
+file = "DISKA/NAME.MES"
+offset = 0x102c
+source_mode = 1
+target_mode = 2
+source = "終了しますか？"
+translation = "Finish editing?"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-1044-finish"
+file = "DISKA/NAME.MES"
+offset = 0x1044
+source_mode = 1
+target_mode = 2
+source = "終了"
+translation = "Finish"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-1057-reset"
+file = "DISKA/NAME.MES"
+offset = 0x1057
+source_mode = 1
+target_mode = 2
+source = "再設定"
+translation = "Reset"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-161d-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x161d },
+  { file = "DISKA/NAME.MES", offset = 0x5938 },
+  { file = "DISKA/NAME.MES", offset = 0x5990 },
+]
+source_mode = 1
+target_mode = 2
+source = "▲"
+translation = "^"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-1633-v"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x1633 },
+  { file = "DISKA/NAME.MES", offset = 0x5960 },
+  { file = "DISKA/NAME.MES", offset = 0x59a5 },
+]
+source_mode = 1
+target_mode = 2
+source = "▼"
+translation = "v"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-22d8-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x22d8 },
+  { file = "DISKA/NAME.MES", offset = 0x24ae },
+]
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-22fa-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x22fa },
+  { file = "DISKA/NAME.MES", offset = 0x24d0 },
+  { file = "DISKA/NAME.MES", offset = 0x28fa },
+]
+source_mode = 1
+target_mode = 2
+source = "かきくけこ　がぎぐげご　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-231c-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x231c },
+  { file = "DISKA/NAME.MES", offset = 0x24f2 },
+  { file = "DISKA/NAME.MES", offset = 0x291c },
+]
+source_mode = 1
+target_mode = 2
+source = "さしすせそ　ざじずぜぞ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-233e-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x233e },
+  { file = "DISKA/NAME.MES", offset = 0x23c6 },
+  { file = "DISKA/NAME.MES", offset = 0x2514 },
+  { file = "DISKA/NAME.MES", offset = 0x259c },
+  { file = "DISKA/NAME.MES", offset = 0x2720 },
+  { file = "DISKA/NAME.MES", offset = 0x27c4 },
+  { file = "DISKA/NAME.MES", offset = 0x293e },
+  { file = "DISKA/NAME.MES", offset = 0x29c6 },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2360-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x2360 },
+  { file = "DISKA/NAME.MES", offset = 0x2536 },
+  { file = "DISKA/NAME.MES", offset = 0x2960 },
+]
+source_mode = 1
+target_mode = 2
+source = "たちつてと　だぢづでど　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2382-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x2382 },
+  { file = "DISKA/NAME.MES", offset = 0x2558 },
+  { file = "DISKA/NAME.MES", offset = 0x2982 },
+]
+source_mode = 1
+target_mode = 2
+source = "なにぬねの　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-23a4-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x23a4 },
+  { file = "DISKA/NAME.MES", offset = 0x257a },
+  { file = "DISKA/NAME.MES", offset = 0x29a4 },
+]
+source_mode = 1
+target_mode = 2
+source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-23e8-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x23e8 },
+  { file = "DISKA/NAME.MES", offset = 0x25be },
+  { file = "DISKA/NAME.MES", offset = 0x29e8 },
+]
+source_mode = 1
+target_mode = 2
+source = "まみむめも　っー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-240a-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x240a },
+  { file = "DISKA/NAME.MES", offset = 0x25e0 },
+  { file = "DISKA/NAME.MES", offset = 0x2a0a },
+]
+source_mode = 1
+target_mode = 2
+source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-242c-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x242c },
+  { file = "DISKA/NAME.MES", offset = 0x2602 },
+  { file = "DISKA/NAME.MES", offset = 0x2a2c },
+]
+source_mode = 1
+target_mode = 2
+source = "らりるれろ　わをん　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-244e-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x244e },
+  { file = "DISKA/NAME.MES", offset = 0x2624 },
+  { file = "DISKA/NAME.MES", offset = 0x285d },
+  { file = "DISKA/NAME.MES", offset = 0x2a4e },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-245a-bs"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x245a },
+  { file = "DISKA/NAME.MES", offset = 0x2630 },
+  { file = "DISKA/NAME.MES", offset = 0x2869 },
+  { file = "DISKA/NAME.MES", offset = 0x2a5a },
+  { file = "DISKA/NAME.MES", offset = 0x5a14 },
+]
+source_mode = 2
+target_mode = 2
+source = "BS"
+translation = "BS"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-245f-cancel-ok"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x245f },
+  { file = "DISKA/NAME.MES", offset = 0x2635 },
+  { file = "DISKA/NAME.MES", offset = 0x286e },
+  { file = "DISKA/NAME.MES", offset = 0x2a5f },
+]
+source_mode = 1
+target_mode = 2
+source = "←　中止　決定"
+translation = "<-  CANCEL  OK"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-269f-silence"
+file = "DISKA/NAME.MES"
+offset = 0x269f
+source_mode = 1
+target_mode = 2
+source = "アイウエオ　ァィゥェォ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-26cb-silence"
+file = "DISKA/NAME.MES"
+offset = 0x26cb
+source_mode = 1
+target_mode = 2
+source = "カキクケコ　ガギグゲゴ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-26f5-silence"
+file = "DISKA/NAME.MES"
+offset = 0x26f5
+source_mode = 1
+target_mode = 2
+source = "サシスセソ　ザジズゼゾ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2742-silence"
+file = "DISKA/NAME.MES"
+offset = 0x2742
+source_mode = 1
+target_mode = 2
+source = "タチツテト　ダヂヅデド　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-276d-silence"
+file = "DISKA/NAME.MES"
+offset = 0x276d
+source_mode = 1
+target_mode = 2
+source = "ナニヌネノ　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2793-silence"
+file = "DISKA/NAME.MES"
+offset = 0x2793
+source_mode = 1
+target_mode = 2
+source = "ハヒフヘホ　バビブベボ　パピプペポ"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-27e6-silence"
+file = "DISKA/NAME.MES"
+offset = 0x27e6
+source_mode = 1
+target_mode = 2
+source = "マミムメモ　ッー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-280e-silence"
+file = "DISKA/NAME.MES"
+offset = 0x280e
+source_mode = 1
+target_mode = 2
+source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2835-silence"
+file = "DISKA/NAME.MES"
+offset = 0x2835
+source_mode = 1
+target_mode = 2
+source = "ラリルレロ　ワヲン　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-28d8-silence"
+file = "DISKA/NAME.MES"
+offset = 0x28d8
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-2acc-silence"
+file = "DISKA/NAME.MES"
+offset = 0x2acc
+source_mode = 1
+target_mode = 2
+source = "　　　　　第　二　水　準　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-456b-silence"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x456b },
+  { file = "DISKA/NAME.MES", offset = 0x457e },
+]
+source_mode = 2
+target_mode = 2
+source = "\""
+translation = "\""
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-4582-please"
+file = "DISKA/NAME.MES"
+offset = 0x4582
+source_mode = 1
+target_mode = 2
+source = "を"
+translation = "Please"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-4592-check-the-table"
+file = "DISKA/NAME.MES"
+offset = 0x4592
+source_mode = 1
+target_mode = 2
+source = "参照して下さい"
+translation = "check the table."
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-45dc-that-character"
+file = "DISKA/NAME.MES"
+offset = 0x45dc
+source_mode = 1
+target_mode = 2
+source = "指定の漢字は"
+translation = "That character"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-45f2-is-unavailable"
+file = "DISKA/NAME.MES"
+offset = 0x45f2
+source_mode = 1
+target_mode = 2
+source = "　有りません"
+translation = "is unavailable."
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-59dc-35"
+file = "DISKA/NAME.MES"
+offset = 0x59dc
+source_mode = 1
+target_mode = 2
+source = "／３５"
+translation = "/35"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-59fa-cancel"
+anchors = [
+  { file = "DISKA/NAME.MES", offset = 0x59fa },
+  { file = "DISKA/NAME.MES", offset = 0x5a26 },
+]
+source_mode = 1
+target_mode = 2
+source = "中止"
+translation = "Cancel"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-5a19-silence"
+file = "DISKA/NAME.MES"
+offset = 0x5a19
+source_mode = 1
+target_mode = 2
+source = "←"
+translation = "<-"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diska-5a34-ok"
+file = "DISKA/NAME.MES"
+offset = 0x5a34
+source_mode = 1
+target_mode = 2
+source = "決定"
+translation = "OK"
+speaker = "ui"
+context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-01db-change"
+file = "DISKB/NAME.MES"
+offset = 0x01db
+source_mode = 1
+target_mode = 2
+source = "名前を変更"
+translation = "CHANGE"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-01ee-names"
+file = "DISKB/NAME.MES"
+offset = 0x01ee
+source_mode = 1
+target_mode = 2
+source = "します"
+translation = "NAMES"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0253-original"
+file = "DISKB/NAME.MES"
+offset = 0x0253
+source_mode = 1
+target_mode = 2
+source = "ひらがな"
+translation = "ORIGINAL"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0265-short"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0265 },
+  { file = "DISKB/NAME.MES", offset = 0x09ab },
+]
+source_mode = 1
+target_mode = 2
+source = "　カタカナ"
+translation = "  SHORT"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0278-classic"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0278 },
+  { file = "DISKB/NAME.MES", offset = 0x09bf },
+]
+source_mode = 1
+target_mode = 2
+source = "　漢　　字"
+translation = "  CLASSIC"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-028b-modern"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x028b },
+  { file = "DISKB/NAME.MES", offset = 0x09d3 },
+]
+source_mode = 1
+target_mode = 2
+source = "　第二水準"
+translation = "  MODERN"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-05bc-confirm"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x05bc },
+  { file = "DISKB/NAME.MES", offset = 0x0933 },
+  { file = "DISKB/NAME.MES", offset = 0x0aec },
+  { file = "DISKB/NAME.MES", offset = 0x0e87 },
+  { file = "DISKB/NAME.MES", offset = 0x464e },
+]
+source_mode = 1
+target_mode = 2
+source = "決定キー："
+translation = "Confirm:"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-05d0-select-name"
+file = "DISKB/NAME.MES"
+offset = 0x05d0
+source_mode = 1
+target_mode = 2
+source = "　名前選択"
+translation = "Select name"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-05e4-cancel"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x05e4 },
+  { file = "DISKB/NAME.MES", offset = 0x095d },
+  { file = "DISKB/NAME.MES", offset = 0x0b14 },
+  { file = "DISKB/NAME.MES", offset = 0x0eb2 },
+  { file = "DISKB/NAME.MES", offset = 0x4676 },
+]
+source_mode = 1
+target_mode = 2
+source = "キャンセルキー："
+translation = "Cancel:"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-05fb-review-changes"
+file = "DISKB/NAME.MES"
+offset = 0x05fb
+source_mode = 1
+target_mode = 2
+source = "　名前登録へ"
+translation = "Review changes"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-062a-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x062a },
+  { file = "DISKB/NAME.MES", offset = 0x0667 },
+  { file = "DISKB/NAME.MES", offset = 0x06a4 },
+  { file = "DISKB/NAME.MES", offset = 0x06e1 },
+  { file = "DISKB/NAME.MES", offset = 0x071e },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = "  "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-063d-mother"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x063d },
+  { file = "DISKB/NAME.MES", offset = 0x0f17 },
+]
+source_mode = 1
+target_mode = 2
+source = "（お母さん）　　　　"
+translation = "(Mother)"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-067a-older-sister"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x067a },
+  { file = "DISKB/NAME.MES", offset = 0x0f3f },
+]
+source_mode = 1
+target_mode = 2
+source = "（お姉さん）　　　　"
+translation = "(Older sister)"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-06b7-dear-person"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x06b7 },
+  { file = "DISKB/NAME.MES", offset = 0x0f67 },
+]
+source_mode = 1
+target_mode = 2
+source = "（あたしの大切な人）"
+translation = "(Dear person)"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-06f4-friend-1"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x06f4 },
+  { file = "DISKB/NAME.MES", offset = 0x0f8f },
+]
+source_mode = 1
+target_mode = 2
+source = "（お友達１）　　　　"
+translation = "(Friend 1)"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0731-friend-2"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0731 },
+  { file = "DISKB/NAME.MES", offset = 0x0fb9 },
+]
+source_mode = 1
+target_mode = 2
+source = "（お友達２）　　　　"
+translation = "(Friend 2)"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0947-select-preset"
+file = "DISKB/NAME.MES"
+offset = 0x0947
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択"
+translation = "Select preset"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0974-name-list"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0974 },
+  { file = "DISKB/NAME.MES", offset = 0x0ec9 },
+]
+source_mode = 1
+target_mode = 2
+source = "　名前選択へ"
+translation = "Name list"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0997-original"
+file = "DISKB/NAME.MES"
+offset = 0x0997
+source_mode = 1
+target_mode = 2
+source = "　ひらがな"
+translation = "  ORIGINAL"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0b00-enter-character"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0b00 },
+  { file = "DISKB/NAME.MES", offset = 0x4662 },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字選択"
+translation = "Enter character"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0b2b-keyboard-list"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x0b2b },
+  { file = "DISKB/NAME.MES", offset = 0x468d },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択へ"
+translation = "Keyboard list"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0e9b-select-action"
+file = "DISKB/NAME.MES"
+offset = 0x0e9b
+source_mode = 1
+target_mode = 2
+source = "　登録・終了選択"
+translation = "Select action"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0fe0-save-changes"
+file = "DISKB/NAME.MES"
+offset = 0x0fe0
+source_mode = 1
+target_mode = 2
+source = "登録しますか？"
+translation = "Save changes?"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-0ff8-save"
+file = "DISKB/NAME.MES"
+offset = 0x0ff8
+source_mode = 1
+target_mode = 2
+source = "登録"
+translation = "Save"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-100b-discard"
+file = "DISKB/NAME.MES"
+offset = 0x100b
+source_mode = 1
+target_mode = 2
+source = "未登録"
+translation = "Discard"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-102c-finish-editing"
+file = "DISKB/NAME.MES"
+offset = 0x102c
+source_mode = 1
+target_mode = 2
+source = "終了しますか？"
+translation = "Finish editing?"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-1044-finish"
+file = "DISKB/NAME.MES"
+offset = 0x1044
+source_mode = 1
+target_mode = 2
+source = "終了"
+translation = "Finish"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-1057-reset"
+file = "DISKB/NAME.MES"
+offset = 0x1057
+source_mode = 1
+target_mode = 2
+source = "再設定"
+translation = "Reset"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-161d-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x161d },
+  { file = "DISKB/NAME.MES", offset = 0x5938 },
+  { file = "DISKB/NAME.MES", offset = 0x5990 },
+]
+source_mode = 1
+target_mode = 2
+source = "▲"
+translation = "^"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-1633-v"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x1633 },
+  { file = "DISKB/NAME.MES", offset = 0x5960 },
+  { file = "DISKB/NAME.MES", offset = 0x59a5 },
+]
+source_mode = 1
+target_mode = 2
+source = "▼"
+translation = "v"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-22d8-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x22d8 },
+  { file = "DISKB/NAME.MES", offset = 0x24ae },
+]
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-22fa-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x22fa },
+  { file = "DISKB/NAME.MES", offset = 0x24d0 },
+  { file = "DISKB/NAME.MES", offset = 0x28fa },
+]
+source_mode = 1
+target_mode = 2
+source = "かきくけこ　がぎぐげご　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-231c-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x231c },
+  { file = "DISKB/NAME.MES", offset = 0x24f2 },
+  { file = "DISKB/NAME.MES", offset = 0x291c },
+]
+source_mode = 1
+target_mode = 2
+source = "さしすせそ　ざじずぜぞ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-233e-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x233e },
+  { file = "DISKB/NAME.MES", offset = 0x23c6 },
+  { file = "DISKB/NAME.MES", offset = 0x2514 },
+  { file = "DISKB/NAME.MES", offset = 0x259c },
+  { file = "DISKB/NAME.MES", offset = 0x2720 },
+  { file = "DISKB/NAME.MES", offset = 0x27c4 },
+  { file = "DISKB/NAME.MES", offset = 0x293e },
+  { file = "DISKB/NAME.MES", offset = 0x29c6 },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2360-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x2360 },
+  { file = "DISKB/NAME.MES", offset = 0x2536 },
+  { file = "DISKB/NAME.MES", offset = 0x2960 },
+]
+source_mode = 1
+target_mode = 2
+source = "たちつてと　だぢづでど　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2382-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x2382 },
+  { file = "DISKB/NAME.MES", offset = 0x2558 },
+  { file = "DISKB/NAME.MES", offset = 0x2982 },
+]
+source_mode = 1
+target_mode = 2
+source = "なにぬねの　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-23a4-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x23a4 },
+  { file = "DISKB/NAME.MES", offset = 0x257a },
+  { file = "DISKB/NAME.MES", offset = 0x29a4 },
+]
+source_mode = 1
+target_mode = 2
+source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-23e8-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x23e8 },
+  { file = "DISKB/NAME.MES", offset = 0x25be },
+  { file = "DISKB/NAME.MES", offset = 0x29e8 },
+]
+source_mode = 1
+target_mode = 2
+source = "まみむめも　っー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-240a-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x240a },
+  { file = "DISKB/NAME.MES", offset = 0x25e0 },
+  { file = "DISKB/NAME.MES", offset = 0x2a0a },
+]
+source_mode = 1
+target_mode = 2
+source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-242c-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x242c },
+  { file = "DISKB/NAME.MES", offset = 0x2602 },
+  { file = "DISKB/NAME.MES", offset = 0x2a2c },
+]
+source_mode = 1
+target_mode = 2
+source = "らりるれろ　わをん　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-244e-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x244e },
+  { file = "DISKB/NAME.MES", offset = 0x2624 },
+  { file = "DISKB/NAME.MES", offset = 0x285d },
+  { file = "DISKB/NAME.MES", offset = 0x2a4e },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-245a-bs"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x245a },
+  { file = "DISKB/NAME.MES", offset = 0x2630 },
+  { file = "DISKB/NAME.MES", offset = 0x2869 },
+  { file = "DISKB/NAME.MES", offset = 0x2a5a },
+  { file = "DISKB/NAME.MES", offset = 0x5a14 },
+]
+source_mode = 2
+target_mode = 2
+source = "BS"
+translation = "BS"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-245f-cancel-ok"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x245f },
+  { file = "DISKB/NAME.MES", offset = 0x2635 },
+  { file = "DISKB/NAME.MES", offset = 0x286e },
+  { file = "DISKB/NAME.MES", offset = 0x2a5f },
+]
+source_mode = 1
+target_mode = 2
+source = "←　中止　決定"
+translation = "<-  CANCEL  OK"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-269f-silence"
+file = "DISKB/NAME.MES"
+offset = 0x269f
+source_mode = 1
+target_mode = 2
+source = "アイウエオ　ァィゥェォ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-26cb-silence"
+file = "DISKB/NAME.MES"
+offset = 0x26cb
+source_mode = 1
+target_mode = 2
+source = "カキクケコ　ガギグゲゴ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-26f5-silence"
+file = "DISKB/NAME.MES"
+offset = 0x26f5
+source_mode = 1
+target_mode = 2
+source = "サシスセソ　ザジズゼゾ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2742-silence"
+file = "DISKB/NAME.MES"
+offset = 0x2742
+source_mode = 1
+target_mode = 2
+source = "タチツテト　ダヂヅデド　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-276d-silence"
+file = "DISKB/NAME.MES"
+offset = 0x276d
+source_mode = 1
+target_mode = 2
+source = "ナニヌネノ　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2793-silence"
+file = "DISKB/NAME.MES"
+offset = 0x2793
+source_mode = 1
+target_mode = 2
+source = "ハヒフヘホ　バビブベボ　パピプペポ"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-27e6-silence"
+file = "DISKB/NAME.MES"
+offset = 0x27e6
+source_mode = 1
+target_mode = 2
+source = "マミムメモ　ッー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-280e-silence"
+file = "DISKB/NAME.MES"
+offset = 0x280e
+source_mode = 1
+target_mode = 2
+source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2835-silence"
+file = "DISKB/NAME.MES"
+offset = 0x2835
+source_mode = 1
+target_mode = 2
+source = "ラリルレロ　ワヲン　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-28d8-silence"
+file = "DISKB/NAME.MES"
+offset = 0x28d8
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-2acc-silence"
+file = "DISKB/NAME.MES"
+offset = 0x2acc
+source_mode = 1
+target_mode = 2
+source = "　　　　　第　二　水　準　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-456b-silence"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x456b },
+  { file = "DISKB/NAME.MES", offset = 0x457e },
+]
+source_mode = 2
+target_mode = 2
+source = "\""
+translation = "\""
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-4582-please"
+file = "DISKB/NAME.MES"
+offset = 0x4582
+source_mode = 1
+target_mode = 2
+source = "を"
+translation = "Please"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-4592-check-the-table"
+file = "DISKB/NAME.MES"
+offset = 0x4592
+source_mode = 1
+target_mode = 2
+source = "参照して下さい"
+translation = "check the table."
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-45dc-that-character"
+file = "DISKB/NAME.MES"
+offset = 0x45dc
+source_mode = 1
+target_mode = 2
+source = "指定の漢字は"
+translation = "That character"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-45f2-is-unavailable"
+file = "DISKB/NAME.MES"
+offset = 0x45f2
+source_mode = 1
+target_mode = 2
+source = "　有りません"
+translation = "is unavailable."
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-59dc-35"
+file = "DISKB/NAME.MES"
+offset = 0x59dc
+source_mode = 1
+target_mode = 2
+source = "／３５"
+translation = "/35"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-59fa-cancel"
+anchors = [
+  { file = "DISKB/NAME.MES", offset = 0x59fa },
+  { file = "DISKB/NAME.MES", offset = 0x5a26 },
+]
+source_mode = 1
+target_mode = 2
+source = "中止"
+translation = "Cancel"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-5a19-silence"
+file = "DISKB/NAME.MES"
+offset = 0x5a19
+source_mode = 1
+target_mode = 2
+source = "←"
+translation = "<-"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "name-diskb-5a34-ok"
+file = "DISKB/NAME.MES"
+offset = 0x5a34
+source_mode = 1
+target_mode = 2
+source = "決定"
+translation = "OK"
+speaker = "ui"
+context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-01de-change"
+file = "DISKA/MONO.MES"
+offset = 0x01de
+source_mode = 1
+target_mode = 2
+source = "単語を変更"
+translation = "CHANGE"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-01f1-terms"
+file = "DISKA/MONO.MES"
+offset = 0x01f1
+source_mode = 1
+target_mode = 2
+source = "します"
+translation = "TERMS"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0256-default"
+file = "DISKA/MONO.MES"
+offset = 0x0256
+source_mode = 1
+target_mode = 2
+source = "ひらがな"
+translation = "DEFAULT"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0268-clinical"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x0268 },
+  { file = "DISKA/MONO.MES", offset = 0x072a },
+]
+source_mode = 1
+target_mode = 2
+source = "　カタカナ"
+translation = "  CLINICAL"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-027b-blunt"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x027b },
+  { file = "DISKA/MONO.MES", offset = 0x073e },
+]
+source_mode = 1
+target_mode = 2
+source = "　漢　　字"
+translation = "  BLUNT"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-028e-anatomical"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x028e },
+  { file = "DISKA/MONO.MES", offset = 0x0752 },
+]
+source_mode = 1
+target_mode = 2
+source = "　第二水準"
+translation = "  ANATOMICAL"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-046d-confirm"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x046d },
+  { file = "DISKA/MONO.MES", offset = 0x06b2 },
+  { file = "DISKA/MONO.MES", offset = 0x086b },
+  { file = "DISKA/MONO.MES", offset = 0x0bd5 },
+  { file = "DISKA/MONO.MES", offset = 0x41dc },
+]
+source_mode = 1
+target_mode = 2
+source = "決定キー："
+translation = "Confirm:"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0481-select-term"
+file = "DISKA/MONO.MES"
+offset = 0x0481
+source_mode = 1
+target_mode = 2
+source = "　単語選択"
+translation = "Select term"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0495-cancel"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x0495 },
+  { file = "DISKA/MONO.MES", offset = 0x06dc },
+  { file = "DISKA/MONO.MES", offset = 0x0893 },
+  { file = "DISKA/MONO.MES", offset = 0x0c00 },
+  { file = "DISKA/MONO.MES", offset = 0x4204 },
+]
+source_mode = 1
+target_mode = 2
+source = "キャンセルキー："
+translation = "Cancel:"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-04ac-review-changes"
+file = "DISKA/MONO.MES"
+offset = 0x04ac
+source_mode = 1
+target_mode = 2
+source = "　単語登録へ"
+translation = "Review changes"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-04db-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x04db },
+  { file = "DISKA/MONO.MES", offset = 0x04f1 },
+  { file = "DISKA/MONO.MES", offset = 0x0512 },
+  { file = "DISKA/MONO.MES", offset = 0x0528 },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = "  "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-04df-female-term"
+file = "DISKA/MONO.MES"
+offset = 0x04df
+source_mode = 1
+target_mode = 2
+source = "おま○こ　　→→　"
+translation = "FEMALE TERM ->"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0516-male-term"
+file = "DISKA/MONO.MES"
+offset = 0x0516
+source_mode = 1
+target_mode = 2
+source = "お○んち○　→→　"
+translation = "MALE TERM ->"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-06c6-select-style"
+file = "DISKA/MONO.MES"
+offset = 0x06c6
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択"
+translation = "Select style"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-06f3-term-list"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x06f3 },
+  { file = "DISKA/MONO.MES", offset = 0x0c17 },
+]
+source_mode = 1
+target_mode = 2
+source = "　単語選択へ"
+translation = "Term list"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0716-default"
+file = "DISKA/MONO.MES"
+offset = 0x0716
+source_mode = 1
+target_mode = 2
+source = "　ひらがな"
+translation = "  DEFAULT"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-087f-enter-character"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x087f },
+  { file = "DISKA/MONO.MES", offset = 0x41f0 },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字選択"
+translation = "Enter character"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-08aa-keyboard-list"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x08aa },
+  { file = "DISKA/MONO.MES", offset = 0x421b },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択へ"
+translation = "Keyboard list"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0be9-select-action"
+file = "DISKA/MONO.MES"
+offset = 0x0be9
+source_mode = 1
+target_mode = 2
+source = "　登録・終了選択"
+translation = "Select action"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0c5d-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x0c5d },
+  { file = "DISKA/MONO.MES", offset = 0x0c74 },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0c92-save-changes"
+file = "DISKA/MONO.MES"
+offset = 0x0c92
+source_mode = 1
+target_mode = 2
+source = "登録しますか？"
+translation = "Save changes?"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0caa-save"
+file = "DISKA/MONO.MES"
+offset = 0x0caa
+source_mode = 1
+target_mode = 2
+source = "登録"
+translation = "Save"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0cbd-discard"
+file = "DISKA/MONO.MES"
+offset = 0x0cbd
+source_mode = 1
+target_mode = 2
+source = "未登録"
+translation = "Discard"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0cde-finish-editing"
+file = "DISKA/MONO.MES"
+offset = 0x0cde
+source_mode = 1
+target_mode = 2
+source = "終了しますか？"
+translation = "Finish editing?"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0cf6-finish"
+file = "DISKA/MONO.MES"
+offset = 0x0cf6
+source_mode = 1
+target_mode = 2
+source = "終了"
+translation = "Finish"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-0d09-reset"
+file = "DISKA/MONO.MES"
+offset = 0x0d09
+source_mode = 1
+target_mode = 2
+source = "再設定"
+translation = "Reset"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-12cf-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x12cf },
+  { file = "DISKA/MONO.MES", offset = 0x54c6 },
+  { file = "DISKA/MONO.MES", offset = 0x551e },
+]
+source_mode = 1
+target_mode = 2
+source = "▲"
+translation = "^"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-12e5-v"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x12e5 },
+  { file = "DISKA/MONO.MES", offset = 0x54ee },
+  { file = "DISKA/MONO.MES", offset = 0x5533 },
+]
+source_mode = 1
+target_mode = 2
+source = "▼"
+translation = "v"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1e66-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1e66 },
+  { file = "DISKA/MONO.MES", offset = 0x203c },
+]
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1e88-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1e88 },
+  { file = "DISKA/MONO.MES", offset = 0x205e },
+  { file = "DISKA/MONO.MES", offset = 0x2488 },
+]
+source_mode = 1
+target_mode = 2
+source = "かきくけこ　がぎぐげご　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1eaa-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1eaa },
+  { file = "DISKA/MONO.MES", offset = 0x2080 },
+  { file = "DISKA/MONO.MES", offset = 0x24aa },
+]
+source_mode = 1
+target_mode = 2
+source = "さしすせそ　ざじずぜぞ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1ecc-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1ecc },
+  { file = "DISKA/MONO.MES", offset = 0x1f54 },
+  { file = "DISKA/MONO.MES", offset = 0x20a2 },
+  { file = "DISKA/MONO.MES", offset = 0x212a },
+  { file = "DISKA/MONO.MES", offset = 0x22ae },
+  { file = "DISKA/MONO.MES", offset = 0x2352 },
+  { file = "DISKA/MONO.MES", offset = 0x24cc },
+  { file = "DISKA/MONO.MES", offset = 0x2554 },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1eee-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1eee },
+  { file = "DISKA/MONO.MES", offset = 0x20c4 },
+  { file = "DISKA/MONO.MES", offset = 0x24ee },
+]
+source_mode = 1
+target_mode = 2
+source = "たちつてと　だぢづでど　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1f10-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1f10 },
+  { file = "DISKA/MONO.MES", offset = 0x20e6 },
+  { file = "DISKA/MONO.MES", offset = 0x2510 },
+]
+source_mode = 1
+target_mode = 2
+source = "なにぬねの　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1f32-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1f32 },
+  { file = "DISKA/MONO.MES", offset = 0x2108 },
+  { file = "DISKA/MONO.MES", offset = 0x2532 },
+]
+source_mode = 1
+target_mode = 2
+source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1f76-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1f76 },
+  { file = "DISKA/MONO.MES", offset = 0x214c },
+  { file = "DISKA/MONO.MES", offset = 0x2576 },
+]
+source_mode = 1
+target_mode = 2
+source = "まみむめも　っー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1f98-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1f98 },
+  { file = "DISKA/MONO.MES", offset = 0x216e },
+  { file = "DISKA/MONO.MES", offset = 0x2598 },
+]
+source_mode = 1
+target_mode = 2
+source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1fba-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1fba },
+  { file = "DISKA/MONO.MES", offset = 0x2190 },
+  { file = "DISKA/MONO.MES", offset = 0x25ba },
+]
+source_mode = 1
+target_mode = 2
+source = "らりるれろ　わをん　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1fdc-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1fdc },
+  { file = "DISKA/MONO.MES", offset = 0x21b2 },
+  { file = "DISKA/MONO.MES", offset = 0x23eb },
+  { file = "DISKA/MONO.MES", offset = 0x25dc },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1fe8-bs"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1fe8 },
+  { file = "DISKA/MONO.MES", offset = 0x21be },
+  { file = "DISKA/MONO.MES", offset = 0x23f7 },
+  { file = "DISKA/MONO.MES", offset = 0x25e8 },
+  { file = "DISKA/MONO.MES", offset = 0x55a2 },
+]
+source_mode = 2
+target_mode = 2
+source = "BS"
+translation = "BS"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-1fed-cancel-ok"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x1fed },
+  { file = "DISKA/MONO.MES", offset = 0x21c3 },
+  { file = "DISKA/MONO.MES", offset = 0x23fc },
+  { file = "DISKA/MONO.MES", offset = 0x25ed },
+]
+source_mode = 1
+target_mode = 2
+source = "←　中止　決定"
+translation = "<-  CANCEL  OK"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-222d-silence"
+file = "DISKA/MONO.MES"
+offset = 0x222d
+source_mode = 1
+target_mode = 2
+source = "アイウエオ　ァィゥェォ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-2259-silence"
+file = "DISKA/MONO.MES"
+offset = 0x2259
+source_mode = 1
+target_mode = 2
+source = "カキクケコ　ガギグゲゴ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-2283-silence"
+file = "DISKA/MONO.MES"
+offset = 0x2283
+source_mode = 1
+target_mode = 2
+source = "サシスセソ　ザジズゼゾ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-22d0-silence"
+file = "DISKA/MONO.MES"
+offset = 0x22d0
+source_mode = 1
+target_mode = 2
+source = "タチツテト　ダヂヅデド　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-22fb-silence"
+file = "DISKA/MONO.MES"
+offset = 0x22fb
+source_mode = 1
+target_mode = 2
+source = "ナニヌネノ　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-2321-silence"
+file = "DISKA/MONO.MES"
+offset = 0x2321
+source_mode = 1
+target_mode = 2
+source = "ハヒフヘホ　バビブベボ　パピプペポ"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-2374-silence"
+file = "DISKA/MONO.MES"
+offset = 0x2374
+source_mode = 1
+target_mode = 2
+source = "マミムメモ　ッー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-239c-silence"
+file = "DISKA/MONO.MES"
+offset = 0x239c
+source_mode = 1
+target_mode = 2
+source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-23c3-silence"
+file = "DISKA/MONO.MES"
+offset = 0x23c3
+source_mode = 1
+target_mode = 2
+source = "ラリルレロ　ワヲン　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-2466-silence"
+file = "DISKA/MONO.MES"
+offset = 0x2466
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-265a-silence"
+file = "DISKA/MONO.MES"
+offset = 0x265a
+source_mode = 1
+target_mode = 2
+source = "　　　　　第　二　水　準　　　　　"
+translation = " "
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-40f9-silence"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x40f9 },
+  { file = "DISKA/MONO.MES", offset = 0x410c },
+]
+source_mode = 2
+target_mode = 2
+source = "\""
+translation = "\""
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-4110-please"
+file = "DISKA/MONO.MES"
+offset = 0x4110
+source_mode = 1
+target_mode = 2
+source = "を"
+translation = "Please"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-4120-check-the-table"
+file = "DISKA/MONO.MES"
+offset = 0x4120
+source_mode = 1
+target_mode = 2
+source = "参照して下さい"
+translation = "check the table."
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-416a-that-character"
+file = "DISKA/MONO.MES"
+offset = 0x416a
+source_mode = 1
+target_mode = 2
+source = "指定の漢字は"
+translation = "That character"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-4180-is-unavailable"
+file = "DISKA/MONO.MES"
+offset = 0x4180
+source_mode = 1
+target_mode = 2
+source = "　有りません"
+translation = "is unavailable."
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-556a-35"
+file = "DISKA/MONO.MES"
+offset = 0x556a
+source_mode = 1
+target_mode = 2
+source = "／３５"
+translation = "/35"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-5588-cancel"
+anchors = [
+  { file = "DISKA/MONO.MES", offset = 0x5588 },
+  { file = "DISKA/MONO.MES", offset = 0x55b4 },
+]
+source_mode = 1
+target_mode = 2
+source = "中止"
+translation = "Cancel"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-55a7-silence"
+file = "DISKA/MONO.MES"
+offset = 0x55a7
+source_mode = 1
+target_mode = 2
+source = "←"
+translation = "<-"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diska-55c2-ok"
+file = "DISKA/MONO.MES"
+offset = 0x55c2
+source_mode = 1
+target_mode = 2
+source = "決定"
+translation = "OK"
+speaker = "ui"
+context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-01de-change"
+file = "DISKB/MONO.MES"
+offset = 0x01de
+source_mode = 1
+target_mode = 2
+source = "単語を変更"
+translation = "CHANGE"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-01f1-terms"
+file = "DISKB/MONO.MES"
+offset = 0x01f1
+source_mode = 1
+target_mode = 2
+source = "します"
+translation = "TERMS"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0256-default"
+file = "DISKB/MONO.MES"
+offset = 0x0256
+source_mode = 1
+target_mode = 2
+source = "ひらがな"
+translation = "DEFAULT"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0268-clinical"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x0268 },
+  { file = "DISKB/MONO.MES", offset = 0x072a },
+]
+source_mode = 1
+target_mode = 2
+source = "　カタカナ"
+translation = "  CLINICAL"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-027b-blunt"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x027b },
+  { file = "DISKB/MONO.MES", offset = 0x073e },
+]
+source_mode = 1
+target_mode = 2
+source = "　漢　　字"
+translation = "  BLUNT"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-028e-anatomical"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x028e },
+  { file = "DISKB/MONO.MES", offset = 0x0752 },
+]
+source_mode = 1
+target_mode = 2
+source = "　第二水準"
+translation = "  ANATOMICAL"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-046d-confirm"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x046d },
+  { file = "DISKB/MONO.MES", offset = 0x06b2 },
+  { file = "DISKB/MONO.MES", offset = 0x086b },
+  { file = "DISKB/MONO.MES", offset = 0x0bd5 },
+  { file = "DISKB/MONO.MES", offset = 0x41dc },
+]
+source_mode = 1
+target_mode = 2
+source = "決定キー："
+translation = "Confirm:"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0481-select-term"
+file = "DISKB/MONO.MES"
+offset = 0x0481
+source_mode = 1
+target_mode = 2
+source = "　単語選択"
+translation = "Select term"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0495-cancel"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x0495 },
+  { file = "DISKB/MONO.MES", offset = 0x06dc },
+  { file = "DISKB/MONO.MES", offset = 0x0893 },
+  { file = "DISKB/MONO.MES", offset = 0x0c00 },
+  { file = "DISKB/MONO.MES", offset = 0x4204 },
+]
+source_mode = 1
+target_mode = 2
+source = "キャンセルキー："
+translation = "Cancel:"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-04ac-review-changes"
+file = "DISKB/MONO.MES"
+offset = 0x04ac
+source_mode = 1
+target_mode = 2
+source = "　単語登録へ"
+translation = "Review changes"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-04db-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x04db },
+  { file = "DISKB/MONO.MES", offset = 0x04f1 },
+  { file = "DISKB/MONO.MES", offset = 0x0512 },
+  { file = "DISKB/MONO.MES", offset = 0x0528 },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = "  "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-04df-female-term"
+file = "DISKB/MONO.MES"
+offset = 0x04df
+source_mode = 1
+target_mode = 2
+source = "おま○こ　　→→　"
+translation = "FEMALE TERM ->"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0516-male-term"
+file = "DISKB/MONO.MES"
+offset = 0x0516
+source_mode = 1
+target_mode = 2
+source = "お○んち○　→→　"
+translation = "MALE TERM ->"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-06c6-select-style"
+file = "DISKB/MONO.MES"
+offset = 0x06c6
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択"
+translation = "Select style"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-06f3-term-list"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x06f3 },
+  { file = "DISKB/MONO.MES", offset = 0x0c17 },
+]
+source_mode = 1
+target_mode = 2
+source = "　単語選択へ"
+translation = "Term list"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0716-default"
+file = "DISKB/MONO.MES"
+offset = 0x0716
+source_mode = 1
+target_mode = 2
+source = "　ひらがな"
+translation = "  DEFAULT"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-087f-enter-character"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x087f },
+  { file = "DISKB/MONO.MES", offset = 0x41f0 },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字選択"
+translation = "Enter character"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-08aa-keyboard-list"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x08aa },
+  { file = "DISKB/MONO.MES", offset = 0x421b },
+]
+source_mode = 1
+target_mode = 2
+source = "　文字種別選択へ"
+translation = "Keyboard list"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0be9-select-action"
+file = "DISKB/MONO.MES"
+offset = 0x0be9
+source_mode = 1
+target_mode = 2
+source = "　登録・終了選択"
+translation = "Select action"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0c5d-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x0c5d },
+  { file = "DISKB/MONO.MES", offset = 0x0c74 },
+]
+source_mode = 1
+target_mode = 2
+source = "　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0c92-save-changes"
+file = "DISKB/MONO.MES"
+offset = 0x0c92
+source_mode = 1
+target_mode = 2
+source = "登録しますか？"
+translation = "Save changes?"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0caa-save"
+file = "DISKB/MONO.MES"
+offset = 0x0caa
+source_mode = 1
+target_mode = 2
+source = "登録"
+translation = "Save"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0cbd-discard"
+file = "DISKB/MONO.MES"
+offset = 0x0cbd
+source_mode = 1
+target_mode = 2
+source = "未登録"
+translation = "Discard"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0cde-finish-editing"
+file = "DISKB/MONO.MES"
+offset = 0x0cde
+source_mode = 1
+target_mode = 2
+source = "終了しますか？"
+translation = "Finish editing?"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0cf6-finish"
+file = "DISKB/MONO.MES"
+offset = 0x0cf6
+source_mode = 1
+target_mode = 2
+source = "終了"
+translation = "Finish"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-0d09-reset"
+file = "DISKB/MONO.MES"
+offset = 0x0d09
+source_mode = 1
+target_mode = 2
+source = "再設定"
+translation = "Reset"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-12cf-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x12cf },
+  { file = "DISKB/MONO.MES", offset = 0x54c6 },
+  { file = "DISKB/MONO.MES", offset = 0x551e },
+]
+source_mode = 1
+target_mode = 2
+source = "▲"
+translation = "^"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-12e5-v"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x12e5 },
+  { file = "DISKB/MONO.MES", offset = 0x54ee },
+  { file = "DISKB/MONO.MES", offset = 0x5533 },
+]
+source_mode = 1
+target_mode = 2
+source = "▼"
+translation = "v"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1e66-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1e66 },
+  { file = "DISKB/MONO.MES", offset = 0x203c },
+]
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1e88-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1e88 },
+  { file = "DISKB/MONO.MES", offset = 0x205e },
+  { file = "DISKB/MONO.MES", offset = 0x2488 },
+]
+source_mode = 1
+target_mode = 2
+source = "かきくけこ　がぎぐげご　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1eaa-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1eaa },
+  { file = "DISKB/MONO.MES", offset = 0x2080 },
+  { file = "DISKB/MONO.MES", offset = 0x24aa },
+]
+source_mode = 1
+target_mode = 2
+source = "さしすせそ　ざじずぜぞ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1ecc-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1ecc },
+  { file = "DISKB/MONO.MES", offset = 0x1f54 },
+  { file = "DISKB/MONO.MES", offset = 0x20a2 },
+  { file = "DISKB/MONO.MES", offset = 0x212a },
+  { file = "DISKB/MONO.MES", offset = 0x22ae },
+  { file = "DISKB/MONO.MES", offset = 0x2352 },
+  { file = "DISKB/MONO.MES", offset = 0x24cc },
+  { file = "DISKB/MONO.MES", offset = 0x2554 },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1eee-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1eee },
+  { file = "DISKB/MONO.MES", offset = 0x20c4 },
+  { file = "DISKB/MONO.MES", offset = 0x24ee },
+]
+source_mode = 1
+target_mode = 2
+source = "たちつてと　だぢづでど　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1f10-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1f10 },
+  { file = "DISKB/MONO.MES", offset = 0x20e6 },
+  { file = "DISKB/MONO.MES", offset = 0x2510 },
+]
+source_mode = 1
+target_mode = 2
+source = "なにぬねの　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1f32-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1f32 },
+  { file = "DISKB/MONO.MES", offset = 0x2108 },
+  { file = "DISKB/MONO.MES", offset = 0x2532 },
+]
+source_mode = 1
+target_mode = 2
+source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1f76-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1f76 },
+  { file = "DISKB/MONO.MES", offset = 0x214c },
+  { file = "DISKB/MONO.MES", offset = 0x2576 },
+]
+source_mode = 1
+target_mode = 2
+source = "まみむめも　っー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1f98-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1f98 },
+  { file = "DISKB/MONO.MES", offset = 0x216e },
+  { file = "DISKB/MONO.MES", offset = 0x2598 },
+]
+source_mode = 1
+target_mode = 2
+source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1fba-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1fba },
+  { file = "DISKB/MONO.MES", offset = 0x2190 },
+  { file = "DISKB/MONO.MES", offset = 0x25ba },
+]
+source_mode = 1
+target_mode = 2
+source = "らりるれろ　わをん　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1fdc-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1fdc },
+  { file = "DISKB/MONO.MES", offset = 0x21b2 },
+  { file = "DISKB/MONO.MES", offset = 0x23eb },
+  { file = "DISKB/MONO.MES", offset = 0x25dc },
+]
+source_mode = 1
+target_mode = 2
+source = "　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1fe8-bs"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1fe8 },
+  { file = "DISKB/MONO.MES", offset = 0x21be },
+  { file = "DISKB/MONO.MES", offset = 0x23f7 },
+  { file = "DISKB/MONO.MES", offset = 0x25e8 },
+  { file = "DISKB/MONO.MES", offset = 0x55a2 },
+]
+source_mode = 2
+target_mode = 2
+source = "BS"
+translation = "BS"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-1fed-cancel-ok"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x1fed },
+  { file = "DISKB/MONO.MES", offset = 0x21c3 },
+  { file = "DISKB/MONO.MES", offset = 0x23fc },
+  { file = "DISKB/MONO.MES", offset = 0x25ed },
+]
+source_mode = 1
+target_mode = 2
+source = "←　中止　決定"
+translation = "<-  CANCEL  OK"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-222d-silence"
+file = "DISKB/MONO.MES"
+offset = 0x222d
+source_mode = 1
+target_mode = 2
+source = "アイウエオ　ァィゥェォ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-2259-silence"
+file = "DISKB/MONO.MES"
+offset = 0x2259
+source_mode = 1
+target_mode = 2
+source = "カキクケコ　ガギグゲゴ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-2283-silence"
+file = "DISKB/MONO.MES"
+offset = 0x2283
+source_mode = 1
+target_mode = 2
+source = "サシスセソ　ザジズゼゾ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-22d0-silence"
+file = "DISKB/MONO.MES"
+offset = 0x22d0
+source_mode = 1
+target_mode = 2
+source = "タチツテト　ダヂヅデド　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-22fb-silence"
+file = "DISKB/MONO.MES"
+offset = 0x22fb
+source_mode = 1
+target_mode = 2
+source = "ナニヌネノ　　　　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-2321-silence"
+file = "DISKB/MONO.MES"
+offset = 0x2321
+source_mode = 1
+target_mode = 2
+source = "ハヒフヘホ　バビブベボ　パピプペポ"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-2374-silence"
+file = "DISKB/MONO.MES"
+offset = 0x2374
+source_mode = 1
+target_mode = 2
+source = "マミムメモ　ッー　　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-239c-silence"
+file = "DISKB/MONO.MES"
+offset = 0x239c
+source_mode = 1
+target_mode = 2
+source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-23c3-silence"
+file = "DISKB/MONO.MES"
+offset = 0x23c3
+source_mode = 1
+target_mode = 2
+source = "ラリルレロ　ワヲン　　　　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-2466-silence"
+file = "DISKB/MONO.MES"
+offset = 0x2466
+source_mode = 1
+target_mode = 2
+source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-265a-silence"
+file = "DISKB/MONO.MES"
+offset = 0x265a
+source_mode = 1
+target_mode = 2
+source = "　　　　　第　二　水　準　　　　　"
+translation = " "
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-40f9-silence"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x40f9 },
+  { file = "DISKB/MONO.MES", offset = 0x410c },
+]
+source_mode = 2
+target_mode = 2
+source = "\""
+translation = "\""
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-4110-please"
+file = "DISKB/MONO.MES"
+offset = 0x4110
+source_mode = 1
+target_mode = 2
+source = "を"
+translation = "Please"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-4120-check-the-table"
+file = "DISKB/MONO.MES"
+offset = 0x4120
+source_mode = 1
+target_mode = 2
+source = "参照して下さい"
+translation = "check the table."
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-416a-that-character"
+file = "DISKB/MONO.MES"
+offset = 0x416a
+source_mode = 1
+target_mode = 2
+source = "指定の漢字は"
+translation = "That character"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-4180-is-unavailable"
+file = "DISKB/MONO.MES"
+offset = 0x4180
+source_mode = 1
+target_mode = 2
+source = "　有りません"
+translation = "is unavailable."
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-556a-35"
+file = "DISKB/MONO.MES"
+offset = 0x556a
+source_mode = 1
+target_mode = 2
+source = "／３５"
+translation = "/35"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-5588-cancel"
+anchors = [
+  { file = "DISKB/MONO.MES", offset = 0x5588 },
+  { file = "DISKB/MONO.MES", offset = 0x55b4 },
+]
+source_mode = 1
+target_mode = 2
+source = "中止"
+translation = "Cancel"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-55a7-silence"
+file = "DISKB/MONO.MES"
+offset = 0x55a7
+source_mode = 1
+target_mode = 2
+source = "←"
+translation = "<-"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "mono-diskb-55c2-ok"
+file = "DISKB/MONO.MES"
+offset = 0x55c2
+source_mode = 1
+target_mode = 2
+source = "決定"
+translation = "OK"
+speaker = "ui"
+context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-01bd-48-night-stories"
+file = "DISKA/SILK.MES"
+offset = 0x01bd
+source_mode = 1
+target_mode = 2
+source = "【４８夜物語】\n"
+translation = "[48 NIGHT STORIES]"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-01ea-discover-the-winning-moves-of-48-beautiful-girls"
+file = "DISKA/SILK.MES"
+offset = 0x01ea
+source_mode = 1
+target_mode = 2
+source = "総勢４８人＋α美少女の決まり手を探せ！\n"
+translation = "Discover the winning moves of 48 beautiful girls - and more!"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0207-silky-s-presents-the-definitive-game-featuring-beautiful"
+file = "DISKA/SILK.MES"
+offset = 0x0207
+source_mode = 1
+target_mode = 2
+source = "シルキーズが贈るソフト界初の秘技４８手全てを網羅した美少女ソフトの決定版！\n"
+translation = "Silky's presents the definitive game featuring beautiful girls, the first to cover all forty-eight secret techniques!"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0239-how-many-beautiful-girls-can-you-win-over"
+file = "DISKA/SILK.MES"
+offset = 0x0239
+source_mode = 1
+target_mode = 2
+source = "君は何人の美少女をオトせる？\n"
+translation = "How many beautiful girls can you win over?"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-024f-pc-9801-series-5-and-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x024f
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）平成４年８月２１日発売\n"
+translation = "PC-9801 series (5- and 3.5-inch), released August 21, 1992"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0272-requires-a-bus-mouse-and-ms-dos-ver"
+file = "DISKA/SILK.MES"
+offset = 0x0272
+source_mode = 1
+target_mode = 2
+source = "※バスマウスとＭＳ－ＤＯＳ　Ｖｅｒ．３．××が必要です。\n"
+translation = "Requires a bus mouse and MS-DOS Ver. 3.xx."
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0296-hard-disks-unsupported-two-floppy-drives-required"
+file = "DISKA/SILK.MES"
+offset = 0x0296
+source_mode = 1
+target_mode = 2
+source = "※ハードディスク不対応。要２ドライブ。\n"
+translation = "Hard disks unsupported; two floppy drives required."
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-02ad-pc-98note-is-not-supported"
+file = "DISKA/SILK.MES"
+offset = 0x02ad
+source_mode = 1
+target_mode = 2
+source = "※９８ＮＯＴＥには対応しておりません。\n"
+translation = "PC-98NOTE is not supported."
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-02c4-price-7-800-yen"
+file = "DISKA/SILK.MES"
+offset = 0x02c4
+source_mode = 1
+target_mode = 2
+source = "価格７，８００円"
+translation = "Price: 7,800 yen"
+speaker = "４８夜物語"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0350-premium"
+file = "DISKA/SILK.MES"
+offset = 0x0350
+source_mode = 1
+target_mode = 2
+source = "【ＰＲＥＭＩＵＭ】\n"
+translation = "[PREMIUM]"
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-037d-let-these-girls-fill-the-empty-places-in"
+file = "DISKA/SILK.MES"
+offset = 0x037d
+source_mode = 1
+target_mode = 2
+source = "あなたの心の隙間を、女の子達が埋めて差し上げます。\n"
+translation = "Let these girls fill the empty places in your heart."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-039f-a-game-from-silky-s-made-by-adults"
+file = "DISKA/SILK.MES"
+offset = 0x039f
+source_mode = 1
+target_mode = 2
+source = "シルキーズがお届けする、大人の為の、大人だけのゲームソフト。\n"
+translation = "A game from Silky's, made by adults and exclusively for adults."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-03c2-premium-is-a-tonic-for-the-heart-ready"
+file = "DISKA/SILK.MES"
+offset = 0x03c2
+source_mode = 1
+target_mode = 2
+source = "［プレミアム］は心の清涼剤……あなたを夢の世界へとお連れします。\n"
+translation = "PREMIUM is a tonic for the heart, ready to carry you into a dream world."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-03eb-beautiful-graphics-and-a-sensual-world"
+file = "DISKA/SILK.MES"
+offset = 0x03eb
+source_mode = 1
+target_mode = 2
+source = "美しいグラフィックと淫美な世界を、\n"
+translation = "Beautiful graphics and a sensual world,"
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0401-presented-as-an-anthology-game"
+file = "DISKA/SILK.MES"
+offset = 0x0401
+source_mode = 1
+target_mode = 2
+source = "オムニバス形式のゲームに仕上げました。\n"
+translation = "presented as an anthology game."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-041f-perfect-for-anyone-lamenting-the-recent-shortage-of"
+file = "DISKA/SILK.MES"
+offset = 0x041f
+source_mode = 1
+target_mode = 2
+source = "最近大人向きのゲームが少ないとお嘆きのあなたに、ぴったりのゲームです。\n"
+translation = "Perfect for anyone lamenting the recent shortage of games for adults."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-044b-pc-9801-5-and-3-5-inch-x68000"
+file = "DISKA/SILK.MES"
+offset = 0x044b
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）・Ｘ６８０００シリーズ（５インチ）・ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成４年９月１７日発売\n"
+translation = "PC-9801 (5- and 3.5-inch), X68000 (5-inch), and FM TOWNS (3.5-inch); released September 17, 1992"
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0495-hard-disks-unsupported-two-floppy-drives-required"
+file = "DISKA/SILK.MES"
+offset = 0x0495
+source_mode = 1
+target_mode = 2
+source = "※ハードディスク不対応。要２ドライブ。\n"
+translation = "Hard disks unsupported; two floppy drives required."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-04ac-the-fm-towns-version-requires"
+file = "DISKA/SILK.MES"
+offset = 0x04ac
+source_mode = 1
+target_mode = 2
+source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
+translation = "The FM TOWNS version requires"
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-04be-system-software-ver-2-1-l20-or-later"
+file = "DISKA/SILK.MES"
+offset = 0x04be
+source_mode = 1
+target_mode = 2
+source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
+translation = "System Software Ver. 2.1 L20 or later."
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-04de-price-7-800-yen-each"
+file = "DISKA/SILK.MES"
+offset = 0x04de
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円"
+translation = "Price: 7,800 yen each"
+speaker = "ＰＲＥＭＩＵＭ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-056b-iku-iku-pakkun"
+file = "DISKA/SILK.MES"
+offset = 0x056b
+source_mode = 1
+target_mode = 2
+source = "【イクイクパッ君】\n"
+translation = "[IKU IKU PAKKUN]"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0598-a-super-fun-super-easy-super-erotic-game"
+file = "DISKA/SILK.MES"
+offset = 0x0598
+source_mode = 1
+target_mode = 2
+source = "超楽しく、超簡単な、超Ｈゲーム！グラフィックはキャラだけで\n"
+translation = "A super-fun, super-easy, super-erotic game! Character graphics alone fill"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-05bf-216-full-screens"
+file = "DISKA/SILK.MES"
+offset = 0x05bf
+source_mode = 1
+target_mode = 2
+source = "フル画面総数２１６枚。\n"
+translation = "216 full screens."
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-05d1-an-astonishing-forty-eight-figures-rush-toward-you"
+file = "DISKA/SILK.MES"
+offset = 0x05d1
+source_mode = 1
+target_mode = 2
+source = "なんと脅威の１２００ライン３画面スクロール４８体がキミに迫る！！キミの前に現われる美少女とパックン勝負ッ！！\n"
+translation = "An astonishing forty-eight figures rush toward you across three scrolling 1,200-line screens! Face every beautiful girl in a Pakkun showdown!"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0613-your-technique-draws-out-the-girls-real-voices"
+file = "DISKA/SILK.MES"
+offset = 0x0613
+source_mode = 1
+target_mode = 2
+source = "キミのテクで思わずこぼれる美少女たちの肉声（サンプリングだッ！）。\n"
+translation = "Your technique draws out the girls' real voices - sampled audio!"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-063d-catch-each-girl-s-special-spot-with-the"
+file = "DISKA/SILK.MES"
+offset = 0x063d
+source_mode = 1
+target_mode = 2
+source = "美少女たちのスポットをアイコンでキャッチせよッ！！\n"
+translation = "Catch each girl's special spot with the icon!"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-065c-pc-9801-series-5-and-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x065c
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）平成４年１１月２０日発売\n"
+translation = "PC-9801 series (5- and 3.5-inch), released November 20, 1992"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0680-requires-a-bus-mouse-and-ms-dos-ver"
+file = "DISKA/SILK.MES"
+offset = 0x0680
+source_mode = 1
+target_mode = 2
+source = "※バスマウスとＭＳ－ＤＯＳ　Ｖｅｒ．３．××が必要です。\n"
+translation = "Requires a bus mouse and MS-DOS Ver. 3.xx."
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-06a4-hard-disks-unsupported-two-floppy-drives-required"
+file = "DISKA/SILK.MES"
+offset = 0x06a4
+source_mode = 1
+target_mode = 2
+source = "※ハードディスク不対応。要２ドライブ。\n"
+translation = "Hard disks unsupported; two floppy drives required."
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-06bb-pc-98note-is-not-supported"
+file = "DISKA/SILK.MES"
+offset = 0x06bb
+source_mode = 1
+target_mode = 2
+source = "※９８ＮＯＴＥには対応しておりません。\n"
+translation = "PC-98NOTE is not supported."
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-06d2-price-8-800-yen"
+file = "DISKA/SILK.MES"
+offset = 0x06d2
+source_mode = 1
+target_mode = 2
+source = "価格８，８００円"
+translation = "Price: 8,800 yen"
+speaker = "イクイクパッ君"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-075e-premium-2"
+file = "DISKA/SILK.MES"
+offset = 0x075e
+source_mode = 1
+target_mode = 2
+source = "【ＰＲＥＭＩＵＭ２】\n"
+translation = "[PREMIUM 2]"
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-078c-let-us-fill-the-empty-places-in-your"
+file = "DISKA/SILK.MES"
+offset = 0x078c
+source_mode = 1
+target_mode = 2
+source = "あなたの心の隙間を、甘い思い出で一杯にして差し上げます。\n"
+translation = "Let us fill the empty places in your heart with sweet memories."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-07b3-premium-2-will-carry-you-into-a-dream"
+file = "DISKA/SILK.MES"
+offset = 0x07b3
+source_mode = 1
+target_mode = 2
+source = "［プレミアム２］は、あなたを夢の世界へとお連れ致します。\n"
+translation = "PREMIUM 2 will carry you into a dream world."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-07d5-a-game-for-adults-and-only-for-adults"
+file = "DISKA/SILK.MES"
+offset = 0x07d5
+source_mode = 1
+target_mode = 2
+source = "大人の為の、大人の為だけのゲームソフト、それがプレミアム２です。\n"
+translation = "A game for adults, and only for adults: that is PREMIUM 2."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-07f9-the-girls-confined-within-that-dream-world-have"
+file = "DISKA/SILK.MES"
+offset = 0x07f9
+source_mode = 1
+target_mode = 2
+source = "夢の世界に閉じ込められている女の子達は、あなたと出会えるその時をずっと待ち続けています…。\n"
+translation = "The girls confined within that dream world have waited so long for the moment they can meet you..."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0830-yes-they-were-born-so-that-they-could"
+file = "DISKA/SILK.MES"
+offset = 0x0830
+source_mode = 1
+target_mode = 2
+source = "そう、彼女達はあなたと出会う為に生まれてきたのです。\n"
+translation = "Yes, they were born so that they could meet you."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0850-pc-9801-5-and-3-5-inch-x68000"
+file = "DISKA/SILK.MES"
+offset = 0x0850
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）・Ｘ６８０００シリーズ（５インチ）・ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成５年１月２８日発売\n"
+translation = "PC-9801 (5- and 3.5-inch), X68000 (5-inch), and FM TOWNS (3.5-inch); released January 28, 1993"
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-089a-hard-disks-unsupported-two-floppy-drives-required"
+file = "DISKA/SILK.MES"
+offset = 0x089a
+source_mode = 1
+target_mode = 2
+source = "※ハードディスク不対応。要２ドライブ。\n"
+translation = "Hard disks unsupported; two floppy drives required."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-08b1-the-fm-towns-version-requires"
+file = "DISKA/SILK.MES"
+offset = 0x08b1
+source_mode = 1
+target_mode = 2
+source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
+translation = "The FM TOWNS version requires"
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-08c3-system-software-ver-2-1-l20-or-later"
+file = "DISKA/SILK.MES"
+offset = 0x08c3
+source_mode = 1
+target_mode = 2
+source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
+translation = "System Software Ver. 2.1 L20 or later."
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-08e3-price-7-800-yen-each"
+file = "DISKA/SILK.MES"
+offset = 0x08e3
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円"
+translation = "Price: 7,800 yen each"
+speaker = "ＰＲＥＭＩＵＭ２"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0970-crescent"
+file = "DISKA/SILK.MES"
+offset = 0x0970
+source_mode = 1
+target_mode = 2
+source = "【ＣＲＥＳＣＥＮＴ】\n"
+translation = "[CRESCENT]"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-099d-a-man-s-dreams-tightly-concentrated-into-one"
+file = "DISKA/SILK.MES"
+offset = 0x099d
+source_mode = 1
+target_mode = 2
+source = "男の夢をこの１本にギュギュッと濃縮。\n"
+translation = "A man's dreams, tightly concentrated into one game."
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-09bb-a-hyper-real-anthology-adventure-controlled-with-icon"
+file = "DISKA/SILK.MES"
+offset = 0x09bb
+source_mode = 1
+target_mode = 2
+source = "アイコンクリックでさらにハイパーリアルなオムニバスＡＤＶ！！\n"
+translation = "A hyper-real anthology adventure controlled with icon clicks!"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-09e2-four-stories-carnival-of-enchantment-the-doctor-s"
+file = "DISKA/SILK.MES"
+offset = 0x09e2
+source_mode = 1
+target_mode = 2
+source = "［魔性の謝肉祭］［博士の見えない欲望］\n"
+translation = "Four stories: [Carnival of Enchantment] [The Doctor's Invisible Desire]"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0a03-maiden-detective-body-attack-and-the-forbidden-hidden"
+file = "DISKA/SILK.MES"
+offset = 0x0a03
+source_mode = 1
+target_mode = 2
+source = "［乙女探偵ボディアタック］［禁断の秘湯］の４本立て。\n"
+translation = "[Maiden Detective Body Attack] and [The Forbidden Hidden Spring]."
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0a2b-pc-9801-5-and-3-5-inch-x68000"
+file = "DISKA/SILK.MES"
+offset = 0x0a2b
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）・Ｘ６８０００シリーズ（５インチ）・ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成５年１０月２１日発売\n"
+translation = "PC-9801 (5- and 3.5-inch), X68000 (5-inch), and FM TOWNS (3.5-inch); released October 21, 1993"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0a76-hard-disks-unsupported-two-floppy-drives-required"
+file = "DISKA/SILK.MES"
+offset = 0x0a76
+source_mode = 1
+target_mode = 2
+source = "※ハードディスク不対応。要２ドライブ。\n"
+translation = "Hard disks unsupported; two floppy drives required."
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0a8d-the-fm-towns-version-requires"
+file = "DISKA/SILK.MES"
+offset = 0x0a8d
+source_mode = 1
+target_mode = 2
+source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
+translation = "The FM TOWNS version requires"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0a9f-system-software-ver-2-1-l20-or-later"
+file = "DISKA/SILK.MES"
+offset = 0x0a9f
+source_mode = 1
+target_mode = 2
+source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
+translation = "System Software Ver. 2.1 L20 or later."
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0abf-price-7-800-yen-each"
+file = "DISKA/SILK.MES"
+offset = 0x0abf
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円"
+translation = "Price: 7,800 yen each"
+speaker = "ＣＲＥＳＣＥＮＴ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0b67-the-kawarazaki-family"
+file = "DISKA/SILK.MES"
+offset = 0x0b67
+source_mode = 1
+target_mode = 2
+source = "【河原崎家の一族】"
+translation = "[THE KAWARAZAKI FAMILY]"
+speaker = "河原崎家の一族"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0ba6-tempted-by-an-outrageous-wage-university-student-rokuro"
+file = "DISKA/SILK.MES"
+offset = 0x0ba6
+source_mode = 1
+target_mode = 2
+source = "法外な報酬に惹かれ、夏休みの間だけ古ぼけた洋館で働く事になった大学生［六郎］。"
+translation = "Tempted by an outrageous wage, university student Rokuro takes a summer job in a decaying Western mansion."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0be0-but-the-kawarazaki-family-living-there-gives-off"
+file = "DISKA/SILK.MES"
+offset = 0x0be0
+source_mode = 1
+target_mode = 2
+source = "しかしそこに住む河原崎家の一族は、どこか異様な雰囲気を漂わせていた。美しい妻［京子］、その娘［さちこ］と［麗］。"
+translation = "But the Kawarazaki family living there gives off a strange air: the beautiful wife Kyoko and her daughters Sachiko and Rei;"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0c2d-the-sullen-taciturn-eldest-son-shunsuke-the-arrogant"
+file = "DISKA/SILK.MES"
+offset = 0x0c2d
+source_mode = 1
+target_mode = 2
+source = "無口で陰湿な長男［俊介］、傍若無人な運転手［南原］、謎の美少女［みいな］、美しい家庭教師［香織］、どこか影のあるメイド［亜栗栖］、"
+translation = "the sullen, taciturn eldest son Shunsuke; the arrogant driver Nanbara; the mysterious beauty Miina; the lovely tutor Kaori; and the shadowed maid Alice;"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0c8f-and-misako-the-only-maid-the-protagonist-can"
+file = "DISKA/SILK.MES"
+offset = 0x0c8f
+source_mode = 1
+target_mode = 2
+source = "そして唯一主人公が心を許す事のできるメイド［美佐子］……。"
+translation = "and Misako, the only maid the protagonist can truly trust..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0cb8-this-colorful-cast-will-stir-the-immorality-hidden"
+file = "DISKA/SILK.MES"
+offset = 0x0cb8
+source_mode = 1
+target_mode = 2
+source = "個性豊かなキャラクター達が、あなたの心に隠された「インモラル」を刺激します。"
+translation = "This colorful cast will stir the immorality hidden in your heart."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0cee-a-game-that-fulfills-your-desires-and-leads"
+file = "DISKA/SILK.MES"
+offset = 0x0cee
+source_mode = 1
+target_mode = 2
+source = "あなたの願望を満たし、そして夢の世界へと導いてくれるゲーム……"
+translation = "A game that fulfills your desires and leads you into a dream world..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0d14-that-is-the-kawarazaki-family"
+file = "DISKA/SILK.MES"
+offset = 0x0d14
+source_mode = 1
+target_mode = 2
+source = "それが［河原崎家の一族］なのです。"
+translation = "That is THE KAWARAZAKI FAMILY."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0d2e-pc-9801-series-5-and-3-5-inch"
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0d2e },
+  { file = "DISKA/SILK.MES", offset = 0x129f },
+  { file = "DISKA/SILK.MES", offset = 0x14e6 },
+  { file = "DISKA/SILK.MES", offset = 0x1846 },
+  { file = "DISKA/SILK.MES", offset = 0x1ece },
+  { file = "DISKA/SILK.MES", offset = 0x20be },
+  { file = "DISKA/SILK.MES", offset = 0x2333 },
+]
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）\n"
+translation = "PC-9801 series (5- and 3.5-inch)"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0d46-x68000-series-5-inch-released-september-17-1992"
+file = "DISKA/SILK.MES"
+offset = 0x0d46
+source_mode = 1
+target_mode = 2
+source = "Ｘ６８０００シリーズ（５インチ）平成４年９月１７日発売"
+translation = "X68000 series (5-inch), released September 17, 1992"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0d67-fm-towns-series-3-5-inch-released-september"
+file = "DISKA/SILK.MES"
+offset = 0x0d67
+source_mode = 1
+target_mode = 2
+source = "ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成４年９月１７日発売"
+translation = "FM TOWNS series (3.5-inch), released September 17, 1992"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0d8b-dos-v-version-3-5-inch-released-november"
+file = "DISKA/SILK.MES"
+offset = 0x0d8b
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）平成６年１１月２５日発売\n"
+translation = "DOS/V version (3.5-inch), released November 25, 1994"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0da9-mac-and-windows-version-cd-rom-released-december"
+file = "DISKA/SILK.MES"
+offset = 0x0da9
+source_mode = 1
+target_mode = 2
+source = "ＭＡＣ＆ＷＩＮＤＯＷＳ版（ＣＤ－ＲＯＭ）平成７年１２月１５日発売"
+translation = "Mac and Windows version (CD-ROM), released December 15, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0dd0-the-fm-towns-version-requires-system-software"
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0dd0 },
+  { file = "DISKA/SILK.MES", offset = 0x130d },
+  { file = "DISKA/SILK.MES", offset = 0x1562 },
+  { file = "DISKA/SILK.MES", offset = 0x1895 },
+]
+source_mode = 1
+target_mode = 2
+source = "※ＦＭ－ＴＯＷＮＳシリーズはシステムソフトウエア\n"
+translation = "The FM TOWNS version requires System Software"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0dec-ver-2-1-l20-or-later"
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0dec },
+  { file = "DISKA/SILK.MES", offset = 0x157e },
+  { file = "DISKA/SILK.MES", offset = 0x18b1 },
+]
+source_mode = 1
+target_mode = 2
+source = "Ｖｅｒ．２．１Ｌ２０以上が必要です。"
+translation = "Ver. 2.1 L20 or later."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0e03-price-7-800-yen-each"
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0e03 },
+  { file = "DISKA/SILK.MES", offset = 0x133f },
+  { file = "DISKA/SILK.MES", offset = 0x1595 },
+  { file = "DISKA/SILK.MES", offset = 0x18c8 },
+  { file = "DISKA/SILK.MES", offset = 0x1f04 },
+  { file = "DISKA/SILK.MES", offset = 0x20f2 },
+  { file = "DISKA/SILK.MES", offset = 0x2369 },
+]
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円"
+translation = "Price: 7,800 yen each"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0e65-reira"
+file = "DISKA/SILK.MES"
+offset = 0x0e65
+source_mode = 1
+target_mode = 2
+source = "【ＲＥＩＲＡ】\n"
+translation = "[REIRA]"
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0e90-the-year-is-2050-nearly-a-quarter-century"
+file = "DISKA/SILK.MES"
+offset = 0x0e90
+source_mode = 1
+target_mode = 2
+source = "西暦２０５０年。人類がアンドロイドを実用化してから、四半世紀が過ぎようとしていた。そしていつの頃からであろうか、彼女達には俗称が与えられるようになる。\n"
+translation = "The year is 2050. Nearly a quarter-century has passed since androids entered practical use. At some point, they acquired a popular nickname."
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0eef-they-are-called-slave-dolls-pitiful-slaves-made"
+file = "DISKA/SILK.MES"
+offset = 0x0eef
+source_mode = 1
+target_mode = 2
+source = "その名は［スレイブ・ドール］。人間に奉仕する為だけに造られた哀れな奴隷、スレイブ・ドール。人間に従順であるはずの彼女達に、何かが起こり始めている……。\n"
+translation = "They are called Slave Dolls: pitiful slaves made solely to serve humanity. But something is beginning to happen to these supposedly obedient women..."
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0f4b-reira-is-a-command-selection-adventure-game"
+file = "DISKA/SILK.MES"
+offset = 0x0f4b
+source_mode = 1
+target_mode = 2
+source = "［ＲＥＩＲＡ］は、コマンド選択方式のアドベンチャーゲームです。\n"
+translation = "REIRA is a command-selection adventure game."
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0f76-its-beautiful-graphics-and-briskly-paced-story-are"
+file = "DISKA/SILK.MES"
+offset = 0x0f76
+source_mode = 1
+target_mode = 2
+source = "美しいグラフィックはもちろん、テンポのよいストーリーがあなたを魅了することは間違いありません。\n"
+translation = "Its beautiful graphics and briskly paced story are sure to captivate you."
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0fae-pc-9801-series-5-and-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x0fae
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）\n"
+translation = "PC-9801 series (5- and 3.5-inch)"
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0fc6-fm-towns-series-3-5-inch-released-april"
+file = "DISKA/SILK.MES"
+offset = 0x0fc6
+source_mode = 1
+target_mode = 2
+source = "ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成６年４月２８日発売\n"
+translation = "FM TOWNS series (3.5-inch), released April 28, 1994"
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-0fe9-the-fm-towns-version-requires-system-software"
+file = "DISKA/SILK.MES"
+offset = 0x0fe9
+source_mode = 1
+target_mode = 2
+source = "※ＦＭ－ＴＯＷＮＳシリーズはシステムソフトウエア\n"
+translation = "The FM TOWNS version requires System Software"
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1005-ver-2-1-l20-or-later"
+file = "DISKA/SILK.MES"
+offset = 0x1005
+source_mode = 1
+target_mode = 2
+source = "Ｖｅｒ．２．１Ｌ２０以上が必要です。\n"
+translation = "Ver. 2.1 L20 or later."
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-101b-price-7-800-yen-each"
+file = "DISKA/SILK.MES"
+offset = 0x101b
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円\n"
+translation = "Price: 7,800 yen each"
+speaker = "ＲＥＩＲＡ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-10c2-the-people-of-nonomura-hospital"
+file = "DISKA/SILK.MES"
+offset = 0x10c2
+source_mode = 1
+target_mode = 2
+source = "【野々村病院の人々】\n"
+translation = "[THE PEOPLE OF NONOMURA HOSPITAL]"
+speaker = "野々村病院の人々"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1103-the-notorious-genius-detective-takumaro-unabara-lands-in"
+file = "DISKA/SILK.MES"
+offset = 0x1103
+source_mode = 1
+target_mode = 2
+source = "悪名高き天才探偵［海原　琢麿呂］、ふとした出来事から入院するはめになった彼の前に、異様な事件が立ちふさがる。"
+translation = "The notorious genius detective Takumaro Unabara lands in the hospital after an unexpected incident, only to face a bizarre case."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1153-akiko-the-director-s-wife-always-wears-an"
+file = "DISKA/SILK.MES"
+offset = 0x1153
+source_mode = 1
+target_mode = 2
+source = "いつも氷のような微笑みをたたえている院長婦人［亜希子］、不気味な雰囲気を漂わせる執事の［栄作］。\n"
+translation = "Akiko, the director's wife, always wears an icy smile; the butler Eisaku gives off a sinister air."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1196-then-there-are-nurses-rie-ryoko-and-chisato"
+file = "DISKA/SILK.MES"
+offset = 0x1196
+source_mode = 1
+target_mode = 2
+source = "そして野々村病院に勤める看護婦［梨恵］［涼子］［千里］。"
+translation = "Then there are nurses Rie, Ryoko, and Chisato, who work at Nonomura Hospital."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-11c4-takumaro-uses-his-brilliant-deductions-to-unravel-the"
+file = "DISKA/SILK.MES"
+offset = 0x11c4
+source_mode = 1
+target_mode = 2
+source = "琢麿呂はその天才的な推理力で、複雑にからみあった糸をほどくように真実を見つけだそうとする……。"
+translation = "Takumaro uses his brilliant deductions to unravel the tangled threads and uncover the truth..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1208-the-acclaimed-game-system-from-the-kawarazaki-family"
+file = "DISKA/SILK.MES"
+offset = 0x1208
+source_mode = 1
+target_mode = 2
+source = "［河原崎家の一族］で好評を博したゲームシステムをさらにパワーアップ。"
+translation = "The acclaimed game system from THE KAWARAZAKI FAMILY has been enhanced further."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1237-to-avoid-becoming-a-simple-ending-hunt-the"
+file = "DISKA/SILK.MES"
+offset = 0x1237
+source_mode = 1
+target_mode = 2
+source = "単なるエンディング捜しにならないように［野々村病院の人々］はエンディングの数を減らし、ストーリーに重点をおき、一つの目的に到達するのにいくつもの道筋を用意しました。"
+translation = "To avoid becoming a simple ending hunt, THE PEOPLE OF NONOMURA HOSPITAL reduces the number of endings, emphasizes its story, and offers many routes to one objective."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-12b7-fm-towns-series-3-5-inch-released-june"
+file = "DISKA/SILK.MES"
+offset = 0x12b7
+source_mode = 1
+target_mode = 2
+source = "ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成６年６月３０日発売"
+translation = "FM TOWNS series (3.5-inch), released June 30, 1994"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-12db-dos-v-version-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x12db
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）\n"
+translation = "DOS/V version (3.5-inch)"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-12ed-windows-version-cd-rom-released-february-28-1995"
+file = "DISKA/SILK.MES"
+offset = 0x12ed
+source_mode = 1
+target_mode = 2
+source = "ＷＩＮＤＯＷＳ版（ＣＤ－ＲＯＭ）平成７年２月２８日発売"
+translation = "Windows version (CD-ROM), released February 28, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1329-ver-2-1-l20-or-later"
+file = "DISKA/SILK.MES"
+offset = 0x1329
+source_mode = 1
+target_mode = 2
+source = "Ｖｅｒ．２．１Ｌ２０以上が必要です。\n"
+translation = "Ver. 2.1 L20 or later."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-13bc-ai-shimai-the-two-fruits"
+file = "DISKA/SILK.MES"
+offset = 0x13bc
+source_mode = 1
+target_mode = 2
+source = "【愛姉妹～二人の果実～】"
+translation = "[AI SHIMAI: THE TWO FRUITS]"
+speaker = "愛姉妹～二人の果実～"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1401-it-was-all-because-of-the-accident-i"
+file = "DISKA/SILK.MES"
+offset = 0x1401
+source_mode = 1
+target_mode = 2
+source = "『私が事故を起こしたばっかりに……』［幸絵］の起こした事故をネタに体を要求する［丈人］。\n"
+translation = "\"It was all because of the accident I caused...\" Takehito uses Yukie's accident to demand her body."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1440-he-then-lays-hands-on-yukie-s-daughters"
+file = "DISKA/SILK.MES"
+offset = 0x1440
+source_mode = 1
+target_mode = 2
+source = "更に、幸絵の娘たちにも手をかける。"
+translation = "He then lays hands on Yukie's daughters as well."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-145b-with-older-sister-rumi-and-younger-sister-tomoko"
+file = "DISKA/SILK.MES"
+offset = 0x145b
+source_mode = 1
+target_mode = 2
+source = "姉の［留美］、妹の［智子］を交え、密やかに始まった狂宴。"
+translation = "With older sister Rumi and younger sister Tomoko, a secret frenzy begins."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1486-act-as-your-instincts-dictate"
+file = "DISKA/SILK.MES"
+offset = 0x1486
+source_mode = 1
+target_mode = 2
+source = "あなたは本能の赴くままに行動してください。\n"
+translation = "Act as your instincts dictate."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-14a4-we-await-you-with-the-ending-you-deserve"
+file = "DISKA/SILK.MES"
+offset = 0x14a4
+source_mode = 1
+target_mode = 2
+source = "あなたにふさわしい結末を用意してお待ちしています……。\n"
+translation = "We await you with the ending you deserve..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-14c9-only-you-may-touch-the-forbidden-fruit"
+file = "DISKA/SILK.MES"
+offset = 0x14c9
+source_mode = 1
+target_mode = 2
+source = "あなただけが禁断の果実に触れられる……。"
+translation = "Only you may touch the forbidden fruit..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-14fe-fm-towns-series-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x14fe
+source_mode = 1
+target_mode = 2
+source = "ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）\n"
+translation = "FM TOWNS series (3.5-inch)"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1516-released-september-30-1994"
+file = "DISKA/SILK.MES"
+offset = 0x1516
+source_mode = 1
+target_mode = 2
+source = "平成６年９月３０日発売"
+translation = "Released September 30, 1994"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1526-dos-v-3-5-inch-released-may-26"
+file = "DISKA/SILK.MES"
+offset = 0x1526
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ（３．５インチ）平成７年５月２６日発売\n"
+translation = "DOS/V (3.5-inch), released May 26, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1542-windows-cd-rom-released-november-17-1995"
+file = "DISKA/SILK.MES"
+offset = 0x1542
+source_mode = 1
+target_mode = 2
+source = "ＷＩＮＤＯＷＳ（ＣＤ－ＲＯＭ）平成７年１１月１７日発売"
+translation = "Windows (CD-ROM), released November 17, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-15f7-birth-days"
+file = "DISKA/SILK.MES"
+offset = 0x15f7
+source_mode = 1
+target_mode = 2
+source = "【Ｂｉｒｔｈ　Ｄａｙｓ】\n"
+translation = "[BIRTH DAYS]"
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-162d-a-carefree-over-the-top-sugoroku-dating-simulation"
+file = "DISKA/SILK.MES"
+offset = 0x162d
+source_mode = 1
+target_mode = 2
+source = "８人の女の子をめぐる、お気楽極楽スーパースゴロクナンパシミュレーション。\n"
+translation = "A carefree, over-the-top sugoroku dating simulation featuring eight girls."
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-165b-in-the-one-year-available-how-many-girls"
+file = "DISKA/SILK.MES"
+offset = 0x165b
+source_mode = 1
+target_mode = 2
+source = "君は１年間という限られた時間の中で、何人の女の子を落すことができるか？\n"
+translation = "In the one year available, how many girls can you win over?"
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1689-pc-9801-series-5-and-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x1689
+source_mode = 1
+target_mode = 2
+source = "ＰＣ９８０１シリーズ（５・３．５インチ）\n"
+translation = "PC-9801 series (5- and 3.5-inch)"
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-16a1-released-november-30-1994"
+file = "DISKA/SILK.MES"
+offset = 0x16a1
+source_mode = 1
+target_mode = 2
+source = "平成６年１１月３０日発売\n"
+translation = "Released November 30, 1994"
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-16b1-price-7-800-yen-each"
+file = "DISKA/SILK.MES"
+offset = 0x16b1
+source_mode = 1
+target_mode = 2
+source = "各価格７，８００円"
+translation = "Price: 7,800 yen each"
+speaker = "Ｂｉｒｔｈ　Ｄａｙｓ"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1759-lost-paradise"
+file = "DISKA/SILK.MES"
+offset = 0x1759
+source_mode = 1
+target_mode = 2
+source = "【失われた楽園】"
+translation = "[LOST PARADISE]"
+speaker = "失われた楽園"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1795-you-casually-join-an-academic-research-trip-to"
+file = "DISKA/SILK.MES"
+offset = 0x1795
+source_mode = 1
+target_mode = 2
+source = "気軽なアルバイト感覚で参加した南の島への学術調査旅行…\n"
+translation = "You casually join an academic research trip to a tropical island as a part-time job..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-17c1-but-an-incredible-trap-awaits-the-expedition"
+file = "DISKA/SILK.MES"
+offset = 0x17c1
+source_mode = 1
+target_mode = 2
+source = "しかしその調査旅行にはとてつもない罠が待ち受けていた…。"
+translation = "But an incredible trap awaits the expedition..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-17e9-enjoy-a-story-full-of-thrills-and-suspense"
+file = "DISKA/SILK.MES"
+offset = 0x17e9
+source_mode = 1
+target_mode = 2
+source = "ごく平凡なはずの主人公が仲間の美少女と共に、妖しくも美しい南洋の孤島で繰り広げられる、スリルとサスペンスに満ちたストーリーをお楽しみ下さい。"
+translation = "Enjoy a story full of thrills and suspense as an ordinary protagonist and his beautiful companions struggle across a strange yet gorgeous southern island."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-185e-fm-towns-series-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x185e
+source_mode = 1
+target_mode = 2
+source = "ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）"
+translation = "FM TOWNS series (3.5-inch)"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1877-dos-v-version-3-5-inch-released-april"
+file = "DISKA/SILK.MES"
+offset = 0x1877
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）平成７年４月１４日発売"
+translation = "DOS/V version (3.5-inch), released April 14, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-195f-koi-hime"
+file = "DISKA/SILK.MES"
+offset = 0x195f
+source_mode = 1
+target_mode = 2
+source = "◆恋姫◆"
+translation = "KOI HIME"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1995-more-than-ten-years-it-has-not-changed"
+file = "DISKA/SILK.MES"
+offset = 0x1995
+source_mode = 1
+target_mode = 2
+source = "　十数年か・・全然変わってないんだな"
+translation = "More than ten years... It has not changed at all."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-19ca-you-return-to-your-birthplace-during-summer-vacation"
+file = "DISKA/SILK.MES"
+offset = 0x19ca
+source_mode = 1
+target_mode = 2
+source = "　夏休みを利用して生まれ故郷に帰郷したあなた"
+translation = "You return to your birthplace during summer vacation."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1a07-you-expected-a-peaceful-if-boring-summer-break"
+file = "DISKA/SILK.MES"
+offset = 0x1a07
+source_mode = 1
+target_mode = 2
+source = "　平穏だが退屈な夏休みを送るはずだったあなた"
+translation = "You expected a peaceful, if boring, summer break."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1a60-but-then"
+file = "DISKA/SILK.MES"
+offset = 0x1a60
+source_mode = 1
+target_mode = 2
+source = "　しかし・・"
+translation = "But then..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1a85-you-reunite-with-childhood-friends-you-do-not"
+file = "DISKA/SILK.MES"
+offset = 0x1a85
+source_mode = 1
+target_mode = 2
+source = "　覚えのない幼なじみの少女達と再会する事により"
+translation = "You reunite with childhood friends you do not remember."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1ade-your-summer-vacation"
+file = "DISKA/SILK.MES"
+offset = 0x1ade
+source_mode = 1
+target_mode = 2
+source = "　あなたの夏休みは・・"
+translation = "Your summer vacation..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1b0a-no-your-life-itself-becomes-anything-but-ordinary"
+file = "DISKA/SILK.MES"
+offset = 0x1b0a
+source_mode = 1
+target_mode = 2
+source = "　いや　人生は平凡の２文字とは無縁のものへ"
+translation = "No, your life itself becomes anything but ordinary."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1b62-because-those-girls-are"
+file = "DISKA/SILK.MES"
+offset = 0x1b62
+source_mode = 1
+target_mode = 2
+source = "　何故ならその少女達は・・"
+translation = "Because those girls are..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1b90-a-bizarre-thoroughly-japanese-romantic-comedy"
+file = "DISKA/SILK.MES"
+offset = 0x1b90
+source_mode = 1
+target_mode = 2
+source = "　純和風奇々怪々ラブコメディ｜"
+translation = "A bizarre, thoroughly Japanese romantic comedy,"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1bc6-bringing-you-a-tender-love-story"
+file = "DISKA/SILK.MES"
+offset = 0x1bc6
+source_mode = 1
+target_mode = 2
+source = "　ほのかなラブスト｜リ｜をあなたに・・"
+translation = "bringing you a tender love story..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1c19-pc-9801-series-5-and-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x1c19
+source_mode = 1
+target_mode = 2
+source = "　ＰＣ９８０１シリ｜ズ　５／３・５インチ"
+translation = "PC-9801 series, 5- and 3.5-inch"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1c4d-dos-v-version-3-5-inch"
+file = "DISKA/SILK.MES"
+offset = 0x1c4d
+source_mode = 1
+target_mode = 2
+source = "　ＤＯＳ／Ｖ版　３・５インチ"
+translation = "DOS/V version, 3.5-inch"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1c7a-released-may-26-1995-price-7-800-yen"
+file = "DISKA/SILK.MES"
+offset = 0x1c7a
+source_mode = 1
+target_mode = 2
+source = "　平成７年５月２６日発売　各価格７８００円"
+translation = "Released May 26, 1995; price: 7,800 yen each"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1d20-moebius-roid"
+file = "DISKA/SILK.MES"
+offset = 0x1d20
+source_mode = 1
+target_mode = 2
+source = "【メビウスロイド】"
+translation = "[MOEBIUS ROID]"
+speaker = "メビウスロイド"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1d5d-a-girl-was-dragged-into-a-barn-imprisoned"
+file = "DISKA/SILK.MES"
+offset = 0x1d5d
+source_mode = 1
+target_mode = 2
+source = "一人の女の子が納屋に連れ込まれ監禁・殺害された。"
+translation = "A girl was dragged into a barn, imprisoned, and murdered."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1d81-four-years-later"
+file = "DISKA/SILK.MES"
+offset = 0x1d81
+source_mode = 1
+target_mode = 2
+source = "それから４年後。\n"
+translation = "Four years later..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1d8e-i-live-with-my-cousin-chie"
+file = "DISKA/SILK.MES"
+offset = 0x1d8e
+source_mode = 1
+target_mode = 2
+source = "僕は従姉妹の女の子［智恵］と一緒に住んでいる。"
+translation = "I live with my cousin Chie."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1db2-one-morning-after-giving-chie-what-she-asks"
+file = "DISKA/SILK.MES"
+offset = 0x1db2
+source_mode = 1
+target_mode = 2
+source = "朝、智恵の求めに応じた後、いつものように登校する。\n"
+translation = "One morning, after giving Chie what she asks of me, I leave for school as usual."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1dd7-i-study-at-school-then-return-home-and"
+file = "DISKA/SILK.MES"
+offset = 0x1dd7
+source_mode = 1
+target_mode = 2
+source = "学校で勉強して、帰ったらまた２人だけの時間が始まる…。"
+translation = "I study at school, then return home and our time alone begins again..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1dfd-yes-i-had-no-complaints-about-my-life"
+file = "DISKA/SILK.MES"
+offset = 0x1dfd
+source_mode = 1
+target_mode = 2
+source = "そう、何の不服もない生活だった。\n"
+translation = "Yes, I had no complaints about my life."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1e14-i-thought-it-would-continue-forever"
+file = "DISKA/SILK.MES"
+offset = 0x1e14
+source_mode = 1
+target_mode = 2
+source = "このままの生活が続くと思っていた……。\n"
+translation = "I thought it would continue forever..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1e30-then-one-day-i-agree-to-help-the"
+file = "DISKA/SILK.MES"
+offset = 0x1e30
+source_mode = 1
+target_mode = 2
+source = "ある日。僕は、生徒会長の探し物を手伝う事になった。"
+translation = "Then one day, I agree to help the student council president search for something."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1e53-together-with-my-lover-chie"
+file = "DISKA/SILK.MES"
+offset = 0x1e53
+source_mode = 1
+target_mode = 2
+source = "恋人の智恵と一緒に。\n"
+translation = "Together with my lover, Chie."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1e67-i-do-not-know-that-this-is-the"
+file = "DISKA/SILK.MES"
+offset = 0x1e67
+source_mode = 1
+target_mode = 2
+source = "それが運命の分かれ道だとも知らずに。"
+translation = "I do not know that this is the crossroads of fate."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1e83-a-detective-adventure-set-at-a-school"
+file = "DISKA/SILK.MES"
+offset = 0x1e83
+source_mode = 1
+target_mode = 2
+source = "学園を舞台に引き起こされる探偵劇アドベンチャーゲーム。"
+translation = "A detective adventure set at a school."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1eab-when-the-hidden-truth-comes-to-light-what"
+file = "DISKA/SILK.MES"
+offset = 0x1eab
+source_mode = 1
+target_mode = 2
+source = "隠された事実が暴かれるとき、主人公の運命は！？"
+translation = "When the hidden truth comes to light, what fate awaits the protagonist?!"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1ee6-dos-v-version-3-5-inch-released-june"
+file = "DISKA/SILK.MES"
+offset = 0x1ee6
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）平成７年６月３０日発売"
+translation = "DOS/V version (3.5-inch), released June 30, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-1fbe-figure-stolen-after-school"
+file = "DISKA/SILK.MES"
+offset = 0x1fbe
+source_mode = 1
+target_mode = 2
+source = "【Ｆｉｇｕｒｅ－奪われた放課後－】"
+translation = "[FIGURE: STOLEN AFTER SCHOOL]"
+speaker = "Ｆｉｇｕｒｅ－奪われた放課後－"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-2008-you-ll-procure-the-girls-for-us-with"
+file = "DISKA/SILK.MES"
+offset = 0x2008
+source_mode = 1
+target_mode = 2
+source = "『女の子、調達してもらうよ』先輩は薄笑いを浮かべて、僕に名門女学園講師の仮面をくれた。"
+translation = "\"You'll procure the girls for us.\" With a thin smile, my senior gives me the guise of an instructor at an elite girls' school."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-2048-three-months-after-arriving-at-kagetsu-girls-academy"
+file = "DISKA/SILK.MES"
+offset = 0x2048
+source_mode = 1
+target_mode = 2
+source = "この花月女学園に来て３ヵ月、僕は放課後の学園内をうろつく。\n"
+translation = "Three months after arriving at Kagetsu Girls' Academy, I wander its halls after school."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-2074-searching-for-schoolgirls-willing-to-appear-on-video"
+file = "DISKA/SILK.MES"
+offset = 0x2074
+source_mode = 1
+target_mode = 2
+source = "ビデオに出演し、肢体をさらす女生徒を求めて……。"
+translation = "Searching for schoolgirls willing to appear on video and expose their bodies..."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-2098-the-after-school-truth-captured-by-the-lens"
+file = "DISKA/SILK.MES"
+offset = 0x2098
+source_mode = 1
+target_mode = 2
+source = "レンズがとらえた放課後の真実が、僕を狂気に走らせる。"
+translation = "The after-school truth captured by the lens drives me to madness."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-20d6-dos-v-version-3-5-inch-released-september"
+file = "DISKA/SILK.MES"
+offset = 0x20d6
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）平成７年９月２９日発売"
+translation = "DOS/V version (3.5-inch), released September 29, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-216d-jack-goddess-of-immorality"
+file = "DISKA/SILK.MES"
+offset = 0x216d
+source_mode = 1
+target_mode = 2
+source = "【ＪＡＣＫ－背徳の女神－】"
+translation = "[JACK: GODDESS OF IMMORALITY]"
+speaker = "ＪＡＣＫ－背徳の女神－"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-21b2-my-name-is-jack-martin"
+file = "DISKA/SILK.MES"
+offset = 0x21b2
+source_mode = 1
+target_mode = 2
+source = "俺の名は［ジャック・マーティン］。\n"
+translation = "My name is Jack Martin."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-21cb-i-was-once-an-elite-space-force-officer"
+file = "DISKA/SILK.MES"
+offset = 0x21cb
+source_mode = 1
+target_mode = 2
+source = "元宇宙軍のエリート士官様で、今はしがない私立探偵だ。"
+translation = "I was once an elite Space Force officer; now I am a down-and-out private detective."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-21f5-i-had-been-drinking-my-days-away-on"
+file = "DISKA/SILK.MES"
+offset = 0x21f5
+source_mode = 1
+target_mode = 2
+source = "ケルダで飲んだくれていた俺の元に、\n"
+translation = "I had been drinking my days away on Kelda"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-220f-when-an-email-arrived-from-my-former-commander"
+file = "DISKA/SILK.MES"
+offset = 0x220f
+source_mode = 1
+target_mode = 2
+source = "昔の上官からメールが届いたのは１週間前。"
+translation = "when an email arrived from my former commander a week ago."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-222e-a-long-life-of-poverty-gives-you-a"
+file = "DISKA/SILK.MES"
+offset = 0x222e
+source_mode = 1
+target_mode = 2
+source = "貧乏生活が長いと儲け話には鼻が利くようになる。"
+translation = "A long life of poverty gives you a nose for profitable work."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-2252-i-traipse-all-the-way-to-a-frontier"
+file = "DISKA/SILK.MES"
+offset = 0x2252
+source_mode = 1
+target_mode = 2
+source = "のこのこ【ウィラード】なんていう辺境星域まで出向いた俺に依頼された仕事は「【ファントム（幽霊）】を探してくれ」だと！？"
+translation = "I traipse all the way to a frontier region called Willard, only to be told, \"Find the Phantom\"?!"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-22a1-and-i-have-to-work-with-some-little"
+file = "DISKA/SILK.MES"
+offset = 0x22a1
+source_mode = 1
+target_mode = 2
+source = "しかも［レニィ］とかいう小娘と一緒に？\n"
+translation = "And I have to work with some little girl named Lenny?"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-22bd-the-phantom-is-the-most-vicious-terrorist-in"
+file = "DISKA/SILK.MES"
+offset = 0x22bd
+source_mode = 1
+target_mode = 2
+source = "【ファントム（幽霊）】と言えば銀河最凶最悪のテロリスト。"
+translation = "The Phantom is the most vicious terrorist in the galaxy."
+speaker = "ファントム（幽霊）"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-22e9-normally-i-would-run-but-the-offered-reward"
+file = "DISKA/SILK.MES"
+offset = 0x22e9
+source_mode = 1
+target_mode = 2
+source = "本来なら逃げ出すところだが、提示された報酬は余りにも魅力的だった。\n"
+translation = "Normally I would run, but the offered reward is far too tempting."
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-231b-yes-it-is-all-for-women-booze-and"
+file = "DISKA/SILK.MES"
+offset = 0x231b
+source_mode = 1
+target_mode = 2
+source = "そう、全ては…女と酒と金のため！！"
+translation = "Yes, it is all... for women, booze, and money!!"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
+status = "qa-ready"
+
+[[entries]]
+id = "silk-234b-dos-v-version-3-5-inch-released-november"
+file = "DISKA/SILK.MES"
+offset = 0x234b
+source_mode = 1
+target_mode = 2
+source = "ＤＯＳ／Ｖ版（３．５インチ）平成７年１１月３０日発売\n"
+translation = "DOS/V version (3.5-inch), released November 30, 1995"
+speaker = "Connie"
+context = "The in-game period Silky's product catalog."
 status = "qa-ready"

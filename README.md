@@ -175,7 +175,9 @@ uv run fermion translation coverage \
 ```
 
 Twenty-one focused story scopes are now closed, covering every decoded text
-record in `FOP.MES` and `F0000.MES` through the `F0042.MES` ending.
+record in `FOP.MES` and `F0000.MES` through the `F0042.MES` ending. The final
+surface scope also closes scene replay, both mirrored name and term editors,
+and the period Silky's catalog.
 Per-scope counts and editorial notes are maintained in
 [`translations/README.md`](translations/README.md); none of the focused story
 scopes has an excluded or pending anchor. The broader
@@ -213,8 +215,8 @@ changed-length disk archives, resizes their FAT12 cluster chains if necessary,
 and verifies every layer in the output image. Generated RKT, MES, archive, and
 JSON report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 12,573 canonical entries covering 16,964 physical
-anchors in 70 MES files. Exact per-file sizes and hashes are recorded in the
+The current catalog contains 13,003 canonical entries covering 17,680 physical
+anchors in 76 MES files. Exact per-file sizes and hashes are recorded in the
 generated build report. Generated filenames and output hashes are intentionally
 not release interfaces; rebuild from the hash-pinned pristine input before
 testing.

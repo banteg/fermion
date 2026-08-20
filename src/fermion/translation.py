@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import textwrap
 import tomllib
+from collections import Counter
 from dataclasses import dataclass
 from itertools import pairwise
 from pathlib import Path, PurePosixPath
@@ -63,6 +64,7 @@ class TranslationToken:
     source: str
     translation: str
     max_width: int
+    presets: tuple[str, ...] = ()
     initializers: tuple[TranslationTokenInitializer, ...] = ()
 
     @property
@@ -444,6 +446,8 @@ def build_translation_files(
         edited = _patch_gm_source(rkt_path.read_text(), original, entries)
         if token_initializers:
             edited = _patch_token_initializer_source(edited, original, token_initializers)
+        if file.name.upper() in {"NAME.MES", "MONO.MES"}:
+            edited = _patch_editor_preset_source(edited, file.name, catalog.tokens)
         rkt_path.write_text(edited)
         _run_juice(
             executable,
@@ -523,7 +527,7 @@ def _patch_token_initializer_source(
             raise TranslationError(
                 f"{token.id}: lime-juice initializer source changed at 0x{initializer.offset:04x}"
             )
-        translated_payload = (255, 1, *token.translation.encode("ascii"))
+        translated_payload = (255, 1, *_runtime_token_bytes(token.translation))
         replacement = (
             f"(string-copy (ref {reference_token} {reference_slot}) "
             f"(inline-source {trailing} "
@@ -535,6 +539,149 @@ def _patch_token_initializer_source(
     for start, end, replacement in reversed(edits):
         patched = patched[:start] + replacement + patched[end:]
     return patched
+
+
+_EDITOR_PRESET_LAYOUTS = {
+    "NAME.MES": {
+        "token_prefix": "name:",
+        "start_label": 2531,
+        "end_label": 2723,
+        "menu_ref": 2002,
+        "capacity": 14,
+        "destinations": (
+            ("name:mother", 1000),
+            ("name:older-sister", 1014),
+            ("name:dear-person", 1028),
+            ("name:friend-1", 1042),
+            ("name:friend-2", 1056),
+        ),
+    },
+    "MONO.MES": {
+        "token_prefix": "term:",
+        "start_label": 1890,
+        "end_label": 2082,
+        "menu_ref": 2002,
+        "capacity": 16,
+        "destinations": (
+            ("term:slot-1", 1070),
+            ("term:slot-2", 1086),
+        ),
+    },
+}
+
+
+def _runtime_token_bytes(value: str) -> bytes:
+    """Encode ASCII token text as mode-1-safe full-width PC-98 glyphs."""
+    converted = []
+    punctuation = {" ": "　", "-": "－", "'": "＇"}
+    for character in value:
+        if character in punctuation:
+            converted.append(punctuation[character])
+        elif "!" <= character <= "~":
+            converted.append(chr(ord(character) + 0xFEE0))
+        else:
+            raise TranslationError(
+                f"runtime token preset contains unsupported character {character!r}"
+            )
+    return "".join(converted).encode("cp932")
+
+
+def _preset_string_copy(value: str, destination: int) -> list[str]:
+    payload = " ".join(str(byte) for byte in _runtime_token_bytes(value))
+    return [
+        f"(string-copy (ref 14 160) (inline-source 0 255 1 {payload}))",
+        f"(assign (ref 12 {destination}) (string-value (ref 14 160)))",
+    ]
+
+
+def _patch_editor_preset_source(
+    source: str,
+    filename: str,
+    tokens: tuple[TranslationToken, ...],
+) -> str:
+    """Replace the legacy Japanese input branch with four cataloged presets."""
+    normalized = filename.upper()
+    layout = _EDITOR_PRESET_LAYOUTS.get(normalized)
+    if layout is None:
+        return source
+    token_prefix = str(layout["token_prefix"])
+    editor_tokens = {token.id: token for token in tokens if token.id.startswith(token_prefix)}
+    destinations = tuple(layout["destinations"])
+    expected_ids = {token_id for token_id, _destination in destinations}
+    if set(editor_tokens) != expected_ids:
+        raise TranslationError(
+            f"{normalized}: preset tokens differ from the expected editor slots"
+        )
+    for token in editor_tokens.values():
+        if len(token.presets) != 4:
+            raise TranslationError(f"{token.id}: editor token must define four presets")
+        for preset in token.presets:
+            if len(_runtime_token_bytes(preset)) + 1 > int(layout["capacity"]):
+                raise TranslationError(
+                    f"{token.id}: preset {preset!r} exceeds the runtime slot"
+                )
+
+    start_label = int(layout["start_label"])
+    end_label = int(layout["end_label"])
+    start_marker = f"(label {start_label})\n               (switch"
+    end_marker = f"(label {end_label})\n               (next))"
+    if source.count(start_marker) != 1 or source.count(end_marker) != 1:
+        raise TranslationError(f"{normalized}: legacy preset-selection branch changed")
+    start = source.index(start_marker)
+    end = source.index(end_marker, start) + len(end_marker)
+
+    next_label = 60000
+
+    def fresh_label() -> int:
+        nonlocal next_label
+        value = next_label
+        next_label += 1
+        return value
+
+    outer_end = end_label
+    lines = [
+        f"(label {start_label})",
+        f"(switch (local-address {outer_end}) (ref 11 {int(layout['menu_ref'])}))",
+    ]
+    for preset_index in range(4):
+        category_end = fresh_label() if preset_index < 3 else outer_end
+        lines.append(f"(case (local-address {category_end}) {preset_index + 1})")
+        role_end = fresh_label()
+        lines.append(f"(switch (local-address {role_end}) (ref 11 3013))")
+        for role_index, (token_id, destination) in enumerate(destinations, 1):
+            role_case_end = fresh_label() if role_index < len(destinations) else role_end
+            lines.append(f"(case (local-address {role_case_end}) {role_index})")
+            lines.extend(
+                _preset_string_copy(
+                    editor_tokens[token_id].presets[preset_index],
+                    destination,
+                )
+            )
+            lines.append("(next)")
+            if role_index < len(destinations):
+                lines.append(f"(label {role_case_end})")
+        lines.extend(
+            [
+                f"(label {role_end})",
+                "(next)",
+                "(assign (ref 12 1244) 1)",
+                "(next 2)",
+                "(end)",
+            ]
+        )
+        if preset_index < 3:
+            lines.append(f"(label {category_end})")
+    lines.extend(
+        [
+            f"(case (local-address {outer_end}) 200)",
+            "(assign (ref 12 1244) 1)",
+            "(next 2)",
+            "(end)",
+            f"(label {outer_end})",
+            "(next))",
+        ]
+    )
+    return source[:start] + "\n               ".join(lines) + source[end:]
 
 
 def _rkt_list_spans(source: str, tag: str) -> tuple[tuple[int, int, str], ...]:
@@ -644,32 +791,59 @@ def _verify_compiled_file(
         raise TranslationError(f"{file.file}: pristine structural audit failed")
     original_opcodes = tuple(instruction.opcode for instruction in original_audit.instructions)
     compiled_opcodes = tuple(instruction.opcode for instruction in compiled_audit.instructions)
-    if original_opcodes != compiled_opcodes:
+    editor_patched = file.name.upper() in _EDITOR_PRESET_LAYOUTS
+    if not editor_patched and original_opcodes != compiled_opcodes:
         raise TranslationError(f"{file.file}: compiled instruction sequence changed")
     _verify_translated_token_initializers(original, compiled, token_initializers)
-    if len(original_audit.relocations) != len(compiled_audit.relocations):
+    if not editor_patched and len(original_audit.relocations) != len(compiled_audit.relocations):
         raise TranslationError(f"{file.file}: compiled relocation count changed")
-    known_external_fields = {
-        after.field_offset
-        for before, after in zip(
-            original_audit.relocations,
-            compiled_audit.relocations,
-            strict=True,
+    original_external_targets = Counter(
+        relocation.target
+        for relocation in original_audit.relocations
+        if not original.code_start <= relocation.target < len(original.data)
+    )
+    if editor_patched:
+        compiled_external_relocations = tuple(
+            relocation
+            for relocation in compiled_audit.relocations
+            if not relocation.required_local
+            and relocation.target in original_external_targets
         )
-        if not original.code_start <= before.target < len(original.data)
-    }
+        compiled_external_targets = Counter(
+            relocation.target for relocation in compiled_external_relocations
+        )
+        if compiled_external_targets != original_external_targets:
+            raise TranslationError(f"{file.file}: compiled external call sequence changed")
+        known_external_fields = {
+            relocation.field_offset for relocation in compiled_external_relocations
+        }
+    else:
+        known_external_fields = {
+            after.field_offset
+            for before, after in zip(
+                original_audit.relocations,
+                compiled_audit.relocations,
+                strict=True,
+            )
+            if not original.code_start <= before.target < len(original.data)
+        }
     compiled_audit = compiled.audit(known_external_fields=known_external_fields)
     if compiled_audit.issues:
         raise TranslationError(
             f"{file.file}: compiled structural audit has {len(compiled_audit.issues)} issue(s)"
         )
-    for before, after in zip(original_audit.relocations, compiled_audit.relocations, strict=True):
-        external = not original.code_start <= before.target < len(original.data)
-        if external and after.target != before.target:
-            raise TranslationError(
-                f"{file.file}: external target changed from 0x{before.target:04x} "
-                f"to 0x{after.target:04x}"
-            )
+    if not editor_patched:
+        for before, after in zip(
+            original_audit.relocations,
+            compiled_audit.relocations,
+            strict=True,
+        ):
+            external = not original.code_start <= before.target < len(original.data)
+            if external and after.target != before.target:
+                raise TranslationError(
+                    f"{file.file}: external target changed from 0x{before.target:04x} "
+                    f"to 0x{after.target:04x}"
+                )
     original_interpolations = tuple((item.token, item.slot) for item in original.interpolations())
     compiled_interpolations = tuple((item.token, item.slot) for item in compiled.interpolations())
     if compiled_interpolations != original_interpolations:
@@ -756,7 +930,7 @@ def _token_initializer_sequence(
     translated: bool,
 ) -> bytes:
     source = token.source.encode("cp932")
-    value = token.translation.encode("ascii") if translated else source
+    value = _runtime_token_bytes(token.translation) if translated else source
     return (
         b"\x45\x0e\xe0\x00\xff\x01"
         + value
@@ -859,6 +1033,13 @@ def _parse_token(value: object, index: int) -> TranslationToken:
     source = _string(value, "source", context=context)
     translation = _string(value, "translation", context=context)
     max_width = _integer(value, "max_width", context=context)
+    raw_presets = value.get("presets", [])
+    if not isinstance(raw_presets, list):
+        raise TranslationError(f"{context}.presets must be an array of strings")
+    presets = tuple(
+        _string({"preset": preset}, "preset", context=f"{context}.presets[{preset_index}]")
+        for preset_index, preset in enumerate(raw_presets, 1)
+    )
     raw_initializers = value.get("initializers", [])
     if not isinstance(raw_initializers, list):
         raise TranslationError(f"{context}.initializers must be an array of tables")
@@ -866,20 +1047,24 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         _parse_token_initializer(item, item_index, context)
         for item_index, item in enumerate(raw_initializers, 1)
     )
-    if max_width < 1 or max_width < len(translation):
-        raise TranslationError(f"{context}.max_width must fit the default translation")
-    if any(character in source + translation for character in "⟦⟧\n\x00"):
+    if max_width < 1 or any(len(item) > max_width for item in (translation, *presets)):
+        raise TranslationError(f"{context}.max_width must fit the default and every preset")
+    if presets and presets[0] != translation:
+        raise TranslationError(f"{context}.presets must begin with the default translation")
+    if any(character in source + translation + "".join(presets) for character in "⟦⟧\n\x00"):
         raise TranslationError(
-            f"{context} source and translation must be single-line literal values"
+            f"{context} source, translation, and presets must be single-line literal values"
         )
     try:
         source.encode("cp932")
         translation.encode("ascii")
+        for preset in presets:
+            preset.encode("ascii")
     except UnicodeEncodeError as error:
         raise TranslationError(
-            f"{context} source must be CP932 and translation must be ASCII"
+            f"{context} source must be CP932 and translation/presets must be ASCII"
         ) from error
-    return TranslationToken(token_id, source, translation, max_width, initializers)
+    return TranslationToken(token_id, source, translation, max_width, presets, initializers)
 
 
 def _parse_token_initializer(
@@ -1093,6 +1278,9 @@ def _parse_anchors(table: dict[str, object], context: str) -> tuple[TranslationA
 def _wrap_text(value: str, box_width: int) -> tuple[str, ...]:
     lines: list[str] = []
     for paragraph in value.splitlines() or [""]:
+        if paragraph and not paragraph.strip():
+            lines.append(paragraph)
+            continue
         lines.extend(
             textwrap.wrap(
                 paragraph,

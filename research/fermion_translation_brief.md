@@ -466,6 +466,19 @@ Fixed Japanese surnames also precede editable given-name tokens where English no
 
 The archival English build keeps the name system but localizes it as a **tested preset selector**. It does not promise arbitrary Latin input: `0x4b` renders the stored strings through the game’s mode-1 path, and an unrestricted ASCII editor would require a separate engine patch plus exhaustive length and grammar testing. Every shipped preset must be encodable in the existing slot, tested at all five roles, and exercised in story, letter, and replay/gallery surfaces. The feature is preserved rather than removed; free-form Latin entry can be reconsidered only after the renderer and slot limits are proven.
 
+Runtime proof fixes those limits more precisely. Lime Juice can relocate a
+grown initializer or editor branch, but relocation does not enlarge the five
+14-byte destination buffers. The indirect mode-1 renderer displays ordinary
+ASCII bytes as Japanese glyphs, so English presets are encoded as full-width
+CP932 Latin at two bytes per character. Allowing for the terminator, each name
+therefore has a six-character maximum. The shipped reset names—Yuki, Ruri,
+Kanako, Yoko, and Hiroko—and all alternate presets fit that limit. The adult
+term buffers are 16 bytes, allowing seven full-width characters plus the
+terminator. Both mirrored editors replace the legacy character grid with four
+cataloged presets and copy the selected value into the original runtime slot;
+the slots, interpolation opcodes, and external control-flow targets remain
+unchanged.
+
 ---
 
 ## 7. Recommended terminology
@@ -1009,8 +1022,8 @@ editorial change to the English version, not a claim about the original text.
 
 1. Implement catalog schema 5 composite occurrences, immutable authoring tokens, and validated merged-view import without changing the existing simple-entry behavior.
 2. Prove a reversible strategy for English full-name order around the existing name-token spans, or define the smallest renderer change that can do so without creating parallel variables.
-3. Semantically identify the two adult-term slots (`0x042e` and `0x043e`) and define a small grammatically safe preset set for all 12 story insertions.
-4. Determine encodable, length-safe name presets and exercise every role in story, final-letter, replay, and gallery contexts.
-5. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
-6. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
-7. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.
+3. Exercise every shipped name and adult-term preset in story, final-letter,
+   unlocked replay, and gallery contexts during the human playtest.
+4. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
+5. Continue speaker/context review from the generated story inventory, splitting exact Japanese duplicates when route context requires different English.
+6. Decide whether “Connie Kanzaki” is canonical nomenclature or only the younger girl’s familial sign-off.

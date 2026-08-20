@@ -107,8 +107,15 @@ text-opcode anchor, and leaves the copy/render instructions unchanged. Only
 records separated by one of these recognized token spans may be merged for
 display; ordinary adjacent records keep a one-to-one source/target mapping.
 
-`[[tokens]]` records the Japanese default, ASCII release default, maximum
-display width, and any same-sized reset initializer to patch after compilation.
+`[[tokens]]` records the Japanese default, ASCII authoring default, maximum
+display width, four tested editor presets, and any reset initializer to patch
+after decompilation. Runtime name and term slots are rendered by GM's mode-1
+indirect-text opcode, so the builder stores the ASCII choices as full-width
+CP932 glyphs while leaving their catalog spelling readable. Name slots are 14
+bytes and therefore fit at most six such characters plus a terminator; Lime
+Juice can relocate a longer initializer instruction, but it does not enlarge
+the fixed runtime slot. `max_width` counts the resulting display columns, not
+ASCII bytes.
 An initializer's persistent slot must map to the same authoring token. Each
 `[[composites]]` table then stores one merged source/translation pair and one or
 more physical occurrences. Text segments retain their pristine opcode offset,
@@ -121,7 +128,8 @@ rejects missing, reordered, duplicated, unknown, or leaked tokens.
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-max_width = 6
+max_width = 12
+presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
 ]
@@ -173,9 +181,10 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is not necessarily final editorial approval.
 
-The current catalog contains 12,573 canonical records covering 16,964 physical
-anchors across `MAIN.MES`, `FOP.MES`, and the translated story through the
-`F0042.MES` ending.
+The current catalog contains 13,003 canonical records covering 17,680 physical
+anchors across 76 MES files: `MAIN.MES`, `FOP.MES`, the translated story
+through the `F0042.MES` ending, scene replay, both mirrored editors, and the
+period Silky's catalog.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -421,6 +430,18 @@ returning to 2296. The final departure, genetic-repair epilogue, and
 undeliverable letter remain one continuous ending. No trustworthy live ending
 state exists yet, so the scope remains `qa-ready` pending a human playtest and
 native fixture capture.
+
+The final closed scope is `replay-editors-and-period-catalog`: all 716 physical
+text records in `F_SHENE.MES`, both mirrored copies of `NAME.MES` and
+`MONO.MES`, and `SILK.MES`. They contain 238 canonical source lines; all
+anchors are translated and none are excluded or pending. The catalog
+contributes 430 records after sharing byte-identical editor copies and
+context-safe duplicates. Scene replay has 44 logical titles across 50 physical
+anchors, the name and adult-term editors expose four English presets per role,
+and all 176 records in Silky's period product catalog are translated. The
+localized editor branch and full-width Latin runtime values have been exercised
+in the emulator; story, final-letter, and unlocked replay contexts still need a
+human playtest with every preset.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

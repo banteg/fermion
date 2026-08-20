@@ -651,3 +651,37 @@ end = 0x3778
 file = "DISKD/F0042.MES"
 start = 0x0438
 end = 0x1f4a
+
+[[scopes]]
+id = "replay-editors-and-period-catalog"
+description = "Every decoded text record in the scene-replay menu, both mirrored name and terminology editors, and the period Silky's product catalog."
+
+[[scopes.ranges]]
+file = "DISKA/F_SHENE.MES"
+start = 0x021b
+end = 0x1753
+
+[[scopes.ranges]]
+file = "DISKA/NAME.MES"
+start = 0x01db
+end = 0x5a34
+
+[[scopes.ranges]]
+file = "DISKB/NAME.MES"
+start = 0x01db
+end = 0x5a34
+
+[[scopes.ranges]]
+file = "DISKA/MONO.MES"
+start = 0x01de
+end = 0x55c2
+
+[[scopes.ranges]]
+file = "DISKB/MONO.MES"
+start = 0x01de
+end = 0x55c2
+
+[[scopes.ranges]]
+file = "DISKA/SILK.MES"
+start = 0x01bd
+end = 0x2369

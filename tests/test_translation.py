@@ -14,10 +14,51 @@ from fermion.translation import (
     TranslationEntry,
     TranslationError,
     TranslationFile,
+    TranslationToken,
+    _patch_editor_preset_source,
     _patch_gm_source,
     _patch_token_initializer_source,
+    _runtime_token_bytes,
     _verify_compiled_file,
+    _wrap_text,
 )
+
+
+def test_editor_preset_patch_uses_mode_one_safe_fullwidth_strings() -> None:
+    presets = {
+        "name:mother": ("Yuki", "May", "Helen", "Olivia"),
+        "name:older-sister": ("Ruri", "Ruby", "Alice", "Chloe"),
+        "name:dear-person": ("Kanako", "Kana", "Sarah", "Emma"),
+        "name:friend-1": ("Yoko", "Yuna", "Maria", "Ava"),
+        "name:friend-2": ("Hiroko", "Hina", "Erika", "Mia"),
+    }
+    tokens = tuple(
+        TranslationToken(token_id, "source", choices[0], 12, choices)
+        for token_id, choices in presets.items()
+    )
+    source = """prefix
+(label 2531)
+               (switch (local-address 2723) (ref 11 2002))
+               (case (local-address 2723) 200)
+               (label 2723)
+               (next))
+suffix
+"""
+
+    patched = _patch_editor_preset_source(source, "NAME.MES", tokens)
+
+    yuki = " ".join(str(byte) for byte in _runtime_token_bytes("Yuki"))
+    assert f"(inline-source 0 255 1 {yuki})" in patched
+    assert patched.count("(string-copy (ref 14 160)") == 20
+    assert "legacy" not in patched
+
+
+def test_runtime_token_bytes_are_fullwidth_cp932() -> None:
+    assert _runtime_token_bytes("Hiroko") == "Ｈｉｒｏｋｏ".encode("cp932")
+
+
+def test_wrap_text_preserves_whitespace_only_layout_records() -> None:
+    assert _wrap_text("  ", 61) == ("  ",)
 
 
 def write_catalog(
@@ -415,7 +456,7 @@ notes = "Keeps the catalog non-empty."
 """
     patched = _patch_token_initializer_source(rkt, GMFile.from_bytes(source), token_initializers)
 
-    translated_values = " ".join(str(byte) for byte in b"Kanako")
+    translated_values = " ".join(str(byte) for byte in _runtime_token_bytes("Kanako"))
     assert source_values not in patched
     assert patched.count(f"(inline-source 0 255 1 {translated_values})") == 2
 
@@ -443,8 +484,8 @@ sha256 = "{hashlib.sha256(source).hexdigest()}"
 [[tokens]]
 id = "term:slot-1"
 source = "おま○こ"
-translation = "pussy"
-max_width = 5
+translation = "cat"
+max_width = 3
 initializers = [
   {{ file = "DISKA/SCENE.MES", offset = 0x0002, slot = 0x042e }},
 ]
@@ -468,14 +509,15 @@ status = "draft"
     [token] = catalog.tokens
     token_initializers = tuple((token, item) for item in token.initializers)
     original = GMFile.from_bytes(source)
-    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01pussy\x00\x00"
+    translated_term = _runtime_token_bytes("cat")
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01" + translated_term + b"\x00\x00"
     compiled = GMFile.from_bytes(
         struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
     )
 
     assert len(compiled.data) < len(source)
     assert source_term not in compiled.data
-    assert b"pussy\x00\x00\x43\x0c\x2e\x04" in compiled.data
+    assert translated_term + b"\x00\x00\x43\x0c\x2e\x04" in compiled.data
     assert compiled.audit().issues == ()
     _verify_compiled_file(
         catalog.files[0],
@@ -536,13 +578,14 @@ status = "draft"
     [token] = catalog.tokens
     token_initializers = tuple((token, item) for item in token.initializers)
     original = GMFile.from_bytes(source)
-    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01Hiroko\x00\x00"
+    translated_name = _runtime_token_bytes("Hiroko")
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01" + translated_name + b"\x00\x00"
     compiled = GMFile.from_bytes(
         struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
     )
 
     assert len(compiled.data) > len(source)
-    assert b"Hiroko\x00\x00\x43\x0c\x20\x04" in compiled.data
+    assert translated_name + b"\x00\x00\x43\x0c\x20\x04" in compiled.data
     _verify_compiled_file(
         catalog.files[0],
         original,
