@@ -4,12 +4,15 @@
 and the reasoning behind it. It intentionally contains text and metadata, not
 compiled MES files or original game media.
 
-The English version carries this editorial note:
+The English version carries this content note:
 
-> The original Japanese work assigns younger ages or school status to some
-> characters. For this English version, every character depicted in sexual
-> content is treated as 18 or older. This is an editorial change to the English
-> version, not a claim about the original text.
+> This archival English translation preserves the ages and school status stated
+> in the original Japanese work. The game contains sexual depictions of
+> high-school-age characters, along with coercive and otherwise sensitive
+> material described in the translation brief.
+
+Any distribution-specific age alteration must be a disclosed, mechanically
+separate override. It is not part of this canonical translation catalog.
 
 Each `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
@@ -31,10 +34,9 @@ brief fully explain the translation; do not repeat a slice-wide voice policy on
 every line. Do not erase an unresolved nuance merely because the current probe
 uses shorter wording.
 
-`context` and `notes` describe the Japanese source scene rather than restating
-the English release's adult-age framing on every record. Use **adult** only
+`context` and `notes` describe the Japanese source scene. Use **adult** only
 where the plot itself requires the distinction, such as adult Kaori versus her
-younger self; the single editorial note above is the authoritative disclosure.
+younger self; do not insert age labels as a localization workaround.
 
 Draft canonical English by reading the Japanese in scene context and applying
 the checked-in plot, voice, and terminology notes. Automated tools may expose
@@ -234,8 +236,8 @@ Marna rescue flashback and the next-day handoff to `F0001.MES`. They are
 managed as 391 canonical lines; five exact duplicates share wording across
 reconverging menu branches, and two contentless pause records join
 pre-existing canonical entries from later files. None are excluded or pending.
-The slice contains the game's first explicit scene; its translation follows
-the disclosed adult-age release policy. F0000 was retranslated line by line
+The slice contains the game's first explicit scene; its translation preserves
+the source's age claims and sexual meaning. F0000 was retranslated line by line
 after review found euphemized sexual meaning, mechanical terminology, and prose
 that did not match Connie's plain, direct voice. Anatomical wording is now
 chosen by sentence rather than forced through a one-word glossary, and the live
@@ -304,20 +306,19 @@ text records in `F0009.MES`, from Kanako pulling Connie upstairs through the
 room talk, dinner, the pollution briefing, and Connie carrying Kanako to bed.
 They are managed as 132 catalog entries, including 72 composite display
 messages; all anchors are translated and none are excluded or pending. Kanako
-drops Big Sis for bare Connie; the English age lock keeps the sleepy
-observation from saying she looks underage. No trustworthy live F0009 state
-exists yet, so it remains `qa-ready` pending a human playtest and native
-fixture capture.
+drops Big Sis for bare Connie, and the sleepy observation preserves the source
+claim that she looks younger than her age. No trustworthy live F0009 state
+exists yet, so it remains `qa-ready` pending a human playtest and native fixture
+capture.
 
 The eleventh closed scope is `ruri-nighttime-route`: all 215 physical text
 records in `F0010L.MES`, from Kanako falling asleep through Connie reconciling
 with Ruri, demonstrating Mini form, and changing back. They are managed as 157
 catalog entries, including 83 composite display messages; all anchors are
-translated and none are excluded or pending. Connie's player-facing age is
-about eighteen under the disclosed English-release policy, while her three
-years of lived experience remain explicit. No trustworthy live F0010L state
-exists yet, so it remains `qa-ready` pending a human playtest and native fixture
-capture.
+translated and none are excluded or pending. Connie's human-equivalent age is
+about seventeen, while her three years of lived experience remain explicit. No
+trustworthy live F0010L state exists yet, so it remains `qa-ready` pending a
+human playtest and native fixture capture.
 
 The twelfth closed scope is `yuki-nighttime-route`: all 542 physical text
 records in `F0010R.MES`, from Connie returning to the living room through Yuki
@@ -391,8 +392,7 @@ none are excluded or pending. The slice covers the family bath branches, the
 one-day school visit, Yoshimi's confession route, and Yoko's swimming-club
 route. Every spoken refusal, request to stop or let go, attempt to withdraw,
 physical restraint, and unconsented sample collection remains explicit. The
-disclosed adult-age policy applies to every character depicted sexually, while
-the archival context continues to document the source's school status. No
+canonical English preserves the source's stated ages and school status. No
 trustworthy live F0021-F0026 state exists yet, so the scope remains `qa-ready`
 pending a human playtest and native fixture capture.
 
@@ -405,9 +405,8 @@ translated and none are excluded or pending. The catalog contributes 1,337
 records after context-safe duplicate consolidation. Reveal clues remain
 unexplained at first presentation,
 while the abduction, capture drug, reproductive-experiment threat, and lobotomy
-threat stay explicit. The disclosed adult-age policy applies to all sexual
-material. No trustworthy live F0027-F0033 state exists yet, so the scope
-remains `qa-ready` pending a human playtest and native fixture capture.
+threat stay explicit. No trustworthy live F0027-F0033 state exists yet, so the
+scope remains `qa-ready` pending a human playtest and native fixture capture.
 
 The twentieth closed scope is `facility-scouting-and-escape`: all 2,367
 physical text records in the 26 text-bearing files reached through the F0034

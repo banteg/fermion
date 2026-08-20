@@ -14793,17 +14793,17 @@ context = "Connie's wary hunter instincts interrupt Kanako's account of the cras
 status = "qa-ready"
 
 [[entries]]
-id = "f0003-1e44-connie-a-still-developing-organism-human"
+id = "f0003-1e44-connie-a-still-developing-human-child-female-about-sixteen"
 file = "DISKA/F0003.MES"
 offset = 0x1e44
 source_mode = 1
 target_mode = 2
 source = "【コニー】（まだ成長過程にある生物、ヒト、子供でメスの方だ・・・。生まれて１６年くらいか。）"
-translation = "[CONNIE] (A still-developing organism. Human. Child. Female... About eighteen years old.)"
+translation = "[CONNIE] (A still-developing organism. Human. Child. Female... About sixteen years old.)"
 speaker = "コニー"
 context = "Connie's wary hunter instincts interrupt Kanako's account of the crash."
 status = "qa-ready"
-notes = "The clinical taxonomy preserves Connie's learned hunter mindset. The source age remains visible in the Japanese field, while the player-facing number follows the disclosed English-release policy that characters depicted in sexual content are 18 or older."
+notes = "The clinical taxonomy preserves Connie's learned hunter mindset."
 
 [[entries]]
 id = "f0003-1e7e-out-of-long-habit-i-find"
@@ -20518,14 +20518,13 @@ segments = [
 ]
 
 [[composites]]
-id = "f0004-20e9-connie-name-dear-person-is-eighteen-and-in"
+id = "f0004-20e9-connie-name-dear-person-is-in-high-school-and-knows-that"
 target_mode = 2
 source = "【コニー】（高校生だし・・・、⟦name:dear-person⟧も知ってるよね・・・。）"
 translation = "[CONNIE] (⟦name:dear-person⟧ is in high school... She knows that much, right...?)"
 speaker = "コニー"
 context = "Connie questions Kanako about sex and pressures her to repeat an explicit term."
 status = "qa-ready"
-notes = "The Japanese source says high-school student. F0003 already establishes the player-facing English-release age as eighteen, so this thought does not repeat the invented number."
 
 [[composites.occurrences]]
 file = "DISKA/F0004.MES"
@@ -24397,7 +24396,7 @@ translation = "[CONNIE] \"⟦name:dear-person⟧, that's proof your feelings hav
 speaker = "コニー"
 context = "Connie explains genetic sampling, recognizes Kanako's jealousy, learns about her heart condition, and tests the sample already in her ring."
 status = "qa-ready"
-notes = "The English makes the growth emotional rather than implying a younger player-facing age, while preserving Connie's claim that jealousy marks development."
+notes = "Growth is emotional in context: Connie treats jealousy as evidence of developing feelings."
 
 [[composites.occurrences]]
 file = "DISKB/F0005.MES"
@@ -26292,17 +26291,16 @@ context = "Optional living-room observations show Connie's attraction to Kanako'
 status = "qa-ready"
 
 [[entries]]
-id = "f0006-0b51-on-my-third-birthday-about-eighteen-in-human-terms"
+id = "f0006-0b51-on-my-third-birthday-about-sixteen-in-human-terms"
 file = "DISKB/F0006.MES"
 offset = 0x0b51
 source_mode = 1
 target_mode = 2
 source = "あたしの３才の誕生日（ヒトの年齢だと１６才頃）に、神崎博士がコロンとルージュを贈ってくれた。"
-translation = "On my third birthday (about eighteen in human terms), Dr. Kanzaki gave me cologne and lipstick."
+translation = "On my third birthday (about sixteen in human terms), Dr. Kanzaki gave me cologne and lipstick."
 speaker = "Connie"
 context = "Optional living-room observations show Connie's attraction to Kanako's mother, the familiar perfume, and her longing for family."
 status = "qa-ready"
-notes = "The source says about sixteen in human terms. The player-facing number follows the disclosed English-release policy that every character depicted in sexual content is treated as 18 or older; the original remains visible in the source field and research brief."
 
 [[entries]]
 id = "f0006-0b90-i-keep-them-safe-theyre-my-treasures"
@@ -39890,11 +39888,10 @@ offset = 0x1dc1
 source_mode = 1
 target_mode = 2
 source = "こうして見ると、やっぱり年齢未満に見えちゃう・・・。"
-translation = "Looking at her like this, she still looks so young..."
+translation = "Looking at her like this, she really does look younger than her age..."
 speaker = "Connie"
 context = "Kanako dozes off during the late talk; Connie carries her to bed instead of continuing with Yuki."
 status = "qa-ready"
-notes = "The source says Kanako looks younger than her age. The English preserves the impression without implying a player-facing age below the disclosed eighteen-or-older release policy."
 
 [[composites]]
 id = "f0009-1e15-connie-ahh"
@@ -41959,17 +41956,16 @@ segments = [
 ]
 
 [[entries]]
-id = "f0010l-2031-in-human-terms-about-eighteen-but-i-m-a-mutant-so-i-ve-onl"
+id = "f0010l-2031-in-human-terms-about-seventeen-but-only-three-years-alive"
 file = "DISKB/F0010L.MES"
 offset = 0x2031
 source_mode = 1
 target_mode = 2
 source = "【コニー】「実年齢は、１７才くらいかな。あたしはミュータントだから生まれてまだ３年だけど。」"
-translation = "[CONNIE] \"In human terms, about eighteen. But I'm a mutant, so I've only been alive for three years.\""
+translation = "[CONNIE] \"In human terms, about seventeen. But I'm a mutant, so I've only been alive for three years.\""
 speaker = "コニー"
 context = "Ruri cuddles Connie in Mini form and asks about her age and mutant life before Connie changes back."
 status = "qa-ready"
-notes = "The source says Connie is about seventeen. The player-facing number follows the disclosed English-release policy that every character depicted in sexual content is treated as 18 or older; her three years of lived experience remain explicit."
 
 [[composites]]
 id = "f0010l-206b-really"
@@ -91164,7 +91160,7 @@ translation = "Perhaps that is because my chronological age is still only three.
 speaker = "Connie"
 context = "Connie surrenders the lead to the mother, who explores her body; Connie explicitly says no before the mother continues to a small climax."
 status = "qa-ready"
-notes = "The source distinguishes Connie's chronological age of three years since artificial creation from her rapidly matured body; the English release separately applies the locked adult-age policy."
+notes = "The source distinguishes Connie's chronological age of three years since artificial creation from her rapidly matured body."
 
 [[composites]]
 id = "f0022r-1c5e-name-mother-s-hands-stroke-my-skin"
@@ -154105,7 +154101,7 @@ translation = "[⟦name:dear-person⟧] \"Was that really enough...? All I did w
 speaker = "name-slot:dear-person"
 context = "Connie tells the patient about the secret return plan, learns Dr. Kanzaki drugged and abducted them, and seeks a wheelchair to protect the incision."
 status = "qa-ready"
-notes = "The patient explicitly refers to consensual sex with Connie and enjoyment; the documented adult-age editorial policy applies."
+notes = "The patient explicitly refers to consensual sex with Connie and enjoyment."
 
 [[composites.occurrences]]
 file = "DISKD/F0034101.MES"

@@ -17,6 +17,21 @@ def test_locked_translation_policy_contracts() -> None:
             "For this mission, I've also been granted Time Patrol authority."
         ),
         ("DISKA/F0001.MES", 0x221B): "[CONNIE] (Time Quake system: nominal.)",
+        ("DISKA/F0003.MES", 0x1E44): (
+            "[CONNIE] (A still-developing organism. Human. Child. Female... "
+            "About sixteen years old.)"
+        ),
+        ("DISKB/F0006.MES", 0x0B51): (
+            "On my third birthday (about sixteen in human terms), Dr. Kanzaki "
+            "gave me cologne and lipstick."
+        ),
+        ("DISKB/F0009.MES", 0x1DC1): (
+            "Looking at her like this, she really does look younger than her age..."
+        ),
+        ("DISKB/F0010L.MES", 0x2031): (
+            '[CONNIE] "In human terms, about seventeen. But I\'m a mutant, '
+            'so I\'ve only been alive for three years."'
+        ),
         ("DISKC/F0030.MES", 0x141F): (
             "[CONNIE] (Anesthetic... a tranquilizer gun...?)"
         ),
