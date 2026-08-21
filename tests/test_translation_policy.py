@@ -39,6 +39,9 @@ def test_locked_translation_policy_contracts() -> None:
         ("DISKC/F0030.MES", 0x1438): (
             "I used a capture gun to hunt mutants. This is the same smell."
         ),
+        ("DISKD/F003410.MES", 0x1077): (
+            "[Connie] (It was definitely this room... This room...)"
+        ),
         ("DISKD/F0039.MES", 0x16CB): (
             "Knowing it's a tranquilizer gun, I tense every muscle to leap at her."
         ),

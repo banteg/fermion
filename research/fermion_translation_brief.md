@@ -874,6 +874,7 @@ Repair only a demonstrable text-level error whose intended reading is independen
 | `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **about 280 years** | The stated dates 1996 and 2288 are 292 years apart. Preserve the source figure and disclose the contradiction rather than repairing character dialogue. |
 | `F0040.MES:0x4093` | `確率された時代` (“an era whose probability was...”) | **an era whose technology could perform your operation** | Read `確率` as the contextually recoverable typo `確立` (“established”). Preserve the exact typo in source and notes. |
 | `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
+| `F003410.MES:0x1077` | `コニー】` without an opening `【` | **[Connie]** | Restore the demonstrably missing opening speaker-tag bracket; adjacent records and the remaining name plus closing bracket establish the intended form. |
 | `F0042.MES:0x1bf7` | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
 ### Ambiguities to preserve
@@ -1017,7 +1018,7 @@ checkpoint:
    surfaces, and the period Silky's catalog are represented in the canonical
    catalog or explicitly source-anchored coverage exclusions.
 3. The catalog contains 12,902 canonical records over 17,680 physical anchors
-   in 76 MES files: 12,634 `translated`, 253 `reviewed`, and 15
+   in 76 MES files: 12,611 `translated`, 276 `reviewed`, and 15
    `runtime-verified`.
 4. The remaining work is dedicated linguistic review of the still-translated
    records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,

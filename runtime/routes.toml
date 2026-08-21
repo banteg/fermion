@@ -179,7 +179,7 @@ sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"
 [[routes]]
 name = "first-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0000.MES."
-content_sha256 = "dca73e378c55b294d1eb2e6e40957ce7e80848ba62086484f7e428d4a7ea44dc"
+content_sha256 = "33df57513c56127463633f019cb4e5f4cf865e834e4128f093a8485b25a32144"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -203,7 +203,7 @@ sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
 [[routes.checkpoints]]
 name = "loaded-first-scene"
 frame = 10499
-sha256 = "cb4cc84b762c80529b10831700f7e8aaa0fa5560a26a5a12648237bfb03064d0"
+sha256 = "8c73813b6316b125d365b3957cc8d692fc36959b3b4e6d265ae3e3c689d0b793"
 scenario = "f0000.mes"
 state_offset = 0x1c7e0
 

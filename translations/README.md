@@ -272,11 +272,11 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is runtime evidence, not a claim of final editorial approval.
 
-At this checkpoint, 12,634 records are `translated`, 253 are `reviewed`, and 15
+At this checkpoint, 12,611 records are `translated`, 276 are `reviewed`, and 15
 are `runtime-verified`. The reviewed set is limited to records whose wording
-changed during the dedicated Opus source-and-context passes over F0039-F0042
-and the token-initial prose audit; unchanged neighboring records were not
-bulk-promoted.
+changed during dedicated source-and-context passes over the ending,
+token-initial prose, and later full-catalog review findings; unchanged
+neighboring records were not bulk-promoted.
 
 The current catalog contains 12,902 canonical records covering 17,680 physical
 anchors across 76 MES files: `MAIN.MES`, `FOP.MES`, the translated story

@@ -4493,11 +4493,11 @@ offset = 0x045d
 source_mode = 1
 target_mode = 2
 source = "「・・・・・・・・・。私でもこれ以上のことは無理・・・、考え直して。」"
-translation = "\"I can't do any more than this... Please reconsider.\""
+translation = "\"Even I can't do any more than this... Please reconsider.\""
 speaker = "kanzaki"
 attribution = "inferred"
 scene = "later-prologue-exchange-kanzaki-resists-marie-demand-concerning-project"
-status = "translated"
+status = "reviewed"
 box_width = 61
 notes = "The ending resolves the unlabelled speaker as Kanzaki. Her controlled request contrasts with the panic that follows."
 
@@ -4523,13 +4523,13 @@ offset = 0x04be
 source_mode = 1
 target_mode = 2
 source = "「・・・くっ・・・。あなたという人は・・・・・・。」"
-translation = "\"...Damn you... How could you...?\""
+translation = "\"...Ngh... You really are...\""
 speaker = "kanzaki"
 attribution = "inferred"
 scene = "later-prologue-exchange-kanzaki-reacts-marie-threat-against-connie"
-status = "translated"
+status = "reviewed"
 box_width = 61
-notes = "くっ is a bitten-back sound of anger. The unfinished あなたという人は condemns Marie without a literal, unidiomatic predicate."
+notes = "The bitten-back くっ remains an angry sound rather than added profanity; the unfinished あなたという人は remains an incomplete, exasperated condemnation."
 
 [[entries]]
 id = "opening-marie-one-subject"
@@ -5524,12 +5524,13 @@ offset = 0x0554
 source_mode = 1
 target_mode = 2
 source = "【コニー】「あンッ、だ・・・だめです・・・。明日は・・・・・・出発だから・・・・・・。」"
-translation = "[Connie] \"Ah... n-no... I leave tomorrow...\""
+translation = "[Connie] \"Ah! N-no, I can't... I'm leaving tomorrow, so...\""
 speaker = "connie"
 attribution = "proven"
 scene = "first-f0000-scene-dr-kanzaki-room-before-departure"
 status = "runtime-verified"
 box_width = 61
+notes = "だめです remains an explicit refusal, and だから leaves tomorrow's departure as Connie's unfinished reason."
 
 [[entries]]
 id = "first-scene-kanzaki-asks"
@@ -7309,11 +7310,11 @@ offset = 0x1943
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・そう、落ち着いて話を聞いて・・・。私と一緒に来て欲しいの。私じゃだめかな・・・？」"
-translation = "[Kanzaki] \"...That's it. Calm down and listen... I want you to come with me. Won't you...?\""
+translation = "[Kanzaki] \"...That's it. Calm down and listen... I want you to come with me. Am I not enough...?\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "flashback-kanzaki-finds-calms-adopts-wounded-marna"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -8317,11 +8318,11 @@ offset = 0x2601
 source_mode = 1
 target_mode = 2
 source = "すりすりと、いつも厳しい博士があたしの胸に甘えてくれる。"
-translation = "The usually strict doctor nuzzles against my breast and lets me pamper her."
+translation = "The usually strict doctor nuzzles against my breast, seeking my affection."
 speaker = "connie"
 attribution = "inferred"
 scene = "back-bed-kanzaki-teases-connie-past-her-embarrassment"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -9563,11 +9564,11 @@ offset = 0x311b
 source_mode = 1
 target_mode = 2
 source = "【コニー】「はあぁっ、はあっ、でも・・・あたし・・・だけなんて・・・。」"
-translation = "[Connie] \"Haa, haa... but... it doesn't seem fair if I'm the only one...\""
+translation = "[Connie] \"Haa, haa... but... just me...?\""
 speaker = "connie"
 attribution = "proven"
 scene = "kanzaki-pleasures-protesting-connie-draws-out-her-begging"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -10011,11 +10012,11 @@ offset = 0x351f
 source_mode = 1
 target_mode = 2
 source = "神崎博士の指があたしの体から離れると、急に切なくなってくる。"
-translation = "As soon as Dr. Kanzaki pulls her fingers out, I want them back."
+translation = "As soon as Dr. Kanzaki pulls her fingers out, I'm suddenly aching for them."
 speaker = "connie"
 attribution = "inferred"
 scene = "kanzaki-pleasures-protesting-connie-draws-out-her-begging"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -10543,11 +10544,11 @@ offset = 0x3a1e
 source_mode = 1
 target_mode = 2
 source = "【神崎】「ま・だ・よ。・・・んっ・・・。」"
-translation = "[Kanzaki] \"Not... yet... Nnh...\""
+translation = "[Kanzaki] \"Not. Yet... Nnh...\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "connie-begs-release-climaxes-two-hold-each-other-until"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -10711,11 +10712,11 @@ offset = 0x3b9f
 source_mode = 1
 target_mode = 2
 source = "【神崎】「いいの・・・。私のことは気にしないで。・・・見せて。コニーがイクところを。」"
-translation = "[Kanzaki] \"It's all right... Don't worry about me. ...Show me. Show me when you come.\""
+translation = "[Kanzaki] \"It's all right... Don't worry about me... Show me. Let me watch you come.\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "connie-begs-release-climaxes-two-hold-each-other-until"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -10837,11 +10838,11 @@ offset = 0x3cec
 source_mode = 1
 target_mode = 2
 source = "頭が真っ白になったまま、あたしは余韻を味わっていた。"
-translation = "My mind stays blank while the pleasure slowly fades."
+translation = "My mind stays blank as I savor the afterglow."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-begs-release-climaxes-two-hold-each-other-until"
-status = "translated"
+status = "reviewed"
 box_width = 61
 
 [[entries]]
@@ -12723,11 +12724,11 @@ offset = 0x0be9
 source_mode = 1
 target_mode = 2
 source = "ミュータントもヒトと結婚できるし、結婚して家庭を営んでいる前例もある。"
-translation = "Mutants can marry humans. Some already have, and built families together."
+translation = "Mutants can marry humans. Some have already done so and built families together."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-considers-mutants-place-ordinary-society"
-status = "translated"
+status = "reviewed"
 notes = "The second sentence emphasizes lived precedent rather than only legal permission."
 
 [[entries]]
@@ -17371,11 +17372,11 @@ offset = 0x0523
 source_mode = 1
 target_mode = 2
 source = "【女の子】「・・・大丈夫かなあ・・・この子・・・。」"
-translation = "[Girl] \"...Are you okay, kitty...?\""
+translation = "[Girl] \"...I wonder if this little one's okay...\""
 speaker = "girl"
 attribution = "proven"
 scene = "connie-regains-consciousness-kanako-room-after-crash"
-status = "translated"
+status = "reviewed"
 
 [[entries]]
 id = "f0003-0542-i-hear-a-voice-its-pronunciation"
@@ -19355,12 +19356,12 @@ offset = 0x1f83
 source_mode = 1
 target_mode = 2
 source = "【女の子】「・・・なの。」"
-translation = "[Girl] \"...and that's why.\""
+translation = "[Girl] \"...you know.\""
 speaker = "girl"
 attribution = "proven"
 scene = "connie-wary-hunter-instincts-interrupt-kanako-account-crash"
-status = "translated"
-notes = "A deliberately incomplete tail: Connie realizes Kanako has been speaking while her attention wandered."
+status = "reviewed"
+notes = "A deliberately incomplete overheard tail; the neutral English avoids inventing either the missing clause or a causal claim."
 
 [[entries]]
 id = "f0003-1f95-connie-what"
@@ -28135,11 +28136,11 @@ status = "translated"
 id = "f0005-0efa-name-was-born-burdened-with-so-much-pain"
 target_mode = 2
 source = "⟦name:dear-person⟧に生まれつきの不幸せを与えるなんて。"
-translation = "⟦name:dear-person⟧ was born burdened with so much pain."
+translation = "⟦name:dear-person⟧, burdened with so much pain from birth...!"
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-talk-branch-moves-between-attraction-kanako-illness-schooling"
-status = "translated"
+status = "reviewed"
 
 [[composites.occurrences]]
 file = "DISKB/F0005.MES"
@@ -35005,11 +35006,11 @@ segments = [
 id = "f0007-0b7f-an-image-of-name-holding-a-girl-who"
 target_mode = 2
 source = "⟦name:mother⟧が⟦name:mother⟧に似た女の子を抱き締めているイメージ。"
-translation = "⟦name:mother⟧ holds a girl who looks like ⟦name:mother⟧ in the image."
+translation = "⟦name:mother⟧ appears in the image, holding a girl who looks like ⟦name:mother⟧."
 speaker = "connie"
 attribution = "inferred"
 scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
+status = "reviewed"
 
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
@@ -39496,11 +39497,12 @@ segments = [
 id = "f0007-3a88-name-ah-ah-ahhhhhhh"
 target_mode = 2
 source = "【⟦name:mother⟧】「いっ、あっ、ああぁぁぁぁっ！！！！！！！」"
-translation = "[⟦name:mother⟧] \"Ah! Ah... ahhhhhhh!\""
+translation = "[⟦name:mother⟧] \"I-- ah! Aahhhhhhh!\""
 speaker = "name-slot:mother"
 attribution = "proven"
 scene = "connie-collects-yuki-genetic-sample-kitchen-sink-continues-encounter"
-status = "translated"
+status = "reviewed"
+notes = "The isolated いっ immediately follows Connie's invitation to climax and remains the cut-off start of イク rather than being discarded as a generic cry."
 
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
@@ -49388,11 +49390,11 @@ status = "translated"
 id = "f0010r-11a6-name-you-re-bold"
 target_mode = 2
 source = "【コニー】「⟦name:mother⟧・・・さん、積極的・・・。」"
-translation = "[Connie] \"⟦name:mother⟧... you're bold...\""
+translation = "[Connie] \"⟦name:mother⟧... you're very forward, ma'am...\""
 speaker = "connie"
 attribution = "proven"
 scene = "yuki-initiates-intimacy-connie-hesitates-yuki-reassures-her-by"
-status = "translated"
+status = "reviewed"
 
 [[composites.occurrences]]
 file = "DISKB/F0010R.MES"
@@ -49410,7 +49412,8 @@ translation = "[⟦name:mother⟧] \"Just ⟦name:mother⟧... I'm surprised mys
 speaker = "name-slot:mother"
 attribution = "proven"
 scene = "yuki-initiates-intimacy-connie-hesitates-yuki-reassures-her-by"
-status = "translated"
+status = "reviewed"
+notes = "The preceding ma'am makes Yuki's invitation to drop さん visible without retaining a romanized suffix."
 
 [[composites.occurrences]]
 file = "DISKB/F0010R.MES"
@@ -68878,11 +68881,11 @@ offset = 0x104a
 source_mode = 1
 target_mode = 2
 source = "あたしは遅くなった訳を話した。神崎博士なら、女の子とエッチした事も話せる、そう考えたからだ。"
-translation = "I explain why I was late. I knew I could even tell Dr. Kanzaki that I'd had sex with a woman."
+translation = "I explain why I was late. I knew I could even tell Dr. Kanzaki that I'd had sex with a girl."
 speaker = "connie"
 attribution = "inferred"
 scene = "dr-kanzaki-abandons-her-public-reserve-welcome-connie-home"
-status = "translated"
+status = "reviewed"
 
 [[entries]]
 id = "f0014-1084-my-story-surprises-her-but-she-quickly-regains"
@@ -75211,11 +75214,12 @@ segments = [
 id = "f0017-08a4-name-dear-person-gives-off-a-distinctly-female"
 target_mode = 2
 source = "⟦name:dear-person⟧から『牝の匂い』が漂ってくるのが分かる。"
-translation = "⟦name:dear-person⟧ gives off a distinctly female scent."
+translation = "⟦name:dear-person⟧ gives off the scent of a female animal."
 speaker = "connie"
 attribution = "inferred"
 scene = "waiting-route-dependent-loved-one-room-connie-observes-its"
-status = "translated"
+status = "reviewed"
+notes = "牝 is Connie's deliberately animal-register hunter diction, not an age label."
 
 [[composites.occurrences]]
 file = "DISKB/F0017.MES"
@@ -84339,11 +84343,11 @@ segments = [
 id = "f0020-16fb-connie-name-dear-person-you-re-so-very"
 target_mode = 2
 source = "【コニー】「⟦name:dear-person⟧・・・も、び・ん・か・ん・・・。」"
-translation = "[Connie] \"⟦name:dear-person⟧... You're so very sensitive.\""
+translation = "[Connie] \"⟦name:dear-person⟧... You're so. Very. Sensitive too...\""
 speaker = "connie"
 attribution = "proven"
 scene = "finger-tongue-branches-continue-both-women-preserving-each-refusal"
-status = "translated"
+status = "reviewed"
 
 [[composites.occurrences]]
 file = "DISKC/F0020.MES"
@@ -165734,11 +165738,12 @@ offset = 0x1077
 source_mode = 1
 target_mode = 2
 source = "コニー】（確かにこの部屋だった・・・、この部屋だった・・・・・・。）"
-translation = "CONNIE] (It was definitely this room... This room...)"
+translation = "[Connie] (It was definitely this room... This room...)"
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-discovers-signs-chest-surgery-infers-threatened-lobotomy-has"
-status = "translated"
+status = "reviewed"
+notes = "Restoration: the source drops its opening 【 before コニー】; English restores the established speaker-tag bracket and casing."
 
 [[composites]]
 id = "f003410-109e-name-dear-person-s-scent-remains-there-is"
@@ -172439,11 +172444,12 @@ offset = 0x1ab5
 source_mode = 1
 target_mode = 2
 source = "【コニー】「・・・・・『コニー、あなたの妹として引き取る子がいるの』って・・・・・・・・・・・・・・・。」"
-translation = "[Connie] \"She said, 'Connie, there's a girl I want you to adopt as your sister'...\""
+translation = "[Connie] \"She said, 'Connie, there's a girl I'm taking in as your sister'...\""
 speaker = "connie"
 attribution = "proven"
 scene = "connie-promises-marna-gentleness-but-marna-expresses-fear-says"
-status = "translated"
+status = "reviewed"
+notes = "The subject of 引き取る is Dr. Kanzaki, matching her F0000 account that she decided to take Marna in as Connie's sister."
 
 [[entries]]
 id = "f0035-1af1-marna-and-that-was-me"
@@ -191433,7 +191439,7 @@ offset = 0x1934
 source_mode = 1
 target_mode = 2
 source = "マシンは防音になっている。外の音は聞こえないはずなのに・・・。"
-translation = "The machine's soundproof. I shouldn't be able to hear anything outside..."
+translation = "The machine is soundproofed. I shouldn't be able to hear anything outside..."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-dr-kanzaki-dr-marie-wounded-marna-board-all"
@@ -197090,11 +197096,11 @@ target_mode = 2
 box_width = 54
 box_rows = 3
 source = "『私が事故を起こしたばっかりに……』［幸絵］の起こした事故をネタに体を要求する［丈人］。\n"
-translation = "Takehito uses my accident to demand Yukie's body.\n"
+translation = "Takehito uses the accident Yukie caused to demand her body.\n"
 speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
-status = "translated"
+status = "reviewed"
 
 [[entries]]
 id = "silk-1440-he-then-lays-hands-on-yukie-s-daughters"
