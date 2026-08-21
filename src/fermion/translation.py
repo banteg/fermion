@@ -626,7 +626,7 @@ def _patch_token_initializer_source(
             raise TranslationError(
                 f"{token.id}: lime-juice initializer source changed at 0x{initializer.offset:04x}"
             )
-        translated_payload = (255, 1, *_runtime_token_bytes(token.translation))
+        translated_payload = (255, 2, *_runtime_token_bytes(token.translation))
         replacement = (
             f"(string-copy (ref {reference_token} {reference_slot}) "
             f"(inline-source {trailing} "
@@ -647,7 +647,7 @@ _EDITOR_LAYOUTS = {
         "mapping_label": 14673,
         "special_mapping_label": 16675,
         "source_limit": 5,
-        "target_limit": 6,
+        "target_limit": 11,
         "save_base": 1000,
         "save_length": 35,
         "destinations": (
@@ -665,7 +665,7 @@ _EDITOR_LAYOUTS = {
         "mapping_label": 13535,
         "special_mapping_label": 15537,
         "source_limit": 6,
-        "target_limit": 7,
+        "target_limit": 11,
         "save_base": 1070,
         "save_length": 16,
         "destinations": (
@@ -675,6 +675,15 @@ _EDITOR_LAYOUTS = {
         "slot_end": 1102,
     },
 }
+
+_RUNTIME_STRING_HEADER_SIZE = 2
+_RUNTIME_STRING_TERMINATOR_SIZE = 2
+_EDITOR_BUFFER_SLOT = 1260
+_EDITOR_BUFFER_BYTE_BASE = 0x1000 + _EDITOR_BUFFER_SLOT
+_EDITOR_PAYLOAD_INDEX = _RUNTIME_STRING_HEADER_SIZE
+_EDITOR_BUFFER_CAPACITY = 14
+_MODE_2_STRING_HEADER_WORD = 0x02FF
+
 
 def _runtime_token_capacities() -> dict[str, int]:
     """Derive each fixed string buffer's capacity from adjacent slot addresses."""
@@ -694,23 +703,23 @@ _RUNTIME_TOKEN_CAPACITIES = _runtime_token_capacities()
 
 
 def _runtime_token_bytes(value: str) -> bytes:
-    """Encode ASCII token text as mode-1-safe full-width PC-98 glyphs."""
-    converted = []
-    punctuation = {" ": "　", "-": "－", "'": "＇"}
-    for character in value:
-        if character in punctuation:
-            converted.append(punctuation[character])
-        elif "!" <= character <= "~":
-            converted.append(chr(ord(character) + 0xFEE0))
-        else:
-            raise TranslationError(f"runtime token contains unsupported character {character!r}")
-    return "".join(converted).encode("cp932")
+    """Encode a runtime token for the engine's half-width mode-2 renderer."""
+    try:
+        payload = value.encode("ascii")
+    except UnicodeEncodeError as error:
+        raise TranslationError("runtime tokens must contain only ASCII") from error
+    unsupported = next((byte for byte in payload if not 0x20 <= byte <= 0x7E), None)
+    if unsupported is not None:
+        raise TranslationError(
+            f"runtime token contains unsupported character {chr(unsupported)!r}"
+        )
+    return payload
 
 
 def _validate_runtime_token(token: TranslationToken) -> None:
     """Validate a catalog token against its fixed runtime buffer."""
-    capacity = _RUNTIME_TOKEN_CAPACITIES.get(token.id)
-    if capacity is None:
+    slot_capacity = _RUNTIME_TOKEN_CAPACITIES.get(token.id)
+    if slot_capacity is None:
         raise TranslationError(f"{token.id}: no fixed runtime slot is defined")
     payload = _runtime_token_bytes(token.translation)
     derived_width = len(payload)
@@ -718,9 +727,11 @@ def _validate_runtime_token(token: TranslationToken) -> None:
         raise TranslationError(
             f"{token.id}: display width must be derived as {derived_width}, not {token.max_width}"
         )
-    if len(payload) + 1 > capacity:
+    capacity = min(slot_capacity, _EDITOR_BUFFER_CAPACITY)
+    maximum = capacity - _RUNTIME_STRING_HEADER_SIZE - _RUNTIME_STRING_TERMINATOR_SIZE
+    if len(payload) > maximum:
         raise TranslationError(
-            f"{token.id}: {token.translation!r} exceeds the {capacity}-byte runtime slot"
+            f"{token.id}: {token.translation!r} exceeds the {maximum}-character runtime limit"
         )
 
 
@@ -744,12 +755,12 @@ _LATIN_EDITOR_CELLS = tuple(
 _LATIN_EDITOR_ACTIONS = ((38, 352, 2), (44, 352, 1), (50, 352, 0))
 
 
-def _runtime_glyph_word(character: str) -> int:
-    """Return the VM word for one full-width runtime glyph."""
+def _runtime_glyph_byte(character: str) -> int:
+    """Return the VM byte for one half-width runtime glyph."""
     payload = _runtime_token_bytes(character)
-    if len(payload) != 2:
-        raise TranslationError(f"{character!r} is not one full-width CP932 glyph")
-    return int.from_bytes(payload, "little")
+    if len(payload) != 1:
+        raise TranslationError(f"{character!r} is not one half-width ASCII glyph")
+    return payload[0]
 
 
 def _latin_editor_row(y: int) -> str:
@@ -759,14 +770,12 @@ def _latin_editor_row(y: int) -> str:
     row_end = 38 if y == 336 else 54
     for x in range(20, row_end, 2):
         character = characters.get((x, y))
-        row.append(
-            _runtime_token_bytes(character).decode("cp932") if character is not None else "　"
-        )
+        row.append((character if character is not None else " ") + " ")
     return "".join(row)
 
 
 def _latin_editor_mapping_source(mapping_label: int) -> str:
-    """Generate the coordinate-to-full-width-glyph mapping routine."""
+    """Generate the coordinate-to-half-width-glyph mapping routine."""
     cells_by_row: dict[int, list[tuple[int, str | int]]] = {}
     for x, y, character in _LATIN_EDITOR_CELLS:
         cells_by_row.setdefault(y, []).append((x, character))
@@ -796,8 +805,8 @@ def _latin_editor_mapping_source(mapping_label: int) -> str:
         for x, value in cells:
             case_end = fresh_label()
             lines.append(f"(case (local-address {case_end}) {x})")
-            word = value if isinstance(value, int) else _runtime_glyph_word(value)
-            lines.append(f"(assign (ref 12 1274) {word})")
+            byte = value if isinstance(value, int) else _runtime_glyph_byte(value)
+            lines.append(f"(assign (ref 12 1274) {byte})")
             lines.append(f"(label {case_end})")
         lines.extend([f"(label {x_end})", "(next)", f"(label {row_end})"])
     lines.extend([f"(label {outer_end})", "(next)", "(return)"])
@@ -805,7 +814,7 @@ def _latin_editor_mapping_source(mapping_label: int) -> str:
 
 
 def _patch_editor_latin_source(source: str, filename: str) -> str:
-    """Open the original editor directly on one full-width Latin palette."""
+    """Open the original editor directly on one half-width Latin palette."""
     normalized = filename.upper()
     layout = _EDITOR_LAYOUTS.get(normalized)
     if layout is None:
@@ -871,6 +880,24 @@ def _patch_editor_latin_source(source: str, filename: str) -> str:
     start = state_three[0].start()
     end = state_four[0].start()
     editor_loop = patched[start:end]
+    state_marker = state_three[0].group(0)
+    loop_ids = [int(value) for value in re.findall(r"\(for-start (\d+) ", patched)]
+    migration_loop_id = max(loop_ids, default=0) + 1
+    migration_label = 61000
+    migration = "\n".join(
+        (
+            state_marker,
+            (
+                f"(for-start {migration_loop_id} (local-address {migration_label}) "
+                f"(!= (ref 5 {_EDITOR_BUFFER_BYTE_BASE} 1) 2))"
+            ),
+            f"(assign (ref 5 {_EDITOR_BUFFER_BYTE_BASE} {_EDITOR_PAYLOAD_INDEX}) 0)",
+            f"(label {migration_label})",
+            f"(assign (ref 6 {_EDITOR_BUFFER_SLOT} 0) {_MODE_2_STRING_HEADER_WORD})",
+        )
+    )
+    if editor_loop.count(state_marker) != 1:
+        raise TranslationError(f"{normalized}: editor entry marker changed")
     return_to_style = "(assign (ref 12 1244) 2)"
     if editor_loop.count(return_to_style) != 2:
         raise TranslationError(f"{normalized}: editor cancel paths changed")
@@ -881,6 +908,39 @@ def _patch_editor_latin_source(source: str, filename: str) -> str:
         raise TranslationError(f"{normalized}: editor length guard changed")
     editor_loop = editor_loop.replace(source_guard, target_guard)
     patched = patched[:start] + editor_loop + patched[end:]
+
+    byte_edits = {
+        f"(ref 6 {_EDITOR_BUFFER_SLOT} 1)": (
+            f"(ref 5 {_EDITOR_BUFFER_BYTE_BASE} {_EDITOR_PAYLOAD_INDEX})",
+            4,
+        ),
+        f"(ref 6 {_EDITOR_BUFFER_SLOT} ": (f"(ref 5 {_EDITOR_BUFFER_BYTE_BASE} ", 5),
+        "(assign (ref 11 3012) 1)": (
+            f"(assign (ref 11 3012) {_EDITOR_PAYLOAD_INDEX})",
+            1,
+        ),
+        "(!= (ref 11 3012) 1)": (
+            f"(!= (ref 11 3012) {_EDITOR_PAYLOAD_INDEX})",
+            2,
+        ),
+        "(assign (ref 12 1254) (+ (ref 12 1254) 2))": (
+            "(assign (ref 12 1254) (+ (ref 12 1254) 1))",
+            2,
+        ),
+        "(assign (ref 12 1254) (- (ref 12 1254) 2))": (
+            "(assign (ref 12 1254) (- (ref 12 1254) 1))",
+            2,
+        ),
+    }
+    for original_form, (replacement, expected_count) in byte_edits.items():
+        if patched.count(original_form) != expected_count:
+            raise TranslationError(
+                f"{normalized}: editor byte-storage form changed: {original_form}"
+            )
+        patched = patched.replace(original_form, replacement)
+    if patched.count(state_marker) != 1:
+        raise TranslationError(f"{normalized}: editor entry marker changed after byte patch")
+    patched = patched.replace(state_marker, migration, 1)
 
     mapping_label = int(layout["mapping_label"])
     special_mapping_label = int(layout["special_mapping_label"])
@@ -1143,8 +1203,10 @@ def _token_initializer_sequence(
 ) -> bytes:
     source = token.source.encode("cp932")
     value = _runtime_token_bytes(token.translation) if translated else source
+    mode = 2 if translated else 1
     return (
-        b"\x45\x0e\xe0\x00\xff\x01"
+        b"\x45\x0e\xe0\x00\xff"
+        + bytes((mode,))
         + value
         + b"\x00\x00"
         + b"\x43\x0c"

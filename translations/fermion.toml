@@ -3251,19 +3251,19 @@ context = "The scene-replay menu, whose labels must remain spoiler-safe before t
 
 [[scenes]]
 id = "localized-free-form-name-editor-uses-one-full-width"
-context = "The localized free-form name editor uses one full-width CP932 Latin palette."
+context = "The localized free-form name editor uses one half-width ASCII Latin palette."
 
 [[scenes]]
 id = "mirrored-localized-free-form-name-editor-uses-one-full"
-context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
+context = "The mirrored localized free-form name editor uses one half-width ASCII Latin palette."
 
 [[scenes]]
 id = "localized-free-form-term-editor-uses-one-full-width"
-context = "The localized free-form term editor uses one full-width CP932 Latin palette."
+context = "The localized free-form term editor uses one half-width ASCII Latin palette."
 
 [[scenes]]
 id = "mirrored-localized-free-form-term-editor-uses-one-full"
-context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
+context = "The mirrored localized free-form term editor uses one half-width ASCII Latin palette."
 
 [[scenes]]
 id = "game-period-silky-product-catalog"
@@ -192822,9 +192822,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x24ae },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
+translation = "A B C D E   F G H I J             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192838,9 +192838,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x28fa },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
+translation = "K L M N O   P Q R S T             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192854,9 +192854,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x291c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
+translation = "U V W X Y   Z                     "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192875,9 +192875,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29c6 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192891,9 +192891,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2960 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "たちつてと　だぢづでど　　　　　　"
-translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
+translation = "a b c d e   f g h i j             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192907,9 +192907,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2982 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "なにぬねの　　　　　　　　　　　　"
-translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
+translation = "k l m n o                         "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192923,9 +192923,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29a4 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
+translation = "p q r s t   u v w x y   z - '     "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192939,9 +192939,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29e8 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "まみむめも　っー　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192955,9 +192955,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a0a },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192971,9 +192971,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a2c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "らりるれろ　わをん　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -192988,9 +192988,9 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a4e },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　"
-translation = "　　　　　　　　　"
+translation = "                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-name-editor-uses-one-full-width"
@@ -193735,9 +193735,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x24ae },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
+translation = "A B C D E   F G H I J             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193751,9 +193751,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x28fa },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
+translation = "K L M N O   P Q R S T             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193767,9 +193767,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x291c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
+translation = "U V W X Y   Z                     "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193788,9 +193788,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29c6 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193804,9 +193804,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2960 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "たちつてと　だぢづでど　　　　　　"
-translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
+translation = "a b c d e   f g h i j             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193820,9 +193820,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2982 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "なにぬねの　　　　　　　　　　　　"
-translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
+translation = "k l m n o                         "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193836,9 +193836,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29a4 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
+translation = "p q r s t   u v w x y   z - '     "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193852,9 +193852,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29e8 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "まみむめも　っー　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193868,9 +193868,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a0a },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193884,9 +193884,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a2c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "らりるれろ　わをん　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -193901,9 +193901,9 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a4e },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　"
-translation = "　　　　　　　　　"
+translation = "                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-name-editor-uses-one-full"
@@ -194613,9 +194613,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x203c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
+translation = "A B C D E   F G H I J             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194629,9 +194629,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2488 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
+translation = "K L M N O   P Q R S T             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194645,9 +194645,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x24aa },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
+translation = "U V W X Y   Z                     "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194666,9 +194666,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2554 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194682,9 +194682,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x24ee },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "たちつてと　だぢづでど　　　　　　"
-translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
+translation = "a b c d e   f g h i j             "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194698,9 +194698,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2510 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "なにぬねの　　　　　　　　　　　　"
-translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
+translation = "k l m n o                         "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194714,9 +194714,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2532 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
+translation = "p q r s t   u v w x y   z - '     "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194730,9 +194730,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2576 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "まみむめも　っー　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194746,9 +194746,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2598 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194762,9 +194762,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x25ba },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "らりるれろ　わをん　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -194779,9 +194779,9 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x25dc },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　"
-translation = "　　　　　　　　　"
+translation = "                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "localized-free-form-term-editor-uses-one-full-width"
@@ -195491,9 +195491,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x203c },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
+translation = "A B C D E   F G H I J             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195507,9 +195507,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2488 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
+translation = "K L M N O   P Q R S T             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195523,9 +195523,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x24aa },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
+translation = "U V W X Y   Z                     "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195544,9 +195544,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2554 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195560,9 +195560,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x24ee },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "たちつてと　だぢづでど　　　　　　"
-translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
+translation = "a b c d e   f g h i j             "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195576,9 +195576,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2510 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "なにぬねの　　　　　　　　　　　　"
-translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
+translation = "k l m n o                         "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195592,9 +195592,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2532 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
+translation = "p q r s t   u v w x y   z - '     "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195608,9 +195608,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2576 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "まみむめも　っー　　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195624,9 +195624,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2598 },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195640,9 +195640,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x25ba },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "らりるれろ　わをん　　　　　　　　"
-translation = "　　　　　　　　　　　　　　　　　"
+translation = "                                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"
@@ -195657,9 +195657,9 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x25dc },
 ]
 source_mode = 1
-target_mode = 1
+target_mode = 2
 source = "　　　　　　　　　"
-translation = "　　　　　　　　　"
+translation = "                  "
 speaker = "ui"
 attribution = "inferred"
 scene = "mirrored-localized-free-form-term-editor-uses-one-full"

@@ -14,6 +14,8 @@ from fermion.translation import (
 
 RUNTIME_DEFAULT_BANK_PATH = PurePosixPath("FERM/REG_00")
 _RUNTIME_GLOBAL_DATA_OFFSET = 0x1002
+_MODE_1_HEADER = b"\xff\x01"
+_MODE_2_HEADER = b"\xff\x02"
 
 
 @dataclass(frozen=True)
@@ -68,18 +70,26 @@ def seed_runtime_token_defaults(
 
             source = token.source.encode("cp932")
             target = _runtime_token_bytes(token.translation)
-            if len(target) > payload_size:
+            serialized_target = target + b"\0"
+            if len(serialized_target) > payload_size:
                 raise TranslationError(
                     f"{token.id}: translated default exceeds its serialized REG_00 payload"
                 )
+            header = bytes(result[start - 2 : start])
             current = bytes(result[start:stop])
-            if _serialized_runtime_value_matches(current, target):
+            if header == _MODE_2_HEADER and _serialized_runtime_value_matches(current, target):
                 already_english.append(token.id)
                 continue
-            if not (_serialized_runtime_value_matches(current, source) or not current.strip(b"\0")):
+            legacy_target = _legacy_mode_one_bytes(token.translation)
+            migratable_mode_one = header == _MODE_1_HEADER and (
+                _serialized_runtime_value_matches(current, source)
+                or _serialized_runtime_value_matches(current, legacy_target)
+            )
+            if not (migratable_mode_one or not current.strip(b"\0")):
                 preserved_custom.append(token.id)
                 continue
-            result[start:stop] = target.ljust(payload_size, b"\0")
+            result[start - 2 : start] = _MODE_2_HEADER
+            result[start:stop] = serialized_target.ljust(payload_size, b"\0")
             seeded.append(token.id)
 
     return RuntimeDefaultSeed(
@@ -94,3 +104,12 @@ def _serialized_runtime_value_matches(region: bytes, value: bytes) -> bool:
     if not region.startswith(value):
         return False
     return len(region) == len(value) or region[len(value)] == 0
+
+
+def _legacy_mode_one_bytes(value: str) -> bytes:
+    """Encode defaults written by the superseded full-width Latin build."""
+    converted = []
+    punctuation = {" ": "　", "-": "－", "'": "＇"}
+    for character in value:
+        converted.append(punctuation.get(character, chr(ord(character) + 0xFEE0)))
+    return "".join(converted).encode("cp932")

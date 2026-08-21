@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "d056434226df09106d6aea0c3306c5e918a2f5395fe5223479e11567b7171350"
+content_sha256 = "92a6ac3ad37823b5d215b3aa9fd45d627ee4f8a941a5d387722b6da37ae88b58"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -109,7 +109,7 @@ sha256 = "e75e56769ee8910477d4c65e9b5a8b6c04c8416abd999fae9674474d826fe400"
 [[routes.checkpoints]]
 name = "kanzaki-resists"
 frame = 11649
-sha256 = "d2d60e469f1eaf82225c478daacffec4f4692e219b866805b7ee68a5779da193"
+sha256 = "14cf66834582785d507d7da8a5511cdb54c2cf17caa128f804ca096904e424fa"
 
 [[routes.checkpoints]]
 name = "marie-threat"
@@ -159,7 +159,7 @@ sha256 = "09604c4ba7362b095375762678a893dde92a394283b3688f5981d6f89496c1e0"
 [[routes.checkpoints]]
 name = "first-scene-connie"
 frame = 25199
-sha256 = "cb4cc84b762c80529b10831700f7e8aaa0fa5560a26a5a12648237bfb03064d0"
+sha256 = "8c73813b6316b125d365b3957cc8d692fc36959b3b4e6d265ae3e3c689d0b793"
 
 [[routes.checkpoints]]
 name = "first-scene-kanzaki"
@@ -392,7 +392,7 @@ sha256 = "134085ec15e3cb90739ff300727bb04efa8f11b4b4b2e5e730ecb21f1a3774ca"
 [[routes]]
 name = "english-runtime-defaults-proof"
 description = "Verify that a fresh translated image pre-fills all names and adult terms in English."
-content_sha256 = "d056434226df09106d6aea0c3306c5e918a2f5395fe5223479e11567b7171350"
+content_sha256 = "92a6ac3ad37823b5d215b3aa9fd45d627ee4f8a941a5d387722b6da37ae88b58"
 frames = 11400
 taps = [
   "1000:return",
@@ -418,14 +418,14 @@ taps = [
 [[routes.checkpoints]]
 name = "english-name-defaults-top"
 frame = 4799
-sha256 = "924193a90ebb9f79f7fb487ba220c2d57df5eeaff148d5df3e511b184a4e144c"
+sha256 = "53879de750c1eeb4f130dae7a785c8fb3bb20906e96e3d6a58610bbca4ff60ec"
 
 [[routes.checkpoints]]
 name = "english-name-defaults-bottom"
 frame = 5999
-sha256 = "65588d7dfdef66ee5adc6ffe46e7450fef72d7b5f0b45f805177defd21551dca"
+sha256 = "cb39e7ee9efb92f583a30f72d0d1b4531065a19600af6b72538ae83a7722a67f"
 
 [[routes.checkpoints]]
 name = "english-term-defaults"
 frame = 11399
-sha256 = "27cc6a6be299a8cb57d3ba3179bb6839b0643c72a52be5d3888a7100e0b69525"
+sha256 = "839eb4846d8b122d3cbc73f537a40548d4317502f890193c2cd1e0d6b713cf1a"

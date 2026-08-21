@@ -402,7 +402,7 @@ The `name-slot:dear-person` value is also adult Kaori’s original given name. W
 
 The final letter and every replay/gallery surface that displays the younger daughter’s name are part of the same regression surface. A custom name is not validated merely because ordinary dialogue renders correctly.
 
-The localized editor remains free-form rather than offering translator-invented name choices. It replaces only the Japanese grid and coordinate mapping with full-width CP932 Latin letters, hyphen, and apostrophe. The original 14-byte slots and 35-byte save range are unchanged. The editor guard moves from 5 to 6 to expose the slot's six-glyph capacity; an emulator boundary probe confirms that the sixth glyph renders and the seventh is rejected.
+The localized editor remains free-form rather than offering translator-invented name choices. It replaces the Japanese grid and coordinate mapping with half-width ASCII letters, hyphen, and apostrophe. The original 14-byte slots and 35-byte save range are unchanged. The editor writes payload bytes behind an `ff 02` string header and accepts ten characters; an emulator boundary probe confirms that the tenth glyph saves and cold-reloads while the eleventh is rejected.
 
 ### Connie Kanzaki — locked ending-only form
 
@@ -503,25 +503,28 @@ Fixed Japanese surnames also precede editable given-name tokens where English no
 ### Locked name-editor policy
 
 The archival English build preserves the original **free-form name editor**.
-It uses a single Latin palette whose letters, hyphen, and apostrophe map to
-full-width CP932 glyphs. This is not packed one-byte ASCII: each selection still
-writes one 16-bit character cell through the original append path, so the
-existing backspace, terminator, confirmation, storage slots, and save format
-continue to apply. The Japanese four-class selector is bypassed; cancel returns
-directly to the five-role name list.
+It uses a single mode-2 Latin palette whose letters, hyphen, and apostrophe map
+to one-byte ASCII. The Japanese four-class selector is bypassed; cancel returns
+directly to the five-role name list. Append, scan, backspace, and both keyboard
+and mouse action paths address the scratch string bytewise, and the visible
+cursor advances at half-width pitch.
 
-Runtime proof fixes the limits precisely. Lime Juice can relocate a grown
-initializer or editor routine, but relocation does not enlarge the five 14-byte
-destination buffers. The indirect mode-1 renderer displays ordinary ASCII
-bytes as Japanese glyphs, so both defaults and typed input are encoded as
-full-width CP932 Latin at two bytes per character. Allowing for the terminator,
-each name has a six-character maximum. The source-derived reset names—Yuki,
-Ruri, Kanako, Yoko, and Hiroko—all fit that limit. The adult-term buffers are 16
-bytes, allowing seven full-width characters plus the terminator. Both mirrored
-editors use the same generated Latin coordinate table while retaining their
-original destination addresses and file load/save ranges. Catalog loading
-capacity-checks each reset value and derives wrapping width from its encoded
-form rather than trusting a second hand-maintained width field.
+Ghidra fixes the mechanism precisely. `mes_op_4b` at `1000:2529` resolves the
+referenced string, reads its header's second byte, builds a temporary `0x4a`
+text operation, and calls the renderer at `1000:23bb`. Thus `ff 02` plus ASCII
+selects the already shipped half-width path; the bytes after a `0x4b` reference
+do not. The editor and reset initializers can use that representation without
+patching `SIL.EXE`, relocating runtime slots, or changing save ranges.
+
+One native constraint remains: `0x4b` copies the payload in 16-bit pairs until
+an aligned zero word. The five destination slots are 14 bytes, and both name and
+term editors share a 14-byte scratch string. After the two-byte header, ten
+ASCII characters plus the required two-byte terminator fit exactly. Eleven can
+render transiently but its save copy reaches the next slot header, so the
+editor deliberately rejects it. The source-derived defaults—Yuki, Ruri,
+Kanako, Yoko, Hiroko, pussy, and penis—all fit. Both mirrored editors retain
+their destination addresses and file load/save ranges; catalog wrapping width
+is derived from the ASCII representation.
 
 ---
 
@@ -863,11 +866,12 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 
 **Locked decision:** retain the original free-form system using
 `⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. The localized term editor uses
-the same full-width CP932 Latin palette as the name editor, with the original
-16-byte slots and save layout. Its guard moves from 6 to 7 to expose the
-seven-character slot capacity. Default and representative custom values
-must be checked at all 12 story insertions; prose around the tokens must not
-depend on a particular article, number, or spelling.
+the same half-width ASCII palette and 14-byte scratch string as the name editor,
+with the original 16-byte persistent slots and save layout. Its safe free-form
+limit is likewise ten characters because indirect text requires an aligned
+zero-word terminator. Default and representative custom values must be checked
+at all 12 story insertions; prose around the tokens must not depend on a
+particular article, number, or spelling.
 
 ---
 
@@ -1026,7 +1030,7 @@ The following decisions are already locked and should be enforced during review:
 - **cryosleep** for `コールドスリープ`, with **suspended animation** only where `冷凍睡眠` supplies the explanatory gloss;
 - no romanized honorific suffixes;
 - Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
-- free-form full-width Latin name and adult-term editors; and
+- free-form half-width Latin name and adult-term editors; and
 - source-faithful age and school-status wording in the canonical catalog.
 
 Voice-calibration examples belong in anchored canonical catalog entries with source, context, and notes. Do not create a second table of free-floating “final” translations inside this brief.

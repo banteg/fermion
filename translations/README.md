@@ -167,15 +167,20 @@ is preferable to bending the sentence around a trailing “in the image” merel
 to manufacture a finite token-led clause.
 
 `[[tokens]]` records the Japanese default, ASCII authoring default, and any
-reset initializer to patch after decompilation. Runtime
-name and term slots are rendered by GM's mode-1 indirect-text opcode, so the
-builder stores the ASCII defaults as full-width CP932 glyphs while leaving their
-catalog spelling readable. It derives both the fixed byte capacity from the
-adjacent runtime slot addresses and the wrapping width from the encoded shipped
-default. Name slots are 14 bytes and therefore fit at most six such characters
-plus a terminator; Lime Juice can relocate a longer initializer instruction,
-but it does not enlarge the fixed runtime slot. Term slots are 16 bytes and fit
-at most seven characters. Each default is capacity-checked.
+reset initializer to patch after decompilation. Each runtime string begins with
+an `ff` marker and a render-mode byte. Ghidra analysis of `mes_op_4b` at
+`1000:2529` shows that indirect text reads that second header byte, copies the
+payload, and passes the recovered mode to the ordinary `0x4a` renderer at
+`1000:23bb`. The builder therefore stores English defaults as `ff 02`, plain
+ASCII, and zero padding. No executable patch is required.
+
+The five name slots remain 14 bytes and the two term slots remain 16 bytes.
+`0x4b` copies payloads in 16-bit pairs until it sees an aligned zero word, and
+both editors share a 14-byte scratch string. Ten ASCII characters are therefore
+the largest zero-surgery value that leaves the required two-byte terminator
+inside every source and destination buffer. Each default is capacity-checked
+against that common editor limit, and its wrapping width is its half-width ASCII
+length.
 
 Player-visible dialogue speaker tags use Title Case. Fixed labels therefore
 render as `[Connie]`, `[Kanzaki]`, or `[Woman's Voice]`; dynamic labels retain
@@ -183,19 +188,23 @@ their authoring token and render the editable display value, such as
 `[Kanako]`. Bracketed Silky product headings are titles, not speaker tags, and
 retain their own capitalization.
 
-`NAME.MES` and `MONO.MES` retain their original free-form editor storage,
-backspace, confirmation, save/load ranges, and indirect rendering. The builder
-bypasses the Japanese character-class menu and replaces only the visible grid
-and coordinate-to-glyph routine with one generated Latin palette. Every typed
-ASCII letter, hyphen, or apostrophe is stored as one full-width CP932 glyph, so
-no buffer relocation or save migration is involved. The editor guards move
-from 5 to 6 for names and from 6 to 7 for terms so the localized editors expose
-the capacities already present in those fixed slots. An emulator boundary probe
-confirmed that the sixth/seventh glyph renders and the following glyph is
-rejected. A separate `0x4b` probe rendered the same half-width ASCII payload
-through all nine tested operand-tail combinations; every result remained
-mode-1 mojibake. The tail is therefore not a usable mode switch, and the editor
-deliberately emits full-width glyphs.
+`NAME.MES` and `MONO.MES` retain their original free-form editor destinations,
+confirmation flow, and save/load ranges. The builder bypasses the Japanese
+character-class menu and replaces the visible grid and coordinate mapping with
+one mode-2 Latin palette. Append, scan, backspace, and mouse-action paths use
+the engine's byte reference at the scratch buffer's absolute base; cursor motion
+advances by one half-width column. The editor reasserts the `ff 02` header and
+writes payload bytes at indexes 2 through 11, rejecting an eleventh character.
+Legacy mode-1 values remain renderable and untouched in persistent slots; if a
+player chooses to edit one, the temporary buffer starts empty in the supported
+Latin mode, and cancelling still preserves the old value.
+
+This keeps the slot addresses and save format intact. The earlier operand-tail
+probe correctly showed that the two bytes following a `0x4b` reference are not
+a mode switch, but it tested the wrong control point: the operative mode is the
+referenced string header. Emulator probes now cover the mode-2 defaults, a
+ten-character edit, eleventh-character rejection, backspace, save, cold reload,
+and indirect dialogue rendering.
 An initializer's persistent slot must map to the same authoring token. Each
 `[[composites]]` table then stores one merged source/translation pair and one or
 more physical occurrences. Text segments retain their pristine opcode offset,

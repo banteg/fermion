@@ -20,7 +20,7 @@ from fermion.translation import (
     _patch_editor_latin_source,
     _patch_gm_source,
     _patch_token_initializer_source,
-    _runtime_glyph_word,
+    _runtime_glyph_byte,
     _runtime_token_bytes,
     _verify_compiled_file,
     _wrap_text,
@@ -48,12 +48,12 @@ from fermion.translation import (
             14673,
             16675,
             5,
-            6,
+            11,
             1000,
             35,
             (1000, 1014, 1028, 1042, 1056),
         ),
-        ("MONO.MES", 2, 7751, 13535, 15537, 6, 7, 1070, 16, (1070, 1086)),
+        ("MONO.MES", 2, 7751, 13535, 15537, 6, 11, 1070, 16, (1070, 1086)),
     ),
 )
 def test_editor_latin_patch_reuses_free_form_storage_and_control_flow(
@@ -75,12 +75,29 @@ def test_editor_latin_patch_reuses_free_form_storage_and_control_flow(
         f"(assign (ref 12 {destination}) (string-value (ref 14 160)))"
         for destination in destinations
     )
+    byte_storage = """(assign (ref 11 3012) 1)
+(ref 6 1260 1)
+(ref 6 1260 1)
+(ref 6 1260 1)
+(ref 6 1260 1)
+(ref 6 1260 (ref 11 3012))
+(ref 6 1260 (ref 11 3012))
+(ref 6 1260 (ref 11 3012))
+(ref 6 1260 (ref 11 3012))
+(ref 6 1260 (ref 11 3012))
+(!= (ref 11 3012) 1)
+(!= (ref 11 3012) 1)
+(assign (ref 12 1254) (+ (ref 12 1254) 2))
+(assign (ref 12 1254) (+ (ref 12 1254) 2))
+(assign (ref 12 1254) (- (ref 12 1254) 2))
+(assign (ref 12 1254) (- (ref 12 1254) 2))"""
     source = f"""prefix
 (file-load-range 0 (ref 12 {save_base}) {save_length})
 {role_transitions}
 (for-start 9 (local-address 3026) (== (ref 12 1244) 3))
 (assign (ref 12 1244) 2)
 (assign (ref 12 1244) 2)
+{byte_storage}
 (for-start 17 (local-address 3520) (> (ref 11 3012) {source_limit}))
 (next)
 (for-start 18 (local-address 5285) (== (ref 12 1244) 4))
@@ -105,8 +122,16 @@ suffix
     assert f"(> (ref 11 3012) {target_limit})" in patched
     assert f"(label {mapping_label})" in patched
     assert f"(label {special_label})" in patched
-    assert f"(assign (ref 12 1274) {_runtime_glyph_word('A')})" in patched
-    assert f"(assign (ref 12 1274) {_runtime_glyph_word('z')})" in patched
+    assert f"(assign (ref 12 1274) {_runtime_glyph_byte('A')})" in patched
+    assert f"(assign (ref 12 1274) {_runtime_glyph_byte('z')})" in patched
+    assert "(assign (ref 6 1260 0) 767)" in patched
+    assert "(assign (ref 5 5356 2) 0)" in patched
+    assert "(ref 6 1260 1)" not in patched
+    assert "(ref 5 5356 2)" in patched
+    assert "(assign (ref 11 3012) 2)" in patched
+    assert "(!= (ref 11 3012) 2)" in patched
+    assert "(assign (ref 12 1254) (+ (ref 12 1254) 1))" in patched
+    assert "(assign (ref 12 1254) (- (ref 12 1254) 1))" in patched
     assert "(case (local-address" in patched
     assert "(assign (ref 12 1274) 2)" in patched
     assert "(assign (ref 12 1274) 1)" in patched
@@ -115,17 +140,17 @@ suffix
     assert f"(label 60000)\n (next)\n (return)\n (label {special_label})" in patched
 
 
-def test_latin_editor_palette_matches_fullwidth_mapping() -> None:
+def test_latin_editor_palette_matches_halfwidth_mapping() -> None:
     assert len(_LATIN_EDITOR_CELLS) == 54
-    assert _latin_editor_row(176) == "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
-    assert _latin_editor_row(208) == "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
-    assert _latin_editor_row(240) == "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
-    assert _latin_editor_row(272) == "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
-    assert _latin_editor_row(336) == "　　　　　　　　　"
+    assert _latin_editor_row(176)[::2] == "ABCDE FGHIJ      "
+    assert _latin_editor_row(208)[::2] == "UVWXY Z          "
+    assert _latin_editor_row(240)[::2] == "abcde fghij      "
+    assert _latin_editor_row(272)[::2] == "pqrst uvwxy z-'  "
+    assert _latin_editor_row(336)[::2] == " " * 9
+    for y in (176, 208, 240, 272, 336):
+        assert set(_latin_editor_row(y)[1::2]) <= {" "}
     for _x, _y, character in _LATIN_EDITOR_CELLS:
-        assert _runtime_glyph_word(character) == int.from_bytes(
-            _runtime_token_bytes(character), "little"
-        )
+        assert _runtime_glyph_byte(character) == _runtime_token_bytes(character)[0]
 
 
 def test_catalog_editor_palette_matches_generated_rows() -> None:
@@ -167,12 +192,12 @@ def test_catalog_editor_palette_matches_generated_rows() -> None:
         for archive in ("DISKA", "DISKB"):
             for y, offset in zip(rows, offsets, strict=True):
                 entry = physical[(f"{archive}/{filename}", offset)]
-                assert entry.target_mode == 1
+                assert entry.target_mode == 2
                 assert entry.translation == _latin_editor_row(y)
 
 
-def test_runtime_token_bytes_are_fullwidth_cp932() -> None:
-    assert _runtime_token_bytes("Hiroko") == "Ｈｉｒｏｋｏ".encode("cp932")
+def test_runtime_token_bytes_are_halfwidth_ascii() -> None:
+    assert _runtime_token_bytes("Hiroko") == b"Hiroko"
 
 
 def write_token_catalog(
@@ -222,13 +247,13 @@ def test_catalog_derives_token_display_width_from_runtime_encoding(tmp_path) -> 
 
     [token] = TranslationCatalog.from_file(catalog_path).tokens
 
-    assert token.max_width == 8
+    assert token.max_width == 4
 
 
 def test_catalog_rejects_token_default_exceeding_runtime_slot(tmp_path) -> None:
     catalog_path = write_token_catalog(tmp_path, translation="Bartholomew")
 
-    with pytest.raises(TranslationError, match="exceeds the 14-byte runtime slot"):
+    with pytest.raises(TranslationError, match="exceeds the 10-character runtime limit"):
         TranslationCatalog.from_file(catalog_path)
 
 
@@ -950,7 +975,7 @@ segments = [
     assert catalog.composites[0].notes == ""
     physical = catalog.physical_translations(compiled=True)
     assert [(item.anchor.offset, item.translation) for item in physical] == [
-        (2, "Hi\n"),
+        (2, "Hi "),
         (suffix_offset, "!"),
     ]
 
@@ -965,7 +990,7 @@ segments = [
         GMFile.from_bytes(source),
         tuple((item.anchor.offset, item) for item in physical),
     )
-    assert '(gm-text 2 "Hi\\n")' in patched
+    assert '(gm-text 2 "Hi ")' in patched
     assert f"(raw {' '.join(str(byte) for byte in copy_name + render_name)})" in patched
 
 
@@ -1067,7 +1092,7 @@ notes = "Keeps the catalog non-empty."
 
     translated_values = " ".join(str(byte) for byte in _runtime_token_bytes("Kanako"))
     assert source_values not in patched
-    assert patched.count(f"(inline-source 0 255 1 {translated_values})") == 2
+    assert patched.count(f"(inline-source 0 255 2 {translated_values})") == 2
 
 
 def test_schema_five_relocates_shorter_token_initializer(tmp_path) -> None:
@@ -1118,7 +1143,7 @@ status = "draft"
     token_initializers = tuple((token, item) for item in token.initializers)
     original = GMFile.from_bytes(source)
     translated_term = _runtime_token_bytes("cat")
-    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01" + translated_term + b"\x00\x00"
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x02" + translated_term + b"\x00\x00"
     compiled = GMFile.from_bytes(
         struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
     )
@@ -1186,7 +1211,7 @@ status = "draft"
     token_initializers = tuple((token, item) for item in token.initializers)
     original = GMFile.from_bytes(source)
     translated_name = _runtime_token_bytes("Hiroko")
-    translated_initializer = b"\x45\x0e\xe0\x00\xff\x01" + translated_name + b"\x00\x00"
+    translated_initializer = b"\x45\x0e\xe0\x00\xff\x02" + translated_name + b"\x00\x00"
     compiled = GMFile.from_bytes(
         struct.pack("<H", 2) + translated_initializer + assignment + text + b"\x00"
     )
