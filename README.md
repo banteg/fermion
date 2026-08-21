@@ -235,10 +235,8 @@ customized slots are preserved rather than reset. Generated RKT, MES, archive,
 and JSON report files are kept under ignored `working/translation-build/`.
 
 The current catalog contains 12,902 canonical entries covering 17,680 physical
-anchors in 76 MES files. Exact per-file sizes and hashes are recorded in the
-generated build report. Generated filenames and output hashes are intentionally
-not release interfaces; rebuild from the hash-pinned pristine input before
-testing.
+anchors in 76 MES files. Generated filenames and hashes are not release
+interfaces; rebuild from the hash-pinned pristine input before testing.
 
 The underlying HDI support is also available directly:
 
@@ -428,23 +426,14 @@ hash-pinned `REG` banks remain unchanged; libretro states remain the precise,
 core-specific accelerator within one such route. Native loads resume at a
 scenario entry rather than an arbitrary dialogue instruction.
 
-Named routes may declare a `cache_frame`. On a successful cache miss the command
-performs the full route and commits both the libretro state and its matching
-writable HDI snapshot under ignored `working/emulator/state-cache/`; a failed
-route discards the staged prefix. On a hit it restores that exact pair and
-executes only the suffix. NP2kai's rewritten runtime mount path is excluded from
-the otherwise content-sensitive system fingerprint. The current full route
-resumes at frame 26,100, reducing the measured run on this Mac from about 49
-seconds to 11.7 seconds while preserving the original ×20 CPU profile and final
-framebuffer hash. The source HDI is always copied before NP2kai mounts it, so
-emulator writes cannot invalidate the hash-pinned build artifact.
-
-The cache is deliberately invalidated by any HDI, core, firmware/config,
-effective-option, or prefix-input change. It accelerates repeated checks of one
-build without claiming that an opaque emulator state is portable across changed
-game data. Later scene-by-scene iteration should use checked-in sparse
-game-native save fixtures and short boot/load routes; keep the full route as the
-release check.
+Named routes may declare a `cache_frame`: on a miss the command runs the full
+route and stores the libretro state plus matching writable HDI snapshot under
+ignored `working/emulator/state-cache/`; on a hit it restores that pair and
+executes only the suffix. The cache is invalidated by any HDI, core,
+firmware/config, effective-option, or prefix-input change, and the source HDI
+is always copied before NP2kai mounts it. Use checked-in game-native save
+fixtures and short routes for scene-by-scene iteration; keep the full route
+with `--no-cache` as the release check.
 
 Force the full end-to-end path for release validation with:
 
@@ -456,11 +445,9 @@ uv run fermion emulator route \
   --no-cache
 ```
 
-Changing `np2kai_clk_mult` is a separate machine profile, not a transparent
-speed control. A ×4 experiment completed the same nominal 34,200 frames in
-15.2 seconds, but every existing input landing and checkpoint hash changed.
-Keep ×20 for canonical tests; use lower clocks only in separately recorded
-routes with their own schedules and hashes.
+Changing `np2kai_clk_mult` changes input timing and checkpoint hashes, not just
+speed: keep ×20 for canonical tests and record lower clocks as separate routes
+with their own schedules and hashes.
 
 The built-in core options match the Fermion configuration. Use `--options` to
 load a RetroArch `.opt` file or repeat `--option KEY=VALUE` for overrides.
