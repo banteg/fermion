@@ -191,7 +191,7 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Twenty-one focused story scopes are now closed, covering every decoded text
+Twenty-two focused story scopes are now closed, covering every decoded text
 record in `FOP.MES` and `F0000.MES` through the `F0042.MES` ending. The final
 surface scope also closes scene replay, both mirrored name and term editors,
 and the period Silky's catalog.
