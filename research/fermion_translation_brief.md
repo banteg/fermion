@@ -562,6 +562,12 @@ Japanese character relationships are carried heavily by register:
 
 An English patch should reproduce these shifts through syntax and word choice rather than preserving every honorific.
 
+On-screen dialogue speaker tags use Title Case for both fixed and editable
+names: `[Connie]` and the dynamic default `[Kanako]` belong to the same visual
+system. Do not uppercase editable presets merely to repair a tag, because those
+same values appear inside ordinary prose. Bracketed game and product titles are
+not speaker tags and retain their established title capitalization.
+
 ### Naturalization and source-origin English
 
 Naturalize fluent Japanese speech into fluent character English. A katakana loanword is part of the Japanese sentence and should be translated by meaning and register: `コールドスリープ` becomes **cryosleep**, while **kotatsu** may remain because it names a culturally specific object already established in English. Do not preserve an awkward English calque merely because the Japanese happens to be written in katakana.

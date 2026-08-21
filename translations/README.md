@@ -151,6 +151,12 @@ plus a terminator; Lime Juice can relocate a longer initializer instruction,
 but it does not enlarge the fixed runtime slot. Term slots are 16 bytes and fit
 at most seven characters. Each default is capacity-checked.
 
+Player-visible dialogue speaker tags use Title Case. Fixed labels therefore
+render as `[Connie]`, `[Kanzaki]`, or `[Woman's Voice]`; dynamic labels retain
+their authoring token and render the editable display value, such as
+`[Kanako]`. Bracketed Silky product headings are titles, not speaker tags, and
+retain their own capitalization.
+
 `NAME.MES` and `MONO.MES` retain their original free-form editor storage,
 backspace, confirmation, save/load ranges, and indirect rendering. The builder
 bypasses the Japanese character-class menu and replaces only the visible grid

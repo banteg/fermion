@@ -17,9 +17,9 @@ def test_locked_translation_policy_contracts() -> None:
         ("DISKA/F0001.MES", 0x0799): (
             "For this mission, I've also been granted Time Patrol authority."
         ),
-        ("DISKA/F0001.MES", 0x221B): "[CONNIE] (Time Quake system: nominal.)",
+        ("DISKA/F0001.MES", 0x221B): "[Connie] (Time Quake system: nominal.)",
         ("DISKA/F0003.MES", 0x1E44): (
-            "[CONNIE] (A still-developing organism. Human. Child. Female... "
+            "[Connie] (A still-developing organism. Human. Child. Female... "
             "About sixteen years old.)"
         ),
         ("DISKB/F0006.MES", 0x0B51): (
@@ -30,11 +30,11 @@ def test_locked_translation_policy_contracts() -> None:
             "Looking at her like this, she really does look younger than her age..."
         ),
         ("DISKB/F0010L.MES", 0x2031): (
-            '[CONNIE] "In human terms, about seventeen. But I\'m a mutant, '
+            '[Connie] "In human terms, about seventeen. But I\'m a mutant, '
             'so I\'ve only been alive for three years."'
         ),
         ("DISKC/F0030.MES", 0x141F): (
-            "[CONNIE] (Anesthetic... a tranquilizer gun...?)"
+            "[Connie] (Anesthetic... a tranquilizer gun...?)"
         ),
         ("DISKC/F0030.MES", 0x1438): (
             "I used a capture gun to hunt mutants. This is the same smell."
@@ -42,21 +42,21 @@ def test_locked_translation_policy_contracts() -> None:
         ("DISKD/F0039.MES", 0x16CB): (
             "Knowing it's a tranquilizer gun, I tense every muscle to leap at her."
         ),
-        ("DISKD/F0039.MES", 0x2499): "[CONNIE] (Cryo... sleep...!!!)",
+        ("DISKD/F0039.MES", 0x2499): "[Connie] (Cryo... sleep...!!!)",
         ("DISKD/F0040.MES", 0x403F): (
-            '[DOCTOR] "⟦name:dear-person⟧, you\'ve been in '
+            '[Doctor] "⟦name:dear-person⟧, you\'ve been in '
             'cryosleep--suspended animation--since 1996..."'
         ),
         ("DISKD/F0040.MES", 0x4093): (
-            '[DOCTOR] "You were set to awaken in an era whose technology '
+            '[Doctor] "You were set to awaken in an era whose technology '
             'could perform your operation."'
         ),
         ("DISKD/F0040.MES", 0x40C8): (
-            '[DOCTOR] "That year is now--2288... You\'re in a world... '
+            '[Doctor] "That year is now--2288... You\'re in a world... '
             'about 280 years after you fell asleep."'
         ),
         ("DISKD/F0041.MES", 0x0F95): (
-            '[KANZAKI] "Why hesitate? You also bear the duties of a temporal inspector. '
+            '[Kanzaki] "Why hesitate? You also bear the duties of a temporal inspector. '
             'Arrest those who used time travel unlawfully."'
         ),
         ("DISKD/F0042.MES", 0x1BF7): (
@@ -66,6 +66,47 @@ def test_locked_translation_policy_contracts() -> None:
     }
     for anchor, expected in exact_anchors.items():
         assert by_anchor[anchor].translation == expected, anchor
+
+    fixed_speaker_tags = set()
+    dynamic_speaker_tags = set()
+    for item in items:
+        source_tag = re.match(r"^【([^】]+)】[「（]", item.source)
+        if source_tag is None:
+            continue
+        translated_tag = re.match(r"^\[([^]\n]+)\]", item.translation)
+        assert translated_tag is not None, item.id
+        tag = translated_tag.group(1)
+        if tag.startswith("⟦name:"):
+            dynamic_speaker_tags.add(tag)
+        else:
+            fixed_speaker_tags.add(tag)
+
+    assert fixed_speaker_tags == {
+        "Butterfly",
+        "Connie",
+        "Doctor",
+        "Girl",
+        "Kanzaki",
+        "Marie",
+        "Marna",
+        "Miki",
+        "Nanase",
+        "Nurse",
+        "Operator",
+        "Remia",
+        "Teacher",
+        "Ventilation System",
+        "Woman",
+        "Woman's Voice",
+        "Yoshimi",
+    }
+    assert dynamic_speaker_tags == {
+        "⟦name:dear-person⟧",
+        "⟦name:friend-1⟧",
+        "⟦name:friend-2⟧",
+        "⟦name:mother⟧",
+        "⟦name:older-sister⟧",
+    }
 
     assert "⟦name:friend-2⟧ Nanase" in by_anchor[
         ("DISKB/F0019.MES", 0x067B)
