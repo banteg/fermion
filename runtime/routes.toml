@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "3a473f24ca59447e9aa33c839ab3246bdc03a3a28a3599ee74d6ab96a8392dd1"
+content_sha256 = "d056434226df09106d6aea0c3306c5e918a2f5395fe5223479e11567b7171350"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -159,17 +159,17 @@ sha256 = "09604c4ba7362b095375762678a893dde92a394283b3688f5981d6f89496c1e0"
 [[routes.checkpoints]]
 name = "first-scene-connie"
 frame = 25199
-sha256 = "51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0"
+sha256 = "cb4cc84b762c80529b10831700f7e8aaa0fa5560a26a5a12648237bfb03064d0"
 
 [[routes.checkpoints]]
 name = "first-scene-kanzaki"
 frame = 25649
-sha256 = "217d9e55ef2f863cffe9d83326acf5df8ab8ecb6571341c0e9031b45ab1bfcd1"
+sha256 = "976f7e1b33dd27ba811e5fe1ce99e48741aaf961f946205b4140e7ddc4395169"
 
 [[routes.checkpoints]]
 name = "first-scene-response"
 frame = 26099
-sha256 = "f9f447ca09c1e57cd74382cada87ad6aea9e27045718ee3566ca9e90ae0a4c71"
+sha256 = "dd04f4200aeeaf56b61dcb94b369b1a1d86a7ced3c0ebbdd21732e23cb06640f"
 
 [[routes.checkpoints]]
 name = "first-scene-menu"
@@ -179,7 +179,7 @@ sha256 = "1a33b4520663c94af8ac41b438746d40fc0ed06065462ccffcf53cf83dfe5a0c"
 [[routes]]
 name = "first-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0000.MES."
-content_sha256 = "070c25c9e0b2e834b28c5f392b7582efae02321c9bdf5052202b8e65c5293d5f"
+content_sha256 = "dca73e378c55b294d1eb2e6e40957ce7e80848ba62086484f7e428d4a7ea44dc"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -203,14 +203,14 @@ sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
 [[routes.checkpoints]]
 name = "loaded-first-scene"
 frame = 10499
-sha256 = "51c0ad3454562352f09ba96293cd422bdc1e36ba9f156e85a75e7fec113ea3e0"
+sha256 = "cb4cc84b762c80529b10831700f7e8aaa0fa5560a26a5a12648237bfb03064d0"
 scenario = "f0000.mes"
 state_offset = 0x1c7e0
 
 [[routes]]
 name = "opening-dialogue-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of FOP.MES."
-content_sha256 = "3543253bc4d0e41df338d1ad6875829c6dc2b4b6f3d54a4cd8d074ba24522abb"
+content_sha256 = "e10fe52bda512619da1b1166e0ad1108a52c67e745150f584f349c956f1bd439"
 frames = 10500
 cache_frame = 8299
 taps = [
@@ -234,14 +234,14 @@ sha256 = "76eeaaf058a3ae0550dbb8fe558d1aec94b564a06f94032edd997edd5848a98b"
 [[routes.checkpoints]]
 name = "loaded-opening-dialogue"
 frame = 10499
-sha256 = "980c7d275c55077af9c5c66729e9b4f74dfb0f7547217f9ebeff20c4f2976e4c"
+sha256 = "899f02d2db4af134a7938965941de176c63b9afded634ae9ff383ccb5c276ecd"
 scenario = "fop.mes"
 state_offset = 0x1c7e0
 
 [[routes]]
 name = "second-scene-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of F0001.MES."
-content_sha256 = "78d1c665cc3018220ae3dad39a3e47b729474dc3097b9a1a978380bd6e236944"
+content_sha256 = "41caf0a294f20e9fdd2d8b462beeda6ffbf0fc3f9161a46eb6dee2d421514317"
 frames = 15300
 cache_frame = 8299
 taps = [
@@ -311,7 +311,7 @@ sha256 = "4b0f802e16414007e27535d66338ccb9a4d9e12352d9a21b066c720b1cd0d58a"
 [[routes.checkpoints]]
 name = "second-scene-no-other-travelers"
 frame = 14599
-sha256 = "99a812f1916d4cae6d9f626d212d24bb1b117193699bbff2d9cefcf70e22c72b"
+sha256 = "a1f3ce3b2856b6013e57256746893cba55e14220b42adda5e4985c30f03894a1"
 
 [[routes.checkpoints]]
 name = "second-scene-kanzaki-created-connie"
@@ -321,7 +321,7 @@ sha256 = "07d943658a87caf19a5b6897baa7073c3abdb12c9bbc433cba414274c5ed8e9b"
 [[routes]]
 name = "second-scene-three-row-proof"
 description = "Reach a translated F0001 record that visibly occupies all three dialogue rows."
-content_sha256 = "0ffb0b591b04b62acf8869336a27619dae2ad81adcd94ace93278cf0664841ad"
+content_sha256 = "41caf0a294f20e9fdd2d8b462beeda6ffbf0fc3f9161a46eb6dee2d421514317"
 frames = 38500
 cache_frame = 24999
 taps = [
@@ -388,3 +388,44 @@ taps = [
 name = "second-scene-three-dialogue-rows"
 frame = 38199
 sha256 = "134085ec15e3cb90739ff300727bb04efa8f11b4b4b2e5e730ecb21f1a3774ca"
+
+[[routes]]
+name = "english-runtime-defaults-proof"
+description = "Verify that a fresh translated image pre-fills all names and adult terms in English."
+content_sha256 = "d056434226df09106d6aea0c3306c5e918a2f5395fe5223479e11567b7171350"
+frames = 11400
+taps = [
+  "1000:return",
+  "1300:return",
+  "1750:return",
+  "2200:return",
+  "3100:down:8",
+  "3300:down:8",
+  "3500:return:8",
+  "4900:down:8",
+  "5100:down:8",
+  "5300:down:8",
+  "5500:down:8",
+  "6100:escape:8",
+  "7100:right:8",
+  "7300:return:8",
+  "8300:return:8",
+  "9500:down:8",
+  "9700:down:8",
+  "9900:return:8",
+]
+
+[[routes.checkpoints]]
+name = "english-name-defaults-top"
+frame = 4799
+sha256 = "924193a90ebb9f79f7fb487ba220c2d57df5eeaff148d5df3e511b184a4e144c"
+
+[[routes.checkpoints]]
+name = "english-name-defaults-bottom"
+frame = 5999
+sha256 = "65588d7dfdef66ee5adc6ffe46e7450fef72d7b5f0b45f805177defd21551dca"
+
+[[routes.checkpoints]]
+name = "english-term-defaults"
+frame = 11399
+sha256 = "27cc6a6be299a8cb57d3ba3179bb6839b0643c72a52be5d3888a7100e0b69525"

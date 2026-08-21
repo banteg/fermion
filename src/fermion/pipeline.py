@@ -9,6 +9,7 @@ from pathlib import Path, PurePosixPath
 
 from fermion.archive import ArchiveError, InstallerArchive
 from fermion.hdi import HDIError, HDIImage
+from fermion.runtime_defaults import RUNTIME_DEFAULT_BANK_PATH, seed_runtime_token_defaults
 from fermion.translation import (
     BuiltTranslationFile,
     TranslationCatalog,
@@ -65,7 +66,7 @@ def build_translation_image(
         by_archive.setdefault(built.catalog_file.archive, []).append(built)
 
     image = HDIImage.from_file(image_path)
-    archive_replacements: dict[PurePosixPath, bytes] = {}
+    image_replacements: dict[PurePosixPath, bytes] = {}
     archives = []
     for archive_name, members in sorted(by_archive.items()):
         hdi_path = archive_directory / archive_name
@@ -92,7 +93,7 @@ def build_translation_image(
         archive_output = work_directory / "archives" / archive_name
         archive_output.parent.mkdir(parents=True, exist_ok=True)
         archive_output.write_bytes(rebuilt)
-        archive_replacements[hdi_path] = rebuilt
+        image_replacements[hdi_path] = rebuilt
         archives.append(
             BuiltArchive(
                 archive_name,
@@ -104,9 +105,15 @@ def build_translation_image(
             )
         )
 
-    if not archive_replacements:
+    if not image_replacements:
         raise TranslationError("catalog contains no translated files to build")
-    result_image = image.replace_files(archive_replacements)
+
+    default_source = image.read_file(RUNTIME_DEFAULT_BANK_PATH)
+    default_seed = seed_runtime_token_defaults(catalog, default_source)
+    if default_seed.data != default_source:
+        image_replacements[RUNTIME_DEFAULT_BANK_PATH] = default_seed.data
+
+    result_image = image.replace_files(image_replacements)
     for archive in archives:
         if result_image.read_file(archive.image_path) != archive.output_path.read_bytes():
             raise HDIError(f"rebuilt archive verification failed for {archive.image_path}")
@@ -143,6 +150,14 @@ def build_translation_image(
                     }
                     for archive in archives
                 ],
+                "runtime_defaults": {
+                    "image_path": str(RUNTIME_DEFAULT_BANK_PATH),
+                    "source_sha256": hashlib.sha256(default_source).hexdigest(),
+                    "output_sha256": hashlib.sha256(default_seed.data).hexdigest(),
+                    "seeded": list(default_seed.seeded),
+                    "already_english": list(default_seed.already_english),
+                    "preserved_custom": list(default_seed.preserved_custom),
+                },
             },
             ensure_ascii=False,
             indent=2,

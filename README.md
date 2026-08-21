@@ -305,6 +305,16 @@ uv run fermion emulator route \
 Checkpoint PNGs are written under ignored
 `working/emulator/checkpoints/opening-translation-proof/`.
 
+Verify that a fresh translated image opens both editors with the catalog's
+English names and adult terms already populated:
+
+```sh
+uv run fermion emulator route \
+  runtime/routes.toml \
+  english-runtime-defaults-proof \
+  working/emulator/fermion-translation.hdi
+```
+
 ### Portable save fixtures
 
 Ghidra analysis of the native save/load handlers established that `REG_00` is
