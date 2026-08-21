@@ -147,7 +147,7 @@ def test_locked_translation_policy_contracts() -> None:
         assert "suspended animation" in item.translation.lower(), item.id
 
     for item in items:
-        if "時空震動" in item.source and item.speaker in {"Connie", "コニー"}:
+        if "時空震動" in item.source and item.speaker == "connie":
             assert "space-time oscillation" not in item.translation.lower(), item.id
 
     locked_terms = {

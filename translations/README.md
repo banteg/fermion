@@ -4,25 +4,22 @@
 and the reasoning behind it. It intentionally contains text and metadata, not
 compiled MES files or original game media.
 
-The English version carries this content note:
-
-> This archival English translation preserves the ages and school status stated
-> in the original Japanese work. The game contains sexual depictions of
-> high-school-age characters, along with coercive and otherwise sensitive
-> material described in the translation brief.
-
-Any distribution-specific age alteration must be a disclosed, mechanically
-separate override. It is not part of this canonical translation catalog.
+The English version carries the locked content note from
+[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md)
+section 11 verbatim. Any distribution-specific age alteration must be a
+disclosed, mechanically separate override; it is not part of this canonical
+catalog.
 
 Each `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
 default `box_width`, visible `box_rows`, and `wrap_mode`. Schema 5 retains
-schema-4 simple records; each `[[entries]]` table records:
+schema-4 simple records, and schema 6 separates speaker identity from its
+evidence; each `[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
 - the exact original Japanese and current English translation;
-- an explicit stable `speaker` and short scene `context`;
+- a canonical lowercase `speaker`, its `attribution`, and short scene `context`;
 - the target encoding mode and optional per-entry surface-layout overrides;
 - a progress `status` and optional free-form translator `notes`.
 
@@ -81,6 +78,7 @@ source_mode = 1
 source = "同じ文"
 translation = "The same line"
 speaker = "narrator"
+attribution = "inferred"
 context = "The same narration in two equivalent control-flow branches."
 status = "draft"
 notes = "Keep the wording synchronized across both anchors."
@@ -91,8 +89,15 @@ every physical copy. Identical Japanese may still use separate entries when the
 surrounding scene genuinely requires different English; that contextual split
 is explicit and visible to the coverage report.
 
-Catalog schemas 4 and 5 make speaker and context mandatory. Source verification
-checks speaker identities that GM encodes directly:
+Canonical schema 6 makes speaker identity, attribution evidence, and context
+separate required fields. `speaker` is a stable lowercase ID such as `connie`,
+`kanzaki`, `catalog-copy`, or `name-slot:mother`. `attribution` is `proven` only
+when that record's source contains a recognized literal or dynamic speaker
+label; scene-based assignments use `inferred`. Source verification checks every
+`proven` identity against the original label. Schemas 4 and 5 remain readable
+for older fixtures but do not carry this distinction.
+
+GM can encode speaker identities directly:
 
 - a literal `【name】` prefix uses that exact name;
 - a dynamic bracket/name/bracket sequence uses one of the stable
@@ -107,7 +112,7 @@ are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribut
 
 ## Composite interpolation contract
 
-Schema 5 represents rendered messages as ordered physical text segments
+Schema 6 retains schema 5's representation of rendered messages as ordered physical text segments
 separated by immutable interpolation segments. A physical record containing
 only `】...` is therefore no longer presented as a complete display line. The
 checked-in TOML remains canonical; a merged translator table or database is
@@ -192,6 +197,7 @@ target_mode = 2
 source = "【⟦name:dear-person⟧】「こんにちは。」"
 translation = "[⟦name:dear-person⟧] \"Hello.\""
 speaker = "name-slot:dear-person"
+attribution = "proven"
 context = "Example only."
 status = "draft"
 notes = "The catalog holds the merged display line."
@@ -227,12 +233,13 @@ Before a register pass, generate the deterministic drift report:
 uv run fermion translation drift translations/fermion.toml --only-flagged
 ```
 
-The report groups canonical prose once per file and speaker, ignores records
+The report groups canonical prose once per file and canonical speaker, ignores records
 without English words, and measures contractions, stiff forms, sentence length,
 and repeated two-word openings. Flags compare a group with that exact speaker's
 other files when at least three qualifying groups exist, otherwise with the
-whole corpus. Catalog speaker evidence is not silently normalized, so contextual
-`Connie` and bytecode-proven `コニー` remain distinct rows. Treat every flag as a
+whole corpus. A single `connie` baseline now includes both contextual and
+bytecode-proven lines; the separate `attribution` field preserves that evidence
+without fragmenting character-level diagnostics. Treat every flag as a
 line-review lead, never as a target rate.
 
 The current statuses are:
@@ -513,6 +520,11 @@ localized editor branch and full-width Latin runtime values have been exercised
 in the emulator; story, final-letter, and unlocked replay contexts still need a
 human playtest with representative custom values.
 
+Fresh translated images seed the source-derived English names and adult terms
+into the persistent `REG_00` template bank. The build only migrates slots that
+still contain their Japanese source defaults (or are blank), so rebuilding from
+an image with player-customized values does not overwrite those choices.
+
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,
 and 26 already-final FERMION/DOS glyphs or terminal-layout records are
@@ -578,8 +590,8 @@ uv run fermion translation table translations/fermion.toml \
   > working/translation-table.tsv
 ```
 
-The TSV columns are `id`, `file`, `offset`, `speaker`, `jp`, `en`, `context`,
-and `status`. It expands canonical multi-anchor entries to one physical row but
+The TSV columns are `id`, `file`, `offset`, `speaker`, `attribution`, `jp`,
+`en`, `context`, and `status`. It expands canonical multi-anchor entries to one physical row but
 does not duplicate their English or notes in the source catalog. Use
 `--format jsonl` when a structured stream is more convenient.
 

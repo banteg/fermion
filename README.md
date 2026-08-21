@@ -121,8 +121,9 @@ The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
 translation, speaker, scene context, encoding modes, status, wrapping width,
-visible row capacity, wrap mode, and free-form translator notes. Schema 5 also keeps named runtime tokens and
-composite display lines in the same catalog: translators see a whole line such
+visible row capacity, wrap mode, and free-form translator notes. Schema 6 uses
+canonical speaker IDs plus explicit `proven` or `inferred` attribution and also
+keeps schema 5's named runtime tokens and composite display lines in the same catalog: translators see a whole line such
 as `⟦name:dear-person⟧`, while the build maps each literal fragment back to its
 original text record and preserves the intervening bytecode.
 Generated MES files, disk images, and screenshots remain under ignored
@@ -156,8 +157,8 @@ uv run fermion translation table translations/fermion.toml \
   > working/translation-table.tsv
 ```
 
-The columns are `id`, `file`, `offset`, `speaker`, `jp`, `en`, `context`, and
-`status`. Embedded newlines are escaped so the TSV remains one row per anchor;
+The columns are `id`, `file`, `offset`, `speaker`, `attribution`, `jp`, `en`,
+`context`, and `status`. Embedded newlines are escaped so the TSV remains one row per anchor;
 `--format jsonl` is available for programmatic use.
 
 Run the corpus drift report before a register pass:
@@ -226,8 +227,10 @@ uv run fermion translation build \
 The command verifies the pristine hashes and source anchors, decompiles and
 compiles GM through lime-juice, audits the rebuilt control flow, repacks the
 changed-length disk archives, resizes their FAT12 cluster chains if necessary,
-and verifies every layer in the output image. Generated RKT, MES, archive, and
-JSON report files are kept under ignored `working/translation-build/`.
+and verifies every layer in the output image. It also seeds untouched name and
+adult-term defaults in `FERM/REG_00` from the catalog's English token values;
+customized slots are preserved rather than reset. Generated RKT, MES, archive,
+and JSON report files are kept under ignored `working/translation-build/`.
 
 The current catalog contains 13,003 canonical entries covering 17,680 physical
 anchors in 76 MES files. Exact per-file sizes and hashes are recorded in the

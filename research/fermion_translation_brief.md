@@ -3,7 +3,7 @@
 - **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
 - **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, QA guide, and localization-risk register for the English fan translation
 - **Spoilers:** complete, including the central identity reveal and ending
-**Content note:** this document describes the game’s sexual material only at a high level. The source includes sexualized high-school-age characters, ambiguous/coercive consent framing, family/incest-adjacent material, adultery, abduction, reproductive coercion, and medical abuse. The canonical English translation preserves the stated ages and school status. Any distribution-specific age alteration must be disclosed and mechanically separate from the archival catalog. Section 11 records the release policy.
+**Content note:** this document describes the game’s sexual material only at a high level. Section 11 records the full issue list and the locked release policy.
 
 ---
 
@@ -59,7 +59,7 @@ A chronically ill high-school-age girl finds her. The girl smells faintly of mil
 
 During a bath, Connie transforms into human form and reveals that she is a mutant from 2296, a police-like hunter searching for genes. The girl accepts the impossible unusually quickly and enthusiastically agrees to help. Connie begins thinking of her as a younger sister. The time machine has materialized in the garden of the **Takano household**, where the girl lives with her mother, father, and older sister.
 
-The girl’s name is not present as ordinary text in the extraction because it is one of five player-renamable variables. The recovered bytecode maps her stable `name-slot:dear-person` role to default **Kanako (加奈子)**. Translation records should use the stable role rather than hardcoding the editable default.
+The girl’s name is one of five player-renamable variables (slot mechanics in section 6); her stable `name-slot:dear-person` role resets to **Kanako (加奈子)**, and translation records use the stable role rather than the editable default.
 
 **Source anchors:** F0002–F0005.
 
@@ -73,7 +73,7 @@ The time distortion is expected to last about ten days. Connie has a second miss
 
 The game’s branching adult structure occupies much of this middle act. Connie forms intimate relationships with members of the Takano household and with women introduced through them, including a senior named **Nanase**, a student named **Minazuki Yoshimi**, and two player-renamable friends. These encounters are used as the in-story mechanism for gathering cell samples. Some routes have L/R variants, alternate participants, or follow-up scenes. They are route branches, not separate timelines with distinct endings; the main plot continues after enough material has been collected.
 
-For an English project, these scenes cannot be treated as neutral filler. Several involve a character the script explicitly places at roughly sixteen/high-school age, and many use a genre convention in which spoken refusal is contradicted by narration. That convention reads as coercion or assault in contemporary English. See the editorial section below.
+Several of these scenes involve a character the script explicitly places at roughly sixteen/high-school age, and many contradict spoken refusal in narration; sections 8 and 11 lock the editorial treatment.
 
 ### 3.5 First return to 2296
 
@@ -303,7 +303,7 @@ Do not make her apparent-villain dialogue too melodramatic. It should sound deli
 - **Age/status:** described as around sixteen and in high school; physically frail but curious, affectionate, and eager to be useful.
 - **Voice:** bright, colloquial, somewhat childish in affect but not a small child; frequent elongated vowels and excited questions; fear of loneliness undercuts the cheerfulness.
 
-Because the name is player-configurable, source-facing documentation may call her **the younger daughter** or **young Kaori** when identity matters more than the default. Catalog records use the stable `name-slot:dear-person` role; the recovered slot mapping confirms **Kanako** as its reset value.
+Because the name is player-configurable, source-facing documentation may call her **the younger daughter** or **young Kaori** when identity matters more than the default; slot mechanics are in section 6.
 
 ### Takano mother — default Yuki / 由貴
 
@@ -436,7 +436,7 @@ The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. The non-CP932 delim
 
 ### Locked merged-to-physical representation
 
-`translations/fermion.toml` remains the sole canonical source. Catalog schema 5 stores composite entries with one canonical translation and one or more physical occurrences. Each occurrence is an ordered segment list:
+`translations/fermion.toml` remains the sole canonical source. Catalog schema 6 retains schema 5's composite entries, with one canonical translation and one or more physical occurrences, and separates canonical speaker identity from attribution evidence. Each occurrence is an ordered segment list:
 
 1. a **text segment** stores its pristine MES file, text-opcode offset, mode, and exact Japanese;
 2. a **token segment** stores its stable token ID and the exact immutable copy/render instruction span; and
@@ -452,7 +452,15 @@ The import/build rule is deterministic:
 4. leave every token’s original copy/render bytecode untouched; and
 5. reject missing, reordered, duplicated, unknown, or leaked tokens before invoking lime-juice.
 
-Only records separated by a recognized immutable token may be merged for display. Adjacent narration records remain distinct. This preserves the one-to-one physical text map, source anchors, opcode count, and timing while still letting a translator draft a natural sentence around a variable. Exact duplicate occurrences may share one canonical entry only when speaker, meaning, and context agree; contextual variants remain separate entries.
+Only records separated by a recognized immutable token may be merged for display. Adjacent narration records remain distinct. This preserves the one-to-one physical text map, source anchors, opcode count, and timing while still letting a translator draft a natural sentence around a variable. Exact duplicate occurrences may share one canonical entry only when speaker, attribution evidence, meaning, and context agree; contextual variants remain separate entries.
+
+`speaker` is a canonical lowercase identity such as `connie`, `kanzaki`, or
+`name-slot:mother`; it does not change spelling according to evidence type.
+`attribution = "proven"` means the record itself contains a recognized literal
+or dynamic speaker label and is checked against the pristine source.
+Scene-derived assignments use `attribution = "inferred"`. The Silky product
+catalog is `catalog-copy`, not whichever bracketed product title GM's mechanical
+label scanner most recently saw.
 
 TSV, JSONL, SQLite, or another ergonomic database may be generated from this catalog and imported back with hash, anchor, and token checks. None is a second source of truth.
 
@@ -473,7 +481,7 @@ Use a grammatical token-led clause such as `NAME gets ...` or `NAME's ... is
 not insert new text opcodes merely to move a token unless that renderer change
 is separately designed, compatibility-tested, and logged per affected anchor.
 
-Fixed Japanese surnames also precede editable given-name tokens where English normally reverses them. Treat forms such as `鷹野 + ⟦name:dear-person⟧`, `七瀬 + ⟦name:friend-2⟧`, and `速水 + ⟦name:friend-1⟧` as explicit schema-5 grammar and design tests. Preserve the existing runtime tokens; before claiming natural English order, prove a reversible segment mapping or an intentionally scoped renderer patch. Do not invent parallel preassembled variables or accept Japanese order silently.
+Fixed Japanese surnames also precede editable given-name tokens where English normally reverses them. Treat forms such as `鷹野 + ⟦name:dear-person⟧`, `七瀬 + ⟦name:friend-2⟧`, and `速水 + ⟦name:friend-1⟧` as explicit composite grammar and design tests. Preserve the existing runtime tokens; before claiming natural English order, prove a reversible segment mapping or an intentionally scoped renderer patch. Do not invent parallel preassembled variables or accept Japanese order silently.
 
 ### Locked name-editor policy
 
@@ -654,8 +662,6 @@ Use a three-level register for Connie:
 1. **Procedural commands:** concise and confident.
 2. **General explanation:** accessible and slightly textbook-like.
 3. **Underlying theory:** hesitant, memorized, or openly incomplete.
-
-Within all three levels, Connie calls `時空震動` the **Time Quake** and `時空震動数` the **Time Quake frequency**. Scientists may use **space-time oscillation** in formal explanation. Keep `マシン震動` as ordinary machine or hull vibration so the F0015 hardware failure remains distinct.
 
 Kanzaki and Marie may use more exact scientific language, but the translation must not repair the source’s fictional physics by adding unsupported explanations.
 
@@ -841,10 +847,7 @@ Repair only a demonstrable text-level error whose intended reading is independen
 3. **`確率された時代`**
    - In the doctor’s explanation, `確率` is almost certainly a typo for `確立`: the era in which the technology was **established/developed**.
 
-4. **`プロシオン` / `プレシオン` spelling drift**
-   - Keep in the QA database even after choosing a house spelling.
-
-5. **Repeated lines and paragraphs**
+4. **Repeated lines and paragraphs**
    - Some are authoring duplicates; others are branching copies. The generated control-flow graph proves reachability; canonical sharing still requires speaker and context review.
 
 ### Restoration log — locked entries
@@ -861,7 +864,6 @@ Repair only a demonstrable text-level error whose intended reading is independen
 - Adult Kaori’s continued existence after younger Kaori is saved.
 - The environmental warnings given to the Takano family should alter the ruined future, yet the epilogue still describes Kaori and Marie repairing the 2296 genome. The source does not say whether prevention is gradual, creates a branch, or changes a later future.
 - Only eight years separate Kaori’s 2288 awakening from the 2296 mission. In that interval she recovers, enters university, studies medicine and genetics, joins the project, creates three-year-old Connie, and becomes project head. The chronology is implausibly compressed, but no alternate date is established.
-- The 1996→2288 interval is 292 years, while the attending physician says “about 280 years.” Both dates and the approximate duration remain in the archival English; the restoration log identifies the inconsistency.
 - `F0040.MES:0x49cf` says that the Kanzaki couple who adopt Kaori are **her descendants** and caretakers of the old house. A childless sixteen-year-old entering cryosleep cannot have literal direct descendants; wider-family or older-sister descendants are plausible, but the source does not clarify.
 - Exact expansion of the “D” in Project D.
 - Whether `パラサイト銃` is a proper product name or an extraction/authorial oddity.
@@ -960,13 +962,13 @@ For every record, preserve:
 - MES file and offset (`F0001:0704`);
 - raw Japanese;
 - resolved variable placeholders;
-- speaker;
+- canonical speaker identity and `proven` or `inferred` attribution evidence;
 - route/state condition;
 - draft English;
 - translator note;
 - QA status.
 
-Keep enforcing the implemented schema-5 composite-entry and token contract from section 6. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
+Keep enforcing the implemented schema-6 speaker, composite-entry, and token contract from section 6. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
 
 ### Phase 3 — Apply the locked glossary and policies
 
@@ -1122,7 +1124,7 @@ English version must include this content note") verbatim.
 ### Engine and presentation
 
 - [ ] Only proven interpolation spans are merged in translator views; every physical record, silent beat, and opcode span remains anchored.
-- [ ] Exact Japanese duplicates are shared only after speaker, meaning, and route context agree.
+- [ ] Exact Japanese duplicates are shared only after speaker, attribution evidence, meaning, and route context agree.
 - [ ] Literal `\n`, explicit line breaks, full-width/half-width Latin text, and one-glyph terminal animation are tested in engine.
 - [ ] L/R branches reach the verified destinations, and facility nodes are tested through actual navigation rather than filename order.
 - [ ] Long technical explanations, the mother’s deduction, the Marie/Akira exposition, and epilogue cards fit their message windows.

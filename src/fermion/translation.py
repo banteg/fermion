@@ -26,6 +26,30 @@ _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
 _PURE_SILENCE = re.compile(r"^・+。$")
 _TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-verified"})
 _WRAP_MODES = frozenset({"words", "characters"})
+_ATTRIBUTIONS = frozenset({"inferred", "proven"})
+_SPEAKER_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*(?::[a-z0-9]+(?:-[a-z0-9]+)*)?$")
+_SOURCE_SPEAKER = re.compile(r"^【([^】]+)】")
+_ENCODED_SPEAKER_IDS = {
+    "コニー": "connie",
+    "神崎": "kanzaki",
+    "マーナ": "marna",
+    "良美": "yoshimi",
+    "女の子": "girl",
+    "レミア": "remia",
+    "マリー": "marie",
+    "美樹": "miki",
+    "医者": "doctor",
+    "医師": "doctor",
+    "空調システム": "ventilation-system",
+    "看護婦": "nurse",
+    "女性": "woman",
+    "女性の声": "woman-voice",
+    "女の声": "woman-voice",
+    "先輩": "nanase",
+    "蝶": "butterfly",
+    "係員": "operator",
+    "先生": "teacher",
+}
 
 
 class TranslationError(ValueError):
@@ -85,6 +109,7 @@ class TranslationEntry:
     source: str
     translation: str
     speaker: str
+    attribution: str
     context: str
     status: str
     notes: str
@@ -162,6 +187,7 @@ class CompositeTranslationEntry:
     source: str
     translation: str
     speaker: str
+    attribution: str
     context: str
     status: str
     notes: str
@@ -213,8 +239,8 @@ class TranslationCatalog:
             raise TranslationError(f"cannot read translation catalog {path}: {error}") from error
 
         version = data.get("version")
-        if version not in (4, 5):
-            raise TranslationError("translation catalog version must be 4 or 5")
+        if version not in (4, 5, 6):
+            raise TranslationError("translation catalog version must be 4, 5, or 6")
         game = _string(data, "game")
         raw_files = data.get("files")
         raw_entries = data.get("entries", [])
@@ -237,9 +263,13 @@ class TranslationCatalog:
 
         files = tuple(_parse_file(item, index) for index, item in enumerate(raw_files, 1))
         tokens = tuple(_parse_token(item, index) for index, item in enumerate(raw_tokens, 1))
-        entries = tuple(_parse_entry(item, index) for index, item in enumerate(raw_entries, 1))
+        entries = tuple(
+            _parse_entry(item, index, version=version)
+            for index, item in enumerate(raw_entries, 1)
+        )
         composites = tuple(
-            _parse_composite(item, index) for index, item in enumerate(raw_composites, 1)
+            _parse_composite(item, index, version=version)
+            for index, item in enumerate(raw_composites, 1)
         )
         _validate_catalog(files, tokens, entries, composites)
         return cls(version, game, files, tokens, entries, composites)
@@ -263,10 +293,11 @@ class TranslationCatalog:
                 by_name[file.file] = GMFile.from_bytes(data)
             except GMError as error:
                 raise TranslationError(f"{file.file}: {error}") from error
-            speakers_by_name[file.file] = {
-                item.record.offset: item.speaker.id if item.speaker else None
-                for item in by_name[file.file].attributed_text_records()
-            }
+            if self.version < 6:
+                speakers_by_name[file.file] = {
+                    item.record.offset: item.speaker.id if item.speaker else None
+                    for item in by_name[file.file].attributed_text_records()
+                }
             interpolations_by_name[file.file] = {
                 (item.start, item.end): item for item in by_name[file.file].interpolations()
             }
@@ -289,18 +320,35 @@ class TranslationCatalog:
                     )
                 if record.text != entry.source:
                     raise TranslationError(f"{entry.id}: source text changed at {location}")
-                encoded_speaker = speakers_by_name[anchor.file].get(anchor.offset)
-                if encoded_speaker is not None and encoded_speaker != entry.speaker:
-                    raise TranslationError(
-                        f"{entry.id}: encoded speaker at {location} is "
-                        f"{encoded_speaker!r}, catalog has {entry.speaker!r}"
+                if self.version >= 6:
+                    _verify_proven_speaker(
+                        entry.id,
+                        entry.source,
+                        entry.speaker,
+                        entry.attribution,
+                        location,
                     )
+                else:
+                    encoded_speaker = speakers_by_name[anchor.file].get(anchor.offset)
+                    if encoded_speaker is not None and encoded_speaker != entry.speaker:
+                        raise TranslationError(
+                            f"{entry.id}: encoded speaker at {location} is "
+                            f"{encoded_speaker!r}, catalog has {entry.speaker!r}"
+                        )
 
         for composite in self.composites:
             for occurrence in composite.occurrences:
                 records = {
                     record.offset: record for record in by_name[occurrence.file].text_records()
                 }
+                if self.version >= 6:
+                    _verify_proven_speaker(
+                        composite.id,
+                        composite.source,
+                        composite.speaker,
+                        composite.attribution,
+                        f"{occurrence.file}:0x{occurrence.start:04x}",
+                    )
                 resolved_spans: list[tuple[int, int]] = []
                 for segment in occurrence.segments:
                     if isinstance(segment, CompositeTextSegment):
@@ -318,14 +366,18 @@ class TranslationCatalog:
                                 f"{composite.id}: source text changed at {location}"
                             )
                         resolved_spans.append((record.offset, record.end))
-                        encoded_speaker = speakers_by_name[occurrence.file].get(
-                            segment.anchor.offset
-                        )
-                        if encoded_speaker is not None and encoded_speaker != composite.speaker:
-                            raise TranslationError(
-                                f"{composite.id}: encoded speaker at {location} is "
-                                f"{encoded_speaker!r}, catalog has {composite.speaker!r}"
+                        if self.version < 6:
+                            encoded_speaker = speakers_by_name[occurrence.file].get(
+                                segment.anchor.offset
                             )
+                            if (
+                                encoded_speaker is not None
+                                and encoded_speaker != composite.speaker
+                            ):
+                                raise TranslationError(
+                                    f"{composite.id}: encoded speaker at {location} is "
+                                    f"{encoded_speaker!r}, catalog has {composite.speaker!r}"
+                                )
                         continue
                     interpolation = interpolations_by_name[occurrence.file].get(
                         (segment.start, segment.end)
@@ -602,7 +654,6 @@ _EDITOR_LAYOUTS = {
         "slot_end": 1102,
     },
 }
-
 
 def _runtime_token_capacities() -> dict[str, int]:
     """Derive each fixed string buffer's capacity from adjacent slot addresses."""
@@ -1143,9 +1194,57 @@ def _translation_status(table: dict[str, object], *, context: str) -> str:
     return status
 
 
+def _speaker_metadata(
+    table: dict[str, object], *, context: str, version: int
+) -> tuple[str, str]:
+    speaker = _string(table, "speaker", context=context)
+    if version < 6:
+        return speaker, "inferred"
+    if not _SPEAKER_ID.fullmatch(speaker):
+        raise TranslationError(
+            f"{context}.speaker must be a canonical lowercase speaker ID"
+        )
+    attribution = _string(table, "attribution", context=context)
+    if attribution not in _ATTRIBUTIONS:
+        choices = ", ".join(sorted(_ATTRIBUTIONS))
+        raise TranslationError(f"{context}.attribution must be one of: {choices}")
+    return speaker, attribution
+
+
 def _validate_silence_translation(source: str, translation: str, *, context: str) -> None:
     if _PURE_SILENCE.fullmatch(source) and translation != "...":
         raise TranslationError(f"{context}.translation must render a pure silent beat as '...'")
+
+
+def _canonical_source_speaker(source: str) -> str | None:
+    match = _SOURCE_SPEAKER.match(source)
+    if match is None:
+        return None
+    label = match.group(1)
+    if label.startswith("⟦name:") and label.endswith("⟧"):
+        return f"name-slot:{label.removeprefix('⟦name:').removesuffix('⟧')}"
+    return _ENCODED_SPEAKER_IDS.get(label)
+
+
+def _verify_proven_speaker(
+    entry_id: str,
+    source: str,
+    speaker: str,
+    attribution: str,
+    location: str,
+) -> None:
+    if attribution != "proven":
+        return
+    encoded_speaker = _canonical_source_speaker(source)
+    if encoded_speaker is None:
+        raise TranslationError(
+            f"{entry_id}: proven attribution at {location} has no recognized source label"
+        )
+    if encoded_speaker != speaker:
+        raise TranslationError(
+            f"{entry_id}: encoded speaker at {location} is {encoded_speaker!r}, "
+            f"catalog has {speaker!r}"
+        )
 
 
 def _integer(table: dict[str, object], key: str, *, context: str) -> int:
@@ -1249,7 +1348,9 @@ def _parse_token_initializer(
     return TranslationTokenInitializer(file, offset, slot)
 
 
-def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
+def _parse_composite(
+    value: object, index: int, *, version: int
+) -> CompositeTranslationEntry:
     context = f"composites[{index}]"
     if not isinstance(value, dict):
         raise TranslationError(f"{context} must be a table")
@@ -1268,13 +1369,15 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
     box_width = _optional_positive_integer(value, "box_width", context=context)
     box_rows = _optional_positive_integer(value, "box_rows", context=context)
     wrap_mode = _wrap_mode(value, context=context)
+    speaker, attribution = _speaker_metadata(value, context=context, version=version)
     entry = CompositeTranslationEntry(
         id=_string(value, "id", context=context),
         occurrences=occurrences,
         target_mode=target_mode,
         source=_string(value, "source", context=context),
         translation=_string(value, "translation", context=context),
-        speaker=_string(value, "speaker", context=context),
+        speaker=speaker,
+        attribution=attribution,
         context=_string(value, "context", context=context),
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
@@ -1355,7 +1458,7 @@ def _parse_composite_segment(
     raise TranslationError(f"{context}.kind must be 'text' or 'token'")
 
 
-def _parse_entry(value: object, index: int) -> TranslationEntry:
+def _parse_entry(value: object, index: int, *, version: int) -> TranslationEntry:
     context = f"entries[{index}]"
     if not isinstance(value, dict):
         raise TranslationError(f"{context} must be a table")
@@ -1367,6 +1470,7 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
     box_width = _optional_positive_integer(value, "box_width", context=context)
     box_rows = _optional_positive_integer(value, "box_rows", context=context)
     wrap_mode = _wrap_mode(value, context=context)
+    speaker, attribution = _speaker_metadata(value, context=context, version=version)
 
     entry = TranslationEntry(
         id=_string(value, "id", context=context),
@@ -1375,7 +1479,8 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         target_mode=target_mode,
         source=_string(value, "source", context=context),
         translation=_string(value, "translation", context=context),
-        speaker=_string(value, "speaker", context=context),
+        speaker=speaker,
+        attribution=attribution,
         context=_string(value, "context", context=context),
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),

@@ -250,8 +250,13 @@ def write_catalog(
     tmp_path,
     source_hash: str,
     *,
+    version: int = 4,
     source: str = "Original",
     translation: str = "Hello world",
+    source_mode: int = 2,
+    target_mode: int = 2,
+    speaker: str = "narrator",
+    attribution: str | None = None,
     status: str = "draft",
     file_box_width: int | None = None,
     file_box_rows: int | None = None,
@@ -269,8 +274,11 @@ def write_catalog(
     entry_rows = f"box_rows = {entry_box_rows}\n" if entry_box_rows is not None else ""
     entry_wrap = f'wrap_mode = "{entry_wrap_mode}"\n' if entry_wrap_mode is not None else ""
     entry_notes = f'notes = "{notes}"\n' if notes is not None else ""
+    entry_attribution = (
+        f'attribution = "{attribution}"\n' if attribution is not None else ""
+    )
     catalog.write_text(
-        f'''version = 4
+        f'''version = {version}
 game = "Test"
 
 [[files]]
@@ -283,12 +291,12 @@ sha256 = "{source_hash}"
 id = "scene-0001"
 file = "DISKA/SCENE.MES"
 offset = 0x0002
-source_mode = 2
-target_mode = 2
+source_mode = {source_mode}
+target_mode = {target_mode}
 source = "{source}"
 translation = "{translation}"
-speaker = "narrator"
-context = "Synthetic scene."
+speaker = "{speaker}"
+{entry_attribution}context = "Synthetic scene."
 status = "{status}"
 {entry_width}{entry_rows}{entry_wrap}{entry_notes}
 '''
@@ -309,7 +317,11 @@ def test_loads_wraps_and_verifies_catalog_source(tmp_path) -> None:
     [entry] = catalog.entries
     assert entry.wrapped_translation == ("Hello", "world")
     assert entry.notes == "A useful note."
-    assert (entry.speaker, entry.context) == ("narrator", "Synthetic scene.")
+    assert (entry.speaker, entry.attribution, entry.context) == (
+        "narrator",
+        "inferred",
+        "Synthetic scene.",
+    )
     assert entry.anchors == (TranslationAnchor("DISKA/SCENE.MES", 2),)
     [catalog_file] = catalog.files
     assert (catalog_file.archive, catalog_file.name) == ("DISKA", "SCENE.MES")
@@ -502,6 +514,77 @@ def test_rejects_changed_source_anchor(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
 
 
+def test_schema_six_verifies_proven_canonical_speaker(tmp_path) -> None:
+    japanese = "【コニー】「はい。」"
+    source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = write_catalog(
+        tmp_path,
+        hashlib.sha256(source).hexdigest(),
+        version=6,
+        source=japanese,
+        translation="[Connie] Yes.",
+        source_mode=1,
+        speaker="connie",
+        attribution="proven",
+        entry_box_width=61,
+    )
+
+    [entry] = TranslationCatalog.from_file(catalog_path).entries
+    TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
+
+    assert (entry.speaker, entry.attribution) == ("connie", "proven")
+
+
+def test_schema_six_rejects_proven_speaker_mismatch(tmp_path) -> None:
+    japanese = "【コニー】「はい。」"
+    source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
+    source_dir = tmp_path / "source"
+    (source_dir / "disk-a").mkdir(parents=True)
+    (source_dir / "disk-a" / "SCENE.MES").write_bytes(source)
+    catalog_path = write_catalog(
+        tmp_path,
+        hashlib.sha256(source).hexdigest(),
+        version=6,
+        source=japanese,
+        translation="[Kanzaki] Yes.",
+        source_mode=1,
+        speaker="kanzaki",
+        attribution="proven",
+        entry_box_width=61,
+    )
+
+    with pytest.raises(TranslationError, match="encoded speaker.*connie.*kanzaki"):
+        TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
+
+
+def test_schema_six_requires_attribution(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=6,
+        speaker="narrator",
+    )
+
+    with pytest.raises(TranslationError, match="attribution must be a non-empty string"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_schema_six_requires_canonical_speaker_id(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=6,
+        speaker="コニー",
+        attribution="proven",
+    )
+
+    with pytest.raises(TranslationError, match="canonical lowercase speaker ID"):
+        TranslationCatalog.from_file(catalog_path)
+
+
 def test_rejects_catalog_speaker_conflicting_with_encoded_label(tmp_path) -> None:
     japanese = "【コニー】「はい。」"
     source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
@@ -573,6 +656,7 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
         source="Original",
         translation='He said "hello"',
         speaker="narrator",
+        attribution="inferred",
         context="Synthetic scene.",
         status="draft",
         notes="Test",

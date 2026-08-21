@@ -23,9 +23,12 @@ A static speaker is part of the decoded text itself:
 0x4a  【神崎】「……」
 ```
 
-The stable speaker ID is the exact string between `【` and `】`. If one rendered
-message is split across multiple `0x4a` records, the label applies to the later
-fragments until opcode `0x50` or `0x00` ends that message.
+At the GM evidence layer, the source-local speaker ID is the exact string
+between `【` and `】`. If one rendered message is split across multiple `0x4a`
+records, the label applies to the later fragments until opcode `0x50` or `0x00`
+ends that message. The translation catalog maps that evidence to a canonical
+identity separately, so `コニー` and a contextual Connie assignment both use
+`speaker = "connie"` without losing how the conclusion was reached.
 
 ## Customizable names
 
@@ -117,8 +120,13 @@ must reconstruct those messages without erasing the individual text anchors or
 the intervening bytecode.
 
 Use `fermion gm speakers` to inspect the source evidence. `fermion translation
-table` emits the catalog as the translator-facing `offset, speaker, jp, en,
-context, status` table. Catalog schema 4 requires explicit `speaker` and
-`context` fields and rejects any catalog speaker that conflicts with an encoded
-literal label or name-slot role. `fermion gm script` produces a compact,
-content-deduplicated, speaker-annotated mode-1 corpus for holistic plot review.
+table` emits the catalog as the translator-facing `id, file, offset, speaker,
+attribution, jp, en, context, status` table. Canonical catalog schema 6 requires
+a lowercase speaker ID plus `attribution = "proven" | "inferred"`. Source
+verification checks every `proven` identity against its encoded literal label
+or name-slot role; contextual assignments remain explicit rather than being
+disguised as a different spelling. Bracketed Silky product headings are a
+notable semantic exception to the mechanical GM scanner: their catalog speaker
+is inferred `catalog-copy`, not the most recently displayed product title.
+`fermion gm script` produces a compact, content-deduplicated,
+speaker-annotated mode-1 corpus for holistic plot review.
