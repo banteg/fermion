@@ -1082,10 +1082,8 @@ Use the naturalized version above. A typo-only Engrish pass is not an active alt
 
 > **2296. Humanity is dying from centuries of pollution, and the genetic information it has lost cannot be rebuilt. Connie—a cat-human mutant, hunter, and experimental time-machine pilot—is sent to 1996 to recover intact human genes before a temporary rift in time closes forever. What begins as a strange visit to an ordinary family becomes a confrontation with the woman who created her, a childhood displaced by three centuries, and the cost of rewriting the past.**
 
-**English-version content note:** This archival English translation preserves
-the ages and school status stated in the original Japanese work. The game
-contains sexual depictions of high-school-age characters, along with coercive
-and otherwise sensitive material described in this brief.
+**English-version content note:** use the locked wording in section 11 ("The
+English version must include this content note") verbatim.
 
 ---
 
