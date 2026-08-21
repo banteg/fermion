@@ -458,6 +458,12 @@ The import/build rule is deterministic:
 
 Only records separated by a recognized immutable token may be merged for display. Adjacent narration records remain distinct. This preserves the one-to-one physical text map, source anchors, opcode count, and timing while still letting a translator draft a natural sentence around a variable. Exact duplicate occurrences may share one canonical entry only when speaker, attribution evidence, meaning, and context agree; contextual variants remain separate entries.
 
+Exact source and English duplicates with the same speaker, attribution,
+context, encoding, layout, and QA status must share one canonical entry. A
+genuine mechanical split uses an entry note beginning with `Duplicate split:`;
+notes by themselves never justify duplicate records. Catalog validation rejects
+both mergeable duplicates and unannotated mechanical splits.
+
 `speaker` is a canonical lowercase identity such as `connie`, `kanzaki`, or
 `name-slot:mother`; it does not change spelling according to evidence type.
 `attribution = "proven"` means the record itself contains a recognized literal
@@ -1010,8 +1016,8 @@ checkpoint:
 2. Scene replay, both mirrored name and adult-term editors, the title/menu
    surfaces, and the period Silky's catalog are represented in the canonical
    catalog or explicitly source-anchored coverage exclusions.
-3. The catalog contains 13,003 canonical records over 17,680 physical anchors
-   in 76 MES files: 12,735 `translated`, 253 `reviewed`, and 15
+3. The catalog contains 12,902 canonical records over 17,680 physical anchors
+   in 76 MES files: 12,634 `translated`, 253 `reviewed`, and 15
    `runtime-verified`.
 4. The remaining work is dedicated linguistic review of the still-translated
    records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,
@@ -1138,7 +1144,7 @@ English version must include this content note") verbatim.
 ### Engine and presentation
 
 - [ ] Only proven interpolation spans are merged in translator views; every physical record, silent beat, and opcode span remains anchored.
-- [ ] Exact Japanese duplicates are shared only after speaker, attribution evidence, meaning, and route context agree.
+- [x] Exact Japanese duplicates are shared only after speaker, attribution evidence, meaning, and route context agree; mechanical splits are annotated.
 - [ ] Literal `\n`, explicit line breaks, full-width/half-width Latin text, and one-glyph terminal animation are tested in engine.
 - [ ] L/R branches reach the verified destinations, and facility nodes are tested through actual navigation rather than filename order.
 - [ ] Long technical explanations, the mother’s deduction, the Marie/Akira exposition, and epilogue cards fit their message windows.

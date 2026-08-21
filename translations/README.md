@@ -96,6 +96,13 @@ every physical copy. Identical Japanese may still use separate entries when the
 surrounding scene genuinely requires different English; that contextual split
 is explicit and visible to the coverage report.
 
+Catalog validation also audits exact duplicate English. Records with identical
+source, translation, speaker, attribution, and scene must share anchors or
+composite occurrences whenever their encoding, layout, and QA status agree.
+When a real mechanical difference prevents sharing, every retained record uses
+a `notes` value beginning with `Duplicate split:` to explain it. Notes alone do
+not make otherwise mergeable records distinct.
+
 Canonical schema 7 makes speaker identity, attribution evidence, scene
 identity, and scene context separate fields. `speaker` is a stable lowercase ID
 such as `connie`, `kanzaki`, `catalog-copy`, or `name-slot:mother`.
@@ -265,16 +272,20 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is runtime evidence, not a claim of final editorial approval.
 
-At this checkpoint, 12,735 records are `translated`, 253 are `reviewed`, and 15
+At this checkpoint, 12,634 records are `translated`, 253 are `reviewed`, and 15
 are `runtime-verified`. The reviewed set is limited to records whose wording
 changed during the dedicated Opus source-and-context passes over F0039-F0042
 and the token-initial prose audit; unchanged neighboring records were not
 bulk-promoted.
 
-The current catalog contains 13,003 canonical records covering 17,680 physical
+The current catalog contains 12,902 canonical records covering 17,680 physical
 anchors across 76 MES files: `MAIN.MES`, `FOP.MES`, the translated story
 through the `F0042.MES` ending, scene replay, both mirrored editors, and the
 period Silky's catalog.
+The duplicate audit consolidated 101 redundant records across 61 reviewed
+groups without changing a physical translation. Four catalog-copy wording
+groups remain as ten annotated records because their panels need different
+layout overrides.
 The setup selector pair, three-copy fiction disclaimer,
 repeated terminal timing records, and context-safe duplicate collapses in the
 Project D and first Kanako slices demonstrate when physical anchors should
@@ -340,7 +351,7 @@ framebuffer checkpoints.
 The fifth closed scope is `connie-and-kanako-first-intimacy`: all 424 physical
 text records in `F0004.MES`, from Connie washing Kanako through their first
 sexual encounter, genetic-sample collection, and post-bath confession. They
-are managed as 286 catalog entries, including 175 composite display messages;
+are managed as 281 catalog entries, including 173 composite display messages;
 all anchors are translated and none are excluded or pending.
 
 The sixth closed scope is `connie-explains-her-mission`: all 343 physical text
@@ -365,7 +376,7 @@ native fixture capture.
 The eighth closed scope is `connie-and-yuki-kitchen-encounter`: all 644
 physical text records in `F0007.MES`, from Connie approaching Yuki in the
 kitchen through the genetic-sample route and the alternate ear-teasing branch.
-They are managed as 426 catalog entries, including 275 composite display
+They are managed as 418 catalog entries, including 268 composite display
 messages; all anchors are translated and none are excluded or pending. The
 translation keeps Yuki's warm adult voice distinct from Connie's blunt hunter
 calculus, preserves every spoken refusal and the source narration around it,
@@ -376,8 +387,8 @@ human playtest and native fixture capture.
 The ninth closed scope is `connie-meets-kanakos-sister`: all 265 physical
 text records in `F0008.MES`, from Connie watching Yuki cook through Ruri's
 arrival, the transformation proof, the genetic-sample argument, and Kanako
-inviting Connie to her room. They are managed as 179 catalog entries,
-including 98 composite display messages; all anchors are translated and none
+inviting Connie to her room. They are managed as 178 catalog entries,
+including 97 composite display messages; all anchors are translated and none
 are excluded or pending. Ruri's blunt skeptic voice is kept distinct from
 Yuki's warm teasing and Connie's polite first-meeting register. No
 trustworthy live F0008 state exists yet, so it remains `translated` pending a
@@ -395,8 +406,8 @@ capture.
 
 The eleventh closed scope is `ruri-nighttime-route`: all 215 physical text
 records in `F0010L.MES`, from Kanako falling asleep through Connie reconciling
-with Ruri, demonstrating Mini form, and changing back. They are managed as 157
-catalog entries, including 83 composite display messages; all anchors are
+with Ruri, demonstrating Mini form, and changing back. They are managed as 155
+catalog entries, including 82 composite display messages; all anchors are
 translated and none are excluded or pending. Connie's human-equivalent age is
 about seventeen, while her three years of lived experience remain explicit. No
 trustworthy live F0010L state exists yet, so it remains `translated` pending a
@@ -405,7 +416,7 @@ human playtest and native fixture capture.
 The twelfth closed scope is `yuki-nighttime-route`: all 542 physical text
 records in `F0010R.MES`, from Connie returning to the living room through Yuki
 taking the lead, their shared-toy scene, and the afterglow. They are managed as
-398 catalog entries, including 210 composite display messages; all anchors are
+394 catalog entries, including 209 composite display messages; all anchors are
 translated and none are excluded or pending. Every spoken refusal, stop, and
 limit remains explicit, as do the source's statements about when Connie resists
 or gives herself over. No trustworthy live F0010R state exists yet, so it
@@ -413,8 +424,8 @@ remains `translated` pending a human playtest and native fixture capture.
 
 The thirteenth closed scope is `ruri-genetic-sample-route`: all 464 physical
 text records in `F0011L.MES`, covering the assertive, slow, and talk-first
-approaches to Ruri's genetic-sample route. They are managed as 312 catalog
-entries, including 203 composite display messages; all anchors are translated
+approaches to Ruri's genetic-sample route. They are managed as 311 catalog
+entries, including 202 composite display messages; all anchors are translated
 and none are excluded or pending. Ruri's blunt voice remains distinct from
 Connie's teasing, while every spoken refusal and attempted resistance remains
 explicit even where Connie's narration interprets it differently. No
@@ -423,8 +434,8 @@ human playtest and native fixture capture.
 
 The fourteenth closed scope is `yuki-after-ruri-route`: all 614 physical text
 records in `F0012L.MES`, covering Connie's six late-night approaches to Yuki
-after the Ruri route and her eventual return to bed. They are managed as 409
-catalog entries, including 249 composite display messages; all anchors are
+after the Ruri route and her eventual return to bed. They are managed as 407
+catalog entries, including 248 composite display messages; all anchors are
 translated and none are excluded or pending. The translation preserves Yuki's
 warm, observant voice and the early clue that her gestures and scent resemble
 Dr. Kanzaki, without resolving that clue. Every request to be put down,
@@ -449,9 +460,9 @@ The sixteenth closed scope is `second-expedition-and-route-reunion`: all 917
 physical text records in `F0015.MES` through `F0017.MES`, from Connie and
 Remia's attempted two-machine departure through Connie's second arrival, the
 Takano family's recruitment plan, and the route-dependent reunion. They are
-managed as 681 canonical records, including 287 composite display messages and
-13 context-safe duplicate pairs shared across equivalent branches; all anchors
-are translated and none are excluded or pending. The launch sequence keeps
+managed as 674 canonical records, including 287 composite display messages and
+context-safe duplicate occurrences shared across equivalent branches; all
+anchors are translated and none are excluded or pending. The launch sequence keeps
 machine vibration hardware distinct from the surrounding space-time
 oscillation. The reunion keeps the loved one's initiation and later assent
 separate from every spoken refusal and head-shake, including the places where
@@ -483,7 +494,7 @@ The nineteenth closed scope is `kanzaki-homecoming-and-apparent-betrayal`: all
 Kanzaki's arrival at the Takano home through the disappearance, altered return
 coordinates, Connie's capture, the apparent betrayal, and the first duct-escape
 plan. They contain 1,409 managed canonical source lines; all anchors are
-translated and none are excluded or pending. The catalog contributes 1,337
+translated and none are excluded or pending. The catalog contributes 1,336
 records after context-safe duplicate consolidation. Reveal clues remain
 unexplained at first presentation,
 while the abduction, capture drug, reproductive-experiment threat, and lobotomy
@@ -494,7 +505,7 @@ The twentieth closed scope is `facility-scouting-and-escape`: all 2,367
 physical text records in the 26 text-bearing files reached through the F0034
 facility graph and the return in `F0038.MES`. They contain 1,956 managed
 canonical source lines; all anchors are translated and none are excluded or
-pending. The catalog contributes 2,033 records after context-safe duplicate
+pending. The catalog contributes 1,985 records after context-safe duplicate
 consolidation. `F0034.MES` and `F0037.MES` themselves contain control flow but
 no text records, so the scope names their text-bearing descendants explicitly.
 The translation preserves the fake-collar clues, fuel and wheelchair planning,
@@ -522,7 +533,7 @@ The final closed scope is `replay-editors-and-period-catalog`: all 716 physical
 text records in `F_SHENE.MES`, both mirrored copies of `NAME.MES` and
 `MONO.MES`, and `SILK.MES`. They contain 238 canonical source lines; all
 anchors are translated and none are excluded or pending. The catalog
-contributes 430 records after sharing byte-identical editor copies and
+contributes 418 records after sharing byte-identical editor copies and
 context-safe duplicates. Scene replay has 44 logical titles across 50 physical
 anchors, the name and adult-term editors expose free-form full-width Latin input,
 and all 176 records in Silky's period product catalog are translated. The

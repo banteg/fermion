@@ -234,7 +234,7 @@ adult-term defaults in `FERM/REG_00` from the catalog's English token values;
 customized slots are preserved rather than reset. Generated RKT, MES, archive,
 and JSON report files are kept under ignored `working/translation-build/`.
 
-The current catalog contains 13,003 canonical entries covering 17,680 physical
+The current catalog contains 12,902 canonical entries covering 17,680 physical
 anchors in 76 MES files. Exact per-file sizes and hashes are recorded in the
 generated build report. Generated filenames and output hashes are intentionally
 not release interfaces; rebuild from the hash-pinned pristine input before

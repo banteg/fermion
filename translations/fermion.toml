@@ -24977,8 +24977,10 @@ segments = [
 
 [[entries]]
 id = "f0004-1d40-my-heart-pounds"
-file = "DISKA/F0004.MES"
-offset = 0x1d40
+anchors = [
+  { file = "DISKA/F0004.MES", offset = 0x1d40 },
+  { file = "DISKA/F0004.MES", offset = 0x1da1 },
+]
 source_mode = 1
 target_mode = 2
 source = "どきどき。"
@@ -25035,19 +25037,6 @@ segments = [
   { kind = "token", token = "name:dear-person", start = 0x1d8c, end = 0x1d9b, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x1d9b, source_mode = 1, source = "。" },
 ]
-
-[[entries]]
-id = "f0004-1da1-my-heart-pounds"
-file = "DISKA/F0004.MES"
-offset = 0x1da1
-source_mode = 1
-target_mode = 2
-source = "どきどき。"
-translation = "My heart pounds."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-questions-kanako-about-sex-pressures-her-repeat-explicit"
-status = "translated"
 
 [[composites]]
 id = "f0004-1dab-connie-will-you-say-it-for-me-name"
@@ -25813,8 +25802,10 @@ segments = [
 
 [[entries]]
 id = "f0004-25cf-connie-hee-hee-hee-hee-hee"
-file = "DISKA/F0004.MES"
-offset = 0x25cf
+anchors = [
+  { file = "DISKA/F0004.MES", offset = 0x25cf },
+  { file = "DISKA/F0004.MES", offset = 0x267c },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（うふ。うふ。うふふふふふふ・・・・。）"
@@ -25842,6 +25833,14 @@ segments = [
   { kind = "text", offset = 0x260a, source_mode = 1, source = "を見ていると、もっといぢめたくなっちゃう。" },
 ]
 
+[[composites.occurrences]]
+file = "DISKA/F0004.MES"
+segments = [
+  { kind = "text", offset = 0x26f3, source_mode = 1, source = "あたしに自由にされる" },
+  { kind = "token", token = "name:dear-person", start = 0x2701, end = 0x2710, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2710, source_mode = 1, source = "を見ていると、もっといぢめたくなっちゃう。" },
+]
+
 [[composites]]
 id = "f0004-2625-connie-if-it-feels-good-for-name-dear"
 target_mode = 2
@@ -25860,18 +25859,13 @@ segments = [
   { kind = "text", offset = 0x263d, source_mode = 1, source = "が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）" },
 ]
 
-[[entries]]
-id = "f0004-267c-connie-hee-hee-hee-hee-hee"
+[[composites.occurrences]]
 file = "DISKA/F0004.MES"
-offset = 0x267c
-source_mode = 1
-target_mode = 2
-source = "【コニー】（うふ。うふ。うふふふふふふ・・・・。）"
-translation = "[Connie] (Hee. Hee. Hee-hee-hee...)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-manually-stimulates-kanako-responds-her-stop-request-collects"
-status = "translated"
+segments = [
+  { kind = "text", offset = 0x272b, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:dear-person", start = 0x2734, end = 0x2743, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2743, source_mode = 1, source = "が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）" },
+]
 
 [[composites]]
 id = "f0004-269a-connie-name-dear-person"
@@ -25907,42 +25901,6 @@ segments = [
   { kind = "text", offset = 0x26be, source_mode = 1, source = "【" },
   { kind = "token", token = "name:dear-person", start = 0x26c2, end = 0x26d1, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x26d1, source_mode = 1, source = "】「あぁあ・・・・・・・・、はぁふぅ・・はぁふぅ・・・。」" },
-]
-
-[[composites]]
-id = "f0004-26f3-seeing-name-dear-person-at-my-mercy-makes"
-target_mode = 2
-source = "あたしに自由にされる⟦name:dear-person⟧を見ていると、もっといぢめたくなっちゃう。"
-translation = "Seeing ⟦name:dear-person⟧ at my mercy makes me want to tease her even more."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-manually-stimulates-kanako-responds-her-stop-request-collects"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKA/F0004.MES"
-segments = [
-  { kind = "text", offset = 0x26f3, source_mode = 1, source = "あたしに自由にされる" },
-  { kind = "token", token = "name:dear-person", start = 0x2701, end = 0x2710, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
-  { kind = "text", offset = 0x2710, source_mode = 1, source = "を見ていると、もっといぢめたくなっちゃう。" },
-]
-
-[[composites]]
-id = "f0004-272b-connie-if-it-feels-good-for-name-dear"
-target_mode = 2
-source = "【コニー】（⟦name:dear-person⟧が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）"
-translation = "[Connie] (If it feels good for ⟦name:dear-person⟧... I want to do even more...)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-manually-stimulates-kanako-responds-her-stop-request-collects"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKA/F0004.MES"
-segments = [
-  { kind = "text", offset = 0x272b, source_mode = 1, source = "【コニー】（" },
-  { kind = "token", token = "name:dear-person", start = 0x2734, end = 0x2743, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
-  { kind = "text", offset = 0x2743, source_mode = 1, source = "が気持ち良くなるなら・・・、もっとしてあげたい・・・・・・。）" },
 ]
 
 [[composites]]
@@ -26623,8 +26581,10 @@ status = "translated"
 
 [[entries]]
 id = "f0004-2e06-silence"
-file = "DISKA/F0004.MES"
-offset = 0x2e06
+anchors = [
+  { file = "DISKA/F0004.MES", offset = 0x2e06 },
+  { file = "DISKA/F0004.MES", offset = 0x2e49 },
+]
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・・・・。"
@@ -26641,19 +26601,6 @@ offset = 0x2e34
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・。"
-translation = "..."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-kanako-continue-encounter-climax-together"
-status = "translated"
-
-[[entries]]
-id = "f0004-2e49-silence"
-file = "DISKA/F0004.MES"
-offset = 0x2e49
-source_mode = 1
-target_mode = 2
-source = "・・・・・・・・・・・・・・・・・・。"
 translation = "..."
 speaker = "connie"
 attribution = "inferred"
@@ -34769,6 +34716,14 @@ segments = [
   { kind = "text", offset = 0x087e, source_mode = 1, source = "と一緒に、ずっとこうしたままでいたい・・・。）" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0007.MES"
+segments = [
+  { kind = "text", offset = 0x08dd, source_mode = 1, source = "【コニー】（" },
+  { kind = "token", token = "name:mother", start = 0x08e6, end = 0x08f5, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x08f5, source_mode = 1, source = "と一緒に、ずっとこうしたままでいたい・・・。）" },
+]
+
 [[composites]]
 id = "f0007-089b-name-seems-unsure-what-to-do"
 target_mode = 2
@@ -34785,34 +34740,6 @@ segments = [
   { kind = "token", token = "name:mother", start = 0x089b, end = 0x08aa, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x08aa, source_mode = 1, source = "はどうしたらいいか戸惑っているようだ。" },
 ]
-
-[[composites]]
-id = "f0007-08dd-i-want-to-stay-like-this-with-name"
-target_mode = 2
-source = "【コニー】（⟦name:mother⟧と一緒に、ずっとこうしたままでいたい・・・。）"
-translation = "[Connie] (I want to stay like this with ⟦name:mother⟧ forever...)"
-speaker = "connie"
-attribution = "proven"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0007.MES"
-segments = [
-  { kind = "text", offset = 0x08dd, source_mode = 1, source = "【コニー】（" },
-  { kind = "token", token = "name:mother", start = 0x08e6, end = 0x08f5, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x08f5, source_mode = 1, source = "と一緒に、ずっとこうしたままでいたい・・・。）" },
-]
-
-[[composites]]
-id = "f0007-0912-name-seems-unsure-what-to-do"
-target_mode = 2
-source = "⟦name:mother⟧はどうしたらいいか戸惑っているようだ。"
-translation = "⟦name:mother⟧ seems unsure what to do."
-speaker = "connie"
-attribution = "inferred"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
 
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
@@ -35067,6 +34994,13 @@ segments = [
   { kind = "text", offset = 0x0b6b, source_mode = 1, source = "のことが、少し見えてしまった。" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0007.MES"
+segments = [
+  { kind = "token", token = "name:mother", start = 0x0cfe, end = 0x0d0d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0d0d, source_mode = 1, source = "のことが、少し見えてしまった。" },
+]
+
 [[composites]]
 id = "f0007-0b7f-an-image-of-name-holding-a-girl-who"
 target_mode = 2
@@ -35165,6 +35099,14 @@ segments = [
   { kind = "text", offset = 0x0c5b, source_mode = 1, source = "・・・・・・。）" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0007.MES"
+segments = [
+  { kind = "text", offset = 0x0d21, source_mode = 1, source = "【コニー】（ごめんなさい・・・" },
+  { kind = "token", token = "name:mother", start = 0x0d33, end = 0x0d42, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x0d42, source_mode = 1, source = "・・・・・・。）" },
+]
+
 [[composites]]
 id = "f0007-0c68-what-i-saw-was-that-name-had-once"
 target_mode = 2
@@ -35183,64 +35125,6 @@ segments = [
   { kind = "text", offset = 0x0c83, source_mode = 1, source = "は妹と少しだけそういう仲になったことがあり、妹に似ているあたしを見てどきどきしている・・・・・ということだった。" },
 ]
 
-[[entries]]
-id = "f0007-0cc1-the-unexpected-truth-shocks-me"
-file = "DISKB/F0007.MES"
-offset = 0x0cc1
-source_mode = 1
-target_mode = 2
-source = "あたしは意外なことを知ってしまい、びっくりしてしまった。"
-translation = "The unexpected truth shocks me."
-speaker = "connie"
-attribution = "inferred"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
-
-[[composites]]
-id = "f0007-0cfe-i-glimpse-a-little-of-what-name-is"
-target_mode = 2
-source = "⟦name:mother⟧のことが、少し見えてしまった。"
-translation = "⟦name:mother⟧'s feelings come into view, just a little."
-speaker = "connie"
-attribution = "inferred"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0007.MES"
-segments = [
-  { kind = "token", token = "name:mother", start = 0x0cfe, end = 0x0d0d, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x0d0d, source_mode = 1, source = "のことが、少し見えてしまった。" },
-]
-
-[[composites]]
-id = "f0007-0d21-i-m-sorry-name"
-target_mode = 2
-source = "【コニー】（ごめんなさい・・・⟦name:mother⟧・・・・・・。）"
-translation = "[Connie] (I'm sorry... ⟦name:mother⟧...)"
-speaker = "connie"
-attribution = "proven"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0007.MES"
-segments = [
-  { kind = "text", offset = 0x0d21, source_mode = 1, source = "【コニー】（ごめんなさい・・・" },
-  { kind = "token", token = "name:mother", start = 0x0d33, end = 0x0d42, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x0d42, source_mode = 1, source = "・・・・・・。）" },
-]
-
-[[composites]]
-id = "f0007-0d4f-what-i-saw-was-that-name-had-once"
-target_mode = 2
-source = "見えた内容は、⟦name:mother⟧は妹と少しだけそういう仲になったことがあり、妹に似ているあたしを見てどきどきしている・・・・・ということだった。"
-translation = "What I saw was that ⟦name:mother⟧ had crossed that line a little with her sister, and my resemblance to her sister was making her heart race."
-speaker = "connie"
-attribution = "inferred"
-scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
-
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
 segments = [
@@ -35250,9 +35134,11 @@ segments = [
 ]
 
 [[entries]]
-id = "f0007-0da8-the-unexpected-truth-shocks-me"
-file = "DISKB/F0007.MES"
-offset = 0x0da8
+id = "f0007-0cc1-the-unexpected-truth-shocks-me"
+anchors = [
+  { file = "DISKB/F0007.MES", offset = 0x0cc1 },
+  { file = "DISKB/F0007.MES", offset = 0x0da8 },
+]
 source_mode = 1
 target_mode = 2
 source = "あたしは意外なことを知ってしまい、びっくりしてしまった。"
@@ -36526,6 +36412,14 @@ segments = [
   { kind = "text", offset = 0x1b73, source_mode = 1, source = "【" },
   { kind = "token", token = "name:mother", start = 0x1b77, end = 0x1b86, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x1b86, source_mode = 1, source = "】「あ・・・・・・・・・。」" },
+]
+
+[[composites.occurrences]]
+file = "DISKB/F0007.MES"
+segments = [
+  { kind = "text", offset = 0x3241, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:mother", start = 0x3245, end = 0x3254, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x3254, source_mode = 1, source = "】「あ・・・・・・・・・。」" },
 ]
 
 [[composites]]
@@ -38851,24 +38745,6 @@ segments = [
 ]
 
 [[composites]]
-id = "f0007-3241-name-ah"
-target_mode = 2
-source = "【⟦name:mother⟧】「あ・・・・・・・・・。」"
-translation = "[⟦name:mother⟧] \"Ah...\""
-speaker = "name-slot:mother"
-attribution = "proven"
-scene = "connie-collects-yuki-genetic-sample-kitchen-sink-continues-encounter"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0007.MES"
-segments = [
-  { kind = "text", offset = 0x3241, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:mother", start = 0x3245, end = 0x3254, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x3254, source_mode = 1, source = "】「あ・・・・・・・・・。」" },
-]
-
-[[composites]]
 id = "f0007-3267-name-is-startled-when-i-pull-her-around"
 target_mode = 2
 source = "あたしが引っ張ったので⟦name:mother⟧が驚く。"
@@ -40699,6 +40575,14 @@ segments = [
   { kind = "text", offset = 0x4696, source_mode = 1, source = "・・・。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0007.MES"
+segments = [
+  { kind = "text", offset = 0x4960, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:mother", start = 0x4969, end = 0x4978, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x4978, source_mode = 1, source = "・・・。」" },
+]
+
 [[composites]]
 id = "f0007-46a0-name-eek-eek-ahhhn-don-t"
 target_mode = 2
@@ -40977,24 +40861,6 @@ speaker = "connie"
 attribution = "inferred"
 scene = "alternate-kitchen-branch-has-connie-tease-yuki-her-sensitive"
 status = "translated"
-
-[[composites]]
-id = "f0007-4960-name"
-target_mode = 2
-source = "【コニー】「⟦name:mother⟧・・・。」"
-translation = "[Connie] \"⟦name:mother⟧...\""
-speaker = "connie"
-attribution = "proven"
-scene = "alternate-kitchen-branch-has-connie-tease-yuki-her-sensitive"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0007.MES"
-segments = [
-  { kind = "text", offset = 0x4960, source_mode = 1, source = "【コニー】「" },
-  { kind = "token", token = "name:mother", start = 0x4969, end = 0x4978, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x4978, source_mode = 1, source = "・・・。」" },
-]
 
 [[entries]]
 id = "f0007-4982-i-make-myself-say-it"
@@ -43165,6 +43031,14 @@ segments = [
   { kind = "text", offset = 0x202f, source_mode = 1, source = "】「・・・・・・・・・、・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・。」" }
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0008.MES"
+segments = [
+  { kind = "text", offset = 0x20a4, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x20a8, end = 0x20b7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x20b7, source_mode = 1, source = "】「・・・・・・・・・、・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・。」" }
+]
+
 [[composites]]
 id = "f0008-2066-line"
 target_mode = 2
@@ -43181,24 +43055,6 @@ segments = [
   { kind = "text", offset = 0x2066, source_mode = 1, source = "【" },
   { kind = "token", token = "name:older-sister", start = 0x206a, end = 0x2079, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
   { kind = "text", offset = 0x2079, source_mode = 1, source = "】「・・・・・・、・・・・・・・・・・・・・・・・・・・・・・・・・・・。」" }
-]
-
-[[composites]]
-id = "f0008-20a4-line"
-target_mode = 2
-source = "【⟦name:older-sister⟧】「・・・・・・・・・、・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・。」"
-translation = "[⟦name:older-sister⟧] \"...\""
-speaker = "name-slot:older-sister"
-attribution = "proven"
-scene = "kanako-introduces-connie-ruri-connie-transforms-family-argues-over"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0008.MES"
-segments = [
-  { kind = "text", offset = 0x20a4, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:older-sister", start = 0x20a8, end = 0x20b7, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
-  { kind = "text", offset = 0x20b7, source_mode = 1, source = "】「・・・・・・・・・、・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・。」" }
 ]
 
 [[composites]]
@@ -46840,8 +46696,10 @@ status = "translated"
 
 [[entries]]
 id = "f0010l-0c40-line"
-file = "DISKB/F0010L.MES"
-offset = 0x0c40
+anchors = [
+  { file = "DISKB/F0010L.MES", offset = 0x0c40 },
+  { file = "DISKB/F0010L.MES", offset = 0x13a6 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・。）"
@@ -47461,29 +47319,6 @@ segments = [
   { kind = "token", token = "name:dear-person", start = 0x1383, end = 0x1392, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
   { kind = "text", offset = 0x1392, source_mode = 1, source = "】「すう・・・、すぅ・・・。」" }
 ]
-
-[[entries]]
-id = "f0010l-13a6-line"
-file = "DISKB/F0010L.MES"
-offset = 0x13a6
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "unable-sleep-connie-hears-ruri-studying-quietly-leaves-kanako"
-status = "translated"
-
-[[composites]]
-id = "f0010l-13bf-mm-mm"
-target_mode = 2
-source = "【⟦name:dear-person⟧】「すう・・・、すぅ・・・。」"
-translation = "[⟦name:dear-person⟧] \"Mm... mm...\""
-speaker = "name-slot:dear-person"
-attribution = "proven"
-scene = "unable-sleep-connie-hears-ruri-studying-quietly-leaves-kanako"
-status = "translated"
 
 [[composites.occurrences]]
 file = "DISKB/F0010L.MES"
@@ -50057,8 +49892,10 @@ segments = [
 
 [[entries]]
 id = "f0010r-1738-line"
-file = "DISKB/F0010R.MES"
-offset = 0x1738
+anchors = [
+  { file = "DISKB/F0010R.MES", offset = 0x1738 },
+  { file = "DISKB/F0010R.MES", offset = 0x1b89 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】「・・・・・・・・・・・・。」"
@@ -50458,19 +50295,6 @@ segments = [
   { kind = "token", token = "name:mother", start = 0x1b4c, end = 0x1b5b, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x1b5b, source_mode = 1, source = "】「・・・猫にも変身できるし、変身を見たのが信じるきっかけかしら・・・。」" }
 ]
-
-[[entries]]
-id = "f0010r-1b89-line"
-file = "DISKB/F0010R.MES"
-offset = 0x1b89
-source_mode = 1
-target_mode = 2
-source = "【コニー】「・・・・・・・・・・・・。」"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "yuki-initiates-intimacy-connie-hesitates-yuki-reassures-her-by"
-status = "translated"
 
 [[composites]]
 id = "f0010r-1bb1-name-s-words-put-me-at-ease"
@@ -51248,8 +51072,10 @@ segments = [
 
 [[entries]]
 id = "f0010r-2479-i-grip-the-vibrator-and-twist-it-side-to-side-without-pull"
-file = "DISKB/F0010R.MES"
-offset = 0x2479
+anchors = [
+  { file = "DISKB/F0010R.MES", offset = 0x2479 },
+  { file = "DISKB/F0010R.MES", offset = 0x2501 },
+]
 source_mode = 1
 target_mode = 2
 source = "あたしはバイブに触れると、ぎゅぅっと握り、差し込んだまま、バイブを左右に回す。"
@@ -51261,8 +51087,10 @@ status = "translated"
 
 [[entries]]
 id = "f0010r-24a8-ah-ah-ahhh"
-file = "DISKB/F0010R.MES"
-offset = 0x24a8
+anchors = [
+  { file = "DISKB/F0010R.MES", offset = 0x24a8 },
+  { file = "DISKB/F0010R.MES", offset = 0x2530 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】「あっ、あっ、あぁ・・・・・・。」"
@@ -51289,42 +51117,6 @@ segments = [
   { kind = "token", token = "name:mother", start = 0x24c7, end = 0x24d6, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x24d6, source_mode = 1, source = "】「あんっ、あっ、ふぅ、あぁぁっ・・・。」" }
 ]
-
-[[entries]]
-id = "f0010r-2501-i-grip-the-vibrator-and-twist-it-side-to-side-without-pull"
-file = "DISKB/F0010R.MES"
-offset = 0x2501
-source_mode = 1
-target_mode = 2
-source = "あたしはバイブに触れると、ぎゅぅっと握り、差し込んだまま、バイブを左右に回す。"
-translation = "I grip the vibrator and twist it side to side without pulling it out."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-yuki-use-double-ended-vibrator-spoken-limits-questions"
-status = "translated"
-
-[[entries]]
-id = "f0010r-2530-ah-ah-ahhh"
-file = "DISKB/F0010R.MES"
-offset = 0x2530
-source_mode = 1
-target_mode = 2
-source = "【コニー】「あっ、あっ、あぁ・・・・・・。」"
-translation = "[Connie] \"Ah, ah, ahhh...\""
-speaker = "connie"
-attribution = "proven"
-scene = "connie-yuki-use-double-ended-vibrator-spoken-limits-questions"
-status = "translated"
-
-[[composites]]
-id = "f0010r-254b-ahh-ah-hah-ahhh"
-target_mode = 2
-source = "【⟦name:mother⟧】「あんっ、あっ、ふぅ、あぁぁっ・・・。」"
-translation = "[⟦name:mother⟧] \"Ahh, ah, hah, ahhh...\""
-speaker = "name-slot:mother"
-attribution = "proven"
-scene = "connie-yuki-use-double-ended-vibrator-spoken-limits-questions"
-status = "translated"
 
 [[composites.occurrences]]
 file = "DISKB/F0010R.MES"
@@ -57602,6 +57394,14 @@ segments = [
   { kind = "text", offset = 0x223c, source_mode = 1, source = "】「コニー・・・。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0011L.MES"
+segments = [
+  { kind = "text", offset = 0x25ce, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x25d2, end = 0x25e1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x25e1, source_mode = 1, source = "】「コニー・・・。」" },
+]
+
 [[composites]]
 id = "f0011l-224b-name-older-sister-goes-limp-worn-out-from"
 target_mode = 2
@@ -57926,24 +57726,6 @@ speaker = "connie"
 attribution = "inferred"
 scene = "slow-branch-connie-explores-ruri-reactions-before-they-begin"
 status = "translated"
-
-[[composites]]
-id = "f0011l-25ce-name-older-sister-connie"
-target_mode = 2
-source = "【⟦name:older-sister⟧】「コニー・・・。」"
-translation = "[⟦name:older-sister⟧] \"Connie...\""
-speaker = "name-slot:older-sister"
-attribution = "proven"
-scene = "slow-branch-connie-explores-ruri-reactions-before-they-begin"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0011L.MES"
-segments = [
-  { kind = "text", offset = 0x25ce, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:older-sister", start = 0x25d2, end = 0x25e1, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
-  { kind = "text", offset = 0x25e1, source_mode = 1, source = "】「コニー・・・。」" },
-]
 
 [[composites]]
 id = "f0011l-25f0-name-older-sister-obediently-raises-her-arms"
@@ -60832,6 +60614,14 @@ segments = [
   { kind = "text", offset = 0x0efa, source_mode = 1, source = "・・・。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKB/F0012L.MES"
+segments = [
+  { kind = "text", offset = 0x125f, source_mode = 1, source = "【コニー】「" },
+  { kind = "token", token = "name:mother", start = 0x1268, end = 0x1277, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
+  { kind = "text", offset = 0x1277, source_mode = 1, source = "・・・。」" },
+]
+
 [[entries]]
 id = "f0012l-0f04-softly-so-i-won-t-startle-her"
 file = "DISKB/F0012L.MES"
@@ -61063,24 +60853,6 @@ segments = [
   { kind = "text", offset = 0x1237, source_mode = 1, source = "【" },
   { kind = "token", token = "name:mother", start = 0x123b, end = 0x124a, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
   { kind = "text", offset = 0x124a, source_mode = 1, source = "】「う、ううん、いいの・・・。」" },
-]
-
-[[composites]]
-id = "f0012l-125f-connie-name-mother"
-target_mode = 2
-source = "【コニー】「⟦name:mother⟧・・・。」"
-translation = "[Connie] \"⟦name:mother⟧...\""
-speaker = "connie"
-attribution = "proven"
-scene = "talk-first-approach-yuki-admits-watching-ruri-encounter-before"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKB/F0012L.MES"
-segments = [
-  { kind = "text", offset = 0x125f, source_mode = 1, source = "【コニー】「" },
-  { kind = "token", token = "name:mother", start = 0x1268, end = 0x1277, sha256 = "8453bddf119793c0cbf3e3af69e22f62e7c3aadea6b9c5094ec85fb42d057aa8" },
-  { kind = "text", offset = 0x1277, source_mode = 1, source = "・・・。」" },
 ]
 
 [[composites]]
@@ -62787,8 +62559,10 @@ status = "translated"
 
 [[entries]]
 id = "f0012l-24ad-lick-lick"
-file = "DISKB/F0012L.MES"
-offset = 0x24ad
+anchors = [
+  { file = "DISKB/F0012L.MES", offset = 0x24ad },
+  { file = "DISKB/F0012L.MES", offset = 0x2505 },
+]
 source_mode = 1
 target_mode = 2
 source = "ぺちゃ・・・ぺちゃ・・・。"
@@ -62825,19 +62599,6 @@ source_mode = 1
 target_mode = 2
 source = "あたしは知らん顔して舐める。"
 translation = "Pretending not to notice, I keep licking."
-speaker = "connie"
-attribution = "inferred"
-scene = "tongue-approach-connie-restrains-yuki-attempts-pull-away-brings"
-status = "translated"
-
-[[entries]]
-id = "f0012l-2505-lick-lick"
-file = "DISKB/F0012L.MES"
-offset = 0x2505
-source_mode = 1
-target_mode = 2
-source = "ぺちゃ・・・ぺちゃ・・・。"
-translation = "Lick... lick..."
 speaker = "connie"
 attribution = "inferred"
 scene = "tongue-approach-connie-restrains-yuki-attempts-pull-away-brings"
@@ -69398,8 +69159,10 @@ status = "translated"
 
 [[entries]]
 id = "f0015-090f-connie"
-file = "DISKB/F0015.MES"
-offset = 0x090f
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x090f },
+  { file = "DISKB/F0015.MES", offset = 0x09ee },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・・・・。）"
@@ -69469,19 +69232,6 @@ source_mode = 1
 target_mode = 2
 source = "【コニー】（眠いの・・・・・・。）"
 translation = "[Connie] (I'm sleepy...)"
-speaker = "connie"
-attribution = "proven"
-scene = "exhausted-after-her-first-return-connie-falls-asleep-before"
-status = "translated"
-
-[[entries]]
-id = "f0015-09ee-connie"
-file = "DISKB/F0015.MES"
-offset = 0x09ee
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
 speaker = "connie"
 attribution = "proven"
 scene = "exhausted-after-her-first-return-connie-falls-asleep-before"
@@ -69814,8 +69564,10 @@ status = "translated"
 
 [[entries]]
 id = "f0015-0dc4-connie"
-file = "DISKB/F0015.MES"
-offset = 0x0dc4
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x0dc4 },
+  { file = "DISKB/F0015.MES", offset = 0x0e5f },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・。）"
@@ -69827,8 +69579,10 @@ status = "translated"
 
 [[entries]]
 id = "f0015-0e0b-connie"
-file = "DISKB/F0015.MES"
-offset = 0x0e0b
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x0e0b },
+  { file = "DISKB/F0015.MES", offset = 0x155c },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・。）"
@@ -69853,24 +69607,14 @@ status = "translated"
 
 [[entries]]
 id = "f0015-0e40-connie"
-file = "DISKB/F0015.MES"
-offset = 0x0e40
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x0e40 },
+  { file = "DISKB/F0015.MES", offset = 0x1519 },
+  { file = "DISKB/F0015.MES", offset = 0x1575 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
-status = "translated"
-
-[[entries]]
-id = "f0015-0e5f-connie"
-file = "DISKB/F0015.MES"
-offset = 0x0e5f
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・。）"
 translation = "[Connie] (...)"
 speaker = "connie"
 attribution = "proven"
@@ -70505,19 +70249,6 @@ scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
 status = "translated"
 
 [[entries]]
-id = "f0015-1519-connie"
-file = "DISKB/F0015.MES"
-offset = 0x1519
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
-status = "translated"
-
-[[entries]]
 id = "f0015-1538-connie-but-i-m-so-sleepy"
 file = "DISKB/F0015.MES"
 offset = 0x1538
@@ -70531,48 +70262,11 @@ scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
 status = "translated"
 
 [[entries]]
-id = "f0015-155c-connie"
-file = "DISKB/F0015.MES"
-offset = 0x155c
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
-status = "translated"
-
-[[entries]]
-id = "f0015-1575-connie"
-file = "DISKB/F0015.MES"
-offset = 0x1575
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
-status = "translated"
-
-[[entries]]
 id = "f0015-1594-connie"
-file = "DISKB/F0015.MES"
-offset = 0x1594
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・・・・・・・。）"
-translation = "[Connie] (...)"
-speaker = "connie"
-attribution = "proven"
-scene = "prelaunch-time-tunnel-branches-contrast-connie-pilot-checks-her"
-status = "translated"
-
-[[entries]]
-id = "f0015-15e1-connie"
-file = "DISKB/F0015.MES"
-offset = 0x15e1
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x1594 },
+  { file = "DISKB/F0015.MES", offset = 0x15e1 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・・・・・・・・・・・・・・・・・・・・・・・・・。）"
@@ -70746,8 +70440,10 @@ status = "translated"
 
 [[entries]]
 id = "f0015-17d2-connie-drowsy-drowsy"
-file = "DISKB/F0015.MES"
-offset = 0x17d2
+anchors = [
+  { file = "DISKB/F0015.MES", offset = 0x17d2 },
+  { file = "DISKB/F0015.MES", offset = 0x180c },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】うと、うと。"
@@ -70765,19 +70461,6 @@ source_mode = 1
 target_mode = 2
 source = "【コニー】（コタツがあれば・・・ポカポカしてあったかいのに・・・。）"
 translation = "[Connie] (If I had a kotatsu... I'd be so cozy and warm...)"
-speaker = "connie"
-attribution = "proven"
-scene = "equivalent-sleep-branches-familiar-woman-enters-connie-trained-instincts"
-status = "translated"
-
-[[entries]]
-id = "f0015-180c-connie-drowsy-drowsy"
-file = "DISKB/F0015.MES"
-offset = 0x180c
-source_mode = 1
-target_mode = 2
-source = "【コニー】うと、うと。"
-translation = "[Connie] Drowsy, drowsy."
 speaker = "connie"
 attribution = "proven"
 scene = "equivalent-sleep-branches-familiar-woman-enters-connie-trained-instincts"
@@ -104957,8 +104640,10 @@ segments = [
 
 [[entries]]
 id = "f0022r-4b74-connie-n-no"
-file = "DISKC/F0022R.MES"
-offset = 0x4b74
+anchors = [
+  { file = "DISKC/F0022R.MES", offset = 0x4b74 },
+  { file = "DISKC/F0022R.MES", offset = 0x4bff },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】「い・・・やぁぁぁ・・・・・・・・・。」"
@@ -104967,21 +104652,7 @@ speaker = "connie"
 attribution = "proven"
 scene = "mutually-initiated-bath-encounter-continues-connie-mother-alternate-giving"
 status = "translated"
-notes = "Connie explicitly says iya, preserved as 'N-no,' while the mother continues touching her."
-
-[[entries]]
-id = "f0022r-4bff-connie-n-no"
-file = "DISKC/F0022R.MES"
-offset = 0x4bff
-source_mode = 1
-target_mode = 2
-source = "【コニー】「い・・・やぁぁぁ・・・・・・・・・。」"
-translation = "[Connie] \"N-no...\""
-speaker = "connie"
-attribution = "proven"
-scene = "mutually-initiated-bath-encounter-continues-connie-mother-alternate-giving"
-status = "translated"
-notes = "A duplicated branch record again has Connie explicitly say iya; the refusal remains literal."
+notes = "Both duplicated branch records explicitly have Connie say iya; preserve it as 'N-no' while the mother continues touching her."
 
 [[composites]]
 id = "f0022r-4c26-name-mother-mmm-mmph-mmm"
@@ -118578,6 +118249,18 @@ segments = [
   { kind = "text", offset = 0x13bf, source_mode = 1, source = "お姉さまから伺っています。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKC/F0025R.MES"
+segments = [
+  { kind = "text", offset = 0x13fd, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:friend-1", start = 0x1401, end = 0x1410, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x1410, source_mode = 1, source = "】「コニーさんですね。" },
+  { kind = "token", token = "name:older-sister", start = 0x141e, end = 0x142d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x142d, source_mode = 1, source = "先輩・・・いえ、" },
+  { kind = "token", token = "name:older-sister", start = 0x1438, end = 0x1447, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x1447, source_mode = 1, source = "お姉さまから伺っています。」" },
+]
+
 [[entries]]
 id = "f0025r-13d2-connie-big-sis"
 anchors = [
@@ -118592,28 +118275,6 @@ speaker = "connie"
 attribution = "proven"
 scene = "older-sister-introduces-student-yoko-hayami-explains-yoko-knows"
 status = "translated"
-
-[[composites]]
-id = "f0025r-13fd-name-friend-1-connie-correct-senior-name-older"
-target_mode = 2
-source = "【⟦name:friend-1⟧】「コニーさんですね。⟦name:older-sister⟧先輩・・・いえ、⟦name:older-sister⟧お姉さまから伺っています。」"
-translation = "[⟦name:friend-1⟧] \"You're Connie, right? ⟦name:older-sister⟧--my senior... no, ⟦name:older-sister⟧, my big sister--told me about you.\""
-speaker = "name-slot:friend-1"
-attribution = "proven"
-scene = "older-sister-introduces-student-yoko-hayami-explains-yoko-knows"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKC/F0025R.MES"
-segments = [
-  { kind = "text", offset = 0x13fd, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:friend-1", start = 0x1401, end = 0x1410, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
-  { kind = "text", offset = 0x1410, source_mode = 1, source = "】「コニーさんですね。" },
-  { kind = "token", token = "name:older-sister", start = 0x141e, end = 0x142d, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
-  { kind = "text", offset = 0x142d, source_mode = 1, source = "先輩・・・いえ、" },
-  { kind = "token", token = "name:older-sister", start = 0x1438, end = 0x1447, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
-  { kind = "text", offset = 0x1447, source_mode = 1, source = "お姉さまから伺っています。」" },
-]
 
 [[composites]]
 id = "f0025r-1475-name-older-sister-name-friend-1-when-we"
@@ -120912,8 +120573,10 @@ status = "translated"
 
 [[entries]]
 id = "f0026l-1cfc-connie-i-am-going-to-continue-but-tell"
-file = "DISKC/F0026L.MES"
-offset = 0x1cfc
+anchors = [
+  { file = "DISKC/F0026L.MES", offset = 0x1cfc },
+  { file = "DISKC/F0026L.MES", offset = 0x1d96 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】「しちゃうけど、止めたくなったらいつでも言ってね。」"
@@ -120926,8 +120589,10 @@ notes = "Connie explicitly tells Yoshimi to say whenever she wants to stop."
 
 [[entries]]
 id = "f0026l-1d20-yoshimi-yes-please-be-gentle"
-file = "DISKC/F0026L.MES"
-offset = 0x1d20
+anchors = [
+  { file = "DISKC/F0026L.MES", offset = 0x1d20 },
+  { file = "DISKC/F0026L.MES", offset = 0x1dba },
+]
 source_mode = 1
 target_mode = 2
 source = "【良美】「ぅん・・・。優しく・・・・・・して・・・くださ・・・・・・・・・い・・・・・・・・・。」"
@@ -120937,32 +120602,6 @@ attribution = "proven"
 scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
 status = "translated"
 notes = "Yoshimi affirmatively asks Connie to be gentle."
-
-[[entries]]
-id = "f0026l-1d96-connie-i-am-going-to-continue-but-tell"
-file = "DISKC/F0026L.MES"
-offset = 0x1d96
-source_mode = 1
-target_mode = 2
-source = "【コニー】「しちゃうけど、止めたくなったらいつでも言ってね。」"
-translation = "[Connie] \"I'm going to continue, but tell me whenever you want me to stop.\""
-speaker = "connie"
-attribution = "proven"
-scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
-status = "translated"
-
-[[entries]]
-id = "f0026l-1dba-yoshimi-yes-please-be-gentle"
-file = "DISKC/F0026L.MES"
-offset = 0x1dba
-source_mode = 1
-target_mode = 2
-source = "【良美】「ぅん・・・。優しく・・・・・・して・・・くださ・・・・・・・・・い・・・・・・・・・。」"
-translation = "[Yoshimi] \"Yes... Please... be gentle...\""
-speaker = "yoshimi"
-attribution = "proven"
-scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
-status = "translated"
 
 [[entries]]
 id = "f0026l-1df9-connie-i-am-doing-this-because-you-are"
@@ -121957,8 +121596,10 @@ status = "translated"
 
 [[entries]]
 id = "f0026l-2a72-yoshimi-no-not-there-no-feeling-it-there"
-file = "DISKC/F0026L.MES"
-offset = 0x2a72
+anchors = [
+  { file = "DISKC/F0026L.MES", offset = 0x2a72 },
+  { file = "DISKC/F0026L.MES", offset = 0x2b29 },
+]
 source_mode = 1
 target_mode = 2
 source = "【良美】「だめ・・・、そこ・・・・・・、嫌あ・・・、そこで感じる・・・なんて・・・おかしく・・・あぁぁっ・・・・・・。」"
@@ -121968,19 +121609,6 @@ attribution = "proven"
 scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
 status = "translated"
 notes = "Yoshimi says dame and iya about rear stimulation, both preserved as explicit refusal; Connie repeats the action in the following branch records."
-
-[[entries]]
-id = "f0026l-2b29-yoshimi-no-not-there-no-feeling-it-there"
-file = "DISKC/F0026L.MES"
-offset = 0x2b29
-source_mode = 1
-target_mode = 2
-source = "【良美】「だめ・・・、そこ・・・・・・、嫌あ・・・、そこで感じる・・・なんて・・・おかしく・・・あぁぁっ・・・・・・。」"
-translation = "[Yoshimi] \"No... Not there... No... Feeling it there is strange... aah...\""
-speaker = "yoshimi"
-attribution = "proven"
-scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
-status = "translated"
 
 [[entries]]
 id = "f0026l-2b73-i-scoop-up-the-nectar-with-my-tongue"
@@ -122546,8 +122174,10 @@ status = "translated"
 
 [[entries]]
 id = "f0026l-312c-yoshimi-mmm-no-no-haaah"
-file = "DISKC/F0026L.MES"
-offset = 0x312c
+anchors = [
+  { file = "DISKC/F0026L.MES", offset = 0x312c },
+  { file = "DISKC/F0026L.MES", offset = 0x31fe },
+]
 source_mode = 1
 target_mode = 2
 source = "【良美】「あぅぅん、あぅぅぅ・・・ん、だめ・・・だめ・・・・・・・・・はぁぁぁ・・・・・・・・・。」"
@@ -122556,21 +122186,7 @@ speaker = "yoshimi"
 attribution = "proven"
 scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
 status = "translated"
-notes = "Yoshimi repeats dame twice; the refusal remains literal before a duplicated action block."
-
-[[entries]]
-id = "f0026l-31fe-yoshimi-mmm-no-no-haaah"
-file = "DISKC/F0026L.MES"
-offset = 0x31fe
-source_mode = 1
-target_mode = 2
-source = "【良美】「あぅぅん、あぅぅぅ・・・ん、だめ・・・だめ・・・・・・・・・はぁぁぁ・・・・・・・・・。」"
-translation = "[Yoshimi] \"Mmm... No... No... haaah...\""
-speaker = "yoshimi"
-attribution = "proven"
-scene = "coercively-framed-encounter-continues-yoshimi-alternates-explicit-requests-repeated"
-status = "translated"
-notes = "The duplicated branch again has Yoshimi repeat dame twice, preserved as 'No.'"
+notes = "Both duplicated branch records have Yoshimi repeat dame twice; preserve the refusal as 'No.'"
 
 [[entries]]
 id = "f0026l-326e-i-bring-my-face-close-to-yoshimi-and"
@@ -125463,6 +125079,16 @@ segments = [
   { kind = "text", offset = 0x0e16, source_mode = 1, source = "。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKC/F0026R.MES"
+segments = [
+  { kind = "text", offset = 0x0ed9, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:older-sister", start = 0x0edd, end = 0x0eec, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
+  { kind = "text", offset = 0x0eec, source_mode = 1, source = "】「コニーの役に立ちたいのよね？　" },
+  { kind = "token", token = "name:friend-1", start = 0x0f02, end = 0x0f11, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x0f11, source_mode = 1, source = "。」" },
+]
+
 [[composites]]
 id = "f0026r-0e1d-name-friend-1-yes"
 target_mode = 2
@@ -125503,26 +125129,6 @@ speaker = "connie"
 attribution = "proven"
 scene = "yoko-explicitly-asks-connie-touch-her-describes-kinds-stimulation"
 status = "translated"
-
-[[composites]]
-id = "f0026r-0ed9-name-older-sister-you-want-to-help-connie"
-target_mode = 2
-source = "【⟦name:older-sister⟧】「コニーの役に立ちたいのよね？　⟦name:friend-1⟧。」"
-translation = "[⟦name:older-sister⟧] \"You want to help Connie, do you not, ⟦name:friend-1⟧?\""
-speaker = "name-slot:older-sister"
-attribution = "proven"
-scene = "yoko-explicitly-asks-connie-touch-her-describes-kinds-stimulation"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKC/F0026R.MES"
-segments = [
-  { kind = "text", offset = 0x0ed9, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:older-sister", start = 0x0edd, end = 0x0eec, sha256 = "10a22011a7e845426e658a15cf2f5906f88b6280017dd6ef1b6a006ee05823b6" },
-  { kind = "text", offset = 0x0eec, source_mode = 1, source = "】「コニーの役に立ちたいのよね？　" },
-  { kind = "token", token = "name:friend-1", start = 0x0f02, end = 0x0f11, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
-  { kind = "text", offset = 0x0f11, source_mode = 1, source = "。」" },
-]
 
 [[entries]]
 id = "f0026r-0f74-connie-your-skin-is-beautiful"
@@ -125883,6 +125489,16 @@ segments = [
   { kind = "text", offset = 0x12bb, source_mode = 1, source = "とお尻の穴の、両方を攻められるのが好きです・・・。」" },
 ]
 
+[[composites.occurrences]]
+file = "DISKC/F0026R.MES"
+segments = [
+  { kind = "text", offset = 0x13b2, source_mode = 1, source = "【" },
+  { kind = "token", token = "name:friend-1", start = 0x13b6, end = 0x13c5, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x13c5, source_mode = 1, source = "】「はい・・・、" },
+  { kind = "token", token = "term:slot-1", start = 0x13d0, end = 0x13df, sha256 = "df9cd9c21054919e9a10a247997f351d6cb92015174bdf4f9c35cbbbcdc488ef" },
+  { kind = "text", offset = 0x13df, source_mode = 1, source = "とお尻の穴の、両方を攻められるのが好きです・・・。」" },
+]
+
 [[composites]]
 id = "f0026r-12db-name-friend-1-confesses-it-even-as-fluid"
 target_mode = 2
@@ -125905,26 +125521,6 @@ file = "DISKC/F0026R.MES"
 segments = [
   { kind = "token", token = "name:friend-1", start = 0x13ff, end = 0x140e, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
   { kind = "text", offset = 0x140e, source_mode = 1, source = "は告白しながらもトクトクと股間に愛液を滴らせる。" },
-]
-
-[[composites]]
-id = "f0026r-13b2-name-friend-1-yes-i-like-having-both"
-target_mode = 2
-source = "【⟦name:friend-1⟧】「はい・・・、⟦term:slot-1⟧とお尻の穴の、両方を攻められるのが好きです・・・。」"
-translation = "[⟦name:friend-1⟧] \"Yes... I like having both my ⟦term:slot-1⟧ and my rear opening stimulated...\""
-speaker = "name-slot:friend-1"
-attribution = "proven"
-scene = "yoko-explicitly-asks-connie-touch-her-describes-kinds-stimulation"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKC/F0026R.MES"
-segments = [
-  { kind = "text", offset = 0x13b2, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:friend-1", start = 0x13b6, end = 0x13c5, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
-  { kind = "text", offset = 0x13c5, source_mode = 1, source = "】「はい・・・、" },
-  { kind = "token", token = "term:slot-1", start = 0x13d0, end = 0x13df, sha256 = "df9cd9c21054919e9a10a247997f351d6cb92015174bdf4f9c35cbbbcdc488ef" },
-  { kind = "text", offset = 0x13df, source_mode = 1, source = "とお尻の穴の、両方を攻められるのが好きです・・・。」" },
 ]
 
 [[composites]]
@@ -126624,16 +126220,6 @@ segments = [
   { kind = "token", token = "name:friend-1", start = 0x1c13, end = 0x1c22, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
   { kind = "text", offset = 0x1c22, source_mode = 1, source = "は声を出しにくそうだ。" },
 ]
-
-[[composites]]
-id = "f0026r-1cec-with-name-older-sister-covering-her-lips-name"
-target_mode = 2
-source = "唇を⟦name:older-sister⟧に塞がれているので、⟦name:friend-1⟧は声を出しにくそうだ。"
-translation = "With ⟦name:older-sister⟧ covering her lips, ⟦name:friend-1⟧ seems unable to voice herself easily."
-speaker = "connie"
-attribution = "inferred"
-scene = "three-women-engage-reciprocal-kissing-stimulation-yoko-older-sister"
-status = "translated"
 
 [[composites.occurrences]]
 file = "DISKC/F0026R.MES"
@@ -130126,6 +129712,16 @@ segments = [
   { kind = "text", offset = 0x46c2, source_mode = 1, source = "も積極的に舌を求めて、絡ませる。" },
 ]
 
+[[composites.occurrences]]
+file = "DISKC/F0026R.MES"
+segments = [
+  { kind = "text", offset = 0x473c, source_mode = 1, source = "あたしが" },
+  { kind = "token", token = "name:friend-1", start = 0x4743, end = 0x4752, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x4752, source_mode = 1, source = "にキスをすると、" },
+  { kind = "token", token = "name:friend-1", start = 0x475d, end = 0x476c, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
+  { kind = "text", offset = 0x476c, source_mode = 1, source = "も積極的に舌を求めて、絡ませる。" },
+]
+
 [[composites]]
 id = "f0026r-46db-name-friend-1-mmm-mmm"
 target_mode = 2
@@ -130166,26 +129762,6 @@ speaker = "connie"
 attribution = "proven"
 scene = "three-women-engage-reciprocal-kissing-stimulation-yoko-older-sister"
 status = "translated"
-
-[[composites]]
-id = "f0026r-473c-when-i-kiss-name-friend-1-name-friend"
-target_mode = 2
-source = "あたしが⟦name:friend-1⟧にキスをすると、⟦name:friend-1⟧も積極的に舌を求めて、絡ませる。"
-translation = "When I kiss ⟦name:friend-1⟧, ⟦name:friend-1⟧ actively seeks and entwines my tongue."
-speaker = "connie"
-attribution = "inferred"
-scene = "three-women-engage-reciprocal-kissing-stimulation-yoko-older-sister"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKC/F0026R.MES"
-segments = [
-  { kind = "text", offset = 0x473c, source_mode = 1, source = "あたしが" },
-  { kind = "token", token = "name:friend-1", start = 0x4743, end = 0x4752, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
-  { kind = "text", offset = 0x4752, source_mode = 1, source = "にキスをすると、" },
-  { kind = "token", token = "name:friend-1", start = 0x475d, end = 0x476c, sha256 = "4afd889f5deb3933a35ce3779d23bf16e10206b279da9788ed0fd3fb2da5c75e" },
-  { kind = "text", offset = 0x476c, source_mode = 1, source = "も積極的に舌を求めて、絡ませる。" },
-]
 
 [[composites]]
 id = "f0026r-47d6-i-insert-my-tongue-into-name-friend-1"
@@ -140384,6 +139960,14 @@ segments = [
   { kind = "text", offset = 0x21df, source_mode = 1, source = "が押さえている手の動きを止めた。" },
 ]
 
+[[composites.occurrences]]
+file = "DISKC/F0029.MES"
+segments = [
+  { kind = "text", offset = 0x227f, source_mode = 1, source = "あたしは" },
+  { kind = "token", token = "name:dear-person", start = 0x2286, end = 0x2295, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
+  { kind = "text", offset = 0x2295, source_mode = 1, source = "が押さえている手の動きを止めた。" },
+]
+
 [[composites]]
 id = "f0029-21f4-name-dear-person-aah-aaaaaah"
 target_mode = 2
@@ -140448,24 +140032,6 @@ speaker = "connie"
 attribution = "proven"
 scene = "women-explicitly-express-love-continue-reciprocal-touching-connie-pauses"
 status = "translated"
-
-[[composites]]
-id = "f0029-227f-i-stop-the-hand-that-name-dear-person"
-target_mode = 2
-source = "あたしは⟦name:dear-person⟧が押さえている手の動きを止めた。"
-translation = "I stop the hand that ⟦name:dear-person⟧ is holding."
-speaker = "connie"
-attribution = "inferred"
-scene = "women-explicitly-express-love-continue-reciprocal-touching-connie-pauses"
-status = "translated"
-
-[[composites.occurrences]]
-file = "DISKC/F0029.MES"
-segments = [
-  { kind = "text", offset = 0x227f, source_mode = 1, source = "あたしは" },
-  { kind = "token", token = "name:dear-person", start = 0x2286, end = 0x2295, sha256 = "0bf435a162cabd6bcbe527e7cb3e0c592985e8af272a841e8012aefbcae79656" },
-  { kind = "text", offset = 0x2295, source_mode = 1, source = "が押さえている手の動きを止めた。" },
-]
 
 [[composites]]
 id = "f0029-2325-name-dear-person-presses-her-forehead-against-mine"
@@ -153086,8 +152652,10 @@ status = "translated"
 
 [[entries]]
 id = "f003400-1909-marna-dr-kanzaki-told-me-not-to-let"
-file = "DISKD/F003400.MES"
-offset = 0x1909
+anchors = [
+  { file = "DISKD/F003400.MES", offset = 0x1909 },
+  { file = "DISKD/F003400.MES", offset = 0x1979 },
+]
 source_mode = 1
 target_mode = 2
 source = "【マーナ】「神崎博士から、部屋から出すなって言われてます・・・。コニーおねえさんのお願いでも、それだけは許してください・・・。」"
@@ -153111,19 +152679,6 @@ source = "マーナは本気で困っている。"
 translation = "Marna is genuinely distressed."
 speaker = "connie"
 attribution = "inferred"
-scene = "connie-frightens-marna-then-learns-mutant-obeys-dr-kanzaki"
-status = "translated"
-
-[[entries]]
-id = "f003400-1979-marna-dr-kanzaki-told-me-not-to-let"
-file = "DISKD/F003400.MES"
-offset = 0x1979
-source_mode = 1
-target_mode = 2
-source = "【マーナ】「神崎博士から、部屋から出すなって言われてます・・・。コニーおねえさんのお願いでも、それだけは許してください・・・。」"
-translation = "[Marna] \"Dr. Kanzaki told me not to let you out... Even if you ask, Big Sis, please forgive me for refusing that one thing...\""
-speaker = "marna"
-attribution = "proven"
 scene = "connie-frightens-marna-then-learns-mutant-obeys-dr-kanzaki"
 status = "translated"
 
@@ -157370,8 +156925,10 @@ status = "translated"
 
 [[entries]]
 id = "f0034002-3689-marna-yes"
-file = "DISKD/F0034002.MES"
-offset = 0x3689
+anchors = [
+  { file = "DISKD/F0034002.MES", offset = 0x3689 },
+  { file = "DISKD/F0034002.MES", offset = 0x3708 },
+]
 source_mode = 1
 target_mode = 2
 source = "【マーナ】「・・はい・・・。」"
@@ -157381,19 +156938,6 @@ attribution = "proven"
 scene = "alternate-marna-intimacy-branch-begins-another-explicit-no-before"
 status = "translated"
 notes = "Marna later answers yes when Connie asks whether they can proceed without words; preserve this separately from the earlier no."
-
-[[entries]]
-id = "f0034002-3708-marna-yes"
-file = "DISKD/F0034002.MES"
-offset = 0x3708
-source_mode = 1
-target_mode = 2
-source = "【マーナ】「・・はい・・・。」"
-translation = "[Marna] \"...Yes...\""
-speaker = "marna"
-attribution = "proven"
-scene = "alternate-marna-intimacy-branch-begins-another-explicit-no-before"
-status = "translated"
 
 [[entries]]
 id = "f0034002-3725-while-pleasuring-marna-below-i-knead-her-breast"
@@ -158239,8 +157783,10 @@ status = "translated"
 
 [[entries]]
 id = "f0034003-1049-silence"
-file = "DISKD/F0034003.MES"
-offset = 0x1049
+anchors = [
+  { file = "DISKD/F0034003.MES", offset = 0x1049 },
+  { file = "DISKD/F0034003.MES", offset = 0x11bc },
+]
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・・・・・・・・・・・・・・。"
@@ -158391,19 +157937,6 @@ offset = 0x119e
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・・・・・・・・・・。"
-translation = "..."
-speaker = "connie"
-attribution = "inferred"
-scene = "after-returning-duct-connie-sleeps-by-day-prepares-rescue"
-status = "translated"
-
-[[entries]]
-id = "f0034003-11bc-silence"
-file = "DISKD/F0034003.MES"
-offset = 0x11bc
-source_mode = 1
-target_mode = 2
-source = "・・・・・・・・・・・・・・・・・・・・・・・・・・・・。"
 translation = "..."
 speaker = "connie"
 attribution = "inferred"
@@ -160471,8 +160004,12 @@ status = "translated"
 
 [[entries]]
 id = "f003401-02ba-look"
-file = "DISKD/F003401.MES"
-offset = 0x02ba
+anchors = [
+  { file = "DISKD/F003401.MES", offset = 0x02ba },
+  { file = "DISKD/F003405.MES", offset = 0x0256 },
+  { file = "DISKD/F003406.MES", offset = 0x01e2 },
+  { file = "DISKD/F003407.MES", offset = 0x0252 },
+]
 source_mode = 1
 target_mode = 2
 source = "見る"
@@ -160484,8 +160021,12 @@ status = "translated"
 
 [[entries]]
 id = "f003401-02cb-think"
-file = "DISKD/F003401.MES"
-offset = 0x02cb
+anchors = [
+  { file = "DISKD/F003401.MES", offset = 0x02cb },
+  { file = "DISKD/F003405.MES", offset = 0x0267 },
+  { file = "DISKD/F003406.MES", offset = 0x01f4 },
+  { file = "DISKD/F003407.MES", offset = 0x0264 },
+]
 source_mode = 1
 target_mode = 2
 source = "考える"
@@ -160497,8 +160038,12 @@ status = "translated"
 
 [[entries]]
 id = "f003401-02dd-talk"
-file = "DISKD/F003401.MES"
-offset = 0x02dd
+anchors = [
+  { file = "DISKD/F003401.MES", offset = 0x02dd },
+  { file = "DISKD/F003405.MES", offset = 0x027b },
+  { file = "DISKD/F003406.MES", offset = 0x0207 },
+  { file = "DISKD/F003407.MES", offset = 0x0278 },
+]
 source_mode = 1
 target_mode = 2
 source = "話す"
@@ -160567,8 +160112,12 @@ segments = [
 
 [[entries]]
 id = "f003401-0398-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003401.MES"
-offset = 0x0398
+anchors = [
+  { file = "DISKD/F003401.MES", offset = 0x0398 },
+  { file = "DISKD/F003405.MES", offset = 0x0317 },
+  { file = "DISKD/F003406.MES", offset = 0x02cf },
+  { file = "DISKD/F003407.MES", offset = 0x034c },
+]
 source_mode = 1
 target_mode = 2
 source = "あたしは再び通風口へ入ることにした。"
@@ -163624,45 +163173,6 @@ scene = "midnight-connie-dons-nurse-disguise-unfolds-wheelchair-enters-corridor"
 status = "translated"
 
 [[entries]]
-id = "f003405-0256-look"
-file = "DISKD/F003405.MES"
-offset = 0x0256
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003405-0267-think"
-file = "DISKD/F003405.MES"
-offset = 0x0267
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003405-027b-talk"
-file = "DISKD/F003405.MES"
-offset = 0x027b
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
 id = "f003405-02ab-i-feel-for-anyone-nearby"
 file = "DISKD/F003405.MES"
 offset = 0x02ab
@@ -163709,19 +163219,6 @@ source_mode = 1
 target_mode = 2
 source = "ヒトがいないにしては、埃やゴミがなく、清潔にしてある。"
 translation = "Despite being empty, the room is clean, with no dust or rubbish."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003405-0317-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003405.MES"
-offset = 0x0317
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
@@ -163776,45 +163273,6 @@ source = "【コニー】（誰もいないってば。（あせあせ））"
 translation = "[Connie] (Nobody's here, I keep telling you...)"
 speaker = "connie"
 attribution = "proven"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003406-01e2-look"
-file = "DISKD/F003406.MES"
-offset = 0x01e2
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003406-01f4-think"
-file = "DISKD/F003406.MES"
-offset = 0x01f4
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003406-0207-talk"
-file = "DISKD/F003406.MES"
-offset = 0x0207
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
 scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
 status = "translated"
 
@@ -163884,19 +163342,6 @@ scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
 status = "translated"
 
 [[entries]]
-id = "f003406-02cf-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003406.MES"
-offset = 0x02cf
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
 id = "f003406-0300-connie-meeow"
 file = "DISKD/F003406.MES"
 offset = 0x0300
@@ -163918,45 +163363,6 @@ target_mode = 2
 source = "通風口の中で喋ると、暗闇に吸い込まれるように音が消えた。"
 translation = "When I speak inside the vent, the sound disappears as though swallowed by the darkness."
 speaker = "connie"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003407-0252-look"
-file = "DISKD/F003407.MES"
-offset = 0x0252
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003407-0264-think"
-file = "DISKD/F003407.MES"
-offset = 0x0264
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003407-0278-talk"
-file = "DISKD/F003407.MES"
-offset = 0x0278
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
 attribution = "inferred"
 scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
 status = "translated"
@@ -163997,19 +163403,6 @@ source = "【コニー】（誰もいないんじゃしかたないわ。）"
 translation = "[Connie] (If nobody's here, there's nothing to do.)"
 speaker = "connie"
 attribution = "proven"
-scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
-status = "translated"
-
-[[entries]]
-id = "f003407-034c-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003407.MES"
-offset = 0x034c
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
-speaker = "connie"
-attribution = "inferred"
 scene = "connie-searches-another-branch-facility-ventilation-system-mini-form"
 status = "translated"
 
@@ -167833,8 +167226,10 @@ segments = [
 
 [[entries]]
 id = "f0034101-1221-connie-did-she-cure-it-or-only-extend"
-file = "DISKD/F0034101.MES"
-offset = 0x1221
+anchors = [
+  { file = "DISKD/F0034101.MES", offset = 0x1221 },
+  { file = "DISKD/F0034101.MES", offset = 0x12d5 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（治ったのか・・・、ロボトミー手術をして実験体に使うまでは延命したということか・・・？）"
@@ -167844,19 +167239,6 @@ attribution = "proven"
 scene = "connie-enters-corridor-hides-dr-kanzaki-threats-moment-learns"
 status = "translated"
 notes = "Connie explicitly fears that life extension only preserves the patient for a lobotomy and experimentation."
-
-[[entries]]
-id = "f0034101-12d5-connie-did-she-cure-it-or-only-extend"
-file = "DISKD/F0034101.MES"
-offset = 0x12d5
-source_mode = 1
-target_mode = 2
-source = "【コニー】（治ったのか・・・、ロボトミー手術をして実験体に使うまでは延命したということか・・・？）"
-translation = "[Connie] (Did she cure her... or merely keep her alive until they could lobotomize her and use her as a test subject...?)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-enters-corridor-hides-dr-kanzaki-threats-moment-learns"
-status = "translated"
 
 [[composites]]
 id = "f0034101-1317-connie-name-dear-person-what-i-am-about"
@@ -170327,8 +169709,15 @@ status = "translated"
 
 [[entries]]
 id = "f003411-01de-look"
-file = "DISKD/F003411.MES"
-offset = 0x01de
+anchors = [
+  { file = "DISKD/F003411.MES", offset = 0x01de },
+  { file = "DISKD/F003412.MES", offset = 0x01e0 },
+  { file = "DISKD/F003413.MES", offset = 0x01ca },
+  { file = "DISKD/F003414.MES", offset = 0x01da },
+  { file = "DISKD/F003415.MES", offset = 0x0264 },
+  { file = "DISKD/F003416.MES", offset = 0x01d8 },
+  { file = "DISKD/F003417.MES", offset = 0x01e0 },
+]
 source_mode = 1
 target_mode = 2
 source = "見る"
@@ -170340,8 +169729,15 @@ status = "translated"
 
 [[entries]]
 id = "f003411-01f0-think"
-file = "DISKD/F003411.MES"
-offset = 0x01f0
+anchors = [
+  { file = "DISKD/F003411.MES", offset = 0x01f0 },
+  { file = "DISKD/F003412.MES", offset = 0x01f2 },
+  { file = "DISKD/F003413.MES", offset = 0x01dc },
+  { file = "DISKD/F003414.MES", offset = 0x01ec },
+  { file = "DISKD/F003415.MES", offset = 0x0275 },
+  { file = "DISKD/F003416.MES", offset = 0x01ea },
+  { file = "DISKD/F003417.MES", offset = 0x01f2 },
+]
 source_mode = 1
 target_mode = 2
 source = "考える"
@@ -170353,8 +169749,15 @@ status = "translated"
 
 [[entries]]
 id = "f003411-0202-talk"
-file = "DISKD/F003411.MES"
-offset = 0x0202
+anchors = [
+  { file = "DISKD/F003411.MES", offset = 0x0202 },
+  { file = "DISKD/F003412.MES", offset = 0x0204 },
+  { file = "DISKD/F003413.MES", offset = 0x01ee },
+  { file = "DISKD/F003414.MES", offset = 0x01fe },
+  { file = "DISKD/F003415.MES", offset = 0x0287 },
+  { file = "DISKD/F003416.MES", offset = 0x01fc },
+  { file = "DISKD/F003417.MES", offset = 0x0204 },
+]
 source_mode = 1
 target_mode = 2
 source = "話す"
@@ -170392,8 +169795,15 @@ status = "translated"
 
 [[entries]]
 id = "f003411-026e-connie-act-do-not-overthink"
-file = "DISKD/F003411.MES"
-offset = 0x026e
+anchors = [
+  { file = "DISKD/F003411.MES", offset = 0x026e },
+  { file = "DISKD/F003412.MES", offset = 0x02d3 },
+  { file = "DISKD/F003413.MES", offset = 0x024d },
+  { file = "DISKD/F003414.MES", offset = 0x028e },
+  { file = "DISKD/F003415.MES", offset = 0x02fb },
+  { file = "DISKD/F003416.MES", offset = 0x0270 },
+  { file = "DISKD/F003417.MES", offset = 0x0285 },
+]
 source_mode = 1
 target_mode = 2
 source = "【コニー】（・・・考えるより、行動しましょ！）"
@@ -170405,8 +169815,15 @@ status = "translated"
 
 [[entries]]
 id = "f003411-028e-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003411.MES"
-offset = 0x028e
+anchors = [
+  { file = "DISKD/F003411.MES", offset = 0x028e },
+  { file = "DISKD/F003412.MES", offset = 0x02f2 },
+  { file = "DISKD/F003413.MES", offset = 0x026d },
+  { file = "DISKD/F003414.MES", offset = 0x02c9 },
+  { file = "DISKD/F003415.MES", offset = 0x031b },
+  { file = "DISKD/F003416.MES", offset = 0x0291 },
+  { file = "DISKD/F003417.MES", offset = 0x02a7 },
+]
 source_mode = 1
 target_mode = 2
 source = "あたしは再び通風口へ入ることにした。"
@@ -170435,6 +169852,10 @@ anchors = [
   { file = "DISKD/F003411.MES", offset = 0x02e3 },
   { file = "DISKD/F003411.MES", offset = 0x036f },
   { file = "DISKD/F003411.MES", offset = 0x039c },
+  { file = "DISKD/F003412.MES", offset = 0x0344 },
+  { file = "DISKD/F003412.MES", offset = 0x037c },
+  { file = "DISKD/F003412.MES", offset = 0x03de },
+  { file = "DISKD/F003412.MES", offset = 0x0453 },
 ]
 source_mode = 1
 target_mode = 2
@@ -170498,45 +169919,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003412-01e0-look"
-file = "DISKD/F003412.MES"
-offset = 0x01e0
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003412-01f2-think"
-file = "DISKD/F003412.MES"
-offset = 0x01f2
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003412-0204-talk"
-file = "DISKD/F003412.MES"
-offset = 0x0204
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003412-0242-a-dead-end"
 file = "DISKD/F003412.MES"
 offset = 0x0242
@@ -170589,32 +169971,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003412-02d3-connie-act-do-not-overthink"
-file = "DISKD/F003412.MES"
-offset = 0x02d3
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003412-02f2-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003412.MES"
-offset = 0x02f2
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003412-0332-connie-mee-mee"
 file = "DISKD/F003412.MES"
 offset = 0x0332
@@ -170623,23 +169979,6 @@ target_mode = 2
 source = "【コニー】「にー、にー。」"
 translation = "[Connie] \"Mee, mee.\""
 speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003412-0344-ventilation-system-rooooar"
-anchors = [
-  { file = "DISKD/F003412.MES", offset = 0x0344 },
-  { file = "DISKD/F003412.MES", offset = 0x037c },
-  { file = "DISKD/F003412.MES", offset = 0x03de },
-  { file = "DISKD/F003412.MES", offset = 0x0453 },
-]
-source_mode = 1
-target_mode = 2
-source = "【空調システム】「ごおごおごおごおごお・・・。」"
-translation = "[Ventilation System] \"Rooooar...\""
-speaker = "ventilation-system"
 attribution = "proven"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
@@ -170723,45 +170062,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003413-01ca-look"
-file = "DISKD/F003413.MES"
-offset = 0x01ca
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003413-01dc-think"
-file = "DISKD/F003413.MES"
-offset = 0x01dc
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003413-01ee-talk"
-file = "DISKD/F003413.MES"
-offset = 0x01ee
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003413-021e-the-roar-of-the-ventilation-system-echoes-in"
 file = "DISKD/F003413.MES"
 offset = 0x021e
@@ -170769,32 +170069,6 @@ source_mode = 1
 target_mode = 2
 source = "真っ暗な中に、空調システムのごおごおという音が響く。"
 translation = "The roar of the ventilation system echoes in the darkness."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003413-024d-connie-act-do-not-overthink"
-file = "DISKD/F003413.MES"
-offset = 0x024d
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003413-026d-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003413.MES"
-offset = 0x026d
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
@@ -170905,45 +170179,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003414-01da-look"
-file = "DISKD/F003414.MES"
-offset = 0x01da
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003414-01ec-think"
-file = "DISKD/F003414.MES"
-offset = 0x01ec
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003414-01fe-talk"
-file = "DISKD/F003414.MES"
-offset = 0x01fe
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003414-022e-i-hear-the-ventilation-system-roaring-above"
 file = "DISKD/F003414.MES"
 offset = 0x022e
@@ -170970,19 +170205,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003414-028e-connie-act-do-not-overthink"
-file = "DISKD/F003414.MES"
-offset = 0x028e
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003414-02ad-a-dead-end-nothing-gained-here"
 file = "DISKD/F003414.MES"
 offset = 0x02ad
@@ -170990,19 +170212,6 @@ source_mode = 1
 target_mode = 2
 source = "行き止まりだから、なにも収穫はなしね。"
 translation = "A dead end. Nothing gained here."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003414-02c9-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003414.MES"
-offset = 0x02c9
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
@@ -171089,45 +170298,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003415-0264-look"
-file = "DISKD/F003415.MES"
-offset = 0x0264
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003415-0275-think"
-file = "DISKD/F003415.MES"
-offset = 0x0275
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003415-0287-talk"
-file = "DISKD/F003415.MES"
-offset = 0x0287
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003415-02b5-connie-it-looks-like-a-storeroom"
 file = "DISKD/F003415.MES"
 offset = 0x02b5
@@ -171148,32 +170318,6 @@ source_mode = 1
 target_mode = 2
 source = "ヒトはいないし、役に立ちそうなものもなさそう。"
 translation = "Nobody is here, and nothing looks useful."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003415-02fb-connie-act-do-not-overthink"
-file = "DISKD/F003415.MES"
-offset = 0x02fb
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003415-031b-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003415.MES"
-offset = 0x031b
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
@@ -171258,45 +170402,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003416-01d8-look"
-file = "DISKD/F003416.MES"
-offset = 0x01d8
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003416-01ea-think"
-file = "DISKD/F003416.MES"
-offset = 0x01ea
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003416-01fc-talk"
-file = "DISKD/F003416.MES"
-offset = 0x01fc
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003416-022c-it-is-pitch-black-and-i-hear-only"
 file = "DISKD/F003416.MES"
 offset = 0x022c
@@ -171317,32 +170422,6 @@ source_mode = 1
 target_mode = 2
 source = "他に人の気配がずっと遠くに聞こえる程度。"
 translation = "I can barely sense humans far away."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003416-0270-connie-act-do-not-overthink"
-file = "DISKD/F003416.MES"
-offset = 0x0270
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003416-0291-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003416.MES"
-offset = 0x0291
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
@@ -171416,45 +170495,6 @@ scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
 
 [[entries]]
-id = "f003417-01e0-look"
-file = "DISKD/F003417.MES"
-offset = 0x01e0
-source_mode = 1
-target_mode = 2
-source = "見る"
-translation = "LOOK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003417-01f2-think"
-file = "DISKD/F003417.MES"
-offset = 0x01f2
-source_mode = 1
-target_mode = 2
-source = "考える"
-translation = "THINK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003417-0204-talk"
-file = "DISKD/F003417.MES"
-offset = 0x0204
-source_mode = 1
-target_mode = 2
-source = "話す"
-translation = "TALK"
-speaker = "ui"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
 id = "f003417-0234-the-vent-ends-here-though-it-continues-upward"
 file = "DISKD/F003417.MES"
 offset = 0x0234
@@ -171475,32 +170515,6 @@ source_mode = 1
 target_mode = 2
 source = "上からは空調システムのごおごおという音だけが聞こえる。"
 translation = "I hear only the ventilation system roaring above."
-speaker = "connie"
-attribution = "inferred"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003417-0285-connie-act-do-not-overthink"
-file = "DISKD/F003417.MES"
-offset = 0x0285
-source_mode = 1
-target_mode = 2
-source = "【コニー】（・・・考えるより、行動しましょ！）"
-translation = "[Connie] (...Act, don't overthink!)"
-speaker = "connie"
-attribution = "proven"
-scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
-status = "translated"
-
-[[entries]]
-id = "f003417-02a7-i-decide-to-enter-the-vent-again"
-file = "DISKD/F003417.MES"
-offset = 0x02a7
-source_mode = 1
-target_mode = 2
-source = "あたしは再び通風口へ入ることにした。"
-translation = "I decide to enter the vent again."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
@@ -174553,8 +173567,10 @@ status = "translated"
 
 [[entries]]
 id = "f0035-289e-marna-mmm-aah-no-mmm"
-file = "DISKD/F0035.MES"
-offset = 0x289e
+anchors = [
+  { file = "DISKD/F0035.MES", offset = 0x289e },
+  { file = "DISKD/F0035.MES", offset = 0x2920 },
+]
 source_mode = 1
 target_mode = 2
 source = "【マーナ】「んん！　はひゃぁぁん、いやぁ・・んふぅ、んふぅ・・・・。」"
@@ -174563,21 +173579,7 @@ speaker = "marna"
 attribution = "proven"
 scene = "marna-participates-reciprocal-oral-contact-repeatedly-saying-no-particular"
 status = "translated"
-notes = "Marna explicitly says iya after Connie takes her nub in her mouth."
-
-[[entries]]
-id = "f0035-2920-marna-mmm-aah-no-mmm"
-file = "DISKD/F0035.MES"
-offset = 0x2920
-source_mode = 1
-target_mode = 2
-source = "【マーナ】「んん！　はひゃぁぁん、いやぁ・・んふぅ、んふぅ・・・・。」"
-translation = "[Marna] \"Mmm! Aah... no... mmm...\""
-speaker = "marna"
-attribution = "proven"
-scene = "marna-participates-reciprocal-oral-contact-repeatedly-saying-no-particular"
-status = "translated"
-notes = "Repeated branch occurrence of Marna explicitly saying iya."
+notes = "Both duplicated branch occurrences have Marna explicitly say iya after Connie takes her nub in her mouth."
 
 [[entries]]
 id = "f0035-2951-marna-laps-wetly-at-my-cleft-too"
@@ -197018,8 +196020,10 @@ status = "translated"
 
 [[entries]]
 id = "silk-0272-requires-a-bus-mouse-and-ms-dos-ver"
-file = "DISKA/SILK.MES"
-offset = 0x0272
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0272 },
+  { file = "DISKA/SILK.MES", offset = 0x0680 },
+]
 source_mode = 1
 target_mode = 2
 source = "※バスマウスとＭＳ－ＤＯＳ　Ｖｅｒ．３．××が必要です。\n"
@@ -197031,8 +196035,13 @@ status = "translated"
 
 [[entries]]
 id = "silk-0296-hard-disks-unsupported-two-floppy-drives-required"
-file = "DISKA/SILK.MES"
-offset = 0x0296
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x0296 },
+  { file = "DISKA/SILK.MES", offset = 0x0495 },
+  { file = "DISKA/SILK.MES", offset = 0x06a4 },
+  { file = "DISKA/SILK.MES", offset = 0x089a },
+  { file = "DISKA/SILK.MES", offset = 0x0a76 },
+]
 source_mode = 1
 target_mode = 2
 source = "※ハードディスク不対応。要２ドライブ。\n"
@@ -197044,8 +196053,10 @@ status = "translated"
 
 [[entries]]
 id = "silk-02ad-pc-98note-is-not-supported"
-file = "DISKA/SILK.MES"
-offset = 0x02ad
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x02ad },
+  { file = "DISKA/SILK.MES", offset = 0x06bb },
+]
 source_mode = 1
 target_mode = 2
 source = "※９８ＮＯＴＥには対応しておりません。\n"
@@ -197173,22 +196184,12 @@ scene = "game-period-silky-product-catalog"
 status = "translated"
 
 [[entries]]
-id = "silk-0495-hard-disks-unsupported-two-floppy-drives-required"
-file = "DISKA/SILK.MES"
-offset = 0x0495
-source_mode = 1
-target_mode = 2
-source = "※ハードディスク不対応。要２ドライブ。\n"
-translation = "Hard disks unsupported; two floppy drives required.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
 id = "silk-04ac-the-fm-towns-version-requires"
-file = "DISKA/SILK.MES"
-offset = 0x04ac
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x04ac },
+  { file = "DISKA/SILK.MES", offset = 0x08b1 },
+  { file = "DISKA/SILK.MES", offset = 0x0a8d },
+]
 source_mode = 1
 target_mode = 2
 source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
@@ -197200,8 +196201,11 @@ status = "translated"
 
 [[entries]]
 id = "silk-04be-system-software-ver-2-1-l20-or-later"
-file = "DISKA/SILK.MES"
-offset = 0x04be
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x04be },
+  { file = "DISKA/SILK.MES", offset = 0x08c3 },
+  { file = "DISKA/SILK.MES", offset = 0x0a9f },
+]
 source_mode = 1
 target_mode = 2
 source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
@@ -197213,8 +196217,11 @@ status = "translated"
 
 [[entries]]
 id = "silk-04de-price-7-800-yen-each"
-file = "DISKA/SILK.MES"
-offset = 0x04de
+anchors = [
+  { file = "DISKA/SILK.MES", offset = 0x04de },
+  { file = "DISKA/SILK.MES", offset = 0x08e3 },
+  { file = "DISKA/SILK.MES", offset = 0x0abf },
+]
 source_mode = 1
 target_mode = 2
 source = "各価格７，８００円"
@@ -197223,6 +196230,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses the SILK.MES default layout while matching copies require explicit per-surface limits."
 
 [[entries]]
 id = "silk-056b-iku-iku-pakkun"
@@ -197310,45 +196318,6 @@ source_mode = 1
 target_mode = 2
 source = "ＰＣ９８０１シリーズ（５・３．５インチ）平成４年１１月２０日発売\n"
 translation = "PC-9801 series (5- and 3.5-inch), released November 20, 1992\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-0680-requires-a-bus-mouse-and-ms-dos-ver"
-file = "DISKA/SILK.MES"
-offset = 0x0680
-source_mode = 1
-target_mode = 2
-source = "※バスマウスとＭＳ－ＤＯＳ　Ｖｅｒ．３．××が必要です。\n"
-translation = "Requires a bus mouse and MS-DOS Ver. 3.xx.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-06a4-hard-disks-unsupported-two-floppy-drives-required"
-file = "DISKA/SILK.MES"
-offset = 0x06a4
-source_mode = 1
-target_mode = 2
-source = "※ハードディスク不対応。要２ドライブ。\n"
-translation = "Hard disks unsupported; two floppy drives required.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-06bb-pc-98note-is-not-supported"
-file = "DISKA/SILK.MES"
-offset = 0x06bb
-source_mode = 1
-target_mode = 2
-source = "※９８ＮＯＴＥには対応しておりません。\n"
-translation = "PC-98NOTE is not supported.\n"
 speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
@@ -197459,58 +196428,6 @@ scene = "game-period-silky-product-catalog"
 status = "translated"
 
 [[entries]]
-id = "silk-089a-hard-disks-unsupported-two-floppy-drives-required"
-file = "DISKA/SILK.MES"
-offset = 0x089a
-source_mode = 1
-target_mode = 2
-source = "※ハードディスク不対応。要２ドライブ。\n"
-translation = "Hard disks unsupported; two floppy drives required.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-08b1-the-fm-towns-version-requires"
-file = "DISKA/SILK.MES"
-offset = 0x08b1
-source_mode = 1
-target_mode = 2
-source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
-translation = "The FM TOWNS version requires\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-08c3-system-software-ver-2-1-l20-or-later"
-file = "DISKA/SILK.MES"
-offset = 0x08c3
-source_mode = 1
-target_mode = 2
-source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
-translation = "System Software Ver. 2.1 L20 or later.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-08e3-price-7-800-yen-each"
-file = "DISKA/SILK.MES"
-offset = 0x08e3
-source_mode = 1
-target_mode = 2
-source = "各価格７，８００円"
-translation = "Price: 7,800 yen each"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
 id = "silk-0970-crescent"
 file = "DISKA/SILK.MES"
 offset = 0x0970
@@ -197583,58 +196500,6 @@ source_mode = 1
 target_mode = 2
 source = "ＰＣ９８０１シリーズ（５・３．５インチ）・Ｘ６８０００シリーズ（５インチ）・ＦＭ－ＴＯＷＮＳシリーズ（３．５インチ）平成５年１０月２１日発売\n"
 translation = "PC-9801 (5- and 3.5-inch), X68000 (5-inch), and FM TOWNS (3.5-inch); released October 21, 1993\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-0a76-hard-disks-unsupported-two-floppy-drives-required"
-file = "DISKA/SILK.MES"
-offset = 0x0a76
-source_mode = 1
-target_mode = 2
-source = "※ハードディスク不対応。要２ドライブ。\n"
-translation = "Hard disks unsupported; two floppy drives required.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-0a8d-the-fm-towns-version-requires"
-file = "DISKA/SILK.MES"
-offset = 0x0a8d
-source_mode = 1
-target_mode = 2
-source = "※ＦＭ－ＴＯＷＮＳシリーズは\n"
-translation = "The FM TOWNS version requires\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-0a9f-system-software-ver-2-1-l20-or-later"
-file = "DISKA/SILK.MES"
-offset = 0x0a9f
-source_mode = 1
-target_mode = 2
-source = "システムソフトウエアＶｅｒ．２．１Ｌ２０以上が必要です。\n"
-translation = "System Software Ver. 2.1 L20 or later.\n"
-speaker = "catalog-copy"
-attribution = "inferred"
-scene = "game-period-silky-product-catalog"
-status = "translated"
-
-[[entries]]
-id = "silk-0abf-price-7-800-yen-each"
-file = "DISKA/SILK.MES"
-offset = 0x0abf
-source_mode = 1
-target_mode = 2
-source = "各価格７，８００円"
-translation = "Price: 7,800 yen each"
 speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
@@ -197781,6 +196646,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 46-column, 2-row surface-specific limit."
 
 [[entries]]
 id = "silk-0d46-x68000-series-5-inch-released-september-17-1992"
@@ -197860,6 +196726,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 54-column, 2-row surface-specific limit."
 
 [[entries]]
 id = "silk-0dec-ver-2-1-l20-or-later"
@@ -197900,6 +196767,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 46-column, 2-row surface-specific limit."
 
 [[entries]]
 id = "silk-0e65-reira"
@@ -197978,6 +196846,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses the SILK.MES default layout while matching copies require explicit per-surface limits."
 
 [[entries]]
 id = "silk-0fc6-fm-towns-series-3-5-inch-released-april"
@@ -198004,6 +196873,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses the SILK.MES default layout while matching copies require an explicit per-surface limit."
 
 [[entries]]
 id = "silk-1005-ver-2-1-l20-or-later"
@@ -198017,6 +196887,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses the SILK.MES default layout while matching copies require an explicit per-surface limit."
 
 [[entries]]
 id = "silk-101b-price-7-800-yen-each"
@@ -198193,6 +197064,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 76-column, 3-row surface-specific limit."
 
 [[entries]]
 id = "silk-13bc-ai-shimai-the-two-fruits"
@@ -198418,6 +197290,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 60-column, 17-row surface-specific limit."
 
 [[entries]]
 id = "silk-16a1-released-november-30-1994"
@@ -198448,6 +197321,7 @@ speaker = "catalog-copy"
 attribution = "inferred"
 scene = "game-period-silky-product-catalog"
 status = "translated"
+notes = "Duplicate split: this catalog copy uses a 60-column, 17-row surface-specific limit."
 
 [[entries]]
 id = "silk-1759-lost-paradise"

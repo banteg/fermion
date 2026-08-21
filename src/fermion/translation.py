@@ -27,6 +27,7 @@ _PURE_SILENCE = re.compile(r"^・+。$")
 _TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-verified"})
 _WRAP_MODES = frozenset({"words", "characters"})
 _ATTRIBUTIONS = frozenset({"inferred", "proven"})
+_DUPLICATE_SPLIT_PREFIX = "Duplicate split:"
 _SPEAKER_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*(?::[a-z0-9]+(?:-[a-z0-9]+)*)?$")
 _SCENE_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _SOURCE_SPEAKER = re.compile(r"^【([^】]+)】")
@@ -1914,6 +1915,61 @@ def _validate_catalog(
                 raise TranslationError(
                     f"{entry.id}: translation needs {len(lines)} rows, "
                     f"but the box allows {box_rows}"
+                )
+
+    _validate_duplicate_policy(entries, composites)
+
+
+def _validate_duplicate_policy(
+    entries: tuple[TranslationEntry, ...],
+    composites: tuple[CompositeTranslationEntry, ...],
+) -> None:
+    for kind, records in (("entries", entries), ("composites", composites)):
+        semantic_groups: dict[tuple[str, ...], list[TranslationEntry | CompositeTranslationEntry]] = {}
+        for entry in records:
+            semantic_key = (
+                entry.source,
+                entry.translation,
+                entry.speaker,
+                entry.attribution,
+                entry.context,
+            )
+            semantic_groups.setdefault(semantic_key, []).append(entry)
+
+        for group in semantic_groups.values():
+            if len(group) < 2:
+                continue
+            mechanical_groups: dict[tuple[object, ...], list[str]] = {}
+            for entry in group:
+                mechanical_key: tuple[object, ...] = (
+                    entry.target_mode,
+                    entry.box_width,
+                    entry.box_rows,
+                    entry.wrap_mode,
+                    entry.status,
+                )
+                if isinstance(entry, TranslationEntry):
+                    mechanical_key += (entry.source_mode,)
+                mechanical_groups.setdefault(mechanical_key, []).append(entry.id)
+
+            mergeable = next(
+                (ids for ids in mechanical_groups.values() if len(ids) > 1),
+                None,
+            )
+            if mergeable is not None:
+                raise TranslationError(
+                    f"mergeable duplicate {kind}: {', '.join(mergeable)}"
+                )
+
+            unannotated = [
+                entry.id
+                for entry in group
+                if not entry.notes.startswith(_DUPLICATE_SPLIT_PREFIX)
+            ]
+            if unannotated:
+                raise TranslationError(
+                    "intentional duplicate split must use a "
+                    f"{_DUPLICATE_SPLIT_PREFIX!r} note: {', '.join(unannotated)}"
                 )
 
 

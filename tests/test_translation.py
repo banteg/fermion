@@ -716,6 +716,75 @@ context = "An unused scene."
         TranslationCatalog.from_file(catalog_path)
 
 
+def test_rejects_mergeable_duplicate_entries(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    text = catalog_path.read_text()
+    duplicate = text.split("[[entries]]", 1)[1]
+    duplicate = duplicate.replace('id = "scene-0001"', 'id = "scene-duplicate"')
+    duplicate = duplicate.replace("offset = 0x0002", "offset = 0x0020")
+    duplicate = duplicate.replace('notes = "A useful note."', 'notes = "Different note."')
+    catalog_path.write_text(text + "\n[[entries]]" + duplicate)
+
+    with pytest.raises(TranslationError, match="mergeable duplicate entries"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_rejects_unannotated_duplicate_layout_split(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    text = catalog_path.read_text()
+    duplicate = text.split("[[entries]]", 1)[1]
+    duplicate = duplicate.replace('id = "scene-0001"', 'id = "scene-duplicate"')
+    duplicate = duplicate.replace("offset = 0x0002", "offset = 0x0020")
+    duplicate = duplicate.replace("box_width = 8", "box_width = 9")
+    catalog_path.write_text(text + "\n[[entries]]" + duplicate)
+
+    with pytest.raises(TranslationError, match="intentional duplicate split"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_accepts_annotated_duplicate_layout_split(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+        notes="Duplicate split: this occurrence uses the default layout.",
+    )
+    text = catalog_path.read_text()
+    duplicate = text.split("[[entries]]", 1)[1]
+    duplicate = duplicate.replace('id = "scene-0001"', 'id = "scene-duplicate"')
+    duplicate = duplicate.replace("offset = 0x0002", "offset = 0x0020")
+    duplicate = duplicate.replace("box_width = 8", "box_width = 9")
+    duplicate = duplicate.replace(
+        "this occurrence uses the default layout",
+        "this occurrence uses a narrower layout",
+    )
+    catalog_path.write_text(text + "\n[[entries]]" + duplicate)
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+
+    assert [entry.id for entry in catalog.entries] == [
+        "scene-0001",
+        "scene-duplicate",
+    ]
+
+
 def test_rejects_catalog_speaker_conflicting_with_encoded_label(tmp_path) -> None:
     japanese = "【コニー】「はい。」"
     source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
