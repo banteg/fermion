@@ -974,7 +974,8 @@ def _translation_check(args: argparse.Namespace) -> None:
     if args.source_dir:
         catalog.verify_sources(args.source_dir)
     print(
-        f"{args.catalog}: files={len(catalog.files)} entries={catalog.entry_count} "
+        f"{args.catalog}: files={len(catalog.files)} scenes={len(catalog.scenes)} "
+        f"entries={catalog.entry_count} "
         f"anchors={catalog.anchor_count} "
         f"sources={'verified' if args.source_dir else 'not-checked'}"
     )
@@ -986,6 +987,8 @@ def _translation_check(args: argparse.Namespace) -> None:
             )
             for anchor in entry.anchors:
                 print(f"  anchor: {anchor.file}:0x{anchor.offset:04x}")
+            if entry.scene:
+                print(f"  scene: {entry.scene}")
             print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
@@ -1035,6 +1038,8 @@ def _translation_check(args: argparse.Namespace) -> None:
                             f"    token: {segment.token} "
                             f"0x{segment.start:04x}-0x{segment.end:04x}"
                         )
+            if entry.scene:
+                print(f"  scene: {entry.scene}")
             print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
@@ -1079,6 +1084,7 @@ def _translation_table(args: argparse.Namespace) -> None:
         "offset",
         "speaker",
         "attribution",
+        "scene",
         "jp",
         "en",
         "context",
@@ -1095,10 +1101,11 @@ def _translation_table(args: argparse.Namespace) -> None:
                     f"0x{row[2]:04x}",
                     row[3],
                     row[4],
-                    _tsv_text(row[5]),
+                    row[5],
                     _tsv_text(row[6]),
                     _tsv_text(row[7]),
-                    row[8],
+                    _tsv_text(row[8]),
+                    row[9],
                 )
             )
         return
@@ -1112,10 +1119,11 @@ def _translation_table(args: argparse.Namespace) -> None:
                     "offset": row[2],
                     "speaker": row[3],
                     "attribution": row[4],
-                    "jp": row[5],
-                    "en": row[6],
-                    "context": row[7],
-                    "status": row[8],
+                    "scene": row[5],
+                    "jp": row[6],
+                    "en": row[7],
+                    "context": row[8],
+                    "status": row[9],
                 },
                 ensure_ascii=False,
             )
@@ -1197,7 +1205,7 @@ def _translation_drift(args: argparse.Namespace) -> None:
 
 def _translation_rows(
     catalog: TranslationCatalog,
-) -> list[tuple[str, str, int, str, str, str, str, str, str]]:
+) -> list[tuple[str, str, int, str, str, str, str, str, str, str]]:
     rows = []
     for entry in catalog.entries:
         for anchor in entry.anchors:
@@ -1208,6 +1216,7 @@ def _translation_rows(
                     anchor.offset,
                     entry.speaker,
                     entry.attribution,
+                    entry.scene,
                     entry.source,
                     entry.translation,
                     entry.context,
@@ -1223,6 +1232,7 @@ def _translation_rows(
                     occurrence.start,
                     entry.speaker,
                     entry.attribution,
+                    entry.scene,
                     entry.source,
                     entry.translation,
                     entry.context,

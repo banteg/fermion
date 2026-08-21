@@ -15,6 +15,7 @@ from fermion.translation import (
     TranslationEntry,
     TranslationError,
     TranslationFile,
+    TranslationScene,
     _latin_editor_row,
     _patch_editor_latin_source,
     _patch_gm_source,
@@ -257,6 +258,8 @@ def write_catalog(
     target_mode: int = 2,
     speaker: str = "narrator",
     attribution: str | None = None,
+    scene_id: str | None = None,
+    scene_context: str = "Synthetic scene.",
     status: str = "draft",
     file_box_width: int | None = None,
     file_box_rows: int | None = None,
@@ -277,9 +280,23 @@ def write_catalog(
     entry_attribution = (
         f'attribution = "{attribution}"\n' if attribution is not None else ""
     )
+    scene_table = (
+        f'''\n[[scenes]]
+id = "{scene_id}"
+context = "{scene_context}"
+'''
+        if scene_id is not None
+        else ""
+    )
+    entry_scene = (
+        f'scene = "{scene_id}"\n'
+        if scene_id is not None
+        else 'context = "Synthetic scene."\n'
+    )
     catalog.write_text(
         f'''version = {version}
 game = "Test"
+{scene_table}
 
 [[files]]
 file = "DISKA/SCENE.MES"
@@ -296,7 +313,7 @@ target_mode = {target_mode}
 source = "{source}"
 translation = "{translation}"
 speaker = "{speaker}"
-{entry_attribution}context = "Synthetic scene."
+{entry_attribution}{entry_scene}
 status = "{status}"
 {entry_width}{entry_rows}{entry_wrap}{entry_notes}
 '''
@@ -585,6 +602,120 @@ def test_schema_six_requires_canonical_speaker_id(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
+def test_schema_seven_resolves_shared_scene_context(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+
+    assert catalog.scenes == (TranslationScene("synthetic-scene", "Synthetic scene."),)
+    [entry] = catalog.entries
+    assert (entry.scene, entry.context) == ("synthetic-scene", "Synthetic scene.")
+
+
+def test_schema_seven_requires_scene_catalog(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+    )
+
+    with pytest.raises(TranslationError, match=r"must contain \[\[scenes\]\]"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_schema_seven_rejects_unknown_entry_scene(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    catalog_path.write_text(
+        catalog_path.read_text().replace(
+            'scene = "synthetic-scene"',
+            'scene = "missing-scene"',
+        )
+    )
+
+    with pytest.raises(TranslationError, match="references unknown scene"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_schema_seven_rejects_entry_context_copy(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    catalog_path.write_text(
+        catalog_path.read_text().replace(
+            'scene = "synthetic-scene"',
+            'scene = "synthetic-scene"\ncontext = "Duplicated context."',
+        )
+    )
+
+    with pytest.raises(TranslationError, match="context must be stored once"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_schema_seven_rejects_duplicate_scene_context(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    catalog_path.write_text(
+        catalog_path.read_text()
+        + '''
+[[scenes]]
+id = "duplicate-context"
+context = "Synthetic scene."
+'''
+    )
+
+    with pytest.raises(TranslationError, match="duplicate scene contexts"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_schema_seven_rejects_unused_scene(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        version=7,
+        speaker="narrator",
+        attribution="inferred",
+        scene_id="synthetic-scene",
+    )
+    catalog_path.write_text(
+        catalog_path.read_text()
+        + '''
+[[scenes]]
+id = "unused-scene"
+context = "An unused scene."
+'''
+    )
+
+    with pytest.raises(TranslationError, match="contains unused scenes: unused-scene"):
+        TranslationCatalog.from_file(catalog_path)
+
+
 def test_rejects_catalog_speaker_conflicting_with_encoded_label(tmp_path) -> None:
     japanese = "【コニー】「はい。」"
     source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
@@ -657,6 +788,7 @@ def test_patches_lime_juice_source_by_original_offset() -> None:
         translation='He said "hello"',
         speaker="narrator",
         attribution="inferred",
+        scene="",
         context="Synthetic scene.",
         status="draft",
         notes="Test",

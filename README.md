@@ -120,12 +120,14 @@ uv run fermion binary replace-exact \
 The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
-translation, speaker, scene context, encoding modes, status, wrapping width,
-visible row capacity, wrap mode, and free-form translator notes. Schema 6 uses
-canonical speaker IDs plus explicit `proven` or `inferred` attribution and also
-keeps schema 5's named runtime tokens and composite display lines in the same catalog: translators see a whole line such
-as `⟦name:dear-person⟧`, while the build maps each literal fragment back to its
-original text record and preserves the intervening bytecode.
+translation, speaker, reusable scene context, encoding modes, status, wrapping
+width, visible row capacity, wrap mode, and free-form translator notes. Schema
+7 uses canonical speaker IDs plus explicit `proven` or `inferred` attribution,
+stores each shared context once in `[[scenes]]`, and keeps schema 5's named
+runtime tokens and composite display lines in the same catalog: translators see
+a whole line such as `⟦name:dear-person⟧`, while the build maps each literal
+fragment back to its original text record and preserves the intervening
+bytecode.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 
@@ -148,8 +150,8 @@ uv run fermion translation check translations/fermion.toml \
 
 Export the catalog in the original translator-table shape. Simple translations
 emit one row per physical anchor; a composite emits one merged row per rendered
-occurrence at its first physical segment. Rows follow file and source-offset order,
-while canonical duplicates retain one shared catalog entry:
+occurrence at its first physical segment. Rows follow file and source-offset
+order, while canonical duplicates retain one shared catalog entry:
 
 ```sh
 uv run fermion translation table translations/fermion.toml \
@@ -157,9 +159,9 @@ uv run fermion translation table translations/fermion.toml \
   > working/translation-table.tsv
 ```
 
-The columns are `id`, `file`, `offset`, `speaker`, `attribution`, `jp`, `en`,
-`context`, and `status`. Embedded newlines are escaped so the TSV remains one row per anchor;
-`--format jsonl` is available for programmatic use.
+The columns are `id`, `file`, `offset`, `speaker`, `attribution`, `scene`, `jp`,
+`en`, `context`, and `status`. Embedded newlines are escaped so the TSV remains
+one row per anchor; `--format jsonl` is available for programmatic use.
 
 Run the corpus drift report before a register pass:
 

@@ -28,6 +28,7 @@ _TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-v
 _WRAP_MODES = frozenset({"words", "characters"})
 _ATTRIBUTIONS = frozenset({"inferred", "proven"})
 _SPEAKER_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*(?::[a-z0-9]+(?:-[a-z0-9]+)*)?$")
+_SCENE_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 _SOURCE_SPEAKER = re.compile(r"^【([^】]+)】")
 _ENCODED_SPEAKER_IDS = {
     "コニー": "connie",
@@ -101,6 +102,12 @@ class TranslationToken:
 
 
 @dataclass(frozen=True)
+class TranslationScene:
+    id: str
+    context: str
+
+
+@dataclass(frozen=True)
 class TranslationEntry:
     id: str
     anchors: tuple[TranslationAnchor, ...]
@@ -110,6 +117,7 @@ class TranslationEntry:
     translation: str
     speaker: str
     attribution: str
+    scene: str
     context: str
     status: str
     notes: str
@@ -188,6 +196,7 @@ class CompositeTranslationEntry:
     translation: str
     speaker: str
     attribution: str
+    scene: str
     context: str
     status: str
     notes: str
@@ -230,6 +239,7 @@ class TranslationCatalog:
     tokens: tuple[TranslationToken, ...]
     entries: tuple[TranslationEntry, ...]
     composites: tuple[CompositeTranslationEntry, ...]
+    scenes: tuple[TranslationScene, ...] = ()
 
     @classmethod
     def from_file(cls, path: Path) -> TranslationCatalog:
@@ -239,13 +249,14 @@ class TranslationCatalog:
             raise TranslationError(f"cannot read translation catalog {path}: {error}") from error
 
         version = data.get("version")
-        if version not in (4, 5, 6):
-            raise TranslationError("translation catalog version must be 4, 5, or 6")
+        if version not in (4, 5, 6, 7):
+            raise TranslationError("translation catalog version must be 4, 5, 6, or 7")
         game = _string(data, "game")
         raw_files = data.get("files")
         raw_entries = data.get("entries", [])
         raw_tokens = data.get("tokens", [])
         raw_composites = data.get("composites", [])
+        raw_scenes = data.get("scenes", [])
         if not isinstance(raw_files, list) or not raw_files:
             raise TranslationError("translation catalog must contain at least one [[files]] table")
         if not isinstance(raw_entries, list):
@@ -254,8 +265,14 @@ class TranslationCatalog:
             raise TranslationError("translation catalog [[tokens]] must be an array of tables")
         if not isinstance(raw_composites, list):
             raise TranslationError("translation catalog [[composites]] must be an array of tables")
+        if not isinstance(raw_scenes, list):
+            raise TranslationError("translation catalog [[scenes]] must be an array of tables")
         if version == 4 and (raw_tokens or raw_composites):
             raise TranslationError("translation catalog version 4 cannot contain schema-5 tables")
+        if version < 7 and raw_scenes:
+            raise TranslationError("translation catalog scenes require schema 7")
+        if version >= 7 and not raw_scenes:
+            raise TranslationError("schema-7 translation catalog must contain [[scenes]]")
         if not raw_entries and not raw_composites:
             raise TranslationError(
                 "translation catalog must contain at least one entry or composite"
@@ -263,16 +280,19 @@ class TranslationCatalog:
 
         files = tuple(_parse_file(item, index) for index, item in enumerate(raw_files, 1))
         tokens = tuple(_parse_token(item, index) for index, item in enumerate(raw_tokens, 1))
+        scenes = tuple(_parse_scene(item, index) for index, item in enumerate(raw_scenes, 1))
+        scenes_by_id = {scene.id: scene for scene in scenes}
         entries = tuple(
-            _parse_entry(item, index, version=version)
+            _parse_entry(item, index, version=version, scenes=scenes_by_id)
             for index, item in enumerate(raw_entries, 1)
         )
         composites = tuple(
-            _parse_composite(item, index, version=version)
+            _parse_composite(item, index, version=version, scenes=scenes_by_id)
             for index, item in enumerate(raw_composites, 1)
         )
+        _validate_scenes(scenes, entries, composites, required=version >= 7)
         _validate_catalog(files, tokens, entries, composites)
-        return cls(version, game, files, tokens, entries, composites)
+        return cls(version, game, files, tokens, entries, composites, scenes)
 
     def verify_sources(self, directory: Path) -> None:
         """Verify file hashes and every entry's original offset, mode, and text."""
@@ -1211,6 +1231,28 @@ def _speaker_metadata(
     return speaker, attribution
 
 
+def _scene_metadata(
+    table: dict[str, object],
+    *,
+    context: str,
+    version: int,
+    scenes: dict[str, TranslationScene],
+) -> tuple[str, str]:
+    if version < 7:
+        if "scene" in table:
+            raise TranslationError(f"{context}.scene requires schema 7")
+        return "", _string(table, "context", context=context)
+    if "context" in table:
+        raise TranslationError(
+            f"{context}.context must be stored once in its schema-7 scene"
+        )
+    scene_id = _string(table, "scene", context=context)
+    scene = scenes.get(scene_id)
+    if scene is None:
+        raise TranslationError(f"{context}.scene references unknown scene {scene_id!r}")
+    return scene_id, scene.context
+
+
 def _validate_silence_translation(source: str, translation: str, *, context: str) -> None:
     if _PURE_SILENCE.fullmatch(source) and translation != "...":
         raise TranslationError(f"{context}.translation must render a pure silent beat as '...'")
@@ -1295,6 +1337,16 @@ def _parse_file(value: object, index: int) -> TranslationFile:
     return TranslationFile(file, source, sha256, box_width, box_rows, wrap_mode)
 
 
+def _parse_scene(value: object, index: int) -> TranslationScene:
+    context = f"scenes[{index}]"
+    if not isinstance(value, dict):
+        raise TranslationError(f"{context} must be a table")
+    scene_id = _string(value, "id", context=context)
+    if not _SCENE_ID.fullmatch(scene_id):
+        raise TranslationError(f"{context}.id must be a lowercase kebab-case scene ID")
+    return TranslationScene(scene_id, _string(value, "context", context=context))
+
+
 def _parse_token(value: object, index: int) -> TranslationToken:
     context = f"tokens[{index}]"
     if not isinstance(value, dict):
@@ -1349,7 +1401,11 @@ def _parse_token_initializer(
 
 
 def _parse_composite(
-    value: object, index: int, *, version: int
+    value: object,
+    index: int,
+    *,
+    version: int,
+    scenes: dict[str, TranslationScene],
 ) -> CompositeTranslationEntry:
     context = f"composites[{index}]"
     if not isinstance(value, dict):
@@ -1370,6 +1426,12 @@ def _parse_composite(
     box_rows = _optional_positive_integer(value, "box_rows", context=context)
     wrap_mode = _wrap_mode(value, context=context)
     speaker, attribution = _speaker_metadata(value, context=context, version=version)
+    scene, scene_context = _scene_metadata(
+        value,
+        context=context,
+        version=version,
+        scenes=scenes,
+    )
     entry = CompositeTranslationEntry(
         id=_string(value, "id", context=context),
         occurrences=occurrences,
@@ -1378,7 +1440,8 @@ def _parse_composite(
         translation=_string(value, "translation", context=context),
         speaker=speaker,
         attribution=attribution,
-        context=_string(value, "context", context=context),
+        scene=scene,
+        context=scene_context,
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
         box_width=box_width,
@@ -1458,7 +1521,13 @@ def _parse_composite_segment(
     raise TranslationError(f"{context}.kind must be 'text' or 'token'")
 
 
-def _parse_entry(value: object, index: int, *, version: int) -> TranslationEntry:
+def _parse_entry(
+    value: object,
+    index: int,
+    *,
+    version: int,
+    scenes: dict[str, TranslationScene],
+) -> TranslationEntry:
     context = f"entries[{index}]"
     if not isinstance(value, dict):
         raise TranslationError(f"{context} must be a table")
@@ -1471,6 +1540,12 @@ def _parse_entry(value: object, index: int, *, version: int) -> TranslationEntry
     box_rows = _optional_positive_integer(value, "box_rows", context=context)
     wrap_mode = _wrap_mode(value, context=context)
     speaker, attribution = _speaker_metadata(value, context=context, version=version)
+    scene, scene_context = _scene_metadata(
+        value,
+        context=context,
+        version=version,
+        scenes=scenes,
+    )
 
     entry = TranslationEntry(
         id=_string(value, "id", context=context),
@@ -1481,7 +1556,8 @@ def _parse_entry(value: object, index: int, *, version: int) -> TranslationEntry
         translation=_string(value, "translation", context=context),
         speaker=speaker,
         attribution=attribution,
-        context=_string(value, "context", context=context),
+        scene=scene,
+        context=scene_context,
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
         box_width=box_width,
@@ -1629,6 +1705,28 @@ def _composite_visual_length(value: str, tokens: dict[str, TranslationToken]) ->
             value,
         )
     )
+
+
+def _validate_scenes(
+    scenes: tuple[TranslationScene, ...],
+    entries: tuple[TranslationEntry, ...],
+    composites: tuple[CompositeTranslationEntry, ...],
+    *,
+    required: bool,
+) -> None:
+    scene_ids = [scene.id for scene in scenes]
+    if len(scene_ids) != len(set(scene_ids)):
+        raise TranslationError("translation catalog contains duplicate scene IDs")
+    contexts = [scene.context for scene in scenes]
+    if len(contexts) != len(set(contexts)):
+        raise TranslationError("translation catalog contains duplicate scene contexts")
+    if not required:
+        return
+    used = {entry.scene for entry in (*entries, *composites)}
+    unused = set(scene_ids) - used
+    if unused:
+        choices = ", ".join(sorted(unused))
+        raise TranslationError(f"translation catalog contains unused scenes: {choices}")
 
 
 def _validate_catalog(

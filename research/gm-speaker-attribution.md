@@ -121,7 +121,7 @@ the intervening bytecode.
 
 Use `fermion gm speakers` to inspect the source evidence. `fermion translation
 table` emits the catalog as the translator-facing `id, file, offset, speaker,
-attribution, jp, en, context, status` table. Canonical catalog schema 6 requires
+attribution, scene, jp, en, context, status` table. Canonical catalog schema 7 requires
 a lowercase speaker ID plus `attribution = "proven" | "inferred"`. Source
 verification checks every `proven` identity against its encoded literal label
 or name-slot role; contextual assignments remain explicit rather than being

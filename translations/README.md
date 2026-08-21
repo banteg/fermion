@@ -10,30 +10,33 @@ section 11 verbatim. Any distribution-specific age alteration must be a
 disclosed, mechanically separate override; it is not part of this canonical
 catalog.
 
-Each `[[files]]` table identifies one pristine MES file by its logical
+Each `[[scenes]]` table stores one stable scene ID and its shared context.
+Entries reference that ID instead of repeating prose thousands of times. Each
+`[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
-default `box_width`, visible `box_rows`, and `wrap_mode`. Schema 5 retains
-schema-4 simple records, and schema 6 separates speaker identity from its
-evidence; each `[[entries]]` table records:
+default `box_width`, visible `box_rows`, and `wrap_mode`. Schema 7 retains
+schema-4 simple records and schema-5 composites, keeps schema 6's speaker
+evidence split, and adds reusable scenes. Each `[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
 - the exact original Japanese and current English translation;
-- a canonical lowercase `speaker`, its `attribution`, and short scene `context`;
+- a canonical lowercase `speaker`, its `attribution`, and a `scene` reference;
 - the target encoding mode and optional per-entry surface-layout overrides;
 - a progress `status` and optional free-form translator `notes`.
 
 Offsets always refer to the pristine file named by the enclosing catalog, not a
 rebuilt or relocated MES. `notes` are for line-specific alternatives,
 ambiguities, tone decisions, technical compromises, and anything worth
-revisiting. Omit them when the speaker/context fields and the checked-in voice
-brief fully explain the translation; do not repeat a slice-wide voice policy on
-every line. Do not erase an unresolved nuance merely because the current probe
-uses shorter wording.
+revisiting. Omit them when the speaker and resolved scene context plus the
+checked-in voice brief fully explain the translation; do not repeat a
+slice-wide voice policy on every line. Do not erase an unresolved nuance merely
+because the current probe uses shorter wording.
 
-`context` and `notes` describe the Japanese source scene. Use **adult** only
-where the plot itself requires the distinction, such as adult Kaori versus her
-younger self; do not insert age labels as a localization workaround.
+Scene `context` and entry `notes` describe the Japanese source scene. Use
+**adult** only where the plot itself requires the distinction, such as adult
+Kaori versus her younger self; do not insert age labels as a localization
+workaround.
 
 Draft canonical English by reading the Japanese in scene context and applying
 the checked-in plot, voice, and terminology notes. Automated tools may expose
@@ -68,6 +71,10 @@ A line with one physical occurrence may use the compact `file` and `offset`
 fields. Exact duplicates use one canonical entry with an `anchors` array:
 
 ```toml
+[[scenes]]
+id = "equivalent-narration-branches"
+context = "The same narration in two equivalent control-flow branches."
+
 [[entries]]
 id = "shared-line"
 anchors = [
@@ -79,7 +86,7 @@ source = "同じ文"
 translation = "The same line"
 speaker = "narrator"
 attribution = "inferred"
-context = "The same narration in two equivalent control-flow branches."
+scene = "equivalent-narration-branches"
 status = "draft"
 notes = "Keep the wording synchronized across both anchors."
 ```
@@ -89,13 +96,16 @@ every physical copy. Identical Japanese may still use separate entries when the
 surrounding scene genuinely requires different English; that contextual split
 is explicit and visible to the coverage report.
 
-Canonical schema 6 makes speaker identity, attribution evidence, and context
-separate required fields. `speaker` is a stable lowercase ID such as `connie`,
-`kanzaki`, `catalog-copy`, or `name-slot:mother`. `attribution` is `proven` only
-when that record's source contains a recognized literal or dynamic speaker
-label; scene-based assignments use `inferred`. Source verification checks every
-`proven` identity against the original label. Schemas 4 and 5 remain readable
-for older fixtures but do not carry this distinction.
+Canonical schema 7 makes speaker identity, attribution evidence, scene
+identity, and scene context separate fields. `speaker` is a stable lowercase ID
+such as `connie`, `kanzaki`, `catalog-copy`, or `name-slot:mother`.
+`attribution` is `proven` only when that record's source contains a recognized
+literal or dynamic speaker label; scene-based assignments use `inferred`.
+Source verification checks every `proven` identity against the original label.
+Each entry's `scene` must resolve to exactly one top-level context, and duplicate
+or unused scene records are rejected. Schemas 4 through 6 remain readable for
+older fixtures; their per-entry contexts resolve in memory without becoming a
+second scene store.
 
 GM can encode speaker identities directly:
 
@@ -112,7 +122,7 @@ are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribut
 
 ## Composite interpolation contract
 
-Schema 6 retains schema 5's representation of rendered messages as ordered physical text segments
+Schema 7 retains schema 5's representation of rendered messages as ordered physical text segments
 separated by immutable interpolation segments. A physical record containing
 only `】...` is therefore no longer presented as a complete display line. The
 checked-in TOML remains canonical; a merged translator table or database is
@@ -590,10 +600,10 @@ uv run fermion translation table translations/fermion.toml \
   > working/translation-table.tsv
 ```
 
-The TSV columns are `id`, `file`, `offset`, `speaker`, `attribution`, `jp`,
-`en`, `context`, and `status`. It expands canonical multi-anchor entries to one physical row but
-does not duplicate their English or notes in the source catalog. Use
-`--format jsonl` when a structured stream is more convenient.
+The TSV columns are `id`, `file`, `offset`, `speaker`, `attribution`, `scene`,
+`jp`, `en`, `context`, and `status`. It expands canonical multi-anchor entries
+to one physical row but does not duplicate their English or notes in the source
+catalog. Use `--format jsonl` when a structured stream is more convenient.
 
 For an incremental batch:
 

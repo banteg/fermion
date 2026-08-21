@@ -436,7 +436,11 @@ The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. The non-CP932 delim
 
 ### Locked merged-to-physical representation
 
-`translations/fermion.toml` remains the sole canonical source. Catalog schema 6 retains schema 5's composite entries, with one canonical translation and one or more physical occurrences, and separates canonical speaker identity from attribution evidence. Each occurrence is an ordered segment list:
+`translations/fermion.toml` remains the sole canonical source. Catalog schema 7
+retains schema 5's composite entries and schema 6's speaker-evidence split,
+while storing each shared scene context once in a top-level `[[scenes]]` record.
+Entries reference a stable scene ID. Each composite occurrence is an ordered
+segment list:
 
 1. a **text segment** stores its pristine MES file, text-opcode offset, mode, and exact Japanese;
 2. a **token segment** stores its stable token ID and the exact immutable copy/render instruction span; and
@@ -462,7 +466,14 @@ Scene-derived assignments use `attribution = "inferred"`. The Silky product
 catalog is `catalog-copy`, not whichever bracketed product title GM's mechanical
 label scanner most recently saw.
 
-TSV, JSONL, SQLite, or another ergonomic database may be generated from this catalog and imported back with hash, anchor, and token checks. None is a second source of truth.
+`scene` is a stable, readable ID whose top-level record owns the archival
+context prose. Entry objects resolve that context for reporting and review, but
+the TOML never repeats it per line. Duplicate scene contexts, unknown scene
+references, and unused scene records are validation errors.
+
+TSV, JSONL, SQLite, or another ergonomic database may be generated from this
+catalog and imported back with hash, anchor, and token checks. None is a second
+source of truth.
 
 ### English grammar problem
 
@@ -968,7 +979,10 @@ For every record, preserve:
 - translator note;
 - QA status.
 
-Keep enforcing the implemented schema-6 speaker, composite-entry, and token contract from section 6. `translations/fermion.toml` remains authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a validated import path; they must never become parallel canonical databases.
+Keep enforcing the implemented schema-7 scene, speaker, composite-entry, and
+token contract from section 6. `translations/fermion.toml` remains
+authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a
+validated import path; they must never become parallel canonical databases.
 
 ### Phase 3 — Apply the locked glossary and policies
 
