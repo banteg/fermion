@@ -162,6 +162,10 @@ when the source itself breaks off, a genuine thought pause. Moving a token by
 inserting new text opcodes remains out of scope until that renderer change has
 its own proven and logged compatibility contract.
 
+Source nominal fragments may retain that shape: `NAME... an image of her ...`
+is preferable to bending the sentence around a trailing “in the image” merely
+to manufacture a finite token-led clause.
+
 `[[tokens]]` records the Japanese default, ASCII authoring default, and any
 reset initializer to patch after decompilation. Runtime
 name and term slots are rendered by GM's mode-1 indirect-text opcode, so the
@@ -272,7 +276,7 @@ The current statuses are:
 - `runtime-verified`: the current wording and layout have been exercised in the
   game. This is runtime evidence, not a claim of final editorial approval.
 
-At this checkpoint, 12,611 records are `translated`, 276 are `reviewed`, and 15
+At this checkpoint, 12,608 records are `translated`, 279 are `reviewed`, and 15
 are `runtime-verified`. The reviewed set is limited to records whose wording
 changed during dedicated source-and-context passes over the ending,
 token-initial prose, and later full-catalog review findings; unchanged

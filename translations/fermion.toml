@@ -5648,12 +5648,13 @@ offset = 0x0645
 source_mode = 1
 target_mode = 2
 source = "あたしは逆らえなかった。神崎博士の頼みを、あたしは断ることができなかった。"
-translation = "I can't go against her. I can't refuse Dr. Kanzaki's request."
+translation = "I couldn't go against her. I couldn't refuse Dr. Kanzaki's request."
 speaker = "connie"
 attribution = "inferred"
 scene = "kanzaki-asks-love-connie-night-before-launch"
-status = "translated"
+status = "reviewed"
 box_width = 61
+notes = "Both predicates are completed past-tense statements; present tense would turn this remembered surrender into an ongoing inability to refuse."
 
 [[entries]]
 id = "f0000-0672-connie-dr-kanzaki-thought"
@@ -35006,11 +35007,12 @@ segments = [
 id = "f0007-0b7f-an-image-of-name-holding-a-girl-who"
 target_mode = 2
 source = "⟦name:mother⟧が⟦name:mother⟧に似た女の子を抱き締めているイメージ。"
-translation = "⟦name:mother⟧ appears in the image, holding a girl who looks like ⟦name:mother⟧."
+translation = "⟦name:mother⟧... an image of her holding a girl who looks just like ⟦name:mother⟧."
 speaker = "connie"
 attribution = "inferred"
 scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
 status = "reviewed"
+notes = "The source is a nominal mental-image fragment; the genuine thought pause keeps the source-initial token without forcing a trailing 'in the image.'"
 
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
@@ -35069,11 +35071,12 @@ segments = [
 id = "f0007-0c13-it-is-an-image-of-name-holding-her"
 target_mode = 2
 source = "⟦name:mother⟧が妹を抱き締めているイメージだった。"
-translation = "⟦name:mother⟧ is holding her younger sister in the image."
+translation = "⟦name:mother⟧... an image of her holding her younger sister."
 speaker = "connie"
 attribution = "inferred"
 scene = "kitchen-interaction-branches-let-connie-observe-yuki-read-her"
-status = "translated"
+status = "reviewed"
+notes = "The token-led thought fragment matches the preceding mental image and avoids bending the clause around the insertion slot."
 
 [[composites.occurrences]]
 file = "DISKB/F0007.MES"
@@ -45927,11 +45930,12 @@ status = "translated"
 id = "f0009-1e15-connie-ahh"
 target_mode = 2
 source = "【⟦name:dear-person⟧】「コニー、あふ・・・。」"
-translation = "[⟦name:dear-person⟧] \"Connie...\" She yawns."
+translation = "[⟦name:dear-person⟧] \"Connie... haaah...\""
 speaker = "name-slot:dear-person"
 attribution = "proven"
 scene = "kanako-dozes-off-during-late-talk-connie-carries-her"
-status = "translated"
+status = "reviewed"
+notes = "The sleepy あふ remains a yawn-like vocalization inside the quoted line; the following narration establishes that she falls asleep."
 
 [[composites.occurrences]]
 file = "DISKB/F0009.MES"
@@ -49390,7 +49394,7 @@ status = "translated"
 id = "f0010r-11a6-name-you-re-bold"
 target_mode = 2
 source = "【コニー】「⟦name:mother⟧・・・さん、積極的・・・。」"
-translation = "[Connie] \"⟦name:mother⟧... you're very forward, ma'am...\""
+translation = "[Connie] \"Miss ⟦name:mother⟧... you're very forward...\""
 speaker = "connie"
 attribution = "proven"
 scene = "yuki-initiates-intimacy-connie-hesitates-yuki-reassures-her-by"
@@ -49413,7 +49417,7 @@ speaker = "name-slot:mother"
 attribution = "proven"
 scene = "yuki-initiates-intimacy-connie-hesitates-yuki-reassures-her-by"
 status = "reviewed"
-notes = "The preceding ma'am makes Yuki's invitation to drop さん visible without retaining a romanized suffix."
+notes = "The preceding Miss makes Yuki's invitation to drop さん visible without retaining a romanized suffix, matching the established F0003 correction device."
 
 [[composites.occurrences]]
 file = "DISKB/F0010R.MES"
@@ -84343,11 +84347,12 @@ segments = [
 id = "f0020-16fb-connie-name-dear-person-you-re-so-very"
 target_mode = 2
 source = "【コニー】「⟦name:dear-person⟧・・・も、び・ん・か・ん・・・。」"
-translation = "[Connie] \"⟦name:dear-person⟧... You're so. Very. Sensitive too...\""
+translation = "[Connie] \"⟦name:dear-person⟧... You're so sen-si-tive too...\""
 speaker = "connie"
 attribution = "proven"
 scene = "finger-tongue-branches-continue-both-women-preserving-each-refusal"
 status = "reviewed"
+notes = "Hyphenated syllables preserve the teasing staccato of び・ん・か・ん without turning the phrase into separate English sentences."
 
 [[composites.occurrences]]
 file = "DISKC/F0020.MES"

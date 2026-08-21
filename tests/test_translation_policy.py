@@ -14,6 +14,9 @@ def test_locked_translation_policy_contracts() -> None:
     }
 
     exact_anchors = {
+        ("DISKA/F0000.MES", 0x0645): (
+            "I couldn't go against her. I couldn't refuse Dr. Kanzaki's request."
+        ),
         ("DISKA/F0001.MES", 0x0799): (
             "For this mission, I've also been granted Time Patrol authority."
         ),
@@ -26,12 +29,28 @@ def test_locked_translation_policy_contracts() -> None:
             "On my third birthday (about sixteen in human terms), Dr. Kanzaki "
             "gave me cologne and lipstick."
         ),
+        ("DISKB/F0007.MES", 0x3A88): (
+            '[⟦name:mother⟧] "I-- ah! Aahhhhhhh!"'
+        ),
         ("DISKB/F0009.MES", 0x1DC1): (
             "Looking at her like this, she really does look younger than her age..."
+        ),
+        ("DISKB/F0009.MES", 0x1E15): (
+            '[⟦name:dear-person⟧] "Connie... haaah..."'
         ),
         ("DISKB/F0010L.MES", 0x2031): (
             '[Connie] "In human terms, about seventeen. But I\'m a mutant, '
             'so I\'ve only been alive for three years."'
+        ),
+        ("DISKB/F0010R.MES", 0x11A6): (
+            '[Connie] "Miss ⟦name:mother⟧... you\'re very forward..."'
+        ),
+        ("DISKB/F0010R.MES", 0x11D1): (
+            '[⟦name:mother⟧] "Just ⟦name:mother⟧... I\'m surprised myself '
+            'that having you touch me gets me this excited..."'
+        ),
+        ("DISKC/F0020.MES", 0x16FB): (
+            '[Connie] "⟦name:dear-person⟧... You\'re so sen-si-tive too..."'
         ),
         ("DISKC/F0030.MES", 0x141F): (
             "[Connie] (Anesthetic... a tranquilizer gun...?)"
@@ -69,6 +88,18 @@ def test_locked_translation_policy_contracts() -> None:
     }
     for anchor, expected in exact_anchors.items():
         assert by_anchor[anchor].translation == expected, anchor
+
+    exact_ids = {
+        "f0007-0b7f-an-image-of-name-holding-a-girl-who": (
+            "⟦name:mother⟧... an image of her holding a girl who looks just "
+            "like ⟦name:mother⟧."
+        ),
+        "f0007-0c13-it-is-an-image-of-name-holding-her": (
+            "⟦name:mother⟧... an image of her holding her younger sister."
+        ),
+    }
+    for item_id, expected in exact_ids.items():
+        assert by_id[item_id].translation == expected, item_id
 
     fixed_speaker_tags = set()
     dynamic_speaker_tags = set()

@@ -593,6 +593,14 @@ system. Do not uppercase editable presets merely to repair a tag, because those
 same values appear inside ordinary prose. Bracketed game and product titles are
 not speaker tags and retain their established title capitalization.
 
+### Narrative tense
+
+Use scenic present for Connie's live, on-screen narration. Preserve past tense
+for framed recollection, explicitly completed action, and retrospective
+judgment; do not flatten a Japanese past form when the time distinction changes
+responsibility, consent, or causality. Dialogue follows its local grammar rather
+than a global narration default.
+
 ### Naturalization and source-origin English
 
 Naturalize fluent Japanese speech into fluent character English. A katakana loanword is part of the Japanese sentence and should be translated by meaning and register: `コールドスリープ` becomes **cryosleep**, while **kotatsu** may remain because it names a culturally specific object already established in English. Do not preserve an awkward English calque merely because the Japanese happens to be written in katakana.
@@ -604,6 +612,13 @@ English already printed by the original game is a different evidence class. Pres
 Do not use systematic romanized suffixes such as `-san`, `-chan`, `-sama`, or `-sensei`. Render their relationship work in English: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, a softened request, a formal sentence, or no overt marker where English naturally leaves one out. A plot-significant title or kinship term remains; a suffix does not survive merely because it is present in Japanese. Apply this policy consistently in dialogue, labels, and translator notes.
 
 Kinship terms carry plot information. At the reveal, `おかあさん` should be **Mom**, not formal “Mother.” `コニーおねえちゃん` can begin as **Big Sis Connie** and become less marked as intimacy grows. Adult Kaori’s farewell to `おねえちゃん` should use the form already established for her older sister. Marna’s changing address to Connie should likewise register growing trust without importing a romanized suffix.
+
+When a line explicitly corrects or relaxes the form of address used in the
+preceding line, the English must expose a visible device for it to correct.
+Review the pair together: **Miss Connie** followed by **Drop the 'Miss'**, or
+**Miss Yuki** followed by **Just Yuki**, preserves the exchange without retaining
+`-san`. The deterministic unit is the relationship function and correction
+pair, not the Japanese suffix in isolation.
 
 Use this relationship matrix for recurring plot-bearing forms:
 
@@ -636,6 +651,12 @@ Punctuation may be compressed **within** a record, but records are never merged,
 
 Reduce repeated `！！！！！`, `～～～～`, and elongated vowels unless they are essential to the performance. A single exclamation mark plus stronger wording is normally more natural. Preserve excess selectively for screaming, comic panic, or deliberate melodrama, and retain every physical timing record even when its visible punctuation is compressed.
 
+At emotional peaks, preserve semantic emphasis before compression: contrastive
+or additive particles such as `でも` and `さえ`, repetition, breakoffs,
+evaluative `なんて`, and explicitly stated bodily affect. Shorten dot runs only
+after those features survive; textbox fit is not a reason to collapse them into
+a neutral summary.
+
 ### Internal thought
 
 Connie’s internal monologue creates the contrast between her competent exterior and flustered private reactions. Keep thought visibly distinct from spoken dialogue using only presentation the renderer actually supports—source parentheses, quotation conventions, or a proven text-window treatment. Do not assume italics exist, and do not turn thoughts into neutral narration merely to simplify punctuation.
@@ -647,6 +668,11 @@ The source is saturated with sound-symbolic prose. Use three categories:
 1. **Keep/localize as sound:** knocks, alarms, mechanical hums, impacts.
 2. **Convert to action:** `こくん` → “She gave a small nod.”
 3. **Omit or reduce:** repetitive tactile/erotic SFX that sound comic or clinical in English.
+
+Inside quoted dialogue, keep meaning-bearing truncation, syllabic or moraic
+pacing, and character-marked sounds inside the quotation. Recast a sound as
+action only when the source itself presents narration; generic breath noise may
+still be reduced when it carries no lexical or iconic meaning.
 
 Connie’s feline comedy deserves selective preservation—ear twitches, purring thoughts, kotatsu enthusiasm, and occasional catlike diction are character beats.
 
@@ -1012,13 +1038,13 @@ branches, the facility and ending, and finally the extra UI/catalog surfaces.
 That sequence is historical guidance, not the current work queue. At this
 checkpoint:
 
-1. FOP through the F0042 ending are translated and structurally built. All 21
+1. FOP through the F0042 ending are translated and structurally built. All 22
    focused story scopes are closed with no pending or excluded story anchors.
 2. Scene replay, both mirrored name and adult-term editors, the title/menu
    surfaces, and the period Silky's catalog are represented in the canonical
    catalog or explicitly source-anchored coverage exclusions.
 3. The catalog contains 12,902 canonical records over 17,680 physical anchors
-   in 76 MES files: 12,611 `translated`, 276 `reviewed`, and 15
+   in 76 MES files: 12,608 `translated`, 279 `reviewed`, and 15
    `runtime-verified`.
 4. The remaining work is dedicated linguistic review of the still-translated
    records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,
