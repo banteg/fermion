@@ -135,17 +135,30 @@ when the source itself breaks off, a genuine thought pause. Moving a token by
 inserting new text opcodes remains out of scope until that renderer change has
 its own proven and logged compatibility contract.
 
-`[[tokens]]` records the Japanese default, ASCII authoring default, four tested
-editor presets, and any reset initializer to patch after decompilation. Runtime
+`[[tokens]]` records the Japanese default, ASCII authoring default, and any
+reset initializer to patch after decompilation. Runtime
 name and term slots are rendered by GM's mode-1 indirect-text opcode, so the
-builder stores the ASCII choices as full-width CP932 glyphs while leaving their
+builder stores the ASCII defaults as full-width CP932 glyphs while leaving their
 catalog spelling readable. It derives both the fixed byte capacity from the
 adjacent runtime slot addresses and the wrapping width from the encoded shipped
-choices. Name slots are 14 bytes and therefore fit at most six such characters
+default. Name slots are 14 bytes and therefore fit at most six such characters
 plus a terminator; Lime Juice can relocate a longer initializer instruction,
 but it does not enlarge the fixed runtime slot. Term slots are 16 bytes and fit
-at most seven characters. The default and all presets are capacity-checked and
-must be distinct.
+at most seven characters. Each default is capacity-checked.
+
+`NAME.MES` and `MONO.MES` retain their original free-form editor storage,
+backspace, confirmation, save/load ranges, and indirect rendering. The builder
+bypasses the Japanese character-class menu and replaces only the visible grid
+and coordinate-to-glyph routine with one generated Latin palette. Every typed
+ASCII letter, hyphen, or apostrophe is stored as one full-width CP932 glyph, so
+no buffer relocation or save migration is involved. The editor guards move
+from 5 to 6 for names and from 6 to 7 for terms so the localized editors expose
+the capacities already present in those fixed slots. An emulator boundary probe
+confirmed that the sixth/seventh glyph renders and the following glyph is
+rejected. A separate `0x4b` probe rendered the same half-width ASCII payload
+through all nine tested operand-tail combinations; every result remained
+mode-1 mojibake. The tail is therefore not a usable mode switch, and the editor
+deliberately emits full-width glyphs.
 An initializer's persistent slot must map to the same authoring token. Each
 `[[composites]]` table then stores one merged source/translation pair and one or
 more physical occurrences. Text segments retain their pristine opcode offset,
@@ -158,7 +171,6 @@ rejects missing, reordered, duplicated, unknown, or leaked tokens.
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
 ]
@@ -484,11 +496,11 @@ text records in `F_SHENE.MES`, both mirrored copies of `NAME.MES` and
 anchors are translated and none are excluded or pending. The catalog
 contributes 430 records after sharing byte-identical editor copies and
 context-safe duplicates. Scene replay has 44 logical titles across 50 physical
-anchors, the name and adult-term editors expose four English presets per role,
+anchors, the name and adult-term editors expose free-form full-width Latin input,
 and all 176 records in Silky's period product catalog are translated. The
 localized editor branch and full-width Latin runtime values have been exercised
 in the emulator; story, final-letter, and unlocked replay contexts still need a
-human playtest with every preset.
+human playtest with representative custom values.
 
 The broader `boot-to-first-scene-menu` scope is now closed. It contains 178
 physical anchors and 120 canonical source lines: 152 anchors are translated,

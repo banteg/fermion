@@ -460,7 +460,6 @@ box_width = 61
 id = "name:mother"
 source = "由貴"
 translation = "Yuki"
-presets = ["Yuki", "May", "Helen", "Olivia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18c0, slot = 0x03e8 },
 ]
@@ -469,7 +468,6 @@ initializers = [
 id = "name:older-sister"
 source = "瑠璃"
 translation = "Ruri"
-presets = ["Ruri", "Ruby", "Alice", "Chloe"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18d5, slot = 0x03f6 },
 ]
@@ -478,7 +476,6 @@ initializers = [
 id = "name:dear-person"
 source = "加奈子"
 translation = "Kanako"
-presets = ["Kanako", "Kana", "Sarah", "Emma"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
 ]
@@ -487,7 +484,6 @@ initializers = [
 id = "name:friend-1"
 source = "陽子"
 translation = "Yoko"
-presets = ["Yoko", "Yuna", "Maria", "Ava"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1901, slot = 0x0412 },
 ]
@@ -496,7 +492,6 @@ initializers = [
 id = "name:friend-2"
 source = "弘子"
 translation = "Hiroko"
-presets = ["Hiroko", "Hina", "Erika", "Mia"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1916, slot = 0x0420 },
 ]
@@ -505,7 +500,6 @@ initializers = [
 id = "term:slot-1"
 source = "おま○こ"
 translation = "pussy"
-presets = ["pussy", "vagina", "cunt", "vulva"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b37, slot = 0x042e },
 ]
@@ -514,7 +508,6 @@ initializers = [
 id = "term:slot-2"
 source = "お○んち○"
 translation = "penis"
-presets = ["penis", "dick", "cock", "phallus"]
 initializers = [
   { file = "DISKA/MAIN.MES", offset = 0x1b50, slot = 0x043e },
 ]
@@ -177430,7 +177423,7 @@ target_mode = 2
 source = "名前を変更"
 translation = "CHANGE"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177442,23 +177435,23 @@ target_mode = 2
 source = "します"
 translation = "NAMES"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-0253-original"
+id = "name-diska-0253-hiragana"
 file = "DISKA/NAME.MES"
 offset = 0x0253
 source_mode = 1
 target_mode = 2
 source = "ひらがな"
-translation = "ORIGINAL"
+translation = "LATIN"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-0265-short"
+id = "name-diska-0265-katakana"
 anchors = [
   { file = "DISKA/NAME.MES", offset = 0x0265 },
   { file = "DISKA/NAME.MES", offset = 0x09ab },
@@ -177466,13 +177459,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　カタカナ"
-translation = "  SHORT"
+translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-0278-classic"
+id = "name-diska-0278-kanji"
 anchors = [
   { file = "DISKA/NAME.MES", offset = 0x0278 },
   { file = "DISKA/NAME.MES", offset = 0x09bf },
@@ -177480,13 +177473,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　漢　　字"
-translation = "  CLASSIC"
+translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-028b-modern"
+id = "name-diska-028b-secondary-kanji"
 anchors = [
   { file = "DISKA/NAME.MES", offset = 0x028b },
   { file = "DISKA/NAME.MES", offset = 0x09d3 },
@@ -177494,9 +177487,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　第二水準"
-translation = "  MODERN"
+translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177513,7 +177506,7 @@ target_mode = 2
 source = "決定キー："
 translation = "Confirm:"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177525,7 +177518,7 @@ target_mode = 2
 source = "　名前選択"
 translation = "Select name"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177542,7 +177535,7 @@ target_mode = 2
 source = "キャンセルキー："
 translation = "Cancel:"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177554,7 +177547,7 @@ target_mode = 2
 source = "　名前登録へ"
 translation = "Review changes"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177571,7 +177564,7 @@ target_mode = 2
 source = "　"
 translation = "  "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177585,7 +177578,7 @@ target_mode = 2
 source = "（お母さん）　　　　"
 translation = "(Mother)"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177599,7 +177592,7 @@ target_mode = 2
 source = "（お姉さん）　　　　"
 translation = "(Older sister)"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177613,7 +177606,7 @@ target_mode = 2
 source = "（あたしの大切な人）"
 translation = "(Dear person)"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177627,7 +177620,7 @@ target_mode = 2
 source = "（お友達１）　　　　"
 translation = "(Friend 1)"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177641,19 +177634,19 @@ target_mode = 2
 source = "（お友達２）　　　　"
 translation = "(Friend 2)"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-0947-select-preset"
+id = "name-diska-0947-latin-keyboard"
 file = "DISKA/NAME.MES"
 offset = 0x0947
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択"
-translation = "Select preset"
+translation = "Latin keyboard"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177667,19 +177660,19 @@ target_mode = 2
 source = "　名前選択へ"
 translation = "Name list"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diska-0997-original"
+id = "name-diska-0997-hiragana"
 file = "DISKA/NAME.MES"
 offset = 0x0997
 source_mode = 1
 target_mode = 2
 source = "　ひらがな"
-translation = "  ORIGINAL"
+translation = "  LATIN"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177693,7 +177686,7 @@ target_mode = 2
 source = "　文字選択"
 translation = "Enter character"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177705,9 +177698,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択へ"
-translation = "Keyboard list"
+translation = "Name list"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177719,7 +177712,7 @@ target_mode = 2
 source = "　登録・終了選択"
 translation = "Select action"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177731,7 +177724,7 @@ target_mode = 2
 source = "登録しますか？"
 translation = "Save changes?"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177743,7 +177736,7 @@ target_mode = 2
 source = "登録"
 translation = "Save"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177755,7 +177748,7 @@ target_mode = 2
 source = "未登録"
 translation = "Discard"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177767,7 +177760,7 @@ target_mode = 2
 source = "終了しますか？"
 translation = "Finish editing?"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177779,7 +177772,7 @@ target_mode = 2
 source = "終了"
 translation = "Finish"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177791,7 +177784,7 @@ target_mode = 2
 source = "再設定"
 translation = "Reset"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177806,7 +177799,7 @@ target_mode = 2
 source = "▲"
 translation = "^"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177821,7 +177814,7 @@ target_mode = 2
 source = "▼"
 translation = "v"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177831,11 +177824,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x24ae },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = " "
+translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177846,11 +177839,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x28fa },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = " "
+translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177861,11 +177854,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x291c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = " "
+translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177881,11 +177874,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29c6 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177896,11 +177889,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2960 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "たちつてと　だぢづでど　　　　　　"
-translation = " "
+translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177911,11 +177904,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2982 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "なにぬねの　　　　　　　　　　　　"
-translation = " "
+translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177926,11 +177919,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29a4 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = " "
+translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177941,11 +177934,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x29e8 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "まみむめも　っー　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177956,11 +177949,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a0a },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177971,11 +177964,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a2c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "らりるれろ　わをん　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -177987,11 +177980,11 @@ anchors = [
   { file = "DISKA/NAME.MES", offset = 0x2a4e },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178008,7 +178001,7 @@ target_mode = 2
 source = "BS"
 translation = "BS"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178024,7 +178017,7 @@ target_mode = 2
 source = "←　中止　決定"
 translation = "<-  CANCEL  OK"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178036,7 +178029,7 @@ target_mode = 2
 source = "アイウエオ　ァィゥェォ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178048,7 +178041,7 @@ target_mode = 2
 source = "カキクケコ　ガギグゲゴ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178060,7 +178053,7 @@ target_mode = 2
 source = "サシスセソ　ザジズゼゾ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178072,7 +178065,7 @@ target_mode = 2
 source = "タチツテト　ダヂヅデド　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178084,7 +178077,7 @@ target_mode = 2
 source = "ナニヌネノ　　　　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178096,7 +178089,7 @@ target_mode = 2
 source = "ハヒフヘホ　バビブベボ　パピプペポ"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178108,7 +178101,7 @@ target_mode = 2
 source = "マミムメモ　ッー　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178120,7 +178113,7 @@ target_mode = 2
 source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178132,7 +178125,7 @@ target_mode = 2
 source = "ラリルレロ　ワヲン　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178144,7 +178137,7 @@ target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178156,7 +178149,7 @@ target_mode = 2
 source = "　　　　　第　二　水　準　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178170,7 +178163,7 @@ target_mode = 2
 source = "\""
 translation = "\""
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178182,7 +178175,7 @@ target_mode = 2
 source = "を"
 translation = "Please"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178194,7 +178187,7 @@ target_mode = 2
 source = "参照して下さい"
 translation = "check the table."
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178206,7 +178199,7 @@ target_mode = 2
 source = "指定の漢字は"
 translation = "That character"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178218,7 +178211,7 @@ target_mode = 2
 source = "　有りません"
 translation = "is unavailable."
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178230,7 +178223,7 @@ target_mode = 2
 source = "／３５"
 translation = "/35"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178244,7 +178237,7 @@ target_mode = 2
 source = "中止"
 translation = "Cancel"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178256,7 +178249,7 @@ target_mode = 2
 source = "←"
 translation = "<-"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178268,7 +178261,7 @@ target_mode = 2
 source = "決定"
 translation = "OK"
 speaker = "ui"
-context = "The localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178280,7 +178273,7 @@ target_mode = 2
 source = "名前を変更"
 translation = "CHANGE"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178292,23 +178285,23 @@ target_mode = 2
 source = "します"
 translation = "NAMES"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-0253-original"
+id = "name-diskb-0253-hiragana"
 file = "DISKB/NAME.MES"
 offset = 0x0253
 source_mode = 1
 target_mode = 2
 source = "ひらがな"
-translation = "ORIGINAL"
+translation = "LATIN"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-0265-short"
+id = "name-diskb-0265-katakana"
 anchors = [
   { file = "DISKB/NAME.MES", offset = 0x0265 },
   { file = "DISKB/NAME.MES", offset = 0x09ab },
@@ -178316,13 +178309,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　カタカナ"
-translation = "  SHORT"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-0278-classic"
+id = "name-diskb-0278-kanji"
 anchors = [
   { file = "DISKB/NAME.MES", offset = 0x0278 },
   { file = "DISKB/NAME.MES", offset = 0x09bf },
@@ -178330,13 +178323,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　漢　　字"
-translation = "  CLASSIC"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-028b-modern"
+id = "name-diskb-028b-secondary-kanji"
 anchors = [
   { file = "DISKB/NAME.MES", offset = 0x028b },
   { file = "DISKB/NAME.MES", offset = 0x09d3 },
@@ -178344,9 +178337,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　第二水準"
-translation = "  MODERN"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178363,7 +178356,7 @@ target_mode = 2
 source = "決定キー："
 translation = "Confirm:"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178375,7 +178368,7 @@ target_mode = 2
 source = "　名前選択"
 translation = "Select name"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178392,7 +178385,7 @@ target_mode = 2
 source = "キャンセルキー："
 translation = "Cancel:"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178404,7 +178397,7 @@ target_mode = 2
 source = "　名前登録へ"
 translation = "Review changes"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178421,7 +178414,7 @@ target_mode = 2
 source = "　"
 translation = "  "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178435,7 +178428,7 @@ target_mode = 2
 source = "（お母さん）　　　　"
 translation = "(Mother)"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178449,7 +178442,7 @@ target_mode = 2
 source = "（お姉さん）　　　　"
 translation = "(Older sister)"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178463,7 +178456,7 @@ target_mode = 2
 source = "（あたしの大切な人）"
 translation = "(Dear person)"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178477,7 +178470,7 @@ target_mode = 2
 source = "（お友達１）　　　　"
 translation = "(Friend 1)"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178491,19 +178484,19 @@ target_mode = 2
 source = "（お友達２）　　　　"
 translation = "(Friend 2)"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-0947-select-preset"
+id = "name-diskb-0947-latin-keyboard"
 file = "DISKB/NAME.MES"
 offset = 0x0947
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択"
-translation = "Select preset"
+translation = "Latin keyboard"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178517,19 +178510,19 @@ target_mode = 2
 source = "　名前選択へ"
 translation = "Name list"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "name-diskb-0997-original"
+id = "name-diskb-0997-hiragana"
 file = "DISKB/NAME.MES"
 offset = 0x0997
 source_mode = 1
 target_mode = 2
 source = "　ひらがな"
-translation = "  ORIGINAL"
+translation = "  LATIN"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178543,7 +178536,7 @@ target_mode = 2
 source = "　文字選択"
 translation = "Enter character"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178555,9 +178548,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択へ"
-translation = "Keyboard list"
+translation = "Name list"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178569,7 +178562,7 @@ target_mode = 2
 source = "　登録・終了選択"
 translation = "Select action"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178581,7 +178574,7 @@ target_mode = 2
 source = "登録しますか？"
 translation = "Save changes?"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178593,7 +178586,7 @@ target_mode = 2
 source = "登録"
 translation = "Save"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178605,7 +178598,7 @@ target_mode = 2
 source = "未登録"
 translation = "Discard"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178617,7 +178610,7 @@ target_mode = 2
 source = "終了しますか？"
 translation = "Finish editing?"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178629,7 +178622,7 @@ target_mode = 2
 source = "終了"
 translation = "Finish"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178641,7 +178634,7 @@ target_mode = 2
 source = "再設定"
 translation = "Reset"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178656,7 +178649,7 @@ target_mode = 2
 source = "▲"
 translation = "^"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178671,7 +178664,7 @@ target_mode = 2
 source = "▼"
 translation = "v"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178681,11 +178674,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x24ae },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = " "
+translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178696,11 +178689,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x28fa },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = " "
+translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178711,11 +178704,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x291c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = " "
+translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178731,11 +178724,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29c6 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178746,11 +178739,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2960 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "たちつてと　だぢづでど　　　　　　"
-translation = " "
+translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178761,11 +178754,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2982 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "なにぬねの　　　　　　　　　　　　"
-translation = " "
+translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178776,11 +178769,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29a4 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = " "
+translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178791,11 +178784,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x29e8 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "まみむめも　っー　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178806,11 +178799,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a0a },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178821,11 +178814,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a2c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "らりるれろ　わをん　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178837,11 +178830,11 @@ anchors = [
   { file = "DISKB/NAME.MES", offset = 0x2a4e },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178858,7 +178851,7 @@ target_mode = 2
 source = "BS"
 translation = "BS"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178874,7 +178867,7 @@ target_mode = 2
 source = "←　中止　決定"
 translation = "<-  CANCEL  OK"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178886,7 +178879,7 @@ target_mode = 2
 source = "アイウエオ　ァィゥェォ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178898,7 +178891,7 @@ target_mode = 2
 source = "カキクケコ　ガギグゲゴ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178910,7 +178903,7 @@ target_mode = 2
 source = "サシスセソ　ザジズゼゾ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178922,7 +178915,7 @@ target_mode = 2
 source = "タチツテト　ダヂヅデド　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178934,7 +178927,7 @@ target_mode = 2
 source = "ナニヌネノ　　　　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178946,7 +178939,7 @@ target_mode = 2
 source = "ハヒフヘホ　バビブベボ　パピプペポ"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178958,7 +178951,7 @@ target_mode = 2
 source = "マミムメモ　ッー　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178970,7 +178963,7 @@ target_mode = 2
 source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178982,7 +178975,7 @@ target_mode = 2
 source = "ラリルレロ　ワヲン　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -178994,7 +178987,7 @@ target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179006,7 +178999,7 @@ target_mode = 2
 source = "　　　　　第　二　水　準　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179020,7 +179013,7 @@ target_mode = 2
 source = "\""
 translation = "\""
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179032,7 +179025,7 @@ target_mode = 2
 source = "を"
 translation = "Please"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179044,7 +179037,7 @@ target_mode = 2
 source = "参照して下さい"
 translation = "check the table."
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179056,7 +179049,7 @@ target_mode = 2
 source = "指定の漢字は"
 translation = "That character"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179068,7 +179061,7 @@ target_mode = 2
 source = "　有りません"
 translation = "is unavailable."
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179080,7 +179073,7 @@ target_mode = 2
 source = "／３５"
 translation = "/35"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179094,7 +179087,7 @@ target_mode = 2
 source = "中止"
 translation = "Cancel"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179106,7 +179099,7 @@ target_mode = 2
 source = "←"
 translation = "<-"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179118,7 +179111,7 @@ target_mode = 2
 source = "決定"
 translation = "OK"
 speaker = "ui"
-context = "The mirrored localized four-style name-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form name editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179130,7 +179123,7 @@ target_mode = 2
 source = "単語を変更"
 translation = "CHANGE"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179142,23 +179135,23 @@ target_mode = 2
 source = "します"
 translation = "TERMS"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diska-0256-default"
+id = "mono-diska-0256-hiragana"
 file = "DISKA/MONO.MES"
 offset = 0x0256
 source_mode = 1
 target_mode = 2
 source = "ひらがな"
-translation = "DEFAULT"
+translation = "LATIN"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diska-0268-clinical"
+id = "mono-diska-0268-katakana"
 anchors = [
   { file = "DISKA/MONO.MES", offset = 0x0268 },
   { file = "DISKA/MONO.MES", offset = 0x072a },
@@ -179166,13 +179159,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　カタカナ"
-translation = "  CLINICAL"
+translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diska-027b-blunt"
+id = "mono-diska-027b-kanji"
 anchors = [
   { file = "DISKA/MONO.MES", offset = 0x027b },
   { file = "DISKA/MONO.MES", offset = 0x073e },
@@ -179180,13 +179173,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　漢　　字"
-translation = "  BLUNT"
+translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diska-028e-anatomical"
+id = "mono-diska-028e-secondary-kanji"
 anchors = [
   { file = "DISKA/MONO.MES", offset = 0x028e },
   { file = "DISKA/MONO.MES", offset = 0x0752 },
@@ -179194,9 +179187,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　第二水準"
-translation = "  ANATOMICAL"
+translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179213,7 +179206,7 @@ target_mode = 2
 source = "決定キー："
 translation = "Confirm:"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179225,7 +179218,7 @@ target_mode = 2
 source = "　単語選択"
 translation = "Select term"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179242,7 +179235,7 @@ target_mode = 2
 source = "キャンセルキー："
 translation = "Cancel:"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179254,7 +179247,7 @@ target_mode = 2
 source = "　単語登録へ"
 translation = "Review changes"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179270,7 +179263,7 @@ target_mode = 2
 source = "　"
 translation = "  "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179282,7 +179275,7 @@ target_mode = 2
 source = "おま○こ　　→→　"
 translation = "FEMALE TERM ->"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179294,7 +179287,7 @@ target_mode = 2
 source = "お○んち○　→→　"
 translation = "MALE TERM ->"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179304,9 +179297,9 @@ offset = 0x06c6
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択"
-translation = "Select style"
+translation = "Latin keyboard"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179320,19 +179313,19 @@ target_mode = 2
 source = "　単語選択へ"
 translation = "Term list"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diska-0716-default"
+id = "mono-diska-0716-hiragana"
 file = "DISKA/MONO.MES"
 offset = 0x0716
 source_mode = 1
 target_mode = 2
 source = "　ひらがな"
-translation = "  DEFAULT"
+translation = "  LATIN"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179346,7 +179339,7 @@ target_mode = 2
 source = "　文字選択"
 translation = "Enter character"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179358,9 +179351,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択へ"
-translation = "Keyboard list"
+translation = "Term list"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179372,7 +179365,7 @@ target_mode = 2
 source = "　登録・終了選択"
 translation = "Select action"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179386,7 +179379,7 @@ target_mode = 2
 source = "　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179398,7 +179391,7 @@ target_mode = 2
 source = "登録しますか？"
 translation = "Save changes?"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179410,7 +179403,7 @@ target_mode = 2
 source = "登録"
 translation = "Save"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179422,7 +179415,7 @@ target_mode = 2
 source = "未登録"
 translation = "Discard"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179434,7 +179427,7 @@ target_mode = 2
 source = "終了しますか？"
 translation = "Finish editing?"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179446,7 +179439,7 @@ target_mode = 2
 source = "終了"
 translation = "Finish"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179458,7 +179451,7 @@ target_mode = 2
 source = "再設定"
 translation = "Reset"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179473,7 +179466,7 @@ target_mode = 2
 source = "▲"
 translation = "^"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179488,7 +179481,7 @@ target_mode = 2
 source = "▼"
 translation = "v"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179498,11 +179491,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x203c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = " "
+translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179513,11 +179506,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2488 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = " "
+translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179528,11 +179521,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x24aa },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = " "
+translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179548,11 +179541,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2554 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179563,11 +179556,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x24ee },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "たちつてと　だぢづでど　　　　　　"
-translation = " "
+translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179578,11 +179571,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2510 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "なにぬねの　　　　　　　　　　　　"
-translation = " "
+translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179593,11 +179586,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2532 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = " "
+translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179608,11 +179601,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2576 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "まみむめも　っー　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179623,11 +179616,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x2598 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179638,11 +179631,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x25ba },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "らりるれろ　わをん　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179654,11 +179647,11 @@ anchors = [
   { file = "DISKA/MONO.MES", offset = 0x25dc },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179675,7 +179668,7 @@ target_mode = 2
 source = "BS"
 translation = "BS"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179691,7 +179684,7 @@ target_mode = 2
 source = "←　中止　決定"
 translation = "<-  CANCEL  OK"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179703,7 +179696,7 @@ target_mode = 2
 source = "アイウエオ　ァィゥェォ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179715,7 +179708,7 @@ target_mode = 2
 source = "カキクケコ　ガギグゲゴ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179727,7 +179720,7 @@ target_mode = 2
 source = "サシスセソ　ザジズゼゾ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179739,7 +179732,7 @@ target_mode = 2
 source = "タチツテト　ダヂヅデド　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179751,7 +179744,7 @@ target_mode = 2
 source = "ナニヌネノ　　　　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179763,7 +179756,7 @@ target_mode = 2
 source = "ハヒフヘホ　バビブベボ　パピプペポ"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179775,7 +179768,7 @@ target_mode = 2
 source = "マミムメモ　ッー　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179787,7 +179780,7 @@ target_mode = 2
 source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179799,7 +179792,7 @@ target_mode = 2
 source = "ラリルレロ　ワヲン　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179811,7 +179804,7 @@ target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179823,7 +179816,7 @@ target_mode = 2
 source = "　　　　　第　二　水　準　　　　　"
 translation = " "
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179837,7 +179830,7 @@ target_mode = 2
 source = "\""
 translation = "\""
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179849,7 +179842,7 @@ target_mode = 2
 source = "を"
 translation = "Please"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179861,7 +179854,7 @@ target_mode = 2
 source = "参照して下さい"
 translation = "check the table."
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179873,7 +179866,7 @@ target_mode = 2
 source = "指定の漢字は"
 translation = "That character"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179885,7 +179878,7 @@ target_mode = 2
 source = "　有りません"
 translation = "is unavailable."
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179897,7 +179890,7 @@ target_mode = 2
 source = "／３５"
 translation = "/35"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179911,7 +179904,7 @@ target_mode = 2
 source = "中止"
 translation = "Cancel"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179923,7 +179916,7 @@ target_mode = 2
 source = "←"
 translation = "<-"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179935,7 +179928,7 @@ target_mode = 2
 source = "決定"
 translation = "OK"
 speaker = "ui"
-context = "The localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179947,7 +179940,7 @@ target_mode = 2
 source = "単語を変更"
 translation = "CHANGE"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -179959,23 +179952,23 @@ target_mode = 2
 source = "します"
 translation = "TERMS"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diskb-0256-default"
+id = "mono-diskb-0256-hiragana"
 file = "DISKB/MONO.MES"
 offset = 0x0256
 source_mode = 1
 target_mode = 2
 source = "ひらがな"
-translation = "DEFAULT"
+translation = "LATIN"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diskb-0268-clinical"
+id = "mono-diskb-0268-katakana"
 anchors = [
   { file = "DISKB/MONO.MES", offset = 0x0268 },
   { file = "DISKB/MONO.MES", offset = 0x072a },
@@ -179983,13 +179976,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　カタカナ"
-translation = "  CLINICAL"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diskb-027b-blunt"
+id = "mono-diskb-027b-kanji"
 anchors = [
   { file = "DISKB/MONO.MES", offset = 0x027b },
   { file = "DISKB/MONO.MES", offset = 0x073e },
@@ -179997,13 +179990,13 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　漢　　字"
-translation = "  BLUNT"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diskb-028e-anatomical"
+id = "mono-diskb-028e-secondary-kanji"
 anchors = [
   { file = "DISKB/MONO.MES", offset = 0x028e },
   { file = "DISKB/MONO.MES", offset = 0x0752 },
@@ -180011,9 +180004,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　第二水準"
-translation = "  ANATOMICAL"
+translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180030,7 +180023,7 @@ target_mode = 2
 source = "決定キー："
 translation = "Confirm:"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180042,7 +180035,7 @@ target_mode = 2
 source = "　単語選択"
 translation = "Select term"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180059,7 +180052,7 @@ target_mode = 2
 source = "キャンセルキー："
 translation = "Cancel:"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180071,7 +180064,7 @@ target_mode = 2
 source = "　単語登録へ"
 translation = "Review changes"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180087,7 +180080,7 @@ target_mode = 2
 source = "　"
 translation = "  "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180099,7 +180092,7 @@ target_mode = 2
 source = "おま○こ　　→→　"
 translation = "FEMALE TERM ->"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180111,7 +180104,7 @@ target_mode = 2
 source = "お○んち○　→→　"
 translation = "MALE TERM ->"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180121,9 +180114,9 @@ offset = 0x06c6
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択"
-translation = "Select style"
+translation = "Latin keyboard"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180137,19 +180130,19 @@ target_mode = 2
 source = "　単語選択へ"
 translation = "Term list"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
-id = "mono-diskb-0716-default"
+id = "mono-diskb-0716-hiragana"
 file = "DISKB/MONO.MES"
 offset = 0x0716
 source_mode = 1
 target_mode = 2
 source = "　ひらがな"
-translation = "  DEFAULT"
+translation = "  LATIN"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180163,7 +180156,7 @@ target_mode = 2
 source = "　文字選択"
 translation = "Enter character"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180175,9 +180168,9 @@ anchors = [
 source_mode = 1
 target_mode = 2
 source = "　文字種別選択へ"
-translation = "Keyboard list"
+translation = "Term list"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180189,7 +180182,7 @@ target_mode = 2
 source = "　登録・終了選択"
 translation = "Select action"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180203,7 +180196,7 @@ target_mode = 2
 source = "　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180215,7 +180208,7 @@ target_mode = 2
 source = "登録しますか？"
 translation = "Save changes?"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180227,7 +180220,7 @@ target_mode = 2
 source = "登録"
 translation = "Save"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180239,7 +180232,7 @@ target_mode = 2
 source = "未登録"
 translation = "Discard"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180251,7 +180244,7 @@ target_mode = 2
 source = "終了しますか？"
 translation = "Finish editing?"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180263,7 +180256,7 @@ target_mode = 2
 source = "終了"
 translation = "Finish"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180275,7 +180268,7 @@ target_mode = 2
 source = "再設定"
 translation = "Reset"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180290,7 +180283,7 @@ target_mode = 2
 source = "▲"
 translation = "^"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180305,7 +180298,7 @@ target_mode = 2
 source = "▼"
 translation = "v"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180315,11 +180308,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x203c },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "あいうえお　ぁぃぅぇぉ　　　　　　"
-translation = " "
+translation = "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180330,11 +180323,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2488 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "かきくけこ　がぎぐげご　　　　　　"
-translation = " "
+translation = "ＫＬＭＮＯ　ＰＱＲＳＴ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180345,11 +180338,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x24aa },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "さしすせそ　ざじずぜぞ　　　　　　"
-translation = " "
+translation = "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180365,11 +180358,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2554 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180380,11 +180373,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x24ee },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "たちつてと　だぢづでど　　　　　　"
-translation = " "
+translation = "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180395,11 +180388,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2510 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "なにぬねの　　　　　　　　　　　　"
-translation = " "
+translation = "ｋｌｍｎｏ　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180410,11 +180403,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2532 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "はひふへほ　ばびぶべぼ　ぱぴぷぺぽ"
-translation = " "
+translation = "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180425,11 +180418,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2576 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "まみむめも　っー　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180440,11 +180433,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x2598 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "や　ゆ　よ　ゃ　ゅ　ょ　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180455,11 +180448,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x25ba },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "らりるれろ　わをん　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180471,11 +180464,11 @@ anchors = [
   { file = "DISKB/MONO.MES", offset = 0x25dc },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　　　　　　　　　"
-translation = " "
+translation = "　　　　　　　　　"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180492,7 +180485,7 @@ target_mode = 2
 source = "BS"
 translation = "BS"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180508,7 +180501,7 @@ target_mode = 2
 source = "←　中止　決定"
 translation = "<-  CANCEL  OK"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180520,7 +180513,7 @@ target_mode = 2
 source = "アイウエオ　ァィゥェォ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180532,7 +180525,7 @@ target_mode = 2
 source = "カキクケコ　ガギグゲゴ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180544,7 +180537,7 @@ target_mode = 2
 source = "サシスセソ　ザジズゼゾ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180556,7 +180549,7 @@ target_mode = 2
 source = "タチツテト　ダヂヅデド　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180568,7 +180561,7 @@ target_mode = 2
 source = "ナニヌネノ　　　　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180580,7 +180573,7 @@ target_mode = 2
 source = "ハヒフヘホ　バビブベボ　パピプペポ"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180592,7 +180585,7 @@ target_mode = 2
 source = "マミムメモ　ッー　　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180604,7 +180597,7 @@ target_mode = 2
 source = "ヤ　ユ　ヨ　ャ　ュ　ョ　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180616,7 +180609,7 @@ target_mode = 2
 source = "ラリルレロ　ワヲン　　　　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180628,7 +180621,7 @@ target_mode = 2
 source = "あいうえお　ぁぃぅぇぉ　　漢　字　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180640,7 +180633,7 @@ target_mode = 2
 source = "　　　　　第　二　水　準　　　　　"
 translation = " "
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180654,7 +180647,7 @@ target_mode = 2
 source = "\""
 translation = "\""
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180666,7 +180659,7 @@ target_mode = 2
 source = "を"
 translation = "Please"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180678,7 +180671,7 @@ target_mode = 2
 source = "参照して下さい"
 translation = "check the table."
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180690,7 +180683,7 @@ target_mode = 2
 source = "指定の漢字は"
 translation = "That character"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180702,7 +180695,7 @@ target_mode = 2
 source = "　有りません"
 translation = "is unavailable."
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180714,7 +180707,7 @@ target_mode = 2
 source = "／３５"
 translation = "/35"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180728,7 +180721,7 @@ target_mode = 2
 source = "中止"
 translation = "Cancel"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180740,7 +180733,7 @@ target_mode = 2
 source = "←"
 translation = "<-"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]
@@ -180752,7 +180745,7 @@ target_mode = 2
 source = "決定"
 translation = "OK"
 speaker = "ui"
-context = "The mirrored localized four-style terminology-preset selector; its legacy Japanese character-grid branch is unreachable in the English build."
+context = "The mirrored localized free-form term editor uses one full-width CP932 Latin palette."
 status = "translated"
 
 [[entries]]

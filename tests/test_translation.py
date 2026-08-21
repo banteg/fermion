@@ -8,55 +8,166 @@ import pytest
 
 from fermion.gm import GMFile
 from fermion.translation import (
+    _LATIN_EDITOR_CELLS,
     PhysicalTranslation,
     TranslationAnchor,
     TranslationCatalog,
     TranslationEntry,
     TranslationError,
     TranslationFile,
-    TranslationToken,
-    _patch_editor_preset_source,
+    _latin_editor_row,
+    _patch_editor_latin_source,
     _patch_gm_source,
     _patch_token_initializer_source,
+    _runtime_glyph_word,
     _runtime_token_bytes,
     _verify_compiled_file,
     _wrap_text,
 )
 
 
-def test_editor_preset_patch_uses_mode_one_safe_fullwidth_strings() -> None:
-    presets = {
-        "name:mother": ("Yuki", "May", "Helen", "Olivia"),
-        "name:older-sister": ("Ruri", "Ruby", "Alice", "Chloe"),
-        "name:dear-person": ("Kanako", "Kana", "Sarah", "Emma"),
-        "name:friend-1": ("Yoko", "Yuna", "Maria", "Ava"),
-        "name:friend-2": ("Hiroko", "Hina", "Erika", "Mia"),
-    }
-    tokens = tuple(
-        TranslationToken(
-            token_id,
-            "source",
-            choices[0],
-            max(len(_runtime_token_bytes(choice)) for choice in choices),
-            choices,
-        )
-        for token_id, choices in presets.items()
+@pytest.mark.parametrize(
+    (
+        "filename",
+        "roles",
+        "draw_label",
+        "mapping_label",
+        "special_label",
+        "source_limit",
+        "target_limit",
+        "save_base",
+        "save_length",
+        "destinations",
+    ),
+    (
+        (
+            "NAME.MES",
+            5,
+            8889,
+            14673,
+            16675,
+            5,
+            6,
+            1000,
+            35,
+            (1000, 1014, 1028, 1042, 1056),
+        ),
+        ("MONO.MES", 2, 7751, 13535, 15537, 6, 7, 1070, 16, (1070, 1086)),
+    ),
+)
+def test_editor_latin_patch_reuses_free_form_storage_and_control_flow(
+    filename: str,
+    roles: int,
+    draw_label: int,
+    mapping_label: int,
+    special_label: int,
+    source_limit: int,
+    target_limit: int,
+    save_base: int,
+    save_length: int,
+    destinations: tuple[int, ...],
+) -> None:
+    role_transitions = "\n".join(
+        f"(assign (ref 11 3013) {role})\n(assign (ref 12 1244) 2)" for role in range(1, roles + 1)
     )
-    source = """prefix
-(label 2531)
-               (switch (local-address 2723) (ref 11 2002))
-               (case (local-address 2723) 200)
-               (label 2723)
-               (next))
+    storage = "\n".join(
+        f"(assign (ref 12 {destination}) (string-value (ref 14 160)))"
+        for destination in destinations
+    )
+    source = f"""prefix
+(file-load-range 0 (ref 12 {save_base}) {save_length})
+{role_transitions}
+(for-start 9 (local-address 3026) (== (ref 12 1244) 3))
+(assign (ref 12 1244) 2)
+(assign (ref 12 1244) 2)
+(for-start 17 (local-address 3520) (> (ref 11 3012) {source_limit}))
+(next)
+(for-start 18 (local-address 5285) (== (ref 12 1244) 4))
+{storage}
+(file-save-range 0 (ref 12 {save_base}) {save_length})
+(label {mapping_label})
+(assign (ref 12 1274) 41090)
+(return)
+(label {special_label})
+(return)
 suffix
 """
 
-    patched = _patch_editor_preset_source(source, "NAME.MES", tokens)
+    patched = _patch_editor_latin_source(source, filename)
 
-    yuki = " ".join(str(byte) for byte in _runtime_token_bytes("Yuki"))
-    assert f"(inline-source 0 255 1 {yuki})" in patched
-    assert patched.count("(string-copy (ref 14 160)") == 20
-    assert "legacy" not in patched
+    assert patched.count(f"(call (local-address {draw_label}))") == roles
+    assert patched.count("(assign (ref 12 1246) 1)") == roles
+    assert patched.count("(assign (ref 11 3011) 1)") == roles
+    assert patched.count("(assign (ref 12 1244) 3)") == roles
+    assert patched.count("(assign (ref 12 1244) 1)") == 2
+    assert f"(> (ref 11 3012) {source_limit})" not in patched
+    assert f"(> (ref 11 3012) {target_limit})" in patched
+    assert f"(label {mapping_label})" in patched
+    assert f"(label {special_label})" in patched
+    assert f"(assign (ref 12 1274) {_runtime_glyph_word('A')})" in patched
+    assert f"(assign (ref 12 1274) {_runtime_glyph_word('z')})" in patched
+    assert "(case (local-address" in patched
+    assert "(assign (ref 12 1274) 2)" in patched
+    assert "(assign (ref 12 1274) 1)" in patched
+    assert "(assign (ref 12 1274) 0)" in patched
+    assert "(label 60002)\n (next)\n (label 60001)" in patched
+    assert f"(label 60000)\n (next)\n (return)\n (label {special_label})" in patched
+
+
+def test_latin_editor_palette_matches_fullwidth_mapping() -> None:
+    assert len(_LATIN_EDITOR_CELLS) == 54
+    assert _latin_editor_row(176) == "ＡＢＣＤＥ　ＦＧＨＩＪ　　　　　　"
+    assert _latin_editor_row(208) == "ＵＶＷＸＹ　Ｚ　　　　　　　　　　"
+    assert _latin_editor_row(240) == "ａｂｃｄｅ　ｆｇｈｉｊ　　　　　　"
+    assert _latin_editor_row(272) == "ｐｑｒｓｔ　ｕｖｗｘｙ　ｚ－＇　　"
+    assert _latin_editor_row(336) == "　　　　　　　　　"
+    for _x, _y, character in _LATIN_EDITOR_CELLS:
+        assert _runtime_glyph_word(character) == int.from_bytes(
+            _runtime_token_bytes(character), "little"
+        )
+
+
+def test_catalog_editor_palette_matches_generated_rows() -> None:
+    catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
+    catalog = TranslationCatalog.from_file(catalog_path)
+    physical = {
+        (entry.anchor.file, entry.anchor.offset): entry for entry in catalog.physical_translations()
+    }
+    layouts = {
+        "NAME.MES": (
+            0x22D8,
+            0x22FA,
+            0x231C,
+            0x233E,
+            0x2360,
+            0x2382,
+            0x23A4,
+            0x23E8,
+            0x240A,
+            0x242C,
+            0x244E,
+        ),
+        "MONO.MES": (
+            0x1E66,
+            0x1E88,
+            0x1EAA,
+            0x1ECC,
+            0x1EEE,
+            0x1F10,
+            0x1F32,
+            0x1F76,
+            0x1F98,
+            0x1FBA,
+            0x1FDC,
+        ),
+    }
+    rows = (176, 192, 208, 224, 240, 256, 272, 288, 304, 320, 336)
+    for filename, offsets in layouts.items():
+        for archive in ("DISKA", "DISKB"):
+            for y, offset in zip(rows, offsets, strict=True):
+                entry = physical[(f"{archive}/{filename}", offset)]
+                assert entry.target_mode == 1
+                assert entry.translation == _latin_editor_row(y)
 
 
 def test_runtime_token_bytes_are_fullwidth_cp932() -> None:
@@ -68,10 +179,10 @@ def write_token_catalog(
     *,
     token_id: str = "name:mother",
     translation: str = "Yuki",
-    presets: tuple[str, ...] = (),
+    presets: tuple[str, ...] | None = None,
 ):
     preset_line = ""
-    if presets:
+    if presets is not None:
         encoded = ", ".join(f'"{preset}"' for preset in presets)
         preset_line = f"presets = [{encoded}]\n"
     catalog_path = tmp_path / "token-catalog.toml"
@@ -82,7 +193,7 @@ game = "Test"
 [[files]]
 file = "DISKA/SCENE.MES"
 source = "disk-a/SCENE.MES"
-sha256 = "{'0' * 64}"
+sha256 = "{"0" * 64}"
 
 [[tokens]]
 id = "{token_id}"
@@ -106,14 +217,11 @@ status = "draft"
 
 
 def test_catalog_derives_token_display_width_from_runtime_encoding(tmp_path) -> None:
-    catalog_path = write_token_catalog(
-        tmp_path,
-        presets=("Yuki", "May", "Helen", "Olivia"),
-    )
+    catalog_path = write_token_catalog(tmp_path)
 
     [token] = TranslationCatalog.from_file(catalog_path).tokens
 
-    assert token.max_width == 12
+    assert token.max_width == 8
 
 
 def test_catalog_rejects_token_default_exceeding_runtime_slot(tmp_path) -> None:
@@ -123,20 +231,10 @@ def test_catalog_rejects_token_default_exceeding_runtime_slot(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_catalog_rejects_token_preset_exceeding_runtime_slot(tmp_path) -> None:
-    catalog_path = write_token_catalog(
-        tmp_path,
-        presets=("Yuki", "Bartholomew"),
-    )
+def test_catalog_rejects_invented_token_presets(tmp_path) -> None:
+    catalog_path = write_token_catalog(tmp_path, presets=("Yuki", "May"))
 
-    with pytest.raises(TranslationError, match="exceeds the 14-byte runtime slot"):
-        TranslationCatalog.from_file(catalog_path)
-
-
-def test_catalog_rejects_duplicate_token_presets(tmp_path) -> None:
-    catalog_path = write_token_catalog(tmp_path, presets=("Yuki", "Yuki"))
-
-    with pytest.raises(TranslationError, match="presets must be distinct"):
+    with pytest.raises(TranslationError, match="runtime editors are free-form"):
         TranslationCatalog.from_file(catalog_path)
 
 

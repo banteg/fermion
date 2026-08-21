@@ -400,7 +400,9 @@ With reset names, young Kaori’s original 1996 name is therefore **Kanako Takan
 
 The `name-slot:dear-person` value is also adult Kaori’s original given name. When the mother addresses the adult scientist by that name in `F0039`, the rendering must exactly match the player-selected value. Do not replace it with **Kaori**, and do not expose the identity link early through catalog context visible to players, speaker labels, save descriptions, menus, route names, gallery titles, or character profiles.
 
-The final letter and every replay/gallery surface that displays the younger daughter’s name are part of the same regression surface. A name preset is not complete merely because ordinary dialogue renders correctly.
+The final letter and every replay/gallery surface that displays the younger daughter’s name are part of the same regression surface. A custom name is not validated merely because ordinary dialogue renders correctly.
+
+The localized editor remains free-form rather than offering translator-invented name choices. It replaces only the Japanese grid and coordinate mapping with full-width CP932 Latin letters, hyphen, and apostrophe. The original 14-byte slots and 35-byte save range are unchanged. The editor guard moves from 5 to 6 to expose the slot's six-glyph capacity; an emulator boundary probe confirms that the sixth glyph renders and the seventh is rejected.
 
 ### Connie Kanzaki — locked ending-only form
 
@@ -475,23 +477,26 @@ Fixed Japanese surnames also precede editable given-name tokens where English no
 
 ### Locked name-editor policy
 
-The archival English build keeps the name system but localizes it as a **tested preset selector**. It does not promise arbitrary Latin input: `0x4b` renders the stored strings through the game’s mode-1 path, and an unrestricted ASCII editor would require a separate engine patch plus exhaustive length and grammar testing. Every shipped preset must be encodable in the existing slot, tested at all five roles, and exercised in story, letter, and replay/gallery surfaces. The feature is preserved rather than removed; free-form Latin entry can be reconsidered only after the renderer and slot limits are proven.
+The archival English build preserves the original **free-form name editor**.
+It uses a single Latin palette whose letters, hyphen, and apostrophe map to
+full-width CP932 glyphs. This is not packed one-byte ASCII: each selection still
+writes one 16-bit character cell through the original append path, so the
+existing backspace, terminator, confirmation, storage slots, and save format
+continue to apply. The Japanese four-class selector is bypassed; cancel returns
+directly to the five-role name list.
 
-Runtime proof fixes those limits more precisely. Lime Juice can relocate a
-grown initializer or editor branch, but relocation does not enlarge the five
-14-byte destination buffers. The indirect mode-1 renderer displays ordinary
-ASCII bytes as Japanese glyphs, so English presets are encoded as full-width
-CP932 Latin at two bytes per character. Allowing for the terminator, each name
-therefore has a six-character maximum. The shipped reset names—Yuki, Ruri,
-Kanako, Yoko, and Hiroko—and all alternate presets fit that limit. The adult
-term buffers are 16 bytes, allowing seven full-width characters plus the
-terminator. Both mirrored editors replace the legacy character grid with four
-cataloged presets and copy the selected value into the original runtime slot;
-the slots, interpolation opcodes, and external control-flow targets remain
-unchanged. Catalog loading derives capacity from those adjacent slot addresses,
-checks the reset value and every distinct preset including its terminator, and
-derives the wrapping width from the encoded choices rather than trusting a
-second hand-maintained width field.
+Runtime proof fixes the limits precisely. Lime Juice can relocate a grown
+initializer or editor routine, but relocation does not enlarge the five 14-byte
+destination buffers. The indirect mode-1 renderer displays ordinary ASCII
+bytes as Japanese glyphs, so both defaults and typed input are encoded as
+full-width CP932 Latin at two bytes per character. Allowing for the terminator,
+each name has a six-character maximum. The source-derived reset names—Yuki,
+Ruri, Kanako, Yoko, and Hiroko—all fit that limit. The adult-term buffers are 16
+bytes, allowing seven full-width characters plus the terminator. Both mirrored
+editors use the same generated Latin coordinate table while retaining their
+original destination addresses and file load/save ranges. Catalog loading
+capacity-checks each reset value and derives wrapping width from its encoded
+form rather than trusting a second hand-maintained width field.
 
 ---
 
@@ -801,7 +806,13 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 - A player-entered phrase may overflow a textbox.
 - The feature intersects with any edited/censored release policy.
 
-**Locked decision:** retain the system as a small set of tested terminology presets using `⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. Do not ship unrestricted text entry, and do not remove the feature from the archival build. Every preset must fit the proven slot limit and be grammatically valid at all 12 story insertions. The localized editor should expose the preset choices directly rather than leave the Japanese character grid in an otherwise English build.
+**Locked decision:** retain the original free-form system using
+`⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. The localized term editor uses
+the same full-width CP932 Latin palette as the name editor, with the original
+16-byte slots and save layout. Its guard moves from 6 to 7 to expose the
+seven-character slot capacity. Default and representative custom values
+must be checked at all 12 story insertions; prose around the tokens must not
+depend on a particular article, number, or spelling.
 
 ---
 
@@ -919,7 +930,7 @@ Maintain one canonical source-faithful English catalog. Keep any distribution ad
 ### Phase 1 — Reconstruct the executable script model
 
 - Keep the recovered five name slots and their `0x45`/`0x4b` interpolation spans under regression test.
-- Finish semantic labels and preset constraints for the two customizable-term slots.
+- Keep semantic labels and fixed-slot constraints for the two customizable-term slots under regression test.
 - Generate the scene/choice graph from bytecode; do not hand-maintain it.
 - Identify textbox limits, encoding, line breaks, control codes, delays, and CG triggers.
 - Confirm which repeated records are separately reachable.
@@ -955,7 +966,7 @@ The following decisions are already locked and should be enforced during review:
 - **cryosleep** for `コールドスリープ`, with **suspended animation** only where `冷凍睡眠` supplies the explanatory gloss;
 - no romanized honorific suffixes;
 - Yuki, Ruri, Kanako, Yoko, and Hiroko as reset-name romanizations;
-- preset-only localized name and adult-term editors; and
+- free-form full-width Latin name and adult-term editors; and
 - source-faithful age and school-status wording in the canonical catalog.
 
 Voice-calibration examples belong in anchored canonical catalog entries with source, context, and notes. Do not create a second table of free-floating “final” translations inside this brief.
@@ -977,7 +988,7 @@ checkpoint:
    `runtime-verified`.
 4. The remaining work is dedicated linguistic review of the still-translated
    records plus in-engine route QA beyond the early FOP/F0000/F0001 fixtures,
-   including all shipped name and adult-term presets. Structural completion is
+   including representative maximum-length name and adult-term values. Structural completion is
    not a substitute for either pass.
 
 Continue to work in source-order slices when practical so adjacent voices and
@@ -1009,7 +1020,7 @@ Run distinct passes rather than treating “edited once” as completion:
 
 1. **Source and linguistic pass:** verify meaning, register, and terminology against the exact anchored Japanese.
 2. **Reveal pass:** make every early clue work retrospectively without letting metadata or wording spoil Kaori’s identity.
-3. **Variable pass:** exercise every name and term preset, including maximum-length values and English punctuation around tokens.
+3. **Variable pass:** exercise defaults and representative custom name and term values, including maximum-length input and English punctuation around tokens.
 4. **Editorial pass:** audit content warnings, confirm stated ages remain source-faithful, and verify that any distribution adaptation is documented and mechanically separate.
 5. **Playthrough pass:** exercise every branch, the facility graph, replay/gallery surfaces, and the final letter in the emulator.
 
@@ -1083,9 +1094,9 @@ and otherwise sensitive material described in this brief.
 
 - [ ] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text.
 - [ ] Editable given names appear in natural English full-name order with Takano, Nanase, and Hayami.
-- [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for every shipped preset.
+- [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for representative custom values.
 - [ ] No systematic romanized honorific suffix survives; titles and kinship terms follow the locked English policy.
-- [ ] Every preset is exercised in ordinary story text, the identity reveal, final letter, save data, and replay/gallery surfaces.
+- [ ] Custom values are exercised in ordinary story text, the identity reveal, final letter, save data, and replay/gallery surfaces.
 - [ ] **Connie Kanzaki** appears only where the ending intends it and is not normalized backward through the script.
 
 ### Terminology and voice
@@ -1134,8 +1145,9 @@ and otherwise sensitive material described in this brief.
 
 ### Highest-priority implementation and research tasks
 
-1. Exercise every shipped name and adult-term preset in story, final-letter,
-   unlocked replay, and gallery contexts during the human playtest.
+1. Exercise defaults and representative maximum-length custom names and terms in
+   story, final-letter, unlocked replay, and gallery contexts during the human
+   playtest.
 2. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
 3. Check manuals, packaging, and art for evidence about `パラサイト銃`; revise the locked functional translation only if that evidence proves a proper name.
 4. Measure and visually verify message-window limits beyond the proven 61-column, three-row F0001 dialogue surface.

@@ -24,9 +24,7 @@ _GM_TEXT = re.compile(
 _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
 _PURE_SILENCE = re.compile(r"^・+。$")
-_TRANSLATION_STATUSES = frozenset(
-    {"draft", "translated", "reviewed", "runtime-verified"}
-)
+_TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-verified"})
 
 
 class TranslationError(ValueError):
@@ -68,7 +66,6 @@ class TranslationToken:
     source: str
     translation: str
     max_width: int
-    presets: tuple[str, ...] = ()
     initializers: tuple[TranslationTokenInitializer, ...] = ()
 
     @property
@@ -450,8 +447,8 @@ def build_translation_files(
         edited = _patch_gm_source(rkt_path.read_text(), original, entries)
         if token_initializers:
             edited = _patch_token_initializer_source(edited, original, token_initializers)
-        if file.name.upper() in {"NAME.MES", "MONO.MES"}:
-            edited = _patch_editor_preset_source(edited, file.name, catalog.tokens)
+        if file.name.upper() in _EDITOR_LAYOUTS:
+            edited = _patch_editor_latin_source(edited, file.name)
         rkt_path.write_text(edited)
         _run_juice(
             executable,
@@ -546,12 +543,16 @@ def _patch_token_initializer_source(
     return patched
 
 
-_EDITOR_PRESET_LAYOUTS = {
+_EDITOR_LAYOUTS = {
     "NAME.MES": {
-        "token_prefix": "name:",
-        "start_label": 2531,
-        "end_label": 2723,
-        "menu_ref": 2002,
+        "role_count": 5,
+        "draw_label": 8889,
+        "mapping_label": 14673,
+        "special_mapping_label": 16675,
+        "source_limit": 5,
+        "target_limit": 6,
+        "save_base": 1000,
+        "save_length": 35,
         "destinations": (
             ("name:mother", 1000),
             ("name:older-sister", 1014),
@@ -562,10 +563,14 @@ _EDITOR_PRESET_LAYOUTS = {
         "slot_end": 1070,
     },
     "MONO.MES": {
-        "token_prefix": "term:",
-        "start_label": 1890,
-        "end_label": 2082,
-        "menu_ref": 2002,
+        "role_count": 2,
+        "draw_label": 7751,
+        "mapping_label": 13535,
+        "special_mapping_label": 15537,
+        "source_limit": 6,
+        "target_limit": 7,
+        "save_base": 1070,
+        "save_length": 16,
         "destinations": (
             ("term:slot-1", 1070),
             ("term:slot-2", 1086),
@@ -578,12 +583,10 @@ _EDITOR_PRESET_LAYOUTS = {
 def _runtime_token_capacities() -> dict[str, int]:
     """Derive each fixed string buffer's capacity from adjacent slot addresses."""
     capacities: dict[str, int] = {}
-    for layout in _EDITOR_PRESET_LAYOUTS.values():
+    for layout in _EDITOR_LAYOUTS.values():
         destinations = tuple(layout["destinations"])
         boundaries = (*destinations[1:], (None, int(layout["slot_end"])))
-        for (token_id, start), (_next_token_id, end) in zip(
-            destinations, boundaries, strict=True
-        ):
+        for (token_id, start), (_next_token_id, end) in zip(destinations, boundaries, strict=True):
             capacity = int(end) - int(start)
             if capacity < 2 or token_id in capacities:
                 raise AssertionError(f"invalid runtime token layout for {token_id}")
@@ -604,9 +607,7 @@ def _runtime_token_bytes(value: str) -> bytes:
         elif "!" <= character <= "~":
             converted.append(chr(ord(character) + 0xFEE0))
         else:
-            raise TranslationError(
-                f"runtime token preset contains unsupported character {character!r}"
-            )
+            raise TranslationError(f"runtime token contains unsupported character {character!r}")
     return "".join(converted).encode("cp932")
 
 
@@ -615,62 +616,66 @@ def _validate_runtime_token(token: TranslationToken) -> None:
     capacity = _RUNTIME_TOKEN_CAPACITIES.get(token.id)
     if capacity is None:
         raise TranslationError(f"{token.id}: no fixed runtime slot is defined")
-    values = (token.translation, *token.presets)
-    payloads = tuple(_runtime_token_bytes(value) for value in values)
-    derived_width = max(len(payload) for payload in payloads)
+    payload = _runtime_token_bytes(token.translation)
+    derived_width = len(payload)
     if token.max_width != derived_width:
         raise TranslationError(
-            f"{token.id}: display width must be derived as {derived_width}, "
-            f"not {token.max_width}"
+            f"{token.id}: display width must be derived as {derived_width}, not {token.max_width}"
         )
-    if len(token.presets) != len(set(token.presets)):
-        raise TranslationError(f"{token.id}: presets must be distinct")
-    for value, payload in zip(values, payloads, strict=True):
-        if len(payload) + 1 > capacity:
-            raise TranslationError(
-                f"{token.id}: {value!r} exceeds the {capacity}-byte runtime slot"
-            )
-
-
-def _preset_string_copy(value: str, destination: int) -> list[str]:
-    payload = " ".join(str(byte) for byte in _runtime_token_bytes(value))
-    return [
-        f"(string-copy (ref 14 160) (inline-source 0 255 1 {payload}))",
-        f"(assign (ref 12 {destination}) (string-value (ref 14 160)))",
-    ]
-
-
-def _patch_editor_preset_source(
-    source: str,
-    filename: str,
-    tokens: tuple[TranslationToken, ...],
-) -> str:
-    """Replace the legacy Japanese input branch with four cataloged presets."""
-    normalized = filename.upper()
-    layout = _EDITOR_PRESET_LAYOUTS.get(normalized)
-    if layout is None:
-        return source
-    token_prefix = str(layout["token_prefix"])
-    editor_tokens = {token.id: token for token in tokens if token.id.startswith(token_prefix)}
-    destinations = tuple(layout["destinations"])
-    expected_ids = {token_id for token_id, _destination in destinations}
-    if set(editor_tokens) != expected_ids:
+    if len(payload) + 1 > capacity:
         raise TranslationError(
-            f"{normalized}: preset tokens differ from the expected editor slots"
+            f"{token.id}: {token.translation!r} exceeds the {capacity}-byte runtime slot"
         )
-    for token in editor_tokens.values():
-        if len(token.presets) != 4:
-            raise TranslationError(f"{token.id}: editor token must define four presets")
-        _validate_runtime_token(token)
 
-    start_label = int(layout["start_label"])
-    end_label = int(layout["end_label"])
-    start_marker = f"(label {start_label})\n               (switch"
-    end_marker = f"(label {end_label})\n               (next))"
-    if source.count(start_marker) != 1 or source.count(end_marker) != 1:
-        raise TranslationError(f"{normalized}: legacy preset-selection branch changed")
-    start = source.index(start_marker)
-    end = source.index(end_marker, start) + len(end_marker)
+
+_LATIN_EDITOR_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-'"
+_LATIN_EDITOR_COORDINATES = (
+    *((x, 176) for x in (20, 22, 24, 26, 28, 32, 34, 36, 38, 40)),
+    *((x, 192) for x in (20, 22, 24, 26, 28, 32, 34, 36, 38, 40)),
+    *((x, 208) for x in (20, 22, 24, 26, 28, 32)),
+    *((x, 240) for x in (20, 22, 24, 26, 28, 32, 34, 36, 38, 40)),
+    *((x, 256) for x in (20, 22, 24, 26, 28)),
+    *((x, 272) for x in (20, 22, 24, 26, 28, 32, 34, 36, 38, 40, 44, 46, 48)),
+)
+_LATIN_EDITOR_CELLS = tuple(
+    (x, y, character)
+    for (x, y), character in zip(
+        _LATIN_EDITOR_COORDINATES,
+        _LATIN_EDITOR_CHARACTERS,
+        strict=True,
+    )
+)
+_LATIN_EDITOR_ACTIONS = ((38, 352, 2), (44, 352, 1), (50, 352, 0))
+
+
+def _runtime_glyph_word(character: str) -> int:
+    """Return the VM word for one full-width runtime glyph."""
+    payload = _runtime_token_bytes(character)
+    if len(payload) != 2:
+        raise TranslationError(f"{character!r} is not one full-width CP932 glyph")
+    return int.from_bytes(payload, "little")
+
+
+def _latin_editor_row(y: int) -> str:
+    """Render one palette row from the editor's coordinate table."""
+    characters = {(x, row_y): character for x, row_y, character in _LATIN_EDITOR_CELLS}
+    row = []
+    row_end = 38 if y == 336 else 54
+    for x in range(20, row_end, 2):
+        character = characters.get((x, y))
+        row.append(
+            _runtime_token_bytes(character).decode("cp932") if character is not None else "　"
+        )
+    return "".join(row)
+
+
+def _latin_editor_mapping_source(mapping_label: int) -> str:
+    """Generate the coordinate-to-full-width-glyph mapping routine."""
+    cells_by_row: dict[int, list[tuple[int, str | int]]] = {}
+    for x, y, character in _LATIN_EDITOR_CELLS:
+        cells_by_row.setdefault(y, []).append((x, character))
+    for x, y, action in _LATIN_EDITOR_ACTIONS:
+        cells_by_row.setdefault(y, []).append((x, action))
 
     next_label = 60000
 
@@ -680,50 +685,120 @@ def _patch_editor_preset_source(
         next_label += 1
         return value
 
-    outer_end = end_label
+    outer_end = fresh_label()
     lines = [
-        f"(label {start_label})",
-        f"(switch (local-address {outer_end}) (ref 11 {int(layout['menu_ref'])}))",
+        f"(label {mapping_label})",
+        "(assign (ref 11 3018) 0)",
+        "(assign (ref 12 1274) 3)",
+        f"(switch (local-address {outer_end}) (ref 12 1252))",
     ]
-    for preset_index in range(4):
-        category_end = fresh_label() if preset_index < 3 else outer_end
-        lines.append(f"(case (local-address {category_end}) {preset_index + 1})")
-        role_end = fresh_label()
-        lines.append(f"(switch (local-address {role_end}) (ref 11 3013))")
-        for role_index, (token_id, destination) in enumerate(destinations, 1):
-            role_case_end = fresh_label() if role_index < len(destinations) else role_end
-            lines.append(f"(case (local-address {role_case_end}) {role_index})")
-            lines.extend(
-                _preset_string_copy(
-                    editor_tokens[token_id].presets[preset_index],
-                    destination,
-                )
-            )
-            lines.append("(next)")
-            if role_index < len(destinations):
-                lines.append(f"(label {role_case_end})")
-        lines.extend(
-            [
-                f"(label {role_end})",
-                "(next)",
-                "(assign (ref 12 1244) 1)",
-                "(next 2)",
-                "(end)",
-            ]
-        )
-        if preset_index < 3:
-            lines.append(f"(label {category_end})")
-    lines.extend(
-        [
-            f"(case (local-address {outer_end}) 200)",
-            "(assign (ref 12 1244) 1)",
-            "(next 2)",
-            "(end)",
-            f"(label {outer_end})",
-            "(next))",
-        ]
+    for y, cells in sorted(cells_by_row.items()):
+        row_end = fresh_label()
+        lines.append(f"(case (local-address {row_end}) {y})")
+        x_end = fresh_label()
+        lines.append(f"(switch (local-address {x_end}) (ref 12 1250))")
+        for x, value in cells:
+            case_end = fresh_label()
+            lines.append(f"(case (local-address {case_end}) {x})")
+            word = value if isinstance(value, int) else _runtime_glyph_word(value)
+            lines.append(f"(assign (ref 12 1274) {word})")
+            lines.append(f"(label {case_end})")
+        lines.extend([f"(label {x_end})", "(next)", f"(label {row_end})"])
+    lines.extend([f"(label {outer_end})", "(next)", "(return)"])
+    return "\n ".join(lines)
+
+
+def _patch_editor_latin_source(source: str, filename: str) -> str:
+    """Open the original editor directly on one full-width Latin palette."""
+    normalized = filename.upper()
+    layout = _EDITOR_LAYOUTS.get(normalized)
+    if layout is None:
+        return source
+
+    save_base = int(layout["save_base"])
+    save_length = int(layout["save_length"])
+    protected_forms = (
+        f"(file-load-range 0 (ref 12 {save_base}) {save_length})",
+        f"(file-save-range 0 (ref 12 {save_base}) {save_length})",
+        *(
+            f"(assign (ref 12 {int(destination)}) (string-value (ref 14 160)))"
+            for _token_id, destination in tuple(layout["destinations"])
+        ),
     )
-    return source[:start] + "\n               ".join(lines) + source[end:]
+    protected_counts = {form: source.count(form) for form in protected_forms}
+    if any(count != 1 for count in protected_counts.values()):
+        raise TranslationError(f"{normalized}: editor storage or save layout changed")
+
+    draw_label = int(layout["draw_label"])
+    role_pattern = re.compile(
+        r"(?P<prefix>\(assign \(ref 11 3013\) (?P<role>\d+)\)\n"
+        r"(?P<indent>[ \t]*))\(assign \(ref 12 1244\) 2\)"
+    )
+    seen_roles: list[int] = []
+
+    def open_editor(match: re.Match[str]) -> str:
+        role = int(match.group("role"))
+        seen_roles.append(role)
+        indent = match.group("indent")
+        return match.group("prefix") + ("\n" + indent).join(
+            (
+                "(assign (ref 12 1246) 1)",
+                "(assign (ref 11 3011) 1)",
+                f"(call (local-address {draw_label}))",
+                "(assign (ref 12 1244) 3)",
+            )
+        )
+
+    patched = role_pattern.sub(open_editor, source)
+    expected_roles = list(range(1, int(layout["role_count"]) + 1))
+    if seen_roles != expected_roles:
+        raise TranslationError(f"{normalized}: role-to-editor transitions changed: {seen_roles!r}")
+
+    state_three = tuple(
+        re.finditer(
+            r"\(for-start \d+ \(local-address \d+\) \(== \(ref 12 1244\) 3\)\)",
+            patched,
+        )
+    )
+    state_four = tuple(
+        re.finditer(
+            r"\(for-start \d+ \(local-address \d+\) \(== \(ref 12 1244\) 4\)\)",
+            patched,
+        )
+    )
+    if (
+        len(state_three) != 1
+        or len(state_four) != 1
+        or state_four[0].start() <= state_three[0].start()
+    ):
+        raise TranslationError(f"{normalized}: editor state loop changed")
+    start = state_three[0].start()
+    end = state_four[0].start()
+    editor_loop = patched[start:end]
+    return_to_style = "(assign (ref 12 1244) 2)"
+    if editor_loop.count(return_to_style) != 2:
+        raise TranslationError(f"{normalized}: editor cancel paths changed")
+    editor_loop = editor_loop.replace(return_to_style, "(assign (ref 12 1244) 1)")
+    source_guard = f"(> (ref 11 3012) {int(layout['source_limit'])})"
+    target_guard = f"(> (ref 11 3012) {int(layout['target_limit'])})"
+    if editor_loop.count(source_guard) != 1:
+        raise TranslationError(f"{normalized}: editor length guard changed")
+    editor_loop = editor_loop.replace(source_guard, target_guard)
+    patched = patched[:start] + editor_loop + patched[end:]
+
+    mapping_label = int(layout["mapping_label"])
+    special_mapping_label = int(layout["special_mapping_label"])
+    mapping_marker = f"(label {mapping_label})"
+    special_marker = f"(label {special_mapping_label})"
+    if patched.count(mapping_marker) != 1 or patched.count(special_marker) != 1:
+        raise TranslationError(f"{normalized}: editor mapping routines changed")
+    mapping_start = patched.index(mapping_marker)
+    mapping_end = patched.index(special_marker, mapping_start)
+    mapping = _latin_editor_mapping_source(mapping_label)
+    patched = patched[:mapping_start] + mapping + "\n " + patched[mapping_end:]
+    if any(patched.count(form) != count for form, count in protected_counts.items()):
+        raise TranslationError(f"{normalized}: Latin patch changed editor storage or save layout")
+    return patched
 
 
 def _rkt_list_spans(source: str, tag: str) -> tuple[tuple[int, int, str], ...]:
@@ -833,7 +908,7 @@ def _verify_compiled_file(
         raise TranslationError(f"{file.file}: pristine structural audit failed")
     original_opcodes = tuple(instruction.opcode for instruction in original_audit.instructions)
     compiled_opcodes = tuple(instruction.opcode for instruction in compiled_audit.instructions)
-    editor_patched = file.name.upper() in _EDITOR_PRESET_LAYOUTS
+    editor_patched = file.name.upper() in _EDITOR_LAYOUTS
     if not editor_patched and original_opcodes != compiled_opcodes:
         raise TranslationError(f"{file.file}: compiled instruction sequence changed")
     _verify_translated_token_initializers(original, compiled, token_initializers)
@@ -848,8 +923,7 @@ def _verify_compiled_file(
         compiled_external_relocations = tuple(
             relocation
             for relocation in compiled_audit.relocations
-            if not relocation.required_local
-            and relocation.target in original_external_targets
+            if not relocation.required_local and relocation.target in original_external_targets
         )
         compiled_external_targets = Counter(
             relocation.target for relocation in compiled_external_relocations
@@ -1047,9 +1121,7 @@ def _translation_status(table: dict[str, object], *, context: str) -> str:
 
 def _validate_silence_translation(source: str, translation: str, *, context: str) -> None:
     if _PURE_SILENCE.fullmatch(source) and translation != "...":
-        raise TranslationError(
-            f"{context}.translation must render a pure silent beat as '...'"
-        )
+        raise TranslationError(f"{context}.translation must render a pure silent beat as '...'")
 
 
 def _integer(table: dict[str, object], key: str, *, context: str) -> int:
@@ -1090,14 +1162,9 @@ def _parse_token(value: object, index: int) -> TranslationToken:
     source = _string(value, "source", context=context)
     translation = _string(value, "translation", context=context)
     if "max_width" in value:
-        raise TranslationError(f"{context}.max_width is derived from the encoded choices")
-    raw_presets = value.get("presets", [])
-    if not isinstance(raw_presets, list):
-        raise TranslationError(f"{context}.presets must be an array of strings")
-    presets = tuple(
-        _string({"preset": preset}, "preset", context=f"{context}.presets[{preset_index}]")
-        for preset_index, preset in enumerate(raw_presets, 1)
-    )
+        raise TranslationError(f"{context}.max_width is derived from the encoded translation")
+    if "presets" in value:
+        raise TranslationError(f"{context}.presets is unsupported; runtime editors are free-form")
     raw_initializers = value.get("initializers", [])
     if not isinstance(raw_initializers, list):
         raise TranslationError(f"{context}.initializers must be an array of tables")
@@ -1105,23 +1172,19 @@ def _parse_token(value: object, index: int) -> TranslationToken:
         _parse_token_initializer(item, item_index, context)
         for item_index, item in enumerate(raw_initializers, 1)
     )
-    if presets and presets[0] != translation:
-        raise TranslationError(f"{context}.presets must begin with the default translation")
-    if any(character in source + translation + "".join(presets) for character in "⟦⟧\n\x00"):
+    if any(character in source + translation for character in "⟦⟧\n\x00"):
         raise TranslationError(
-            f"{context} source, translation, and presets must be single-line literal values"
+            f"{context} source and translation must be single-line literal values"
         )
     try:
         source.encode("cp932")
         translation.encode("ascii")
-        for preset in presets:
-            preset.encode("ascii")
     except UnicodeEncodeError as error:
         raise TranslationError(
-            f"{context} source must be CP932 and translation/presets must be ASCII"
+            f"{context} source must be CP932 and translation must be ASCII"
         ) from error
-    max_width = max(len(_runtime_token_bytes(item)) for item in (translation, *presets))
-    token = TranslationToken(token_id, source, translation, max_width, presets, initializers)
+    max_width = len(_runtime_token_bytes(translation))
+    token = TranslationToken(token_id, source, translation, max_width, initializers)
     _validate_runtime_token(token)
     return token
 
