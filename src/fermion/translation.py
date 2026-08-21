@@ -25,6 +25,7 @@ _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
 _PURE_SILENCE = re.compile(r"^・+。$")
 _TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-verified"})
+_WRAP_MODES = frozenset({"words", "characters"})
 
 
 class TranslationError(ValueError):
@@ -37,6 +38,8 @@ class TranslationFile:
     source: str
     sha256: str
     box_width: int | None = None
+    box_rows: int | None = None
+    wrap_mode: str = "words"
 
     @property
     def archive(self) -> str:
@@ -86,19 +89,32 @@ class TranslationEntry:
     status: str
     notes: str
     box_width: int | None = None
+    box_rows: int | None = None
+    wrap_mode: str | None = None
 
     @property
     def wrapped_translation(self) -> tuple[str, ...]:
         return self.wrapped_translation_for()
 
-    def wrapped_translation_for(self, default_box_width: int | None = None) -> tuple[str, ...]:
+    def wrapped_translation_for(
+        self,
+        default_box_width: int | None = None,
+        default_wrap_mode: str = "words",
+    ) -> tuple[str, ...]:
         box_width = self.box_width if self.box_width is not None else default_box_width
         if box_width is None:
             return (self.translation,)
-        return _wrap_text(self.translation, box_width)
+        wrap_mode = self.wrap_mode if self.wrap_mode is not None else default_wrap_mode
+        return _wrap_text(self.translation, box_width, wrap_mode=wrap_mode)
 
-    def compiled_translation(self, default_box_width: int | None = None) -> str:
-        return "\n".join(self.wrapped_translation_for(default_box_width))
+    def compiled_translation(
+        self,
+        default_box_width: int | None = None,
+        default_wrap_mode: str = "words",
+    ) -> str:
+        return "\n".join(
+            self.wrapped_translation_for(default_box_width, default_wrap_mode)
+        )
 
 
 @dataclass(frozen=True)
@@ -150,6 +166,8 @@ class CompositeTranslationEntry:
     status: str
     notes: str
     box_width: int | None = None
+    box_rows: int | None = None
+    wrap_mode: str | None = None
 
     @property
     def anchors(self) -> tuple[TranslationAnchor, ...]:
@@ -159,11 +177,13 @@ class CompositeTranslationEntry:
         self,
         default_box_width: int | None,
         tokens: dict[str, TranslationToken],
+        default_wrap_mode: str = "words",
     ) -> str:
         box_width = self.box_width if self.box_width is not None else default_box_width
         if box_width is None:
             return self.translation
-        return _wrap_composite(self.translation, box_width, tokens)
+        wrap_mode = self.wrap_mode if self.wrap_mode is not None else default_wrap_mode
+        return _wrap_composite(self.translation, box_width, tokens, wrap_mode=wrap_mode)
 
 
 @dataclass(frozen=True)
@@ -347,7 +367,10 @@ class TranslationCatalog:
         for entry in self.entries:
             for anchor in entry.anchors:
                 translation = (
-                    entry.compiled_translation(files[anchor.file].box_width)
+                    entry.compiled_translation(
+                        files[anchor.file].box_width,
+                        files[anchor.file].wrap_mode,
+                    )
                     if compiled
                     else entry.translation
                 )
@@ -366,6 +389,7 @@ class TranslationCatalog:
                 translation = entry.compiled_translation(
                     files[occurrence.file].box_width if compiled else None,
                     tokens,
+                    files[occurrence.file].wrap_mode,
                 )
                 translation_parts = _composite_parts(translation)
                 text_chunks = [value for kind, value in translation_parts if kind == "text"]
@@ -1131,6 +1155,29 @@ def _integer(table: dict[str, object], key: str, *, context: str) -> int:
     return value
 
 
+def _optional_positive_integer(
+    table: dict[str, object], key: str, *, context: str
+) -> int | None:
+    value = table.get(key)
+    if value is None:
+        return None
+    if not isinstance(value, int) or isinstance(value, bool) or value < 1:
+        raise TranslationError(f"{context}.{key} must be a positive integer")
+    return value
+
+
+def _wrap_mode(
+    table: dict[str, object], *, context: str, default: str | None = None
+) -> str | None:
+    value = table.get("wrap_mode", default)
+    if value is None:
+        return None
+    if not isinstance(value, str) or value not in _WRAP_MODES:
+        choices = ", ".join(sorted(_WRAP_MODES))
+        raise TranslationError(f"{context}.wrap_mode must be one of: {choices}")
+    return value
+
+
 def _parse_file(value: object, index: int) -> TranslationFile:
     context = f"files[{index}]"
     if not isinstance(value, dict):
@@ -1142,14 +1189,11 @@ def _parse_file(value: object, index: int) -> TranslationFile:
     sha256 = _string(value, "sha256", context=context).lower()
     if len(sha256) != 64 or any(char not in "0123456789abcdef" for char in sha256):
         raise TranslationError(f"{context}.sha256 must contain 64 hexadecimal characters")
-    box_width_value = value.get("box_width")
-    if box_width_value is not None and (
-        not isinstance(box_width_value, int)
-        or isinstance(box_width_value, bool)
-        or box_width_value < 1
-    ):
-        raise TranslationError(f"{context}.box_width must be a positive integer")
-    return TranslationFile(file, source, sha256, box_width_value)
+    box_width = _optional_positive_integer(value, "box_width", context=context)
+    box_rows = _optional_positive_integer(value, "box_rows", context=context)
+    wrap_mode = _wrap_mode(value, context=context, default="words")
+    assert wrap_mode is not None
+    return TranslationFile(file, source, sha256, box_width, box_rows, wrap_mode)
 
 
 def _parse_token(value: object, index: int) -> TranslationToken:
@@ -1221,13 +1265,9 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
         _parse_composite_occurrence(item, item_index, context)
         for item_index, item in enumerate(raw_occurrences, 1)
     )
-    box_width_value = value.get("box_width")
-    if box_width_value is not None and (
-        not isinstance(box_width_value, int)
-        or isinstance(box_width_value, bool)
-        or box_width_value < 1
-    ):
-        raise TranslationError(f"{context}.box_width must be a positive integer")
+    box_width = _optional_positive_integer(value, "box_width", context=context)
+    box_rows = _optional_positive_integer(value, "box_rows", context=context)
+    wrap_mode = _wrap_mode(value, context=context)
     entry = CompositeTranslationEntry(
         id=_string(value, "id", context=context),
         occurrences=occurrences,
@@ -1238,7 +1278,9 @@ def _parse_composite(value: object, index: int) -> CompositeTranslationEntry:
         context=_string(value, "context", context=context),
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
-        box_width=box_width_value,
+        box_width=box_width,
+        box_rows=box_rows,
+        wrap_mode=wrap_mode,
     )
     for field, text in (("source", entry.source), ("translation", entry.translation)):
         try:
@@ -1322,13 +1364,9 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
     if source_mode not in (1, 2) or target_mode not in (1, 2):
         raise TranslationError(f"{context} modes must be 1 or 2")
     anchors = _parse_anchors(value, context)
-    box_width_value = value.get("box_width")
-    if box_width_value is not None and (
-        not isinstance(box_width_value, int)
-        or isinstance(box_width_value, bool)
-        or box_width_value < 1
-    ):
-        raise TranslationError(f"{context}.box_width must be a positive integer")
+    box_width = _optional_positive_integer(value, "box_width", context=context)
+    box_rows = _optional_positive_integer(value, "box_rows", context=context)
+    wrap_mode = _wrap_mode(value, context=context)
 
     entry = TranslationEntry(
         id=_string(value, "id", context=context),
@@ -1341,7 +1379,9 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
         context=_string(value, "context", context=context),
         status=_translation_status(value, context=context),
         notes=_optional_string(value, "notes", context=context),
-        box_width=box_width_value,
+        box_width=box_width,
+        box_rows=box_rows,
+        wrap_mode=wrap_mode,
     )
     if "\x00" in entry.translation:
         raise TranslationError(f"{context}.translation must not contain NUL")
@@ -1369,6 +1409,13 @@ def _parse_entry(value: object, index: int) -> TranslationEntry:
                 raise TranslationError(
                     f"{entry.id}: word longer than box width {entry.box_width}: {line!r}"
                 )
+    if entry.box_rows is not None:
+        rows = entry.wrapped_translation
+        if len(rows) > entry.box_rows:
+            raise TranslationError(
+                f"{entry.id}: translation needs {len(rows)} rows, "
+                f"but the box allows {entry.box_rows}"
+            )
     return entry
 
 
@@ -1399,9 +1446,11 @@ def _parse_anchors(table: dict[str, object], context: str) -> tuple[TranslationA
     return tuple(anchors)
 
 
-def _wrap_text(value: str, box_width: int) -> tuple[str, ...]:
+def _wrap_text(value: str, box_width: int, *, wrap_mode: str = "words") -> tuple[str, ...]:
+    if wrap_mode not in _WRAP_MODES:
+        raise TranslationError(f"unknown wrap mode: {wrap_mode!r}")
     lines: list[str] = []
-    for paragraph in value.splitlines() or [""]:
+    for paragraph in value.split("\n"):
         if paragraph and not paragraph.strip():
             lines.append(paragraph)
             continue
@@ -1409,7 +1458,7 @@ def _wrap_text(value: str, box_width: int) -> tuple[str, ...]:
             textwrap.wrap(
                 paragraph,
                 width=box_width,
-                break_long_words=False,
+                break_long_words=wrap_mode == "characters",
                 break_on_hyphens=False,
                 replace_whitespace=False,
             )
@@ -1447,6 +1496,8 @@ def _wrap_composite(
     value: str,
     box_width: int,
     tokens: dict[str, TranslationToken],
+    *,
+    wrap_mode: str = "words",
 ) -> str:
     replacements: list[tuple[str, str]] = []
 
@@ -1460,7 +1511,7 @@ def _wrap_composite(
         return placeholder
 
     temporary = _TOKEN_MARKER.sub(replace, value)
-    wrapped = "\n".join(_wrap_text(temporary, box_width))
+    wrapped = "\n".join(_wrap_text(temporary, box_width, wrap_mode=wrap_mode))
     for placeholder, marker in replacements:
         wrapped = wrapped.replace(placeholder, marker)
     return wrapped
@@ -1522,20 +1573,33 @@ def _validate_catalog(
                     f"duplicate translation anchor: {entry_anchor.file}:0x{entry_anchor.offset:04x}"
                 )
             anchors.add(anchor)
-        effective_widths = {
-            entry.box_width
-            if entry.box_width is not None
-            else files_by_name[entry_anchor.file].box_width
+        effective_layouts = {
+            (
+                entry.box_width
+                if entry.box_width is not None
+                else files_by_name[entry_anchor.file].box_width,
+                entry.box_rows
+                if entry.box_rows is not None
+                else files_by_name[entry_anchor.file].box_rows,
+                entry.wrap_mode
+                if entry.wrap_mode is not None
+                else files_by_name[entry_anchor.file].wrap_mode,
+            )
             for entry_anchor in entry.anchors
         }
-        for box_width in effective_widths:
-            if box_width is None:
-                continue
-            for line in entry.wrapped_translation_for(box_width):
-                if len(line) > box_width:
-                    raise TranslationError(
-                        f"{entry.id}: word longer than box width {box_width}: {line!r}"
-                    )
+        for box_width, box_rows, wrap_mode in effective_layouts:
+            wrapped = entry.wrapped_translation_for(box_width, wrap_mode)
+            if box_width is not None:
+                for line in wrapped:
+                    if len(line) > box_width:
+                        raise TranslationError(
+                            f"{entry.id}: word longer than box width {box_width}: {line!r}"
+                        )
+            if box_rows is not None and len(wrapped) > box_rows:
+                raise TranslationError(
+                    f"{entry.id}: translation needs {len(wrapped)} rows, "
+                    f"but the box allows {box_rows}"
+                )
 
     interpolation_spans: set[tuple[str, int, int]] = set()
     for entry in composites:
@@ -1611,21 +1675,43 @@ def _validate_catalog(
                     )
                 interpolation_spans.add(span)
 
-        effective_widths = {
-            entry.box_width
-            if entry.box_width is not None
-            else files_by_name[occurrence.file].box_width
+        effective_layouts = {
+            (
+                entry.box_width
+                if entry.box_width is not None
+                else files_by_name[occurrence.file].box_width,
+                entry.box_rows
+                if entry.box_rows is not None
+                else files_by_name[occurrence.file].box_rows,
+                entry.wrap_mode
+                if entry.wrap_mode is not None
+                else files_by_name[occurrence.file].wrap_mode,
+            )
             for occurrence in entry.occurrences
         }
-        for box_width in effective_widths:
-            if box_width is None:
-                continue
-            wrapped = _wrap_composite(entry.translation, box_width, tokens_by_id)
-            for line in wrapped.splitlines() or [""]:
-                if _composite_visual_length(line, tokens_by_id) > box_width:
-                    raise TranslationError(
-                        f"{entry.id}: word longer than box width {box_width}: {line!r}"
-                    )
+        for box_width, box_rows, wrap_mode in effective_layouts:
+            wrapped = (
+                _wrap_composite(
+                    entry.translation,
+                    box_width,
+                    tokens_by_id,
+                    wrap_mode=wrap_mode,
+                )
+                if box_width is not None
+                else entry.translation
+            )
+            lines = wrapped.split("\n")
+            if box_width is not None:
+                for line in lines:
+                    if _composite_visual_length(line, tokens_by_id) > box_width:
+                        raise TranslationError(
+                            f"{entry.id}: word longer than box width {box_width}: {line!r}"
+                        )
+            if box_rows is not None and len(lines) > box_rows:
+                raise TranslationError(
+                    f"{entry.id}: translation needs {len(lines)} rows, "
+                    f"but the box allows {box_rows}"
+                )
 
 
 def _relative_path(value: str, context: str) -> str:

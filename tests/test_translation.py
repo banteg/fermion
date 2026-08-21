@@ -242,6 +242,10 @@ def test_wrap_text_preserves_whitespace_only_layout_records() -> None:
     assert _wrap_text("  ", 61) == ("  ",)
 
 
+def test_wrap_text_preserves_authored_trailing_newline() -> None:
+    assert _wrap_text("First record.\n", 61) == ("First record.", "")
+
+
 def write_catalog(
     tmp_path,
     source_hash: str,
@@ -250,12 +254,20 @@ def write_catalog(
     translation: str = "Hello world",
     status: str = "draft",
     file_box_width: int | None = None,
+    file_box_rows: int | None = None,
+    file_wrap_mode: str | None = None,
     entry_box_width: int | None = 8,
+    entry_box_rows: int | None = None,
+    entry_wrap_mode: str | None = None,
     notes: str | None = "A useful note.",
 ):
     catalog = tmp_path / "catalog.toml"
     file_width = f"box_width = {file_box_width}\n" if file_box_width is not None else ""
+    file_rows = f"box_rows = {file_box_rows}\n" if file_box_rows is not None else ""
+    file_wrap = f'wrap_mode = "{file_wrap_mode}"\n' if file_wrap_mode is not None else ""
     entry_width = f"box_width = {entry_box_width}\n" if entry_box_width is not None else ""
+    entry_rows = f"box_rows = {entry_box_rows}\n" if entry_box_rows is not None else ""
+    entry_wrap = f'wrap_mode = "{entry_wrap_mode}"\n' if entry_wrap_mode is not None else ""
     entry_notes = f'notes = "{notes}"\n' if notes is not None else ""
     catalog.write_text(
         f'''version = 4
@@ -265,7 +277,7 @@ game = "Test"
 file = "DISKA/SCENE.MES"
 source = "disk-a/SCENE.MES"
 sha256 = "{source_hash}"
-{file_width}
+{file_width}{file_rows}{file_wrap}
 
 [[entries]]
 id = "scene-0001"
@@ -278,7 +290,7 @@ translation = "{translation}"
 speaker = "narrator"
 context = "Synthetic scene."
 status = "{status}"
-{entry_width}{entry_notes}
+{entry_width}{entry_rows}{entry_wrap}{entry_notes}
 '''
     )
     return catalog
@@ -397,6 +409,86 @@ def test_file_width_is_the_compile_default(tmp_path) -> None:
     assert entry.compiled_translation(catalog_file.box_width) == "Hello\nworld"
     [physical] = catalog.physical_translations(compiled=True)
     assert physical.translation == "Hello\nworld"
+
+
+def test_file_row_limit_is_the_validation_default(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        translation="one two three",
+        file_box_width=5,
+        file_box_rows=3,
+        entry_box_width=None,
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+
+    [catalog_file] = catalog.files
+    assert (catalog_file.box_width, catalog_file.box_rows) == (5, 3)
+
+
+def test_rejects_translation_exceeding_effective_row_limit(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        translation="one two three four",
+        file_box_width=5,
+        file_box_rows=3,
+        entry_box_width=None,
+    )
+
+    with pytest.raises(TranslationError, match="needs 4 rows, but the box allows 3"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_character_wrap_validates_narrow_vertical_surface(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        translation="Eight letters",
+        entry_box_width=2,
+        entry_box_rows=7,
+        entry_wrap_mode="characters",
+    )
+
+    [entry] = TranslationCatalog.from_file(catalog_path).entries
+
+    assert entry.compiled_translation() == "Ei\ngh\nt\nle\ntt\ner\ns"
+
+
+def test_file_character_wrap_is_the_compile_default(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        translation="Eight letters",
+        file_box_width=2,
+        file_box_rows=7,
+        file_wrap_mode="characters",
+        entry_box_width=None,
+    )
+
+    catalog = TranslationCatalog.from_file(catalog_path)
+
+    [physical] = catalog.physical_translations(compiled=True)
+    assert physical.translation == "Ei\ngh\nt\nle\ntt\ner\ns"
+
+
+def test_rejects_unknown_wrap_mode(tmp_path) -> None:
+    catalog_path = write_catalog(
+        tmp_path,
+        "0" * 64,
+        entry_wrap_mode="columns",
+    )
+
+    with pytest.raises(TranslationError, match="wrap_mode must be one of"):
+        TranslationCatalog.from_file(catalog_path)
+
+
+def test_rejects_nonpositive_row_limit(tmp_path) -> None:
+    catalog_path = write_catalog(tmp_path, "0" * 64, entry_box_rows=0)
+
+    with pytest.raises(TranslationError, match="box_rows must be a positive integer"):
+        TranslationCatalog.from_file(catalog_path)
 
 
 def test_rejects_changed_source_anchor(tmp_path) -> None:

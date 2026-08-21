@@ -989,17 +989,33 @@ def _translation_check(args: argparse.Namespace) -> None:
             print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
-            box_widths = {
-                entry.box_width
-                if entry.box_width is not None
-                else files_by_name[anchor.file].box_width
+            layouts = {
+                (
+                    entry.box_width
+                    if entry.box_width is not None
+                    else files_by_name[anchor.file].box_width,
+                    entry.box_rows
+                    if entry.box_rows is not None
+                    else files_by_name[anchor.file].box_rows,
+                    entry.wrap_mode
+                    if entry.wrap_mode is not None
+                    else files_by_name[anchor.file].wrap_mode,
+                )
                 for anchor in entry.anchors
             }
-            for box_width in sorted(width for width in box_widths if width is not None):
+            for box_width, box_rows, wrap_mode in sorted(
+                (layout for layout in layouts if layout[0] is not None),
+                key=lambda layout: (layout[0], layout[1] or 0, layout[2]),
+            ):
+                assert box_width is not None
                 for number, line in enumerate(
-                    entry.wrapped_translation_for(box_width), 1
+                    entry.wrapped_translation_for(box_width, wrap_mode), 1
                 ):
-                    print(f"  line {number}/{box_width}: {line}")
+                    capacity = f"/{box_rows}" if box_rows is not None else ""
+                    print(
+                        f"  line {number}{capacity} width={box_width} "
+                        f"wrap={wrap_mode}: {line}"
+                    )
             for line in entry.notes.splitlines():
                 print(f"  note: {line}")
         tokens = {token.id: token for token in catalog.tokens}
@@ -1022,16 +1038,32 @@ def _translation_check(args: argparse.Namespace) -> None:
             print(f"  context: {entry.context}")
             print(f"  source: {entry.source}")
             print(f"  translation: {entry.translation}")
-            box_widths = {
-                entry.box_width
-                if entry.box_width is not None
-                else files_by_name[occurrence.file].box_width
+            layouts = {
+                (
+                    entry.box_width
+                    if entry.box_width is not None
+                    else files_by_name[occurrence.file].box_width,
+                    entry.box_rows
+                    if entry.box_rows is not None
+                    else files_by_name[occurrence.file].box_rows,
+                    entry.wrap_mode
+                    if entry.wrap_mode is not None
+                    else files_by_name[occurrence.file].wrap_mode,
+                )
                 for occurrence in entry.occurrences
             }
-            for box_width in sorted(width for width in box_widths if width is not None):
-                wrapped = entry.compiled_translation(box_width, tokens)
+            for box_width, box_rows, wrap_mode in sorted(
+                (layout for layout in layouts if layout[0] is not None),
+                key=lambda layout: (layout[0], layout[1] or 0, layout[2]),
+            ):
+                assert box_width is not None
+                wrapped = entry.compiled_translation(box_width, tokens, wrap_mode)
                 for number, line in enumerate(wrapped.splitlines() or [""], 1):
-                    print(f"  line {number}/{box_width}: {line}")
+                    capacity = f"/{box_rows}" if box_rows is not None else ""
+                    print(
+                        f"  line {number}{capacity} width={box_width} "
+                        f"wrap={wrap_mode}: {line}"
+                    )
             for line in entry.notes.splitlines():
                 print(f"  note: {line}")
 

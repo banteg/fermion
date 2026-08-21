@@ -121,7 +121,7 @@ The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
 translation, speaker, scene context, encoding modes, status, wrapping width,
-and free-form translator notes. Schema 5 also keeps named runtime tokens and
+visible row capacity, wrap mode, and free-form translator notes. Schema 5 also keeps named runtime tokens and
 composite display lines in the same catalog: translators see a whole line such
 as `⟦name:dear-person⟧`, while the build maps each literal fragment back to its
 original text record and preserves the intervening bytecode.
@@ -131,7 +131,9 @@ Generated MES files, disk images, and screenshots remain under ignored
 Dialogue width is normally declared once on the containing `[[files]]` table.
 The builder inserts deterministic word-boundary newlines at compile time while
 leaving the canonical English prose unwrapped in TOML; an entry-level
-`box_width` remains available for a real scene-specific exception.
+`box_width` or `box_rows` remains available for a real scene-specific
+exception. Narrow vertical cards may opt into character-cell wrapping with
+`wrap_mode = "characters"`.
 
 Validate the catalog on its own, or verify every original line against a
 hash-checked pristine extraction:

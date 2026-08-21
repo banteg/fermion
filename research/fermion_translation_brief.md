@@ -936,11 +936,16 @@ Maintain one canonical source-faithful English catalog. Keep any distribution ad
 - Confirm which repeated records are separately reachable.
 
 The 61-column F0001 story window has direct framebuffer proof for a three-row
-message (`launch-humans-ended-mutants`). The catalog therefore uses three rows
-as a conservative upper envelope and contains no four-row record. This does not
-prove that every later, terminal, editor, or card surface accepts three rows;
-surface-specific route QA remains required, especially to find any two-row
-window.
+message (`launch-humans-ended-mutants`), and the numbered story scripts retain
+that declared layout. It is not a game-wide upper envelope. Static recovery of
+`SILK.MES` found full-page cards, two-, three-, and four-row horizontal panels,
+plus Koi Hime's two-column vertical cards. Targeted emulator probes confirmed
+that text exceeding a two-row Silky panel scrolls out of view and that ordinary
+word wrapping is unsuitable for the vertical card. The canonical catalog now
+records those surface-specific widths and row counts, preserves deliberate
+newlines between adjacent text opcodes, and uses character-cell wrapping only
+for the vertical card. Remaining terminal, editor, and special card surfaces
+still need their own route-specific QA.
 
 ### Phase 2 — Extend the canonical TOML catalog
 
@@ -1140,7 +1145,7 @@ and otherwise sensitive material described in this brief.
 1. What official Latin spellings, if any, exist for Connie, Remia, Marna, Procyon, and the reading of 良美?
 2. Is `パラサイト銃` visibly named in art, packaging, or a manual? Until such evidence appears, the functional script reading remains locked as **capture gun**.
 3. Do condition flags expose a bad ending, game-over exit, or prerequisite not captured by the recovered inter-MES transition graph?
-4. Which message surfaces differ from the proven 61-column, three-row F0001 dialogue window, especially by accepting fewer than three rows?
+4. Which remaining terminal, editor, or special-card surfaces differ from their declared limits? The mixed Silky catalog surfaces are now mapped, but not every other UI route has visual proof.
 5. Does original documentation explain the intended time-travel model or the in-world meaning of **FERMION**?
 
 ### Highest-priority implementation and research tasks
@@ -1150,5 +1155,5 @@ and otherwise sensitive material described in this brief.
    playtest.
 2. Confirm the official readings/spellings of 良美, Remia, Marna, Procyon, and Connie from non-script materials.
 3. Check manuals, packaging, and art for evidence about `パラサイト銃`; revise the locked functional translation only if that evidence proves a proper name.
-4. Measure and visually verify message-window limits beyond the proven 61-column, three-row F0001 dialogue surface.
+4. Measure and visually verify the remaining terminal, editor, and special-card limits beyond the proven F0001 dialogue and mapped Silky catalog surfaces.
 5. Complete final in-engine route QA and reconcile every logged restoration or ambiguity with the release notes.

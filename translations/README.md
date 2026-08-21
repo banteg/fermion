@@ -16,14 +16,14 @@ separate override. It is not part of this canonical translation catalog.
 
 Each `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
-default dialogue `box_width`. Schema 5 retains schema-4 simple records; each
-`[[entries]]` table records:
+default `box_width`, visible `box_rows`, and `wrap_mode`. Schema 5 retains
+schema-4 simple records; each `[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
 - the exact original Japanese and current English translation;
 - an explicit stable `speaker` and short scene `context`;
-- the target encoding mode and optional per-entry dialogue-box-width override;
+- the target encoding mode and optional per-entry surface-layout overrides;
 - a progress `status` and optional free-form translator `notes`.
 
 Offsets always refer to the pristine file named by the enclosing catalog, not a
@@ -43,18 +43,23 @@ the checked-in plot, voice, and terminology notes. Automated tools may expose
 anchors, duplicates, speakers, length problems, and runtime regressions; they
 must not manufacture the catalog prose as a substitute for translation.
 
-The catalog stores readable, unwrapped English. At build time the file default
-width inserts newlines only at word boundaries, preserving explicit authoring
-newlines; a narrower entry override wins when a specific display requires it.
-Validation rejects an unbreakable word longer than its effective width.
+The catalog stores readable, unwrapped English. At build time the effective
+width inserts newlines at word boundaries and preserves explicit authoring
+newlines. An entry override wins when a specific display differs from its file
+default. `wrap_mode = "characters"` is reserved for narrow vertical surfaces,
+where every character cell may be a break point. Validation rejects a line or
+row count that exceeds the effective `box_width` and `box_rows`.
 
-The current catalog also stays inside a conservative three-row envelope. A
+The ordinary numbered story files use a 61-column, three-row declaration. A
 save-fixture emulator route directly exercises all three rows of
-`launch-humans-ended-mutants` in the 61-column F0001 dialogue window. That is
-positive evidence for this one story surface, not proof that every UI or later
-message surface has the same capacity; final route QA must still detect any
-surface that allows fewer rows. No catalog record is allowed to assume a fourth
-row merely because the engine can relocate longer bytecode.
+`launch-humans-ended-mutants` in F0001. Silky's catalog is deliberately not
+covered by that default: its decompiled `text-window` instructions expose
+full-page cards, two-, three-, and four-row panels, and Koi Hime's two-column
+vertical cards. `SILK.MES` therefore carries per-surface limits, explicit
+newlines for adjacent text opcodes, and character-cell wrapping on the vertical
+cards. The adjacent-record policy test checks the combined rows, not merely
+each source record in isolation. Other terminal, editor, and special card
+surfaces still require route-specific visual QA.
 
 A story record whose source is only a run of `・` followed by `。` is a pure
 silent beat and always translates to the fixed mode-2 ASCII `...`. Catalog
