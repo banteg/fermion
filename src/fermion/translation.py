@@ -24,6 +24,8 @@ _GM_TEXT = re.compile(
 _TOKEN_ID = re.compile(r"^(?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*$")
 _TOKEN_MARKER = re.compile(r"⟦((?:name|term):[a-z0-9]+(?:-[a-z0-9]+)*)⟧")
 _PURE_SILENCE = re.compile(r"^・+。$")
+CATALOG_VERSION = 7
+_SUPPORTED_CATALOG_VERSIONS = (4, 5, 6, CATALOG_VERSION)
 _TRANSLATION_STATUSES = frozenset({"draft", "translated", "reviewed", "runtime-verified"})
 _WRAP_MODES = frozenset({"words", "characters"})
 _ATTRIBUTIONS = frozenset({"inferred", "proven"})
@@ -250,8 +252,9 @@ class TranslationCatalog:
             raise TranslationError(f"cannot read translation catalog {path}: {error}") from error
 
         version = data.get("version")
-        if version not in (4, 5, 6, 7):
-            raise TranslationError("translation catalog version must be 4, 5, 6, or 7")
+        if version not in _SUPPORTED_CATALOG_VERSIONS:
+            choices = ", ".join(str(item) for item in _SUPPORTED_CATALOG_VERSIONS)
+            raise TranslationError(f"translation catalog version must be one of: {choices}")
         game = _string(data, "game")
         raw_files = data.get("files")
         raw_entries = data.get("entries", [])
@@ -269,11 +272,18 @@ class TranslationCatalog:
         if not isinstance(raw_scenes, list):
             raise TranslationError("translation catalog [[scenes]] must be an array of tables")
         if version == 4 and (raw_tokens or raw_composites):
-            raise TranslationError("translation catalog version 4 cannot contain schema-5 tables")
-        if version < 7 and raw_scenes:
-            raise TranslationError("translation catalog scenes require schema 7")
-        if version >= 7 and not raw_scenes:
-            raise TranslationError("schema-7 translation catalog must contain [[scenes]]")
+            raise TranslationError(
+                "translation catalog version 4 cannot contain tables introduced in "
+                "catalog version 5"
+            )
+        if version < CATALOG_VERSION and raw_scenes:
+            raise TranslationError(
+                f"translation catalog scenes require catalog version {CATALOG_VERSION}"
+            )
+        if version >= CATALOG_VERSION and not raw_scenes:
+            raise TranslationError(
+                f"catalog version {CATALOG_VERSION} must contain [[scenes]]"
+            )
         if not raw_entries and not raw_composites:
             raise TranslationError(
                 "translation catalog must contain at least one entry or composite"
@@ -291,7 +301,7 @@ class TranslationCatalog:
             _parse_composite(item, index, version=version, scenes=scenes_by_id)
             for index, item in enumerate(raw_composites, 1)
         )
-        _validate_scenes(scenes, entries, composites, required=version >= 7)
+        _validate_scenes(scenes, entries, composites, required=version >= CATALOG_VERSION)
         _validate_catalog(files, tokens, entries, composites)
         return cls(version, game, files, tokens, entries, composites, scenes)
 
@@ -1301,13 +1311,16 @@ def _scene_metadata(
     version: int,
     scenes: dict[str, TranslationScene],
 ) -> tuple[str, str]:
-    if version < 7:
+    if version < CATALOG_VERSION:
         if "scene" in table:
-            raise TranslationError(f"{context}.scene requires schema 7")
+            raise TranslationError(
+                f"{context}.scene requires catalog version {CATALOG_VERSION}"
+            )
         return "", _string(table, "context", context=context)
     if "context" in table:
         raise TranslationError(
-            f"{context}.context must be stored once in its schema-7 scene"
+            f"{context}.context must be stored once in the [[scenes]] table "
+            f"required by catalog version {CATALOG_VERSION}"
         )
     scene_id = _string(table, "scene", context=context)
     scene = scenes.get(scene_id)

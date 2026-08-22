@@ -121,13 +121,13 @@ The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
 the source of truth for translated text. Each entry keeps a stable ID, one or
 more logical archive/file anchors, original Japanese, one canonical English
 translation, speaker, reusable scene context, encoding modes, status, wrapping
-width, visible row capacity, wrap mode, and free-form translator notes. Schema
-7 uses canonical speaker IDs plus explicit `proven` or `inferred` attribution,
-stores each shared context once in `[[scenes]]`, and keeps schema 5's named
-runtime tokens and composite display lines in the same catalog: translators see
-a whole line such as `⟦name:dear-person⟧`, while the build maps each literal
-fragment back to its original text record and preserves the intervening
-bytecode.
+width, visible row capacity, wrap mode, and free-form translator notes. Catalog
+version 7 uses canonical speaker IDs plus explicit `proven` or `inferred`
+attribution, stores each shared context once in `[[scenes]]`, and keeps catalog
+version 5's named runtime tokens and composite display lines in the same
+catalog: translators see a whole line such as `⟦name:dear-person⟧`, while the
+build maps each literal fragment back to its original text record and preserves
+the intervening bytecode.
 Generated MES files, disk images, and screenshots remain under ignored
 `working/` paths.
 

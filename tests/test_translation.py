@@ -9,6 +9,7 @@ import pytest
 from fermion.gm import GMFile
 from fermion.translation import (
     _LATIN_EDITOR_CELLS,
+    CATALOG_VERSION,
     PhysicalTranslation,
     TranslationAnchor,
     TranslationCatalog,
@@ -151,6 +152,13 @@ def test_latin_editor_palette_matches_halfwidth_mapping() -> None:
         assert set(_latin_editor_row(y)[1::2]) <= {" "}
     for _x, _y, character in _LATIN_EDITOR_CELLS:
         assert _runtime_glyph_byte(character) == _runtime_token_bytes(character)[0]
+
+
+def test_canonical_catalog_declares_current_version() -> None:
+    catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
+
+    with catalog_path.open() as catalog_file:
+        assert catalog_file.readline().strip() == f"version = {CATALOG_VERSION}"
 
 
 def test_catalog_editor_palette_matches_generated_rows() -> None:
@@ -556,7 +564,7 @@ def test_rejects_changed_source_anchor(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
 
 
-def test_schema_six_verifies_proven_canonical_speaker(tmp_path) -> None:
+def test_catalog_version_six_verifies_proven_canonical_speaker(tmp_path) -> None:
     japanese = "【コニー】「はい。」"
     source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
     source_dir = tmp_path / "source"
@@ -580,7 +588,7 @@ def test_schema_six_verifies_proven_canonical_speaker(tmp_path) -> None:
     assert (entry.speaker, entry.attribution) == ("connie", "proven")
 
 
-def test_schema_six_rejects_proven_speaker_mismatch(tmp_path) -> None:
+def test_catalog_version_six_rejects_proven_speaker_mismatch(tmp_path) -> None:
     japanese = "【コニー】「はい。」"
     source = struct.pack("<H", 2) + b"\x4a\x01" + japanese.encode("cp932") + b"\x00\x00"
     source_dir = tmp_path / "source"
@@ -602,7 +610,7 @@ def test_schema_six_rejects_proven_speaker_mismatch(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path).verify_sources(source_dir)
 
 
-def test_schema_six_requires_attribution(tmp_path) -> None:
+def test_catalog_version_six_requires_attribution(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -614,7 +622,7 @@ def test_schema_six_requires_attribution(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_six_requires_canonical_speaker_id(tmp_path) -> None:
+def test_catalog_version_six_requires_canonical_speaker_id(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -627,7 +635,7 @@ def test_schema_six_requires_canonical_speaker_id(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_seven_resolves_shared_scene_context(tmp_path) -> None:
+def test_catalog_version_seven_resolves_shared_scene_context(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -644,7 +652,7 @@ def test_schema_seven_resolves_shared_scene_context(tmp_path) -> None:
     assert (entry.scene, entry.context) == ("synthetic-scene", "Synthetic scene.")
 
 
-def test_schema_seven_requires_scene_catalog(tmp_path) -> None:
+def test_catalog_version_seven_requires_scene_catalog(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -657,7 +665,7 @@ def test_schema_seven_requires_scene_catalog(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_seven_rejects_unknown_entry_scene(tmp_path) -> None:
+def test_catalog_version_seven_rejects_unknown_entry_scene(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -677,7 +685,7 @@ def test_schema_seven_rejects_unknown_entry_scene(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_seven_rejects_entry_context_copy(tmp_path) -> None:
+def test_catalog_version_seven_rejects_entry_context_copy(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -697,7 +705,7 @@ def test_schema_seven_rejects_entry_context_copy(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_seven_rejects_duplicate_scene_context(tmp_path) -> None:
+def test_catalog_version_seven_rejects_duplicate_scene_context(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -719,7 +727,7 @@ context = "Synthetic scene."
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_seven_rejects_unused_scene(tmp_path) -> None:
+def test_catalog_version_seven_rejects_unused_scene(tmp_path) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
@@ -919,7 +927,7 @@ def test_patch_uses_precompiled_physical_translation() -> None:
     assert '(gm-text 2 "Hello world\\nagain")' in patched
 
 
-def test_schema_five_composite_splits_around_immutable_token(tmp_path) -> None:
+def test_catalog_version_five_composite_splits_around_immutable_token(tmp_path) -> None:
     prefix = b"\x4a\x02Hello \x00"
     copy_name = b"\x45\x0e\xe0\x00\xff\x0c\x04\x04\x00"
     render_name = b"\x4b\x0e\xe0\x00\x00\x00"
@@ -994,7 +1002,7 @@ segments = [
     assert f"(raw {' '.join(str(byte) for byte in copy_name + render_name)})" in patched
 
 
-def test_schema_five_rejects_missing_translation_token(tmp_path) -> None:
+def test_catalog_version_five_rejects_missing_translation_token(tmp_path) -> None:
     catalog_path = write_catalog(tmp_path, "0" * 64)
     text = catalog_path.read_text().replace("version = 4", "version = 5")
     text += """
@@ -1028,7 +1036,7 @@ segments = [
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_schema_five_verifies_and_patches_same_size_token_initializer(tmp_path) -> None:
+def test_catalog_version_five_verifies_and_patches_same_size_token_initializer(tmp_path) -> None:
     source_name = "加奈子".encode("cp932")
     initializer = b"\x45\x0e\xe0\x00\xff\x01" + source_name + b"\x00\x00"
     assignment = b"\x43\x0c\x04\x04\x0e\xe0\x00\x00\x00"
@@ -1095,7 +1103,7 @@ notes = "Keeps the catalog non-empty."
     assert patched.count(f"(inline-source 0 255 2 {translated_values})") == 2
 
 
-def test_schema_five_relocates_shorter_token_initializer(tmp_path) -> None:
+def test_catalog_version_five_relocates_shorter_token_initializer(tmp_path) -> None:
     source_term = "おま○こ".encode("cp932")
     initializer = b"\x45\x0e\xe0\x00\xff\x01" + source_term + b"\x00\x00"
     assignment = b"\x43\x0c\x2e\x04\x0e\xe0\x00\x00\x00"
@@ -1161,7 +1169,7 @@ status = "draft"
     )
 
 
-def test_schema_five_relocates_initializer_translation_longer_than_source(
+def test_catalog_version_five_relocates_initializer_translation_longer_than_source(
     tmp_path,
 ) -> None:
     source_name = "弘子".encode("cp932")
@@ -1227,7 +1235,7 @@ status = "draft"
     )
 
 
-def test_schema_five_rejects_initializer_for_the_wrong_token_slot(tmp_path) -> None:
+def test_catalog_version_five_rejects_initializer_for_the_wrong_token_slot(tmp_path) -> None:
     source = struct.pack("<H", 2) + b"\x4a\x02Original\x00\x00"
     catalog_path = tmp_path / "catalog.toml"
     catalog_path.write_text(

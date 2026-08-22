@@ -436,8 +436,9 @@ The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. The non-CP932 delim
 
 ### Locked merged-to-physical representation
 
-`translations/fermion.toml` remains the sole canonical source. Catalog schema 7
-retains schema 5's composite entries and schema 6's speaker-evidence split,
+`translations/fermion.toml` remains the sole canonical source. Catalog version 7
+retains catalog version 5's composite entries and catalog version 6's
+speaker-evidence split,
 while storing each shared scene context once in a top-level `[[scenes]]` record.
 Entries reference a stable scene ID. Each composite occurrence is an ordered
 segment list:
@@ -1016,8 +1017,8 @@ For every record, preserve:
 - translator note;
 - QA status.
 
-Keep enforcing the implemented schema-7 scene, speaker, composite-entry, and
-token contract from section 6. `translations/fermion.toml` remains
+Keep enforcing the scene, speaker, composite-entry, and token contract
+implemented by catalog version 7 in section 6. `translations/fermion.toml` remains
 authoritative. TSV, JSONL, CSV, or SQLite are generated translator views with a
 validated import path; they must never become parallel canonical databases.
 

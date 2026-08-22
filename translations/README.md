@@ -14,9 +14,10 @@ Each `[[scenes]]` table stores one stable scene ID and its shared context.
 Entries reference that ID instead of repeating prose thousands of times. Each
 `[[files]]` table identifies one pristine MES file by its logical
 `DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
-default `box_width`, visible `box_rows`, and `wrap_mode`. Schema 7 retains
-schema-4 simple records and schema-5 composites, keeps schema 6's speaker
-evidence split, and adds reusable scenes. Each `[[entries]]` table records:
+default `box_width`, visible `box_rows`, and `wrap_mode`. Catalog version 7
+retains catalog version 4's simple records and catalog version 5's composites,
+keeps catalog version 6's speaker evidence split, and adds reusable scenes. Each
+`[[entries]]` table records:
 
 - a stable, descriptive `id`;
 - one or more pristine text-opcode anchors and their shared source mode;
@@ -103,16 +104,16 @@ When a real mechanical difference prevents sharing, every retained record uses
 a `notes` value beginning with `Duplicate split:` to explain it. Notes alone do
 not make otherwise mergeable records distinct.
 
-Canonical schema 7 makes speaker identity, attribution evidence, scene
+Catalog version 7 makes speaker identity, attribution evidence, scene
 identity, and scene context separate fields. `speaker` is a stable lowercase ID
 such as `connie`, `kanzaki`, `catalog-copy`, or `name-slot:mother`.
 `attribution` is `proven` only when that record's source contains a recognized
 literal or dynamic speaker label; scene-based assignments use `inferred`.
 Source verification checks every `proven` identity against the original label.
 Each entry's `scene` must resolve to exactly one top-level context, and duplicate
-or unused scene records are rejected. Schemas 4 through 6 remain readable for
-older fixtures; their per-entry contexts resolve in memory without becoming a
-second scene store.
+or unused scene records are rejected. Catalog versions 4 through 6 remain
+readable for older fixtures; their per-entry contexts resolve in memory without
+becoming a second scene store.
 
 GM can encode speaker identities directly:
 
@@ -129,11 +130,12 @@ are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribut
 
 ## Composite interpolation contract
 
-Schema 7 retains schema 5's representation of rendered messages as ordered physical text segments
-separated by immutable interpolation segments. A physical record containing
-only `】...` is therefore no longer presented as a complete display line. The
-checked-in TOML remains canonical; a merged translator table or database is
-only a generated view, and any future import must be validated.
+Catalog version 7 retains catalog version 5's representation of rendered
+messages as ordered physical text segments separated by immutable interpolation
+segments. A physical record containing only `】...` is therefore no longer
+presented as a complete display line. The checked-in TOML remains canonical; a
+merged translator table or database is only a generated view, and any future
+import must be validated.
 
 Authoring tokens use non-CP932 delimiters so accidental compilation fails:
 
