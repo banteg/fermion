@@ -222,6 +222,8 @@ def route_cache_key(
     core: Path,
     system_directory: Path,
     options: dict[str, str],
+    *,
+    content_sha256: str | None = None,
 ) -> str:
     """Hash every deterministic input needed to resume a route prefix safely."""
     if route.cache_frame is None:
@@ -237,10 +239,23 @@ def route_cache_key(
         if click.frame <= route.cache_frame
     ]
     identity = {
-        "content_sha256": route.content_sha256,
+        "content_sha256": content_sha256 or route.content_sha256,
         "cache_frame": route.cache_frame,
         "taps": taps,
         "clicks": clicks,
+        "runtime_sha256": runtime_fingerprint(core, system_directory, options),
+    }
+    encoded = json.dumps(identity, sort_keys=True, separators=(",", ":")).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def runtime_fingerprint(
+    core: Path,
+    system_directory: Path,
+    options: dict[str, str],
+) -> str:
+    """Hash the deterministic core, firmware/config, and effective options."""
+    identity = {
         "options": options,
         "core_sha256": hashlib.sha256(core.read_bytes()).hexdigest(),
         "system_sha256": _system_fingerprint(system_directory),

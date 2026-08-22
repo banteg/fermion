@@ -445,6 +445,35 @@ uv run fermion emulator route \
   --no-cache
 ```
 
+### Incremental visual-QA suite
+
+[`runtime/visual-qa.toml`](runtime/visual-qa.toml) groups the checked-in routes
+into one screenshot suite and declares which rebuilt MES files can affect each
+case. Run it against the JSON report from a fresh translation build:
+
+```sh
+uv run fermion emulator qa \
+  runtime/visual-qa.toml \
+  working/translation-build/build-report.json
+```
+
+The command verifies that the report's exact output HDI still exists unchanged,
+applies any required sparse save fixture to a temporary copy, and records every
+selected route checkpoint under `working/visual-qa/screenshots/`. The generated
+`working/visual-qa/manifest.json` retains per-file build hashes, route/runtime
+fingerprints, screenshot hashes, and the inputs for every case. On later runs,
+only cases whose declared MES dependencies, fixture, route schedule, source
+image, runtime defaults, core, firmware/config, or options changed are executed.
+Use `--case ROUTE` for a narrower probe or `--force` to refresh selected cases.
+
+Changed captures also preserve the prior and new PNGs under
+`working/visual-qa/diff/`; byte-identical captures do not create a diff pair.
+The command lists rebuilt MES files that changed without any declared visual-QA
+case, so incremental selection cannot silently masquerade as whole-game runtime
+coverage. Candidate recording ignores the old pinned HDI/framebuffer hashes but
+still enforces native scenario-state checkpoints. Ordinary `emulator route`
+continues to enforce every pinned hash.
+
 Changing `np2kai_clk_mult` changes input timing and checkpoint hashes, not just
 speed: keep ×20 for canonical tests and record lower clocks as separate routes
 with their own schedules and hashes.

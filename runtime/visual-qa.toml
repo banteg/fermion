@@ -1,0 +1,57 @@
+version = 1
+route_manifest = "routes.toml"
+fixture_manifest = "save-fixtures.toml"
+
+# Files are built-MES dependencies, not claims of complete story coverage. The
+# generated receipt uses their per-file hashes from a fresh translation build
+# to rerun only cases whose visible inputs changed.
+
+[[cases]]
+route = "opening-translation-proof"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/FOP.MES",
+  "DISKA/F0000.MES",
+]
+
+[[cases]]
+route = "first-scene-save-fixture-proof"
+fixture = "first-scene"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/F0000.MES",
+]
+
+[[cases]]
+route = "opening-dialogue-save-fixture-proof"
+fixture = "opening-dialogue"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/FOP.MES",
+]
+
+[[cases]]
+route = "second-scene-save-fixture-proof"
+fixture = "second-scene"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/F0001.MES",
+]
+
+[[cases]]
+route = "second-scene-three-row-proof"
+fixture = "second-scene"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/F0001.MES",
+]
+
+[[cases]]
+route = "english-runtime-defaults-proof"
+files = [
+  "DISKA/MAIN.MES",
+  "DISKA/NAME.MES",
+  "DISKA/MONO.MES",
+  "DISKB/NAME.MES",
+  "DISKB/MONO.MES",
+]

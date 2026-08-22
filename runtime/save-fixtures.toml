@@ -9,10 +9,10 @@ name = "first-scene"
 description = "Start F0000.MES at the first translated scene, skipping the boot prologue."
 scenario = "f0000.mes"
 template_path = "FERM/REG_00"
-template_sha256 = "b081ede727580fa9385ea4f2c5b5156479bdf4097c9b4a46c8bad9883877940c"
+template_sha256 = "0b96face5e84497dbb4b9d2286aeaf9ff1b33fbfedd13a86cd7493a6c7b2a8cb"
 target_path = "FERM/REG_01"
 target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
-result_sha256 = "5c1e6aa9c2d37bb74ba905be315f61e84bddda13f0a636735b262c66e8744968"
+result_sha256 = "d66f208af27cabb57b749d1f690455feca9c765051032f088feaf0914c3d2783"
 hunks = [
   { offset = 0x0001, before = "00", data = "01" },
   { offset = 0x0033, before = "0000", data = "0401" },
@@ -56,10 +56,10 @@ name = "opening-dialogue"
 description = "Start FOP.MES at the translated opening dialogue."
 scenario = "fop.mes"
 template_path = "FERM/REG_00"
-template_sha256 = "b081ede727580fa9385ea4f2c5b5156479bdf4097c9b4a46c8bad9883877940c"
+template_sha256 = "0b96face5e84497dbb4b9d2286aeaf9ff1b33fbfedd13a86cd7493a6c7b2a8cb"
 target_path = "FERM/REG_01"
 target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
-result_sha256 = "f7f7ad8070742734d0d4c4acfdd04293bd5c958c329dfb808a3f146575192399"
+result_sha256 = "2d02840b12453fb40520a975ec3666db2cfc9acf49d4553163270f06b075080b"
 hunks = [
   { offset = 0x0033, before = "0000", data = "0101" },
   { offset = 0x0bba, before = "0000000000000000", data = "3c03010101040303" },
@@ -108,10 +108,10 @@ name = "second-scene"
 description = "Start F0001.MES at its scenario entry."
 scenario = "f0001.mes"
 template_path = "FERM/REG_00"
-template_sha256 = "b081ede727580fa9385ea4f2c5b5156479bdf4097c9b4a46c8bad9883877940c"
+template_sha256 = "0b96face5e84497dbb4b9d2286aeaf9ff1b33fbfedd13a86cd7493a6c7b2a8cb"
 target_path = "FERM/REG_01"
 target_sha256 = "861dafeb5bae55b32477b20c32bffa90e319cd05dca1ecac42547a607fb0d4bb"
-result_sha256 = "ffde3e61464e35256a0c51c8bf924ac777ad1ea1bf83aef86be6f9689a65371f"
+result_sha256 = "1bf39198ff1481d9747a798899a8f98535d0b74ef490e24b2f3ceff939ceabdf"
 hunks = [
   { offset = 0x0001, before = "00", data = "01" },
   { offset = 0x0033, before = "0000", data = "0601" },

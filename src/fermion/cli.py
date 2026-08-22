@@ -4,9 +4,12 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import shutil
+import subprocess
 import sys
+import tempfile
 from pathlib import Path, PurePosixPath
 from typing import NoReturn
 
@@ -33,7 +36,7 @@ from fermion.hdi import HDIError, HDIImage, write_replaced_hdi
 from fermion.mz import MZError, MZImage
 from fermion.np2debug import NP2DebugStateError, verify_np2debug_state_image
 from fermion.pipeline import build_translation_image
-from fermion.routes import RouteManifest, route_cache_key
+from fermion.routes import EmulatorRoute, RouteManifest, route_cache_key, runtime_fingerprint
 from fermion.save_fixtures import (
     SaveFixtureError,
     SaveFixtureManifest,
@@ -47,6 +50,15 @@ from fermion.translation import (
     CompositeTextSegment,
     TranslationCatalog,
     TranslationError,
+)
+from fermion.visual_qa import (
+    TranslationBuildReport,
+    VisualQACase,
+    VisualQAError,
+    VisualQAManifest,
+    case_fingerprint,
+    changed_build_files,
+    png_rgb_sha256,
 )
 
 
@@ -330,7 +342,64 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="execute and verify the complete route without reading or writing a prefix cache",
     )
+    emulator_route.add_argument(
+        "--record",
+        action="store_true",
+        help="capture a candidate image without enforcing pinned image or framebuffer hashes",
+    )
     emulator_route.set_defaults(handler=_emulator_route)
+    emulator_qa = emulator_commands.add_parser(
+        "qa",
+        help="incrementally regenerate an end-to-end visual-QA screenshot suite",
+    )
+    emulator_qa.add_argument("manifest", type=_path)
+    emulator_qa.add_argument("build_report", type=_path)
+    emulator_qa.add_argument(
+        "--image",
+        type=_path,
+        help="translated HDI; defaults to output_image from the build report",
+    )
+    emulator_qa.add_argument(
+        "--core",
+        type=_path,
+        default=Path("working/emulator/np2kai_libretro.dylib"),
+        help="native NP2kai libretro core",
+    )
+    emulator_qa.add_argument(
+        "--system-dir",
+        type=_path,
+        default=Path("working/emulator/system"),
+        help="RetroArch system directory containing np2kai/",
+    )
+    emulator_qa.add_argument(
+        "--options", type=_path, help="RetroArch per-game .opt file to load"
+    )
+    emulator_qa.add_argument(
+        "--option",
+        action="append",
+        default=[],
+        metavar="KEY=VALUE",
+        help="override one NP2kai core option; may be repeated",
+    )
+    emulator_qa.add_argument(
+        "--output-dir", type=_path, default=Path("working/visual-qa")
+    )
+    emulator_qa.add_argument(
+        "--cache-dir",
+        type=_path,
+        default=Path("working/emulator/state-cache"),
+        help="store deterministic prefix states and matching writable disk snapshots",
+    )
+    emulator_qa.add_argument(
+        "--case",
+        action="append",
+        default=[],
+        help="regenerate one named route case; may be repeated",
+    )
+    emulator_qa.add_argument(
+        "--force", action="store_true", help="regenerate selected cases even when unchanged"
+    )
+    emulator_qa.set_defaults(handler=_emulator_qa)
 
     translation = commands.add_parser(
         "translation", help="work with the checked-in translation catalog"
@@ -831,7 +900,15 @@ def _emulator_run(args: argparse.Namespace) -> None:
 
 def _emulator_route(args: argparse.Namespace) -> None:
     route = RouteManifest.from_file(args.manifest).route(args.route)
-    route.verify_content(args.image)
+    record = getattr(args, "record", False)
+    actual_content_sha256 = hashlib.sha256(args.image.read_bytes()).hexdigest()
+    if record:
+        print(
+            f"content: record actual={actual_content_sha256} "
+            f"pinned={route.content_sha256}"
+        )
+    else:
+        route.verify_content(args.image)
     options = load_core_options(args.options) if args.options else {}
     for encoded in args.option:
         key, value = parse_option(encoded)
@@ -853,6 +930,7 @@ def _emulator_route(args: argparse.Namespace) -> None:
             args.core,
             args.system_dir,
             effective_options,
+            content_sha256=actual_content_sha256 if record else None,
         )
         cache_root = args.cache_dir / route.name / cache_key
         cache_state = cache_root / "prefix.state"
@@ -924,7 +1002,10 @@ def _emulator_route(args: argparse.Namespace) -> None:
         checked_frame.write_png(output)
         result = "recorded"
         if checkpoint.sha256 is not None:
-            result = "ok" if checked_frame.sha256 == checkpoint.sha256 else "MISMATCH"
+            if checked_frame.sha256 == checkpoint.sha256:
+                result = "ok"
+            else:
+                result = "DIFF" if record else "MISMATCH"
             if result == "MISMATCH":
                 failures.append(checkpoint.name)
         crop = (
@@ -966,6 +1047,297 @@ def _emulator_route(args: argparse.Namespace) -> None:
         assert cache_state is not None and cache_disk is not None
         staged_cache_disk.replace(cache_disk)
         staged_cache_state.replace(cache_state)
+
+
+def _emulator_qa(args: argparse.Namespace) -> None:
+    suite = VisualQAManifest.from_file(args.manifest)
+    report = TranslationBuildReport.from_file(args.build_report)
+    image = args.image or report.output_image
+    report.verify_image(image)
+
+    requested = set(args.case)
+    if requested:
+        for name in requested:
+            suite.case(name)
+        cases = tuple(case for case in suite.cases if case.route in requested)
+    else:
+        cases = suite.cases
+
+    options = load_core_options(args.options) if args.options else {}
+    for encoded in args.option:
+        key, value = parse_option(encoded)
+        options[key] = value
+    effective_options = dict(FERMION_CORE_OPTIONS)
+    effective_options.update(options)
+    runtime_sha256 = runtime_fingerprint(args.core, args.system_dir, effective_options)
+
+    output_dir = args.output_dir
+    receipt_path = output_dir / "manifest.json"
+    previous = _read_visual_qa_receipt(receipt_path)
+    previous_cases = previous.get("cases", {}) if previous else {}
+    if not isinstance(previous_cases, dict):
+        raise VisualQAError(f"visual-QA receipt {receipt_path} has an invalid cases object")
+    previous_build = previous.get("build", {}) if previous else {}
+    previous_files = previous_build.get("files") if isinstance(previous_build, dict) else None
+    if previous_files is not None and not (
+        isinstance(previous_files, dict)
+        and all(
+            isinstance(key, str) and isinstance(value, str)
+            for key, value in previous_files.items()
+        )
+    ):
+        raise VisualQAError(f"visual-QA receipt {receipt_path} has an invalid build.files object")
+
+    fingerprints: dict[str, str] = {}
+    stale = []
+    for case in cases:
+        route = suite.routes.route(case.route)
+        fixture = (
+            suite.fixtures.fixture(case.fixture)
+            if suite.fixtures is not None and case.fixture is not None
+            else None
+        )
+        fingerprint = case_fingerprint(case, route, fixture, report, runtime_sha256)
+        fingerprints[case.route] = fingerprint
+        previous_case = previous_cases.get(case.route)
+        previous_fingerprint = (
+            previous_case.get("fingerprint") if isinstance(previous_case, dict) else None
+        )
+        if (
+            args.force
+            or fingerprint != previous_fingerprint
+            or not _visual_qa_outputs_exist(output_dir, case, route)
+        ):
+            stale.append(case)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    captured_roots: dict[str, Path] = {}
+    with tempfile.TemporaryDirectory(prefix="capture-", dir=output_dir) as temporary:
+        staging = Path(temporary)
+        for case in stale:
+            route = suite.routes.route(case.route)
+            candidate_image = image
+            if case.fixture is not None:
+                assert suite.fixtures is not None
+                fixture = suite.fixtures.fixture(case.fixture)
+                candidate_image = staging / "images" / f"{case.route}.hdi"
+                write_fixture_hdi(fixture, image, candidate_image)
+            route_args = argparse.Namespace(
+                manifest=suite.route_manifest_path,
+                route=case.route,
+                image=candidate_image,
+                core=args.core,
+                system_dir=args.system_dir,
+                options=args.options,
+                option=list(args.option),
+                output_dir=staging / "screenshots",
+                cache_dir=args.cache_dir,
+                no_cache=True,
+                record=True,
+            )
+            _run_visual_qa_route(route_args)
+            captured_roots[case.route] = staging / "screenshots" / case.route
+
+        receipt_cases = dict(previous_cases)
+        total_changes = 0
+        for case in stale:
+            route = suite.routes.route(case.route)
+            selected = set(case.checkpoints)
+            checkpoints = tuple(
+                checkpoint
+                for checkpoint in route.checkpoints
+                if not selected or checkpoint.name in selected
+            )
+            destination = output_dir / "screenshots" / case.route
+            destination.mkdir(parents=True, exist_ok=True)
+            fingerprint = fingerprints[case.route]
+            screenshot_records = []
+            for checkpoint in checkpoints:
+                source = captured_roots[case.route] / f"{checkpoint.name}.png"
+                if not source.is_file():
+                    raise VisualQAError(
+                        f"route {case.route!r} did not capture {checkpoint.name!r}"
+                    )
+                target = destination / source.name
+                new_framebuffer_hash = png_rgb_sha256(source)
+                old_framebuffer_hash = (
+                    png_rgb_sha256(target) if target.is_file() else None
+                )
+                state = (
+                    "unchanged"
+                    if old_framebuffer_hash == new_framebuffer_hash
+                    else "new"
+                    if old_framebuffer_hash is None
+                    else "changed"
+                )
+                diff_paths: dict[str, str] = {}
+                if state != "unchanged":
+                    total_changes += 1
+                    diff_dir = output_dir / "diff" / case.route / fingerprint[:12]
+                    diff_dir.mkdir(parents=True, exist_ok=True)
+                    if target.is_file():
+                        before = diff_dir / f"{checkpoint.name}.before.png"
+                        shutil.copyfile(target, before)
+                        diff_paths["before"] = before.relative_to(output_dir).as_posix()
+                    after = diff_dir / f"{checkpoint.name}.after.png"
+                    shutil.copyfile(source, after)
+                    diff_paths["after"] = after.relative_to(output_dir).as_posix()
+                shutil.copyfile(source, target)
+                screenshot_records.append(
+                    {
+                        "name": checkpoint.name,
+                        "frame": checkpoint.frame,
+                        "framebuffer_sha256": new_framebuffer_hash,
+                        "expected_framebuffer_sha256": checkpoint.sha256,
+                        "png_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                        "state": state,
+                        "path": target.relative_to(output_dir).as_posix(),
+                        **({"diff": diff_paths} if diff_paths else {}),
+                    }
+                )
+            receipt_cases[case.route] = {
+                "fingerprint": fingerprint,
+                "fixture": case.fixture,
+                "files": report.dependencies(case),
+                "screenshots": screenshot_records,
+            }
+
+    _refresh_visual_qa_screenshot_hashes(output_dir, receipt_cases)
+
+    changed_files = changed_build_files(previous_files, report.file_sha256)
+    covered_files = {name for case in suite.cases for name in case.files}
+    uncovered = tuple(name for name in changed_files if name not in covered_files)
+    receipt = {
+        "version": 1,
+        "suite_manifest": str(args.manifest),
+        "build_report": str(args.build_report),
+        "image": str(image),
+        "image_sha256": report.output_sha256,
+        "runtime_sha256": runtime_sha256,
+        "build": {
+            "source_sha256": report.source_sha256,
+            "runtime_defaults_sha256": report.runtime_defaults_sha256,
+            "files": report.file_sha256,
+        },
+        "last_run": {
+            "regenerated": [case.route for case in stale],
+            "changed_files": list(changed_files),
+            "uncovered_changed_files": list(uncovered),
+        },
+        "cases": receipt_cases,
+    }
+    temporary_receipt = receipt_path.with_suffix(".json.tmp")
+    temporary_receipt.write_text(
+        json.dumps(receipt, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    )
+    temporary_receipt.replace(receipt_path)
+
+    print(
+        f"visual-qa: regenerated={len(stale)} reused={len(cases) - len(stale)} "
+        f"changed-screenshots={total_changes}"
+    )
+    for case in stale:
+        print(f"case: {case.route} regenerated")
+    if uncovered:
+        print("uncovered build changes: " + ", ".join(uncovered))
+    print(f"screenshots: {output_dir / 'screenshots'}")
+    print(f"diff: {output_dir / 'diff'}")
+    print(f"manifest: {receipt_path}")
+
+
+def _read_visual_qa_receipt(path: Path) -> dict[str, object]:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        raise VisualQAError(f"cannot read visual-QA receipt {path}: {error}") from error
+    if not isinstance(data, dict) or data.get("version") != 1:
+        raise VisualQAError(f"visual-QA receipt {path} must be a version 1 JSON object")
+    return data
+
+
+def _run_visual_qa_route(args: argparse.Namespace) -> None:
+    command = [
+        sys.executable,
+        "-m",
+        "fermion",
+        "emulator",
+        "route",
+        str(args.manifest),
+        args.route,
+        str(args.image),
+        "--core",
+        str(args.core),
+        "--system-dir",
+        str(args.system_dir),
+        "--output-dir",
+        str(args.output_dir),
+        "--cache-dir",
+        str(args.cache_dir),
+        "--no-cache",
+        "--record",
+    ]
+    if args.options is not None:
+        command.extend(("--options", str(args.options)))
+    for option in args.option:
+        command.extend(("--option", option))
+    completed = subprocess.run(command, check=False)
+    if completed.returncode:
+        raise VisualQAError(
+            f"visual-QA route {args.route!r} exited with status {completed.returncode}"
+        )
+
+
+def _refresh_visual_qa_screenshot_hashes(
+    output_dir: Path, receipt_cases: dict[str, object]
+) -> None:
+    """Keep generated receipts explicit about PNG hashes versus framebuffer hashes."""
+    for route_name, value in receipt_cases.items():
+        if not isinstance(value, dict):
+            raise VisualQAError(f"visual-QA receipt case {route_name!r} must be an object")
+        screenshots = value.get("screenshots")
+        if not isinstance(screenshots, list):
+            raise VisualQAError(
+                f"visual-QA receipt case {route_name!r} must contain screenshots"
+            )
+        for screenshot in screenshots:
+            if not isinstance(screenshot, dict):
+                raise VisualQAError(
+                    f"visual-QA receipt case {route_name!r} has an invalid screenshot"
+                )
+            relative = screenshot.get("path")
+            if not isinstance(relative, str):
+                raise VisualQAError(
+                    f"visual-QA receipt case {route_name!r} has a screenshot without a path"
+                )
+            relative_path = Path(relative)
+            if (
+                relative_path.is_absolute()
+                or not relative_path.parts
+                or relative_path.parts[0] != "screenshots"
+                or any(part in ("", ".", "..") for part in relative_path.parts)
+            ):
+                raise VisualQAError(
+                    f"visual-QA receipt case {route_name!r} has an unsafe screenshot path"
+                )
+            path = output_dir / relative_path
+            screenshot["framebuffer_sha256"] = png_rgb_sha256(path)
+            screenshot["png_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            if "expected_sha256" in screenshot:
+                screenshot["expected_framebuffer_sha256"] = screenshot.pop("expected_sha256")
+            screenshot.pop("sha256", None)
+
+
+def _visual_qa_outputs_exist(
+    output_dir: Path, case: VisualQACase, route: EmulatorRoute
+) -> bool:
+    selected = set(case.checkpoints)
+    return all(
+        (output_dir / "screenshots" / case.route / f"{checkpoint.name}.png").is_file()
+        for checkpoint in route.checkpoints
+        if not selected or checkpoint.name in selected
+    )
 
 
 def _translation_check(args: argparse.Namespace) -> None:
@@ -1337,5 +1709,6 @@ def main() -> None:
         SaveFixtureError,
         TranslationError,
         UnicodeError,
+        VisualQAError,
     ) as error:
         _fail(str(error))
