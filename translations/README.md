@@ -1,149 +1,71 @@
 # Translation catalog
 
-`fermion.toml` is the checked-in source of truth for Fermion's translated text
-and the reasoning behind it. It intentionally contains text and metadata, not
-compiled MES files or original game media.
+`fermion.toml` is the checked-in source of truth for translated text and
+translator reasoning. Generated MES files and original game media do not belong
+in the catalog.
 
-The English version carries the locked content note from
-[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md)
-section 11 verbatim. Any distribution-specific age alteration must be a
-disclosed, mechanically separate override; it is not part of this canonical
-catalog.
+The English version uses the content note and release policy in section 10 of
+[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md).
+Any distribution-specific alteration is a disclosed, mechanically separate
+override.
 
-Each `[[scenes]]` table stores one stable scene ID and its shared context.
-Entries reference that ID instead of repeating prose thousands of times. Each
-`[[files]]` table identifies one pristine MES file by its logical
-`DISKA/FILENAME` archive path, extracted source path, SHA-256, and optional
-default `box_width`, visible `box_rows`, and `wrap_mode`. Catalog version 7
-retains catalog version 4's simple records and catalog version 5's composites,
-keeps catalog version 6's speaker evidence split, and adds reusable scenes. Each
-`[[entries]]` table records:
+The catalog contains:
 
-- a stable, descriptive `id`;
-- one or more pristine text-opcode anchors and their shared source mode;
-- the exact original Japanese and current English translation;
-- a canonical lowercase `speaker`, its `attribution`, and a `scene` reference;
-- the target encoding mode and optional per-entry surface-layout overrides;
-- a progress `status` and optional free-form translator `notes`.
+- `[[scenes]]` records with stable IDs and shared source-scene context;
+- `[[files]]` records with logical archive paths, extracted paths, SHA-256
+  hashes, and optional layout defaults;
+- `[[entries]]` records with stable IDs, pristine anchors, Japanese source,
+  canonical English, speaker and attribution, scene, encoding, status, layout
+  overrides, and optional translator notes.
 
-Offsets always refer to the pristine file named by the enclosing catalog, not a
-rebuilt or relocated MES. `notes` are for line-specific alternatives,
-ambiguities, tone decisions, technical compromises, and anything worth
-revisiting. Omit them when the speaker and resolved scene context plus the
-checked-in voice brief fully explain the translation; do not repeat a
-slice-wide voice policy on every line. Do not erase an unresolved nuance merely
-because the current probe uses shorter wording.
+Offsets refer to the pristine MES named by the catalog. Use `notes` for
+line-specific alternatives, ambiguity, tone decisions, and technical
+compromises; omit routine voice policy already established by the scene and
+translation brief. Scene `context` and entry `notes` describe the Japanese
+source rather than adding localization-only age framing.
 
-Scene `context` and entry `notes` describe the Japanese source scene. Use
-**adult** only where the plot itself requires the distinction, such as adult
-Kaori versus her younger self; do not insert age labels as a localization
-workaround.
+Draft English from the Japanese in scene context. Automated tools can expose
+anchors, duplicates, speakers, layout problems, and runtime regressions, but
+they do not replace translation.
 
-Draft canonical English by reading the Japanese in scene context and applying
-the checked-in plot, voice, and terminology notes. Automated tools may expose
-anchors, duplicates, speakers, length problems, and runtime regressions; they
-must not manufacture the catalog prose as a substitute for translation.
+English printed by the original game follows the archival treatment in section
+12 of the translation brief, including its single logged spelling correction.
 
-English printed by the original game is archival evidence rather than Japanese
-prose awaiting localization. Preserve its wording, capitalization, punctuation,
-full-width presentation, and period quirks unless a source-anchored catalog note
-records a narrow correction. The opening terminal therefore remains in mode 1
-and changes only the timed `ｔ` in `Dimention` to `ｓ` for `Dimension`.
+The catalog stores readable, unwrapped English. At build time, the effective
+width inserts word-boundary newlines while preserving explicit authoring
+newlines. File-level `box_width`, `box_rows`, and `wrap_mode` values define the
+default; entry overrides describe real surface-specific differences.
 
-The catalog stores readable, unwrapped English. At build time the effective
-width inserts newlines at word boundaries and preserves explicit authoring
-newlines. An entry override wins when a specific display differs from its file
-default. `wrap_mode = "characters"` is reserved for narrow vertical surfaces,
-where every character cell may be a break point. Validation rejects a line or
-row count that exceeds the effective `box_width` and `box_rows`.
+Numbered story files normally use 61 columns and three rows. Special cards and
+`SILK.MES` panels declare their own limits. Narrow vertical cards use
+`wrap_mode = "characters"`, and adjacent text records sharing a surface are
+checked together.
 
-The ordinary numbered story files use a 61-column, three-row declaration. A
-save-fixture emulator route directly exercises all three rows of
-`launch-humans-ended-mutants` in F0001. Silky's catalog is deliberately not
-covered by that default: its decompiled `text-window` instructions expose
-full-page cards, two-, three-, and four-row panels, and Koi Hime's two-column
-vertical cards. `SILK.MES` therefore carries per-surface limits, explicit
-newlines for adjacent text opcodes, and character-cell wrapping on the vertical
-cards. The adjacent-record policy test checks the combined rows, not merely
-each source record in isolation. Other terminal, editor, and special card
-surfaces still require route-specific visual QA.
+A story record containing only a run of `・` followed by `。` is a silent beat
+and translates to mode-2 ASCII `...`. The opening terminal's single-glyph
+progress animation is exempt.
 
-A story record whose source is only a run of `・` followed by `。` is a pure
-silent beat and always translates to the fixed mode-2 ASCII `...`. Catalog
-validation rejects variable-length dot runs and parenthesized variants. The
-opening terminal's single-glyph progress records are timed UI animation and are
-intentionally exempt.
+A single occurrence uses `file` and `offset`; exact duplicates use one entry
+with an `anchors` array. Identical Japanese may remain separate when scene
+context requires different English.
 
-A line with one physical occurrence may use the compact `file` and `offset`
-fields. Exact duplicates use one canonical entry with an `anchors` array:
+Validation merges records with identical source, translation, speaker,
+attribution, scene, encoding, layout, and QA status. A genuine mechanical split
+uses a note beginning with `Duplicate split:`.
 
-```toml
-[[scenes]]
-id = "equivalent-narration-branches"
-context = "The same narration in two equivalent control-flow branches."
+`speaker` is a stable lowercase identity such as `connie`, `kanzaki`,
+`catalog-copy`, or `name-slot:mother`. `attribution = "proven"` requires a
+recognized literal or dynamic source label; scene-based assignments use
+`inferred`. Every `scene` resolves to one top-level context record.
 
-[[entries]]
-id = "shared-line"
-anchors = [
-  { file = "DISKA/MAIN.MES", offset = 0x1000 },
-  { file = "DISKA/MAIN.MES", offset = 0x1200 },
-]
-source_mode = 1
-source = "同じ文"
-translation = "The same line"
-speaker = "narrator"
-attribution = "inferred"
-scene = "equivalent-narration-branches"
-status = "draft"
-notes = "Keep the wording synchronized across both anchors."
-```
-
-This keeps the English and translator notes in one place while applying them to
-every physical copy. Identical Japanese may still use separate entries when the
-surrounding scene genuinely requires different English; that contextual split
-is explicit and visible to the coverage report.
-
-Catalog validation also audits exact duplicate English. Records with identical
-source, translation, speaker, attribution, and scene must share anchors or
-composite occurrences whenever their encoding, layout, and QA status agree.
-When a real mechanical difference prevents sharing, every retained record uses
-a `notes` value beginning with `Duplicate split:` to explain it. Notes alone do
-not make otherwise mergeable records distinct.
-
-Catalog version 7 makes speaker identity, attribution evidence, scene
-identity, and scene context separate fields. `speaker` is a stable lowercase ID
-such as `connie`, `kanzaki`, `catalog-copy`, or `name-slot:mother`.
-`attribution` is `proven` only when that record's source contains a recognized
-literal or dynamic speaker label; scene-based assignments use `inferred`.
-Source verification checks every `proven` identity against the original label.
-Each entry's `scene` must resolve to exactly one top-level context, and duplicate
-or unused scene records are rejected. Catalog versions 4 through 6 remain
-readable for older fixtures; their per-entry contexts resolve in memory without
-becoming a second scene store.
-
-GM can encode speaker identities directly:
-
-- a literal `【name】` prefix uses that exact name;
-- a dynamic bracket/name/bracket sequence uses one of the stable
-  `name-slot:mother`, `name-slot:older-sister`, `name-slot:dear-person`,
-  `name-slot:friend-1`, or `name-slot:friend-2` roles;
-- text with neither form remains contextual and may receive a documented human
-  attribution such as `prologue-doctor`.
-
-Do not infer a speaker from `「…」` versus `『…』`. The opening alternates those
-styles without any speaker-state opcode. The full evidence and corpus totals
-are in [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribution.md).
+Do not infer speakers from Japanese quote style. The recovered label rules,
+name slots, and corpus evidence are documented in
+[`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribution.md).
 
 ## Composite interpolation contract
 
-Catalog version 7 retains catalog version 5's representation of rendered
-messages as ordered physical text segments separated by immutable interpolation
-segments. A physical record containing only `】...` is therefore no longer
-presented as a complete display line. The checked-in TOML remains canonical; a
-merged translator table or database is only a generated view, and any future
-import must be validated.
-
-Authoring tokens use non-CP932 delimiters so accidental compilation fails:
+Composites represent rendered messages split across physical text records by a
+runtime name or term substitution. Authoring tokens use non-CP932 delimiters:
 
 ```text
 ⟦name:mother⟧
@@ -155,166 +77,55 @@ Authoring tokens use non-CP932 delimiters so accidental compilation fails:
 ⟦term:slot-2⟧
 ```
 
-They are UTF-8 catalog metadata and must never reach lime-juice. Catalog
-validation checks that the token sequence, order, and multiplicity match the
-source composite,
-splits English on those tokens, maps each literal chunk back to its original
-text-opcode anchor, and leaves the copy/render instructions unchanged. Only
-records separated by one of these recognized token spans may be merged for
-display; ordinary adjacent records keep a one-to-one source/target mapping.
+Each occurrence preserves ordered text segments and immutable token spans.
+Validation:
 
-The physical segment pattern can force a source-initial token to remain first
-in English. Do not disguise that constraint with a `NAME--I ...` construction.
-Write a grammatical token-led clause (`NAME gets ...`, `NAME's ... is ...`) or,
-when the source itself breaks off, a genuine thought pause. Moving a token by
-inserting new text opcodes remains out of scope until that renderer change has
-its own proven and logged compatibility contract.
+1. requires the source and English token sequence, order, and multiplicity to
+   match;
+2. maps each literal English segment back to its original text-opcode anchor;
+3. preserves the intervening copy/render instructions;
+4. rejects missing, reordered, duplicated, unknown, or leaked tokens.
 
-Source nominal fragments may retain that shape: `NAME... an image of her ...`
-is preferable to bending the sentence around a trailing “in the image” merely
-to manufacture a finite token-led clause.
+Only records separated by a recognized token span may be merged. Ordinary
+adjacent records retain one-to-one source and target mappings.
 
-`[[tokens]]` records the Japanese default, ASCII authoring default, and any
-reset initializer to patch after decompilation. Each runtime string begins with
-an `ff` marker and a render-mode byte. Ghidra analysis of `mes_op_4b` at
-`1000:2529` shows that indirect text reads that second header byte, copies the
-payload, and passes the recovered mode to the ordinary `0x4a` renderer at
-`1000:23bb`. The builder therefore stores English defaults as `ff 02`, plain
-ASCII, and zero padding. No executable patch is required.
+Keep punctuation outside tokens and write clauses that remain grammatical for
+supported custom values. A source-initial token may need to remain first in
+English; use a grammatical token-led clause rather than adding text opcodes to
+move it.
 
-The five name slots remain 14 bytes and the two term slots remain 16 bytes.
-`0x4b` copies payloads in 16-bit pairs until it sees an aligned zero word, and
-both editors share a 14-byte scratch string. Ten ASCII characters are therefore
-the largest zero-surgery value that leaves the required two-byte terminator
-inside every source and destination buffer. Each default is capacity-checked
-against that common editor limit, and its wrapping width is its half-width ASCII
-length.
+The name and term editors use mode-2 half-width ASCII while preserving their
+runtime slots and save ranges. Values are limited to ten ASCII characters.
+Exercise default and maximum-length values through editing, saving, cold
+loading, dialogue, the identity reveal, and the final letter.
 
-Player-visible dialogue speaker tags use Title Case. Fixed labels therefore
-render as `[Connie]`, `[Kanzaki]`, or `[Woman's Voice]`; dynamic labels retain
-their authoring token and render the editable display value, such as
-`[Kanako]`. Bracketed Silky product headings are titles, not speaker tags, and
-retain their own capitalization.
+The full translator-facing grammar and spoiler constraints are in section 5 of
+the [translation brief](../research/fermion_translation_brief.md).
 
-`NAME.MES` and `MONO.MES` retain their original free-form editor destinations,
-confirmation flow, and save/load ranges. The builder bypasses the Japanese
-character-class menu and replaces the visible grid and coordinate mapping with
-one mode-2 Latin palette. Append, scan, backspace, and mouse-action paths use
-the engine's byte reference at the scratch buffer's absolute base; cursor motion
-advances by one half-width column. The editor reasserts the `ff 02` header and
-writes payload bytes at indexes 2 through 11, rejecting an eleventh character.
-Legacy mode-1 values remain renderable and untouched in persistent slots; if a
-player chooses to edit one, the temporary buffer starts empty in the supported
-Latin mode, and cancelling still preserves the old value.
+## Status and review
 
-This keeps the slot addresses and save format intact. The earlier operand-tail
-probe correctly showed that the two bytes following a `0x4b` reference are not
-a mode switch, but it tested the wrong control point: the operative mode is the
-referenced string header. Emulator probes now cover the mode-2 defaults, a
-ten-character edit, eleventh-character rejection, backspace, save, cold reload,
-and indirect dialogue rendering.
-An initializer's persistent slot must map to the same authoring token. Each
-`[[composites]]` table then stores one merged source/translation pair and one or
-more physical occurrences. Text segments retain their pristine opcode offset,
-mode, and source; token segments retain the exact copy/render span and its
-SHA-256. Verification requires byte adjacency across the whole occurrence and
-rejects missing, reordered, duplicated, unknown, or leaked tokens.
+- `draft`: meaning, context, or English remains incomplete;
+- `translated`: source-anchored English passes catalog, source, and structural
+  build checks;
+- `reviewed`: Japanese, scene context, and English received dedicated
+  linguistic review;
+- `runtime-verified`: the current wording and layout were exercised in game.
 
-```toml
-[[tokens]]
-id = "name:dear-person"
-source = "加奈子"
-translation = "Kanako"
-initializers = [
-  { file = "DISKA/MAIN.MES", offset = 0x18ea, slot = 0x0404 },
-]
-
-[[composites]]
-id = "example-name-line"
-target_mode = 2
-source = "【⟦name:dear-person⟧】「こんにちは。」"
-translation = "[⟦name:dear-person⟧] \"Hello.\""
-speaker = "name-slot:dear-person"
-attribution = "proven"
-context = "Example only."
-status = "draft"
-notes = "The catalog holds the merged display line."
-
-[[composites.occurrences]]
-file = "DISKA/F0003.MES"
-segments = [
-  { kind = "text", offset = 0x1000, source_mode = 1, source = "【" },
-  { kind = "token", token = "name:dear-person", start = 0x1004, end = 0x1013, sha256 = "..." },
-  { kind = "text", offset = 0x1013, source_mode = 1, source = "】「こんにちは。」" },
-]
-```
-
-The complete design, translator guidance, QA checklist, and locked editorial
-policies are recorded in
-[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md).
-
-For holistic plot review or LLM-assisted translator notes, generate the compact
-speaker-annotated corpus under the ignored working directory:
+Generate the compact speaker-annotated corpus for plot review:
 
 ```sh
 uv run fermion gm script working/archives > working/script.md
 ```
 
-This removes byte-identical MES copies, keeps each source offset, escapes
-embedded newlines, and labels only speakers proven by the bytecode. It is a
-review artifact; canonical English, context, status, and notes still belong in
-`fermion.toml`.
-
-Before a register pass, generate the deterministic drift report:
+Before a register pass, generate deterministic review leads:
 
 ```sh
 uv run fermion translation drift translations/fermion.toml --only-flagged
 ```
 
-The report groups canonical prose once per file and canonical speaker, ignores records
-without English words, and measures contractions, stiff forms, sentence length,
-and repeated two-word openings. Flags compare a group with that exact speaker's
-other files when at least three qualifying groups exist, otherwise with the
-whole corpus. A single `connie` baseline now includes both contextual and
-bytecode-proven lines; the separate `attribution` field preserves that evidence
-without fragmenting character-level diagnostics. Treat every flag as a
-line-review lead, never as a target rate.
-
-The current statuses are:
-
-- `draft`: recorded, but its source meaning, context, or English is still
-  incomplete;
-- `translated`: source-anchored English exists and passes catalog, source, and
-  structural build checks. This does not claim a dedicated linguistic review or
-  in-game execution of the individual record;
-- `reviewed`: the exact Japanese, scene context, and English wording have received
-  a dedicated linguistic review, but the record is not necessarily exercised in
-  the game;
-- `runtime-verified`: the current wording and layout have been exercised in the
-  game. This is runtime evidence, not a claim of final editorial approval.
-
-At this checkpoint, 12,608 records are `translated`, 279 are `reviewed`, and 15
-are `runtime-verified`. The reviewed set is limited to records whose wording
-changed during dedicated source-and-context passes over the ending,
-token-initial prose, and later full-catalog review findings; unchanged
-neighboring records were not bulk-promoted.
-
-The current catalog contains 12,902 canonical records covering 17,680 physical
-anchors across 76 MES files: `MAIN.MES`, `FOP.MES`, the translated story
-through the `F0042.MES` ending, scene replay, both mirrored editors, and the
-period Silky's catalog.
-The duplicate audit consolidated 101 redundant records across 61 reviewed
-groups without changing a physical translation. Four catalog-copy wording
-groups remain as ten annotated records because their panels need different
-layout overrides.
-The setup selector pair, three-copy fiction disclaimer,
-repeated terminal timing records, and context-safe duplicate collapses in the
-Project D and first Kanako slices demonstrate when physical anchors should
-share or split a canonical translation. The 34 F0003 composites demonstrate
-when several physical anchors must instead appear as one rendered line. The
-departure-eve slice shows the inverse cross-file case: two contentless pause
-records in `F0000.MES` join canonical entries first anchored in `F0001.MES`
-and `F0002.MES`.
+The drift report compares contraction use, stiff forms, sentence length, and
+repeated openings across file/speaker groups. Treat flags as lines to inspect
+in Japanese and scene context, not target rates.
 
 ## Coverage ledger
 
@@ -332,13 +143,6 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-All 22 focused story scopes and the broader `boot-to-first-scene-menu` scope
-are closed: every decoded text record is either translated or explicitly
-excluded, and none are pending. Per-scope history — anchor counts, duplicate
-consolidations, voice notes, and save-fixture caveats — lives in this
-repository's commit history instead of being restated here. Coverage work is
-complete; current effort is dedicated linguistic review and in-engine QA.
-
 Fresh translated images seed the source-derived English names and adult terms
 into the persistent `REG_00` template bank. The build only migrates slots that
 still contain their Japanese source defaults (or are blank), so rebuilding from
@@ -355,16 +159,6 @@ uv run fermion translation coverage \
   --verbose \
   --require-complete
 ```
-
-The early duplicates are compiled control-flow, not extractor noise:
-
-- color and monochrome labels each occur twice in one six-item machine/disk
-  setup menu, alongside the 2-FDD and 1-FDD+RAM choices;
-- each of the disclaimer's three visible lines occurs in three distinct
-  initialization branch bodies.
-
-Those copies share canonical translations. Other repeated lines are only
-merged when their anchors are added to the same catalog entry.
 
 Validate structure and encodability after every edit:
 

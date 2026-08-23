@@ -117,29 +117,14 @@ uv run fermion binary replace-exact \
 
 ## Translation catalog
 
-The checked-in [`translations/fermion.toml`](translations/fermion.toml) file is
-the source of truth for translated text. Each entry keeps a stable ID, one or
-more logical archive/file anchors, original Japanese, one canonical English
-translation, speaker, reusable scene context, encoding modes, status, wrapping
-width, visible row capacity, wrap mode, and free-form translator notes. Catalog
-version 7 uses canonical speaker IDs plus explicit `proven` or `inferred`
-attribution, stores each shared context once in `[[scenes]]`, and keeps catalog
-version 5's named runtime tokens and composite display lines in the same
-catalog: translators see a whole line such as `⟦name:dear-person⟧`, while the
-build maps each literal fragment back to its original text record and preserves
-the intervening bytecode.
-Generated MES files, disk images, and screenshots remain under ignored
-`working/` paths.
+[`translations/fermion.toml`](translations/fermion.toml) is the source of truth
+for English text, source anchors, speakers, scene context, layout, and review
+status. Generated MES files, disk images, and screenshots stay under ignored
+`working/` paths. See
+[`translations/README.md`](translations/README.md) for the catalog schema and
+authoring contract.
 
-Dialogue width is normally declared once on the containing `[[files]]` table.
-The builder inserts deterministic word-boundary newlines at compile time while
-leaving the canonical English prose unwrapped in TOML; an entry-level
-`box_width` or `box_rows` remains available for a real scene-specific
-exception. Narrow vertical cards may opt into character-cell wrapping with
-`wrap_mode = "characters"`.
-
-Validate the catalog on its own, or verify every original line against a
-hash-checked pristine extraction:
+Validate the catalog alone or against a hash-checked pristine extraction:
 
 ```sh
 uv run fermion translation check translations/fermion.toml
@@ -148,42 +133,13 @@ uv run fermion translation check translations/fermion.toml \
   --verbose
 ```
 
-Export the catalog in the original translator-table shape. Simple translations
-emit one row per physical anchor; a composite emits one merged row per rendered
-occurrence at its first physical segment. Rows follow file and source-offset
-order, while canonical duplicates retain one shared catalog entry:
+Export a translator table, inspect register drift, or audit coverage:
 
 ```sh
 uv run fermion translation table translations/fermion.toml \
   --source-dir working/archives \
   > working/translation-table.tsv
-```
-
-The columns are `id`, `file`, `offset`, `speaker`, `attribution`, `scene`, `jp`,
-`en`, `context`, and `status`. Embedded newlines are escaped so the TSV remains
-one row per anchor; `--format jsonl` is available for programmatic use.
-
-Run the corpus drift report before a register pass:
-
-```sh
 uv run fermion translation drift translations/fermion.toml --only-flagged
-```
-
-It reports contraction and stiff-form counts per 100 sentences, mean sentence
-length, and repeated two-word openings for each file/speaker group. Outliers use
-a robust same-speaker median when enough file groups exist. The measurements are
-review leads, not prose quotas; `--file`, `--speaker`, `--min-records`, and
-`--format jsonl` narrow or automate the report.
-
-The verbose view includes a word-wrapped preview for dialogue entries. See
-[`translations/README.md`](translations/README.md) for the entry conventions
-and incremental translation workflow.
-
-Audit a checked-in story scope independently from the catalog. The report
-groups identical pending Japanese under one canonical line while retaining all
-physical offsets:
-
-```sh
 uv run fermion translation coverage \
   translations/fermion.toml \
   translations/coverage.toml \
@@ -191,21 +147,8 @@ uv run fermion translation coverage \
   --verbose
 ```
 
-Twenty-two focused story scopes are now closed, covering every decoded text
-record in `FOP.MES` and `F0000.MES` through the `F0042.MES` ending. The final
-surface scope also closes scene replay, both mirrored name and term editors,
-and the period Silky's catalog.
-Per-scope counts and editorial notes are maintained in
-[`translations/README.md`](translations/README.md); none of the focused story
-scopes has an excluded or pending anchor. The broader
-`boot-to-first-scene-menu` scope is also closed: 152 of its 178 physical
-anchors are translated, while 26 already-final title and layout records are
-explicitly excluded. A deliberately untranslated line must be source-anchored
-in the coverage file with a reason; `--require-complete` turns any remaining
-pending line into an error.
-
-Build lime-juice from the conventional sibling checkout without writing build
-artifacts into that repository:
+Build lime-juice from the conventional sibling checkout without writing into
+that repository:
 
 ```sh
 cmake -S "$HOME/dev/FuzionCD/lime-juice" \
@@ -214,8 +157,7 @@ cmake -S "$HOME/dev/FuzionCD/lime-juice" \
 cmake --build working/vendor/lime-juice-build --parallel
 ```
 
-Then compile every catalog entry and produce a fresh translated HDI from the
-pristine working copy:
+Then build a translated HDI from the pristine working copy:
 
 ```sh
 uv run fermion translation build \
@@ -226,19 +168,12 @@ uv run fermion translation build \
   --juice working/vendor/lime-juice-build/juice
 ```
 
-The command verifies the pristine hashes and source anchors, decompiles and
-compiles GM through lime-juice, audits the rebuilt control flow, repacks the
-changed-length disk archives, resizes their FAT12 cluster chains if necessary,
-and verifies every layer in the output image. It also seeds untouched name and
-adult-term defaults in `FERM/REG_00` from the catalog's English token values;
-customized slots are preserved rather than reset. Generated RKT, MES, archive,
-and JSON report files are kept under ignored `working/translation-build/`.
+The build verifies hashes and source anchors, round-trips GM through lime-juice,
+audits control flow, repacks changed archives, updates FAT12 storage, and verifies
+the output image. It seeds untouched runtime name and term defaults while
+preserving player-customized slots.
 
-The current catalog contains 12,902 canonical entries covering 17,680 physical
-anchors in 76 MES files. Generated filenames and hashes are not release
-interfaces; rebuild from the hash-pinned pristine input before testing.
-
-The underlying HDI support is also available directly:
+The HDI operations are also available directly:
 
 ```sh
 uv run fermion hdi ls working/emulator/fermion-debug.hdi
@@ -288,12 +223,9 @@ disclaimer, title, and translated menu, selects `START NEW GAME`, then advances
 to the long translated reply. The command reports a SHA-256 over packed RGB
 pixels for stable checkpoint comparisons.
 
-The complete path is checked in as a named 34,200-frame route with 19 exact
-framebuffer checkpoints. It verifies the display selector and title menu,
-samples Marie's bedside grief and the Marie/Kanzaki confrontation, checks every
-naturalized terminal stage plus the complete 2296 premise screen, then continues
-through the first labelled exchange and in-scene menu. It also verifies the
-translated HDI's content hash before booting:
+The checked-in `opening-translation-proof` route verifies the display selector,
+title menu, opening premise, early dialogue, and in-scene menu against pinned
+framebuffer checkpoints and the translated HDI content hash:
 
 ```sh
 uv run fermion emulator route \
@@ -359,10 +291,7 @@ the state, and refuses equally plausible candidates. It emits a standalone,
 hash-pinned sparse manifest. `--state-offset 0x...` is available when a new core
 layout needs an explicit disambiguation.
 
-The three fixtures contain respectively 114 bytes in 40 hunks, 110 bytes in 35
-hunks, and 114 bytes in 40 hunks. All three were reconstructed into fresh
-translated images and accepted through the game's native `LOAD` flow. Create
-the other two route inputs, then verify the corresponding short paths:
+Create the other two route inputs, then verify their short paths:
 
 ```sh
 uv run fermion save apply runtime/save-fixtures.toml opening-dialogue \
@@ -385,18 +314,11 @@ uv run fermion emulator route \
   working/emulator/second-scene.hdi
 ```
 
-The FOP and F0000 routes execute 10,500 frames; the translated F0001 route now
-continues to frame 15,300 and pins eight dialogue checkpoints after the native
-load. Eight-frame keyboard pulses reliably cross the PC-98 scan without
-triggering the menu repeat seen with longer holds. Every route verifies the
-visible `LOAD` operation and the exact scenario marker inside serialized live
-state; the F0001 proof also retains its 640x308 room-only checkpoint before the
-dialogue hashes.
-
-The separate `second-scene-three-row-proof` route follows the stateful
-LOOK/THINK/TALK sequence to `launch-humans-ended-mutants` and pins a framebuffer
-where its 61-column translation occupies all three dialogue rows. This is the
-runtime basis for the catalog's conservative three-row envelope:
+The save-fixture routes verify the visible native `LOAD`, serialized scenario
+marker, and pinned dialogue checkpoints. The
+`second-scene-three-row-proof` route exercises
+`launch-humans-ended-mutants` across all three dialogue rows, providing the
+runtime basis for the catalog's 61-column, three-row story default:
 
 ```sh
 uv run fermion emulator route \
@@ -466,13 +388,10 @@ only cases whose declared MES dependencies, fixture, route schedule, source
 image, runtime defaults, core, firmware/config, or options changed are executed.
 Use `--case ROUTE` for a narrower probe or `--force` to refresh selected cases.
 
-Changed captures also preserve the prior and new PNGs under
-`working/visual-qa/diff/`; byte-identical captures do not create a diff pair.
-The command lists rebuilt MES files that changed without any declared visual-QA
-case, so incremental selection cannot silently masquerade as whole-game runtime
-coverage. Candidate recording ignores the old pinned HDI/framebuffer hashes but
-still enforces native scenario-state checkpoints. Ordinary `emulator route`
-continues to enforce every pinned hash.
+Changed captures preserve prior and new PNGs under
+`working/visual-qa/diff/`. The command also reports rebuilt MES files without a
+declared visual-QA case; ordinary `emulator route` runs continue to enforce
+every pinned hash.
 
 Changing `np2kai_clk_mult` changes input timing and checkpoint hashes, not just
 speed: keep ×20 for canonical tests and record lower clocks as separate routes
