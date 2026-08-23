@@ -44,6 +44,12 @@ the checked-in plot, voice, and terminology notes. Automated tools may expose
 anchors, duplicates, speakers, length problems, and runtime regressions; they
 must not manufacture the catalog prose as a substitute for translation.
 
+English printed by the original game is archival evidence rather than Japanese
+prose awaiting localization. Preserve its wording, capitalization, punctuation,
+full-width presentation, and period quirks unless a source-anchored catalog note
+records a narrow correction. The opening terminal therefore remains in mode 1
+and changes only the timed `ｔ` in `Dimention` to `ｓ` for `Dimension`.
+
 The catalog stores readable, unwrapped English. At build time the effective
 width inserts newlines at word boundaries and preserves explicit authoring
 newlines. An entry override wins when a specific display differs from its file

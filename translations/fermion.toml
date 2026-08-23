@@ -182,8 +182,8 @@ id = "later-prologue-exchange-kanzaki-calls-after-marie-closed-door"
 context = "Later prologue exchange; Kanzaki calls after Marie through the closed door."
 
 [[scenes]]
-id = "timed-separator-immediately-after-fermion-expanded-locked-systems-heading"
-context = "Timed separator immediately after FERMION; expanded to the locked systems heading label."
+id = "timed-separator-after-source-fermion-heading"
+context = "Original full-width separator immediately after the timed FERMION title."
 
 [[scenes]]
 id = "opening-terminal-animation-status-appended-after-timed-fermion-title"
@@ -194,40 +194,40 @@ id = "opening-terminal-animation-spoken-readout-confirmation-below-fermion-statu
 context = "Opening terminal animation; spoken/readout confirmation below the FERMION status line."
 
 [[scenes]]
-id = "timed-character-1-naturalized-time-quake-heading"
-context = "Timed character 1 of the naturalized TIME QUAKE heading."
+id = "timed-character-1-source-time-quake-heading"
+context = "Timed character 1 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-character-2-naturalized-time-quake-heading"
-context = "Timed character 2 of the naturalized TIME QUAKE heading."
+id = "timed-character-2-source-time-quake-heading"
+context = "Timed character 2 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-character-3-naturalized-time-quake-heading"
-context = "Timed character 3 of the naturalized TIME QUAKE heading."
+id = "timed-character-3-source-time-quake-heading"
+context = "Timed character 3 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-characters-naturalized-time-quake-heading"
-context = "Timed E characters in the naturalized TIME QUAKE heading."
+id = "timed-characters-source-time-quake-heading"
+context = "Timed source-origin e characters in the Time Quake heading."
 
 [[scenes]]
-id = "word-status-separators-naturalized-time-quake-heading"
-context = "Word and status separators in the naturalized TIME QUAKE heading."
+id = "word-status-separators-source-time-quake-heading"
+context = "Original full-width word and status separators in the Time Quake heading."
 
 [[scenes]]
-id = "timed-character-6-naturalized-time-quake-heading"
-context = "Timed character 6 of the naturalized TIME QUAKE heading."
+id = "timed-character-6-source-time-quake-heading"
+context = "Timed character 6 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-character-7-naturalized-time-quake-heading"
-context = "Timed character 7 of the naturalized TIME QUAKE heading."
+id = "timed-character-7-source-time-quake-heading"
+context = "Timed character 7 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-character-8-naturalized-time-quake-heading"
-context = "Timed character 8 of the naturalized TIME QUAKE heading."
+id = "timed-character-8-source-time-quake-heading"
+context = "Timed character 8 of the source-origin Time Quake heading."
 
 [[scenes]]
-id = "timed-character-9-naturalized-time-quake-heading"
-context = "Timed character 9 of the naturalized TIME QUAKE heading."
+id = "timed-character-9-source-time-quake-heading"
+context = "Timed character 9 of the source-origin Time Quake heading."
 
 [[scenes]]
 id = "opening-terminal-animation-status-appended-after-timed-time-quake"
@@ -238,112 +238,112 @@ id = "opening-terminal-animation-confirms-detected-time-quake-remains-active"
 context = "Opening terminal animation; confirms that the detected Time Quake remains active."
 
 [[scenes]]
-id = "timed-character-1-naturalized-target-coordinates-heading"
-context = "Timed character 1 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-1-source-target-dimension-space-heading"
+context = "Timed character 1 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-2-naturalized-target-coordinates-heading"
-context = "Timed character 2 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-2-source-target-dimension-space-heading"
+context = "Timed character 2 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-3-naturalized-target-coordinates-heading"
-context = "Timed character 3 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-3-source-target-dimension-space-heading"
+context = "Timed character 3 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-4-naturalized-target-coordinates-heading"
-context = "Timed character 4 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-4-source-target-dimension-space-heading"
+context = "Timed character 4 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-5-naturalized-target-coordinates-heading"
-context = "Timed character 5 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-5-source-target-dimension-space-heading"
+context = "Timed character 5 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-6-naturalized-target-coordinates-heading"
-context = "Timed character 6 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-6-source-target-dimension-space-heading"
+context = "Timed character 6 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-separator-between-target-coordinates"
-context = "Timed separator between TARGET and COORDINATES."
+id = "timed-separator-between-source-target-and-dimension"
+context = "Original full-width separator between Target and Dimension."
 
 [[scenes]]
-id = "timed-character-8-beginning-coordinates-naturalized-target-heading"
-context = "Timed character 8, beginning COORDINATES in the naturalized target heading."
+id = "timed-character-8-beginning-source-dimension"
+context = "Timed character 8, beginning source-origin Dimension."
 
 [[scenes]]
-id = "timed-character-9-naturalized-target-coordinates-heading"
-context = "Timed character 9 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-9-source-target-dimension-space-heading"
+context = "Timed character 9 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-10-naturalized-target-coordinates-heading"
-context = "Timed character 10 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-10-source-target-dimension-space-heading"
+context = "Timed character 10 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-11-naturalized-target-coordinates-heading"
-context = "Timed character 11 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-11-source-target-dimension-space-heading"
+context = "Timed character 11 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-12-naturalized-target-coordinates-heading"
-context = "Timed character 12 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-12-source-target-dimension-space-heading"
+context = "Timed character 12 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-13-naturalized-target-coordinates-heading"
-context = "Timed character 13 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-13-corrected-dimension-heading"
+context = "Timed character 13; the single corrected glyph in source Dimention to form Dimension."
 
 [[scenes]]
-id = "timed-character-14-naturalized-target-coordinates-heading"
-context = "Timed character 14 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-14-source-target-dimension-space-heading"
+context = "Timed character 14 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-15-naturalized-target-coordinates-heading"
-context = "Timed character 15 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-15-source-target-dimension-space-heading"
+context = "Timed character 15 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-16-naturalized-target-coordinates-heading"
-context = "Timed character 16 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-16-source-target-dimension-space-heading"
+context = "Timed character 16 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "timed-character-17-naturalized-target-coordinates-heading"
-context = "Timed character 17 of the naturalized TARGET COORDINATES heading."
+id = "timed-character-17-source-target-dimension-space-heading"
+context = "Original full-width separator between Dimension and Space."
 
 [[scenes]]
-id = "timed-character-18-completing-naturalized-target-coordinates-heading"
-context = "Timed character 18, completing the naturalized TARGET COORDINATES heading."
+id = "timed-character-18-source-target-dimension-space-heading"
+context = "Timed character 18, beginning source-origin Space."
 
 [[scenes]]
-id = "first-obsolete-character-slot-after-naturalized-target-coordinates-heading"
-context = "First obsolete character slot after the naturalized TARGET COORDINATES heading."
+id = "timed-character-19-source-target-dimension-space-heading"
+context = "Timed character 19 of the source-origin Target Dimension Space..input. heading."
 
 [[scenes]]
-id = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
-context = "Obsolete source character slot after the naturalized TARGET COORDINATES heading."
+id = "remaining-source-characters-target-dimension-space-input-heading"
+context = "One of the remaining source-origin characters in Target Dimension Space..input."
 
 [[scenes]]
-id = "two-obsolete-punctuation-slots-after-naturalized-target-coordinates-heading"
-context = "Two obsolete punctuation slots after the naturalized TARGET COORDINATES heading."
+id = "timed-source-dots-target-dimension-space-input-heading"
+context = "The two timed source-origin dots after Space."
 
 [[scenes]]
-id = "final-obsolete-punctuation-slot-after-naturalized-target-coordinates-heading"
-context = "Final obsolete punctuation slot after the naturalized TARGET COORDINATES heading."
+id = "timed-source-period-target-dimension-space-input-heading"
+context = "The source-origin period completing input."
 
 [[scenes]]
-id = "prompt-immediately-before-six-timed-progress-dots-target-entry"
-context = "Prompt immediately before the six timed progress dots for target entry."
+id = "prompt-immediately-before-six-timed-progress-dots-target-time-input"
+context = "Translated target-time input prompt immediately before six timed progress dots."
 
 [[scenes]]
-id = "six-sequential-progress-ticks-target-coordinates-are-entered"
-context = "Six sequential progress ticks while the target coordinates are entered."
+id = "six-sequential-progress-ticks-target-time-input"
+context = "Six sequential progress ticks while the target time is entered."
 
 [[scenes]]
-id = "completion-status-following-target-coordinate-progress-dots"
-context = "Completion status following the target-coordinate progress dots."
+id = "completion-status-following-target-time-progress-dots"
+context = "Completion status following the target-time input progress dots."
 
 [[scenes]]
 id = "opening-terminal-animation-heading-before-final-aggregate-status"
-context = "Opening terminal animation; heading before the final aggregate status."
+context = "Opening terminal animation; source-origin All system heading before the aggregate status."
 
 [[scenes]]
-id = "opening-terminal-animation-aggregate-status-appended-after-all-systems"
-context = "Opening terminal animation; aggregate status appended after ALL SYSTEMS and its dot leader."
+id = "opening-terminal-animation-aggregate-status-appended-after-source-all-system"
+context = "Opening terminal animation; source-origin OK. appended after All system and its dot leader."
 
 [[scenes]]
 id = "opening-terminal-animation-detailed-confirmation-after-aggregate-systems-line"
@@ -367,7 +367,7 @@ context = "Opening terminal animation; second physical half of the panel-release
 
 [[scenes]]
 id = "opening-terminal-animation-shutdown-heading-after-panel-is-released"
-context = "Opening terminal animation; shutdown heading after the panel is released."
+context = "Opening terminal animation; source-origin System Close heading after the panel is released."
 
 [[scenes]]
 id = "opening-terminal-animation-shutdown-confirmation"
@@ -375,7 +375,7 @@ context = "Opening terminal animation; shutdown confirmation."
 
 [[scenes]]
 id = "opening-terminal-animation-final-power-state-label"
-context = "Opening terminal animation; final power-state label."
+context = "Opening terminal animation; source-origin System Power off label."
 
 [[scenes]]
 id = "after-terminal-shuts-down-unlabelled-operator-ends-day-work"
@@ -4626,28 +4626,28 @@ id = "opening-terminal-fermion-status-label"
 file = "DISKA/FOP.MES"
 offset = 0x06f1
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　"
-translation = " STATUS "
+translation = "　"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-separator-immediately-after-fermion-expanded-locked-systems-heading"
+scene = "timed-separator-after-source-fermion-heading"
 status = "translated"
-notes = "The source used only a layout space before its dot leader. The archival restoration adds STATUS so the final English screen reads as an instrument heading while retaining this physical timing record."
+notes = "The original full-width layout separator remains byte-for-byte unchanged."
 
 [[entries]]
 id = "opening-terminal-fermion-status"
 file = "DISKA/FOP.MES"
 offset = 0x0727
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ＯＫ．"
-translation = " NOMINAL"
+translation = "ＯＫ．"
 speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-status-appended-after-timed-fermion-title"
 status = "translated"
-notes = "Naturalized from the generic source 'OK.' to the locked terse systems-register term 'NOMINAL'. The leading space separates it from the preserved dot leader."
+notes = "The source-origin OK. remains in full-width mode 1 without grammatical or stylistic naturalization."
 
 [[entries]]
 id = "opening-terminal-fermion-field"
@@ -4661,49 +4661,46 @@ speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-spoken-readout-confirmation-below-fermion-status"
 status = "translated"
-notes = "フェルミ粒子 literally means fermion particles. The locked terminal copy uses 'Fermion field' as concise period-SF instrumentation prose."
+notes = "フェルミ粒子 literally means fermion particles; Fermion field is the established concise technical rendering."
 
 [[entries]]
 id = "opening-terminal-time-quake-t"
 file = "DISKA/FOP.MES"
 offset = 0x087c
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｔ"
-translation = "T"
+translation = "Ｔ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-1-naturalized-time-quake-heading"
+scene = "timed-character-1-source-time-quake-heading"
 status = "translated"
-notes = "The source term is already correct English; mode 2 and uppercase normalize it to the locked terminal register while preserving the character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-i"
 file = "DISKA/FOP.MES"
 offset = 0x0886
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｉ"
-translation = "I"
+translation = "ｉ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-2-naturalized-time-quake-heading"
+scene = "timed-character-2-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-m"
 file = "DISKA/FOP.MES"
 offset = 0x0890
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｍ"
-translation = "M"
+translation = "ｍ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-3-naturalized-time-quake-heading"
+scene = "timed-character-3-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-e"
@@ -4712,14 +4709,14 @@ anchors = [
   { file = "DISKA/FOP.MES", offset = 0x08d8 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｅ"
-translation = "E"
+translation = "ｅ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-characters-naturalized-time-quake-heading"
+scene = "timed-characters-source-time-quake-heading"
 status = "translated"
-notes = "Both physical E records have the same source, target, and heading context, so they intentionally share one canonical translation."
+notes = "Both physical source-origin e records remain byte-for-byte unchanged."
 
 [[entries]]
 id = "opening-terminal-time-quake-spaces"
@@ -4728,84 +4725,80 @@ anchors = [
   { file = "DISKA/FOP.MES", offset = 0x08e2 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　"
-translation = " "
+translation = "　"
 speaker = "terminal"
 attribution = "inferred"
-scene = "word-status-separators-naturalized-time-quake-heading"
+scene = "word-status-separators-source-time-quake-heading"
 status = "translated"
-notes = "Both timed full-width layout cells become ordinary ASCII spaces around the locked heading and its dot leader."
+notes = "Both original full-width separators remain byte-for-byte unchanged."
 
 [[entries]]
 id = "opening-terminal-time-quake-q"
 file = "DISKA/FOP.MES"
 offset = 0x08ae
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｑ"
-translation = "Q"
+translation = "Ｑ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-6-naturalized-time-quake-heading"
+scene = "timed-character-6-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-u"
 file = "DISKA/FOP.MES"
 offset = 0x08b9
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｕ"
-translation = "U"
+translation = "ｕ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-7-naturalized-time-quake-heading"
+scene = "timed-character-7-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-a"
 file = "DISKA/FOP.MES"
 offset = 0x08c3
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ａ"
-translation = "A"
+translation = "ａ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-8-naturalized-time-quake-heading"
+scene = "timed-character-8-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-k"
 file = "DISKA/FOP.MES"
 offset = 0x08cd
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｋ"
-translation = "K"
+translation = "ｋ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-9-naturalized-time-quake-heading"
+scene = "timed-character-9-source-time-quake-heading"
 status = "translated"
-notes = "Uppercase mode-2 normalization preserving the source character tick."
 
 [[entries]]
 id = "opening-terminal-time-quake-status"
 file = "DISKA/FOP.MES"
 offset = 0x090e
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ＯＫ．"
-translation = " CONFIRMED"
+translation = "ＯＫ．"
 speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-status-appended-after-timed-time-quake"
 status = "translated"
-notes = "Context splits this byte-identical OK. record from the FERMION and ALL SYSTEMS statuses; a Time Quake is detected and therefore 'CONFIRMED'."
+notes = "The second source-origin OK. remains in full-width mode 1."
 
 [[entries]]
 id = "opening-terminal-time-quake-holding"
@@ -4819,315 +4812,295 @@ speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-confirms-detected-time-quake-remains-active"
 status = "translated"
-notes = "時空震動 is the project's space-time oscillation term. 継続中 means the phenomenon is continuing; 'holding' fits the locked terse register."
+notes = "時空震動 is the project's space-time oscillation term. 継続中 means the phenomenon is continuing; holding is concise terminal English."
 
 [[entries]]
 id = "opening-terminal-target-01"
 file = "DISKA/FOP.MES"
 offset = 0x0a87
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｔ"
-translation = "T"
+translation = "Ｔ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-1-naturalized-target-coordinates-heading"
+scene = "timed-character-1-source-target-dimension-space-heading"
 status = "translated"
-notes = "The source types 'Target Dimention Space... input.' one physical record at a time. This record begins the locked replacement while preserving its timing slot."
+notes = "The source types 'Target Dimention Space..input.' one physical mode-1 record at a time. Every glyph is preserved except the logged spelling correction that forms 'Dimension'."
 
 [[entries]]
 id = "opening-terminal-target-02"
 file = "DISKA/FOP.MES"
 offset = 0x0a91
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ａ"
-translation = "A"
+translation = "ａ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-2-naturalized-target-coordinates-heading"
+scene = "timed-character-2-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement; the source's exact Engrish sequence remains recorded by this anchor and source field."
 
 [[entries]]
 id = "opening-terminal-target-03"
 file = "DISKA/FOP.MES"
 offset = 0x0a9b
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｒ"
-translation = "R"
+translation = "ｒ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-3-naturalized-target-coordinates-heading"
+scene = "timed-character-3-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
 
 [[entries]]
 id = "opening-terminal-target-04"
 file = "DISKA/FOP.MES"
 offset = 0x0aa5
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｇ"
-translation = "G"
+translation = "ｇ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-4-naturalized-target-coordinates-heading"
+scene = "timed-character-4-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
 
 [[entries]]
 id = "opening-terminal-target-05"
 file = "DISKA/FOP.MES"
 offset = 0x0ab0
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｅ"
-translation = "E"
+translation = "ｅ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-5-naturalized-target-coordinates-heading"
+scene = "timed-character-5-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the terminal's one-record-per-tick animation."
 
 [[entries]]
 id = "opening-terminal-target-06"
 file = "DISKA/FOP.MES"
 offset = 0x0aba
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｔ"
-translation = "T"
+translation = "ｔ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-6-naturalized-target-coordinates-heading"
+scene = "timed-character-6-source-target-dimension-space-heading"
 status = "translated"
-notes = "Completes TARGET while preserving the source animation's sixth physical character slot."
 
 [[entries]]
 id = "opening-terminal-target-07"
 file = "DISKA/FOP.MES"
 offset = 0x0ac4
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　"
-translation = " "
+translation = "　"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-separator-between-target-coordinates"
+scene = "timed-separator-between-source-target-and-dimension"
 status = "translated"
-notes = "A literal ASCII separator retained as a managed record because this source space lies inside the rewritten Engrish sequence."
 
 [[entries]]
 id = "opening-terminal-target-08"
 file = "DISKA/FOP.MES"
 offset = 0x0ace
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｄ"
-translation = "C"
+translation = "Ｄ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-8-beginning-coordinates-naturalized-target-heading"
+scene = "timed-character-8-beginning-source-dimension"
 status = "translated"
-notes = "The locked restoration replaces the misspelled and misleading 'Dimention Space' with 'COORDINATES'."
 
 [[entries]]
 id = "opening-terminal-target-09"
 file = "DISKA/FOP.MES"
 offset = 0x0ad9
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｉ"
-translation = "O"
+translation = "ｉ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-9-naturalized-target-coordinates-heading"
+scene = "timed-character-9-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-10"
 file = "DISKA/FOP.MES"
 offset = 0x0ae3
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｍ"
-translation = "O"
+translation = "ｍ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-10-naturalized-target-coordinates-heading"
+scene = "timed-character-10-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-11"
 file = "DISKA/FOP.MES"
 offset = 0x0aed
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｅ"
-translation = "R"
+translation = "ｅ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-11-naturalized-target-coordinates-heading"
+scene = "timed-character-11-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-12"
 file = "DISKA/FOP.MES"
 offset = 0x0af7
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｎ"
-translation = "D"
+translation = "ｎ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-12-naturalized-target-coordinates-heading"
+scene = "timed-character-12-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-13"
 file = "DISKA/FOP.MES"
 offset = 0x0b01
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｔ"
-translation = "I"
+translation = "ｓ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-13-naturalized-target-coordinates-heading"
+scene = "timed-character-13-corrected-dimension-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
+notes = "Archival correction: the source glyph 'ｔ' in 'Dimention' becomes 'ｓ' to form 'Dimension'. This one-for-one mode-1 replacement preserves the original timing, width, and surrounding English."
 
 [[entries]]
 id = "opening-terminal-target-14"
 file = "DISKA/FOP.MES"
 offset = 0x0b0b
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｉ"
-translation = "N"
+translation = "ｉ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-14-naturalized-target-coordinates-heading"
+scene = "timed-character-14-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-15"
 file = "DISKA/FOP.MES"
 offset = 0x0b15
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｏ"
-translation = "A"
+translation = "ｏ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-15-naturalized-target-coordinates-heading"
+scene = "timed-character-15-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-16"
 file = "DISKA/FOP.MES"
 offset = 0x0b1f
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｎ"
-translation = "T"
+translation = "ｎ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-16-naturalized-target-coordinates-heading"
+scene = "timed-character-16-source-target-dimension-space-heading"
 status = "translated"
-notes = "Contextual character replacement preserving the original tick."
 
 [[entries]]
 id = "opening-terminal-target-17"
 file = "DISKA/FOP.MES"
 offset = 0x0b29
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "　"
-translation = "E"
+translation = "　"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-17-naturalized-target-coordinates-heading"
+scene = "timed-character-17-source-target-dimension-space-heading"
 status = "translated"
-notes = "The original inter-word space becomes a letter because the replacement phrase is shorter; the physical record and delay remain intact."
 
 [[entries]]
 id = "opening-terminal-target-18"
 file = "DISKA/FOP.MES"
 offset = 0x0b33
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｓ"
-translation = "S"
+translation = "Ｓ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "timed-character-18-completing-naturalized-target-coordinates-heading"
+scene = "timed-character-18-source-target-dimension-space-heading"
 status = "translated"
-notes = "Completes the locked heading; later obsolete Engrish character slots are retained as timed blanks."
 
 [[entries]]
 id = "opening-terminal-target-padding-p"
 file = "DISKA/FOP.MES"
 offset = 0x0b3d
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｐ"
-translation = " "
+translation = "ｐ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "first-obsolete-character-slot-after-naturalized-target-coordinates-heading"
+scene = "timed-character-19-source-target-dimension-space-heading"
 status = "translated"
-notes = "A timed blank suppresses the remainder of the longer source Engrish while retaining this physical record and its delay."
 
 [[entries]]
 id = "opening-terminal-target-padding-a"
 file = "DISKA/FOP.MES"
 offset = 0x0b47
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ａ"
-translation = " "
+translation = "ａ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
 
 [[entries]]
 id = "opening-terminal-target-padding-c"
 file = "DISKA/FOP.MES"
 offset = 0x0b51
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｃ"
-translation = " "
+translation = "ｃ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
 
 [[entries]]
 id = "opening-terminal-target-padding-e"
 file = "DISKA/FOP.MES"
 offset = 0x0b5c
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｅ"
-translation = " "
+translation = "ｅ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
 
 [[entries]]
 id = "opening-terminal-target-padding-dots"
@@ -5136,98 +5109,92 @@ anchors = [
   { file = "DISKA/FOP.MES", offset = 0x0b70 },
 ]
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "・"
-translation = " "
+translation = "・"
 speaker = "terminal"
 attribution = "inferred"
-scene = "two-obsolete-punctuation-slots-after-naturalized-target-coordinates-heading"
+scene = "timed-source-dots-target-dimension-space-input-heading"
 status = "translated"
-notes = "Both identical source dots become timed blanks; their shared target and display context justify one canonical entry."
+notes = "Both timed source-origin dots remain byte-for-byte unchanged."
 
 [[entries]]
 id = "opening-terminal-target-padding-i"
 file = "DISKA/FOP.MES"
 offset = 0x0b7a
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｉ"
-translation = " "
+translation = "ｉ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
 
 [[entries]]
 id = "opening-terminal-target-padding-n"
 file = "DISKA/FOP.MES"
 offset = 0x0b84
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｎ"
-translation = " "
+translation = "ｎ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses source Engrish without deleting or merging its physical record."
 
 [[entries]]
 id = "opening-terminal-target-padding-input-p"
 file = "DISKA/FOP.MES"
 offset = 0x0b8e
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｐ"
-translation = " "
+translation = "ｐ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
 
 [[entries]]
 id = "opening-terminal-target-padding-u"
 file = "DISKA/FOP.MES"
 offset = 0x0b98
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｕ"
-translation = " "
+translation = "ｕ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
 
 [[entries]]
 id = "opening-terminal-target-padding-t"
 file = "DISKA/FOP.MES"
 offset = 0x0ba2
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ｔ"
-translation = " "
+translation = "ｔ"
 speaker = "terminal"
 attribution = "inferred"
-scene = "obsolete-source-character-slot-after-naturalized-target-coordinates-heading"
+scene = "remaining-source-characters-target-dimension-space-input-heading"
 status = "translated"
-notes = "A timed blank suppresses the old 'input' fragment without deleting its record."
 
 [[entries]]
 id = "opening-terminal-target-padding-period"
 file = "DISKA/FOP.MES"
 offset = 0x0bac
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "．"
-translation = " "
+translation = "．"
 speaker = "terminal"
 attribution = "inferred"
-scene = "final-obsolete-punctuation-slot-after-naturalized-target-coordinates-heading"
+scene = "timed-source-period-target-dimension-space-input-heading"
 status = "translated"
-notes = "The source period becomes a timed blank; completion is rendered by the following ENTERED record."
 
 [[entries]]
 id = "opening-terminal-target-progress-prefix"
@@ -5236,12 +5203,12 @@ offset = 0x0bcd
 source_mode = 1
 target_mode = 2
 source = "『目標時間、入力"
-translation = " "
+translation = "Target time input"
 speaker = "terminal"
 attribution = "inferred"
-scene = "prompt-immediately-before-six-timed-progress-dots-target-entry"
+scene = "prompt-immediately-before-six-timed-progress-dots-target-time-input"
 status = "translated"
-notes = "The semantic content is already expressed by TARGET COORDINATES. This managed separator keeps the distinct physical record while avoiding a duplicate English prompt."
+notes = "目標時間、入力 is restored as its own translated prompt rather than suppressed in favor of rewritten source-English copy."
 
 [[entries]]
 id = "opening-terminal-target-progress-dots"
@@ -5259,7 +5226,7 @@ source = "・"
 translation = "."
 speaker = "terminal"
 attribution = "inferred"
-scene = "six-sequential-progress-ticks-target-coordinates-are-entered"
+scene = "six-sequential-progress-ticks-target-time-input"
 status = "translated"
 notes = "These identical dots share both meaning and target. They remain six physical timed records rather than one merged ellipsis."
 
@@ -5270,40 +5237,40 @@ offset = 0x0c1c
 source_mode = 1
 target_mode = 2
 source = "完了。』"
-translation = " ENTERED"
+translation = " complete."
 speaker = "terminal"
 attribution = "inferred"
-scene = "completion-status-following-target-coordinate-progress-dots"
+scene = "completion-status-following-target-time-progress-dots"
 status = "translated"
-notes = "The leading space separates ENTERED from the final progress dot. The locked copy naturalizes 完了 as a terse status rather than a sentence."
+notes = "The leading space separates the completion from the final timed progress dot; lowercase completes the preceding translated prompt."
 
 [[entries]]
 id = "opening-terminal-all-systems-heading"
 file = "DISKA/FOP.MES"
 offset = 0x0c91
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ａｌｌ　ｓｙｓｔｅｍ"
-translation = "ALL SYSTEMS"
+translation = "Ａｌｌ　ｓｙｓｔｅｍ"
 speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-heading-before-final-aggregate-status"
 status = "translated"
-notes = "The source's singular 'system' is naturalized to the conventional aggregate heading 'ALL SYSTEMS'."
+notes = "The source-origin singular wording, capitalization, spacing, and full-width presentation remain unchanged."
 
 [[entries]]
 id = "opening-terminal-all-systems-status"
 file = "DISKA/FOP.MES"
 offset = 0x0cd1
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "ＯＫ．"
-translation = " NOMINAL"
+translation = "ＯＫ．"
 speaker = "terminal"
 attribution = "inferred"
-scene = "opening-terminal-animation-aggregate-status-appended-after-all-systems"
+scene = "opening-terminal-animation-aggregate-status-appended-after-source-all-system"
 status = "translated"
-notes = "This third contextual OK. means all subsystems are within normal parameters, so the locked copy uses NOMINAL."
+notes = "The third source-origin OK. remains in full-width mode 1."
 
 [[entries]]
 id = "opening-terminal-instruments-nominal"
@@ -5317,7 +5284,7 @@ speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-detailed-confirmation-after-aggregate-systems-line"
 status = "translated"
-notes = "計器 refers to instruments or gauges. The terse engineering register matches the surrounding naturalized copy."
+notes = "計器 refers to instruments or gauges; 異常なし says that none show an abnormality."
 
 [[entries]]
 id = "opening-terminal-final-checks-begin"
@@ -5373,21 +5340,21 @@ speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-second-physical-half-panel-release-message"
 status = "translated"
-notes = "解除 can mean release, disengage, or unlock. 'Unlocked' is the locked terminal copy and reads as an operator handoff."
+notes = "解除 can mean release, disengage, or unlock; here unlocked reads as the operator handoff."
 
 [[entries]]
 id = "opening-terminal-shutdown-heading"
 file = "DISKA/FOP.MES"
 offset = 0x0ec0
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "・・Ｓｙｓｔｅｍ　Ｃｌｏｓｅ・・"
-translation = "-- SYSTEM SHUTDOWN --"
+translation = "・・Ｓｙｓｔｅｍ　Ｃｌｏｓｅ・・"
 speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-shutdown-heading-after-panel-is-released"
 status = "translated"
-notes = "'System Close' is naturalized rather than merely respelled. ASCII dashes retain the source's decorative framing."
+notes = "The source-origin System Close wording and decorative full-width dots remain unchanged."
 
 [[entries]]
 id = "opening-terminal-operations-confirmed"
@@ -5408,14 +5375,14 @@ id = "opening-terminal-power-off"
 file = "DISKA/FOP.MES"
 offset = 0x0f6d
 source_mode = 1
-target_mode = 2
+target_mode = 1
 source = "Ｓｙｓｔｅｍ　Ｐｏｗｅｒ　ｏｆｆ"
-translation = "SYSTEM POWER OFF"
+translation = "Ｓｙｓｔｅｍ　Ｐｏｗｅｒ　ｏｆｆ"
 speaker = "terminal"
 attribution = "inferred"
 scene = "opening-terminal-animation-final-power-state-label"
 status = "translated"
-notes = "The source English is intelligible; capitalization and spacing are normalized to the locked terminal register."
+notes = "The source-origin wording, capitalization, spacing, and full-width presentation remain unchanged."
 
 [[entries]]
 id = "opening-operator-done-for-day"
@@ -13222,7 +13189,7 @@ speaker = "connie"
 attribution = "proven"
 scene = "connie-reads-pre-launch-instruments"
 status = "translated"
-notes = "The clipped status language echoes the naturalized terminal register."
+notes = "The clipped status language matches Connie's pre-launch checklist voice."
 
 [[entries]]
 id = "launch-time-tunnel-thought"
@@ -14666,7 +14633,7 @@ speaker = "connie"
 attribution = "proven"
 scene = "connie-checks-technical-launch-status"
 status = "translated"
-notes = "'Nominal' follows the locked terminal register and her checklist voice; Connie uses the operational term Time Quake."
+notes = "'Nominal' fits Connie's checklist voice; she uses the operational term Time Quake."
 
 [[entries]]
 id = "launch-prays-it-works"

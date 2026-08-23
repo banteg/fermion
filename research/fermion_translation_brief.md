@@ -609,7 +609,7 @@ than a global narration default.
 
 Naturalize fluent Japanese speech into fluent character English. A katakana loanword is part of the Japanese sentence and should be translated by meaning and register: `コールドスリープ` becomes **cryosleep**, while **kotatsu** may remain because it names a culturally specific object already established in English. Do not preserve an awkward English calque merely because the Japanese happens to be written in katakana.
 
-English already printed by the original game is a different evidence class. Preserve its period computer flavor by default, including terseness and odd phrasing, and make any correction a source-anchored, logged intervention. The naturalized opening terminal in section 13 is the project’s already-approved exception; it is not precedent for silently polishing every source-origin English string.
+English already printed by the original game is a different evidence class. Preserve its period computer flavor, including wording, capitalization, punctuation, full-width presentation, terseness, and odd phrasing. Transcode it only when the runtime requires a different encoding, and make any correction a source-anchored, logged intervention. The opening terminal in section 13 follows this policy: its original English remains intact except for the unambiguous `Dimention` → `Dimension` spelling correction.
 
 ### Honorifics — locked policy
 
@@ -904,7 +904,7 @@ Repair only a demonstrable text-level error whose intended reading is independen
 |---|---|---|---|
 | `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **about 280 years** | The stated dates 1996 and 2288 are 292 years apart. Preserve the source figure and disclose the contradiction rather than repairing character dialogue. |
 | `F0040.MES:0x4093` | `確率された時代` (“an era whose probability was...”) | **an era whose technology could perform your operation** | Read `確率` as the contextually recoverable typo `確立` (“established”). Preserve the exact typo in source and notes. |
-| `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | use the naturalized terminal copy in section 13 | The strings are already English, but consistent naturalization is clearer than a mixed typo-only pass. Preserve the exact source in catalog notes. |
+| `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | preserve the source English; correct only **Dimention** → **Dimension** | The strings are original English and therefore archival evidence. The one-letter spelling correction is logged and preserves every timed record; wording such as `All system` and `System Close` remains untouched. |
 | `F003410.MES:0x1077` | `コニー】` without an opening `【` | **[Connie]** | Restore the demonstrably missing opening speaker-tag bracket; adjacent records and the remaining name plus closing bracket establish the intended form. |
 | `F0042.MES:0x1bf7` | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
@@ -1104,31 +1104,31 @@ Test specifically for:
 
 ---
 
-## 13. Locked naturalized opening terminal English
+## 13. Source-faithful opening terminal English
 
-The source contains period Engrish such as `Target Dimention Space... input.` The implemented archival English is:
+The opening terminal mixes Japanese readouts with English written by the original developers. Preserve that source-origin English byte-for-byte, including full-width Latin text, capitalization, punctuation, odd grammar, and the one-record-per-character animation. The sole editorial correction is the unambiguous spelling error `Dimention` → `Dimension`, implemented as the single timed glyph substitution `ｔ` → `ｓ`.
 
 ```text
-FERMION STATUS ..... NOMINAL
+FERMION ..... OK.
 Fermion field stable.
 
-TIME QUAKE .... CONFIRMED
+Time Quake .... OK.
 Space-time oscillation holding.
 
-TARGET COORDINATES
-...... ENTERED
+Target Dimension Space..input.
+Target time input...... complete.
 
-ALL SYSTEMS .... NOMINAL
+All system .... OK.
 All instruments nominal.
 Final checks... complete.
 Control panel... unlocked.
 
--- SYSTEM SHUTDOWN --
+..System Close..
 End of operations confirmed.
-SYSTEM POWER OFF
+System Power off
 ```
 
-Use the naturalized version above. A typo-only Engrish pass is not an active alternative. The dot counts and split TARGET/ENTERED screens follow the actual physical timing records rather than an invented consolidated line. The source animation clears and redraws between several stages; do not merge those records merely to make a static transcript resemble one terminal page. Preserve the original terminal strings and the naturalization rationale in catalog/restoration notes so the archival intervention remains reviewable.
+The transcript romanizes the Japanese readouts for readability, but the catalog keeps every source-English record in mode 1 so its original full-width rendering remains intact. The displayed dot counts follow the actual physical records. The animation clears and redraws between several stages; do not merge or suppress records merely to make a static transcript resemble one terminal page. Preserve the exact source and document the single spelling correction in the catalog so the intervention remains reviewable.
 
 ---
 

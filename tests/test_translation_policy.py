@@ -149,15 +149,67 @@ def test_locked_translation_policy_contracts() -> None:
         ("DISKC/F0025R.MES", 0x131A)
     ].translation
 
-    terminal_locks = {
-        "opening-terminal-fermion-status-label": " STATUS ",
-        "opening-terminal-fermion-status": " NOMINAL",
-        "opening-terminal-instruments-nominal": "All instruments nominal.",
-        "opening-terminal-shutdown-heading": "-- SYSTEM SHUTDOWN --",
-        "opening-terminal-power-off": "SYSTEM POWER OFF",
+    source_english_locks = {
+        "opening-terminal-fermion-status-label": "　",
+        "opening-terminal-fermion-status": "ＯＫ．",
+        "opening-terminal-time-quake-i": "ｉ",
+        "opening-terminal-time-quake-status": "ＯＫ．",
+        "opening-terminal-all-systems-heading": "Ａｌｌ　ｓｙｓｔｅｍ",
+        "opening-terminal-all-systems-status": "ＯＫ．",
+        "opening-terminal-shutdown-heading": "・・Ｓｙｓｔｅｍ　Ｃｌｏｓｅ・・",
+        "opening-terminal-power-off": "Ｓｙｓｔｅｍ　Ｐｏｗｅｒ　ｏｆｆ",
     }
-    for entry_id, expected in terminal_locks.items():
-        assert by_id[entry_id].translation == expected, entry_id
+    for entry_id, expected in source_english_locks.items():
+        entry = by_id[entry_id]
+        assert entry.target_mode == 1, entry_id
+        assert entry.translation == entry.source == expected, entry_id
+
+    target_heading_offsets = (
+        0x0A87,
+        0x0A91,
+        0x0A9B,
+        0x0AA5,
+        0x0AB0,
+        0x0ABA,
+        0x0AC4,
+        0x0ACE,
+        0x0AD9,
+        0x0AE3,
+        0x0AED,
+        0x0AF7,
+        0x0B01,
+        0x0B0B,
+        0x0B15,
+        0x0B1F,
+        0x0B29,
+        0x0B33,
+        0x0B3D,
+        0x0B47,
+        0x0B51,
+        0x0B5C,
+        0x0B66,
+        0x0B70,
+        0x0B7A,
+        0x0B84,
+        0x0B8E,
+        0x0B98,
+        0x0BA2,
+        0x0BAC,
+    )
+    target_heading = [
+        by_anchor[("DISKA/FOP.MES", offset)] for offset in target_heading_offsets
+    ]
+    assert all(entry.target_mode == 1 for entry in target_heading)
+    assert "".join(entry.translation for entry in target_heading) == (
+        "Ｔａｒｇｅｔ　Ｄｉｍｅｎｓｉｏｎ　Ｓｐａｃｅ・・ｉｎｐｕｔ．"
+    )
+    correction = by_anchor[("DISKA/FOP.MES", 0x0B01)]
+    assert correction.source == "ｔ"
+    assert correction.translation == "ｓ"
+    assert by_id["opening-terminal-target-progress-prefix"].translation == (
+        "Target time input"
+    )
+    assert by_id["opening-terminal-target-entered"].translation == " complete."
 
     connie_kanzaki_entries = [
         item.id for item in items if "Connie Kanzaki" in item.translation

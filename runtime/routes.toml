@@ -3,7 +3,7 @@ version = 2
 [[routes]]
 name = "opening-translation-proof"
 description = "Boot through the translated prologue, verify representative dialogue and the 2296 premise, then continue to the first scene menu."
-content_sha256 = "92a6ac3ad37823b5d215b3aa9fd45d627ee4f8a941a5d387722b6da37ae88b58"
+content_sha256 = "3e3ac5b5444cada140c0226a5f9146e2a3c4bf2311410e5d534bb324f0c6ffba"
 frames = 34200
 cache_frame = 26099
 taps = [
@@ -119,32 +119,32 @@ sha256 = "582e1ea0f4b773c2f3383f8de137d97b750fb729347dc15f2cb3b63d6338b813"
 [[routes.checkpoints]]
 name = "terminal-fermion-final"
 frame = 16149
-sha256 = "03a66b24d9bab89e11b4473a988571a02c910b32f133af0f9fddae5e0669198d"
+sha256 = "0c76ae0c6561d4df18e307c31f6555ad8ba474c3accab01badbfee331f98c542"
 
 [[routes.checkpoints]]
 name = "terminal-time-quake-final"
 frame = 17349
-sha256 = "b22114d05436f0d7d8ab0d4ab03fabacd09a31c3b64b69cde1565ab6917e76fc"
+sha256 = "58d972a4e0e3443204f179a5f9f4c522f53e2d2046d59b9de5e3203c65ec6a01"
 
 [[routes.checkpoints]]
 name = "terminal-target-heading"
 frame = 18449
-sha256 = "23eae1c5b42d320a8c407839dfced876de84283ad40d36e17db73da4a1a1cefe"
+sha256 = "ec9e0481541c41e50c918fa10d5680b1070950d800f62a55ea789c330067c38b"
 
 [[routes.checkpoints]]
 name = "terminal-target-entered"
 frame = 18899
-sha256 = "e4a0f2e279fc9694a42e7c31a0a81fc311e2e64c16c7e9995ae07354c7b42b0a"
+sha256 = "7dd1d49d18135b198b7a482206c5b66c90a7ff33c05f7d9582c45a6fa7d761f5"
 
 [[routes.checkpoints]]
 name = "terminal-all-systems"
 frame = 19349
-sha256 = "fec0148e62d566ca6ccd49e3c7a1ecb9a15144416b1c7b60559a6034eefd7841"
+sha256 = "57d8969f627b10b7a7a3047f2a043e3cab1f1afaae8929b2d0698f21fd120ea3"
 
 [[routes.checkpoints]]
 name = "terminal-shutdown"
 frame = 21149
-sha256 = "c35ed2c5c8641197f7221fc5329d83e8d737deec22edb16040f42fc5602882a8"
+sha256 = "84a41be1e080742e256cc8e2aaee43bdf5ac17e8c954e0fc5d915c0ce7443745"
 
 [[routes.checkpoints]]
 name = "operator-tomorrow"
@@ -158,8 +158,8 @@ sha256 = "09604c4ba7362b095375762678a893dde92a394283b3688f5981d6f89496c1e0"
 
 [[routes.checkpoints]]
 name = "first-scene-connie"
-frame = 25199
-sha256 = "8c73813b6316b125d365b3957cc8d692fc36959b3b4e6d265ae3e3c689d0b793"
+frame = 25249
+sha256 = "0bbfade7fccdb60ef9c75c79ac690525de80a456287a216889e72ebfa29b1899"
 
 [[routes.checkpoints]]
 name = "first-scene-kanzaki"
@@ -210,7 +210,7 @@ state_offset = 0x1c7e0
 [[routes]]
 name = "opening-dialogue-save-fixture-proof"
 description = "Load the sparse REG_01 fixture and verify the translated start of FOP.MES."
-content_sha256 = "567a6634d8708fa49abc18f29e6424e12ae619ab7780268fb1e363886962b856"
+content_sha256 = "780b91681aa3fdd9248d1064f7f84b2e7feb7dd7e8d5c4bb39a0a8ac3db22526"
 frames = 10500
 cache_frame = 8299
 taps = [
