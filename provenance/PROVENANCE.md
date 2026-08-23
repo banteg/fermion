@@ -14,6 +14,14 @@ softwarelibrary, emulation):
 
 > 5.25" floppy disk images (Greaseweazle F1) for NEC PC-9801
 
+Links:
+
+- Item page: <https://archive.org/details/fermion>
+- Download: <https://archive.org/download/fermion/Fermion%20-%20Mirai%20kara%20no%20Houmonsha%20%28Silky%27s%29%20%281995-12-22%29%20%5BPC98%5D%20%5B5.25%27%27%5D%20%5BSCP%2BMFI%2BHFE%2BD88%5D.zip>
+- Storage node (used at fetch time): <https://ia801606.us.archive.org/15/items/fermion/Fermion%20-%20Mirai%20kara%20no%20Houmonsha%20%28Silky%27s%29%20%281995-12-22%29%20%5BPC98%5D%20%5B5.25%27%27%5D%20%5BSCP%2BMFI%2BHFE%2BD88%5D.zip>
+- Torrent: <https://archive.org/download/fermion/fermion_archive.torrent>
+- Item metadata (local copy: `archive-org-metadata.json`): <https://archive.org/metadata/fermion>
+
 Each disk is provided in four formats:
 
 | Format | Type | Use |
@@ -42,7 +50,8 @@ metadata.
 The D88 images were converted to raw HDM sector images
 (77 cyl × 2 head × 8 sec × 1024 B = 1261568 bytes, sectors reordered by
 C/H/R) and their SHA-1 digests compared against the MAME `pc98` software
-list entry `fermion` (snapshot in `mame-pc98-softwarelist-fermion.xml`).
+list entry `fermion` (snapshot in `mame-pc98-softwarelist-fermion.xml`,
+upstream: [`hash/pc98.xml` in mamedev/mame](https://github.com/mamedev/mame/blob/master/hash/pc98.xml)).
 
 All four disks match byte-for-byte:
 
