@@ -99,8 +99,8 @@ runtime slots and save ranges. Values are limited to ten ASCII characters.
 Exercise default and maximum-length values through editing, saving, cold
 loading, dialogue, the identity reveal, and the final letter.
 
-The full translator-facing grammar and spoiler constraints are in section 5 of
-the [translation brief](../research/fermion_translation_brief.md).
+Slot roles and the identity-reveal invariant are in section 5 of the
+[translation brief](../research/fermion_translation_brief.md).
 
 ## Status and review
 

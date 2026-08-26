@@ -1,9 +1,8 @@
 # FERMION — English Translation Brief
 
 - **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
-- **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, and QA guide for the archival English translation
+- **Purpose:** translator’s brief for the archival English
 - **Spoilers:** complete, including the central identity reveal and ending
-**Content note:** this document describes the game’s sexual material only at a high level. Section 10 is the archival policy.
 
 ---
 
@@ -23,7 +22,7 @@ The central dramatic idea is not merely “save the future.” It is:
 
 Kaori’s crime is an attempt to repair that trauma by force: save her younger body, recover her mother and sister for a few hours, and prevent another version of herself from suffering the same exile. Connie’s arc mirrors hers. Connie was manufactured rather than born, longs for a mother and a family, and keeps finding substitute sisters and maternal figures. She begins as Kanzaki’s created dependent and ends as a moral agent capable of protecting Kanzaki, the younger Kanzaki, Marna, the Takano family, and even Marie.
 
-The erotic routes are therefore not wholly detachable from the themes. They repeatedly collapse the categories of lover, mother, sister, daughter, guardian, creator, and genetic relative. An English version should understand that thematic function even if it edits or removes individual scenes.
+The erotic routes are therefore not wholly detachable from the themes. They repeatedly collapse the categories of lover, mother, sister, daughter, guardian, creator, and genetic relative.
 
 The translation’s thematic compass is the game’s unexpected shift: what first looks like a playful erotic time-travel premise becomes a story about a woman returning to the family she lost, a created person discovering that she belongs to two eras, and grief deciding whether science saves people or treats them as material.
 
@@ -160,7 +159,7 @@ Her plan served two goals:
 
 She secretly set Connie’s original destination to her childhood home. She did not originally intend to keep the girl as a subject; she intended to return her after treatment. She hid the truth because Project D was already compromised by Marie’s demands and because admitting the personal plan would expose everyone involved.
 
-The script says the sleep lasted **“about 280 years,”** although 1996 to 2288 is **292 years**. The archival English preserves the doctor’s stated figure and records the contradiction in the restoration log. Translation does not silently make a character more accurate than the source.
+The script says the sleep lasted **“about 280 years,”** although 1996 to 2288 is **292 years**.
 
 **Source anchors:** F0039–F0040.
 
@@ -321,7 +320,7 @@ Because the name is player-configurable, source-facing documentation may call he
 
 ---
 
-## 5. Interpolated names and composite authoring records
+## 5. Interpolated names
 
 The main menu resets five editable names:
 
@@ -349,57 +348,9 @@ menus, and route names must not expose the identity link early.
 Connie Kanzaki** there; it is an ending-specific familial address, not a legal
 name to apply elsewhere.
 
-### Authoring tokens
-
-The catalog represents runtime substitutions with non-CP932 tokens:
-
-- `⟦name:mother⟧`
-- `⟦name:older-sister⟧`
-- `⟦name:dear-person⟧`
-- `⟦name:friend-1⟧`
-- `⟦name:friend-2⟧`
-- `⟦term:slot-1⟧` and `⟦term:slot-2⟧`
-
-The grammar is `⟦(name|term):[a-z0-9]+(?:-[a-z0-9]+)*⟧`. These are UTF-8
-catalog metadata and cannot be encoded as GM text.
-
-A composite joins physical text records separated by a recognized runtime
-substitution. Each occurrence retains its text-opcode anchors and immutable
-copy/render spans. Validation requires the English token sequence, order, and
-multiplicity to match the source, then maps each literal English segment back
-to its corresponding physical record. Ordinary adjacent records are not
-composites.
-
-Exact duplicate occurrences share one catalog entry when speaker, attribution,
-meaning, context, encoding, layout, and QA status agree. A real mechanical
-split uses a note beginning with `Duplicate split:`.
-
-### English grammar around tokens
-
-Keep punctuation outside variables and write sentences that remain grammatical
-for any supported value:
-
-- `⟦name:mother⟧'s room`
-- `Hey, ⟦name:dear-person⟧, ...`
-- `I went with ⟦name:older-sister⟧.`
-
-The physical segment order may force a source-initial token to remain first.
-Use a grammatical token-led clause rather than moving it with new text opcodes.
-Fixed Japanese surnames preceding editable given names require an explicitly
-tested composite mapping to produce natural English name order.
-
-### Name-editor constraint
-
-The localized name and term editors use mode-2 half-width ASCII while retaining
-the original runtime slots and save ranges. Each value can contain at most ten
-ASCII characters; the editor accepts the tenth and rejects the eleventh. Test
-default and maximum-length values through editing, saving, cold loading,
-dialogue, the identity reveal, and the final letter.
-
-The recovered bytecode evidence and corpus counts are in
-[`gm-speaker-attribution.md`](gm-speaker-attribution.md). The catalog schema and
-validation commands are in
-[`../translations/README.md`](../translations/README.md).
+Token grammar, composite validation, and editor limits are in
+[`../translations/README.md`](../translations/README.md). Bytecode evidence
+is in [`gm-speaker-attribution.md`](gm-speaker-attribution.md).
 
 ## 6. Recommended terminology
 
@@ -509,29 +460,17 @@ Use this relationship matrix for recurring plot-bearing forms:
 
 ### Ellipses
 
-The script uses very long runs of Japanese full stops as pacing and textbox timing. Do not reproduce every dot one-for-one. Recommended policy:
-
-- `……` or long pauses → ASCII `...` in the mode-2 English script
-- emotionally broken speech → `I... I don't...`
-- a source record consisting only of `・` followed by `。` → preserve the
-  physical record but render the fixed short `...`, regardless of the Japanese
-  dot count
-
-The one-glyph `・` records in the opening terminal are timed progress animation,
-not story silence, and remain outside that normalization. Unicode `…` is not an
-authoring option for mode 2.
-
-Punctuation may be compressed **within** a record, but records are never merged, deleted, or reassigned to adjacent narration. Some silent records are branch timing, CG pacing, or voice/SFX synchronization points; the one-to-one anchor invariant applies even when two neighboring lines would read more smoothly as one paragraph.
+Long Japanese dot runs become ASCII `...`. A record of only `・` plus `。` is
+a silent beat and still translates to `...`. Opening-terminal one-glyph `・`
+records are timed animation, not silence. Compress punctuation inside a
+record; never merge, delete, or reassign records.
 
 ### Exclamation and elongation
 
-Reduce repeated `！！！！！`, `～～～～`, and elongated vowels unless they are essential to the performance. A single exclamation mark plus stronger wording is normally more natural. Preserve excess selectively for screaming, comic panic, or deliberate melodrama, and retain every physical timing record even when its visible punctuation is compressed.
-
-At emotional peaks, preserve semantic emphasis before compression: contrastive
-or additive particles such as `でも` and `さえ`, repetition, breakoffs,
-evaluative `なんて`, and explicitly stated bodily affect. Shorten dot runs only
-after those features survive; textbox fit is not a reason to collapse them into
-a neutral summary.
+Reduce `！！！！！`, `～～～～`, and elongated vowels unless they are the
+performance. Keep contrastive particles, repetition, breakoffs, and stated
+bodily affect before shortening dots. Textbox fit is not a reason to
+summarize.
 
 ### Internal thought
 
@@ -539,22 +478,16 @@ Connie’s internal monologue creates the contrast between her competent exterio
 
 ### Onomatopoeia
 
-The source is saturated with sound-symbolic prose. Use three categories:
+1. Keep knocks, alarms, and mechanical sounds.
+2. Convert action SFX (`こくん` → a small nod).
+3. Drop repetitive tactile or erotic SFX that read comic or clinical.
 
-1. **Keep/localize as sound:** knocks, alarms, mechanical hums, impacts.
-2. **Convert to action:** `こくん` → “She gave a small nod.”
-3. **Omit or reduce:** repetitive tactile/erotic SFX that sound comic or clinical in English.
-
-Inside quoted dialogue, keep meaning-bearing truncation, syllabic or moraic
-pacing, and character-marked sounds inside the quotation. Recast a sound as
-action only when the source itself presents narration; generic breath noise may
-still be reduced when it carries no lexical or iconic meaning.
-
-Connie’s feline comedy deserves selective preservation—ear twitches, purring thoughts, kotatsu enthusiasm, and occasional catlike diction are character beats.
+Quoted speech keeps meaning-bearing sounds. Connie's feline bits stay only
+where the source has them.
 
 ### Erotic narration and `攻める`
 
-The adult command-label mapping in section 8 does not supply a prose gloss. In narration, `攻める` marks sustained, forceful, or targeted action; choose a concrete verb from the described body part and motion rather than defaulting to abstract **tease**, **pleasure**, or euphemistic “intimate flesh.” Those words remain available when they are genuinely the best local reading, but they are not a house translation.
+Command-menu `攻める` is **TAKE THE LEAD** in the catalog. In narration, `攻める` marks sustained, forceful, or targeted action; choose a concrete verb from the described body part and motion rather than defaulting to abstract **tease**, **pleasure**, or euphemistic “intimate flesh.” Those words remain available when they are genuinely the best local reading, but they are not a house translation.
 
 Use the revised F0000 opening as calibration:
 
@@ -610,16 +543,7 @@ Do not manufacture assent line by line. Consent edits are out of scope.
 
 ## 8. Script/route structure for implementation
 
-### Generated route graph is authoritative
-
-The route graph is generated from bytecode, not maintained by hand. Every one of the 168 `0x6d` and `0x6f` scenario transfers in the 77 content-unique MES files has a literal target. Use:
-
-```sh
-uv run fermion gm transitions working/archives --format dot
-uv run fermion gm script --story working/archives
-```
-
-The graph preserves branches, rejoins, cycles, and separately reachable duplicate records. The story view selects the 72 files reachable from `FOP.MES`; its filename order is convenient for reading but is not control flow. See [`gm-scenario-flow.md`](gm-scenario-flow.md) for the recovered topology and exact commands.
+The route graph is generated from bytecode, not maintained by hand. Every one of the 168 `0x6d` and `0x6f` scenario transfers has a literal target. See [`gm-scenario-flow.md`](gm-scenario-flow.md) for topology and commands. The story view’s filename order is not control flow.
 
 ### Narrative section index — editorial aid only
 
@@ -639,19 +563,7 @@ The extraction contains one clear common final ending. That does not by itself r
 
 ### Physical extraction order is not play order
 
-The markdown combines files in a non-narrative order. The practical story order is broadly:
-
-```text
-FOP
-F0000–F0014
-F0015–F0029
-F0030–F0033
-F0034 / F003400* / F003401–F003417
-F0035–F0038
-F0039–F0042
-```
-
-The extraction places several later-numbered files before `FOP`, UI resources, and missing earlier-numbered files. Build your translation manifest by scene ID, not by line position in `script.md`.
+`script.md` is extraction order, not play order. Work from scene IDs and the generated graph, not line numbers in that dump.
 
 ### Branch suffixes
 
@@ -689,85 +601,27 @@ There are many exact or near-exact repeated blocks. Causes include:
 
 Do **not** globally deduplicate physical records. A canonical catalog entry may own several anchors only after review proves that speaker, meaning, context, and required English agree. The bytecode graph still retains every separately reachable occurrence; a context-sensitive duplicate gets a separate canonical entry even when its Japanese is identical.
 
-### Command labels
+### Command and menu labels
 
-Common interaction commands:
-
-| Japanese | Recommended UI |
-|---|---|
-| 見る | **Look** |
-| 考える | **Think** |
-| 話す | **Talk** |
-| いじる | Contextual: **Touch**, **Tease**, or **Play with** |
-| 攻める | For an adult archival build: **Take the lead** / **Press on**; avoid literal **Attack** |
-| 身を任せる | **Let her lead** / **Give in** |
-| ささやく | **Whisper** |
-
-Use short labels; the original UI is designed around compact fixed-width text.
-
-### Main menu
-
-Suggested English:
-
-- ２ＦＤドライブでプレイする → **Play with 2 Floppy Drives**
-- １ＦＤ＋ＲＡＭディスクでプレイする → **Play with 1 Floppy Drive + RAM Disk**
-- 最初から始める → **New Game**
-- 続きから始める → **Continue**
-- 名前変更 → **Change Names**
-- 名前初期化 → **Reset Names**
-- 単語変更 → **Change Terms**
-- 単語初期化 → **Reset Terms**
-- 絵を見る → **CG Gallery**
-- シーンを見る → **Scene Replay**
-- カタログを見る → **Catalog**
-- ＤＯＳ → **Exit to DOS**
-
-The catalog is a period Silky’s product catalog, not part of Fermion’s story.
+Command and title-menu labels are locked in the catalog (`TOUCH`,
+`TAKE THE LEAD`, `LET HER LEAD`, `START NEW GAME`). The Silky product
+catalog is not part of the story.
 
 ### Mode-2 editor labels are not gallery noise
 
-The unique corpus contains **16 mode-2 text records total**, not 16 `BS` records: ten `BS`, four ASCII quotation marks, and two spaces. Five `BS` labels occur in `NAME.MES` and five in `MONO.MES`, each beside the character grid and the visible `← / 中止 / 決定` controls. `MAIN.MES` calls those files as the name and term editors; they are not story or gallery records. Treat `BS` as the editor’s visible **Backspace** key and include these surfaces in UI QA.
+The unique corpus contains **16 mode-2 text records total**, not 16 `BS` records: ten `BS`, four ASCII quotation marks, and two spaces. Five `BS` labels occur in `NAME.MES` and five in `MONO.MES`. Treat `BS` as the editor’s visible **Backspace** key.
 
 ### Custom adult-word system
 
-The original lets the player replace two explicit anatomical terms. This is a localization trap:
-
-- English articles and possessives may change around the inserted word.
-- Singular/plural behavior can break.
-- A player-entered phrase may overflow a textbox.
-
-**Locked decision:** retain the original free-form system using
-`⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. The localized term editor uses
-the same half-width ASCII palette and 14-byte scratch string as the name editor,
-with the original 16-byte persistent slots and save layout. Its safe free-form
-limit is likewise ten characters because indirect text requires an aligned
-zero-word terminator. Default and representative custom values must be checked
-at all 12 story insertions; prose around the tokens must not depend on a
-particular article, number, or spelling.
+**Locked decision:** retain the free-form terms as `⟦term:slot-1⟧` and
+`⟦term:slot-2⟧`. Editor limits and insertion checks are in
+[`../translations/README.md`](../translations/README.md).
 
 ---
 
 ## 9. Source inconsistencies and restoration decisions
 
 Repair only a demonstrable text-level error whose intended reading is independently recoverable, such as a clear kanji typo or an isolated spelling drift contradicted by the rest of the work. Preserve character claims, inconsistent arithmetic, compressed chronology, and inferred implausibilities when the source supplies no corrected wording. In both cases, record the evidence and treatment at the exact source anchor rather than silently improving the story.
-
-### Definite or probable source errors
-
-1. **Marie’s surname**
-   - introduction: `マリー・プロシオン` → **Marie Procyon**
-   - ending: `マリー・プレシオン` → *Marie Presion/Plesion*
-   - **Decision:** use **Procyon** throughout unless official packaging/manual evidence contradicts it; retain the ending variant in the restoration log.
-
-2. **Cryosleep duration**
-   - 1996 → 2288 is 292 years.
-   - Script says “about 280 years.”
-   - **Decision:** preserve **“about 280 years”** and disclose the contradiction. The archival translation records authorial arithmetic rather than silently making the physician more accurate.
-
-3. **`確率された時代`**
-   - In the doctor’s explanation, `確率` is almost certainly a typo for `確立`: the era in which the technology was **established/developed**.
-
-4. **Repeated lines and paragraphs**
-   - Some are authoring duplicates; others are branching copies. The generated control-flow graph proves reachability; canonical sharing still requires speaker and context review.
 
 ### Restoration log — locked entries
 
@@ -788,11 +642,6 @@ Repair only a demonstrable text-level error whose intended reading is independen
 - Exact expansion of the “D” in Project D.
 - Whether `パラサイト銃` is a proper product name or an extraction/authorial oddity.
 
-### Names requiring external confirmation
-
-- reading of `良美`;
-- any official Latin spelling for Remia, Marna, Procyon, and Connie.
-
 ---
 
 ## 10. Archival policy
@@ -810,40 +659,23 @@ How the translation is released, hosted, or rated is out of scope.
 
 ## 11. Translation workflow
 
-Work in source-order slices when practical so adjacent voices and route state
-remain visible.
+Work in source-order slices when practical.
 
-1. Read each Japanese record in scene context and apply the terminology, voice,
-   token, and restoration decisions in this brief.
-2. Preserve stable catalog IDs and source anchors. Record only line-specific
-   alternatives, ambiguity, or technical compromise in `notes`.
-3. Validate structure and, when available, the pristine sources:
+1. Read each Japanese record in scene context and apply this brief.
+2. Preserve stable IDs and anchors. Notes are for line-specific alternatives only.
+3. `translation check` (with `--source-dir` when the extraction is present).
+4. `translation drift --only-flagged` as leads, not quotas.
+5. Build a fresh image and exercise affected routes.
 
-   ```sh
-   uv run fermion translation check translations/fermion.toml
-   uv run fermion translation check translations/fermion.toml \
-     --source-dir working/archives \
-     --verbose
-   ```
-
-4. Review register drift as leads, not quotas:
-
-   ```sh
-   uv run fermion translation drift translations/fermion.toml --only-flagged
-   ```
-
-5. Build a fresh image from the pristine copy and exercise affected routes in
-   the emulator. A structurally complete catalog is not a substitute for
-   linguistic review or runtime QA.
-
-Section 13 is the completion checklist. Build, coverage, and runtime commands
-are documented in
+Section 13 is the completion checklist. Commands live in
 [`../translations/README.md`](../translations/README.md) and the project
 [`README`](../README.md).
 
-## 12. Source-faithful opening terminal English
+## 12. Opening terminal
 
-The opening terminal mixes Japanese readouts with English written by the original developers. Preserve that source-origin English byte-for-byte, including full-width Latin text, capitalization, punctuation, odd grammar, and the one-record-per-character animation. The sole editorial correction is the unambiguous spelling error `Dimention` → `Dimension`, implemented as the single timed glyph substitution `ｔ` → `ｓ`.
+Readable picture of the mixed Japanese/source-English boot sequence. The
+catalog keeps the full-width timed records; the section 9 table locks the
+single `Dimention` → `Dimension` correction.
 
 ```text
 FERMION ..... OK.
@@ -865,7 +697,7 @@ End of operations confirmed.
 System Power off
 ```
 
-The transcript romanizes the Japanese readouts for readability. The catalog retains the original full-width mode-1 records and physical timing; the restoration log records the single spelling correction.
+The transcript romanizes Japanese readouts for readability.
 
 ---
 
@@ -883,7 +715,7 @@ The transcript romanizes the Japanese readouts for readability. The catalog reta
 
 ### Names, tokens, and address
 
-- [ ] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text.
+- [x] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text (`translation check`).
 - [ ] Editable given names appear in natural English full-name order with Takano, Nanase, and Hayami.
 - [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for representative custom values.
 - [ ] No systematic romanized honorific suffix survives; titles and kinship terms follow the locked English policy.
@@ -914,9 +746,9 @@ The transcript romanizes the Japanese readouts for readability. The catalog reta
 ### Archival checks
 
 - [ ] The catalog remains a source-faithful archival translation with no age, plot, or consent alterations.
-- [ ] Catalog context and notes do not add age framing or restate the section 7 refusal rule.
+- [x] Catalog context and notes do not add age framing or restate the section 7 refusal rule (`test_translation_policy`).
 - [ ] Every restoration intervention is logged at its source anchor.
-- [ ] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
+- [x] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
 
 ---
 
