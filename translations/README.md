@@ -4,10 +4,9 @@
 translator reasoning. Generated MES files and original game media do not belong
 in the catalog.
 
-The English version uses the content note and release policy in section 10 of
+The catalog is the source-faithful archival English. Policy is section 10 of
 [`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md).
-Any distribution-specific alteration is a disclosed, mechanically separate
-override.
+Do not alter it for release.
 
 The catalog contains:
 

@@ -1,9 +1,9 @@
 # FERMION — English Translation Brief
 
 - **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
-- **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, QA guide, and localization-risk register for the English fan translation
+- **Purpose:** authoritative plot reconstruction, translator’s brief, terminology and voice guide, implementation contract, and QA guide for the archival English translation
 - **Spoilers:** complete, including the central identity reveal and ending
-**Content note:** this document describes the game’s sexual material only at a high level. Section 10 records the release policy and required warning.
+**Content note:** this document describes the game’s sexual material only at a high level. Section 10 is the archival policy.
 
 ---
 
@@ -604,7 +604,7 @@ Translate negatives according to syntax and context:
 - `やん` → decide locally: it can be a coy protest, a shortened negative, or an erotic vocalization. Do not lock it globally to either **No** or a moan. Surrounding syntax, physical resistance, and adjacent explicit `嫌` / `だめ` / `やめて` determine whether it carries lexical refusal;
 - `だめ` → **Don’t / You can’t / I can’t / This is too much**, according to the construction.
 
-A content warning or distribution override must not be used to manufacture assent line by line. Any future consent edit would have to revise setup and action explicitly and remain mechanically separate from the canonical translation.
+Do not manufacture assent line by line. Consent edits are out of scope.
 
 ---
 
@@ -735,7 +735,6 @@ The original lets the player replace two explicit anatomical terms. This is a lo
 - English articles and possessives may change around the inserted word.
 - Singular/plural behavior can break.
 - A player-entered phrase may overflow a textbox.
-- The feature intersects with any edited/censored release policy.
 
 **Locked decision:** retain the original free-form system using
 `⟦term:slot-1⟧` and `⟦term:slot-2⟧` in authoring. The localized term editor uses
@@ -796,32 +795,18 @@ Repair only a demonstrable text-level error whose intended reading is independen
 
 ---
 
-## 10. Content and release policy
+## 10. Archival policy
 
-The project produces a source-faithful English translation of the 1995 work.
-It preserves stated ages, school status, route structure, and the distinction
-between Connie's cellular age and three years of lived experience. Catalog
-`context` and `notes` describe the source scene; they are not a second
-player-facing localization layer.
+This project is an archival English translation of the 1995 work. It preserves
+stated ages, school status, route structure, and the distinction between
+Connie's cellular age and three years of lived experience. Catalog `context`
+and `notes` describe the source scene; they are not a second localization
+layer.
 
-The source includes sexual depictions of high-school-age characters, coercive
-or contradictory consent framing, family/incest-adjacent relationships,
-adultery, abduction, reproductive coercion, medical abuse, grief, death, and
-gun violence. Translate stated speech and action accurately without adding
-explicit detail or converting refusal into assent.
+Translate stated speech and action accurately. Do not add detail, convert
+refusal into assent, or alter ages, school status, plot, or routes.
 
-The English version must include this content note:
-
-> This archival English translation preserves the ages and school status stated in the original Japanese work. The game contains sexual depictions of high-school-age characters, along with coercive and otherwise sensitive material described in the translation brief.
-
-| Treatment | Policy |
-|---|---|
-| Canonical English | Preserve source meaning, ages, school status, plot, routes, and physical records. Log corrections and technical compromises at their source anchors. |
-| Distribution-specific age alteration | Apply it after the canonical catalog as a disclosed, mechanically separate override. Do not write altered claims into archival `translation`, `context`, or `notes` fields. |
-| Story-focused rewrite | Out of scope. Replacing sample collection or removing route structure would create a different adaptation. |
-
-Distribution and platform review remain separate from linguistic QA; a content
-warning does not change the underlying material.
+How the translation is released, hosted, or rated is out of scope.
 
 ## 11. Translation workflow
 
@@ -926,15 +911,12 @@ The transcript romanizes the Japanese readouts for readability. The catalog reta
 - [ ] Maximum-length names and terms wrap safely without corrupting control flow or save compatibility.
 - [ ] Gallery unlocks, scene replay, name editor, term editor, and return-to-menu behavior remain functional.
 
-### Editorial and release
+### Archival checks
 
-- [ ] The English release includes the section 10 content note.
-- [ ] The canonical translation preserves stated ages, school status, and source meaning without embellishment or undocumented censorship.
-- [ ] Any distribution-specific age override is disclosed and mechanically separate from the canonical catalog.
+- [ ] The catalog remains a source-faithful archival translation with no age, plot, or consent alterations.
 - [ ] Catalog context and notes do not add age framing or restate the section 7 refusal rule.
 - [ ] Every restoration intervention is logged at its source anchor.
 - [ ] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
-- [ ] Distribution and platform review are completed independently of linguistic QA.
 
 ---
 
