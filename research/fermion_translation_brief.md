@@ -668,8 +668,7 @@ Work in source-order slices when practical.
 5. Build a fresh image and exercise affected routes.
 
 Section 13 is the completion checklist. Commands live in
-[`../translations/README.md`](../translations/README.md) and the project
-[`README`](../README.md).
+[`../DEVELOPMENT.md`](../DEVELOPMENT.md).
 
 ## 12. Opening terminal
 

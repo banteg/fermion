@@ -111,21 +111,10 @@ Slot roles and the identity-reveal invariant are in section 5 of the
   linguistic review;
 - `runtime-verified`: the current wording and layout were exercised in game.
 
-Generate the compact speaker-annotated corpus for plot review:
-
-```sh
-uv run fermion gm script working/archives > working/script.md
-```
-
-Before a register pass, generate deterministic review leads:
-
-```sh
-uv run fermion translation drift translations/fermion.toml --only-flagged
-```
-
-The drift report compares contraction use, stiff forms, sentence length, and
-repeated openings across file/speaker groups. Treat flags as lines to inspect
-in Japanese and scene context, not target rates.
+`fermion gm script` dumps the speaker-annotated corpus for plot review.
+`fermion translation drift --only-flagged` produces register-review leads;
+treat flags as lines to inspect in Japanese and scene context, not target
+rates. Commands are in [`../DEVELOPMENT.md`](../DEVELOPMENT.md).
 
 ## Coverage ledger
 
@@ -133,60 +122,20 @@ in Japanese and scene context, not target rates.
 happen to be in the catalog. Every decoded text opcode in a range is classified
 as translated, explicitly excluded with a reason, or pending. Pending records
 are grouped by exact `(source_mode, source)` so a duplicate Japanese line
-appears once with all of its physical anchors:
-
-```sh
-uv run fermion translation coverage \
-  translations/fermion.toml \
-  translations/coverage.toml \
-  working/archives \
-  --verbose
-```
+appears once with all of its physical anchors. Gate a closed scope with
+`--scope` and `--require-complete`.
 
 Fresh translated images seed the source-derived English names and adult terms
 into the persistent `REG_00` template bank. The build only migrates slots that
 still contain their Japanese source defaults (or are blank), so rebuilding from
 an image with player-customized values does not overwrite those choices.
 
-Gate any closed scope with:
-
-```sh
-uv run fermion translation coverage \
-  translations/fermion.toml \
-  translations/coverage.toml \
-  working/archives \
-  --scope opening-prologue \
-  --verbose \
-  --require-complete
-```
-
-Validate structure and encodability after every edit:
-
-```sh
-uv run fermion translation check translations/fermion.toml
-```
-
-When the pristine extraction is available, also verify every file hash and
-every source offset, mode, and Japanese string:
-
-```sh
-uv run fermion translation check translations/fermion.toml \
-  --source-dir working/archives \
-  --verbose
-```
-
-Export the reviewable translator table after source verification:
-
-```sh
-uv run fermion translation table translations/fermion.toml \
-  --source-dir working/archives \
-  > working/translation-table.tsv
-```
-
-The TSV columns are `id`, `file`, `offset`, `speaker`, `attribution`, `scene`,
-`jp`, `en`, `context`, and `status`. It expands canonical multi-anchor entries
-to one physical row but does not duplicate their English or notes in the source
-catalog. Use `--format jsonl` when a structured stream is more convenient.
+`translation check` validates structure and encodability. With `--source-dir`
+it also verifies every file hash and every source offset, mode, and Japanese
+string. `translation table` exports the reviewable TSV: `id`, `file`,
+`offset`, `speaker`, `attribution`, `scene`, `jp`, `en`, `context`, and
+`status`. It expands canonical multi-anchor entries to one physical row but
+does not duplicate their English or notes in the source catalog.
 
 For an incremental batch:
 
@@ -194,17 +143,7 @@ For an incremental batch:
 2. Record line-specific translation alternatives and uncertainties in `notes`;
    omit routine voice-policy boilerplate.
 3. Validate against the pristine sources.
-4. Build a fresh image from the pristine copy:
-
-   ```sh
-   uv run fermion translation build \
-     translations/fermion.toml \
-     working/archives \
-     working/emulator/fermion-debug.hdi \
-     working/emulator/fermion-translation.hdi \
-     --juice working/vendor/lime-juice-build/juice
-   ```
-
+4. Build a fresh image from the pristine copy.
 5. Add or update a named route in `runtime/routes.toml` when the text is
    reachable automatically, then promote its status after the runtime check.
 
@@ -212,3 +151,5 @@ The build writes only ignored artifacts. It compiles each line through
 lime-juice, verifies unchanged text and external MLL targets, repacks the
 containing installer archive, and updates the copied HDI's FAT filesystem. MES
 and archive files no longer need to preserve their original total sizes.
+Build, coverage, and runtime commands are in
+[`../DEVELOPMENT.md`](../DEVELOPMENT.md).
