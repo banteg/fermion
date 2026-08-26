@@ -22,7 +22,8 @@ Offsets refer to the pristine MES named by the catalog. Use `notes` for
 line-specific alternatives, ambiguity, tone decisions, and technical
 compromises; omit routine voice policy already established by the scene and
 translation brief. Scene `context` and entry `notes` describe the Japanese
-source rather than adding localization-only age framing.
+source rather than adding localization-only age framing or restating the
+section 7 refusal rule.
 
 Draft English from the Japanese in scene context. Automated tools can expose
 anchors, duplicates, speakers, layout problems, and runtime regressions, but

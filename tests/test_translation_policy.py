@@ -265,12 +265,41 @@ def test_locked_translation_policy_contracts() -> None:
         "adult student",
         "adult woman",
         "adult women",
+        "as separate evidence",
+        "blanket consent",
+        "coercively framed",
+        "coercive sequence remains documented",
+        "converted into a non-lexical cry",
+        "does not convert",
+        "does not reinterpret this as assent",
+        "every spoken no",
+        "freely given consent",
+        "not an objective consent",
+        "not softened into",
+        "objective consent statement",
+        "remain distinct in english",
+        "remain explicit while",
+        "remains an explicit no",
+        "refusal remains literal",
+        "refusals remain",
+        "retroactively establish consent",
+        "rewrite the preceding refusals",
+        "treated as consent",
+        "treated as free assent",
+        "treating arousal as assent",
+        "treating pleasure as assent",
+        "turning the refusal into consent",
     )
-    for item in items:
-        metadata = f"{item.context}\n{item.notes}".lower()
+    metadata_records = (
+        *((item.id, f"{item.context}\n{item.notes}") for item in items),
+        *((scene.id, scene.context) for scene in catalog.scenes),
+    )
+    for item_id, metadata in metadata_records:
+        lowered = metadata.lower()
         for phrase in forbidden_metadata:
-            assert phrase not in metadata, f"{item.id}: {phrase}"
+            assert phrase not in lowered, f"{item_id}: {phrase}"
 
+    for item in items:
         token_initial_dash = re.match(r"^⟦[^⟧]+⟧[^\n]*--I\b", item.translation)
         assert token_initial_dash is None, f"{item.id}: token-initial dash workaround"
 

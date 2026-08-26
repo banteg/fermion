@@ -23,7 +23,7 @@ The central dramatic idea is not merely “save the future.” It is:
 
 Kaori’s crime is an attempt to repair that trauma by force: save her younger body, recover her mother and sister for a few hours, and prevent another version of herself from suffering the same exile. Connie’s arc mirrors hers. Connie was manufactured rather than born, longs for a mother and a family, and keeps finding substitute sisters and maternal figures. She begins as Kanzaki’s created dependent and ends as a moral agent capable of protecting Kanzaki, the younger Kanzaki, Marna, the Takano family, and even Marie.
 
-The erotic routes are therefore not wholly detachable from the themes, although their execution is often exploitative. They repeatedly collapse the categories of lover, mother, sister, daughter, guardian, creator, and genetic relative. An English version should understand that thematic function even if it edits or removes individual scenes.
+The erotic routes are therefore not wholly detachable from the themes. They repeatedly collapse the categories of lover, mother, sister, daughter, guardian, creator, and genetic relative. An English version should understand that thematic function even if it edits or removes individual scenes.
 
 The translation’s thematic compass is the game’s unexpected shift: what first looks like a playful erotic time-travel premise becomes a story about a woman returning to the family she lost, a created person discovering that she belongs to two eras, and grief deciding whether science saves people or treats them as material.
 
@@ -72,8 +72,6 @@ Connie explains the future’s condition more precisely. Calling the target “s
 The time distortion is expected to last about ten days. Connie has a second mission beyond collection: ask the people of the past to choose a future that does not produce her polluted world.
 
 The game’s branching adult structure occupies much of this middle act. Connie forms intimate relationships with members of the Takano household and with women introduced through them, including a senior named **Nanase**, a student named **Minazuki Yoshimi**, and two player-renamable friends. These encounters are used as the in-story mechanism for gathering cell samples. Some routes have L/R variants, alternate participants, or follow-up scenes. They are route branches, not separate timelines with distinct endings; the main plot continues after enough material has been collected.
-
-Several of these scenes involve a character the script explicitly places at roughly sixteen/high-school age, and many contradict spoken refusal in narration; sections 7 and 10 define the editorial treatment.
 
 ### 3.5 First return to 2296
 
@@ -217,7 +215,7 @@ The script does not resolve the temporal paradox in detail. Adult Kanzaki contin
 - **Connie → Marna:** promised younger sister and fellow mutant.
 - **Marna → Marie:** empathic attachment that interrupts Marie’s grief-driven violence.
 
-This network is both the story’s emotional structure and the source of many of its editorial and rating risks. Preserve the distinctions among chosen family, authority, genetic relationship, and erotic attachment rather than flattening them into generic affection.
+This network is the story’s emotional structure. Preserve the distinctions among chosen family, authority, genetic relationship, and erotic attachment rather than flattening them into generic affection.
 
 ### Connie / コニー
 
@@ -596,7 +594,7 @@ Keep three evidence levels distinct throughout the canonical catalog:
 2. Observable action may show participation, resistance, stillness, or a later change of mind; translate only the action actually stated.
 3. A narrator's claim about pleasure, desire, or hidden intent remains a narrator claim. Do not promote it into objective assent or rewrite the preceding speech to make the claim true.
 
-Catalog context and notes should identify those conflicts when they affect interpretation. They must not resolve them on the character's behalf.
+When a local reading depends on that split, record the source fact in `notes`—who spoke, what the narrator claims, which record follows. Do not restamp the house rule on every negative. Policy lives here, not in per-line commentary.
 
 Translate negatives according to syntax and context:
 
@@ -930,13 +928,12 @@ The transcript romanizes the Japanese readouts for readability. The catalog reta
 
 ### Editorial and release
 
-- [ ] The English release includes the locked content warning for high-school-age sexual material.
+- [ ] The English release includes the section 10 content note.
 - [ ] The canonical translation preserves stated ages, school status, and source meaning without embellishment or undocumented censorship.
 - [ ] Any distribution-specific age override is disclosed and mechanically separate from the canonical catalog.
-- [ ] Catalog context and notes do not introduce age framing absent from the source.
+- [ ] Catalog context and notes do not add age framing or restate the section 7 refusal rule.
 - [ ] Every restoration intervention is logged at its source anchor.
 - [ ] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
-- [ ] Content warnings cover high-school-age sexual material, coercive consent framing, family/incest-adjacent dynamics, adultery, abduction, reproductive coercion, medical abuse, grief, death, and gun violence.
 - [ ] Distribution and platform review are completed independently of linguistic QA.
 
 ---
