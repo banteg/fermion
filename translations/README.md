@@ -58,9 +58,10 @@ Numbered story files normally use 61 columns and three rows. Special cards and
 `wrap_mode = "characters"`, and adjacent text records sharing a surface are
 checked together.
 
-A story record containing only a run of `・` followed by `。` is a silent beat
-and translates to mode-2 ASCII `...`. The opening terminal's single-glyph
-progress animation is exempt.
+A story record containing only a run of `・` followed by `。` is a silent beat.
+Use mode-2 ASCII dots while preserving meaningful differences in pause length;
+do not automatically reduce every silence to `...`. The opening terminal's
+single-glyph progress animation retains its original timed records.
 
 ## Repeated lines and speakers
 

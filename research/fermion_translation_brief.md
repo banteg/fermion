@@ -14,9 +14,8 @@ we have made. **Full spoilers follow, including the central reveal and ending.**
 - **Follow the source:** [script structure](#8-scriptroute-structure-for-implementation),
   [restoration decisions](#9-source-inconsistencies-and-restoration-decisions),
   and [archival policy](#10-archival-policy).
-- **Review the work:** [workflow](#11-translation-workflow),
-  [opening terminal](#12-opening-terminal), [checklist](#13-translation-qa-checklist),
-  and [open questions](#14-open-evidence-questions).
+- **Check specific choices:** [opening terminal](#12-opening-terminal) and
+  [open questions](#14-open-evidence-questions).
 
 The brief was prepared from the extracted Japanese script: 77 distinct MES
 files and 17,401 mode-1 text records. The story view contains 72 files and
@@ -674,19 +673,6 @@ refusal into assent, or alter ages, school status, plot, or routes.
 
 How the translation is released, hosted, or rated is out of scope.
 
-## 11. Translation workflow
-
-Work in source-order slices when practical.
-
-1. Read each Japanese record in scene context and apply this brief.
-2. Preserve stable IDs and anchors. Notes are for line-specific alternatives only.
-3. `translation check` (with `--source-dir` when the extraction is present).
-4. `translation drift --only-flagged` as leads, not quotas.
-5. Build a fresh image and exercise affected routes.
-
-Section 13 is the completion checklist. Commands live in
-[`../DEVELOPMENT.md`](../DEVELOPMENT.md).
-
 ## 12. Opening terminal
 
 The transcript below makes the mixed Japanese and English boot sequence easier
@@ -715,61 +701,6 @@ System Power off
 ```
 
 The Japanese readouts are shown in English for readability.
-
----
-
-## 13. Translation QA checklist
-
-Use this list for linguistic review and playtesting. Checked items describe the
-specific checks named beside them; they do not imply that every scene has been
-played or every translation reviewed. Entry-level status lives in the catalog.
-
-### Story and reveal
-
-- [ ] The selected younger-daughter name is reproduced exactly when the mother addresses adult Kaori.
-- [ ] No save label, gallery/replay title, speaker tag, route name, or player-visible profile spoils the identity reveal.
-- [ ] Kaori’s staged-villain dialogue remains frightening, while her restraint, missed shots, and dummy collar make retrospective sense.
-- [ ] The collar’s apparent and actual functions remain consistent before and after its discovery.
-- [ ] Marie’s threat to Connie clearly pays off the prologue’s “precious mutant” coercion.
-- [ ] Akira remains Marie’s loved one and research partner without an unsupported legal or romantic label.
-- [ ] Adult Kaori’s farewell distinguishes Mom, her older sister, and her past self clearly.
-
-### Names, tokens, and address
-
-- [x] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text (`translation check`).
-- [ ] Editable given names appear in natural English full-name order with Takano, Nanase, and Hayami.
-- [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for representative custom values.
-- [ ] Forms of address preserve the source relationships; retained Japanese forms have a documented reason and are consistent within their scenes.
-- [ ] Custom values are exercised in ordinary story text, the identity reveal, final letter, save data, and replay/gallery surfaces.
-- [ ] **Connie Kanzaki** appears only where the ending intends it and is not normalized backward through the script.
-
-### Terminology and voice
-
-- [ ] Time Quake terminology follows each passage’s register rather than a speaker-wide rule, and remains distinct from the machine’s ordinary hull vibration.
-- [ ] Genetic exposition distinguishes missing information from simplistic “normal” or “superior” genes.
-- [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 280/292-year contradiction remain consistent.
-- [ ] **Time Patrol**, **temporal inspector**, **parasite gun**, **tranquilizer gun**, and **anti-mutant capture drug** follow their locked source distinctions.
-- [ ] Connie sounds procedurally competent without becoming a theoretical physicist or a generic catgirl.
-- [ ] Kaori’s public/private/reveal registers, Marie’s grief, Remia’s peer voice, and Marna’s sincere deference remain distinct.
-- [ ] Refusal and negative utterances are translated accurately rather than softened into manufactured assent.
-- [ ] Spoken refusal, observed action, and narrator interpretation remain distinct evidence levels.
-
-### Engine and presentation
-
-- [ ] Only proven interpolation spans are merged in translator views; every physical record, silent beat, and opcode span remains anchored.
-- [x] Exact Japanese duplicates are shared only after speaker, attribution evidence, meaning, and route context agree; mechanical splits are annotated.
-- [ ] Literal `\n`, explicit line breaks, full-width/half-width Latin text, and one-glyph terminal animation are tested in engine.
-- [ ] L/R branches reach the verified destinations, and facility nodes are tested through actual navigation rather than filename order.
-- [ ] Long technical explanations, the mother’s deduction, the Marie/Akira exposition, and epilogue cards fit their message windows.
-- [ ] Maximum-length names and terms wrap safely without corrupting control flow or save compatibility.
-- [ ] Gallery unlocks, scene replay, name editor, term editor, and return-to-menu behavior remain functional.
-
-### Archival checks
-
-- [ ] The catalog remains a source-faithful archival translation with no age, plot, or consent alterations.
-- [x] Catalog context and notes do not add age framing or restate the section 7 refusal rule (`test_translation_policy`).
-- [ ] Every restoration intervention is logged at its source anchor.
-- [x] Automated policy assertions cover every locked restoration entry and the highest-risk glossary invariants.
 
 ---
 

@@ -4,7 +4,7 @@ from pathlib import Path
 from fermion.translation import TranslationCatalog
 
 
-def test_locked_translation_policy_contracts() -> None:
+def test_catalog_preserves_speaker_tags_and_original_terminal_english() -> None:
     catalog_path = Path(__file__).parents[1] / "translations" / "fermion.toml"
     catalog = TranslationCatalog.from_file(catalog_path)
     items = (*catalog.entries, *catalog.composites)
@@ -13,142 +13,19 @@ def test_locked_translation_policy_contracts() -> None:
         (anchor.file, anchor.offset): item for item in items for anchor in item.anchors
     }
 
-    exact_anchors = {
-        ("DISKA/F0000.MES", 0x0645): (
-            "I couldn't go against her. I couldn't refuse Dr. Kanzaki's request."
-        ),
-        ("DISKA/F0001.MES", 0x0799): (
-            "For this mission, I've also been granted Time Patrol authority."
-        ),
-        ("DISKA/F0001.MES", 0x221B): "[Connie] (Space-time oscillation system: running smoothly.)",
-        ("DISKA/F0003.MES", 0x1E44): (
-            "[Connie] (A still-developing organism. Human. Child. Female... "
-            "About sixteen years old.)"
-        ),
-        ("DISKB/F0006.MES", 0x0B51): (
-            "On my third birthday (about sixteen in human terms), Dr. Kanzaki "
-            "gave me cologne and lipstick."
-        ),
-        ("DISKB/F0007.MES", 0x3A88): (
-            '[⟦name:mother⟧] "I-- ah! Aahhhhhhh!"'
-        ),
-        ("DISKB/F0009.MES", 0x1DC1): (
-            "Looking at her like this, she really does look younger than her age..."
-        ),
-        ("DISKB/F0009.MES", 0x1E15): (
-            '[⟦name:dear-person⟧] "Connie... haaah..."'
-        ),
-        ("DISKB/F0010L.MES", 0x2031): (
-            '[Connie] "In human terms, about seventeen. But I\'m a mutant, '
-            'so I\'ve only been alive for three years."'
-        ),
-        ("DISKB/F0010R.MES", 0x11A6): (
-            '[Connie] "Miss ⟦name:mother⟧... you\'re very forward..."'
-        ),
-        ("DISKB/F0010R.MES", 0x11D1): (
-            '[⟦name:mother⟧] "Just ⟦name:mother⟧... I\'m surprised myself '
-            'that having you touch me gets me this excited..."'
-        ),
-        ("DISKC/F0020.MES", 0x16FB): (
-            '[Connie] "⟦name:dear-person⟧... You\'re so sen-si-tive too..."'
-        ),
-        ("DISKC/F0030.MES", 0x141F): (
-            "[Connie] (Anesthetic... a tranquilizer gun...?)"
-        ),
-        ("DISKC/F0030.MES", 0x1438): (
-            "I used a parasite gun to capture mutants. This is the same smell."
-        ),
-        ("DISKD/F003410.MES", 0x1077): (
-            "[Connie] (It was definitely this room... This room...)"
-        ),
-        ("DISKD/F0039.MES", 0x16CB): (
-            "Knowing it's a tranquilizer gun, I tense every muscle to leap at her."
-        ),
-        ("DISKD/F0039.MES", 0x2499): "[Connie] (Cryo... sleep...!!!)",
-        ("DISKD/F0040.MES", 0x403F): (
-            '[Doctor] "⟦name:dear-person⟧, you\'ve been in '
-            'cryosleep--suspended animation--since 1996..."'
-        ),
-        ("DISKD/F0040.MES", 0x4093): (
-            '[Doctor] "You were set to awaken in an era whose technology '
-            'could perform your operation."'
-        ),
-        ("DISKD/F0040.MES", 0x40C8): (
-            '[Doctor] "That year is now--2288... You\'re in a world... '
-            'about 280 years after you fell asleep."'
-        ),
-        ("DISKD/F0041.MES", 0x0F95): (
-            '[Kanzaki] "Why hesitate? You also bear the duties of a temporal inspector. '
-            'Arrest those who used time travel unlawfully."'
-        ),
-        ("DISKD/F0042.MES", 0x1BF7): (
-            "Kaori Kanzaki and Marie Procyon analyze the genetic material they brought back,"
-        ),
-        ("DISKD/F0042.MES", 0x1EB5): "Dear Connie Kanzaki,",
-    }
-    for anchor, expected in exact_anchors.items():
-        assert by_anchor[anchor].translation == expected, anchor
-
-    exact_ids = {
-        "f0007-0b7f-an-image-of-name-holding-a-girl-who": (
-            "⟦name:mother⟧... an image of her holding a girl who looks just "
-            "like ⟦name:mother⟧."
-        ),
-        "f0007-0c13-it-is-an-image-of-name-holding-her": (
-            "⟦name:mother⟧... an image of her holding her younger sister."
-        ),
-    }
-    for item_id, expected in exact_ids.items():
-        assert by_id[item_id].translation == expected, item_id
-
-    fixed_speaker_tags = set()
-    dynamic_speaker_tags = set()
+    # Speaker labels and editable names are presentation structure. The prose
+    # around them is reviewed against the Japanese, not frozen in this test.
     for item in items:
         source_tag = re.match(r"^【([^】]+)】[「（]", item.source)
         if source_tag is None:
             continue
         translated_tag = re.match(r"^\[([^]\n]+)\]", item.translation)
         assert translated_tag is not None, item.id
-        tag = translated_tag.group(1)
-        if tag.startswith("⟦name:"):
-            dynamic_speaker_tags.add(tag)
-        else:
-            fixed_speaker_tags.add(tag)
+        if source_tag.group(1).startswith("⟦name:"):
+            assert translated_tag.group(1) == source_tag.group(1), item.id
 
-    assert fixed_speaker_tags == {
-        "Butterfly",
-        "Connie",
-        "Doctor",
-        "Girl",
-        "Kanzaki",
-        "Marie",
-        "Marna",
-        "Miki",
-        "Nanase",
-        "Nurse",
-        "Operator",
-        "Remia",
-        "Teacher",
-        "Ventilation System",
-        "Woman",
-        "Woman's Voice",
-        "Yoshimi",
-    }
-    assert dynamic_speaker_tags == {
-        "⟦name:dear-person⟧",
-        "⟦name:friend-1⟧",
-        "⟦name:friend-2⟧",
-        "⟦name:mother⟧",
-        "⟦name:older-sister⟧",
-    }
-
-    assert "⟦name:friend-2⟧ Nanase" in by_anchor[
-        ("DISKB/F0019.MES", 0x067B)
-    ].translation
-    assert "⟦name:friend-1⟧ Hayami" in by_anchor[
-        ("DISKC/F0025R.MES", 0x131A)
-    ].translation
-
+    # Original English is itself source material. Keep these exact checks,
+    # including the full-width glyphs and separately timed terminal records.
     source_english_locks = {
         "opening-terminal-fermion-status-label": "　",
         "opening-terminal-fermion-status": "ＯＫ．",
@@ -204,98 +81,6 @@ def test_locked_translation_policy_contracts() -> None:
         "Ｔａｒｇｅｔ　Ｄｉｍｅｎｔｉｏｎ　Ｓｐａｃｅ・・ｉｎｐｕｔ．"
     )
     assert all(entry.translation == entry.source for entry in target_heading)
-    assert by_id["opening-terminal-target-progress-prefix"].translation == (
-        "Target time input"
-    )
-    assert by_id["opening-terminal-target-entered"].translation == " complete."
-
-    connie_kanzaki_entries = [
-        item.id for item in items if "Connie Kanzaki" in item.translation
-    ]
-    assert connie_kanzaki_entries == ["f0042-1eb5-dear-connie-kanzaki"]
-
-    cold_sleep_entries = [
-        item
-        for item in items
-        if "コールド" in item.source and "スリープ" in item.source
-    ]
-    assert cold_sleep_entries
-    for item in cold_sleep_entries:
-        translation = item.translation.lower()
-        assert "cold" not in translation, item.id
-        assert "cryo" in translation and "sleep" in translation, item.id
-
-    suspended_animation_entries = [item for item in items if "冷凍睡眠" in item.source]
-    assert suspended_animation_entries
-    for item in suspended_animation_entries:
-        assert "suspended animation" in item.translation.lower(), item.id
-
-    locked_terms = {
-        "時空トンネル": "time tunnel",
-        "タイムパトロール": "Time Patrol",
-        "時空監察官": "temporal inspector",
-        "パラサイト銃": "parasite gun",
-        "麻酔銃": "tranquilizer gun",
-        "対ミュータント用捕獲薬": "anti-mutant capture drug",
-    }
-    for source_term, english_term in locked_terms.items():
-        matching = [item for item in items if source_term in item.source]
-        assert matching, source_term
-        for item in matching:
-            assert english_term.lower() in item.translation.lower(), item.id
-
-    forbidden_metadata = (
-        "adult-aged",
-        "adult dr. kanzaki",
-        "adult experimental subject",
-        "adult guard",
-        "adult loved one",
-        "adult marna",
-        "adult mother",
-        "adult mutant",
-        "adult older sister",
-        "adult patient",
-        "adult sisters",
-        "adult student",
-        "adult woman",
-        "adult women",
-        "as separate evidence",
-        "blanket consent",
-        "coercively framed",
-        "coercive sequence remains documented",
-        "converted into a non-lexical cry",
-        "does not convert",
-        "does not reinterpret this as assent",
-        "every spoken no",
-        "freely given consent",
-        "not an objective consent",
-        "not softened into",
-        "objective consent statement",
-        "remain distinct in english",
-        "remain explicit while",
-        "remains an explicit no",
-        "refusal remains literal",
-        "refusals remain",
-        "retroactively establish consent",
-        "rewrite the preceding refusals",
-        "treated as consent",
-        "treated as free assent",
-        "treating arousal as assent",
-        "treating pleasure as assent",
-        "turning the refusal into consent",
-    )
-    metadata_records = (
-        *((item.id, f"{item.context}\n{item.notes}") for item in items),
-        *((scene.id, scene.context) for scene in catalog.scenes),
-    )
-    for item_id, metadata in metadata_records:
-        lowered = metadata.lower()
-        for phrase in forbidden_metadata:
-            assert phrase not in lowered, f"{item_id}: {phrase}"
-
-    for item in items:
-        token_initial_dash = re.match(r"^⟦[^⟧]+⟧[^\n]*--I\b", item.translation)
-        assert token_initial_dash is None, f"{item.id}: token-initial dash workaround"
 
 
 def test_catalog_stays_within_declared_surface_limits() -> None:

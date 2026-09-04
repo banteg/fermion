@@ -1330,8 +1330,8 @@ def _scene_metadata(
 
 
 def _validate_silence_translation(source: str, translation: str, *, context: str) -> None:
-    if _PURE_SILENCE.fullmatch(source) and translation != "...":
-        raise TranslationError(f"{context}.translation must render a pure silent beat as '...'")
+    if _PURE_SILENCE.fullmatch(source) and not re.fullmatch(r"\.+", translation):
+        raise TranslationError(f"{context}.translation must render a pure silent beat using ASCII dots")
 
 
 def _canonical_source_speaker(source: str) -> str | None:

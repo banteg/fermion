@@ -12342,12 +12342,12 @@ offset = 0x07ba
 source_mode = 1
 target_mode = 2
 source = "【コニー】（タイムマシンはここにしかないし、危険な時空越えをする酔狂な人間はいないと思うけど・・・。）"
-translation = "[Connie] (This is the only time machine, and who else would be crazy enough to risk crossing time...?)"
+translation = "[Connie] (This is the only place with time machines, and I doubt anyone else is crazy enough to risk crossing time...)"
 speaker = "connie"
 attribution = "proven"
 scene = "connie-dryly-considers-whether-time-patrol-authority-will-matter"
 status = "translated"
-notes = "酔狂な人間 becomes Connie's wry 'crazy enough,' preserving the joke about needless jurisdiction."
+notes = "ここにしかない restricts the location, not the number of machines; the same scene introduces a second machine."
 
 [[entries]]
 id = "launch-kanzaki-created-connie"
@@ -12734,12 +12734,12 @@ offset = 0x0c5b
 source_mode = 1
 target_mode = 2
 source = "それとも同じミュータントの男性を好きになるのだろうか。"
-translation = "Or will I fall for a male mutant like me?"
+translation = "Or will I fall for a man who's a mutant like me?"
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-imagines-another-conventional-future"
 status = "translated"
-notes = "The explicit male alternative is preserved as Connie's speculation, not a project-wide statement about her desires."
+notes = "同じ modifies mutant identity, not the gender of Connie and the possible partner."
 
 [[entries]]
 id = "launch-silly-worry"
@@ -14010,12 +14010,12 @@ offset = 0x1b35
 source_mode = 1
 target_mode = 2
 source = "気難しい人たちと話すこともない。そういう人とのやりとりは神崎博士が行っている。"
-translation = "I never have to deal with difficult officials. Dr. Kanzaki handles people like that."
+translation = "I never have to talk to difficult people. Dr. Kanzaki handles those conversations."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-describes-protective-administrative-role-kanzaki-plays"
 status = "translated"
-notes = "Officials' is inferred from the government-position context, not a new named institution."
+notes = "気難しい人たち does not specify officials, even though the preceding passage mentions her government position."
 
 [[entries]]
 id = "launch-before-past-silence"
@@ -14530,12 +14530,12 @@ offset = 0x20d5
 source_mode = 1
 target_mode = 2
 source = "トンネルをくぐるには、トンネルが震動している固有震動数と同じ値をマシンに与えればいい。"
-translation = "To enter the tunnel, we give the machine the same natural frequency as the tunnel's oscillation."
+translation = "To pass through the tunnel, we set the machine's frequency to the tunnel's natural oscillation frequency."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-explains-frequency-matching-procedure"
 status = "translated"
-notes = "Natural frequency' is the correct technical sense of 固有震動数."
+notes = "固有震動数 belongs to the tunnel; the machine is given the same frequency value, not a new natural frequency."
 
 [[entries]]
 id = "launch-match-oscillations"
@@ -16286,12 +16286,12 @@ offset = 0x361f
 source_mode = 1
 target_mode = 2
 source = "神崎博士の表情が、一瞬悲しそうな、切なそうな表情になった。"
-translation = "For an instant, Dr. Kanzaki's expression turns sad... almost painfully tender."
+translation = "For an instant, Dr. Kanzaki's expression looks sad, almost pained."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-sees-hidden-goodbye-kanzaki-face"
 status = "translated"
-notes = "切ない combines sorrow, longing, and tenderness; the English avoids reducing it to generic sadness."
+notes = "切なそう describes an aching or pained expression; it does not itself assert tenderness."
 
 [[entries]]
 id = "launch-connie-kanzaki-question"
@@ -16566,12 +16566,12 @@ offset = 0x39d6
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・準備はできているわ。・・・・・・・・・行きなさい。」"
-translation = "[Kanzaki] \"...Everything is ready. Go.\""
+translation = "[Kanzaki] \"...Everything is ready. .........Go.\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "kanzaki-recovers-control-gives-launch-order"
 status = "translated"
-notes = "The final 'Go' is firm and spare, restoring her professional mask."
+notes = "Preserve the separate long hesitation between readiness and the departure order."
 
 [[entries]]
 id = "launch-holds-gaze-then-away"
@@ -16776,12 +16776,12 @@ offset = 0x3cdd
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・・・・・・・・・・・・・・・・・・・。」"
-translation = "[Kanzaki] \"...\""
+translation = "[Kanzaki] \".....................\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "kanzaki-falls-silent-over-radio"
 status = "translated"
-notes = "The distinct voiced-silence record is preserved for the delayed apology."
+notes = "Keep the prolonged radio silence before her apology; the pause is a separate source record."
 
 [[entries]]
 id = "launch-connie-question-mark"
@@ -16846,12 +16846,12 @@ offset = 0x3d94
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・・・・・・・・・・・・・・・・ごめんね・・・。」"
-translation = "[Kanzaki] \"...I'm sorry...\""
+translation = "[Kanzaki] \"..................I'm sorry...\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "kanzaki-whispers-apology-foreshadows-her-secret-plan"
 status = "translated"
-notes = "The soft private ごめんね briefly replaces her formal public diction."
+notes = "Retain the long pause before the faint apology without assigning a hidden motive."
 
 [[entries]]
 id = "launch-hears-lip-whisper"
@@ -16874,12 +16874,12 @@ offset = 0x3de1
 source_mode = 1
 target_mode = 2
 source = "マイクを通しても、たぶん他の人には聞こえないだろう。"
-translation = "Even through the microphone, no one else could have heard it."
+translation = "Even through the microphone, other people probably would not hear it."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-judges-apology-effectively-private"
 status = "translated"
-notes = "Could have' fits her inference about the just-spoken whisper."
+notes = "Retain たぶん and だろう: Connie estimates what others can hear; the next passage says Remia seems to hear it too."
 
 [[entries]]
 id = "launch-mutant-hearing-only"
@@ -175623,11 +175623,12 @@ offset = 0x085c
 source_mode = 1
 target_mode = 2
 source = "首輪は対ミュータント製だ。"
-translation = "The collar was supposedly made to restrain mutants."
+translation = "The collar is designed for use against mutants."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-confirms-electromagnetic-collar-is-empty-fake-restores-it"
 status = "translated"
+notes = "The source states the collar type without a skeptical qualifier. Connie has not yet discovered it is a dummy."
 
 [[entries]]
 id = "f0036-0870-even-with-my-claws-and-grip-breaking-one"
@@ -175779,11 +175780,12 @@ offset = 0x09b7
 source_mode = 1
 target_mode = 2
 source = "普通、ミュータントが自力で壊せないように頑丈な作りになっているはずだ。"
-translation = "A real one should be built too strongly for a mutant to break unaided."
+translation = "Normally, a collar should be built too strongly for a mutant to break on their own."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-confirms-electromagnetic-collar-is-empty-fake-restores-it"
 status = "translated"
+notes = "普通 means normally; do not introduce the real-versus-fake distinction before the empty compartment is found."
 
 [[entries]]
 id = "f0036-09e4-connie"
@@ -175975,11 +175977,12 @@ offset = 0x0bff
 source_mode = 1
 target_mode = 2
 source = "あたしは首輪を付けて（つけているふりをして）、通風口へ飛び込んだ。"
-translation = "I put on the collar, or pretend to, and leap into the vent."
+translation = "I put the collar back on (just for show) and leap into the vent."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-confirms-electromagnetic-collar-is-empty-fake-restores-it"
 status = "translated"
+notes = "The parenthesis qualifies how she wears the reassembled collar; it is not an undecided alternative action."
 
 [[entries]]
 id = "f0036-0c68-shh"
@@ -176097,7 +176100,7 @@ offset = 0x04c3
 source_mode = 1
 target_mode = 2
 source = "辛いけど我慢してね。"
-translation = "I know it hurts, but endure it."
+translation = "I know this is hard, but hang in there."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-carries-patient-courtyard-loads-them-time-machine"
@@ -176360,7 +176363,7 @@ segments = [
 id = "f003701-07f3-connie-then-i-will-carry-name-dear-person"
 target_mode = 2
 source = "【コニー】「そしてあたしが⟦name:dear-person⟧を抱えてタイムマシンへ走って入る。・・・傷は大丈夫か？」"
-translation = "[Connie] \"Then I'll carry ⟦name:dear-person⟧ and run into the time machine... Can your wound bear it?\""
+translation = "[Connie] \"Then I'll carry ⟦name:dear-person⟧ and run into the time machine... Will your wound be all right?\""
 speaker = "connie"
 attribution = "proven"
 scene = "connie-carries-patient-courtyard-loads-them-time-machine"
@@ -176396,7 +176399,7 @@ segments = [
 id = "f003701-0872-connie-i-do-not-want-to-strain-name"
 target_mode = 2
 source = "【コニー】（⟦name:dear-person⟧には無理をさせたくないんだが・・・。）"
-translation = "[Connie] (I don't want to strain ⟦name:dear-person⟧...)"
+translation = "[Connie] (I don't want ⟦name:dear-person⟧ to overdo it...)"
 speaker = "connie"
 attribution = "proven"
 scene = "connie-carries-patient-courtyard-loads-them-time-machine"
@@ -176644,11 +176647,12 @@ status = "translated"
 id = "f003701-0aba-name-dear-person-lies-across-the-rear-seat"
 target_mode = 2
 source = "⟦name:dear-person⟧を後ろの席に寝かせると、あたしは燃料ユニットへカートリッジをセット。"
-translation = "⟦name:dear-person⟧ lies across the rear seat while I insert the cartridges into the fuel unit."
+translation = "⟦name:dear-person⟧... I lay her down on the back seat, then insert the cartridges into the fuel unit."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-carries-patient-courtyard-loads-them-time-machine"
 status = "translated"
+notes = "寝かせる states that Connie lays her down. The source begins with a name insertion and provides no text record before it; a topic pause preserves that structure while retaining Connie as the agent."
 
 [[composites.occurrences]]
 file = "DISKD/F003701.MES"
@@ -176817,7 +176821,7 @@ status = "translated"
 id = "f003701-0ce0-connie-name-dear-person-endure-this"
 target_mode = 2
 source = "【コニー】「⟦name:dear-person⟧、我慢して。」"
-translation = "[Connie] \"⟦name:dear-person⟧, endure this.\""
+translation = "[Connie] \"⟦name:dear-person⟧, hang in there.\""
 speaker = "connie"
 attribution = "proven"
 scene = "under-searchlights-connie-launches-unstable-time-quake-recently-operated"
@@ -177023,7 +177027,7 @@ offset = 0x0ee7
 source_mode = 1
 target_mode = 2
 source = "【コニー】（我慢・・・して・・・・・・。）"
-translation = "[Connie] (Endure it...)"
+translation = "[Connie] (Hang... in there...)"
 speaker = "connie"
 attribution = "proven"
 scene = "under-searchlights-connie-launches-unstable-time-quake-recently-operated"
@@ -189976,11 +189980,12 @@ offset = 0x076b
 source_mode = 1
 target_mode = 2
 source = "・・・・・・・・・・・・・・・。"
-translation = "..."
+translation = "..............."
 speaker = "connie"
 attribution = "inferred"
 scene = "temporal-vibration-warning-forces-connie-future-researchers-prepare-immediate"
 status = "translated"
+notes = "Preserve the long silent beat in the farewell, distinct from the shorter silence after the intervening thought."
 
 [[composites]]
 id = "f0042-0780-name-dear-person-may-have-claimed-my-heart"
@@ -190006,11 +190011,12 @@ offset = 0x07af
 source_mode = 1
 target_mode = 2
 source = "・・・・・・。"
-translation = "..."
+translation = "......"
 speaker = "connie"
 attribution = "inferred"
 scene = "temporal-vibration-warning-forces-connie-future-researchers-prepare-immediate"
 status = "translated"
+notes = "Preserve the shorter pause following the fifteen-dot farewell silence."
 
 [[entries]]
 id = "f0042-07bb-when-you-part-from-someone-dear"
@@ -191187,11 +191193,12 @@ offset = 0x15ef
 source_mode = 1
 target_mode = 2
 source = "【コニー】（それに・・・あたしはミュータント。もしもの時、３号機と一緒にリスクを負うのはあたしの方だ。）"
-translation = "[Connie] (Besides... I'm a mutant. If something happens, I should share the risk with machine three.)"
+translation = "[Connie] (Besides... I'm a mutant. If anything goes wrong with machine three, I'm the one who will bear the risk.)"
 speaker = "connie"
 attribution = "proven"
 scene = "connie-dr-kanzaki-dr-marie-wounded-marna-board-all"
 status = "translated"
+notes = "あたしの方だ identifies who bears the risk; should added a moral obligation rather than stating the arrangement."
 
 [[entries]]
 id = "f0042-162b-kanzaki-connie-start-the-engine-machine-three-is"
@@ -191763,12 +191770,12 @@ offset = 0x1e17
 source_mode = 1
 target_mode = 2
 source = "コニーのような人類を創り出さない世界を目指します。"
-translation = "We will strive for a world that never has to create people like Connie."
+translation = "We will work toward a world that does not create people like Connie."
 speaker = "connie"
 attribution = "inferred"
 scene = "ending-records-restored-human-genes-2296-patient-undeliverable-letter"
 status = "translated"
-notes = "The letter's goal is a future that never needs to engineer compensatory mutant humans like Connie; it is not a rejection of Connie herself."
+notes = "The source states that such people will not be created; never has to adds an unstated necessity framing."
 
 [[entries]]
 id = "f0042-1e3a-but"

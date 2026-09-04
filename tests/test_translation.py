@@ -405,28 +405,32 @@ def test_rejects_ambiguous_legacy_translation_status(tmp_path) -> None:
         TranslationCatalog.from_file(catalog_path)
 
 
-def test_pure_silence_uses_fixed_ascii_ellipsis(tmp_path) -> None:
+@pytest.mark.parametrize("translation", ("...", "........", "..............."))
+def test_pure_silence_preserves_variable_pause_length(tmp_path, translation: str) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
         source="・・・・・・・・。",
-        translation="...",
+        translation=translation,
+        entry_box_width=61,
     )
 
     [entry] = TranslationCatalog.from_file(catalog_path).entries
 
-    assert entry.translation == "..."
+    assert entry.translation == translation
 
 
-def test_rejects_variable_length_pure_silence(tmp_path) -> None:
+@pytest.mark.parametrize("translation", ("Silence.", "...Wait..."))
+def test_pure_silence_cannot_gain_words(tmp_path, translation: str) -> None:
     catalog_path = write_catalog(
         tmp_path,
         "0" * 64,
         source="・・・・・・・・。",
-        translation="........",
+        translation=translation,
+        entry_box_width=61,
     )
 
-    with pytest.raises(TranslationError, match=r"pure silent beat as '\.\.\.'"):
+    with pytest.raises(TranslationError, match="pure silent beat using ASCII dots"):
         TranslationCatalog.from_file(catalog_path)
 
 

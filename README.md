@@ -48,9 +48,6 @@ coverage; selected emulator routes also check how the translation appears on
 screen. Full linguistic review and playtesting are still unfinished. Coverage
 is not a claim that every line has been reviewed or every branch played.
 
-The [translation brief’s checklist](research/fermion_translation_brief.md#13-translation-qa-checklist)
-tracks the remaining review concerns. It contains full story spoilers.
-
 ## Read and contribute
 
 - **Find your way through the escape:** the [facility maps](research/facility-maps.md)
