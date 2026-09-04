@@ -271,7 +271,7 @@ This network is the story’s emotional structure. Preserve the distinctions amo
 - **Private voice:** maternal, teasing, tactile, sometimes vulnerable.
 - **Reveal voice:** once she says `おかあさん`, her diction and emotional posture regress to the abandoned child she still is.
 
-Do not make her apparent-villain dialogue too melodramatic. It should sound deliberately cold, as though she is forcing herself to say lines she despises. Her missed shot and trembling hands are essential signals.
+Translate her apparent-villain dialogue as it is presented at that point in the story. Preserve its coldness, exaggeration, hesitation, and physical clues where the source supplies them. Do not soften the performance or make her concealed motives audible using knowledge of the later reveal.
 
 ### The sick Takano daughter — default Kanako / 加奈子
 
@@ -383,8 +383,8 @@ is in [`gm-speaker-attribution.md`](gm-speaker-attribution.md).
 | Japanese | Recommended English | Notes |
 |---|---|---|
 | フェルミオン / ＦＥＲＭＩＯＮ | **FERMION** | Keep the logo/title capitalization; use *Fermion* in prose if desired. |
-| 時空震動 | **Time Quake** in Connie’s speech, thought, pilot narration, and story/UI shorthand; **space-time oscillation** in scientists’ technical exposition | The original opening already displays “Time Quake.” Let Connie use the in-world operational name rather than making her sound like a theorist. `震動` is marked terminology, not merely ordinary `振動`. |
-| 時空震動数 | **Time Quake frequency** for Connie; **space-time oscillation frequency** in formal scientific exposition | Keep distinct from the machine or hull’s ordinary vibration frequency. |
+| 時空震動 | **Time Quake** as the established name; **space-time oscillation** where the passage uses a technical register | The original opening already displays “Time Quake.” Choose by the source passage, not the speaker’s identity. Connie may repeat technical or memorized terminology without understanding its theory. `震動` is marked terminology, not merely ordinary `振動`. |
+| 時空震動数 | **Time Quake frequency** or **space-time oscillation frequency**, according to the passage | Keep distinct from the machine or hull’s ordinary vibration frequency. |
 | マシン震動 / マシン震動数 | **machine/hull vibration** / **machine vibration frequency** | Hardware vibration in F0015 is not another name for the Time Quake. |
 | 時空のひずみ／歪み | **space-time distortion** | Sometimes “rift” is smoother in dialogue. |
 | 時空トンネル | **time tunnel** | The catalog already uses the natural pulp term consistently; do not reopen **space-time tunnel** as a parallel formal variant. |
@@ -397,7 +397,7 @@ is in [`gm-speaker-attribution.md`](gm-speaker-attribution.md).
 | ミニマム | **Mini form** | More natural than “Minimum.” Capitalize if treated as a formal transformation state. |
 | 遺伝子 | **genes** in ordinary speech; **genetic samples** when collected or transported; **genetic material** only where the register is genuinely technical | Do not make Connie sound like a grant abstract merely because a biologically smoother mass noun is available. |
 | 遺伝子を採取する / もらう | **collect/get a sample**, **collect genes** | Choose the concrete mission or bodily-sample sense; do not default every occurrence to “collect genetic material.” |
-| 正常な遺伝子 | **intact genes** / **intact genetic material** / **undamaged genetic data** | Use the more technical forms in precise explanation. Avoid a translator-endorsed “superior genes” reading. |
+| 正常な遺伝子 | **normal genes**; **intact genes** or **intact genetic material** when the immediate explanation supports that sense | Preserve the source’s wording and register. Uncomfortable connotations alone do not justify a substitution; translating a claim does not endorse it. |
 | 強い遺伝子 | **robust genes** only when characters use the shorthand | Narration explicitly says this is imprecise. |
 | 純粋な遺伝子 | **pure human genes** | Preserve the source’s uncomfortable eugenic shorthand where characters use it; do not silently rewrite it as missing-information terminology. |
 | 失われた／欠落した遺伝子情報 | **lost/missing genetic information** | Central scientific term. |
@@ -406,7 +406,7 @@ is in [`gm-speaker-attribution.md`](gm-speaker-attribution.md).
 | ヒト | **human(s)** | Katakana marks humans as a biological species from Connie’s perspective. Occasionally “the human species” helps. |
 | 獣の遺伝子 | **animal genes** | “Beast genes” is too fantasy-coded for the scientific register. |
 | 実験体 | **test subject**; occasionally **specimen** in deliberately dehumanizing speech | Marie and false-villain Kaori must sound abusive without the translation endorsing their framing. |
-| パラサイト銃 | **capture gun** | The sole script occurrence explicitly identifies Connie's mutant-hunting weapon. Keep this functional rendering unless external art or documentation proves a proper product name. |
+| パラサイト銃 | **parasite gun** (provisional) | Preserve the distinctive source term. Its use for capturing mutants establishes its function, not the meaning of “parasite”; do not invent a mechanism or replace the name with that function. |
 | 麻酔銃 | **tranquilizer gun** | A separate ordinary term used when a human target is threatened or drugged; do not merge it backward into `パラサイト銃`. |
 | 対ミュータント用捕獲薬 | **anti-mutant capture drug** | The technical drug name at Connie's altered return point. |
 | 電磁首輪 | **electromagnetic restraint collar** | Later revealed to be fake. |
@@ -418,11 +418,11 @@ is in [`gm-speaker-attribution.md`](gm-speaker-attribution.md).
 | 一日留学 | **one-day visit** / **here for a one-day visit** | This is Connie’s description of the visit in F0026L, not a second occurrence of 留学生 and not “one-day exchange student.” |
 | 博士 | **Dr.** | Use **Dr. Kanzaki** and **Dr. Marie**; “Professor” changes the institutional meaning. |
 | エッチ / Ｈ | Contextual: **sex**, **fooling around**, **naughty**, or **intimate** | Translate the function and register rather than forcing one English equivalent everywhere. |
-| `さん` / `ちゃん` / `様` / address-form `先生` | **Do not retain as romanized suffixes** | Express distance, affection, deference, or authority through syntax, names, kinship terms, and ordinary English titles such as **Dr.** |
+| `さん` / `ちゃん` / `様` / address-form `先生` | **Prefer natural English forms of address** | Preserve distance, affection, deference, and authority. Retain a Japanese form when ordinary English substitutes distort a meaningful distinction; document the exception. |
 
 ### “Gene” versus “genetic information”
 
-This distinction matters, but it is register-sensitive. The premise is not that people in 1996 possess a mystical “superior gene”: precise explanatory passages should use **data**, **sequence**, **information**, **missing segments**, and **intact material**. Ordinary `遺伝子`, however, remains **genes** or **samples** in Connie’s dialogue and narration. Reserve **strong genes** and **pure human genes** for the characters’ own acknowledged or unsettling shorthand rather than silently correcting their worldview.
+This distinction matters, but it is register-sensitive. The premise is not that people in 1996 possess a mystical “superior gene”: precise explanatory passages should preserve the distinctions actually stated, using **data**, **sequence**, **information**, **missing segments**, or **intact material** only where supported. Do not add scientific precision or remove uncomfortable vocabulary to improve the premise. Ordinary `遺伝子`, however, remains **genes** or **samples** in Connie’s dialogue and narration. Reserve **strong genes** and **pure human genes** for the characters’ own acknowledged or unsettling shorthand rather than silently correcting their worldview.
 
 ---
 
@@ -460,11 +460,11 @@ Naturalize fluent Japanese speech into fluent character English. A katakana loan
 
 English already printed by the original game is a different evidence class. Preserve its period computer flavor, including wording, capitalization, punctuation, full-width presentation, terseness, and odd phrasing. Transcode it only when the runtime requires a different encoding, and make any correction a source-anchored, logged intervention. The opening terminal in section 12 follows this policy.
 
-### Honorifics — locked policy
+### Honorifics and forms of address
 
-Do not use systematic romanized suffixes such as `-san`, `-chan`, `-sama`, or `-sensei`. Render their relationship work in English: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, a softened request, a formal sentence, or no overt marker where English naturally leaves one out. A plot-significant title or kinship term remains; a suffix does not survive merely because it is present in Japanese. Apply this policy consistently in dialogue, labels, and translator notes.
+Prefer natural English forms of address: first name versus surname, **Dr. Kanzaki**, **Mom**, **Big Sis**, or a change in phrasing. Preserve the relationship expressed by the source, including jokes and shifts in intimacy. When an English substitute loses a meaningful distinction or becomes an explanation rather than dialogue, retain the Japanese form and explain the choice in a line-specific note. Apply each choice consistently within its relationship and scene. Translator notes may freely quote Japanese forms and romanized suffixes as evidence.
 
-Kinship terms carry plot information. At the reveal, `おかあさん` should be **Mom**, not formal “Mother.” `コニーおねえちゃん` can begin as **Big Sis Connie** and become less marked as intimacy grows. Adult Kaori’s farewell to `おねえちゃん` should use the form already established for her older sister. Marna’s changing address to Connie should likewise register growing trust without importing a romanized suffix.
+Kinship terms carry plot information. At the reveal, `おかあさん` should be **Mom**, not formal “Mother.” `コニーおねえちゃん` can begin as **Big Sis Connie** and become less marked as intimacy grows. Adult Kaori’s farewell to `おねえちゃん` should use the form already established for her older sister. Marna’s changing address to Connie should likewise register growing trust with wording that preserves the particular relationship.
 
 When a line explicitly corrects or relaxes the form of address used in the
 preceding line, the English must expose a visible device for it to correct.
@@ -481,22 +481,16 @@ Use this relationship matrix for recurring plot-bearing forms:
 | Kanako `レミアおねえちゃん` | **Big Sis Remia** | Extends the same sister network to Remia; do not drop the kinship term. |
 | Marna `コニーおねえさん` | **Big Sis Connie** / **Connie, my big sister** | Polite, tentative sisterhood growing into trust. |
 | Marna `コニーおねえさま` in sleep-talk or heightened address | **Connie... my big sister** / **Big Sister Connie** | A more reverent or emotionally heightened rung than casual `おねえさん`; do not flatten both forms automatically. |
-| Yoko `先輩……お姉さま` | **my senior... no, my big sister** | The self-correction is a character joke and relationship reveal; preserve both sides rather than choosing one generic address. The swimming-club setting alone does not establish **Captain**. |
+| Yoko `先輩……お姉さま` | **[name]-senpai... no, [name]-oneesama**, as a documented exception | Natural English substitutes here risk explaining the joke or implying literal kinship. The self-correction is a character joke and relationship reveal; preserve both sides rather than choosing one generic address. The swimming-club setting alone does not establish **Captain**. |
 | Adult Kaori `おねえちゃん` at farewell | **Sis** / the already-established older-sister form | Her professional control has collapsed back into family speech. |
 
 ### Ellipses
 
-Long Japanese dot runs become ASCII `...`. A record of only `・` plus `。` is
-a silent beat and still translates to `...`. Opening-terminal one-glyph `・`
-records are timed animation, not silence. Compress punctuation inside a
-record; never merge, delete, or reassign records.
+Use ASCII dots where the English encoding requires them, but preserve meaningful differences between hesitation, a pause, and a prolonged silence. Do not automatically collapse every run to three dots. Judge length in the rendered scene and retain separate records and timed beats. A record consisting only of `・` plus `。` can use `...` when it conveys the same silent beat. Opening-terminal one-glyph `・` records remain timed animation.
 
 ### Exclamation and elongation
 
-Reduce `！！！！！`, `～～～～`, and elongated vowels unless they are the
-performance. Keep contrastive particles, repetition, breakoffs, and stated
-bodily affect before shortening dots. Textbox fit is not a reason to
-summarize.
+Preserve the source’s expressive intensity, repetition, elongated vowels, and breakoffs with readable English equivalents. Repeated punctuation is part of the delivery in an unvoiced game; do not reduce it merely because it looks excessive. Adjust individual passages for the renderer without summarizing their meaning or flattening their performance.
 
 ### Internal thought
 
@@ -504,12 +498,9 @@ Connie’s internal monologue creates the contrast between her competent exterio
 
 ### Onomatopoeia
 
-1. Keep knocks, alarms, and mechanical sounds.
-2. Convert action SFX (`こくん` → a small nod).
-3. Drop repetitive tactile or erotic SFX that read comic or clinical.
+Preserve sounds and mimetic expressions through an English sound, verb, or short description that carries their action, rhythm, and tone. Comic or awkward effects are part of the source too. Do not omit repetition simply because it reads oddly in English; justify any omission individually in the notes. Translate an action such as `こくん` in its immediate context rather than assigning it one universal gesture.
 
-Quoted speech keeps meaning-bearing sounds. Connie's feline bits stay only
-where the source has them.
+Connie’s feline sounds belong where the source supplies them; do not add them elsewhere.
 
 ### Erotic narration and `攻める`
 
@@ -535,11 +526,11 @@ The joke is that Connie’s mission mindset momentarily dehumanizes the very peo
 
 The Japanese pseudo-science is repetitive and sometimes internally loose. The translation should improve sentence flow but not invent real physics. Connie herself admits she only understands enough to operate the machine. Preserve that limitation; it is part of the humor and protects the story from sounding as though it makes a rigorous scientific claim.
 
-Use a three-level register for Connie:
+These are reading aids, not mandatory registers for Connie. Follow each passage, including memorized jargon, confidence, and uncertainty actually present in the Japanese:
 
-1. **Procedural commands:** concise and confident.
-2. **General explanation:** accessible and slightly textbook-like.
-3. **Underlying theory:** hesitant, memorized, or openly incomplete.
+1. **Procedural commands:** often concise and confident.
+2. **General explanation:** may be accessible or textbook-like.
+3. **Underlying theory:** may be hesitant, memorized, or openly incomplete; do not insert uncertainty solely because she is Connie.
 
 Kanzaki and Marie may use more exact scientific language, but the translation must not repair the source’s fictional physics by adding unsupported explanations.
 
@@ -655,7 +646,7 @@ Repair only a demonstrable text-level error whose intended reading is independen
 |---|---|---|---|
 | `F0040.MES:0x40c8` | `約２８０年` (“about 280 years”) | **about 280 years** | The stated dates 1996 and 2288 are 292 years apart. Preserve the source figure and disclose the contradiction rather than repairing character dialogue. |
 | `F0040.MES:0x4093` | `確率された時代` (“an era whose probability was...”) | **an era whose technology could perform your operation** | Read `確率` as the contextually recoverable typo `確立` (“established”). Preserve the exact typo in source and notes. |
-| `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | preserve the source English; correct only **Dimention** → **Dimension** | The strings are original English and therefore archival evidence. The one-letter spelling correction is logged and preserves every timed record; wording such as `All system` and `System Close` remains untouched. |
+| `FOP.MES:0x06f1`–`0x0f6d` | period English including `Dimention` and broken system-status phrasing | preserve the source English, including **Dimention** | The strings are original English and therefore archival evidence. The earlier one-letter spelling correction is retired. Preserve the original spelling, full-width glyphs, and timed records, alongside wording such as `All system` and `System Close`. |
 | `F003410.MES:0x1077` | `コニー】` without an opening `【` | **[Connie]** | Restore the demonstrably missing opening speaker-tag bracket; adjacent records and the remaining name plus closing bracket establish the intended form. |
 | `F0042.MES:0x1bf7` | `プレシオン` after earlier `プロシオン` | **Procyon** | Standardize an apparent spelling drift while retaining both source forms in QA notes. |
 
@@ -700,8 +691,8 @@ Section 13 is the completion checklist. Commands live in
 
 The transcript below makes the mixed Japanese and English boot sequence easier
 to read outside the game. The
-catalog keeps the full-width timed records; the section 9 table locks the
-single `Dimention` → `Dimension` correction.
+catalog keeps the full-width timed records and the original spelling
+`Dimention`, as recorded in section 9.
 
 ```text
 FERMION ..... OK.
@@ -710,7 +701,7 @@ Fermion field stable.
 Time Quake .... OK.
 Space-time oscillation holding.
 
-Target Dimension Space..input.
+Target Dimention Space..input.
 Target time input...... complete.
 
 All system .... OK.
@@ -748,16 +739,16 @@ played or every translation reviewed. Entry-level status lives in the catalog.
 - [x] Every composite preserves the exact token sequence, order, and multiplicity, and no authoring token reaches compiled GM text (`translation check`).
 - [ ] Editable given names appear in natural English full-name order with Takano, Nanase, and Hayami.
 - [ ] Apostrophes, commas, articles, and surrounding spaces remain grammatical for representative custom values.
-- [ ] No systematic romanized honorific suffix survives; titles and kinship terms follow the locked English policy.
+- [ ] Forms of address preserve the source relationships; retained Japanese forms have a documented reason and are consistent within their scenes.
 - [ ] Custom values are exercised in ordinary story text, the identity reveal, final letter, save data, and replay/gallery surfaces.
 - [ ] **Connie Kanzaki** appears only where the ending intends it and is not normalized backward through the script.
 
 ### Terminology and voice
 
-- [ ] Connie consistently uses **Time Quake** and **Time Quake frequency**; scientists’ formal **space-time oscillation** terminology and the machine’s ordinary hull vibration remain distinct.
+- [ ] Time Quake terminology follows each passage’s register rather than a speaker-wide rule, and remains distinct from the machine’s ordinary hull vibration.
 - [ ] Genetic exposition distinguishes missing information from simplistic “normal” or “superior” genes.
 - [ ] **Procyon**, **Mini form**, cryosleep terminology, and the logged 280/292-year contradiction remain consistent.
-- [ ] **Time Patrol**, **temporal inspector**, **capture gun**, **tranquilizer gun**, and **anti-mutant capture drug** follow their locked source distinctions.
+- [ ] **Time Patrol**, **temporal inspector**, **parasite gun**, **tranquilizer gun**, and **anti-mutant capture drug** follow their locked source distinctions.
 - [ ] Connie sounds procedurally competent without becoming a theoretical physicist or a generic catgirl.
 - [ ] Kaori’s public/private/reveal registers, Marie’s grief, Remia’s peer voice, and Marna’s sincere deference remain distinct.
 - [ ] Refusal and negative utterances are translated accurately rather than softened into manufactured assent.
@@ -787,7 +778,7 @@ played or every translation reviewed. Entry-level status lives in the catalog.
 1. What official Latin spellings, if any, exist for Connie, Remia, Marna,
    Procyon, and the reading of 良美?
 2. Is `パラサイト銃` visibly named in art, packaging, or a manual? Until such
-   evidence appears, the functional script reading remains **capture gun**.
+   evidence appears, retain **parasite gun** provisionally without inventing its mechanism.
 3. Do condition flags expose a bad ending, game-over exit, or prerequisite not
    captured by the recovered inter-MES transition graph?
 4. Which remaining terminal, editor, or special-card surfaces differ from
