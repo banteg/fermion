@@ -53,6 +53,9 @@ tracks the remaining review concerns. It contains full story spoilers.
 
 ## Read and contribute
 
+- **Find your way through the escape:** the [facility maps](research/facility-maps.md)
+  show the vents, corridors, useful rooms, and puzzle sequence. **Facility spoilers.**
+
 - **Understand the translation:** the [translation brief](research/fermion_translation_brief.md)
   covers the plot, characters, voice, terminology, and restoration decisions.
   **Full spoilers.**

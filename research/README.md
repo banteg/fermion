@@ -10,6 +10,7 @@ the translation and preserve findings that would otherwise be easy to lose:
 
 | Document | What it helps with |
 |---|---|
+| [Facility escape maps](facility-maps.md) | Finding the fuel, wheelchair, patient room, and exit in the vent and corridor mazes. Facility spoilers. |
 | [Following the story](gm-scenario-flow.md) | Finding scene branches and rejoins without mistaking file order for play order. |
 | [Identifying speakers](gm-speaker-attribution.md) | Distinguishing names actually displayed by the game from identities inferred by a translator. |
 | [Why the scripts need General Message support](mes-roundtrip.md) | Understanding an early failed conversion and the format support that replaced it. Historical note. |

@@ -62,6 +62,9 @@ state nodes. Most nodes return to `F0034`. Progression paths also pass through
 or advance to `F0038`. Exact offsets remain in the generated graph, avoiding a
 hand-maintained route description as those states are annotated.
 
+For a player-facing layout and escape instructions, see the
+[facility maps](facility-maps.md).
+
 ## Generating a translation inventory
 
 The figures below describe the initial source inventory, not unfinished work
