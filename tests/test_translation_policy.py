@@ -20,7 +20,7 @@ def test_locked_translation_policy_contracts() -> None:
         ("DISKA/F0001.MES", 0x0799): (
             "For this mission, I've also been granted Time Patrol authority."
         ),
-        ("DISKA/F0001.MES", 0x221B): "[Connie] (Time Quake system: nominal.)",
+        ("DISKA/F0001.MES", 0x221B): "[Connie] (Space-time oscillation system: running smoothly.)",
         ("DISKA/F0003.MES", 0x1E44): (
             "[Connie] (A still-developing organism. Human. Child. Female... "
             "About sixteen years old.)"
@@ -56,7 +56,7 @@ def test_locked_translation_policy_contracts() -> None:
             "[Connie] (Anesthetic... a tranquilizer gun...?)"
         ),
         ("DISKC/F0030.MES", 0x1438): (
-            "I used a capture gun to hunt mutants. This is the same smell."
+            "I used a parasite gun to capture mutants. This is the same smell."
         ),
         ("DISKD/F003410.MES", 0x1077): (
             "[Connie] (It was definitely this room... This room...)"
@@ -201,11 +201,9 @@ def test_locked_translation_policy_contracts() -> None:
     ]
     assert all(entry.target_mode == 1 for entry in target_heading)
     assert "".join(entry.translation for entry in target_heading) == (
-        "Ｔａｒｇｅｔ　Ｄｉｍｅｎｓｉｏｎ　Ｓｐａｃｅ・・ｉｎｐｕｔ．"
+        "Ｔａｒｇｅｔ　Ｄｉｍｅｎｔｉｏｎ　Ｓｐａｃｅ・・ｉｎｐｕｔ．"
     )
-    correction = by_anchor[("DISKA/FOP.MES", 0x0B01)]
-    assert correction.source == "ｔ"
-    assert correction.translation == "ｓ"
+    assert all(entry.translation == entry.source for entry in target_heading)
     assert by_id["opening-terminal-target-progress-prefix"].translation == (
         "Target time input"
     )
@@ -232,15 +230,11 @@ def test_locked_translation_policy_contracts() -> None:
     for item in suspended_animation_entries:
         assert "suspended animation" in item.translation.lower(), item.id
 
-    for item in items:
-        if "時空震動" in item.source and item.speaker == "connie":
-            assert "space-time oscillation" not in item.translation.lower(), item.id
-
     locked_terms = {
         "時空トンネル": "time tunnel",
         "タイムパトロール": "Time Patrol",
         "時空監察官": "temporal inspector",
-        "パラサイト銃": "capture gun",
+        "パラサイト銃": "parasite gun",
         "麻酔銃": "tranquilizer gun",
         "対ミュータント用捕獲薬": "anti-mutant capture drug",
     }

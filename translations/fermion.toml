@@ -287,7 +287,7 @@ context = "Timed character 12 of the source-origin Target Dimension Space..input
 
 [[scenes]]
 id = "timed-character-13-corrected-dimension-heading"
-context = "Timed character 13; the single corrected glyph in source Dimention to form Dimension."
+context = "Timed character 13; preserve the original spelling Dimention."
 
 [[scenes]]
 id = "timed-character-14-source-target-dimension-space-heading"
@@ -2935,7 +2935,7 @@ context = "Connie and the mother see a visibly tense Dr. Kanzaki off in the time
 
 [[scenes]]
 id = "family-discovers-dear-person-missing-connie-smells-anesthetic-like"
-context = "The family discovers the dear person missing; Connie smells an anesthetic like the drug used by her mutant-hunting capture gun."
+context = "The family discovers the dear person missing; Connie smells an anesthetic like the drug used by her mutant-hunting parasite gun."
 
 [[scenes]]
 id = "mother-reveals-planned-heart-operation-was-morale-building-fiction"
@@ -4826,7 +4826,7 @@ speaker = "terminal"
 attribution = "inferred"
 scene = "timed-character-1-source-target-dimension-space-heading"
 status = "translated"
-notes = "The source types 'Target Dimention Space..input.' one physical mode-1 record at a time. Every glyph is preserved except the logged spelling correction that forms 'Dimension'."
+notes = "The source types 'Target Dimention Space..input.' one physical mode-1 record at a time. Every glyph, including the spelling Dimention, is preserved."
 
 [[entries]]
 id = "opening-terminal-target-02"
@@ -4978,12 +4978,12 @@ offset = 0x0b01
 source_mode = 1
 target_mode = 1
 source = "ｔ"
-translation = "ｓ"
+translation = "ｔ"
 speaker = "terminal"
 attribution = "inferred"
 scene = "timed-character-13-corrected-dimension-heading"
 status = "translated"
-notes = "Archival correction: the source glyph 'ｔ' in 'Dimention' becomes 'ｓ' to form 'Dimension'. This one-for-one mode-1 replacement preserves the original timing, width, and surrounding English."
+notes = "Preserve the original full-width 't' in 'Dimention', including its individual timed record. The earlier spelling correction is retired."
 
 [[entries]]
 id = "opening-terminal-target-14"
@@ -11323,7 +11323,7 @@ speaker = "connie"
 attribution = "proven"
 scene = "connie-realizes-crossing-itself-caused-her-condition"
 status = "translated"
-notes = "Time Quake is the locked story shorthand; the line concerns bodily effects, not the machine's vibration alone."
+notes = "Time Quake is the established name here; the line concerns bodily effects, not the machine's vibration alone."
 
 [[entries]]
 id = "arrival-takes-mini-form"
@@ -14437,7 +14437,7 @@ speaker = "connie"
 attribution = "inferred"
 scene = "connie-begins-reviewing-phenomenon-behind-project"
 status = "translated"
-notes = "Time Quake is the locked story shorthand for 時空震動."
+notes = "The standalone term introduces the established name Time Quake."
 
 [[entries]]
 id = "launch-rift-in-time"
@@ -14544,12 +14544,12 @@ offset = 0x2109
 source_mode = 1
 target_mode = 2
 source = "つまり、時空震動数と、マシンの震動数を合わせる。"
-translation = "In other words, match the machine's frequency to the Time Quake."
+translation = "In other words, match the space-time oscillation frequency and the machine's vibration frequency."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-reduces-theory-pilot-key-instruction"
 status = "translated"
-notes = "Connie uses the in-world operational name Time Quake even when summarizing the piloting procedure."
+notes = "Preserve the two explicitly named frequencies in this technical explanation, even though Connie is the speaker."
 
 [[entries]]
 id = "launch-enter-and-exit-tunnel"
@@ -14572,12 +14572,12 @@ offset = 0x2170
 source_mode = 1
 target_mode = 2
 source = "時空震動理論は、あたしでは理解できそうにない。"
-translation = "The theory behind the Time Quake is beyond me."
+translation = "The theory of space-time oscillation is beyond my understanding."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-admits-boundary-her-understanding"
 status = "translated"
-notes = "This limitation is important to the voice and keeps the exposition from claiming scientific rigor."
+notes = "The Japanese names the theory directly and explicitly states Connie cannot understand it."
 
 [[entries]]
 id = "launch-understands-only-matching"
@@ -14628,12 +14628,12 @@ offset = 0x221b
 source_mode = 1
 target_mode = 2
 source = "【コニー】（時空震動システムは順調。）"
-translation = "[Connie] (Time Quake system: nominal.)"
+translation = "[Connie] (Space-time oscillation system: running smoothly.)"
 speaker = "connie"
 attribution = "proven"
 scene = "connie-checks-technical-launch-status"
 status = "translated"
-notes = "'Nominal' fits Connie's checklist voice; she uses the operational term Time Quake."
+notes = "Connie uses the technical system name in the source; her limited theoretical understanding does not prevent this checklist terminology."
 
 [[entries]]
 id = "launch-prays-it-works"
@@ -14824,12 +14824,12 @@ offset = 0x240f
 source_mode = 1
 target_mode = 2
 source = "あたしの任務は、『過去へ行って正常な遺伝子を採取してくる』こと。"
-translation = "My mission is to travel into the past and collect intact genetic material."
+translation = "My mission is to 'travel into the past and collect normal genes.'"
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-restates-project-primary-objective"
 status = "translated"
-notes = "正常な遺伝子 follows the locked 'intact genetic material' policy, avoiding eugenic 'normal genes.'"
+notes = "正常な遺伝子 is retained as normal genes in this quoted mission summary; later explanations distinguish missing genetic information."
 
 [[entries]]
 id = "launch-fixes-purpose-in-heart"
@@ -15006,12 +15006,12 @@ offset = 0x2627
 source_mode = 1
 target_mode = 2
 source = "時空のひずみに飛び込むには、飛び込む物質に対して、時空震動数と同じ震動数を与えればいい。"
-translation = "To enter a space-time distortion, give the matter entering it the same frequency as the Time Quake."
+translation = "To enter a space-time distortion, give the matter entering it the same vibration frequency as the space-time oscillation frequency."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-restates-matching-rule-more-generally"
 status = "translated"
-notes = "The repetitive logic is preserved but tightened into one readable technical sentence."
+notes = "Retain the repeated frequency terminology of the explanation rather than simplifying it because Connie is speaking."
 
 [[entries]]
 id = "launch-vibrate-machine-hull"
@@ -15020,12 +15020,12 @@ offset = 0x265e
 source_mode = 1
 target_mode = 2
 source = "あたしが乗っているタイムマシンの外側に震動を与える。時空震動と同じだけの震動数を。"
-translation = "So we vibrate the outer hull of my time machine at exactly that frequency."
+translation = "We make the outside of my time machine vibrate. At the same frequency as the space-time oscillation."
 speaker = "connie"
 attribution = "inferred"
 scene = "connie-applies-general-rule-her-vehicle"
 status = "translated"
-notes = "The fragment becomes one natural sentence without adding a new physical record."
+notes = "Preserve the source sentence followed by its technical frequency fragment."
 
 [[entries]]
 id = "launch-reduce-frequency-to-arrive"
@@ -16725,7 +16725,7 @@ speaker = "connie"
 attribution = "inferred"
 scene = "connie-initiates-time-tunnel-entry-procedure"
 status = "translated"
-notes = "Connie's pilot narration uses Time Quake; machine frequency remains distinct from hull vibration."
+notes = "This short piloting action uses the established name; the nearby explanation retains the explicit technical frequencies."
 
 [[entries]]
 id = "launch-checks-panel-meters"
@@ -58454,11 +58454,12 @@ offset = 0x2e22
 source_mode = 1
 target_mode = 2
 source = "そして、正常な遺伝子を採取すること。"
-translation = "And to collect intact genetic material."
+translation = "And to collect normal genes."
 speaker = "connie"
 attribution = "inferred"
 scene = "talk-first-branch-ruri-confronts-ruined-future-offers-genetic"
 status = "translated"
+notes = "Retain the source wording 正常な遺伝子 in the mission summary."
 
 [[composites]]
 id = "f0011l-2e3c-name-older-sister-connie-you-can-take-a"
@@ -118186,12 +118187,12 @@ status = "translated"
 id = "f0025r-1375-name-friend-1-connie-correct-senior-name-older"
 target_mode = 2
 source = "【⟦name:friend-1⟧】「コニーさんですね。⟦name:older-sister⟧先輩・・・いえ、⟦name:older-sister⟧お姉さまから伺っています。」"
-translation = "[⟦name:friend-1⟧] \"You're Connie, right? ⟦name:older-sister⟧--my senior... no, ⟦name:older-sister⟧, my big sister--told me about you.\""
+translation = "[⟦name:friend-1⟧] \"You're Connie, right? ⟦name:older-sister⟧-senpai... no, ⟦name:older-sister⟧-oneesama told me about you.\""
 speaker = "name-slot:friend-1"
 attribution = "proven"
 scene = "older-sister-introduces-student-yoko-hayami-explains-yoko-knows"
 status = "translated"
-notes = "The self-correction preserves the hierarchy shift from school senior to intimate big sister. The swimming-club setting does not establish the unsupported title 'Captain.'"
+notes = "Documented address exception: senpai marks her school senior; oneesama is her more intimate, admiring address. Preserve the self-correction without inventing a captaincy, asserting literal kinship, or adding an explanatory aside to dialogue."
 
 [[composites.occurrences]]
 file = "DISKC/F0025R.MES"
@@ -143959,7 +143960,7 @@ speaker = "connie"
 attribution = "proven"
 scene = "family-discovers-dear-person-missing-connie-smells-anesthetic-like"
 status = "translated"
-notes = "麻酔銃 is the ordinary tranquilizer gun; the next line identifies its chemical scent with Connie's mutant-hunting capture gun."
+notes = "麻酔銃 is the ordinary tranquilizer gun; the next line identifies its chemical scent with Connie's mutant-hunting parasite gun."
 
 [[entries]]
 id = "f0030-1438-i-used-a-capture-gun-to-hunt-mutants"
@@ -143968,12 +143969,12 @@ offset = 0x1438
 source_mode = 1
 target_mode = 2
 source = "あたしはミュータント捕獲にパラサイト銃を使っていた。それと同じ臭い。"
-translation = "I used a capture gun to hunt mutants. This is the same smell."
+translation = "I used a parasite gun to capture mutants. This is the same smell."
 speaker = "connie"
 attribution = "inferred"
 scene = "family-discovers-dear-person-missing-connie-smells-anesthetic-like"
 status = "translated"
-notes = "パラサイト銃 appears only here, explicitly as mutant-hunting equipment; use the functional capture gun unless external evidence proves a proper product name."
+notes = "Preserve the source term パラサイト銃 provisionally as parasite gun. The sentence identifies its use for capture but does not explain its name or mechanism."
 
 [[composites]]
 id = "f0030-1468-connie-was-name-dear-person-drugged-and-carried"
@@ -147681,11 +147682,12 @@ offset = 0x217c
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・・・・・・・・・・ただ、少しの間だけ、ここでおとなしくしていて欲しいの。それだけ。」"
-translation = "[Kanzaki] \"...I merely want you to remain here quietly for a little while. That is all.\""
+translation = "[Kanzaki] \"............I just want you to stay here quietly for a little while. That is all.\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "dr-kanzaki-admits-altering-coordinates-says-missing-woman-is"
 status = "translated"
+notes = "Retain the prolonged opening pause; do not infer a motive for it from the later reveal."
 
 [[composites]]
 id = "f0032-21b4-i-ask-what-has-been-consuming-me-where"
@@ -147862,11 +147864,12 @@ offset = 0x2388
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・・・・・・・・・・・・・。」"
-translation = "[Kanzaki] \"...\""
+translation = "[Kanzaki] \"...............\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "dr-kanzaki-admits-altering-coordinates-says-missing-woman-is"
 status = "translated"
+notes = "Preserve the longer silent reply, distinct from the following shorter silence."
 
 [[composites]]
 id = "f0032-23a3-connie-where-is-name-dear-person"
@@ -147923,11 +147926,12 @@ offset = 0x242c
 source_mode = 1
 target_mode = 2
 source = "【神崎】「・・・・・・・・・。」"
-translation = "[Kanzaki] \"...\""
+translation = "[Kanzaki] \".........\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "dr-kanzaki-admits-altering-coordinates-says-missing-woman-is"
 status = "translated"
+notes = "Preserve the duration contrast with the earlier fifteen-dot reply."
 
 [[entries]]
 id = "f0032-2441-the-doctor-smiles-sadly"
@@ -148401,12 +148405,12 @@ offset = 0x291d
 source_mode = 1
 target_mode = 2
 source = "【神崎】「コニー、あなたは情けで生かしておいてあげるのよ。暴れないで。暴れたら私も容赦しない。」"
-translation = "[Kanzaki] \"Connie, I am allowing you to live out of sentiment. Do not resist. If you do, I will show no mercy.\""
+translation = "[Kanzaki] \"Connie, I am letting you live out of mercy. Do not resist. If you do, I will show no mercy.\""
 speaker = "kanzaki"
 attribution = "proven"
 scene = "dr-kanzaki-threatens-reproductive-experimentation-neurological-surgery-against-woman"
 status = "translated"
-notes = "Dr. Kanzaki threatens Connie with violence if she resists; do not recast this as protective advice."
+notes = "情け is mercy here, paired with 容赦しない. Do not suggest concealed affection through the hindsight-driven word sentiment."
 
 [[entries]]
 id = "f0032-2957-even-so"
@@ -169791,11 +169795,12 @@ offset = 0x02cd
 source_mode = 1
 target_mode = 2
 source = "【コニー】「にぃ～っ、にぃ～っ。」"
-translation = "[Connie] \"Mee, mee.\""
+translation = "[Connie] \"Meee! Meee!\""
 speaker = "connie"
 attribution = "proven"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
+notes = "Preserve both stretched, sharply ended cat cries in the ventilation-shaft joke."
 
 [[entries]]
 id = "f003411-02e3-ventilation-system-rooooar"
@@ -169837,11 +169842,12 @@ offset = 0x0332
 source_mode = 1
 target_mode = 2
 source = "【コニー】「にあ～～～っ。」"
-translation = "[Connie] \"Meeow.\""
+translation = "[Connie] \"Meeeooow!\""
 speaker = "connie"
 attribution = "proven"
 scene = "connie-explores-dead-end-facility-vent-mini-form-quietly"
 status = "translated"
+notes = "Preserve the long vowel and emphatic ending of the source cat cry."
 
 [[entries]]
 id = "f003411-0345-for-some-reason-this-cry-is-easier-to"

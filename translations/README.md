@@ -44,7 +44,7 @@ anchors, duplicates, speakers, layout problems, and runtime regressions, but
 they do not replace translation.
 
 English printed by the original game follows the archival treatment in section
-12 of the translation brief, including its single logged spelling correction.
+12 of the translation brief, including the original spelling `Dimention`.
 
 ## Text layout
 
