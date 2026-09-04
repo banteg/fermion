@@ -1,4 +1,10 @@
-# Provenance — Fermion: Mirai kara no Houmonsha (フェルミオン ～未来からの訪問者～)
+# The original disks
+
+This record identifies the release used for the translation and documents how
+its disk images were checked. Checksums let future contributors confirm they
+are working from the same source, even if download locations change.
+
+## Release
 
 - **Title**: Fermion - Mirai kara no Houmonsha
 - **Publisher**: シルキーズ (Silky's)
@@ -6,15 +12,15 @@
 - **Release**: 1995-12-22
 - **Media**: 4 × 5.25" HD floppy disks (Disks A–D)
 
-## Source of record
+## Preservation archive
 
-`artifacts/` contains the preservation dump from archive.org item
+The local `artifacts/` directory holds the preservation dump from archive.org item
 [`fermion`](https://archive.org/details/fermion) (collections: flux-dumps,
 softwarelibrary, emulation):
 
 > 5.25" floppy disk images (Greaseweazle F1) for NEC PC-9801
 
-Links:
+Recorded download locations (the storage node was used for the original fetch):
 
 - Item page: <https://archive.org/details/fermion>
 - Download: <https://archive.org/download/fermion/Fermion%20-%20Mirai%20kara%20no%20Houmonsha%20%28Silky%27s%29%20%281995-12-22%29%20%5BPC98%5D%20%5B5.25%27%27%5D%20%5BSCP%2BMFI%2BHFE%2BD88%5D.zip>
@@ -31,7 +37,7 @@ Each disk is provided in four formats:
 | `.hfe` | HxC floppy emulator image | hardware/emulator use |
 | `.d88` | sector image | emulator use, conversion source |
 
-### Download integrity
+### Archive checksums
 
 Zip `Fermion - Mirai kara no Houmonsha (Silky's) (1995-12-22) [PC98] [5.25''] [SCP+MFI+HFE+D88].zip`
 
@@ -45,7 +51,7 @@ time; the file was fetched from the storage node URL
 `https://ia801606.us.archive.org/15/items/fermion/...` recorded in the item
 metadata.
 
-## Content verification against MAME software list
+## Checking the disk contents
 
 The D88 images were converted to raw HDM sector images
 (77 cyl × 2 head × 8 sec × 1024 B = 1261568 bytes, sectors reordered by
@@ -53,7 +59,7 @@ C/H/R) and their SHA-1 digests compared against the MAME `pc98` software
 list entry `fermion` (snapshot in `mame-pc98-softwarelist-fermion.xml`,
 upstream: [`hash/pc98.xml` in mamedev/mame](https://github.com/mamedev/mame/blob/master/hash/pc98.xml)).
 
-All four disks match byte-for-byte:
+All four converted images matched the SHA-1 values in the saved MAME list:
 
 | Disk | SHA-1 (HDM) | MAME CRC32 |
 |------|-------------|------------|

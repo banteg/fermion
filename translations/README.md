@@ -1,12 +1,27 @@
-# Translation catalog
+# Editing the translation
 
-`fermion.toml` is the checked-in source of truth for translated text and
-translator reasoning. Generated MES files and original game media do not belong
-in the catalog.
+[fermion.toml](fermion.toml) holds the English translation alongside its Japanese
+source, scene context, and review notes. Make text changes here; generated
+scripts, review tables, and disk images are outputs of this catalog.
 
-The catalog is the source-faithful archival English. Policy is section 10 of
-[`../research/fermion_translation_brief.md`](../research/fermion_translation_brief.md).
-Do not alter it for release.
+Read the [translation brief](../research/fermion_translation_brief.md) for
+character voices, terminology, and archival policy before changing the English.
+It contains full spoilers. The policy applies to the released translation too;
+release preparation is not a separate rewrite.
+
+## A typical edit
+
+1. Find the entry and read its Japanese in scene context.
+2. Revise the English, keeping the entry ID and source references intact.
+3. Add a note if the decision depends on an ambiguity or a technical compromise.
+4. Validate against the original files, build a fresh image, and check the
+   affected scene in game. Commands are in [Development](../DEVELOPMENT.md).
+5. Set the review status to match the work actually done.
+
+Automated checks help with source references, repeated text, and layout. They
+cannot decide whether a translation gets the scene right.
+
+## How the catalog is organized
 
 The catalog contains:
 
@@ -31,6 +46,8 @@ they do not replace translation.
 English printed by the original game follows the archival treatment in section
 12 of the translation brief, including its single logged spelling correction.
 
+## Text layout
+
 The catalog stores readable, unwrapped English. At build time, the effective
 width inserts word-boundary newlines while preserving explicit authoring
 newlines. File-level `box_width`, `box_rows`, and `wrap_mode` values define the
@@ -45,6 +62,9 @@ A story record containing only a run of `・` followed by `。` is a silent beat
 and translates to mode-2 ASCII `...`. The opening terminal's single-glyph
 progress animation is exempt.
 
+## Repeated lines and speakers
+
+An anchor identifies an occurrence in an unchanged original MES file.
 A single occurrence uses `file` and `offset`; exact duplicates use one entry
 with an `anchors` array. Identical Japanese may remain separate when scene
 context requires different English.
@@ -62,10 +82,13 @@ Do not infer speakers from Japanese quote style. The recovered label rules,
 name slots, and corpus evidence are documented in
 [`../research/gm-speaker-attribution.md`](../research/gm-speaker-attribution.md).
 
-## Composite interpolation contract
+## Names and terms inside dialogue
 
-Composites represent rendered messages split across physical text records by a
-runtime name or term substitution. Authoring tokens use non-CP932 delimiters:
+Some messages are split into several text records because the game inserts a
+player-chosen name or term between them. A composite entry lets you read and
+translate the whole message together while keeping those original pieces.
+Write the insertion points with these tokens; their brackets deliberately fall
+outside the game’s CP932 character encoding:
 
 ```text
 ⟦name:mother⟧
@@ -77,8 +100,9 @@ runtime name or term substitution. Authoring tokens use non-CP932 delimiters:
 ⟦term:slot-2⟧
 ```
 
-Each occurrence preserves ordered text segments and immutable token spans.
-Validation:
+Keep every token in its original order, including repeated tokens. The build
+puts each English segment back in the corresponding source record and leaves
+the name or term insertion instructions intact. Validation:
 
 1. requires the source and English token sequence, order, and multiplicity to
    match;
@@ -116,14 +140,17 @@ Slot roles and the identity-reveal invariant are in section 5 of the
 treat flags as lines to inspect in Japanese and scene context, not target
 rates. Commands are in [`../DEVELOPMENT.md`](../DEVELOPMENT.md).
 
-## Coverage ledger
+## Checking coverage
 
-`coverage.toml` defines reviewable ranges rather than relying on which lines
-happen to be in the catalog. Every decoded text opcode in a range is classified
+[coverage.toml](coverage.toml) lists the parts of the original scripts that the
+translation must account for. This lets us find missing lines even when they
+have no catalog entry yet. Every decoded text opcode in a range is classified
 as translated, explicitly excluded with a reason, or pending. Pending records
 are grouped by exact `(source_mode, source)` so a duplicate Japanese line
 appears once with all of its physical anchors. Gate a closed scope with
 `--scope` and `--require-complete`.
+
+## Building and reviewing changes
 
 Fresh translated images seed the source-derived English names and adult terms
 into the persistent `REG_00` template bank. The build only migrates slots that
@@ -137,15 +164,9 @@ string. `translation table` exports the reviewable TSV: `id`, `file`,
 `status`. It expands canonical multi-anchor entries to one physical row but
 does not duplicate their English or notes in the source catalog.
 
-For an incremental batch:
-
-1. Add or revise catalog entries while preserving stable IDs.
-2. Record line-specific translation alternatives and uncertainties in `notes`;
-   omit routine voice-policy boilerplate.
-3. Validate against the pristine sources.
-4. Build a fresh image from the pristine copy.
-5. Add or update a named route in `runtime/routes.toml` when the text is
-   reachable automatically, then promote its status after the runtime check.
+When an affected scene can be reached automatically, add or update its route in
+`runtime/routes.toml`. Mark an entry `runtime-verified` only after checking its
+current wording and layout in game.
 
 The build writes only ignored artifacts. It compiles each line through
 lime-juice, verifies unchanged text and external MLL targets, repacks the

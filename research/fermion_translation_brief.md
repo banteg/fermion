@@ -1,8 +1,34 @@
-# FERMION — English Translation Brief
+# Fermion translation brief
 
-- **Source:** full extracted Japanese script (`script.md`), 77 content-unique MES files / 17,401 mode-1 text records; the `FOP.MES`-reachable story view (`script-story.md`) contains 72 files / 16,994 mode-1 records
-- **Purpose:** translator’s brief for the archival English
-- **Spoilers:** complete, including the central identity reveal and ending
+This is the shared reference for translating *Fermion*: what happens in the
+story, how its characters speak, and which wording and restoration decisions
+we have made. **Full spoilers follow, including the central reveal and ending.**
+
+## Finding your way around
+
+- **Read the story:** [premise](#1-the-game-in-one-paragraph),
+  [themes](#2-what-kind-of-story-it-actually-is), and [full plot](#3-full-plot-in-narrative-order).
+- **Translate a scene:** [characters and voices](#4-character-and-voice-bible),
+  [editable names](#5-interpolated-names), [terminology](#6-recommended-terminology),
+  and [prose style](#7-voice-and-prose-style).
+- **Follow the source:** [script structure](#8-scriptroute-structure-for-implementation),
+  [restoration decisions](#9-source-inconsistencies-and-restoration-decisions),
+  and [archival policy](#10-archival-policy).
+- **Review the work:** [workflow](#11-translation-workflow),
+  [opening terminal](#12-opening-terminal), [checklist](#13-translation-qa-checklist),
+  and [open questions](#14-open-evidence-questions).
+
+The brief was prepared from the extracted Japanese script: 77 distinct MES
+files and 17,401 mode-1 text records. The story view contains 72 files and
+16,994 records. These are source counts, not translation progress figures.
+Older `script.md` line references point into the original extraction-order
+dump; use the named MES files and source anchors to locate passages in a newly
+generated view.
+
+The English itself lives in [the catalog](../translations/fermion.toml).
+[Editing instructions](../translations/README.md) and
+[build commands](../DEVELOPMENT.md) are maintained separately. Section numbers
+here are kept stable so existing policy references continue to work.
 
 ---
 
@@ -672,7 +698,8 @@ Section 13 is the completion checklist. Commands live in
 
 ## 12. Opening terminal
 
-Readable picture of the mixed Japanese/source-English boot sequence. The
+The transcript below makes the mixed Japanese and English boot sequence easier
+to read outside the game. The
 catalog keeps the full-width timed records; the section 9 table locks the
 single `Dimention` → `Dimension` correction.
 
@@ -696,11 +723,15 @@ End of operations confirmed.
 System Power off
 ```
 
-The transcript romanizes Japanese readouts for readability.
+The Japanese readouts are shown in English for readability.
 
 ---
 
 ## 13. Translation QA checklist
+
+Use this list for linguistic review and playtesting. Checked items describe the
+specific checks named beside them; they do not imply that every scene has been
+played or every translation reviewed. Entry-level status lives in the catalog.
 
 ### Story and reveal
 

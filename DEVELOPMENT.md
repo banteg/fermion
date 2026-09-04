@@ -1,8 +1,28 @@
-# Development
+# Building and checking the translation
 
-CLI cookbook for preservation, catalog builds, and headless runtime checks.
-The project map is in [`README.md`](README.md). The catalog contract is in
-[`translations/README.md`](translations/README.md).
+This guide is for working with the original disks, building an English game
+image, and checking the result in an emulator. For translation decisions, start
+with the [translation brief](research/fermion_translation_brief.md); for editing
+English, use the [catalog guide](translations/README.md).
+
+- [Prepare the source files](#prepare-the-source-files)
+- [Read the scripts](#read-the-scripts)
+- [Check and build the translation](#check-and-build-the-translation)
+- [Check the game in an emulator](#check-the-game-in-an-emulator)
+- [Start from a saved scene](#start-from-a-saved-scene)
+- [Compare screenshots after a change](#compare-screenshots-after-a-change)
+
+The examples use `working/archives/disk-a/` through `disk-d/` for unchanged
+extracted scripts and `working/emulator/` for disk images. Generated files stay
+under ignored `working/` paths. Keep the original extraction unchanged: catalog
+references and checksums refer to those files.
+
+## Prepare the source files
+
+You need Python 3.12 or later and uv. Disk extraction also needs the preservation
+archive described in [Provenance](provenance/PROVENANCE.md). Building a translated
+image later in this guide requires an installed, pristine game HDI; extracting
+the floppy files alone does not create that bootable image.
 
 Install the development environment and inspect the CLI:
 
@@ -32,55 +52,30 @@ extract one of these Silky's installer archives with:
 
 ```sh
 uv run fermion archive ls working/files/disk-a/DISKA
-uv run fermion archive extract working/files/disk-a/DISKA working/installed
+uv run fermion archive extract working/files/disk-a/DISKA working/archives/disk-a
 ```
 
-Walk General Message bytecode and verify that embedded local addresses land on
-instruction boundaries. Pass either one MES file or a directory tree:
+Repeat the filesystem and archive extraction for disks B, C, and D, using
+`disk-b`, `disk-c`, and `disk-d` directories and their corresponding installer
+archives. The catalog expects this per-disk layout under `working/archives/`.
+
+## Read the scripts
+
+MES files hold the game’s scripts. This release uses General Message (GM), a
+language understood by these tools and the GM-enabled version of lime-juice.
+
+For translation review, start with a readable script that includes speaker
+labels and removes identical file copies:
 
 ```sh
-uv run fermion gm audit working/installed
-uv run fermion gm audit working/installed/MAIN.MES --verbose
-```
-
-List decoded text instruction offsets. Mode 1 expands dictionary tokens and
-Shift-JIS; mode 2 exposes the single-byte ASCII strings used by the game. Results
-can be filtered without decompiling whole scripts:
-
-```sh
-uv run fermion gm texts working/installed --mode 2
-uv run fermion gm texts working/installed --contains '見ない方'
-```
-
-Recover speaker identities that are encoded in the GM render stream, or list
-the records that still require scene context:
-
-```sh
-uv run fermion gm speakers working/archives --attributed-only
-uv run fermion gm speakers working/archives/disk-a/FOP.MES \
-  --unresolved-only \
-  --format tsv
-```
-
-The command recognizes literal `【name】` labels and the exact `0x45`/`0x4b`
-sequence used for the five customizable name slots. It deliberately does not
-infer speakers from Japanese quote styles. A compact, speaker-annotated,
-content-deduplicated mode-1 corpus dump is also available for offline review:
-
-```sh
-uv run fermion gm script working/archives > working/script.md
 uv run fermion gm script working/archives --story > working/story-script.md
+uv run fermion gm script working/archives > working/script.md
 ```
 
-See [`research/gm-speaker-attribution.md`](research/gm-speaker-attribution.md)
-for the recovered bytecode rule, slot roles, native-handler evidence, and
-corpus accounting.
-
-The story view follows literal GM scenario transitions from `FOP.MES`, stops
-when the game returns to `MAIN.MES`, and then emits the reachable files in
-stable scenario-name order. The default dump retains its original physical
-extraction order so existing `script.md` line-number references do not move.
-Inspect the actual branches and nested loads as text, TSV, or Graphviz DOT:
+The story view starts with `FOP.MES` and includes scenes reachable before a
+return to `MAIN.MES`, the title system. It lists the remaining scenes by
+filename. The full dump uses extraction order. Neither is a playthrough: use
+the transition graph to follow choices, rejoins, and revisited rooms.
 
 ```sh
 uv run fermion gm transitions working/archives
@@ -89,8 +84,30 @@ uv run fermion gm transitions working/archives \
   > working/scenario-graph.dot
 ```
 
-Generate a non-authoritative, whole-story work queue without changing the
-catalog under active translation:
+See [Following the story](research/gm-scenario-flow.md) for the main branches.
+
+### Find a line or speaker
+
+Search decoded text without decompiling whole scripts. Mode 1 is the game’s
+dictionary-compressed Japanese text; mode 2 holds single-byte ASCII strings.
+
+```sh
+uv run fermion gm texts working/archives --contains '見ない方'
+uv run fermion gm texts working/archives --mode 2
+uv run fermion gm speakers working/archives --attributed-only
+uv run fermion gm speakers working/archives/disk-a/FOP.MES \
+  --unresolved-only \
+  --format tsv
+```
+
+The speaker command recognizes displayed name labels, including customizable
+names. It leaves unlabelled dialogue for a translator to identify in context.
+[Identifying speakers](research/gm-speaker-attribution.md) explains the source
+instructions and their limits.
+
+### Look for repeated or unlabelled text
+
+Generate an inventory for a focused review:
 
 ```sh
 uv run fermion gm inventory working/archives \
@@ -98,31 +115,42 @@ uv run fermion gm inventory working/archives \
   > working/story-inventory.tsv
 ```
 
-The inventory groups exact `(mode, proven speaker, Japanese)` candidates under
-stable hash IDs, retains every unique-file anchor, and leaves `en` and `context`
-blank. `multi-anchor`, `speaker-variant`, and `unresolved-speaker` flags identify
-groups that need contextual review before they can become canonical catalog
-entries. Use `--duplicates-only`, `--unresolved-only`, or `--format jsonl` for
-focused passes. See
-[`research/gm-scenario-flow.md`](research/gm-scenario-flow.md) for the recovered
-story boundary and corpus totals.
+This groups matching Japanese by text mode and known speaker, retaining all
+source locations. English and context cells start blank; it is a source
+inventory, not a translation-progress report. Flags identify repeated text,
+speaker differences, and unknown speakers that need a closer read. Use
+`--duplicates-only`, `--unresolved-only`, or `--format jsonl` to narrow the output.
+Make translation edits in the catalog, not this generated table.
 
-For a same-sized renderer probe, replace one unique compiled MES blob in a
-copied hard-disk image without touching the input image:
+### Inspect script instructions
+
+When working on the tools, check that script jumps land on instruction
+boundaries. Pass one MES file or a directory tree:
+
+```sh
+uv run fermion gm audit working/archives
+uv run fermion gm audit working/archives/disk-a/MAIN.MES --verbose
+```
+
+For a small rendering experiment, `replace-exact` can swap one unique compiled
+MES file for a same-sized replacement in a copied image:
 
 ```sh
 uv run fermion binary replace-exact \
   working/base.hdi original.MES patched.MES working/test.hdi
 ```
 
-## Translation catalog
+Use the translation build below for normal text changes; it handles changed
+file sizes and archive repacking.
+
+## Check and build the translation
 
 [`translations/fermion.toml`](translations/fermion.toml) is the source of truth
 for English text, source anchors, speakers, scene context, layout, and review
 status. Generated MES files, disk images, and screenshots stay under ignored
 `working/` paths. See
-[`translations/README.md`](translations/README.md) for the catalog schema and
-authoring contract.
+[`translations/README.md`](translations/README.md) for the entry format and
+editing guidance.
 
 Validate the catalog alone or against a hash-checked pristine extraction:
 
@@ -144,11 +172,13 @@ uv run fermion translation coverage \
   translations/fermion.toml \
   translations/coverage.toml \
   working/archives \
-  --verbose
+  --require-complete
 ```
 
-Build lime-juice from the conventional sibling checkout without writing into
-that repository:
+The image build needs lime-juice with General Message support. The example
+below assumes its source is already checked out at `$HOME/dev/FuzionCD/lime-juice`;
+substitute your checkout path if it differs. Build into this project’s working
+directory:
 
 ```sh
 cmake -S "$HOME/dev/FuzionCD/lime-juice" \
@@ -157,7 +187,9 @@ cmake -S "$HOME/dev/FuzionCD/lime-juice" \
 cmake --build working/vendor/lime-juice-build --parallel
 ```
 
-Then build a translated HDI from the pristine working copy:
+Then build a translated HDI from the pristine installed image. Here that input
+is named `fermion-debug.hdi`; use your own pristine image path if different.
+Choose a new output path for each build: existing outputs are refused.
 
 ```sh
 uv run fermion translation build \
@@ -180,15 +212,17 @@ uv run fermion hdi ls working/emulator/fermion-debug.hdi
 uv run fermion hdi replace-file input.hdi FERM/DISKA rebuilt-DISKA output.hdi
 ```
 
-## Headless runtime tests
+## Check the game in an emulator
 
 The packaged CLI can drive NP2kai directly through libretro. It does not launch
 RetroArch, Wine, or a GUI: scheduled keyboard and mouse-button input goes into
 the emulator and the final framebuffer is written directly to PNG.
 
-The installed RetroArch core is x86-64, so build a native arm64 core from the
-current upstream source. All source, firmware copies, cores, states, and captures
-remain under ignored `working/` paths:
+The following setup is for an Apple Silicon Mac. It builds the pinned NP2kai
+revision used by this project as a native arm64 core and copies firmware from
+an existing RetroArch installation. Adjust the build and firmware paths for
+other systems. Keep source, firmware, cores, states, and captures under ignored
+`working/` paths:
 
 ```sh
 gh repo clone AZO234/NP2kai working/vendor/NP2kai
@@ -247,13 +281,16 @@ uv run fermion emulator route \
   working/emulator/fermion-translation.hdi
 ```
 
-### Portable save fixtures
+## Start from a saved scene
 
-Ghidra analysis of the native save/load handlers established that `REG_00` is
-the persistent global/template bank and `REG_01` through `REG_10` are the ten
-loadable slots. A slot is a 6,944-byte snapshot of the game's global segment.
-The checked-in [`runtime/save-fixtures.toml`](runtime/save-fixtures.toml) file
-stores only hash-pinned sparse changes, never a complete slot or game image.
+Save fixtures let you start at a known scene without replaying the opening.
+They use the game’s own save system. `REG_00` holds persistent defaults;
+`REG_01` through `REG_10` are the ten loadable slots. Each slot stores 6,944 bytes
+of game state, as confirmed by the original save/load code in Ghidra.
+
+The checked-in [fixture file](runtime/save-fixtures.toml) records only the bytes
+that differ from a known template, with checksums to identify that template.
+It contains no complete save slot or game image.
 
 List the available fixtures and install one into a new copied HDI:
 
@@ -327,6 +364,8 @@ uv run fermion emulator route \
   working/emulator/second-scene.hdi
 ```
 
+### Emulator states and rebuilds
+
 Manual NP2debug `.S00`/`.S01` slots are opaque, exact-image snapshots. Check a
 slot against the image it will resume before loading it:
 
@@ -367,7 +406,11 @@ uv run fermion emulator route \
   --no-cache
 ```
 
-### Incremental visual-QA suite
+## Compare screenshots after a change
+
+The screenshot suite helps catch changes in line wrapping, menus, and other
+visible text. It covers selected scenes; it does not replace reading the
+translation or playing through the branches.
 
 [`runtime/visual-qa.toml`](runtime/visual-qa.toml) groups the checked-in routes
 into one screenshot suite and declares which rebuilt MES files can affect each

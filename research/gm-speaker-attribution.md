@@ -1,6 +1,11 @@
-# General Message speaker attribution
+# Identifying who is speaking
 
-## Result
+A translation needs to know who is speaking, but Fermion does not label every
+line. The tools recover names that the game actually displays; a translator
+must identify the remaining voices from the scene. This note explains that
+boundary and the script details behind it.
+
+## What the game tells us
 
 Fermion does not attach a hidden speaker ID to every dialogue instruction.
 Speaker identity is encoded in the rendered text stream in two forms:
@@ -23,7 +28,7 @@ A static speaker is part of the decoded text itself:
 0x4a  【神崎】「……」
 ```
 
-At the GM evidence layer, the source-local speaker ID is the exact string
+The script reader records the exact string
 between `【` and `】`. If one rendered message is split across multiple `0x4a`
 records, the label applies to the later fragments until opcode `0x50` or `0x00`
 ends that message. The translation catalog maps that evidence to a canonical
@@ -61,7 +66,7 @@ default strings:
 The stable role is authoritative for translation voice; the displayed name is
 player-editable and the default is retained only as useful review context.
 
-## Native confirmation
+## Confirmation in the original executable
 
 The relocation-aware Ghidra project confirms the bytecode interpretation:
 
@@ -90,7 +95,10 @@ follow the exchange but do not encode identities. The catalog may record
 contextual roles such as `prologue-doctor`; source verification enforces only
 identities actually proven by the bytecode.
 
-## Corpus result and tooling
+## Source counts and review tools
+
+These counts describe labels found in the original extraction, not the current
+translation’s review status.
 
 Across the 77 unique MES files (96 physical copies), all 17,461 decoded text
 records classify as:
@@ -113,7 +121,7 @@ and render opcodes; `[F0003:0c4d]` then begins `】。」`. A physical-record du
 therefore exposes naked closing brackets even though the rendered message is
 complete.
 
-That closing-bracket census is only a lower bound. The 72-file story graph has
+Counting closing brackets does not find every name insertion. The 72-file story graph has
 5,124 name-slot renders and 12 customizable-term renders in total, including
 many unbracketed mid-sentence insertions. A translator-facing composite view
 must reconstruct those messages without erasing the individual text anchors or

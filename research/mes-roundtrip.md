@@ -1,10 +1,18 @@
-# MES round-trip probe
+# Why Fermion needs General Message support
 
-## Result
+**Historical note.** An early attempt to read Fermion’s scripts with lime-juice’s
+AI5 parser lost almost the entire file, even though the commands reported
+success. The game’s General Message dialect was subsequently identified and
+implemented directly. Translation builds now use that support.
 
-Fermion's files have an AI5-like dictionary header, but the current
-`lime-juice` AI5 parser does **not** understand the bytecode that follows it.
-A successful process exit is therefore not evidence of compatibility.
+The failed test is retained here to explain the format choice and help anyone
+revisiting the original files avoid the same mistake.
+
+## The original compatibility test
+
+Fermion's files have an AI5-like dictionary header, but the tested
+`lime-juice` AI5 parser did **not** understand the bytecode that follows it.
+The commands succeeded without rebuilding a usable script.
 
 Tested input:
 
@@ -36,14 +44,14 @@ n  .  s  y  s  t  e  m  .  m  l  l  \0 \0
 ```
 
 The same `system.mll` prefix occurs immediately after the dictionary in other
-scenario files. This looks like a consistent, unsupported Silky's VM variant,
-not corruption or a one-file anomaly.
+scenario files. At the time, that repeated prefix pointed to an unsupported Silky’s script
+format rather than a damaged file.
 
 The temporary `fermion mes roundtrip` compatibility probe was retired after
 the General Message dialect was identified and implemented directly. This
 document retains the original negative result as provenance for that decision.
 
-## Outcome
+## How it was resolved
 
 Analysis of `SIL.EXE` recovered the General Message instruction grammar. The
 dialect now has direct support in lime-juice, so translation no longer passes

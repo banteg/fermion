@@ -1,6 +1,11 @@
-# General Message scenario flow
+# Following the story through the script files
 
-## Result
+Fermion’s script filenames are useful landmarks, but they are not a play order.
+Choices branch and rejoin, and the facility section revisits rooms according to
+game state. Use the scene-transition graph to follow those connections while
+reviewing a passage. **This note contains route spoilers.**
+
+## Reading the scene transitions
 
 The scenario graph is directly recoverable from GM bytecode. Opcode `0x6d`
 replaces the current MES scenario, while `0x6f` calls a nested MES and restores
@@ -20,13 +25,13 @@ uv run fermion gm transitions working/archives \
 
 The DOT view retains parallel and cyclic edges. Those cycles matter: dispatcher
 scripts such as `F_SHENE.MES` and `F0034.MES` route into several branches and
-receive control from them again, so the corpus does not have one honest total
-execution order.
+receive control from them again, so the corpus does not have single linear
+play order.
 
-## Story boundary
+## Which files belong to the story
 
 Reachability from `FOP.MES`, with `MAIN.MES` treated as a terminal return to the
-title system, selects 72 content-unique story files. The four other unique MES
+title system, selects 72 content-unique story files. Besides `MAIN.MES`, the four other unique MES
 files are utility or non-story surfaces:
 
 - `F_E.MES`: CG-gallery/index surface;
@@ -39,7 +44,7 @@ then stable filename order, while the transition graph supplies the branch
 structure that filename order cannot express. This is a plot-review view, not
 a claim that every branch executes in that order.
 
-## Branch topology
+## Branches and rejoins
 
 The principal L/R branches and rejoins are explicit in the graph:
 
@@ -57,7 +62,11 @@ state nodes. Most nodes return to `F0034`. Progression paths also pass through
 or advance to `F0038`. Exact offsets remain in the generated graph, avoiding a
 hand-maintained route description as those states are annotated.
 
-## Translation inventory
+## Generating a translation inventory
+
+The figures below describe the initial source inventory, not unfinished work
+in today’s catalog. Use the [coverage check](../DEVELOPMENT.md#check-and-build-the-translation)
+for current translation coverage.
 
 The story boundary contains 16,994 decoded mode-1 text records. Grouping exact
 `(mode, proven speaker, Japanese)` values produces 12,841 translation
@@ -84,6 +93,6 @@ uv run fermion gm inventory working/archives \
 
 Each row has a stable content-derived ID, all unique-file anchors, proven
 speaker and attribution source, original text, blank English and context cells,
-an initial status, and review flags. The source catalog remains authoritative;
-an inventory group should be promoted only after its scene context is reviewed,
-and split when one shared source string needs different translations.
+an initial status, and review flags. Edit the translation in `translations/fermion.toml`, not in this generated
+inventory. Before sharing one entry across several occurrences, read each in
+context; the same Japanese may need different English in different scenes.
