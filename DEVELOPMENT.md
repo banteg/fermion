@@ -4,6 +4,8 @@ This guide is for working with the original disks, building an English game
 image, and checking the result in an emulator. For translation decisions, start
 with the [translation brief](research/fermion_translation_brief.md); for editing
 English, use the [catalog guide](translations/README.md).
+For interactive browser or RetroArch setup and matching fonts, see
+[Emulator setup](EMULATORS.md).
 
 - [Prepare the source files](#prepare-the-source-files)
 - [Read the scripts](#read-the-scripts)

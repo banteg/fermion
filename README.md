@@ -73,6 +73,15 @@ scenes in game.
 
 ## Tools
 
+For a general-purpose PC-98 emulator in your browser, see
+[WebNP2](https://uraraworks.github.io/WebNP2/?lang=en) and its
+[user guide](https://uraraworks.github.io/WebNP2/help.html?lang=en).
+It accepts local disk images and keeps them in browser storage without uploading
+them. Download modified disks for backups; clearing site data removes browser
+saves. This project does not host a separate player or disk images.
+See [Emulator setup](EMULATORS.md) for the browser font fix and RetroArch as a
+local alternative.
+
 The Python tools use [uv](https://docs.astral.sh/uv/) and Python 3.12 or later:
 
 ```sh
