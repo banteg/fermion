@@ -5,99 +5,54 @@
 <g font-family="system-ui, sans-serif" fill="#253331">
 <text x="48" y="48" font-size="29" font-weight="700">02  Corridor escape</text>
 <text x="48" y="77" font-size="17">Push the wheelchair through the corridors. Three destinations.</text>
-<path d="M214,270 L245,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M245,270 L276,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,177 L276,208" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,177 L307,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,208 L276,239" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,239 L276,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,270 L276,301" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,301 L276,332" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,332 L276,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M276,363 L307,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M307,177 L338,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M307,363 L338,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M307,456 L307,487" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M307,487 L307,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M307,518 L338,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M338,177 L369,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M338,363 L369,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M338,518 L369,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M369,177 L400,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M369,363 L400,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M369,518 L400,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M400,177 L431,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M400,363 L431,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M400,518 L431,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M431,177 L462,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M431,363 L462,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M431,518 L462,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M462,177 L493,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M462,363 L493,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M462,518 L493,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M493,177 L524,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M493,363 L524,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M493,518 L524,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M524,177 L555,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M524,363 L555,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M524,518 L555,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,177 L555,208" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,208 L555,239" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,239 L555,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,270 L555,301" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,270 L586,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,301 L555,332" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,332 L555,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,363 L555,394" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,394 L555,425" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,425 L555,456" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,456 L555,487" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,456 L586,456" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M555,487 L555,518" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M586,270 L617,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M586,456 L617,456" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M617,270 L648,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M648,270 L679,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M679,270 L710,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M710,270 L741,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,177 L741,208" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,177 L772,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,208 L741,239" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,239 L741,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,270 L741,301" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,301 L741,332" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,332 L741,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M741,363 L772,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M772,177 L803,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M772,363 L803,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M803,177 L834,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M803,363 L834,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M834,177 L865,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M834,363 L865,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M865,177 L896,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M865,363 L896,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M896,177 L927,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M896,363 L927,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M927,177 L958,177" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M927,363 L958,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,177 L958,208" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,208 L958,239" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,239 L958,270" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,270 L958,301" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,301 L958,332" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<path d="M958,332 L958,363" stroke="#536c68" stroke-width="7" stroke-linecap="round"/>
-<circle cx="214" cy="270" r="17" fill="#007b79" stroke="#f6f3eb" stroke-width="3"/>
+<!-- Original passage centerlines; shared by every wall and floor layer. -->
+<defs><path id="passages" d="M214,270 L245,270 M245,270 L276,270 M276,177 L276,208 M276,177 L307,177 M276,208 L276,239 M276,239 L276,270 M276,270 L276,301 M276,301 L276,332 M276,332 L276,363 M276,363 L307,363 M307,177 L338,177 M307,363 L338,363 M307,456 L307,487 M307,487 L307,518 M307,518 L338,518 M338,177 L369,177 M338,363 L369,363 M338,518 L369,518 M369,177 L400,177 M369,363 L400,363 M369,518 L400,518 M400,177 L431,177 M400,363 L431,363 M400,518 L431,518 M431,177 L462,177 M431,363 L462,363 M431,518 L462,518 M462,177 L493,177 M462,363 L493,363 M462,518 L493,518 M493,177 L524,177 M493,363 L524,363 M493,518 L524,518 M524,177 L555,177 M524,363 L555,363 M524,518 L555,518 M555,177 L555,208 M555,208 L555,239 M555,239 L555,270 M555,270 L555,301 M555,270 L586,270 M555,301 L555,332 M555,332 L555,363 M555,363 L555,394 M555,394 L555,425 M555,425 L555,456 M555,456 L555,487 M555,456 L586,456 M555,487 L555,518 M586,270 L617,270 M586,456 L617,456 M617,270 L648,270 M648,270 L679,270 M679,270 L710,270 M710,270 L741,270 M741,177 L741,208 M741,177 L772,177 M741,208 L741,239 M741,239 L741,270 M741,270 L741,301 M741,301 L741,332 M741,332 L741,363 M741,363 L772,363 M772,177 L803,177 M772,363 L803,363 M803,177 L834,177 M803,363 L834,363 M834,177 L865,177 M834,363 L865,363 M865,177 L896,177 M865,363 L896,363 M896,177 L927,177 M896,363 L927,363 M927,177 L958,177 M927,363 L958,363 M958,177 L958,208 M958,208 L958,239 M958,239 L958,270 M958,270 L958,301 M958,301 L958,332 M958,332 L958,363" fill="none"/>
+<pattern id="paper-grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26,0 H0 V26" fill="none" stroke="#253331" stroke-opacity="0.045" stroke-width="1"/></pattern>
+</defs>
+<rect x="48" y="92" width="1004" height="444" rx="5" fill="#edece4"/>
+<rect x="48" y="92" width="1004" height="444" rx="5" fill="url(#paper-grid)"/>
+<g stroke-linejoin="miter" stroke-linecap="square">
+<use href="#passages" stroke="#253331" stroke-opacity="0.12" stroke-width="23" transform="translate(0 2)"/>
+<use href="#passages" stroke="#354641" stroke-width="20"/>
+<use href="#passages" stroke="#e5e9df" stroke-width="16"/>
+<use href="#passages" stroke="#c5cfc3" stroke-width="12"/>
+</g>
+<!-- A continuous light floor keeps corridor junctions readable. -->
+<use href="#passages" stroke="#e1e5d9" stroke-width="2" stroke-linecap="square"/>
+
+<g aria-hidden="true"><rect x="195" y="251" width="38" height="38" rx="2" fill="#394b45" stroke="#f6f3eb" stroke-width="2"/>
+<rect x="198" y="254" width="32" height="32" rx="1" fill="#007b79" stroke="#d9e1d6" stroke-width="1"/>
+<path d="M202,282 v-24 h24 v24" fill="none" stroke="#b8d4c6" stroke-width="1"/>
+<circle cx="199" cy="255" r="1.3" fill="#e7e9de"/>
+<circle cx="229" cy="255" r="1.3" fill="#e7e9de"/>
+<circle cx="199" cy="285" r="1.3" fill="#e7e9de"/>
+<circle cx="229" cy="285" r="1.3" fill="#e7e9de"/>
+</g>
 <text x="214" y="275" text-anchor="middle" fill="white" font-size="13" font-weight="700">03</text>
-<circle cx="307" cy="456" r="17" fill="#007b79" stroke="#f6f3eb" stroke-width="3"/>
+<g aria-hidden="true"><rect x="288" y="437" width="38" height="38" rx="2" fill="#394b45" stroke="#f6f3eb" stroke-width="2"/>
+<rect x="291" y="440" width="32" height="32" rx="1" fill="#007b79" stroke="#d9e1d6" stroke-width="1"/>
+<path d="M295,468 v-24 h24 v24" fill="none" stroke="#b8d4c6" stroke-width="1"/>
+<circle cx="292" cy="441" r="1.3" fill="#e7e9de"/>
+<circle cx="322" cy="441" r="1.3" fill="#e7e9de"/>
+<circle cx="292" cy="471" r="1.3" fill="#e7e9de"/>
+<circle cx="322" cy="471" r="1.3" fill="#e7e9de"/>
+</g>
 <text x="307" y="461" text-anchor="middle" fill="white" font-size="13" font-weight="700">01</text>
-<circle cx="617" cy="456" r="17" fill="#007b79" stroke="#f6f3eb" stroke-width="3"/>
+<g aria-hidden="true"><rect x="598" y="437" width="38" height="38" rx="2" fill="#394b45" stroke="#f6f3eb" stroke-width="2"/>
+<rect x="601" y="440" width="32" height="32" rx="1" fill="#007b79" stroke="#d9e1d6" stroke-width="1"/>
+<path d="M605,468 v-24 h24 v24" fill="none" stroke="#b8d4c6" stroke-width="1"/>
+<circle cx="602" cy="441" r="1.3" fill="#e7e9de"/>
+<circle cx="632" cy="441" r="1.3" fill="#e7e9de"/>
+<circle cx="602" cy="471" r="1.3" fill="#e7e9de"/>
+<circle cx="632" cy="471" r="1.3" fill="#e7e9de"/>
+</g>
 <text x="617" y="461" text-anchor="middle" fill="white" font-size="13" font-weight="700">02</text>
 <text x="1004" y="130" text-anchor="middle" font-size="13">MAP UP</text>
 <path d="M1004,181 V144 M997,155 L1004,144 L1011,155" fill="none" stroke="#536c68" stroke-width="2"/>
-<text x="48" y="551" font-size="18" font-weight="700">Destinations</text>
-<text x="48" y="585" font-size="16"><tspan font-weight="700" fill="#007b79">01</tspan><tspan dx="12">Lockers / wheelchair</tspan></text>
-<text x="393" y="585" font-size="16"><tspan font-weight="700" fill="#007b79">02</tspan><tspan dx="12">Patient room</tspan></text>
-<text x="738" y="585" font-size="16"><tspan font-weight="700" fill="#007b79">03</tspan><tspan dx="12">Courtyard / time machine</tspan></text>
+<text x="48" y="563" font-size="18" font-weight="700">Destinations</text>
+<text x="48" y="597" font-size="16"><tspan font-weight="700" fill="#007b79">01</tspan><tspan dx="12">Lockers / wheelchair</tspan></text>
+<text x="393" y="597" font-size="16"><tspan font-weight="700" fill="#007b79">02</tspan><tspan dx="12">Patient room</tspan></text>
+<text x="738" y="597" font-size="16"><tspan font-weight="700" fill="#007b79">03</tspan><tspan dx="12">Courtyard / time machine</tspan></text>
 <text x="48" y="620" font-size="15">Start at 01, collect the patient at 02, then leave through 03.</text>
 <text x="48" y="645" font-size="13" fill="#68736c">Script-derived layout • Passage lengths follow the game’s grid; drawing scale differs between maps.</text>
 </g></svg>
